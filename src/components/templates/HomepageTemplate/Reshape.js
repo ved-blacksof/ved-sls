@@ -18,39 +18,52 @@ const useStyles = makeStyles((theme) => ({
     reaserchMain: {
         position: 'relative',
         background:'#003189',
-        border:'none'
+        border:'none',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'end'
+    },
+    
+    flicks: {
+        width: '100%',
+        height:'80vh'
     },
     BoxWidth: {
-        height: '40vh',
         width: '100%',
+        position:'absolute',
         margin: "0rem 5rem",
         [theme.breakpoints.down('xs')]: {
             height: '20vh',
             width: '80%',
         }
     },
-    flicks: {
-        width: '100%',
-        height:'80vh'
-    },
     BoxImages: {
         height: '100%',
-        maxWidth: '100%',
-        borderRadius: '1%'
+        width: '100%',
+        borderRadius: '1%',
+        background: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)) ` ,
+        backgroundPosition:'center',
+        backgroundSize:'cover',
+        backgroundRepeat:'no-repeat',
+        zIndex:'0'
     },
     subHead: {
         width: '60%',
         marginTop: '2%'
     },
     txt: {
+        position:'absolute',
         zIndex:'1',
     },
+
     bg:{
-        height:'100vh',
+        width:'100%',
+        height:'100%',
         background: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)) ` ,
         backgroundPosition:'center',
+        backgroundSize:'cover',
         backgroundRepeat:'no-repeat',
-
+        zIndex:'0'
     }
 
 }))
@@ -70,25 +83,25 @@ export function Reshape() {
                     // plugins={Fades}
                     plugins={Paginations}
                     // align="center"
-                    defaultIndex='1'
+                    defaultIndex='0'
                     circular={true}
                     
                 >
                     <Box className={classes.BoxWidth}>
-                        <div className={classes.bg} ></div>
+                        <div className={classes.BoxImages} ></div>
                     </Box>
 
                     <Box className={classes.BoxWidth}>
-                        <div className={classes.bg}></div>
+                        <div className={classes.BoxImages}></div>
                     </Box>
 
                     <Box className={classes.BoxWidth}>
-                        <div className={classes.bg}></div>
+                        <div className={classes.BoxImages}></div>
                     </Box>
 
                     <Box className={classes.BoxWidth}>
+                        <div className={classes.BoxImages}></div>
                         {/* <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" /> */}
-                        <div className={classes.bg}></div>
                     </Box>
 
 
@@ -97,7 +110,7 @@ export function Reshape() {
                     </ViewportSlot>
                 </Flicking>
             </Box>
-            {/* <h2 className={classes.txt}>Research</h2> */}
+            <h2 className={classes.txt}>Research</h2>
         </Box>
     )
 }
