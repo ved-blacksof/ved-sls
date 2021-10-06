@@ -1,0 +1,17 @@
+.flicking-pagination-bullet {
+    width: 2rem !important;
+    height: .33rem !important;
+    margin: 0 .2rem !important;
+    border-radius: 1rem !important;
+    background-color: rgb(255, 255, 255) !important;
+  }
+  .flicking-pagination-bullet-active {
+    background-color: #ff0000 !important;
+  }
+  
+  .flicking-pagination{
+    /* text-align: center !important; */
+    width: 50%;
+    /* transform:  translateX(-48%) translateY(-8rem) rotate(-90deg); */
+  }
+    

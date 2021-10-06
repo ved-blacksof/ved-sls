@@ -4,11 +4,12 @@ import { useHistory, NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        background: 'blue',
+        background: '#003189',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: '3%'
+        paddingTop: '3%',
+        boxShadow:'none',
     },
     navbar: {
         width: '90%',
@@ -57,7 +58,6 @@ export function Navbar() {
                 <Toolbar className={classes.navbar}>
                     <IconButton edge="start" color="inherit" aria-label="menu">
                         <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }}/>
-                        {/* <img src={'./images/Group 6068.svg'} className={classes.logo} alt="logo" onClick={() => { history.push('/') }} /> */}
                     </IconButton>
 
                     <ul className={classes.navUL}>

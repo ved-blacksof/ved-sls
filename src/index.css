@@ -12,3 +12,41 @@
   font-family: Access;
   src: url(./components/assets/fonts/Access/Access-Regular.ttf);
 }
+
+h1{
+  font-family: BebasNeue;
+  font-size: 10rem;
+  font-weight: normal;
+  color: white;
+}
+
+h2{
+  font-family: BebasNeue;
+  font-size: 5rem;
+  font-weight: normal;
+  color:white;
+}
+
+h3{
+  font-family: BebasNeue;
+  font-size: 2rem;
+  font-weight: normal;
+  color: white;
+  text-transform: lowercase;
+  /* cursor: pointer; */
+
+}
+
+h4{
+  font-family: Access;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: white;
+}
+
+h6{
+  font-family: Access;
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+}
