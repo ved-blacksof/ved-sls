@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
     flicks: {
         width: '100%',
+        height:'80vh'
     },
     BoxImages: {
         height: '100%',
@@ -45,7 +46,11 @@ const useStyles = makeStyles((theme) => ({
         zIndex:'1',
     },
     bg:{
-        // background:
+        height:'100vh',
+        background: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)) ` ,
+        backgroundPosition:'center',
+        backgroundRepeat:'no-repeat',
+
     }
 
 }))
