@@ -30,15 +30,15 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '1',
         color: 'white',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3rem'
+            fontSize: '4rem'
         },
         [theme.breakpoints.down('xs')]: {
-            fontSize: '2rem'
+            fontSize: '3rem'
         }
     },
     redLine: {
         background: '#CA0017',
-        height: '3px',
+        height: '2px',
         width: '25%'
     },
     subText: {
@@ -47,9 +47,9 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         textAlign: 'center',
         paddingTop: '2%',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '70%',
-            fontSize:'.6rem'
+            fontSize:'1rem'
         }
     },
     scrollBox: {

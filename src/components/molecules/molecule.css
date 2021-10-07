@@ -1,3 +1,5 @@
+
+
 .flicking-pagination-bullet {
     width: 2rem !important;
     height: .33rem !important;
@@ -10,8 +12,34 @@
   }
   
   .flicking-pagination{
-    /* text-align: center !important; */
     width: 50%;
+    bottom: 20px !important;
     /* transform:  translateX(-48%) translateY(-8rem) rotate(-90deg); */
+  }
+
+
+
+
+
+/* Vertical Tabs CSS In Materia UI in HOMEPAGE*/
+
+.makeStyles-tabs-134 {
+  width: 50% !important;
+}
+
+.makeStyles-tab-135{
+  text-align: left !important;
+}
+
+.MuiTab-wrapper {
+  align-items: flex-start !important;
+}
+
+.PrivateTabIndicator-vertical-142{
+    left:0% !important;
+  }
+
+  .MuiTab-root{
+    max-width: 200px;
   }
     

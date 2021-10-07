@@ -14,26 +14,25 @@ import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 const useStyles = makeStyles((theme) => ({
     newBox: {
         display: 'flex',
-        marginTop: '5%',
+        marginTop: '8%',
         height: '50vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        [theme.breakpoints.down('sm')]: {
-            flexDirection:'column',
+        [theme.breakpoints.down('xs')]: {
+            flexDirection: 'column',
         }
     },
-    BoxWidth: {
-        border: '2px solid red',
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        height: '80%',
-        width: '100%',
-        margin: "5% 100px",
+    box1: {
+        width: '50%',
         [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            marginBottom:'5%'
 
         }
+    },
+    redLine:{
+        margin:'2% 0%'
     },
     UL: {
         font: 'normal normal normal 1rem Access',
@@ -42,12 +41,30 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3%'
     },
     LI: {
-        marginLeft: '3%'
+        marginLeft: '4%'
     },
-    flick: {    
+
+    box2: {
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        width: '50%',
+        border: '2px solid yellow',
+        [theme.breakpoints.down('xs')]: {
+            width: '100%'
+        }
+
+    },
+    slide: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        height: '80%',
+        width: '80%',
+        margin: "5% 100px",
+        [theme.breakpoints.down('xs')]: {
+
+        }
     },
     boxBig: {
         border: '2px solid red',
@@ -75,44 +92,47 @@ export function TechCarousel() {
 
         <>
             <Container className={classes.newBox}>
-                <Box className={classes.left}>
+                <Box className={classes.box1}>
                     <h3>TECHNOLOGY PARTNERS IN <br /> HARDWARE AND SOFTWARE OFFERINGS</h3>
-                    <h4 style={{ marginTop: '3%', width: '80%' }}>Serving as a turnkey technology solution provider for the past 20 years.</h4>
+                    <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
+                    <h4 style={{ width: '80%' }}>Serving as a turnkey technology solution provider for the past 20 years.</h4>
                     <ul className={classes.UL}>We specialize in-
                         <li className={classes.LI}>Research & Development</li>
                         <li className={classes.LI}> Product Design</li>
                         <li className={classes.LI}> Manufacturing</li>
                     </ul>
                 </Box>
-                <Flicking circular={true}
-                    align="center"
-                    defaultIndex='1'
-                    plugins={Paginations}
-                    circular={true}
-                    className={classes.flick}>
+                <Box className={classes.box2}>
+                    <Flicking circular={true}
+                        align="center"
+                        defaultIndex='1'
+                        plugins={Paginations}
+                        circular={true}
+                    >
 
-                    <div className={classes.BoxWidth} >
-                        <div className={classes.boxBig} ><h2>356+</h2></div>
-                        <div className={classes.boxSmall}><h3>356+</h3></div>
-                        <div className={classes.boxSmall}><h3>356+</h3></div>
-                        <div className={classes.boxSmall}><h3>100+</h3></div>
-                        <div className={classes.boxSmall}><h3>06</h3></div>
-                    </div>
+                        <div className={classes.slide} >
+                            <div className={classes.boxBig} ><h2>356+</h2></div>
+                            <div className={classes.boxSmall}><h3>356+</h3></div>
+                            <div className={classes.boxSmall}><h3>356+</h3></div>
+                            <div className={classes.boxSmall}><h3>100+</h3></div>
+                            <div className={classes.boxSmall}><h3>06</h3></div>
+                        </div>
 
 
-                    <div className={classes.BoxWidth} >
-                        <div className={classes.boxBig} ><h2>356+</h2></div>
-                        <div className={classes.boxSmall}><h3>356+</h3></div>
-                        <div className={classes.boxSmall}><h3>356+</h3></div>
-                        <div className={classes.boxSmall}><h3>100+</h3></div>
-                        <div className={classes.boxSmall}><h3>06</h3></div>
-                    </div>
+                        <div className={classes.slide} >
+                            <div className={classes.boxBig} ><h2>356+</h2></div>
+                            <div className={classes.boxSmall}><h3>356+</h3></div>
+                            <div className={classes.boxSmall}><h3>356+</h3></div>
+                            <div className={classes.boxSmall}><h3>100+</h3></div>
+                            <div className={classes.boxSmall}><h3>06</h3></div>
+                        </div>
 
-                    <ViewportSlot >
-                        <span className="flicking-pagination "></span>
-                    </ViewportSlot>
+                        <ViewportSlot >
+                            <span className="flicking-pagination "></span>
+                        </ViewportSlot>
 
-                </Flicking>
+                    </Flicking>
+                </Box>
             </Container>
         </>
     )

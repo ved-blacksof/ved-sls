@@ -2,7 +2,6 @@ import React from 'react'
 // import "./molecule.css";
 import {
     Box,
-    Container,
     makeStyles,
 } from '@material-ui/core';
 
@@ -17,53 +16,64 @@ import "@egjs/flicking-plugins/dist/pagination.css";
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
         position: 'relative',
-        background:'#003189',
-        border:'none',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'end'
+        border: '2px solid red',
     },
-    
     flicks: {
         width: '100%',
-        height:'80vh'
-    },
-    BoxWidth: {
-        width: '100%',
-        position:'absolute',
-        margin: "0rem 5rem",
+        height: '80vh',
         [theme.breakpoints.down('xs')]: {
-            height: '20vh',
-            width: '80%',
+            height: '30vh',
         }
     },
-    BoxImages: {
-        height: '100%',
+    BoxWidth: {
+        height: '80vh',
         width: '100%',
-        borderRadius: '1%',
-        background: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)) ` ,
-        backgroundPosition:'center',
-        backgroundSize:'cover',
-        backgroundRepeat:'no-repeat',
-        zIndex:'0'
+        background: `url('/images/man-worker-firld-by-solar-panels.png')`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        flexDirection: 'column',
+        textAlign: 'center',
+        paddingBottom: '3%',
+        margin: "0rem 5rem",
+        [theme.breakpoints.down('xs')]: {
+            height: '30vh',
+            backgroundPosition: 'top',
+        }
     },
     subHead: {
-        width: '60%',
+        width: '100%',
         marginTop: '2%'
     },
     txt: {
-        position:'absolute',
-        zIndex:'1',
+        width: '40%',
+        zIndex: '1',
+        font: 'normal normal normal 3rem BebasNeue',
+        [theme.breakpoints.down('sm')]: {
+            width: '70%'
+        }
     },
-
-    bg:{
-        width:'100%',
-        height:'100%',
-        background: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)) ` ,
-        backgroundPosition:'center',
-        backgroundSize:'cover',
-        backgroundRepeat:'no-repeat',
-        zIndex:'0'
+    subTxt: {
+        width: '40%',
+        textAlign: 'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '70%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            display: 'none'
+        }
+    },
+    bg: {
+        width: '100%',
+        height: '100%',
+        background: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)) `,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        zIndex: '0'
     }
 
 }))
@@ -80,28 +90,27 @@ export function Reshape() {
             <Box className={classes.flicks}>
                 <Flicking
                     selector="center"
-                    // plugins={Fades}
                     plugins={Paginations}
-                    // align="center"
                     defaultIndex='0'
                     circular={true}
-                    
+
                 >
                     <Box className={classes.BoxWidth}>
-                        <div className={classes.BoxImages} ></div>
+                        <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
+                        <hr />
+                        <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                        <br />
+                        <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
                     </Box>
-
                     <Box className={classes.BoxWidth}>
-                        <div className={classes.BoxImages}></div>
+                        {/* <div className={classes.BoxImages} >
+                            <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
+                        </div> */}
                     </Box>
-
                     <Box className={classes.BoxWidth}>
-                        <div className={classes.BoxImages}></div>
-                    </Box>
-
-                    <Box className={classes.BoxWidth}>
-                        <div className={classes.BoxImages}></div>
-                        {/* <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" /> */}
+                        {/* <div className={classes.BoxImages} >
+                            <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
+                        </div> */}
                     </Box>
 
 
@@ -110,7 +119,7 @@ export function Reshape() {
                     </ViewportSlot>
                 </Flicking>
             </Box>
-            <h2 className={classes.txt}>Research</h2>
+
         </Box>
     )
 }

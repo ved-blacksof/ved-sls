@@ -19,42 +19,38 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         marginTop:'3%'
     },
-   
     BoxWidth: {
         height: '40vh',
         width: '80%',
         margin: "0rem 5rem",
         [theme.breakpoints.down('xs')]: {
             height: '20vh',
-            width: '80%',
+            width: '100%',
         }
     },
-    
     BoxImages: {
         height: '100%',
         maxWidth: '100%',
         borderRadius: '1%'
     },
-    left: {
-        width: '30%',
-        height: '100%',
-    },
-    right: {
-        width: '30%',
-        height: '100%',
-    },
     reaserchMain: {
         marginTop: "10%",
         position: 'relative'
     },
+    redLine:{
+        margin:'2% 0%'
+    },
     subHead: {
         width: '60%',
-        marginTop: '2%'
+        [theme.breakpoints.down('xs')]:{
+            width:'80%'
+        }
     },
-    txt: {
-        // position:'absolute',
-        // bottom:'-20%',
+    txtReserch: {
         zIndex:'1',
+        [theme.breakpoints.down('xs')]: {
+            fontSize:'5rem'
+        }
     }
 
 }))
@@ -69,6 +65,7 @@ export function Research() {
 
         <Container className={classes.reaserchMain}>
             <h3 className={classes.head}>INTEGRATION SPECIALIST ACROSS <br/> VARIOUS VERTICALS</h3>
+            <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
 
             <h4 className={classes.subHead}>Assisting companies to avoid pitfalls in the product design and development phase, our experienced team at System Level
                 Solutions uses provides innovative solutions across levels to materialize the creative perspective of a client.</h4>
@@ -105,7 +102,7 @@ export function Research() {
                     </ViewportSlot>
                 </Flicking>
             </Box>
-            <h1 className={classes.txt}>Research</h1>
+            <h1 className={classes.txtReserch}>Research</h1>
         </Container>
     )
 }
