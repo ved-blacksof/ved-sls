@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        height: '100vh',
+        height: '70vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         background: 'linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59))',
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
-            height: '80vh'
+            height: '50vh'
         },
         [theme.breakpoints.down('xs')]: {
             height: '40vh'
@@ -32,9 +32,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             fontSize: '4rem'
         },
-        [theme.breakpoints.down('xs')]: {
-            fontSize: '3rem'
-        }
     },
     redLine: {
         background: '#CA0017',
@@ -52,27 +49,13 @@ const useStyles = makeStyles((theme) => ({
             fontSize:'1rem'
         }
     },
-    scrollBox: {
-        position: 'absolute',
-        bottom: '5%',
-        textAlign: 'center',
-        [theme.breakpoints.down('xs')]: {
-            display:'none'
-        }
-    },
-    mouseScroll: {
-
-    },
-    mouseScrollTxt: {
-        color: 'white',
-        font: 'normal normal normal 1rem Roboto',
-        marginTop: '3%'
-    }
 
 }))
 
-export function Sbanner({
+export function Ubanner({
     Background,
+    maintext,
+    subtext,
     mouse
 }) {
     const classes = useStyles()
@@ -82,20 +65,13 @@ export function Sbanner({
             <div className={classes.mainBox} //style={{ backgroundImage: `url(${Background})` }}
             >
             <img className={classes.backImg} src={Background} alt="background" />
-                <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
+                <h1 className={classes.mainText}>{maintext}</h1>
 
                 <span className={classes.redLine}></span>
 
                 <h2 className={classes.subText}>
-                    Industry leaders in providing solutions catering to the domains
-                    of intellectual property, hardware design &
-                    prototyping, software design, and manufacturing.
+                    {subtext}
                 </h2>
-
-                <div className={classes.scrollBox}>
-                    <img className={classes.mouseScroll} src={mouse} alt="Scroll image" />
-                    <h6 className={classes.mouseScrollTxt}>Scroll</h6>
-                </div>
 
             </div>
         </>

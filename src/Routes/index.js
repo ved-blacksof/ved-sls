@@ -1,4 +1,8 @@
-import { Homepage } from '../components/pages'
+import {
+    Homepage, 
+    Aboutus
+
+} from '../components/pages'
 
 export const Routes = [
     {
@@ -6,5 +10,11 @@ export const Routes = [
         title: "/home",
         exact: true,
         component: () => <Homepage />
+    },
+    {
+        path: "/about",
+        title: "/about",
+        exact: true,
+        component: () => <Aboutus />
     },
 ]

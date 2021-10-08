@@ -7,6 +7,7 @@ import { Reshape } from './Reshape'
 import { Portfolio } from './Portfolio'
 import { Expanding } from './Expanding'
 import { Partners } from './Partners'
+import { Realtime} from './Realtime'
 
 export function HomepageTemplate() {
     return (
@@ -26,6 +27,8 @@ export function HomepageTemplate() {
                 <Portfolio/>
 
                 <Expanding/>
+
+                {/* <Realtime/> */}
 
                 <Partners/>
 

@@ -23,21 +23,26 @@
 
 /* Vertical Tabs CSS In Materia UI in HOMEPAGE*/
 
-.makeStyles-tabs-134 {
+/* .makeStyles-tabs-134 {
   width: 50% !important;
-}
+} */
 
-.makeStyles-tab-135{
+/* .makeStyles-tab-135{
   text-align: left !important;
-}
+} */
 
 .MuiTab-wrapper {
   align-items: flex-start !important;
 }
 
 .PrivateTabIndicator-vertical-142{
-    left:0% !important;
+    left:0 !important;
   }
+
+
+.PrivateTabIndicator-vertical-148{
+  left:0 !important;
+}
 
   .MuiTab-root{
     max-width: 200px;

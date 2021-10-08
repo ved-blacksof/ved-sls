@@ -63,7 +63,7 @@ export function Research() {
 
     return (
 
-        <Container className={classes.reaserchMain}>
+        <Container fixed className={classes.reaserchMain}>
             <h3 className={classes.head}>INTEGRATION SPECIALIST ACROSS <br/> VARIOUS VERTICALS</h3>
             <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
 

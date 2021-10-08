@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         marginTop: '8%',
     },
-    centerBtn:{
+    knowMore:{
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
@@ -51,13 +51,21 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             
         }
+    },
+    centerBtn:{
+        background:'#003189',
+        border:'none',
+        borderRadius:'3px',
+        color:'white',
+        padding:'.5rem 2rem',
+        font:" normal normal normal 1.3rem Access",
     }
 }))
 
 export function Portfolio() {
     const classes = useStyles();
     return (
-        <Container className={classes.portContainer}>
+        <Container fixed className={classes.portContainer}>
             <h3 className={classes.portHead}>OUR RICH PORTFOLIO <br /> COVERS MULTIPLE SEGMENTS</h3>
             <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
             <h4 className={classes.portSubHead}>Catering to multiple industrial use cases, System Level <br /> Solutions provides a wide array
@@ -85,7 +93,7 @@ export function Portfolio() {
             </Grid>
 
             <Box className={classes.knowMore}>
-                <Button className={classes.centerBtn} style={{width:'15%'}} title='Know More' />
+                <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'}/> </button>
             </Box>
 
         </Container>

@@ -4,12 +4,12 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
-
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
 import { Arrow, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
+import { FrameGrid, FrameGridOptions } from "@egjs/grid";
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
@@ -18,27 +18,29 @@ const useStyles = makeStyles((theme) => ({
         height: '50vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center ',
         [theme.breakpoints.down('xs')]: {
             flexDirection: 'column',
+            height: 'fit-content',
+            margin: '8% auto',
         }
     },
     box1: {
         width: '50%',
         [theme.breakpoints.down('xs')]: {
             width: '100%',
-            marginBottom:'5%'
+            marginBottom: '5%'
 
         }
     },
-    redLine:{
-        margin:'2% 0%'
+    redLine: {
+        margin: '2% 0%'
     },
     UL: {
         font: 'normal normal normal 1rem Access',
         color: 'white',
         listStyle: 'inside',
-        marginTop: '3%'
+        margin: '3% 0%'
     },
     LI: {
         marginLeft: '4%'
@@ -46,36 +48,72 @@ const useStyles = makeStyles((theme) => ({
 
     box2: {
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
+        border: '2px solid red',
         width: '50%',
-        border: '2px solid yellow',
         [theme.breakpoints.down('xs')]: {
-            width: '100%'
+            width: '100%',
+            height:'fit-content'
         }
 
     },
     slide: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        height: '80%',
-        width: '80%',
+        height: '40vh',
+        width: '100%',
         margin: "5% 100px",
+        display: 'inline-flex',
+        gap: '0px',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        flexWrap: 'wrap',
+        '& div': {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+        '& img':{
+            width:'40%',
+            height:'40%',
+        },
         [theme.breakpoints.down('xs')]: {
-
+            height: '30vh',
         }
     },
     boxBig: {
         border: '2px solid red',
-        height: '10rem',
-        width: '10rem'
+        background: 'white',
+        color: 'red',
+        height: '15rem',
+        width: '15rem',
+        margin: '0%',
+        '& h1': {
+            color: '#CA0017',
+            fontSize: '6rem',
+            textAlign: 'center'
+        },
+        '& h2': {
+            color: '#003189',
+            fontSize: '3vw',
+            textAlign: 'center'
+        },
+        
+        [theme.breakpoints.down('xs')]: {
+            height: '10rem',
+            width: '10rem',
+        }
 
     },
     boxSmall: {
         border: '2px solid red',
-        height: '5rem',
-        width: '5rem'
+        height: '12rem',
+        width: '12rem',
+        margin: '0%',
+        background: 'white',
+        [theme.breakpoints.down('xs')]: {
+            height: '6rem',
+            width: '6rem',
+        }
     },
 
 }))
@@ -91,7 +129,7 @@ export function TechCarousel() {
     return (
 
         <>
-            <Container className={classes.newBox}>
+            <Container fixed className={classes.newBox}>
                 <Box className={classes.box1}>
                     <h3>TECHNOLOGY PARTNERS IN <br /> HARDWARE AND SOFTWARE OFFERINGS</h3>
                     <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
@@ -103,18 +141,21 @@ export function TechCarousel() {
                     </ul>
                 </Box>
                 <Box className={classes.box2}>
-                    <Flicking circular={true}
-                        align="center"
+                    <Flicking
+                        circular={true}
+                        // align="start"
                         defaultIndex='1'
                         plugins={Paginations}
                         circular={true}
                     >
 
                         <div className={classes.slide} >
-                            <div className={classes.boxBig} ><h2>356+</h2></div>
+                            <div className={classes.boxBig} >
+                                <h1>356+ <h2 >ENGINEERS</h2></h1>
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><img src={'./images/leaves.svg'} /></div>
                             <div className={classes.boxSmall}><h3>356+</h3></div>
-                            <div className={classes.boxSmall}><h3>356+</h3></div>
-                            <div className={classes.boxSmall}><h3>100+</h3></div>
+                            <div className={classes.boxSmall} style={{ background: 'transparent' }}><h3>100+</h3></div>
                             <div className={classes.boxSmall}><h3>06</h3></div>
                         </div>
 

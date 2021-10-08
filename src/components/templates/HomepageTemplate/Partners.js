@@ -49,7 +49,7 @@ export function Partners() {
     const classes = useStyles()
     return (
         <>
-            <Container className={classes.partner}>
+            <Container fixed className={classes.partner}>
                 <h3 className={classes.head}>PARTNERSHIP & ASSOCIATIONS</h3>
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                 <h4 className={classes.portSubHead}>Using our robust in-house expertise to develop pioneering solutions catering to various business domains.</h4>

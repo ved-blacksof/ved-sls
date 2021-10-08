@@ -9,6 +9,8 @@ import {
     makeStyles,
 } from '@material-ui/core';
 
+import './molecule.css'
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -48,16 +50,18 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
     },
     tabs: {
-        width: '20%',
-        marginTop: '3%',
-        textAlign:'left !important'
+        width: '30%',
+        marginTop: '2%',
+        [theme.breakpoints.down('sm')]: {
+            width:'50%'
+        },
     },
     tab: {
         color: 'white',
         font: 'normal normal normal 1rem Access',
         textTransform: 'none',
         width: '100%',
-        textAlign:'left '
+        textAlign: 'left '
     },
     tabPanel: {
         height: 'fit-content',
@@ -65,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         zIndex: '1',
         left: '60%',
-        top: '-70%',
+        top: '-50%',
         '& img': {
             width: '100%',
             zIndex: '2'
@@ -123,28 +127,28 @@ export function VerticalTab() {
                     <Tab className={classes.tab} label="Testing and Calibration" {...a11yProps(4)} />
                     <Tab className={classes.tab} label="ML & AI" {...a11yProps(5)} />
                 </Tabs>
+
                 <TabPanel className={classes.tabPanel} value={value} index={0}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
                     <Box className={classes.redBack}></Box>
-                    {/* <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> */}
-                    <h6 style={{ lineHeight: '2' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
 
                 </TabPanel>
+
                 <TabPanel className={classes.tabPanel} value={value} index={1}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
                     <Box className={classes.redBack}></Box>
-                    {/* <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> */}
-                    <h6 style={{ lineHeight: '2' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
                 </TabPanel>
+
                 <TabPanel className={classes.tabPanel} value={value} index={2}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
                     <Box className={classes.redBack}></Box>
-                    {/* <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> */}
-                    <h6 style={{ lineHeight: '2' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
                 </TabPanel>

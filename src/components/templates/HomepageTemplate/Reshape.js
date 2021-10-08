@@ -16,7 +16,6 @@ import "@egjs/flicking-plugins/dist/pagination.css";
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
         position: 'relative',
-        border: '2px solid red',
     },
     flicks: {
         width: '100%',
@@ -25,7 +24,15 @@ const useStyles = makeStyles((theme) => ({
             height: '30vh',
         }
     },
-    BoxWidth: {
+    BoxWidth:{
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+    BoxImages: {
         height: '80vh',
         width: '100%',
         background: `url('/images/man-worker-firld-by-solar-panels.png')`,
@@ -38,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         textAlign: 'center',
         paddingBottom: '3%',
-        margin: "0rem 5rem",
         [theme.breakpoints.down('xs')]: {
             height: '30vh',
             backgroundPosition: 'top',
@@ -66,15 +72,15 @@ const useStyles = makeStyles((theme) => ({
             display: 'none'
         }
     },
-    bg: {
-        width: '100%',
-        height: '100%',
-        background: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)) `,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        zIndex: '0'
-    }
+    // bg: {
+    //     width: '100%',
+    //     height: '100%',
+    //     background: 'linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59))',
+    //     backgroundPosition: 'center',
+    //     backgroundSize: 'cover',
+    //     backgroundRepeat: 'no-repeat',
+    //     // zIndex: '0'
+    // }
 
 }))
 
@@ -95,22 +101,33 @@ export function Reshape() {
                     circular={true}
 
                 >
+
                     <Box className={classes.BoxWidth}>
-                        <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                        <hr />
-                        <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
-                        <br />
-                        <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
+                        <Box className={classes.BoxImages} >
+                            <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
+                            <hr />
+                            <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                            <br />
+                            <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
+                        </Box>
                     </Box>
                     <Box className={classes.BoxWidth}>
-                        {/* <div className={classes.BoxImages} >
+                        <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                        </div> */}
+                            <hr />
+                            <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                            <br />
+                            <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
+                        </Box>
                     </Box>
                     <Box className={classes.BoxWidth}>
-                        {/* <div className={classes.BoxImages} >
+                        <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                        </div> */}
+                            <hr />
+                            <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                            <br />
+                            <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
+                        </Box>
                     </Box>
 
 

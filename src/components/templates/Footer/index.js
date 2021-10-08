@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1rem'
         },
         '& i': {
-            margin: '0rem 2%'
+            padding: '0rem .5rem'
         }
     }
 
@@ -71,7 +71,7 @@ export function Footer() {
 
     const history = useHistory();
     return (
-        <Container className={classes.footerMain}>
+        <Container fixed className={classes.footerMain}>
             <Box className={classes.headBox}>
                 <img className=" col-md-2" src={'/images/Layer_x0020_1-1.svg'} alt="SLS Icon" />
                 <h6 className={classes.head}>Over the years, we have added numerous products to our portfolio

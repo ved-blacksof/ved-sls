@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
     },
     blueBox: {
         background: '#003189',
-        height: '50vh',
+        height: '65vh',
+        [theme.breakpoints.down('sm')]:{
+            height:'50vh'
+        },
         [theme.breakpoints.down('xs')]:{
             height:'fit-content'
         }
@@ -39,11 +42,11 @@ export function Expanding() {
 
     return (
         <>
-            <Container className={classes.whiteBox}>
+            <Container fixed className={classes.whiteBox}>
                 <h3 className={classes.expand}>EXPANDING THE CORE  <br/> OF OUR PRIMARY OFFERINGS</h3>
             </Container>
             <Box className={classes.blueBox}>
-                <Container>
+                <Container fixed>
                     <VerticalTab />
                 </Container>
             </Box>

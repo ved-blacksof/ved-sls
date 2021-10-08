@@ -17,17 +17,18 @@ const useStyles = makeStyles((theme) => ({
             color: '#003189'
         },
     },
-    arrow:{
-        width:'12%',
-        marginLeft:'3px',
-        
+    arrow: {
+        width: '12%',
+        marginLeft: '3px',
+
     }
 }))
 
 export function Button({
     title,
     style,
-    className
+    className,
+    arrowIcon,
 }) {
     const classes = useStyles()
     return (
@@ -35,7 +36,9 @@ export function Button({
             <button
                 className={classes.btn}
                 style={style}
-            > {title} <img className={classes.arrow} src={'./images/Icon feather-arrow-right.svg'} /></button>
+            >{title}
+                <img className={classes.arrow} src={arrowIcon} />
+            </button>
         </div>
     )
 }
