@@ -15,28 +15,32 @@ import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
 
 const useStyles = makeStyles((theme) => ({
+    reaserchMain: {
+        marginTop: "10%",
+        position: 'relative'
+    },
     flicks: {
         width: '80%',
         marginTop:'3%'
     },
     BoxWidth: {
-        height: '40vh',
-        width: '80%',
+        height: '50vh',
+        width: '100%',
         margin: "0rem 5rem",
+
+        [theme.breakpoints.down('sm')]: {
+            height: '40vh',
+        },
         [theme.breakpoints.down('xs')]: {
-            height: '20vh',
-            width: '100%',
+            height: '30vh',
         }
     },
     BoxImages: {
         height: '100%',
-        maxWidth: '100%',
+        width: '100%',
         borderRadius: '1%'
     },
-    reaserchMain: {
-        marginTop: "10%",
-        position: 'relative'
-    },
+    
     redLine:{
         margin:'2% 0%'
     },
@@ -55,7 +59,13 @@ const useStyles = makeStyles((theme) => ({
 
 }))
 
-export function Research() {
+export function Research({
+    head1,
+    head2,
+    subhead1,
+    subhead2,
+    
+}) {
 
     const classes = useStyles()
 
