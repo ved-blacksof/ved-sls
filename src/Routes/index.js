@@ -1,7 +1,7 @@
 import {
     Homepage, 
-    Aboutus
-
+    Aboutus,
+    Evcharging
 } from '../components/pages'
 
 export const Routes = [
@@ -16,5 +16,11 @@ export const Routes = [
         title: "/about",
         exact: true,
         component: () => <Aboutus />
+    },
+    {
+        path: "/evcharger",
+        title: "/evcharger",
+        exact: true,
+        component: () => <Evcharging />
     },
 ]

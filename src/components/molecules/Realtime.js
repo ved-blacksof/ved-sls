@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
             margin:"20% 0%"
         }
     },
+    mainHead:{
+        color:'black',
+
+    },
     head: {
         color: 'black'
     },
@@ -82,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Realtime({
-    head1, head2, subhead, read, data
+    head1, head2, subhead, read, data, mainhead
 }) {
 
     const classes = useStyles()
@@ -125,7 +129,9 @@ export function Realtime({
 
         return (
             <>
+
                 <Container fixed className={classes.realText}>
+                    <h2 className={classes.mainHead}> {mainhead}</h2>
                     <h3 className={classes.head}>{head1} <br /> {head2}</h3>
                     <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                     <h4 className={classes.subHead}>{subhead}</h4>

@@ -5,12 +5,13 @@ import { Dnumbers } from './Dnumbers'
 import { CSRcarousel } from './CSRcarousel'
 import { Quality } from './Quality'
 import { SLSTimeline } from './SLSTimeline'
-import { certification } from '../../molecules/PortfolioData'
+import { certification , csrcarousel} from '../../molecules/PortfolioData'
 
 export function AboutusTemplate() {
     return (
         <div>
             <Ubanner
+                Background=""
                 maintext="About us"
                 subtext="sddfsdf"
             />
@@ -31,7 +32,7 @@ export function AboutusTemplate() {
 
             <Dnumbers />
 
-            <CSRcarousel />
+            <CSRcarousel data={csrcarousel}/>
 
             <Quality />
 

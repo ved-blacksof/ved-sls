@@ -5,4 +5,6 @@ export * from './Ubanner'
 export * from './Overview'
 export * from './Realtime'
 export * from './PortfolioData'
+export * from './Offerings'
+export * from './Threeboxes'
 

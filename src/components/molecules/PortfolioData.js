@@ -149,3 +149,53 @@ export const certification = [
     }
 
 ]
+export const csrcarousel = [
+    {
+        images: './images/Mask Group 2.png',
+        case: 'ISO 9001',
+        head: 'Heading',
+        para: 'We are helping the ladies in rural parts of India so that they can not only earn,but also be self independent and become a builder of the future for their kids and family…',
+    },
+    {
+        images: './images/Mask Group 2.png',
+        case: 'ISO 9001',
+        head: 'Heading',
+        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+        images: './images/Mask Group 5.png',
+        case: 'ISO 9001',
+        head: 'Heading',
+        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+
+]
+
+
+export const evchargers =[
+    {
+        images:'./images/bharat_ac.png',
+        subtitle:'Bharat AC 001',
+        case:'123',
+    },
+    {
+        images:'./images/bharat_ac.png',
+        subtitle:'Bharat AC 001',
+    },
+    {
+        images:'./images/bharat_ac.png',
+        subtitle:'Bharat AC 001',
+    },
+    {
+        images:'./images/bharat_ac.png',
+        subtitle:'Bharat AC 001',
+    },
+    {
+        images:'./images/bharat_ac.png',
+        subtitle:'Bharat AC 001',
+    },
+        {
+            images:'./images/bharat_ac.png',
+            subtitle:'Bharat AC 001',
+        },
+]

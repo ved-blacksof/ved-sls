@@ -35,7 +35,7 @@ export function Quality({
                 <h2 className={classes.bigHead}>Quality & Reliability</h2>
 
                 <Grid container spacing={4} className={classes.gridContainer}>
-                    <Grid item xs={12} md={6} className={classes.gridLeft} style={{}}>
+                    <Grid item xs={12} md={6} className={classes.gridLeft}>
                         <PositionImage imageBG={'./images/louis-reed-53jnUK5LqEY-unsplash.png'} />
                     </Grid>
 

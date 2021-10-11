@@ -36,7 +36,6 @@ export function Reshape1() {
             <Box className={classes.slide}>
                 kldjfkj
             </Box>
-            
         </Carousel>
     )
 }
