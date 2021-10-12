@@ -3,12 +3,13 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        height: '70vh',
+        height:'80vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        background: 'linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59))',
+        backgroundPosition:'center',
+        backgroundSize:'cover',
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
             height: '50vh'
@@ -18,12 +19,13 @@ const useStyles = makeStyles((theme) => ({
         }
 
     },
-    backImg: {
+    backImgBox:{
         position: 'absolute',
-        width: '100%',
-        height: '100%',
         zIndex: '-1',
-
+    },
+    backImg: {
+        width: '100%',
+        maxHeight: '80vh',
     },
     mainText: {
         font: 'normal normal normal 5rem BebasNeue',
@@ -46,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '2%',
         [theme.breakpoints.down('sm')]: {
             width: '70%',
-            fontSize:'1rem'
+            fontSize: '1rem'
         }
     },
 
@@ -61,17 +63,20 @@ export function Ubanner({
     const classes = useStyles()
     return (
         <>
-
-            <div className={classes.mainBox} //style={{ backgroundImage: `url(${Background})` }}
+            
+            <div className={classes.mainBox}
+                style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}
             >
-            <img className={classes.backImg} src={Background} alt="background" />
+
+                {/* <div className={classes.backImgBox}>
+                    <img className={classes.backImg} src={Background} alt="background" />
+                </div> */}
+
                 <h1 className={classes.mainText}>{maintext}</h1>
 
                 <span className={classes.redLine}></span>
 
-                <h2 className={classes.subText}>
-                    {subtext}
-                </h2>
+                <h2 className={classes.subText}>{subtext}</h2>
 
             </div>
         </>

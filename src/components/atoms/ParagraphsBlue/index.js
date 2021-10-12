@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     head: {
-
+        marginTop:'4%'
     },
     portSubHead: {
         width: '100%',
@@ -45,6 +45,7 @@ export function ParagraphsBlue({
         <>
             <Box className={classes.paraBox} >
                 <h2 > {maintitle} </h2>
+                <br/>
                 <h3 className={classes.head}>{title}</h3>
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                 <h4 className={classes.portSubHead}>{subtitle}</h4>

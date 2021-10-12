@@ -56,56 +56,56 @@ export const realtime = [
         case: 'CASE STUDIES',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'CASE STUDIES',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'CASE STUDIES',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'CASE STUDIES',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read:'Read More'
+        read: 'Read More'
     },
 
 ]
@@ -172,30 +172,81 @@ export const csrcarousel = [
 ]
 
 
-export const evchargers =[
+export const evchargers = [
     {
-        images:'./images/bharat_ac.png',
-        subtitle:'Bharat AC 001',
-        case:'123',
+        images: './images/bharat_ac.png',
+        subtitle: 'Bharat AC 001',
+        case: '123',
     },
     {
-        images:'./images/bharat_ac.png',
-        subtitle:'Bharat AC 001',
+        images: './images/bharat_ac.png',
+        subtitle: 'Bharat AC 001',
     },
     {
-        images:'./images/bharat_ac.png',
-        subtitle:'Bharat AC 001',
+        images: './images/bharat_ac.png',
+        subtitle: 'Bharat AC 001',
     },
     {
-        images:'./images/bharat_ac.png',
-        subtitle:'Bharat AC 001',
+        images: './images/bharat_ac.png',
+        subtitle: 'Bharat AC 001',
     },
     {
-        images:'./images/bharat_ac.png',
-        subtitle:'Bharat AC 001',
+        images: './images/bharat_ac.png',
+        subtitle: 'Bharat AC 001',
     },
-        {
-            images:'./images/bharat_ac.png',
-            subtitle:'Bharat AC 001',
-        },
+    {
+        images: './images/bharat_ac.png',
+        subtitle: 'Bharat AC 001',
+    },
 ]
+
+export const yalgar = [
+    {
+        images: './images/BlueIcons -20-01.svg',
+        text: 'Chat and Social Media Sites'
+    },
+    {
+        images: './images/BlueIcons -20-02.svg',
+        text: 'IoT and M2M Connected Devices'
+    },
+    {
+        images: './images/BlueIcons -20-03.svg',
+        text: 'Real-time Tracking'
+    },
+    {
+        images: './images/BlueIcons -20-04.svg',
+        text: 'AR/VR Multiplayer Games'
+    },
+    {
+        images: './images/BlueIcons -20-06.svg',
+        text: 'Real-time Dashboards'
+    },
+    {
+        images: './images/BlueIcons -20-06.svg',
+        text: 'Financial Data Streaming'
+    },
+    {
+        images: './images/BlueIcons -20-10.svg',
+        text: 'Live Polling/Blogging'
+    },
+]
+export const loc = [
+    {
+        images: './images/BlueIcons -20-01.svg',
+        text: 'Low Battery Consumption'
+    },
+    {
+        images: './images/BlueIcons -20-02.svg',
+        text: 'RF Independent Solution'
+    },
+    {
+        images: './images/BlueIcons -20-03.svg',
+        text: 'Hardware Agnostic'
+    },
+    {
+        images: './images/BlueIcons -20-04.svg',
+        text: 'API’s for third party Integrations'
+    },
+]
+
+

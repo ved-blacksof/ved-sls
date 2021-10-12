@@ -47,4 +47,22 @@
   .MuiTab-root{
     max-width: 200px;
   }
+
+
+
+/* Offering carousel buton CSS */
+
+.flicking-arrow-prev{
+  left:0 !important;
+  top:70% !important
+}
+
+.flicking-arrow-next{
+  left:0 !important;
+  top:90% !important
+}
+
+/* .flicking-arrow-prev, .flicking-arrow-next{
+  border: 2px solid red;
+} */
     

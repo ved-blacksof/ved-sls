@@ -1,13 +1,14 @@
 import React from 'react'
 import { Box, Container } from '@material-ui/core'
 import { Sbanner, Research, Realtime } from '../../molecules'
+
 import { TechCarousel } from './TechCarousel'
 import { Navbar, Footer } from '..'
 import { Reshape } from './Reshape'
 import { Portfolio } from './Portfolio'
 import { Expanding } from './Expanding'
 import { Partners } from './Partners'
-import { port,realtime} from '../../molecules/PortfolioData'
+import { port, realtime} from '../../molecules/PortfolioData'
 
 export function HomepageTemplate() {
     return (

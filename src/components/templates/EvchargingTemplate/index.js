@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar, Footer } from '..'
 import { Ubanner, Overview, Offerings, Threeboxes } from '../../molecules'
 import { ChargingMangement } from './ChargingMangement'
+import { MobileApplication } from './MobileApplication'
 
 import { evchargers } from '../../molecules/PortfolioData'
 
@@ -11,7 +12,7 @@ export function EvchargingTemplate() {
     return (
         <>
             <Ubanner
-                // Background="/images/luo-lei-Xa4pTwafe5U-unsplash.png"
+                Background="/images/luo-lei-Xa4pTwafe5U-unsplash.png"
                 maintext="EV Charging Solutions"
                 subtext="Helping in making the world EV-First!"
             />
@@ -38,6 +39,8 @@ export function EvchargingTemplate() {
             />
 
             <Threeboxes
+                title="EV CHARGERS Controllers"
+                subtitle="We offer a range od EV AC charging controllers integrated with energy mangement, remote access, and OCPP connectivity."
                 image1="./images/lite.png"
                 image2="./images/ocpp-controller_350x350.png"
                 image3="./images/1.0.png"
@@ -49,7 +52,7 @@ export function EvchargingTemplate() {
 
             <ChargingMangement />
 
-            
+            <MobileApplication />
 
 
             <Footer />

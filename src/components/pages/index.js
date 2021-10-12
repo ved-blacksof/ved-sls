@@ -1,3 +1,5 @@
 export * from './Homepage'
 export * from './Aboutus'
 export * from './Evcharging'
+export * from './Cloudsolution'
+export * from './IOTplatform'

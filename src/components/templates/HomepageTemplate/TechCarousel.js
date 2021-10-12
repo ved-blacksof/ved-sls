@@ -131,7 +131,7 @@ export function TechCarousel() {
         <>
             <Container fixed className={classes.newBox}>
                 <Box className={classes.box1}>
-                    <h3>TECHNOLOGY PARTNERS IN <br /> HARDWARE AND SOFTWARE OFFERINGS</h3>
+                    <h3>TECHNOLOGY PARTNERS IN <br /> HARDWARE AND SOFTW   ARE OFFERINGS</h3>
                     <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                     <h4 style={{ width: '80%' }}>Serving as a turnkey technology solution provider for the past 20 years.</h4>
                     <ul className={classes.UL}>We specialize in-

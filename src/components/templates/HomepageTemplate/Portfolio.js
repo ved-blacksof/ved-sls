@@ -5,6 +5,7 @@ import {
     Grid,
     makeStyles,
 } from '@material-ui/core';
+import { GeneralHeading, MapIcon } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     portContainer: {
@@ -67,33 +68,16 @@ export function Portfolio({
     return (
 
         <Container fixed className={classes.portContainer}>
+            <GeneralHeading
+                title="OUR RICH PORTFOLIO"
+                title1="COVERS MULTIPLE SEGMENTS"
+                subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
+                of products and services."
+            />
 
-            <h3 className={classes.portHead}>OUR RICH PORTFOLIO <br /> COVERS MULTIPLE SEGMENTS</h3>
-            <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-            <h4 className={classes.portSubHead}>Catering to multiple industrial use cases, System Level <br /> Solutions provides a wide array
-                of products and services.
-            </h4>
+            <MapIcon data={data} />
 
-            <Grid container spacing={4} className={classes.gridMainBox}>
-                {
-                    data.map((item, index) => {
-                        return (
-                            <Grid item xs={6} sm={3} md={3} key={index}>
-                                <Box className={classes.gridBox} >
-                                    <Box className={classes.iconsBox}>
-                                        <img className={classes.icons} src={item.images} alt='Portfolio Icons' />
-                                    </Box>
-
-                                    <h4 className={classes.subText}>{item.text}</h4>
-                                </Box>
-                            </Grid>
-
-                        )
-                    })
-                }
-
-
-            </Grid>
+            
 
             <Box className={classes.knowMore}>
                 <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'} /> </button>

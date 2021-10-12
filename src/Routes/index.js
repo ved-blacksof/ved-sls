@@ -1,7 +1,9 @@
 import {
     Homepage, 
     Aboutus,
-    Evcharging
+    Evcharging,
+    Cloudsolution,
+    IOTplatform
 } from '../components/pages'
 
 export const Routes = [
@@ -22,5 +24,17 @@ export const Routes = [
         title: "/evcharger",
         exact: true,
         component: () => <Evcharging />
+    },
+    {
+        path: "/cloud",
+        title: "/cloud",
+        exact: true,
+        component: () => <Cloudsolution />
+    },
+    {
+        path: "/iot",
+        title: "/iot",
+        exact: true,
+        component: () => <IOTplatform />
     },
 ]

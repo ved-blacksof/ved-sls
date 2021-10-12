@@ -51,6 +51,8 @@ export function Paragraphs({
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                 <h4 className={classes.portSubHead}>{subtitle}</h4>
 
+                <img />
+
                 <ul className={classes.uls}>To achieve our aim, we will
                     <li className={classes.lis}>{firstli}</li>
                     <li className={classes.lis}>{secli}</li>

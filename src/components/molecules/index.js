@@ -7,4 +7,5 @@ export * from './Realtime'
 export * from './PortfolioData'
 export * from './Offerings'
 export * from './Threeboxes'
+export * from './Visit'
 

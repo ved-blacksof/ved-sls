@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]:{
             height:'fit-content'
         }
-
     },
     mainContainer: {
         display: 'flex',

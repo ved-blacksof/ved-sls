@@ -1,30 +1,34 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, Button, Box } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
+
     btn: {
-        height: '100',
+        height: '100%',
         width: '100%',
         background: '#003189',
         color: 'white',
-        font: 'normal normal normal 1.2rem Access',
+        display:'flex', 
+        font: 'normal normal normal 1rem Access',
         border: 'none',
         padding: '.5rem 1rem',
-        borderRadius: '2px',
-        transition: ' linear .3s',
+        textTransform:'none',
+        borderRadius: '4px',
         '&:hover': {
             background: 'white',
             color: '#003189'
         },
     },
     arrow: {
-        width: '12%',
+        fontSize:'1.5rem',
         marginLeft: '3px',
-
+        '&:hover': {
+            color: '#003189'
+        },
     }
 }))
 
-export function Button({
+export function Buttons({
     title,
     style,
     className,
@@ -32,13 +36,14 @@ export function Button({
 }) {
     const classes = useStyles()
     return (
-        <div className={className}>
-            <button
+        <Box className={className}>
+            <Button 
                 className={classes.btn}
                 style={style}
-            >{title}
+                >
+                    {title}
                 <img className={classes.arrow} src={arrowIcon} />
-            </button>
-        </div>
+            </Button>
+        </Box>
     )
 }

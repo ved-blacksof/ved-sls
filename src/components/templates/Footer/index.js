@@ -61,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
         },
         '& i': {
             padding: '0rem .5rem'
+        },
+        [theme.breakpoints.down('xs')]:{
+            flexDirection:'column-reverse',
+            
         }
     }
 
