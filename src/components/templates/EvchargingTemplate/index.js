@@ -4,7 +4,7 @@ import { Ubanner, Overview, Offerings, Threeboxes } from '../../molecules'
 import { ChargingMangement } from './ChargingMangement'
 import { MobileApplication } from './MobileApplication'
 
-import { evchargers } from '../../molecules/PortfolioData'
+import { evchargers,evcharger3 } from '../../molecules/PortfolioData'
 
 
 
@@ -33,20 +33,16 @@ export function EvchargingTemplate() {
 
             <Offerings
                 data={evchargers}
-                mainhead="Hardware Offerings"
-                head1="EV Chargers"
-                subhead="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
+                title="ev chargers"
+                // subtitle="EV Chargers"
+                subtitle="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
             />
 
             <Threeboxes
+                data={evcharger3}
                 title="EV CHARGERS Controllers"
                 subtitle="We offer a range od EV AC charging controllers integrated with energy mangement, remote access, and OCPP connectivity."
-                image1="./images/lite.png"
-                image2="./images/ocpp-controller_350x350.png"
-                image3="./images/1.0.png"
-                subtitle1="Type 2 AC Charger Controller"
-                subtitle2="Bharat"
-                subtitle3="OCPP Controller"
+                
             />
 
 

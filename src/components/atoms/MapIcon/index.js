@@ -27,7 +27,9 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function MapIcon({
-    data
+    data,
+    fill,
+    color,
 }) {
     const classes = useStyles()
     return (
@@ -39,10 +41,10 @@ export function MapIcon({
                             <Grid item xs={6} sm={3} md={3} key={index}>
                                 <Box className={classes.gridBox} >
                                     <Box className={classes.iconsBox}>
-                                        <img className={classes.icons} src={item.images} alt='Portfolio Icons' />
+                                        <img className={classes.icons} style={{fill:`${fill}`}} src={item.images} alt='Portfolio Icons' />
                                     </Box>
 
-                                    <h6 className={classes.subText}>{item.text}</h6>
+                                    <h6 className={classes.subText} style={{ color:`${color}` }}>{item.text}</h6>
                                 </Box>
                             </Grid>
 

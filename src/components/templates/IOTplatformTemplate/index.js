@@ -2,7 +2,8 @@ import React from 'react'
 import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Threeboxes } from '../../molecules'
+import { Ubanner, Overview, Threeboxes, Offerings, Visit } from '../../molecules'
+import { middleware } from '../../molecules/PortfolioData'
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -29,7 +30,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export function IOTplatformTemplate() {
+export function IOTplatformTemplate({
+
+}) {
     const classes = useStyles()
     return (
         <div>
@@ -42,29 +45,22 @@ export function IOTplatformTemplate() {
             <Navbar />
 
             <Overview
-
                 title="OVERVIEW"
                 path="Industries / IoT Platform"
                 sub1="SLS offers a heterogeneous and end-to-end IoT platform that integrates all IoT verticals under a common shed. 
                 We offer building blocks for IoT solutions and help businesses build world-class products and services in the automation
                  industry. We also provide multiprotocol support for services including G3PLC, WiFi, BLE, Sigfox, LoRa, GSM, etc.,
                  which makes our solution the preferred choice for industry leaders."
-
-                style={{ height: 'fit-content' }}
+                list="list"
+                li1="Ready to use device SDKs for faster time-to-market"
+                li2="Secured cloud platforms for Data Analytics and real-time Monitoring"
+                li3="Scalability purpose-built for smart and widespread business applications"
+                
             />
-            <Box className={classes.list}>
-                <Container fixed className={classes.box1}>
-                    <ul className={classes.UL}>
-                        <li className={classes.LI}>Ready to use device SDKs for faster time-to-market</li>
-                        <li className={classes.LI}> Secured cloud platforms for Data Analytics and real-time Monitoring</li>
-                        <li className={classes.LI}> Scalability purpose-built for smart and widespread business applications</li>
-                    </ul>
-                </Container>
-            </Box>
 
 
             <Threeboxes
-                title="HARDWARE OFFERING"
+                title="HARDWARE OFFERINGs"
                 // subtitle="We offer a range od EV AC charging controllers integrated with energy mangement, remote access, and OCPP connectivity."
                 image1="./images/lite.png"
                 image2="./images/ocpp-controller_350x350.png"
@@ -74,7 +70,19 @@ export function IOTplatformTemplate() {
                 subtitle3="Controllers"
             />
 
-            
+            <Offerings
+                data={middleware}
+                title="Software Offerings"
+                // subtitle="EV Chargers"
+                // subtitle1="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
+            />
+
+            <Visit 
+                goto="Get to know us better."
+            />
+
+
+
             <Footer />
         </div>
     )

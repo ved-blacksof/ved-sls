@@ -5,6 +5,7 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
+import { evcharger3 } from './PortfolioData'
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -63,6 +64,7 @@ export function Threeboxes({
     subtitle1,
     subtitle2,
     subtitle3,
+    redline
 }) {
 
     const classes = useStyles()
@@ -70,29 +72,26 @@ export function Threeboxes({
         <Container fixed className={classes.container1}>
             <Box className={classes.paraBox}>
                 <h3 className={classes.head}>{title}</h3>
-                <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
+                {
+                    redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
+                }
                 <h4 className={classes.portSubHead}>{subtitle}</h4>
             </Box>
 
             <Box className={classes.mainBox}>
-                <Box className={classes.boxes}>
-                    <Box className={classes.imgBox}>
-                        <img src={image1} alt="Mission Icon" />
-                    </Box>
-                    <h4>{subtitle1} </h4>
-                </Box>
-                <Box className={classes.boxes}>
-                    <Box className={classes.imgBox}>
-                        <img src={image2} alt="Help Icon" />
-                    </Box>
-                    <h4>{subtitle2} </h4>
-                </Box>
-                <Box className={classes.boxes}>
-                    <Box className={classes.imgBox}>
-                        <img src={image3} alt="Help Icon" />
-                    </Box>
-                    <h4>{subtitle3} </h4>
-                </Box>
+
+                {
+                    evcharger3.map((item, index) => {
+                        return (
+                            <Box className={classes.boxes}>
+                                <Box className={classes.imgBox}>
+                                    <img src={item.images} alt="Mission Icon" />
+                                </Box>
+                                <h4>{item.subtitle} </h4>
+                            </Box>
+                        )
+                    })
+                }
 
             </Box>
         </Container>

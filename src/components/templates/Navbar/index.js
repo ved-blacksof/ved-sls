@@ -1,22 +1,23 @@
 import React from 'react'
-import { makeStyles, Box, Container, IconButton, Toolbar, AppBar } from '@material-ui/core'
+import { makeStyles, IconButton, Toolbar, AppBar } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        background: '#003189',
+        background: 'rgba(0, 49, 137,0.85)',
+        // opacity:'0.8',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         paddingTop: '3%',
-        boxShadow:'none',
+        boxShadow: 'none',
     },
     navbar: {
         width: '90%',
         display: 'flex',
         justifyContent: 'space-between',
         [theme.breakpoints.down('sm')]: {
-            width:'100%'
+            width: '100%'
         }
     },
     logo: {
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         listStyle: 'none',
         [theme.breakpoints.down('sm')]: {
-            width:'70%',
+            width: '70%',
         },
         [theme.breakpoints.down('xs')]: {
             display: 'none'
@@ -57,7 +58,7 @@ export function Navbar() {
             <AppBar position='relative' className={classes.mainBox}>
                 <Toolbar className={classes.navbar}>
                     <IconButton edge="start" color="inherit" aria-label="menu">
-                        <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }}/>
+                        <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
                     </IconButton>
 
                     <ul className={classes.navUL}>

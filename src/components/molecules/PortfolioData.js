@@ -149,6 +149,7 @@ export const certification = [
     }
 
 ]
+
 export const csrcarousel = [
     {
         images: './images/Mask Group 2.png',
@@ -200,9 +201,53 @@ export const evchargers = [
     },
 ]
 
+export const evcharger3=[
+    {
+        images: './images/lite.png',
+        subtitle: 'Type 2 AC Charger Controller',
+        case: '123',
+    },
+    {
+        images: './images/ocpp-controller_350x350.png',
+        subtitle: 'Bharat',
+    },
+    {
+        images: './images/1.0.png',
+        subtitle: 'OCPP Controller',
+    },
+]
+
+export const middleware = [
+    {
+        images: './images/bharat_ac.png',
+        subtitle: 'IoT Middleware',
+        case: '123',
+    },
+    {
+        images: './images/bharat_ac.png',
+        subtitle: 'IoT Middleware',
+    },
+    {
+        images: './images/bharat_ac.png',
+        subtitle: 'IoT Middleware',
+    },
+    {
+        images: './images/bharat_ac.png',
+        subtitle: 'IoT Middleware',
+    },
+    {
+        images: './images/bharat_ac.png',
+        subtitle: 'IoT Middleware',
+    },
+    {
+        images: './images/bharat_ac.png',
+        subtitle: 'IoT Middleware',
+    },
+]
+
 export const yalgar = [
     {
-        images: './images/BlueIcons -20-01.svg',
+        images: './images/BlueIcons -20-01-1-white (1).svg',
         text: 'Chat and Social Media Sites'
     },
     {
@@ -248,5 +293,76 @@ export const loc = [
         text: 'API’s for third party Integrations'
     },
 ]
+
+//White icons only 4 for DigitalTemplate
+export const digital = [
+    {
+        images: './images/BlueIcons -20-01-1-white (1).svg',
+        text: 'Manage your Content'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (2).svg',
+        text: 'Diagnose Remotely'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (3).svg',
+        text: 'Monitor Proof of Play'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (4).svg',
+        text: 'Easy Authentication'
+    },
+]
+
+//White icons only 4 for SmartstreetTemplate
+export const smartstreet = [
+    {
+        images: './images/BlueIcons -20-01-1-white (1).svg',
+        text: 'Retrofit for existing infrastructure (RF and LoRa variants)'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (2).svg',
+        text: 'Energy efficient with motion and ambient light sensors'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (3).svg',
+        text: 'Real-time alerts on malfunctions'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (4).svg',
+        text: 'Real-time reports for lighting status, performance, energy consumption, etc.'
+    },
+]
+
+
+
+//White icons only 4 for SolarTemplate
+export const solar = [
+    {
+        images: './images/BlueIcons -20-01-1-white (1).svg',
+        text: 'End-to-end Solar and Wind Solutions'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (2).svg',
+        text: 'Powered through IoT'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (3).svg',
+        text: 'Real-time alerts on detection'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (4).svg',
+        text: 'Real-time reports of panel-wise energy generation'
+    },
+    {
+        images: './images/BlueIcons -20-01-1-white (4).svg',
+        text: 'Predictive energy optimization'
+    },
+]
+
+
+
+
+
 
 

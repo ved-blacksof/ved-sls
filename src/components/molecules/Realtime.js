@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Realtime({
-    head1, head2, subhead, read, data, mainhead
+    head1, head2, subhead, data, mainhead
 }) {
 
     const classes = useStyles()

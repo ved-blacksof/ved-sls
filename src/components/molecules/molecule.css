@@ -35,17 +35,14 @@
   align-items: flex-start !important;
 }
 
-.PrivateTabIndicator-vertical-142{
-    left:0 !important;
-  }
-
-
-.PrivateTabIndicator-vertical-148{
-  left:0 !important;
-}
-
   .MuiTab-root{
     max-width: 200px;
+  } 
+
+  .PrivateTabIndicator-vertical-158 {
+    left:0px !important;
+    width: 3px !important;
+    height: 20px !important;
   }
 
 

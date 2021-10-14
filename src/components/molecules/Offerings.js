@@ -17,13 +17,13 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     sliderSec: {
-        height:'fit-content',
+        height:'50vh',
         [theme.breakpoints.down('xs')]: {
             height:'60vh'
         }
     },
     card: {
-        boxShadow: '0px 2px 5px black',
+        boxShadow: '0px 0px 8px grey',
         width: '25%',
         height: 'fit-content',
         display: 'flex',
@@ -60,8 +60,11 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Offerings({
-    data, head1, head2, subhead, read, mainhead,
-
+    data,
+    title,
+    btn,
+    subtitle,
+    subtitle1,
 }) {
     // const plugins = [new AutoPlay({ duration: 1000, direction: "NEXT", stopOnHover: true })];
 
@@ -74,17 +77,15 @@ export function Offerings({
     return (
         <Container className={classes.realText}>
             <GeneralHeading
-                title="LOCCARTO"
-                subtitle="Keep a close tab on what matters to you with GPS-free Geolocation Tracking"
-                subtitle1="Loccarto is an RF Independent Geolocation Tracking solution that offers GPS-free
-                             tracking capabilities across IoT and a wide spectrum of applications. Reinvent asset tracking,
-                            smart industry application, and much more with this business-first cloud offering."
+                title={title}
+                subtitle={subtitle}
+                subtitle1={subtitle1}
             />
 
             <Container fixed className={classes.sliderSec}>
 
                 <Flicking
-                    plugins={Paginations}
+                    // plugins={Paginations}
                     plugins={Arrows}
                     defaultIndex='1'
                     circular={true}>
@@ -98,20 +99,19 @@ export function Offerings({
                                         <img className={classes.cardImage} src={item.images} alt="Robot Hand" />
                                     </Box>
                                     <Box className={classes.cardTxt}>
-                                        {/* <Button className={classes.smallBtn} >{item.case}</Button> */}
-                                        {/* <h4 className={classes.cardHead}>{item.title}</h4> */}
+                                        {
+                                            btn ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
+                                        }
+                                        <h4 className={classes.cardHead}>{item.title}</h4>
                                         <h6 className={classes.cardSubHead}>{item.subtitle}</h6>
-                                        {/* <a href="/#" className={classes.readMore}>{item.rea}</a> */}
+                                        <a href="/#" className={classes.readMore}>{item.read}</a>
                                     </Box>
                                 </Box>
-
                             )
                         })
                     }
 
                     <ViewportSlot className={classes.viewBox} style={{ border: '2px solid red' }}>
-                        {/* <span className="flicking-arrow-prev"></span>
-                        <span className="flicking-arrow-next"></span> */}
                         <img className="flicking-arrow-next pos" src={'./images/Group 82851.svg'} />
                         <img className="flicking-arrow-prev pos" src={'./images/Group 82850.svg'} />
                     </ViewportSlot>

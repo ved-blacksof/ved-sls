@@ -35,7 +35,6 @@ export function LOC({
                              tracking capabilities across IoT and a wide spectrum of applications. Reinvent asset tracking,
                             smart industry application, and much more with this business-first cloud offering."
                         />
-
                         <MapIcon1 data={loc}/>
                     </Grid>
                     <Grid xs={12} sm={6} className={classes.rightBox}>

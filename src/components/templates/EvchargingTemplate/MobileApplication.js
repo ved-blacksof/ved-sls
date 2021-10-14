@@ -8,8 +8,7 @@ const useStyles = makeStyles((theme) => ({
         border:'2px solid red',
         justifyContent:'center',
         alignItems:'center',
-        position:'relative',
-        height:'60vh',
+        height:'fit-content',
         [theme.breakpoints.down('xs')]: {
             height: '40vh',
         }
@@ -18,8 +17,7 @@ const useStyles = makeStyles((theme) => ({
         width: '18rem',
         height: '18rem',
         borderRadius: '4rem 0rem 4rem 4rem',
-        position: 'absolute',
-        bottom: '0',
+        position: 'relative',
         background: ' #003189',
         [theme.breakpoints.down('sm')]: {
             width: '15rem',

@@ -2,10 +2,10 @@ import { Box, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
-    paraBox:{
-        width:'80%',
-        [theme.breakpoints.down('sm')]:{
-            margin:'10%'
+    paraBox: {
+        width: '80%',
+        [theme.breakpoints.down('sm')]: {
+            margin: '10%'
         }
     },
     head: {
@@ -24,12 +24,12 @@ const useStyles = makeStyles((theme) => ({
     uls: {
         listStyle: 'inside',
         color: 'black',
-        font:'normal normal normal 1.1rem Access',
-        margin:'3% 0%'
+        font: 'normal normal normal 1.1rem Access',
+        margin: '3% 0%'
     },
     lis: {
         color: 'black',
-        margin:'2% '
+        margin: '2% '
     }
 
 
@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 export function Paragraphs({
     title,
     subtitle,
+    list,
     firstli,
     secli,
     thirdli,
@@ -51,14 +52,16 @@ export function Paragraphs({
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                 <h4 className={classes.portSubHead}>{subtitle}</h4>
 
-                <img />
 
-                <ul className={classes.uls}>To achieve our aim, we will
-                    <li className={classes.lis}>{firstli}</li>
-                    <li className={classes.lis}>{secli}</li>
-                    <li className={classes.lis}>{thirdli}</li>
-                    <li className={classes.lis}>{fourthli}</li>
-                </ul>
+                {
+                    list ?
+                        <ul className={classes.uls}>To achieve our aim, we will
+                            <li className={classes.lis}>{firstli}</li>
+                            <li className={classes.lis}>{secli}</li>
+                            <li className={classes.lis}>{thirdli}</li>
+                            <li className={classes.lis}>{fourthli}</li>
+                        </ul> : ''
+                }
             </Box>
         </>
     )

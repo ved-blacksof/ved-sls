@@ -11,7 +11,10 @@ const useStyles = makeStyles((theme) => ({
     },
     imageBox: {
         width:'70%',
-        position:'relative '
+        position:'relative ',
+        background:'white' ,
+        borderRadius:'.8rem',
+        boxShadow:'0px 0px 2px grey'
     },
     image:{
         width:'100%',
@@ -21,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
         width: '18%',
         zIndex: '-1',
         position:'absolute',
-        right: '-4%',
-        top:'-6%'
+        right: '-5%',
+        top:'-10%'
     },
     white: {
         width: '30%',

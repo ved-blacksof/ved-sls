@@ -1,14 +1,15 @@
 import React from 'react'
 import { makeStyles, Container, Box } from '@material-ui/core'
+import { MapIcon } from '../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
     overBox: {
         background: '#003189',
-        height: '90vh',
+        height: '100vh',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
-            paddingBottom:'5%'
+            paddingBottom: '5%'
         },
     },
     overInBox: {
@@ -25,7 +26,29 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             width: '90%'
         }
-    }
+    },
+    //List CSS for IOT PAge
+    list: {
+        background: '#003189',
+        [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
+            paddingBottom: '5%',
+        },
+    },
+    box1: {
+        width: '100%',
+        paddingTop: '2%',
+        border: 'none',
+    },
+    UL: {
+        font: 'normal normal normal 1rem Access',
+        color: 'white',
+        listStyle: 'inside',
+        // margin: '3% 0%'
+    },
+    LI: {
+        margin: '1% '
+    },
 
 }))
 
@@ -38,7 +61,11 @@ export function Overview({
     uls,
     li1,
     li2,
-    li3
+    li3,
+    prop,
+    list,
+    icons,
+    data
 }) {
 
     const classes = useStyles()
@@ -55,6 +82,39 @@ export function Overview({
                 <h4 className={classes.portSubHead}>{sub1}</h4>
 
                 <h4 className={classes.portSubHead}>{sub2}</h4>
+
+                {
+                    prop ?
+                        <img src={prop} alt="image" /> : ''
+                }
+
+                {
+                    list ?
+                        <>
+                            <Box className={classes.list}>
+                                <Container fixed className={classes.box1}>
+                                    <ul className={classes.UL}>
+                                        <li className={classes.LI}>{li1}</li>
+                                        <li className={classes.LI}>{li2}</li>
+                                        <li className={classes.LI}>{li3} </li>
+                                    </ul>
+                                </Container>
+                            </Box>
+                        </> : ''
+                }
+
+                {
+                    icons ? 
+                    <>
+                        <MapIcon 
+                            data={data}
+                            fill="white"
+                            color="white"
+                        />
+                    </> : ''
+                }
+
+
 
             </Container>
         </Box>

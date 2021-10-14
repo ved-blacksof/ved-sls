@@ -3,9 +3,6 @@ import React from 'react'
 import {
     Box,
     Container,
-    Tabs,
-    Tab,
-    Typography,
     makeStyles,
 } from '@material-ui/core';
 import { VerticalTab } from '../../molecules'

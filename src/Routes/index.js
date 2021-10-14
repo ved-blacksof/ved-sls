@@ -3,7 +3,11 @@ import {
     Aboutus,
     Evcharging,
     Cloudsolution,
-    IOTplatform
+    IOTplatform,
+    Digital,
+    Smartstreet,
+    Railways,
+    Solar
 } from '../components/pages'
 
 export const Routes = [
@@ -36,5 +40,29 @@ export const Routes = [
         title: "/iot",
         exact: true,
         component: () => <IOTplatform />
+    },
+    {
+        path: "/digital",
+        title: "/digital",
+        exact: true,
+        component: () => <Digital />
+    },
+    {
+        path: "/smart",
+        title: "/smart",
+        exact: true,
+        component: () => <Smartstreet />
+    },
+    {
+        path: "/railways",
+        title: "/railways",
+        exact: true,
+        component: () => <Railways />
+    },
+    {
+        path: "/solar",
+        title: "/solar",
+        exact: true,
+        component: () => <Solar />
     },
 ]

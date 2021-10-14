@@ -8,36 +8,50 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         height: '100vh',
         background: '#003189',
-        margin:'20% 0%',
+        margin: '20% 0%',
         borderRadius: '0rem 5rem 0rem 5rem',
         display: 'flex',
-        [theme.breakpoints.down('sm')]:{
-            height:'fit-content'
+        border: '2px solid red',
+
+        [theme.breakpoints.down('sm')]: {
+            height: 'fit-content'
         }
     },
-    mainContainer: {
+    container: {
         display: 'flex',
         justifyContent: 'left',
         alignItems: 'center',
+        border: '2px solid white',
+        position: 'relative',
+        [theme.breakpoints.down('sm')]:{
+            flexDirection:'column'
+        }
     },
-    gridContainer:{
-        position:'relative',
+    leftBox: {
+        width: '50%',
+        [theme.breakpoints.down('sm')]:{
+            width: '100%',
+        }
     },
-    lapBox:{
-        position:'absolute',
-        width:'70%',
+    rightBox: {
+        position: 'absolute',
+        border: '2px solid green',
+        width: '70%',
         right:'-20%',
         top:'20%',
-        overflow:'hidden',
-        [theme.breakpoints.down('sm')]:{
-            position:'static',
-            width:'80%',
-            margin:'5% auto'
+        overflowY:'visible',
+        [theme.breakpoints.down('sm')]: {
+            position: 'static',
+            width: '80%',
+            margin: '5% auto'
         }
     },
     lap: {
         width: '100%',
-        height: '100%'
+        maxHeight: '100%',
+        // position:'absolute',
+        // right: '-40%',
+        // top: '20%',
     }
 
 }))
@@ -46,29 +60,24 @@ export function ChargingMangement() {
     const classes = useStyles()
     return (
         <Box className={classes.mainBox}>
-            <Container fixed className={classes.mainContainer}>
+            <Container fixed className={classes.container}>
 
-                <Grid container spacing={2} className={classes.gridContainer}>
-
-                    <Grid item xs={12} md={6} >
+                    <Box className={classes.leftBox} >
                         <ParagraphsBlue
                             maintitle="Software OFFERING"
                             title="Charging Management Software"
-                            subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge 
-                                technology for easy management of your EV Charging Infra.
-                                The CMS is built to support all major brands of chargers available globally."
+                            subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
                             firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
                             secli="Dynamic load management capabilities"
                             thirdli="ROI Analytics"
                             fourthli="Partner/Fleet management"
                         />
-                    </Grid>
+                    </Box>
 
-                    <Box item xs={12} md={6} className={classes.lapBox}>
+                    <Box className={classes.rightBox}>
                         <img className={classes.lap} src={'./images/Image 2.png'} />
                     </Box>
 
-                </Grid>
             </Container>
         </Box>
     )
