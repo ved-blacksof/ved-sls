@@ -53,6 +53,10 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Overview({
+<<<<<<< HEAD
+=======
+    title,
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
     sub1,
     sub2,
     path,
@@ -74,7 +78,11 @@ export function Overview({
             <Container fixed className={classes.overInBox}>
                 <h6 className={classes.paths}> {path} </h6>
 
+<<<<<<< HEAD
                 <h3 className={classes.head}>Overview</h3>
+=======
+                <h3 className={classes.head}>{title}</h3>
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
 

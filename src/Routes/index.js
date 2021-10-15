@@ -7,8 +7,12 @@ import {
     Digital,
     Smartstreet,
     Railways,
+<<<<<<< HEAD
     Solar,
     Smarttraffic
+=======
+    Solar
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 } from '../components/pages'
 
 export const Routes = [
@@ -49,8 +53,13 @@ export const Routes = [
         component: () => <Digital />
     },
     {
+<<<<<<< HEAD
         path: "/smartstreet",
         title: "/smartstreet",
+=======
+        path: "/smart",
+        title: "/smart",
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
         exact: true,
         component: () => <Smartstreet />
     },
@@ -66,6 +75,7 @@ export const Routes = [
         exact: true,
         component: () => <Solar />
     },
+<<<<<<< HEAD
     {
         path: "/smarttraffic",
         title: "/smarttraffic",
@@ -73,4 +83,6 @@ export const Routes = [
         component: () => <Smarttraffic />
     },
 
+=======
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 ]

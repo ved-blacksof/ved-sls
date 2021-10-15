@@ -3,6 +3,7 @@ import { makeStyles, Box } from '@material-ui/core'
 import { Buttons } from '../atoms'
 
 const useStyles = makeStyles((theme) => ({
+<<<<<<< HEAD
     visitBox:{
         display: 'flex', 
         justifyContent: 'center', 
@@ -10,6 +11,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center', 
         margin: "2% auto"
     },
+=======
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
     btmText: {
         color: '#354B9C',
         textAlign: 'center',
@@ -18,12 +21,20 @@ const useStyles = makeStyles((theme) => ({
     },
     btns: {
         width: '20%',
+<<<<<<< HEAD
         marginTop:'2%',
+=======
+        marginTop:'3%',
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
         [theme.breakpoints.down('md')]: {
             width: '40%'
         },
         [theme.breakpoints.down('xs')]: {
+<<<<<<< HEAD
             width: '60%'
+=======
+            width: '100%'
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
         },
     }
 }))
@@ -34,7 +45,11 @@ export function Visit({
 
     const classes = useStyles()
     return (
+<<<<<<< HEAD
         <Box className={classes.visitBox} style={{  }}>
+=======
+        <Box style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: "5%" }}>
+>>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
             <h4 className={classes.btmText}> {goto}</h4>
 
             <Buttons
