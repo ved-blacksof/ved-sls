@@ -6,6 +6,7 @@ import { PositionImageReverse , Paragraphs } from "../atoms"
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
+        margin:'15% auto' ,
     },
     bigHead: {
         color: 'black',
@@ -48,7 +49,7 @@ export function QualityReverse({
                 <h2 className={classes.bigHead}>{mainheading}</h2>
 
                 <Box container spacing={4} className={classes.gridContainer}
-                    style={style} order={{ xs: 3, sm: 1 }}>
+                    style={style} >
 
                     <Grid item xs={12} md={6}>
                         <Paragraphs

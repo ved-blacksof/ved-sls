@@ -8,7 +8,8 @@ import {
     Smartstreet,
     Railways,
     Solar,
-    Smarttraffic
+    Smarttraffic,
+    Contactus
 } from '../components/pages'
 
 export const Routes = [
@@ -71,6 +72,12 @@ export const Routes = [
         title: "/smarttraffic",
         exact: true,
         component: () => <Smarttraffic />
+    },
+    {
+        path: "/contact",
+        title: "/contact",
+        exact: true,
+        component: () => <Contactus />
     },
 
 ]

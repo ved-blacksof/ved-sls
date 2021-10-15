@@ -6,13 +6,13 @@ import { PositionImage, Paragraphs } from "../atoms"
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        marginTop:'10%',
-        
+        margin:'15% auto' ,
     },
     bigHead: {
         color: 'black',
         textAlign: 'center',
         fontSize: '3rem',
+        marginBottom:'15%'
     },
     gridContainer: {
         marginTop: '10%',
@@ -48,11 +48,8 @@ export function Quality({
                 <h2 className={classes.bigHead}>{mainheading}</h2>
 
                 <Box className={classes.gridContainer}
-                    style={style}
-                    order={{ xs: 3, sm: 1 }}>
-                    <Grid item xs={12} md={6}
-                        className={classes.gridLeft}
-                    >
+                    style={style}>
+                    <Grid item xs={12} md={6} className={classes.gridLeft}>
                         <PositionImage imageBG={imageBG} />
                     </Grid>
 
