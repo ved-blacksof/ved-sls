@@ -7,15 +7,8 @@ export * from './Realtime'
 export * from './Democarousel'
 export * from './PortfolioData'
 export * from './Offerings'
-<<<<<<< HEAD
 export * from './Visit'
 export * from './Quality'
 export * from './QualityReverse'
 export * from './Squareboxes'
 export * from './Cards'
-=======
-export * from './Threeboxes'
-export * from './Visit'
-export * from './Quality'
-export * from './QualityReverse'
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31

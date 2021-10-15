@@ -110,10 +110,6 @@ export const realtime = [
 
 ]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 export const certification = [
     {
         images: './images/Mask Group 3.png',
@@ -154,10 +150,6 @@ export const certification = [
 
 ]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 export const csrcarousel = [
     {
         images: './images/Mask Group 2.png',
@@ -225,10 +217,6 @@ export const evcharger3=[
     },
 ]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 export const middleware = [
     {
         images: './images/bharat_ac.png',
@@ -257,10 +245,6 @@ export const middleware = [
     },
 ]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 export const yalgar = [
     {
         images: './images/BlueIcons -20-01-1-white (1).svg',
@@ -291,11 +275,8 @@ export const yalgar = [
         text: 'Live Polling/Blogging'
     },
 ]
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 export const loc = [
     {
         images: './images/BlueIcons -20-01.svg',
@@ -315,10 +296,6 @@ export const loc = [
     },
 ]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 //White icons only 4 for DigitalTemplate
 export const digital = [
     {
@@ -339,10 +316,6 @@ export const digital = [
     },
 ]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 //White icons only 4 for SmartstreetTemplate
 export const smartstreet = [
     {
@@ -362,7 +335,6 @@ export const smartstreet = [
         text: 'Real-time reports for lighting status, performance, energy consumption, etc.'
     },
 ]
-<<<<<<< HEAD
 //White icons only 4 for SmarttrafficTemplate
 export const smarttraffic = [
     {
@@ -390,8 +362,6 @@ export const smarttraffic = [
         text: 'Variable Message Signs'
     },
 ]
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 
 
 
@@ -421,7 +391,6 @@ export const solar = [
 
 
 
-<<<<<<< HEAD
 // USed SOLAR AND WIND hardware offerings 
 // Components = Cards.js molecule, 
 export const solarhardware = [
@@ -472,8 +441,6 @@ export const solarsoftware = [
 
 
 
-=======
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 
 
 

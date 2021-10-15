@@ -3,11 +3,7 @@ import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
 import { Ubanner, Overview, Threeboxes, Offerings, Visit } from '../../molecules'
-<<<<<<< HEAD
 import { middleware ,evcharger3} from '../../molecules/PortfolioData'
-=======
-import { middleware } from '../../molecules/PortfolioData'
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -65,17 +61,7 @@ export function IOTplatformTemplate({
 
             <Threeboxes
                 title="HARDWARE OFFERINGs"
-<<<<<<< HEAD
                 data={evcharger3}   
-=======
-                // subtitle="We offer a range od EV AC charging controllers integrated with energy mangement, remote access, and OCPP connectivity."
-                image1="./images/lite.png"
-                image2="./images/ocpp-controller_350x350.png"
-                image3="./images/1.0.png"
-                subtitle1="Gateways"
-                subtitle2="Nodes"
-                subtitle3="Controllers"
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
             />
 
             <Offerings

@@ -4,14 +4,9 @@ import { useHistory, NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-<<<<<<< HEAD
         // background: 'rgba(0, 49, 137,0.85)',
         // opacity:'0.8',
         background: '#003189',
-=======
-        background: 'rgba(0, 49, 137,0.85)',
-        // opacity:'0.8',
->>>>>>> 6abe93bbf00ebb16cffc66800f79eed3709c4a31
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
