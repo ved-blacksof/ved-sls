@@ -1,0 +1,11 @@
+export * from './Homepage'
+export * from './Aboutus'
+export * from './Evcharging'
+export * from './Cloudsolution'
+export * from './IOTplatform'
+export * from './Digital'
+export * from './Smartstreet'
+export * from './Railways'
+export * from './Solar'
+export * from './Smarttraffic'
+
