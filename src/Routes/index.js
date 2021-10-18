@@ -9,7 +9,14 @@ import {
     Railways,
     Solar,
     Smarttraffic,
-    Contactus
+    Contactus,
+    Gaming,
+    Smartmetering,
+    IPcore,
+    MachineLearning,
+    Electronics,
+    Highspeed,
+    Testing    
 } from '../components/pages'
 
 export const Routes = [
@@ -78,6 +85,48 @@ export const Routes = [
         title: "/contact",
         exact: true,
         component: () => <Contactus />
+    },
+    {
+        path: "/gaming",
+        title: "/gaming",
+        exact: true,
+        component: () => <Gaming />
+    },
+    {
+        path: "/smartmeter",
+        title: "/smartmeter",
+        exact: true,
+        component: () => <Smartmetering/>
+    },
+    {
+        path: "/ipcore",
+        title: "/ipcore",
+        exact: true,
+        component: () => <IPcore/>
+    },
+    {
+        path: "/ml",
+        title: "/ml",
+        exact: true,
+        component: () => <MachineLearning/>
+    },
+    {
+        path: "/electronics",
+        title: "/electronics",
+        exact: true,
+        component: () => <Electronics/>
+    },
+    {
+        path: "/highspeed",
+        title: "/highspeed",
+        exact: true,
+        component: () => <Highspeed/>
+    },
+    {
+        path: "/testing",
+        title: "/testing",
+        exact: true,
+        component: () => <Testing/>
     },
 
 ]

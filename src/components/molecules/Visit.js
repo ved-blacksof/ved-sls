@@ -8,16 +8,15 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center', 
         flexDirection: 'column', 
         alignItems: 'center', 
-        margin: "2% auto"
+        margin: "5% auto"
     },
     btmText: {
         color: '#354B9C',
         textAlign: 'center',
-        marginTop: '5%',
         fontWeight:'bold',
     },
     btns: {
-        width: '20%',
+        width: '15%',
         marginTop:'2%',
         [theme.breakpoints.down('md')]: {
             width: '40%'
@@ -29,17 +28,18 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Visit({
-    goto
+    goto,
+    title   
 }) {
 
     const classes = useStyles()
     return (
-        <Box className={classes.visitBox} style={{  }}>
+        <Box className={classes.visitBox}>
             <h4 className={classes.btmText}> {goto}</h4>
 
             <Buttons
                 className={classes.btns}
-                title="Visit the website"
+                title={title}
                 arrowIcon="./images/Icon feather-arrow-right.svg"
             />
         </Box>

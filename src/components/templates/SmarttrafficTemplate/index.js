@@ -37,6 +37,7 @@ export function SmarttrafficTemplate() {
 
             <Visit
                 goto="Switch to Smart Traffic Management now!"
+                title="Visit the web"
             />
 
             <Footer />

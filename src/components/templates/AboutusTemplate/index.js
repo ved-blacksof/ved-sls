@@ -59,16 +59,22 @@ export function AboutusTemplate() {
                 fourthli="Strive to continually improve EMS by enhancing environmental performance."
             />
 
-            <Offerings
+            {/* <Offerings
                 data={certification}
                 title="Certifications "
-            />
+            /> */}
 
 
             {/* <Realtime
                 data={certification}
                 head1="Certifications and Policies" /> */}
-
+                
+                <Realtime
+                data={certification}
+                title="CERTIFICATIONS"
+                // subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
+                // cases="cases"
+            />
 
             <Footer />
 

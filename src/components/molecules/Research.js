@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     
     redLine:{
-        margin:'2% 0%'
+        margin:'1% 0%'
     },
     subHead: {
         width: '60%',

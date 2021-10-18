@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
         font: 'normal normal normal 1rem Access',
         color: 'white',
         listStyle: 'inside',
-        // margin: '3% 0%'
     },
     LI: {
         margin: '1% '
@@ -73,6 +72,7 @@ export function IOTplatformTemplate({
 
             <Visit 
                 goto="Get to know us better."
+                title="Visit the web"
             />
 
 

@@ -9,6 +9,7 @@ import {
 const useStyles = makeStyles((theme) => ({
     container1: {
         margin: '10% auto',
+        // height:'40vh'
     },
     mainBox: {
         width: '100%',
@@ -30,25 +31,26 @@ const useStyles = makeStyles((theme) => ({
         borderBottom:'4px solid #354B9C',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         flexDirection: 'column',
         flexWrap: 'wrap',
         marginTop: '5%',
         [theme.breakpoints.down('xs')]: {
-            width: '70%'
+            // width: '70%'
         },
         '& h4': {
             color: 'black'
         },
         '& img': {
-            width: '100%',
-            maxHeight: '100%',
+            maxWidth: '100%',
+            height: '100%',
         },
     },
     imgBox: {
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
+        height:'12rem',
         background: 'white',
     },
     head: {
@@ -65,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '1% 0%'
     },
     textBox:{
-        padding:'2rem',
+        padding:'1rem',
         [theme.breakpoints.down('sm')]:{
             padding:'1rem'
         }
@@ -97,7 +99,8 @@ export function Cards({
     title,
     subtitle,
     redline,
-    data
+    data,
+    read
 }) {
 
     const classes = useStyles()
@@ -129,7 +132,7 @@ export function Cards({
                                     <h4 className={classes.productName} >{item.productname}</h4>
                                     <h6 className={classes.productDetail} style={{ color: 'black', textAlign: 'left', }}>{item.para}</h6>
                                     {
-                                        <a href="/" className={classes.readMore}>READ MORE</a>
+                                        read ? <a href="/" className={classes.readMore}>READ MORE</a> : ''
                                     }
                                 </Box>
                             </Box>

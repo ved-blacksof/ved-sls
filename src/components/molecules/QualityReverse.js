@@ -6,7 +6,7 @@ import { PositionImageReverse , Paragraphs } from "../atoms"
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        margin:'15% auto' ,
+        margin:'10% auto' ,
     },
     bigHead: {
         color: 'black',
@@ -15,11 +15,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '2%'
     },
     gridContainer: {
-        marginTop: '10%',
         display:'flex',
         [theme.breakpoints.down('sm')]:{
             flexDirection:'column-reverse',
-            marginTop:'10%',
+            marginTop:'20%',
         }
     },
     gridLeft: {
@@ -36,6 +35,7 @@ export function QualityReverse({
     imageBG,
     heading,
     subtitle,
+    redline,
     firstli,
     secli,
     thirdli,
@@ -55,6 +55,7 @@ export function QualityReverse({
                         <Paragraphs
                             title={heading}
                             subtitle={subtitle}
+                            redline={redline}
                             firstli={firstli}
                             secli={secli}
                             thirdli={thirdli}

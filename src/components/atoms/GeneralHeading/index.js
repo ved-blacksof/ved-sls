@@ -8,7 +8,11 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     head: {
-        color: 'black'
+        color: 'black',
+        width:'50%',
+        [theme.breakpoints.down('sm')]:{
+            width:'70%'
+        }
     },
     portSubHead: {
         color: 'black',
@@ -26,12 +30,14 @@ export function GeneralHeading({
     title,
     subtitle,
     image,
-    subtitle1
+    subtitle1,
+    style,
+    br=`${ <br/> }`
 }) {
     const classes = useStyles()
 
     return (
-        <Box  className={classes.paraBox}>
+        <Box  className={classes.paraBox} style={style}>
             <h3 className={classes.head}>{title}</h3>
             <img className={classes.redLine} src={image} />
             <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />

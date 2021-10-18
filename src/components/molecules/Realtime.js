@@ -1,41 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './styled.css'
 import { makeStyles, Container, Box, Button } from '@material-ui/core'
+import { GeneralHeading } from '../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
     realText: {
         marginTop: '10%',
-        [theme.breakpoints.down('xs')]:{
-            margin:"20% 0%"
+        [theme.breakpoints.down('xs')]: {
+            margin: "20% 0%"
         }
     },
-    mainHead:{
-        color:'black',
-
-    },
-    head: {
-        color: 'black'
-    },
-    redLine: {
-        margin: '1% 0%'
-    },
-    subHead: {
+    mainHead: {
         color: 'black',
-        width: '40%',
-        [theme.breakpoints.down('xs')]: {
-            width: '70%',
-        },
-    },
-    arrows: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        flexDirection: 'column',
-        marginRight: '1%',
-
     },
     sliderSec: {
         display: 'flex',
@@ -43,15 +23,29 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         marginTop: '3%'
     },
+    box: {
+        width: '10%',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        flexDirection: 'column',
+        margin: ' 0% 2%',
+    },
     slider: {
         width: '100%',
-        justifyContent:'space-between'
-
+        justifyContent: 'space-around',
+        [theme.breakpoints.down('xs')]:{
+            width:'80%'
+        }
     },
     card: {
-        boxShadow: '0px 0px 2px black',
-        margin:"0% 2rem",
-        border:'2px solid red',
+        boxShadow: '0px 0px 10px grey',
+        margin: "0% 1rem",
+        borderBottom:'3px solid #003189',
+        background:'white',
+        [theme.breakpoints.down('xs')]:{
+            width:'80%'
+        }
     },
     cardImage: {
         width: '100%',
@@ -62,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '5%'
     },
     smallBtn: {
-        font: 'normal normal normal .8rem Access',
+        font: 'normal normal normal .5rem Access',
         background: '#003189',
         border: 'none',
         color: 'white',
@@ -72,32 +66,50 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cardHead: {
-        font: 'normal normal normal 1.5rem Access',
+        font: 'normal normal normal 1.1rem Access',
         color: 'black',
+        marginTop:'3%'
 
     },
     cardSubHead: {
-        color: 'black'
+        color: 'black',
+        marginTop:'3%'
     },
     readMore: {
-        font: 'normal normal normal 1.4rem BebasNeue',
-        color: '#003189'
+        font: 'normal normal normal 1rem BebasNeue',
+        color: '#003189',
+        paddingTop:'1rem',
     }
 }))
 
-export function Realtime({
-    head1, head2, subhead, data, mainhead
-}) {
 
+export function Realtime({
+    data,
+    mainhead,
+    title,
+    image,
+    subtitle,
+    subtitle1,
+    cases,
+}) {
     const classes = useStyles()
+
+    const sliderRef = useRef();
+
+    const next = () => {
+        sliderRef.current.slickNext();
+    };
+    const previous = () => {
+        sliderRef.current.slickPrev();
+    };
     {
         var settings = {
-            dots: true,
+            // dots: true,
             arrows: true,
-            infinite: false,
-            speed: 500,
+            infinite: true,
+            speed: 1000,
             slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToScroll: 2,
             initialSlide: 0,
             responsive: [
                 {
@@ -130,45 +142,53 @@ export function Realtime({
         return (
             <>
 
-                <Container fixed className={classes.realText}>
-                    <h2 className={classes.mainHead}> {mainhead}</h2>
-                    <h3 className={classes.head}>{head1} <br /> {head2}</h3>
-                    <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-                    <h4 className={classes.subHead}>{subhead}</h4>
-                </Container>
-
                 {/* only slider */}
+                <Container fixed className={classes.realText}>
+                    <GeneralHeading
+                        title={title}
+                        image={image}
+                        subtitle={subtitle}
+                        subtitle1={subtitle1}
+                    />
 
-                <Container fixed className={classes.sliderSec}>
-                    <Box className={classes.arrows} >
-                        <img src={'./images/Group 82851.svg'} />
-                        <img src={'./images/Group 82850.svg'} />
-                    </Box>
-                    <Slider {...settings} className={classes.slider}>
+                    <Box fixed className={classes.sliderSec}>
+                        <Box className={classes.box}>
+                            <img style={{margin:'20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
+                            <img src={"./images/Group 82851.svg"} onClick={next} />
+                        </Box>
 
-                        {/* CARDS */}
+                        <Slider ref={sliderRef} {...settings} className={classes.slider}>
 
-                        {
-                            data.map((item, index) => {
-                                return (
-                                    <Box className={classes.card} >
-                                        <img className={classes.cardImage} src={item.images} alt="Robot Hand" />
+                            
 
-                                        <Box className={classes.cardTxt}>
-                                            <Button className={classes.smallBtn} >{item.case}</Button>
-                                            <h4 className={classes.cardHead}>{item.head}</h4>
-                                            <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                            <a href="/#" className={classes.readMore}>{item.read}</a>
+                            {/* CARDS */}
+
+                            {
+                                data.map((item, index) => {
+                                    return (
+                                        <Box>
+                                            <Box className={classes.card} >
+                                                <img className={classes.cardImage} src={item.images} alt="Robot Hand" />
+
+                                                <Box className={classes.cardTxt}>
+                                                    {
+                                                        cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
+                                                    }
+                                                    <h4 className={classes.cardHead}>{item.head}</h4>
+                                                    <h6 className={classes.cardSubHead}>{item.para}</h6>
+                                                    <a href="/#" className={classes.readMore}>{item.read}</a>
+                                                </Box>
+                                            </Box>
                                         </Box>
-                                    </Box>
 
-                                )
-                            })
-                        }
-
+                                    )
+                                })
+                            }
 
 
-                    </Slider>
+
+                        </Slider>
+                    </Box>
                 </Container>
             </>
         )

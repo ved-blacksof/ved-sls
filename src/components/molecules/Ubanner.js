@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     mainText: {
         font: 'normal normal normal 5rem BebasNeue',
         zIndex: '1',
+        textAlign:'center',
         color: 'white',
         [theme.breakpoints.down('sm')]: {
             fontSize: '4rem'

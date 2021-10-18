@@ -77,8 +77,6 @@ export function Portfolio({
 
             <MapIcon data={data} />
 
-            
-
             <Box className={classes.knowMore}>
                 <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'} /> </button>
             </Box>

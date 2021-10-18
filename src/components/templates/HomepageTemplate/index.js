@@ -29,14 +29,14 @@ export function HomepageTemplate() {
 
             <Expanding />
 
-            {/* <Realtime
+            <Realtime
                 data={realtime}
-                head1="GET ACQUAINTED WITH INDUSTRY "
-                head2="TRENDS IN REAL-TIME"
-                subhead="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
-            /> */}
+                title="GET ACQUAINTED WITH INDUSTRY TRENDS IN REAL-TIME"
+                subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
+                cases="cases"
+            />
 
-            <Offerings
+            {/* <Offerings
                 data={realtime}
                 title="GET ACQUAINTED WITH INDUSTRY TRENDS IN REAL-TIME"
                 btn="btn"
@@ -44,7 +44,7 @@ export function HomepageTemplate() {
                 
                 
                 // subtitle1="sub1"
-            />
+            /> */}
 
             {/* <Democarousel
                 data={realtime}

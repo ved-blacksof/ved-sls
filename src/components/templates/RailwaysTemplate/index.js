@@ -43,6 +43,7 @@ export function RailwaysTemplate() {
 
             <Visit
                 goto="Know more about our solution for Railways."
+                title="Visit the web"
             />
 
 

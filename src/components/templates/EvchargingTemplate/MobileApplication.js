@@ -5,7 +5,6 @@ import { Paragraphs } from '../../atoms'
 const useStyles = makeStyles((theme) => ({
     rightBox: {
         display:'flex',
-        border:'2px solid red',
         justifyContent:'center',
         alignItems:'center',
         height:'fit-content',

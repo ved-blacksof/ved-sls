@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar, Footer } from '..'
 import { Overview, Ubanner, Quality, QualityReverse,Visit } from '../../molecules'
 import { digital } from '../../molecules/PortfolioData'
+import {Letstalk} from './Letstalk'
 
 export function ContactusTemplate() {
     return (
@@ -15,7 +16,7 @@ export function ContactusTemplate() {
             <Navbar />
 
 
-            
+            <Letstalk />
 
 
             <Footer />

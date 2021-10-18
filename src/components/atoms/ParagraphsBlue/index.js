@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
     uls: {
         listStyle: 'inside',
         font: 'normal normal normal 1.1rem Access',
-        margin: '3% 0%'
+        margin: '3% 0%',
+        color:'white'
     },
     lis: {
         margin: '2%',
@@ -35,6 +36,7 @@ export function ParagraphsBlue({
     maintitle,
     title,
     subtitle,
+    list,
     firstli,
     secli,
     thirdli,
@@ -50,12 +52,18 @@ export function ParagraphsBlue({
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                 <h4 className={classes.portSubHead}>{subtitle}</h4>
 
-                <ul className={classes.uls}>
-                    <li className={classes.lis}>{firstli}</li>
-                    <li className={classes.lis}>{secli}</li>
-                    <li className={classes.lis}>{thirdli}</li>
-                    <li className={classes.lis}>{fourthli}</li>
-                </ul>
+                {
+                    list ?
+                        <ul className={classes.uls}>
+                            {list}
+                            <li className={classes.lis}>{firstli}</li>
+                            <li className={classes.lis}>{secli}</li>
+                            <li className={classes.lis}>{thirdli}</li>
+                            {
+                                fourthli ? <li className={classes.lis}>{fourthli}</li> : ''
+                            }
+                        </ul> : ''
+                }
             </Box>
         </>
     )
