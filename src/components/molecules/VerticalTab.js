@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         width: '30%',
         marginTop: '2%',
         [theme.breakpoints.down('sm')]: {
-            width:'50%'
+            width: '50%'
         },
     },
     tab: {
@@ -126,6 +126,7 @@ export function VerticalTab() {
                     <Tab className={classes.tab} label="Electronics Manufacturing Services (EMS)" {...a11yProps(3)} />
                     <Tab className={classes.tab} label="Testing and Calibration" {...a11yProps(4)} />
                     <Tab className={classes.tab} label="ML & AI" {...a11yProps(5)} />
+
                 </Tabs>
 
                 <TabPanel className={classes.tabPanel} value={value} index={0}>

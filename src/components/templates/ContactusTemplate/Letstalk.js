@@ -4,7 +4,6 @@ import React from 'react'
 
 const useStyles = makeStyles((theme)=>({
     mainBox:{
-        background:'blue'
     }
 }))
 
@@ -12,16 +11,17 @@ export function Letstalk() {
     const classes = useStyles()
     return (
         <>
-            <Box style={{background:'blue', height:'100vh'}}>
+            <Box style={{background:'#003189', height:'100vh'}}>
                 <Container >
-                    <Grid container sm={12}>
+                    <h1>Contact us</h1>
+                    {/* <Grid container sm={12}>
                             <Grid sm={6} >
                                 
                             </Grid>
                             <Grid sm={6}>
 
                             </Grid>
-                    </Grid>
+                    </Grid> */}
                 </Container>
             </Box>
         </>

@@ -566,3 +566,93 @@ export const highspeed = [
 
 ]
 
+export const technologystack = [
+    {
+        images: './images/BlueIcons -20-01.svg',
+        number:'01',
+        title: 'Web Servers',
+        subtitle:'IIS, Apache, NGINX , Jetty'
+    },
+    {
+        images: './images/BlueIcons -20-02.svg',
+        number:'02',
+        title: 'UI development',
+        subtitle:'Bootstrap, jquery, Javascript, HTML5, CSS3, Angular'
+    },
+    {
+        images: './images/BlueIcons -20-03.svg',
+        number:'03',
+        title: 'Server Side Languages',
+        subtitle:'.NET, C#, PHP, .NET MVC, .NET Core, WPF, JAVA, Python'
+    },
+    {
+        images: './images/BlueIcons -20-04.svg',
+        number:'04',
+        title: 'Databases',
+        subtitle:'PostGreSQL, MySQL, MSSQL, MongoDB, Cassandra, sqlite'
+    },
+    {
+        images: './images/BlueIcons -20-06.svg',
+        number:'05',
+        title: 'Messaging',
+        subtitle:'MQTT, WS, AMQP, Nodejs, RabbitMQ'
+    },
+    {
+        images: './images/BlueIcons -20-10.svg',
+        number:'06',
+        title: 'Frameworks',
+        subtitle:'Joomla, Wordpress, Spring boot, Gradle, Spring, MVC, Hibernate Build'
+    },
+    {
+        images: './images/BlueIcons -20-08.svg',
+        number:'07',
+        title: 'Version management',
+        subtitle:'Jenkins, Docker, Github'
+    },
+    {
+        images: './images/BlueIcons -20-14.svg',
+        number:'08',
+        title: 'OS',
+        subtitle:'Windows, Linux, CentOS'
+    },
+    {
+        images: './images/BlueIcons -20-16.svg',
+        number:'09',
+        title: 'Data Exchange',
+        subtitle:'JSON, AJAX, XML, SOAP'
+    },
+    {
+        images: './images/BlueIcons -20-02.svg',
+        number:'10',
+        title: 'Mobile',
+        subtitle:'Android, Flutter, iOS, React Native'
+    },
+]
+
+//White icons only 4 for transformersTemplate overview
+export const transformer = [
+    {
+        images: './images/Layer_19.svg',
+        text: 'Data Logging'
+    },
+    {
+        images: './images/Layer_29.svg',
+        text: 'Event Recording'
+    },
+    {
+        images: './images/Layer_30.svg',
+        text: 'Top and Bottom Oil Temperature Management'
+    },
+    {
+        images: './images/Layer_31.svg',
+        text: 'Fan Control and Cooling Monitoring'
+    },
+    {
+        images: './images/Layer_32.svg',
+        text: 'Phase voltage, current & overload capacity measurement'
+    },
+    {
+        images: './images/Layer_34.svg',
+        text: 'Oil Flow and Level Monitoring'
+    },
+]

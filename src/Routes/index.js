@@ -16,7 +16,9 @@ import {
     MachineLearning,
     Electronics,
     Highspeed,
-    Testing    
+    Testing,
+    SoftDev,
+    Transformers    
 } from '../components/pages'
 
 export const Routes = [
@@ -127,6 +129,18 @@ export const Routes = [
         title: "/testing",
         exact: true,
         component: () => <Testing/>
+    },
+    {
+        path: "/softdev",
+        title: "/softdev",
+        exact: true,
+        component: () => <SoftDev/>
+    },
+    {
+        path: "/transformers",
+        title: "/transformers",
+        exact: true,
+        component: () => <Transformers/>
     },
 
 ]

@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
             display: 'none'
         }
     },
-    navLinks: {
+    navLI: {
         textDecoration: 'none',
         font: 'normal normal normal 1rem Access',
         color: 'white',
@@ -63,11 +63,21 @@ export function Navbar() {
                     </IconButton>
 
                     <ul className={classes.navUL}>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Home</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>About Us</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Industries</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Services</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Contact Us</NavLink> </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/" activeClassName={classes.navLinks}>Home</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/about" activeClassName={classes.navLinks}>About Us</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/evcharger" activeClassName={classes.navLinks}>Industries</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/cloud" activeClassName={classes.navLinks}>Services</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/contact" activeClassName={classes.navLinks}>Contact Us</NavLink>
+                        </li>
                     </ul>
                 </Toolbar>
             </AppBar>
