@@ -2,7 +2,8 @@
   "name": "sls",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "homepage": "http://ved-blacksof.github.io/ved-sls",
+    "dependencies": {
     "@egjs/flicking": "^4.3.0",
     "@egjs/flicking-plugins": "^4.2.1",
     "@egjs/react-flicking": "^4.3.0",
@@ -49,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

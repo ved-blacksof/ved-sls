@@ -15,47 +15,43 @@ import { ParagraphsBlue } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
-        display: 'flex',
-        marginTop: '8%',
         height: 'fit-content',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center ',
-        [theme.breakpoints.down('xs')]: {
+        marginTop: '8%',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start ',
+        [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             height: 'fit-content',
-            margin: '8% auto',
         }
     },
     box1: {
         width: '50%',
-        [theme.breakpoints.down('xs')]: {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
-            marginBottom: '5%'
-
         }
     },
 
     box2: {
+        width: '50%',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        width: '50%',
-        height:'60vh',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
-            height: 'fit-content'
         }
 
     },
     slide: {
-        height: '40vh',
         width: '100%',
-        margin: "5% 100px",
+        margin: "0% 100px",
         display: 'inline-flex',
-        gap: '0px',
         justifyContent: 'flex-end',
-        alignItems: 'flex-end',
+        alignItems: 'unset',
         flexWrap: 'wrap',
         '& div': {
             display: 'flex',
@@ -66,17 +62,16 @@ const useStyles = makeStyles((theme) => ({
             width: '40%',
             height: '40%',
         },
-        [theme.breakpoints.down('xs')]: {
-            height: '30vh',
+        [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
         }
     },
     boxBig: {
-        border: '2px solid red',
         background: 'white',
         color: 'red',
         // padding:'2rem',
-        height: '13vw',
-        width: '15vw',
+        height: '13rem',
+        width: '15rem',
         margin: '0%',
         '& h1': {
             color: '#CA0017',
@@ -89,22 +84,22 @@ const useStyles = makeStyles((theme) => ({
             textAlign: 'center'
         },
 
-        [theme.breakpoints.down('xs')]: {
-            height: '10rem',
-            width: '10rem',
+        [theme.breakpoints.down('sm')]: {
+            height: '12rem',
+            width: '12rem',
         }
 
     },
     boxSmall: {
-        border: '2px solid red',
-        height: '8vw',
-        width: '10vw',
+        border: '2px solid white',
+        height: '10rem',
+        width: '10rem',
         // padding: '2rem',
         margin: '0%',
         background: 'white',
         [theme.breakpoints.down('xs')]: {
-            height: '6rem',
-            width: '6rem',
+            height: '8rem',
+            width: '8rem',
         }
     },
 
@@ -121,7 +116,7 @@ export function TechCarousel() {
     return (
 
         <>
-            <Container fixed className={classes.newBox}>
+            <Container  className={classes.newBox}>
                 <Box className={classes.box1}>
                     <ParagraphsBlue
                         title="TECHNOLOGY PARTNERS IN HARDWARE AND SOFTWARE OFFERINGS"
@@ -141,36 +136,37 @@ export function TechCarousel() {
                         circular={true}
                     >
 
+
+
+
+                        <div className={classes.slide} >
+                            <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
+                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
+                        </div>
+                        <div className={classes.slide} >
+                            <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
+                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
+                        </div>
+                        <div className={classes.slide} >
+                            <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
+                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
+                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
+                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
+                        </div>
                        
-
-
-                         <div className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'flex-end',alignItems:'flex-end' }}>
-                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
-                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
-                            </div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
-                        </div> 
-                         <div className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'flex-end',alignItems:'flex-end' }}>
-                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
-                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
-                            </div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
-                        </div> 
-                         <div className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'flex-end',alignItems:'flex-end' }}>
-                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
-                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
-                            </div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
-                        </div> 
 
                         <ViewportSlot >
                             <span className="flicking-pagination "></span>

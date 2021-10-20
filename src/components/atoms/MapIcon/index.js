@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
     },
     subText: {
-        color: 'white',
+        color: 'black',
         marginTop: '8%',
         width:'80%'
     },
