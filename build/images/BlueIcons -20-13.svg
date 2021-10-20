@@ -1,0 +1,24 @@
+<svg id="BlueIcons_-20-13" data-name="BlueIcons -20-13" xmlns="http://www.w3.org/2000/svg" width="144.834" height="133.958" viewBox="0 0 144.834 133.958">
+  <g id="Layer_4">
+    <g id="Group_442" data-name="Group 442">
+      <g id="Group_438" data-name="Group 438" transform="translate(29.546 93.984)">
+        <path id="Path_551" data-name="Path 551" d="M151.437,376.518A19.618,19.618,0,1,1,131.818,356.9,19.617,19.617,0,0,1,151.437,376.518Z" transform="translate(-112.2 -356.9)" fill="#7eb3ff"/>
+        <path id="Path_552" data-name="Path 552" d="M173.547,401.473a7.373,7.373,0,1,1-7.373-7.373A7.378,7.378,0,0,1,173.547,401.473Z" transform="translate(-146.529 -384.304)" fill="none" stroke="#0561fc" stroke-width="3"/>
+        <path id="Path_553" data-name="Path 553" d="M156.233,453.2h-11.06a7.378,7.378,0,0,0-7.373,7.373v.606a18.846,18.846,0,0,0,25.859,0v-.606A7.458,7.458,0,0,0,156.233,453.2Z" transform="translate(-131.059 -427.841)" fill="none" stroke="#0561fc" stroke-width="3"/>
+      </g>
+      <g id="Group_439" data-name="Group 439">
+        <path id="Path_554" data-name="Path 554" d="M11.534,52.957H2.186c3.4-9.743,6.557-20.7,6.557-31.047H0V0H19.7V12.14C19.7,26.281,17.327,40,11.534,52.957ZM43.4,47.19c-.79,2-1.58,3.792-2.4,5.767H31.864c3.976-11.745,5.188-18.512,6.373-31.047H29.678V0h19.7V13.325A98.783,98.783,0,0,1,43.4,47.19Z" fill="#c5e1f9"/>
+      </g>
+      <g id="Group_440" data-name="Group 440" transform="translate(95.459 58.75)">
+        <path id="Path_555" data-name="Path 555" d="M400.315,223.1h9.348c-3.4,9.743-6.557,20.7-6.557,31.047h8.769v21.909h-19.7V263.891C392.151,249.776,394.548,236.03,400.315,223.1Zm-31.837,5.767c.79-2,1.58-3.792,2.4-5.767h9.138c-3.976,11.745-5.188,18.512-6.373,31.047H382.2v21.909H362.5V262.732A98.783,98.783,0,0,1,368.478,228.867Z" transform="translate(-362.5 -223.1)" fill="#c5e1f9"/>
+      </g>
+      <g id="Group_441" data-name="Group 441" transform="translate(28.783 31.1)">
+        <line id="Line_185" data-name="Line 185" x2="40.159" transform="translate(0.737)" fill="none" stroke="#0561fc" stroke-width="3"/>
+        <line id="Line_186" data-name="Line 186" x2="95.354" transform="translate(0 12.64)" fill="none" stroke="#0561fc" stroke-width="3"/>
+        <line id="Line_187" data-name="Line 187" x2="95.354" transform="translate(0 25.28)" fill="none" stroke="#0561fc" stroke-width="3"/>
+        <line id="Line_188" data-name="Line 188" x2="95.354" transform="translate(0 37.92)" fill="none" stroke="#0561fc" stroke-width="3"/>
+        <line id="Line_189" data-name="Line 189" x2="61.726" transform="translate(0 50.56)" fill="none" stroke="#0561fc" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>
