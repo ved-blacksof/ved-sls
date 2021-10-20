@@ -2,7 +2,6 @@
   "name": "sls",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ved-blacksof.github.io/ved-sls",  
   "dependencies": {
     "@egjs/flicking": "^4.3.0",
     "@egjs/flicking-plugins": "^4.2.1",
@@ -28,8 +27,6 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

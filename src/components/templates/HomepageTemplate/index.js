@@ -1,7 +1,6 @@
 import React from 'react'
-import { Box, Container } from '@material-ui/core'
-import { Sbanner, Research, Realtime, Offerings, Democarousel } from '../../molecules'
-
+import { Box } from '@material-ui/core'
+import { Sbanner, Research, Realtime} from '../../molecules'
 import { TechCarousel } from './TechCarousel'
 import { Navbar, Footer } from '..'
 import { Reshape } from './Reshape'
@@ -13,7 +12,7 @@ import { port, realtime } from '../../molecules/PortfolioData'
 export function HomepageTemplate() {
     return (
         <Box>
-            <Sbanner Background={'/images/sls-office3.1e9e26cb.png'} mouse={'./images/scroll.svg'} />
+            <Sbanner Background={'./images/sls-office3.1e9e26cb.png'} mouse={'./images/scroll.svg'} />
             <Box style={{ background: '#003189' }}>
 
                 <Navbar />

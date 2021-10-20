@@ -21,5 +21,3 @@ export * from './TestingTemplate'
 export * from './SoftDevTemplate'
 export * from './TransformersTemplate'
 
-
-//Comments for
