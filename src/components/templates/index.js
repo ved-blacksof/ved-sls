@@ -20,6 +20,7 @@ export * from './HighspeedTemplate'
 export * from './TestingTemplate'
 export * from './SoftDevTemplate'
 export * from './TransformersTemplate'
+export * from './HomeautomationTemplate'
 
 
 //Comments for

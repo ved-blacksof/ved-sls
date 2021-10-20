@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Offerings, Threeboxes,Realtime } from '../../molecules'
+import { Ubanner, Overview, Offerings, Threeboxes,Realtime, Squareboxes } from '../../molecules'
 import { ChargingMangement } from './ChargingMangement'
 import { MobileApplication } from './MobileApplication'
 
@@ -42,10 +42,11 @@ export function EvchargingTemplate() {
                 subtitle="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
             />
 
-            <Threeboxes
+            <Squareboxes
                 data={evcharger3}
                 title="EV CHARGERS Controllers"
                 subtitle="We offer a range od EV AC charging controllers integrated with energy mangement, remote access, and OCPP connectivity."
+                redline="redline"
             />
 
 

@@ -30,8 +30,8 @@ export function TransformersTemplate() {
 
 
             <Visit
-                goto="Click here to know more about our testing and calibration services!"
-                title="Know More"
+                goto="Want to know more about this offering?"
+                title="Visit the website"
             />
 
             <Footer />

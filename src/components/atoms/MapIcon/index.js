@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function MapIcon({
-    data
+    data,
+    color
 }) {
     const classes = useStyles()
     return (
@@ -43,7 +44,7 @@ export function MapIcon({
                                         <img className={classes.icons} src={item.images} alt='Icons' />
                                     </Box>
 
-                                    <h4 className={classes.subText} >{item.text}</h4>
+                                    <h4 className={classes.subText} style={{color:`${color}`}}>{item.text}</h4>
                                 </Box>
                             </Grid>
 

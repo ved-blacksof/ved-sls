@@ -18,7 +18,9 @@ import {
     Highspeed,
     Testing,
     SoftDev,
-    Transformers    
+    Transformers,
+    Homeautomation
+        
 } from '../components/pages'
 
 export const Routes = [
@@ -141,6 +143,12 @@ export const Routes = [
         title: "/transformers",
         exact: true,
         component: () => <Transformers/>
+    },
+    {
+        path: "/homeauto",
+        title: "/homeauto",
+        exact: true,
+        component: () => <Homeautomation/>
     },
 
 ]

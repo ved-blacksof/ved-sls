@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Threeboxes, Offerings, Visit } from '../../molecules'
+import { Ubanner, Overview, Squareboxes, Realtime, Visit } from '../../molecules'
 import { middleware ,evcharger3} from '../../molecules/PortfolioData'
 
 const useStyles = makeStyles((theme) => ({
@@ -58,12 +58,12 @@ export function IOTplatformTemplate({
             />
 
 
-            <Threeboxes
+            <Squareboxes
                 title="HARDWARE OFFERINGs"
                 data={evcharger3}   
             />
 
-            <Offerings
+            <Realtime
                 data={middleware}
                 title="Software Offerings"
                 // subtitle="EV Chargers"

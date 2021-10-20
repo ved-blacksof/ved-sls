@@ -72,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
         top: '-50%',
         '& img': {
             width: '100%',
-            zIndex: '2'
         },
         '&::before': {
             content: "''",
@@ -131,7 +130,6 @@ export function VerticalTab() {
 
                 <TabPanel className={classes.tabPanel} value={value} index={0}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <Box className={classes.redBack}></Box>
                     <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
@@ -140,16 +138,14 @@ export function VerticalTab() {
 
                 <TabPanel className={classes.tabPanel} value={value} index={1}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <Box className={classes.redBack}></Box>
-                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                    <h6 style={{ lineHeight: '1.5' }}>of our technical expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
                 </TabPanel>
 
                 <TabPanel className={classes.tabPanel} value={value} index={2}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <Box className={classes.redBack}></Box>
-                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                    <h6 style={{ lineHeight: '1.5' }}> expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
                 </TabPanel>

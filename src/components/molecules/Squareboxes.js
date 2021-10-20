@@ -5,11 +5,14 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
-import { evcharger3 } from './PortfolioData'
 
 const useStyles = makeStyles((theme) => ({
     container1: {
         margin: '10% auto',
+    },
+    mainTitle:{
+        color:'black',
+        textAlign:'center'
     },
     mainBox: {
         width: '100%',
@@ -21,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         width: '15rem',
         height: '15rem',
         boxShadow: '0px 0px 1.8rem grey',
+        background:'white',
         textAlign: 'center',
         display: 'flex',
         justifyContent: 'center',
@@ -55,15 +59,18 @@ const useStyles = makeStyles((theme) => ({
 
 }))
 
-export function Threeboxes({
+export function Squareboxes({
+    maintitle,
     title,
     subtitle,
-    redline
+    redline,
+    data
 }) {
 
     const classes = useStyles()
     return (
         <Container fixed className={classes.container1}>
+            <h2 className={classes.mainTitle}> {maintitle} </h2>
             <Box className={classes.paraBox}>
                 <h3 className={classes.head}>{title}</h3>
                 {
@@ -75,7 +82,7 @@ export function Threeboxes({
             <Box className={classes.mainBox}>
 
                 {
-                    evcharger3.map((item, index) => {
+                data.map((item, index) => {
                         return (
                             <Box className={classes.boxes}>
                                 <Box className={classes.imgBox}>
