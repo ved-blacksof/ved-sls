@@ -4,9 +4,6 @@ import React from 'react'
 const useStyles = makeStyles((theme) => ({
     paraBox: {
         width: '80%',
-        [theme.breakpoints.down('sm')]: {
-            margin: '10%'
-        }
     },
     head: {
         marginTop:'4%'

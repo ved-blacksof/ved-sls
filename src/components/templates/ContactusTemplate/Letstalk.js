@@ -11,7 +11,7 @@ export function Letstalk() {
     const classes = useStyles()
     return (
         <>
-            <Box style={{background:'#003189', height:'100vh'}}>
+            <Box style={{background:'#354B9C', height:'100vh'}}>
                 <Container >
                     <h1>Contact us</h1>
                     {/* <Grid container sm={12}>

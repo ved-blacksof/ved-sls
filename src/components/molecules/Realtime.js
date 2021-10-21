@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     card: {
-        boxShadow: '0px 0px 10px grey',
+        boxShadow: '0px 0px 40px #0000001F',
         margin: "0% 1rem",
-        borderBottom:'3px solid #003189',
+        borderBottom:'3px solid #354B9C',
         background:'white',
         [theme.breakpoints.down('xs')]:{
             width:'80%'
@@ -57,12 +57,13 @@ const useStyles = makeStyles((theme) => ({
     },
     smallBtn: {
         font: 'normal normal normal .5rem Access',
-        background: '#003189',
+        background: '#354B9C',
         border: 'none',
         color: 'white',
         padding: '1% 2%',
         '&:hover': {
-            color: '#003189'
+            color: '#354B9C',
+            fontWeight:'bold'
         }
     },
     cardHead: {
@@ -77,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     },
     readMore: {
         font: 'normal normal normal 1rem BebasNeue',
-        color: '#003189',
+        color: '#354B9C',
         paddingTop:'1rem',
     }
 }))
@@ -152,14 +153,16 @@ export function Realtime({
                     />
 
                     <Box fixed className={classes.sliderSec}>
+
+                        
                         <Box className={classes.box}>
                             <img style={{margin:'20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
                             <img src={"./images/Group 82851.svg"} onClick={next} />
                         </Box>
 
-                        <Slider ref={sliderRef} {...settings} className={classes.slider}>
 
-                            
+
+                        <Slider ref={sliderRef} {...settings} className={classes.slider}>
 
                             {/* CARDS */}
 

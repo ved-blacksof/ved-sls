@@ -21,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap'
     },
     boxes: {
-        width: '15rem',
-        height: '15rem',
-        boxShadow: '0px 0px 1.8rem grey',
+        width: '16rem',
+        height: '16rem',
+        boxShadow: '0px 0px 20px #0000000F',
         background:'white',
         textAlign: 'center',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center',   
         flexDirection: 'column',
         padding: "2rem",
         marginTop: '5%',

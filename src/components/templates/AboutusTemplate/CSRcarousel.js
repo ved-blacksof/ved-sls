@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         width: '17rem',
         height: '15rem',
-        background: '#003189',
+        background: '#354B9C',
         padding: '3%',
         top: '20%',
         left: '8%',
@@ -137,7 +137,7 @@ export function CSRcarousel({
                 <GeneralHeading
                     title="CSR"
                     subtitle="How we are helping the world be a better place"
-
+                    redline="redline"
                 />
 
                 <Box className={classes.flicks}>
@@ -157,7 +157,7 @@ export function CSRcarousel({
 
                                     <Box className={classes.BoxWidth}>
                                         <Box className={classes.iconBox}>
-                                            <img className={classes.icon} src={'./images/leaves.svg'} />
+                                            <img className={classes.icon} src={'./images/Layer 2.svg'} />
                                         </Box>
 
                                         <Box className={classes.blueBox}>

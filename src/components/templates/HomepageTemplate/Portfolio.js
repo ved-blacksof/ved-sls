@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     centerBtn: {
-        background: '#003189',
+        background: '#354B9C',
         border: 'none',
         borderRadius: '3px',
         color: 'white',
@@ -69,8 +69,8 @@ export function Portfolio({
 
         <Container fixed className={classes.portContainer}>
             <GeneralHeading
-                title="OUR RICH PORTFOLIO"
-                title1="COVERS MULTIPLE SEGMENTS"
+                title="OUR RICH PORTFOLIO COVERS MULTIPLE SEGMENTS"
+                redline="redline"
                 subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
                 of products and services."
             />

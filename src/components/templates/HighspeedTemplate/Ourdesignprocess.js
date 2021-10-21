@@ -8,7 +8,17 @@ import { Paragraphs } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     mainContain: {
-        margin: '5% auto'
+        margin: '5% auto',
+        "& .vertical-timeline::before":{
+            background: '#354B9C'
+        },
+        "& .vertical-timeline--two-columns .vertical-timeline-element-content":{
+            // marginLeft:'0'
+        },
+        "& .vertical-timeline-element-content":{
+            
+        },
+        
     },
     contentStyles: {
 
@@ -23,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         font: 'normal normal normal 2rem Access',
         lineHeight: "1.8",
         
-    }
+    },
 
 }))
 

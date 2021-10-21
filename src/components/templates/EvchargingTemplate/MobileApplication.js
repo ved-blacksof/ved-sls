@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         height: '18rem',
         borderRadius: '4rem 0rem 4rem 4rem',
         position: 'relative',
-        background: ' #003189',
+        background: '#354B9C',
         [theme.breakpoints.down('sm')]: {
             width: '15rem',
             height: '15rem',

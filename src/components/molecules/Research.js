@@ -20,51 +20,46 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative'
     },
     flicks: {
-        width: '80%',
+        width: '90%',
         marginTop:'3%'
     },
     BoxWidth: {
-        height: '50vh',
+        padding:'0% 3% 8% 6%',
+        position: 'relative',
         width: '100%',
-        margin: "0rem 5rem",
-
-        [theme.breakpoints.down('sm')]: {
-            height: '40vh',
-        },
-        [theme.breakpoints.down('xs')]: {
-            height: '30vh',
-        }
     },
     BoxImages: {
         height: '100%',
         width: '100%',
-        borderRadius: '1%'
     },
-    
-    redLine:{
-        margin:'1% 0%'
+
+    redLine: {
+        margin: '1% 0%'
     },
     subHead: {
         width: '60%',
-        [theme.breakpoints.down('xs')]:{
-            width:'80%'
+        [theme.breakpoints.down('xs')]: {
+            width: '80%'
         }
     },
     txtReserch: {
-        zIndex:'1',
-        [theme.breakpoints.down('xs')]: {
-            fontSize:'5rem'
-        }
+        position: 'absolute',
+        bottom: '-15%',
+        left:'-6%',
+        fontSize: '8rem',
+        [theme.breakpoints.down('sm')]: {
+            // fontSize: '4rem'
+            display:'none'
+        },
     }
-
 }))
 
 export function Research({
-    head1,
-    head2,
-    subhead1,
-    subhead2,
-    
+    generalheadingblue,
+    title,
+    subtitle,
+    data,
+
 }) {
 
     const classes = useStyles()
@@ -73,12 +68,15 @@ export function Research({
 
     return (
 
-        <Container fixed className={classes.reaserchMain}>
-            <h3 className={classes.head}>INTEGRATION SPECIALIST ACROSS <br/> VARIOUS VERTICALS</h3>
-            <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-
-            <h4 className={classes.subHead}>Assisting companies to avoid pitfalls in the product design and development phase, our experienced team at System Level
-                Solutions uses provides innovative solutions across levels to materialize the creative perspective of a client.</h4>
+        <Container fixed className={classes.reaserchMain} >
+            {
+                generalheadingblue ?
+                    <>
+                        <h3 className={classes.head}>{title}</h3>
+                        <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
+                        <h4 className={classes.subHead}>{subtitle}</h4>
+                    </> : ''
+            }
 
             <Box className={classes.flicks}>
                 <Flicking
@@ -88,31 +86,28 @@ export function Research({
                     // align="center"
                     defaultIndex='1'
                     circular={true}
-                    
+
                 >
-                    <Box className={classes.BoxWidth}>
-                        <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" />
-                    </Box>
 
-                    <Box className={classes.BoxWidth}>
-                        <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" />
-                    </Box>
-
-                    <Box className={classes.BoxWidth}>
-                        <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" />
-                    </Box>
-
-                    <Box className={classes.BoxWidth}>
-                        <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" />
-                    </Box>
-
-
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <Box className={classes.BoxWidth}>
+                                    <Box style={{ position: 'relative'}}>
+                                        <Box >
+                                            <img className={classes.BoxImages} src={item.images} alt="Carousel Images" data-aos="fade-up" />
+                                        </Box>
+                                        <h1 className={classes.txtReserch}>{item.text}</h1>
+                                    </Box>
+                                </Box>
+                            )
+                        })
+                    }
                     <ViewportSlot >
                         <span className="flicking-pagination "></span>
                     </ViewportSlot>
                 </Flicking>
             </Box>
-            <h1 className={classes.txtReserch}>Research</h1>
         </Container>
     )
 }

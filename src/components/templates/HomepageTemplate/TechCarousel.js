@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     box1: {
-        width: '50%',
+        width: '45%',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
@@ -49,8 +49,9 @@ const useStyles = makeStyles((theme) => ({
     slide: {
         width: '100%',
         margin: "0% 100px",
+        padding: '8% 0%',
         display: 'inline-flex',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         alignItems: 'unset',
         flexWrap: 'wrap',
         '& div': {
@@ -69,12 +70,10 @@ const useStyles = makeStyles((theme) => ({
     boxBig: {
         background: 'white',
         color: 'red',
-        // padding:'2rem',
         height: '13rem',
         width: '15rem',
-        margin: '0%',
         '& h1': {
-            color: '#CA0017',
+            color: '#D9393E',
             fontSize: '5vw',
             textAlign: 'center'
         },
@@ -83,7 +82,6 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '2vw',
             textAlign: 'center'
         },
-
         [theme.breakpoints.down('sm')]: {
             height: '12rem',
             width: '12rem',
@@ -91,15 +89,23 @@ const useStyles = makeStyles((theme) => ({
 
     },
     boxSmall: {
-        border: '2px solid white',
         height: '10rem',
         width: '10rem',
-        // padding: '2rem',
-        margin: '0%',
         background: 'white',
+        display:'flex',
+        flexDirection:'column',
         [theme.breakpoints.down('xs')]: {
             height: '8rem',
             width: '8rem',
+        },
+        "& h3":{
+            color:'#D9393E',
+            fontSize:'3vw'
+        },
+        "& h4":{
+            font:'normal normal normal 1.4vw BebasNeue',
+            color:'#003189',
+            textAlign:'center'
         }
     },
 
@@ -116,7 +122,7 @@ export function TechCarousel() {
     return (
 
         <>
-            <Container  className={classes.newBox}>
+            <Container fixed className={classes.newBox}>
                 <Box className={classes.box1}>
                     <ParagraphsBlue
                         title="TECHNOLOGY PARTNERS IN HARDWARE AND SOFTWARE OFFERINGS"
@@ -140,33 +146,30 @@ export function TechCarousel() {
 
 
                         <div className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
-                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
-                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
+                            <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                <div className={classes.boxBig} >
+                                    <h1>356<h2>ENGINEERS</h2></h1>
+                                </div>
+
+                                <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                    <img src={'./images/Layer 2.svg'}/>
+                                </div>
                             </div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
-                        </div>
-                        <div className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
-                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
-                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
+
+                            <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                <h3>100+</h3>
+                                <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
                             </div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
-                        </div>
-                        <div className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'flex-end', alignItems: 'flex-end' }}>
-                                <div className={classes.boxBig} ><h1>356+ <h2>ENGINEERS</h2></h1> </div>
-                                <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h2>356+</h2></div>
+                            <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom:'2px solid white' }}>
+                            <img src={'./images/mission.svg'}/>
+                                
                             </div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>356+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>100+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><h3>06</h3></div>
+                            <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                <h3>06</h3>
+                                <h4 >BUSINESS VERTICALS</h4>
+                            </div>
                         </div>
-                       
+
 
                         <ViewportSlot >
                             <span className="flicking-pagination "></span>

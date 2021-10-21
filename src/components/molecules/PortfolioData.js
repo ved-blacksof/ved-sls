@@ -1,3 +1,19 @@
+export const research = [
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearch"
+    },
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearchs"
+    },
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearche"
+    },
+]
+
+
 export const port = [
     {
         images: './images/BlueIcons -20-01.svg',
@@ -655,4 +671,56 @@ export const transformer = [
         images: './images/Layer_34.svg',
         text: 'Oil Flow and Level Monitoring'
     },
+]
+
+
+export const homeproducts=[
+    {
+        images:'./images/bulb2.png',
+        subtitle:'Smart Bulb'
+    },
+    {
+        images:'./images/kitpro_smartsolution.png',
+        subtitle:'Hub'
+    },
+    {
+        images:'./images/gas.png',
+        subtitle:'Motion Sensor'
+    },
+    {
+        images:'./images/motion_sensor.png',
+        subtitle:'Humidity Sensor'
+    },
+    {
+        images:'./images/temp-humidity.png',
+        subtitle:'Gas Detector'
+    },
+    {
+        images:'./images/Multi-function.png',
+        subtitle:'Multi-function Button'
+    },
+    {
+        images:'./images/smart-cabinate-lock.png',
+        subtitle:'Smart Cabinet Lock'
+    },
+    {
+        images:'./images/smoke.png',
+        subtitle:'Smoke Detector'
+    },
+    {
+        images:'./images/three_gang.png',
+        subtitle:'Gang Switch'
+    },
+]
+
+
+export const homeapp=[
+    {
+        images:'./images/Konnsys-Deck-home.png',
+        text:'Home'
+    },
+    {
+        images:'./images/Konnsys-Deck-home.png',
+        text:'Home'
+    }
 ]

@@ -8,19 +8,24 @@ import { Reshape } from './Reshape'
 import { Portfolio } from './Portfolio'
 import { Expanding } from './Expanding'
 import { Partners } from './Partners'
-import { port, realtime } from '../../molecules/PortfolioData'
+import { port, realtime, research } from '../../molecules/PortfolioData'
 
 export function HomepageTemplate() {
     return (
         <Box>
             <Sbanner Background={'/images/sls-office3.1e9e26cb.png'} mouse={'./images/scroll.svg'} />
 
-            <Box style={{ background: '#003189' }}>
+            <Box style={{ background: '#354B9C',paddingBottom:'10%' }}>
                 <Navbar />
 
                 <TechCarousel />
 
-                <Research />
+                <Research 
+                    title="INTEGRATION SPECIALIST ACROSS VARIOUS VERTICALS"    
+                    subtitle="Assisting companies to avoid pitfalls in the product design and development phase, our experienced team at System Level Solutions uses provides innovative solutions across levels to materialize the creative perspective of a client."
+                    generalheadingblue="generalheadingblue"
+                    data={research}
+                    />
             </Box>
 
             <Reshape />
@@ -35,24 +40,6 @@ export function HomepageTemplate() {
                 subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
                 cases="cases"
             />
-
-            {/* <Offerings
-                data={realtime}
-                title="GET ACQUAINTED WITH INDUSTRY TRENDS IN REAL-TIME"
-                btn="btn"
-                subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
-                
-                
-                // subtitle1="sub1"
-            /> */}
-
-            {/* <Democarousel
-                data={realtime}
-                head1="GET ACQUAINTED WITH INDUSTRY "
-                head2="TRENDS IN REAL-TIME"
-                subhead="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
-
-            /> */}
 
             <Partners />
 

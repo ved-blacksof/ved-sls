@@ -1,9 +1,11 @@
 import React from 'react'
-import { Box, Container, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Squareboxes, Offerings, Visit } from '../../molecules'
-import { middleware ,evcharger3} from '../../molecules/PortfolioData'
+import { Ubanner, Overview, Squareboxes1, Visit } from '../../molecules'
+import { homeproducts } from '../../molecules/PortfolioData'
+
+import {Homeapplication} from './Homeapplication'
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -47,16 +49,19 @@ export function HomeautomationTemplate({
                 path="Industries / Home Automation"
                 sub1="SLS has always been at the forefront in leveraging new technologies to design innovative products. Utilizing AI and IoT in Space Automation is 
                 our new focus area. We offer a range of smart, interactive, and easy-to-use space automation products that are redefining how users interect with their surroundings."
-                
             />
 
 
-            <Squareboxes
+            <Squareboxes1
                 maintitle="Products"
-                data={evcharger3}   
+                data={homeproducts}
             />
 
-            <Visit 
+            <Homeapplication 
+                    
+                />
+
+            <Visit
                 goto="Get to know us better."
                 title="Visit the web"
             />

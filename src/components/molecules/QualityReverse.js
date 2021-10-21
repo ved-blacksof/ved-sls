@@ -41,6 +41,7 @@ export function QualityReverse({
     thirdli,
     fourthli,
     style,
+    list,  
 }) {
     const classes = useStyles()
     return (
@@ -55,11 +56,13 @@ export function QualityReverse({
                         <Paragraphs
                             title={heading}
                             subtitle={subtitle}
+                            list={list}
                             redline={redline}
                             firstli={firstli}
                             secli={secli}
                             thirdli={thirdli}
                             fourthli={fourthli}
+
                         />
                     </Grid>
 

@@ -42,38 +42,31 @@ export function AboutusTemplate() {
                 statutory and regulatory requirement for the quality of products and services and performance
                  at optimum cost through our competent human resource and continual improvement of quality 
                  management system."
+                list="list"
                 firstli="Effectively manage projects and ensures they are done in timely manner."
                 secli="Efficiently manage resources for efficient cost of products and services."
                 thirdli="Ensure enhance customer satisfaction through our products and services."
                 fourthli="Ensure enhance customer satisfaction through our products and services."
-
+                redline="redline"
             />
 
             <QualityReverse
                 imageBG="./images/louis-reed-53jnUK5LqEY-unsplash.png"
                 heading="Environmental Policy"
                 subtitle="We are committed to meet all statutory and legal compliance and environmental affairs leadership in our business activities."
+                list="list"
                 firstli="Become an environmentally responsible neighbour providing pollution free operations in the communities where we operate."
                 secli="Conserve natural resources namely water, electricity and fuel as low as possible without any intentional waste."
                 thirdli="Ensure our production and service activities do not have any adverse effect on the environment."
                 fourthli="Strive to continually improve EMS by enhancing environmental performance."
+                redline="redline"
             />
 
-            {/* <Offerings
-                data={certification}
-                title="Certifications "
-            /> */}
-
-
-            {/* <Realtime
-                data={certification}
-                head1="Certifications and Policies" /> */}
-                
-                <Realtime
+            <Realtime
                 data={certification}
                 title="CERTIFICATIONS"
-                // subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
-                // cases="cases"
+            // subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
+            // cases="cases"
             />
 
             <Footer />

@@ -5,7 +5,7 @@ import { MapIcon } from '../atoms'
 
 const useStyles = makeStyles((theme) => ({
     overBox: {
-        background: '#003189',
+        background: '#354B9C',
         height: '90vh',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
     //List CSS for IOT PAge
     list: {
-        background: '#003189',
+        background: '#354B9C',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
             paddingBottom: '5%',

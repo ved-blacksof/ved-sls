@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
     iconsBox: {
         height: '6rem',
-        width: '30%',
+        width: '50%',
     },
     icons: {
         width: '100%',
@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
     subText: {
         color: 'black',
         marginTop: '8%',
-        width:'80%'
+        width:'80%',
+        fontSize:'1.2rem'
     },
 }))
 
