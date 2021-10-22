@@ -6,7 +6,7 @@ import { PositionImage, Paragraphs } from "../atoms"
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        margin: '10% auto',
+        margin: '15% auto',
         // display: 'flex',
         // alignItems: 'center',
         // flexDirection: 'column'
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         textAlign: 'center',
         fontSize: '3rem',
-        marginBottom: '5%',
+        marginBottom: '10%',
         [theme.breakpoints.down('sm')]: {
             width: '80%'
         }
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
     gridContainer: {
         display: 'flex',
-        justifyContent:'center',
+        justifyContent: 'center',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             margin: '10% 0%'
@@ -65,7 +65,7 @@ export function Quality({
                     mainheading ?
                         <Box style={{ display: 'flex', justifyContent: 'center', }}>
                             <h2 className={classes.bigHead}>{mainheading}
-                                <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
+                            <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
                             </h2>
                         </Box> : ''
                 }

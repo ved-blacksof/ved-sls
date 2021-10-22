@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     redLine: {
-        margin: '1% 0%'
+        margin: '2% 0%'
     },
     uls: {
         color: 'black',

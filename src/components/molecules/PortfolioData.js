@@ -191,72 +191,71 @@ export const csrcarousel = [
 
 export const evchargers = [
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-05.png',
         subtitle: 'Bharat AC 001',
         case: '123',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-06.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-07.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-08.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-07.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-08.png',
         subtitle: 'Bharat AC 001',
     },
 ]
 
 export const evcharger3 = [
     {
-        images: './images/lite.png',
-        subtitle: 'Type 2 AC Charger Controller',
-        case: '123',
+        images: './images/Nebulae-Catalogue-(2)-(1)-8.png',
+        subtitle: 'Gateways',
     },
     {
-        images: './images/ocpp-controller_350x350.png',
-        subtitle: 'Bharat',
+        images: './images/Nebulae-Catalogue-(2)-(1)-17.png',
+        subtitle: 'Nodes',
     },
     {
-        images: './images/1.0.png',
-        subtitle: 'OCPP Controller',
+        images: './images/Nebulae-Catalogue-(2)-(1)-30.png',
+        subtitle: 'Controller',
     },
 ]
 
 export const middleware = [
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-05.png',
         subtitle: 'IoT Middleware',
         case: '123',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-06.png',
+        subtitle: 'LoRaWan Server',
+    },
+    {
+        images: './images/Nebulae_Website Images-06.png',
+        subtitle: 'FOTA Services',
+    },
+    {
+        images: './images/Nebulae_Website Images-08.png',
+        subtitle: 'Analytics',
+    },
+    {
+        images: './images/Nebulae_Website Images-08.png',
         subtitle: 'IoT Middleware',
     },
     {
-        images: './images/bharat_ac.png',
-        subtitle: 'IoT Middleware',
-    },
-    {
-        images: './images/bharat_ac.png',
-        subtitle: 'IoT Middleware',
-    },
-    {
-        images: './images/bharat_ac.png',
-        subtitle: 'IoT Middleware',
-    },
-    {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-08.png',
         subtitle: 'IoT Middleware',
     },
 ]
@@ -315,19 +314,19 @@ export const loc = [
 //White icons only 4 for DigitalTemplate
 export const digital = [
     {
-        images: './images/BlueIcons -20-01-1-white (1).svg',
+        images: './images/BlueIcons -20-01.svg',
         text: 'Manage your Content'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (2).svg',
+        images: './images/BlueIcons -20-02-1-01.svg',
         text: 'Diagnose Remotely'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (3).svg',
+        images: './images/BlueIcons -20-01-1.svg',
         text: 'Monitor Proof of Play'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/BlueIcons -20-02-02.svg',
         text: 'Easy Authentication'
     },
 ]

@@ -33,21 +33,25 @@ export function DigitalTemplate() {
                 subtitle="We cater both Semi-Automated and Fully-Automated assembly of surface mount
                  components on bare circuit boards. To uplift customer experience, we support both framed 
                  frameless stencil options for the application of solder paste on PCB boards."
+                 redline="redline"
             />
 
             <QualityReverse
-                imageBG="./images/Screenshot_2021-07-27-16-13-33-85_336c4b52c4fcdf7ef73c0cc47f672d0f.png"
+                imageBG="./images/denny-muller-HfWA-Axq6Ek-unsplash.png"
                 heading="DigitalSyne Android Player"
                 subtitle="Ace your advertisement game by converting your Android Screens
                  into intelligent displays and stream data like never before."
+                 redline="redline"
+
             />
 
             <Quality
-                imageBG="./images/Screenshot_2021-07-27-16-13-33-85_336c4b52c4fcdf7ef73c0cc47f672d0f.png"
-                heading="DigitalSyne Media Player"
-                subtitle="We cater both Semi-Automated and Fully-Automated assembly of surface mount
-                 components on bare circuit boards. To uplift customer experience, we support both framed 
-                 frameless stencil options for the application of solder paste on PCB boards."
+                imageBG="./images/Group 82859.jpg"
+                heading="Content Management Director (CMD)"
+                subtitle="Manage all your digital ad displays through this multi-featured and easy-to-use CMD. 
+                The CMD helps you script, monitor, diagnose, and control each andevery intricacy of all your displays."
+                 redline="redline"
+
             />
 
             <Visit 
