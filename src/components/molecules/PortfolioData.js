@@ -254,10 +254,7 @@ export const middleware = [
         images: './images/Nebulae_Website Images-08.png',
         subtitle: 'IoT Middleware',
     },
-    {
-        images: './images/Nebulae_Website Images-08.png',
-        subtitle: 'IoT Middleware',
-    },
+    
 ]
 
 export const yalgar = [
