@@ -349,27 +349,27 @@ export const smartstreet = [
 //White icons only 4 for SmarttrafficTemplate
 export const smarttraffic = [
     {
-        images: './images/BlueIcons -20-01-1-white (1).svg',
+        images: './images/Layer_27-smarttraffic02.svg',
         text: 'LED Embedded Warning Signs'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (2).svg',
+        images: './images/Layer_35-smarttraffic03.svg',
         text: 'School Zone Warning'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (3).svg',
+        images: './images/Layer_36-smarttraffic04.svg',
         text: 'Pedestrian Crosswalk Solutions'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/Layer_37-smarttraffic05.svg',
         text: 'Dynamic Curve warning'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/Layer_38-smarttraffic06.svg',
         text: 'Wrong-Way Detection'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/Layer_39-smarttraffic07.svg',
         text: 'Variable Message Signs'
     },
 ]

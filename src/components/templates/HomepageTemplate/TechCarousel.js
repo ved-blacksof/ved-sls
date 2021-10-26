@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start ',
-        width:'70%',
+        // width:'70%',
         [theme.breakpoints.down('sm')]: {
             width:'100%',
             flexDirection: 'column',
