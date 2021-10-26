@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Threeboxes, Offerings, Visit } from '../../molecules'
+import { Ubanner, Overview, Squareboxes, Realtime, Visit } from '../../molecules'
 import { middleware ,evcharger3} from '../../molecules/PortfolioData'
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
         font: 'normal normal normal 1rem Access',
         color: 'white',
         listStyle: 'inside',
-        // margin: '3% 0%'
     },
     LI: {
         margin: '1% '
@@ -37,7 +36,7 @@ export function IOTplatformTemplate({
     return (
         <div>
             <Ubanner
-                Background="./images/nasa-Q1p7bh3SHj8-unsplash-1.png"
+                Background="./images/luo-lei-Xa4pTwafe5U-unsplash-IOT.png"
                 maintext="IOT Platform"
                 subtext="Redefining Interperability With our end-to-end IoT Development Platform"
             />
@@ -59,13 +58,13 @@ export function IOTplatformTemplate({
             />
 
 
-            <Threeboxes
+            <Squareboxes
                 title="HARDWARE OFFERINGs"
                 data={evcharger3}   
             />
 
-            <Offerings
-                data={middleware}
+            <Realtime
+                squarecarddata={middleware}
                 title="Software Offerings"
                 // subtitle="EV Chargers"
                 // subtitle1="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
@@ -73,6 +72,7 @@ export function IOTplatformTemplate({
 
             <Visit 
                 goto="Get to know us better."
+                title="Visit the web"
             />
 
 

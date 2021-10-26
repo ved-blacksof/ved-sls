@@ -33,6 +33,7 @@ export function SmartstreetTemplate() {
                 subtitle="Our Individual Street Light Controller helps transform regular street lights
                  into smart lamps and offers real-time monitoring and control of individual 
                 street lights in your area.The offering is available in both Retrofit and NEMA standard."
+                redline="redline"
             />
 
             <QualityReverse
@@ -40,6 +41,8 @@ export function SmartstreetTemplate() {
                 heading="Centralised Control and Monitoring System (CCMS)"
                 subtitle="CCMS offers real-time control and monitoring of a group of street lights easing 
                 how you manage every aspect of your smart street lights."
+                redline="redline"
+
             />
 
             <Quality
@@ -49,10 +52,13 @@ export function SmartstreetTemplate() {
                 subtitle="LMS is our cloud-based dashboard that offers total control over your lighting infrastructure.
                  It provides remote access to the real-time status of lamps, generates energy consumption reports, 
                 binds devices with sensors, and helps with Astro-clock and mixed-mode scheduling."
+                redline="redline"
+
             />
 
             <Visit
                 goto="Reinvent how your brand advertises and connects."
+                title="Visit the web"
             />
 
             <Footer />

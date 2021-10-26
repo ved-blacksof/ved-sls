@@ -1,3 +1,19 @@
+export const research = [
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearch"
+    },
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearch"
+    },
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearch"
+    },
+]
+
+
 export const port = [
     {
         images: './images/BlueIcons -20-01.svg',
@@ -175,74 +191,69 @@ export const csrcarousel = [
 
 export const evchargers = [
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-05.png',
         subtitle: 'Bharat AC 001',
         case: '123',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-06.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-07.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-08.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-07.png',
         subtitle: 'Bharat AC 001',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-08.png',
         subtitle: 'Bharat AC 001',
     },
 ]
 
-export const evcharger3=[
+export const evcharger3 = [
     {
-        images: './images/lite.png',
-        subtitle: 'Type 2 AC Charger Controller',
-        case: '123',
+        images: './images/Nebulae-Catalogue-(2)-(1)-8.png',
+        subtitle: 'Gateways',
     },
     {
-        images: './images/ocpp-controller_350x350.png',
-        subtitle: 'Bharat',
+        images: './images/Nebulae-Catalogue-(2)-(1)-17.png',
+        subtitle: 'Nodes',
     },
     {
-        images: './images/1.0.png',
-        subtitle: 'OCPP Controller',
+        images: './images/Nebulae-Catalogue-(2)-(1)-30.png',
+        subtitle: 'Controller',
     },
 ]
 
 export const middleware = [
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-05.png',
         subtitle: 'IoT Middleware',
         case: '123',
     },
     {
-        images: './images/bharat_ac.png',
-        subtitle: 'IoT Middleware',
+        images: './images/Nebulae_Website Images-06.png',
+        subtitle: 'LoRaWan Server',
     },
     {
-        images: './images/bharat_ac.png',
-        subtitle: 'IoT Middleware',
+        images: './images/Nebulae_Website Images-06.png',
+        subtitle: 'FOTA Services',
     },
     {
-        images: './images/bharat_ac.png',
-        subtitle: 'IoT Middleware',
+        images: './images/Nebulae_Website Images-08.png',
+        subtitle: 'Analytics',
     },
     {
-        images: './images/bharat_ac.png',
+        images: './images/Nebulae_Website Images-08.png',
         subtitle: 'IoT Middleware',
-    },
-    {
-        images: './images/bharat_ac.png',
-        subtitle: 'IoT Middleware',
-    },
+    }
 ]
 
 export const yalgar = [
@@ -299,19 +310,19 @@ export const loc = [
 //White icons only 4 for DigitalTemplate
 export const digital = [
     {
-        images: './images/BlueIcons -20-01-1-white (1).svg',
+        images: './images/BlueIcons -20-01-1.svg',
         text: 'Manage your Content'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (2).svg',
+        images: './images/BlueIcons -20-02-1-01.svg',
         text: 'Diagnose Remotely'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (3).svg',
+        images: './images/BlueIcons -20-01-1.svg',
         text: 'Monitor Proof of Play'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/BlueIcons -20-02-02.svg',
         text: 'Easy Authentication'
     },
 ]
@@ -319,19 +330,19 @@ export const digital = [
 //White icons only 4 for SmartstreetTemplate
 export const smartstreet = [
     {
-        images: './images/BlueIcons -20-01-1-white (1).svg',
+        images: './images/BlueIcons -20-01-1.svg',
         text: 'Retrofit for existing infrastructure (RF and LoRa variants)'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (2).svg',
+        images: './images/BlueIcons -20-02-1-01.svg',
         text: 'Energy efficient with motion and ambient light sensors'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (3).svg',
+        images: './images/BlueIcons -20-01-1.svg',
         text: 'Real-time alerts on malfunctions'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/BlueIcons -20-02-02.svg',
         text: 'Real-time reports for lighting status, performance, energy consumption, etc.'
     },
 ]
@@ -398,7 +409,7 @@ export const solarhardware = [
         images: './images/lite.png',
         productname: 'MSI1500',
         para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
-        
+
     },
     {
         images: './images/ocpp-controller_350x350.png',
@@ -422,7 +433,7 @@ export const solarsoftware = [
         images: './images/lite.png',
         productname: 'SunSights Live',
         para: 'SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more.',
-        
+
     },
     // {
     //     images: './images/ocpp-controller_350x350.png',
@@ -439,9 +450,272 @@ export const solarsoftware = [
 ]
 
 
+//Gaming page harderware offrings
+
+export const gaminghardware = [
+    {
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        productname: 'Smart Targets',
+        para: 'Smart Targets are IoTargeting App controlled reactive targets powered with advanced wireless technology for a real-time practice and gaming experience. Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
+
+    },
+    {
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        productname: 'Just Targets',
+        para: 'Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. Leveraging reactive touch technology, Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.',
+
+    },
+    {
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        productname: 'MSI1500',
+        para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
+
+    },
+]
+export const gamingsoftware = [
+    {
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        productname: 'IoTargeting Mobile App',
+        para: 'The IoTargeting Mobile App is an exclusively designed Android and iOS app that takes the IoTargeting gaming experience to the next level. The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.',
+
+    },
+]
 
 
+export const gamingapplications = [
+    {
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        productname: 'Gaming',
+
+    },
+    {
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        productname: 'Sports Training and Activites',
+
+    },
+    {
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        productname: 'Military Training',
+
+    },
+]
 
 
+export const expertise = [
+    {
+        icon:'./images/BlueIcons -20-01.svg',
+        h4:'Deep Learning',
+        h6:'Boost the performance of your forecasting, decision-making, and other operations with Deep Learning technology. We offer customized products and services using this more sophisticated, advanced and automated version of Machine Learning to help you attain business success and launch class-apart products.'
+    },
+    {
+        icon:'./images/BlueIcons -20-01.svg',
+        h4:'AI-Based Solutions',
+        h6:'We offer innovative and cutting-edge AI-based products and services that help solve your biggest business challenges through intelligent decision-making. Reinvent how you work at lower costs and minimize errors with our wide spectrum of solutions.'
+    },
+    {
+        icon:'./images/BlueIcons -20-01.svg',
+        h4:'Natural Language Processing',
+        h6:'We have precedented expertise in providing Natural Language Processing Services leveraging our best-in-class AI tools. Our team of NLP Experts help you extract, process, analyse, and understand structured data to fetch insights that matter.'
+    },
+    {
+        icon:'./images/BlueIcons -20-01.svg',
+        h4:'Internet of Things',
+        h6:'Our Internet of Things expertise helps businesses set up central data repository to house real-time sensor data and leverage data science for predictive maintenance of your remote assets helping you reduce downtime and boost service quality.'
+    },
+    {
+        icon:'./images/BlueIcons -20-01.svg',
+        h4:'Machine Learning',
+        h6:'We leverage ML to build powerful solutions that automate your processes, reducing human intervention and pacing up operational efficiency. Our custom solutions are designed with a business-first approach to solve your challenges and bring about transformation at the system level.'
+    },
+
+]
 
 
+export const highspeed = [
+    {
+        count:'01',
+        uli:'Requirements Analysis',
+        firstli:'Design and Architecture specification',
+        secli:'',
+        thirdli:'',
+        fourthli:'',
+    },
+    {
+        count:'02',
+        uli:'Design',
+        firstli:'Electronic component engineering',
+        secli:'Power and Clock design',
+        thirdli:'Enclosure Modeling, CAD Design',
+    },
+    {
+        count:'03',
+        uli:'Implementation',
+        firstli:'Schematic',
+        secli:'Placement and Routing',
+        thirdli:'Signal Integrity'
+    },
+    {
+        count:'04',
+        uli:'Prototyping',
+    },
+    {
+        count:'05',
+        uli:'Translation services',
+        firstli:'Fabrication',
+        secli:'Assembly - In house',
+        thirdli:'Packaging',
+        fourthli:'Rapid Prototyping for Enclosures',
+    },
+    {
+        count:'06',
+        uli:'Diagnostics',
+        firstli:'Reliability analysis',
+        secli:'Thermal analysis',
+        thirdli:'Pre and post layout signal integrity check and cross talk analysis',
+        fourthli:'EMI and EMC analysis',
+    },
+
+]
+
+export const technologystack = [
+    {
+        images: './images/BlueIcons -20-01.svg',
+        number:'01',
+        title: 'Web Servers',
+        subtitle:'IIS, Apache, NGINX , Jetty'
+    },
+    {
+        images: './images/BlueIcons -20-02.svg',
+        number:'02',
+        title: 'UI development',
+        subtitle:'Bootstrap, jquery, Javascript, HTML5, CSS3, Angular'
+    },
+    {
+        images: './images/BlueIcons -20-03.svg',
+        number:'03',
+        title: 'Server Side Languages',
+        subtitle:'.NET, C#, PHP, .NET MVC, .NET Core, WPF, JAVA, Python'
+    },
+    {
+        images: './images/BlueIcons -20-04.svg',
+        number:'04',
+        title: 'Databases',
+        subtitle:'PostGreSQL, MySQL, MSSQL, MongoDB, Cassandra, sqlite'
+    },
+    {
+        images: './images/BlueIcons -20-06.svg',
+        number:'05',
+        title: 'Messaging',
+        subtitle:'MQTT, WS, AMQP, Nodejs, RabbitMQ'
+    },
+    {
+        images: './images/BlueIcons -20-10.svg',
+        number:'06',
+        title: 'Frameworks',
+        subtitle:'Joomla, Wordpress, Spring boot, Gradle, Spring, MVC, Hibernate Build'
+    },
+    {
+        images: './images/BlueIcons -20-08.svg',
+        number:'07',
+        title: 'Version management',
+        subtitle:'Jenkins, Docker, Github'
+    },
+    {
+        images: './images/BlueIcons -20-14.svg',
+        number:'08',
+        title: 'OS',
+        subtitle:'Windows, Linux, CentOS'
+    },
+    {
+        images: './images/BlueIcons -20-16.svg',
+        number:'09',
+        title: 'Data Exchange',
+        subtitle:'JSON, AJAX, XML, SOAP'
+    },
+    {
+        images: './images/BlueIcons -20-02.svg',
+        number:'10',
+        title: 'Mobile',
+        subtitle:'Android, Flutter, iOS, React Native'
+    },
+]
+
+//White icons only 4 for transformersTemplate overview
+export const transformer = [
+    {
+        images: './images/Layer_19.svg',
+        text: 'Data Logging'
+    },
+    {
+        images: './images/Layer_29.svg',
+        text: 'Event Recording'
+    },
+    {
+        images: './images/Layer_30.svg',
+        text: 'Top and Bottom Oil Temperature Management'
+    },
+    {
+        images: './images/Layer_31.svg',
+        text: 'Fan Control and Cooling Monitoring'
+    },
+    {
+        images: './images/Layer_32.svg',
+        text: 'Phase voltage, current & overload capacity measurement'
+    },
+    {
+        images: './images/Layer_34.svg',
+        text: 'Oil Flow and Level Monitoring'
+    },
+]
+
+
+export const homeproducts=[
+    {
+        images:'./images/bulb2.png',
+        subtitle:'Smart Bulb'
+    },
+    {
+        images:'./images/kitpro_smartsolution.png',
+        subtitle:'Hub'
+    },
+    {
+        images:'./images/gas.png',
+        subtitle:'Motion Sensor'
+    },
+    {
+        images:'./images/motion_sensor.png',
+        subtitle:'Humidity Sensor'
+    },
+    {
+        images:'./images/temp-humidity.png',
+        subtitle:'Gas Detector'
+    },
+    {
+        images:'./images/Multi-function.png',
+        subtitle:'Multi-function Button'
+    },
+    {
+        images:'./images/smart-cabinate-lock.png',
+        subtitle:'Smart Cabinet Lock'
+    },
+    {
+        images:'./images/smoke.png',
+        subtitle:'Smoke Detector'
+    },
+    {
+        images:'./images/three_gang.png',
+        subtitle:'Gang Switch'
+    },
+]
+
+
+export const homeapp=[
+    {
+        images:'./images/Konnsys-Deck-home.png',
+        text:'Home'
+    },
+    {
+        images:'./images/Konnsys-Deck-home.png',
+        text:'Home'
+    }
+]

@@ -5,6 +5,7 @@ import { useHistory, NavLink } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     footerMain: {
         background: 'white',
+        margin:'0% 1%',
         [theme.breakpoints.down('sm')]: {
             marginTop: '10%'
         }
@@ -84,7 +85,7 @@ export function Footer() {
     const history = useHistory();
     return (
         <Box style={{background:'white', paddingTop:'5%'}}>
-            <Container fixed className={classes.footerMain}>
+            <Box  className={classes.footerMain}>
                 <Box className={classes.headBox}>
                     <img className=" col-md-2" src={'/images/Layer_x0020_1-1.svg'} alt="SLS Icon" />
                     <h6 className={classes.head}>Over the years, we have added numerous products to our portfolio
@@ -110,8 +111,8 @@ export function Footer() {
 
                     <ul className={classes.linkUL}>
                         <li>INDUSTRIES</li>
-                        <li> <a className={classes.links} href="/"> IoT PLATFORM </a> </li>
-                        <li> <a className={classes.links} href="/"> CLOUD SOLUTIONS </a> </li>
+                        <li> <a className={classes.links} href="/iot"> IoT PLATFORM </a> </li>
+                        <li> <a className={classes.links} href="/cloud"> CLOUD SOLUTIONS </a> </li>
                         <li> <a className={classes.links} href="/"> E-MOBILITY </a> </li>
                         <li> <a className={classes.links}
                             onClick={() => show1 === false ? setShow1(true) : setShow1(false)}
@@ -122,14 +123,14 @@ export function Footer() {
                             <>
                                 {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
 
-                                <li> <a className={classes.links} href="/"> SOLAR & WIND </a> </li>
-                                <li> <a className={classes.links} href="/"> SMART METERING </a> </li>
+                                <li> <a className={classes.links} href="/solar"> SOLAR & WIND </a> </li>
+                                <li> <a className={classes.links} href="/smartmeter"> SMART METERING </a> </li>
                                 <li> <a className={classes.links} href="/"> SMART GRID </a> </li>
                                 <li> <a className={classes.links} href="/"> HOME AUTOMATION </a> </li>
-                                <li> <a className={classes.links} href="/"> SMART STREET LIGHTS </a> </li>
-                                <li> <a className={classes.links} href="/"> RAILWAYS </a> </li>
-                                <li> <a className={classes.links} href="/"> GAMING </a> </li>
-                                <li> <a className={classes.links} href="/"> TRAFFIC SOLUTIONS </a> </li>
+                                <li> <a className={classes.links} href="/smartstreet"> SMART STREET LIGHTS </a> </li>
+                                <li> <a className={classes.links} href="/railways"> RAILWAYS </a> </li>
+                                <li> <a className={classes.links} href="/gaming"> GAMING </a> </li>
+                                <li> <a className={classes.links} href="/smarttraffic"> TRAFFIC SOLUTIONS </a> </li>
                             </>
                             : null
                         }
@@ -139,9 +140,9 @@ export function Footer() {
 
                     <ul className={classes.linkUL}>
                         <li>  SERVICES </li>
-                        <li> <a className={classes.links} href="/"> ASIC/FPGA/SOC DESIGN SERVICES </a> </li>
-                        <li> <a className={classes.links} href="/"> HIGH SPEED PCB DESIGN SERVICES </a> </li>
-                        <li> <a className={classes.links} href="/"> SOFTWARE DEVELOPMENT  </a> </li>
+                        <li> <a className={classes.links} href="/ipcore"> ASIC/FPGA/SOC DESIGN SERVICES </a> </li>
+                        <li> <a className={classes.links} href="/highspeed"> HIGH SPEED PCB DESIGN SERVICES </a> </li>
+                        <li> <a className={classes.links} href="/softdev"> SOFTWARE DEVELOPMENT  </a> </li>
                         <li> <a className={classes.links}
                             onClick={() => { show === false ? setShow(true) : setShow(false) }}
                             style={{ color: '#354B9C' }}> + VIEW MORE  </a> </li>
@@ -149,8 +150,8 @@ export function Footer() {
                             <>
                                 {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
 
-                                <li> <a className={classes.links} href="/"> ELECTRONICS MANUFACTURING </a> </li>
-                                <li> <a className={classes.links} href="/">TESTING AND CALIBRATION </a> </li>
+                                <li> <a className={classes.links} href="/electronics"> ELECTRONICS MANUFACTURING </a> </li>
+                                <li> <a className={classes.links} href="/testing">TESTING AND CALIBRATION </a> </li>
                                 <li> <a className={classes.links} href="/"> ML & AI </a> </li>
                             </>
                             : null
@@ -186,7 +187,7 @@ export function Footer() {
                 </div>
 
 
-            </Container>
+            </Box>
         </Box>
     )
 }

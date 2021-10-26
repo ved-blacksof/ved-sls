@@ -4,29 +4,30 @@ import { makeStyles, Container, Box } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     container: {
+        width:'100%',
         marginTop: '10%',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
-            width: '80%',
+            width: '100%',
             flexWrap: 'wrap'
         },
 
     },
     headBox: {
         width: '15%',
-        padding: '3% 1%',
+        height:'10rem',
+        padding: '3% 0%',
         lineHeight: '1',
         [theme.breakpoints.down('sm')]: {
             width: '30%',
+            height:'6rem',
         },
-        [theme.breakpoints.down('xs')]: {
-            width: '50%',
-        }
     },
     head: {
-        color: '#CA0017',
+        color: '#D9393E',
+        fontSize: '4rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '3rem'
         },
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        background: '#003189',
+        background: '#354B9C',
         '& img': {
             width: '30%',
             height: '30%',
@@ -76,7 +77,7 @@ export function Dnumbers() {
     const classes = useStyles()
     return (
         <Container fixed>
-            <Container  className={classes.container}>
+            <Box  className={classes.container}>
                 <Box className={classes.headBox}>
                     <h2 className={classes.head}>100+</h2>
                     <h6 className={classes.subHead}>active projects across the globe</h6>
@@ -97,15 +98,15 @@ export function Dnumbers() {
                     <h2 className={classes.head}>1</h2>
                     <h6 className={classes.subHead}>Manufacturing Plant</h6>
                 </Box>
-            </Container>
+            </Box>
 
             <Box className={classes.container1}>
                 <Box className={classes.boxes}>
                     <img src={'./images/mission.svg'} alt="Mission Icon" />
                     <h4>Operating Base <br /> India, UK, USA</h4>
                 </Box>
-                <Box className={classes.boxes} style={{ background: '#CA0017' }}>
-                    <img src={'./images/leaves.svg'} alt="Help Icon" />
+                <Box className={classes.boxes} style={{ background: '#D9393E' }}>
+                    <img src={'./images/Layer 2.svg'} alt="Help Icon" />
                     <h4>In-house Design & <br /> Manufacturing <br /> Capability</h4>
                 </Box>
                 <Box className={classes.boxes}>

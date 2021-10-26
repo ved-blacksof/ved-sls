@@ -12,7 +12,7 @@
   }
   
   .flicking-pagination{
-    width: 50%;
+    width: 100%;
     bottom: 20px !important;
     /* transform:  translateX(-48%) translateY(-8rem) rotate(-90deg); */
   }

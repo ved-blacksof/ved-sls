@@ -6,19 +6,31 @@ import { PositionImage, Paragraphs } from "../atoms"
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        margin:'15% auto' ,
+        margin: '15% auto',
+        // display: 'flex',
+        // alignItems: 'center',
+        // flexDirection: 'column'
     },
     bigHead: {
+        width: '50%',
         color: 'black',
         textAlign: 'center',
         fontSize: '3rem',
-        marginBottom:'15%'
+        marginBottom: '10%',
+        [theme.breakpoints.down('sm')]: {
+            width: '80%'
+        }
+    },
+    bigSubHead: {
+        color: 'black',
+        textAlign: 'center',
     },
     gridContainer: {
-        marginTop: '10%',
-        display:'flex',
-        [theme.breakpoints.down('sm')]:{
-            flexDirection:'column'
+        display: 'flex',
+        justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            margin: '10% 0%'
         }
     },
     gridLeft: {
@@ -32,9 +44,13 @@ const useStyles = makeStyles((theme) => ({
 
 export function Quality({
     mainheading,
+    mainsubheading,
     imageBG,
     heading,
     subtitle,
+    redline,
+    list,
+    uli,
     firstli,
     secli,
     thirdli,
@@ -45,7 +61,14 @@ export function Quality({
     return (
         <>
             <Container fixed className={classes.qualityContainer}>
-                <h2 className={classes.bigHead}>{mainheading}</h2>
+                {
+                    mainheading ?
+                        <Box style={{ display: 'flex', justifyContent: 'center', }}>
+                            <h2 className={classes.bigHead}>{mainheading}
+                            <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
+                            </h2>
+                        </Box> : ''
+                }
 
                 <Box className={classes.gridContainer}
                     style={style}>
@@ -57,6 +80,9 @@ export function Quality({
                         <Paragraphs
                             title={heading}
                             subtitle={subtitle}
+                            redline={redline}
+                            list={list}
+                            uli={uli}
                             firstli={firstli}
                             secli={secli}
                             thirdli={thirdli}

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Offerings, Threeboxes } from '../../molecules'
+import { Ubanner, Overview, Realtime, Squareboxes, Visit } from '../../molecules'
 import { ChargingMangement } from './ChargingMangement'
 import { MobileApplication } from './MobileApplication'
 
-import { evchargers,evcharger3 } from '../../molecules/PortfolioData'
+import { evchargers, evcharger3 } from '../../molecules/PortfolioData'
 
 
 
@@ -29,20 +29,19 @@ export function EvchargingTemplate() {
                 Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kw- 7.4kW."
             />
 
-            {/* <Realtime data={}/> */}
 
-            <Offerings
-                data={evchargers}
+            <Realtime
+                squarecarddata={evchargers}
                 title="ev chargers"
-                // subtitle="EV Chargers"
                 subtitle="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
+                redline="redline"
             />
 
-            <Threeboxes
+            <Squareboxes
                 data={evcharger3}
                 title="EV CHARGERS Controllers"
                 subtitle="We offer a range od EV AC charging controllers integrated with energy mangement, remote access, and OCPP connectivity."
-                
+                redline="redline"
             />
 
 
@@ -50,6 +49,10 @@ export function EvchargingTemplate() {
 
             <MobileApplication />
 
+
+            <Visit
+                title="Visit the website"
+            />
 
             <Footer />
         </>

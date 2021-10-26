@@ -16,7 +16,6 @@ export function SolarTemplate() {
             <Navbar />
 
             <Overview
-                title="Industries / Smart Street Light"
                 path="Industries / Solar and Wind"
                 sub1="SLS has been long-devoted in bringing in new innovations in the smart street lighting sphere.
                  We offer a new-edge comprehensive platform that provides single-point monitoring and control of 
@@ -40,7 +39,7 @@ export function SolarTemplate() {
 
             <Visit
                 goto="Explore more about our Solar and Wind Solutions."
-                
+                title="Visit the web"
             />
 
             <Footer />

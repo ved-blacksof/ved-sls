@@ -11,3 +11,16 @@ export * from './RailwaysTemplate'
 export * from './SolarTemplate'
 export * from './SmarttrafficTemplate'
 export * from './ContactusTemplate'
+export * from './GamingTemplate'
+export * from './SmartmeteringTemplate'
+export * from './IPcoreTemplate'
+export * from './MachineLearningTemplate'
+export * from './ElectronicTemplate'
+export * from './HighspeedTemplate'
+export * from './TestingTemplate'
+export * from './SoftDevTemplate'
+export * from './TransformersTemplate'
+export * from './HomeautomationTemplate'
+
+
+//Comments for

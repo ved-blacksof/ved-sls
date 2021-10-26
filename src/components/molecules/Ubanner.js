@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        height:'80vh',
+        // height:'80vh',
+        padding:'16% 0%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -12,11 +13,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize:'cover',
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
-            height: '50vh'
+            padding:'25% 0%',
         },
-        [theme.breakpoints.down('xs')]: {
-            height: '40vh'
-        }
+        // [theme.breakpoints.down('xs')]: {
+        //     padding:'16% 0%',
+        // }
 
     },
     backImgBox:{
@@ -30,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     mainText: {
         font: 'normal normal normal 5rem BebasNeue',
         zIndex: '1',
+        textAlign:'center',
         color: 'white',
         [theme.breakpoints.down('sm')]: {
             fontSize: '4rem'
@@ -64,8 +66,7 @@ export function Ubanner({
     return (
         <>
             
-            <div className={classes.mainBox}
-                style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}
+            <div className={classes.mainBox} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}
             >
 
                 {/* <div className={classes.backImgBox}>

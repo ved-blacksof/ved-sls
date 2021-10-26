@@ -48,31 +48,45 @@ const useStyles = makeStyles((theme) => ({
     tabBox: {
         display: 'flex',
         position: 'relative',
+        border: 'none',
+        outline: 'none'
     },
-    tabs: {
-        width: '30%',
-        marginTop: '2%',
+    tabs: { 
+        padding: '5%',
         [theme.breakpoints.down('sm')]: {
-            width:'50%'
+            width: '50%',
+            padding: '0%',
+            margin: '5% 0%'
         },
     },
     tab: {
         color: 'white',
         font: 'normal normal normal 1rem Access',
         textTransform: 'none',
-        width: '100%',
-        textAlign: 'left '
+        textAlign: 'left',
+        "& .MuiTab-wrapper": {
+            justifyContent: 'center !important',
+            alignItems: 'flex-start !important',
+        },
+        '& .MuiTab-root': {
+            maxWidth: '350px !important',
+            marginLeft: '100px !important',
+        },
+        '& .PrivateTabIndicator-vertical-173': {
+            left: '0px !important',
+            width: '3px !important',
+        }
     },
     tabPanel: {
         height: 'fit-content',
         width: '360px',
         position: 'absolute',
         zIndex: '1',
-        left: '60%',
+        left: '45%',
         top: '-50%',
         '& img': {
-            width: '100%',
-            zIndex: '2'
+            maxWidth: '100%',
+
         },
         '&::before': {
             content: "''",
@@ -119,6 +133,8 @@ export function VerticalTab() {
                     onChange={handleChange}
                     aria-label="Vertical tabs example"
                     className={classes.tabs}
+                // classes={classes.tabs}
+                // classes={{ tabs: classes.tabs }}
                 >
                     <Tab className={classes.tab} label="ASIC/FPGA/SoC Design Services" {...a11yProps(0)} />
                     <Tab className={classes.tab} label="High Speed PCB Design Services" {...a11yProps(1)} />
@@ -126,11 +142,12 @@ export function VerticalTab() {
                     <Tab className={classes.tab} label="Electronics Manufacturing Services (EMS)" {...a11yProps(3)} />
                     <Tab className={classes.tab} label="Testing and Calibration" {...a11yProps(4)} />
                     <Tab className={classes.tab} label="ML & AI" {...a11yProps(5)} />
+
                 </Tabs>
 
                 <TabPanel className={classes.tabPanel} value={value} index={0}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <Box className={classes.redBack}></Box>
+                    <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                     <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
@@ -139,16 +156,14 @@ export function VerticalTab() {
 
                 <TabPanel className={classes.tabPanel} value={value} index={1}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <Box className={classes.redBack}></Box>
-                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                    <h6 style={{ lineHeight: '1.5' }}>of our technical expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
                 </TabPanel>
 
                 <TabPanel className={classes.tabPanel} value={value} index={2}>
                     <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <Box className={classes.redBack}></Box>
-                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                    <h6 style={{ lineHeight: '1.5' }}> expertise, our ready-to-integrate,
                         rich turnkey offerings cover a vast range of target platforms.
                     </h6>
                 </TabPanel>

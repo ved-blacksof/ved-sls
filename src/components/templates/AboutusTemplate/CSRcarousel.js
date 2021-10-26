@@ -6,6 +6,7 @@ import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
+import { GeneralHeading } from '../../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -73,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         width: '17rem',
         height: '15rem',
-        background: '#003189',
+        background: '#354B9C',
         padding: '3%',
         top: '20%',
         left: '8%',
@@ -132,9 +133,12 @@ export function CSRcarousel({
     return (
         <>
             <Container fixed className={classes.mainContainer}>
-                <h3 className={classes.head}>CSR</h3>
-                <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-                <h4 className={classes.portSubHead}>How we are helping the world be a better place</h4>
+
+                <GeneralHeading
+                    title="CSR"
+                    subtitle="How we are helping the world be a better place"
+                    redline="redline"
+                />
 
                 <Box className={classes.flicks}>
                     <Flicking
@@ -148,19 +152,17 @@ export function CSRcarousel({
                     >
 
                         {
-                            data.map((item,index) => {
+                            data.map((item, index) => {
                                 return (
 
                                     <Box className={classes.BoxWidth}>
                                         <Box className={classes.iconBox}>
-                                            <img className={classes.icon} src={'./images/leaves.svg'} />
+                                            <img className={classes.icon} src={'./images/Layer 2.svg'} />
                                         </Box>
 
                                         <Box className={classes.blueBox}>
                                             <h6 className={classes.blueBoxPara}>{item.para}</h6>
-                                            <Button variant='outlined'
-                                                className={classes.btn}
-                                            >Read More</Button>
+                                            <Button variant='outlined' className={classes.btn}>Read More</Button>
                                         </Box>
 
                                         <Box className={classes.imageBox}>
@@ -172,20 +174,6 @@ export function CSRcarousel({
                                 )
                             })
                         }
-
-                        {/* <Box className={classes.BoxWidth}>
-                            <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" />
-                        </Box>
-
-                        <Box className={classes.BoxWidth}>
-                            <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" />
-                        </Box>
-
-                        <Box className={classes.BoxWidth}>
-                            <img className={classes.BoxImages} src={'/images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png'} alt="Carousel Images" data-aos="fade-up" />
-                        </Box> */}
-
-
                         <ViewportSlot >
                             <span className="flicking-pagination "></span>
                         </ViewportSlot>

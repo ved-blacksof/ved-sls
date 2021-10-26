@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black'
     },
     blueBox: {
-        background: '#003189',
+        background: '#354B9C',
         height: '65vh',
         [theme.breakpoints.down('sm')]:{
             height:'50vh'

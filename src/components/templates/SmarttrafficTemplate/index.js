@@ -1,13 +1,13 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
-import { smartstreet } from '../../molecules/PortfolioData'
+import { smarttraffic } from '../../molecules/PortfolioData'
 
 export function SmarttrafficTemplate() {
     return (
         <>
             <Ubanner
-                Background="./images/nasa-Q1p7bh3SHj8-unsplash-1.png"
+                Background="./images/luo-lei-Xa4pTwafe5U-unsplash-smarttraffic08.png"
                 maintext="Smart traffic solutions"
                 subtext="Transforming how Traffic Systems Interact with the world"
             />
@@ -19,7 +19,7 @@ export function SmarttrafficTemplate() {
                 sub1="Continuing with its mission to create technological solutions that positively impact the world, SLS has developed the Smart Traffic Management Solution. 
                 The interoperable cloud solution is powered with IoT to set a connected and intelligent traffic ecosystem that is safe, interactive, and highly efficient."
                 icons="icons"
-                data={smartstreet}
+                data={smarttraffic}
             />
 
             <Quality
@@ -37,6 +37,7 @@ export function SmarttrafficTemplate() {
 
             <Visit
                 goto="Switch to Smart Traffic Management now!"
+                title="Visit the web"
             />
 
             <Footer />

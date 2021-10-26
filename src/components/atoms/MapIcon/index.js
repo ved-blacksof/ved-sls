@@ -13,23 +13,25 @@ const useStyles = makeStyles((theme) => ({
         height: '100%'
     },
     iconsBox: {
-        height: '8rem',
-        width: '100%',
+        height: '6rem',
+        width: '50%',
     },
     icons: {
-        width: '50%',
+        width: '100%',
         height: '100%',
     },
     subText: {
         color: 'black',
         marginTop: '8%',
+        width:'80%',
+        fontSize:'1.2rem',
+        fontWeight:'bold'
     },
 }))
 
 export function MapIcon({
     data,
-    fill,
-    color,
+    color
 }) {
     const classes = useStyles()
     return (
@@ -41,10 +43,10 @@ export function MapIcon({
                             <Grid item xs={6} sm={3} md={3} key={index}>
                                 <Box className={classes.gridBox} >
                                     <Box className={classes.iconsBox}>
-                                        <img className={classes.icons} style={{fill:`${fill}`}} src={item.images} alt='Portfolio Icons' />
+                                        <img className={classes.icons} src={item.images} alt='Icons' />
                                     </Box>
 
-                                    <h6 className={classes.subText} style={{ color:`${color}` }}>{item.text}</h6>
+                                    <h4 className={classes.subText} style={{color:`${color}`}}>{item.text}</h4>
                                 </Box>
                             </Grid>
 

@@ -5,114 +5,110 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
-import { Arrow, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
+import { AutoPlay,Pagination } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
-import { FrameGrid, FrameGridOptions } from "@egjs/grid";
+import "@egjs/flicking-plugins/dist/pagination.css";
+
+import { ParagraphsBlue } from '../../atoms'
+
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
+        height: 'fit-content',
         display: 'flex',
         marginTop: '8%',
-        height: '50vh',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center ',
-        [theme.breakpoints.down('xs')]: {
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start ',
+        width:'70%',
+        [theme.breakpoints.down('sm')]: {
+            width:'100%',
             flexDirection: 'column',
             height: 'fit-content',
-            margin: '8% auto',
         }
     },
     box1: {
-        width: '50%',
-        [theme.breakpoints.down('xs')]: {
+        width: '45%',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
-            marginBottom: '5%'
-
         }
-    },
-    redLine: {
-        margin: '2% 0%'
-    },
-    UL: {
-        font: 'normal normal normal 1rem Access',
-        color: 'white',
-        listStyle: 'inside',
-        margin: '3% 0%'
-    },
-    LI: {
-        marginLeft: '4%'
     },
 
     box2: {
+        width: '60%',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        border: '2px solid red',
-        width: '50%',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
-            height:'fit-content'
         }
 
     },
     slide: {
-        height: '40vh',
         width: '100%',
-        margin: "5% 100px",
+        margin: "0% 100px",
+        padding: '8% 0%',
         display: 'inline-flex',
-        gap: '0px',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-end',
+        justifyContent: 'center',
+        alignItems: 'unset',
         flexWrap: 'wrap',
         '& div': {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
         },
-        '& img':{
-            width:'40%',
-            height:'40%',
+        '& img': {
+            width: '40%',
+            height: '40%',
         },
-        [theme.breakpoints.down('xs')]: {
-            height: '30vh',
+        [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
         }
     },
     boxBig: {
-        border: '2px solid red',
         background: 'white',
         color: 'red',
-        height: '15rem',
+        height: '13rem',
         width: '15rem',
-        margin: '0%',
         '& h1': {
-            color: '#CA0017',
-            fontSize: '6rem',
+            color: '#D9393E',
+            fontSize: '5vw',
             textAlign: 'center'
         },
         '& h2': {
             color: '#003189',
-            fontSize: '3vw',
+            fontSize: '2vw',
             textAlign: 'center'
         },
-        
-        [theme.breakpoints.down('xs')]: {
-            height: '10rem',
-            width: '10rem',
+        [theme.breakpoints.down('sm')]: {
+            height: '12rem',
+            width: '12rem',
         }
 
     },
     boxSmall: {
-        border: '2px solid red',
-        height: '12rem',
-        width: '12rem',
-        margin: '0%',
+        height: '10rem',
+        width: '10rem',
         background: 'white',
+        display: 'flex',
+        flexDirection: 'column',
         [theme.breakpoints.down('xs')]: {
-            height: '6rem',
-            width: '6rem',
+            height: '8rem',
+            width: '8rem',
+        },
+        "& h3": {
+            color: '#D9393E',
+            fontSize: '3vw'
+        },
+        "& h4": {
+            font: 'normal normal normal 1.4vw BebasNeue',
+            color: '#003189',
+            textAlign: 'center'
         }
     },
 
@@ -123,50 +119,90 @@ export function TechCarousel() {
     const classes = useStyles()
 
     // const Arrows = [new Arrow()]
+    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
 
-    const Paginations = [new Pagination({ type: 'bullet' })]
+    const paginationsPlugins = new Pagination({ type: 'bullet' });
+
+    const plugins = [ autoPlugins, paginationsPlugins];
 
     return (
 
         <>
             <Container fixed className={classes.newBox}>
                 <Box className={classes.box1}>
-                    <h3>TECHNOLOGY PARTNERS IN <br /> HARDWARE AND SOFTW   ARE OFFERINGS</h3>
-                    <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-                    <h4 style={{ width: '80%' }}>Serving as a turnkey technology solution provider for the past 20 years.</h4>
-                    <ul className={classes.UL}>We specialize in-
-                        <li className={classes.LI}>Research & Development</li>
-                        <li className={classes.LI}> Product Design</li>
-                        <li className={classes.LI}> Manufacturing</li>
-                    </ul>
+                    <ParagraphsBlue
+                        title="TECHNOLOGY PARTNERS IN HARDWARE AND SOFTWARE OFFERINGS"
+                        subtitle="Serving as a turnkey technology solution provider for the past 20 years."
+                        list="We specialize in -"
+                        firstli="Research & Development"
+                        secli=" Product Design"
+                        thirdli="Manufacturing"
+                    />
                 </Box>
+
                 <Box className={classes.box2}>
                     <Flicking
-                        circular={true}
-                        // align="start"
+                        // selector="center"
+                        // plugins={autoPlugins}
+                        plugins={plugins}
+                        align="center"
                         defaultIndex='1'
-                        plugins={Paginations}
                         circular={true}
                     >
 
-                        <div className={classes.slide} >
-                            <div className={classes.boxBig} >
-                                <h1>356+ <h2 >ENGINEERS</h2></h1>
+                        {/* Slide1 */}
+                        <Box className={classes.slide} >
+                            <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                <div className={classes.boxBig} >
+                                    <h1>356<h2>ENGINEERS</h2></h1>
+                                </div>
+
+                                <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                    <img src={'./images/Layer 2.svg'} />
+                                </div>
                             </div>
-                            <div className={classes.boxSmall} style={{ background: '#CA0017' }}><img src={'./images/leaves.svg'} /></div>
-                            <div className={classes.boxSmall}><h3>356+</h3></div>
-                            <div className={classes.boxSmall} style={{ background: 'transparent' }}><h3>100+</h3></div>
-                            <div className={classes.boxSmall}><h3>06</h3></div>
-                        </div>
+
+                            <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                <h3>100+</h3>
+                                <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                <img src={'./images/mission.svg'} />
+
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                <h3>06</h3>
+                                <h4 >BUSINESS VERTICALS</h4>
+                            </div>
+                        </Box>
 
 
-                        <div className={classes.slide} >
-                            <div className={classes.boxBig} ><h2>356+</h2></div>
-                            <div className={classes.boxSmall}><h3>356+</h3></div>
-                            <div className={classes.boxSmall}><h3>356+</h3></div>
-                            <div className={classes.boxSmall}><h3>100+</h3></div>
-                            <div className={classes.boxSmall}><h3>06</h3></div>
-                        </div>
+                        {/* Slide2 */}
+                        <Box className={classes.slide} >
+                            <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                <div className={classes.boxBig} >
+                                    <h1>356<h2>ENGINEERS</h2></h1>
+                                </div>
+
+                                <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                    <img src={'./images/Layer 2.svg'} />
+                                </div>
+                            </div>
+
+                            <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                <h3>100+</h3>
+                                <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                <img src={'./images/mission.svg'} />
+
+                            </div>
+                            <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                <h3>06</h3>
+                                <h4 >BUSINESS VERTICALS</h4>
+                            </div>
+                        </Box>
+
 
                         <ViewportSlot >
                             <span className="flicking-pagination "></span>

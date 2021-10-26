@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
         height: '100%'
     },
     iconsBox: {
-        height: '8rem',
+        height: '6rem',
         width: '100%',
     },
     icons: {

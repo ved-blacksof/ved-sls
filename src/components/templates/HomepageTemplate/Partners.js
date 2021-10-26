@@ -9,6 +9,8 @@ import {
     makeStyles,
 } from '@material-ui/core';
 
+import { GeneralHeading } from '../../atoms'
+
 const useStyles = makeStyles((theme) => ({
     partner: {
         margin: '12% auto'
@@ -19,22 +21,22 @@ const useStyles = makeStyles((theme) => ({
     portSubHead: {
         color: 'black',
         width: '40%',
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('xs')]: {
             width: '70%',
         },
     },
     redLine: {
         margin: '1% 0%'
     },
-    iconsBox:{
-        width:'20%'  
+    iconsBox: {
+        width: '20%'
     },
     partnersIcons: {
         width: '70%',
         display: 'flex',
         justifyContent: 'space-around',
         margin: '10% 5%',
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
         },
         '& img': {
@@ -42,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
             height: '100%',
         }
     },
-    
+
 }))
 
 export function Partners() {
@@ -50,10 +52,11 @@ export function Partners() {
     return (
         <>
             <Container fixed className={classes.partner}>
-                <h3 className={classes.head}>PARTNERSHIP & ASSOCIATIONS</h3>
-                <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-                <h4 className={classes.portSubHead}>Using our robust in-house expertise to develop pioneering solutions catering to various business domains.</h4>
-
+                <GeneralHeading
+                    title="PARTNERSHIP & ASSOCIATIONS COVERS MULTIPLE SEGMENTS"
+                    subtitle="Using our robust in-house expertise to develop pioneering solutions catering to various business domains."
+                    redline="redline"
+                />
                 <Box className={classes.partnersIcons}>
                     <div className={classes.iconsBox}>
                         <img src={'./images/download (1).png'} alt="Partners Icons" />

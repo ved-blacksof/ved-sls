@@ -13,12 +13,13 @@ const useStyles = makeStyles((theme) => ({
         width:'70%',
         position:'relative ',
         background:'white' ,
-        borderRadius:'.8rem',
+        borderRadius:'1rem',
         boxShadow:'0px 0px 2px grey'
     },
     image:{
         width:'100%',
-        height:'100%'
+        height:'100%',
+        borderRadius:'1rem',
     },
     blue: {
         width: '40%',

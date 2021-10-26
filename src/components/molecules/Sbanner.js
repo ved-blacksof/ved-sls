@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '2%',
         [theme.breakpoints.down('sm')]: {
             width: '70%',
-            fontSize:'1rem'
+            fontSize: '1rem'
         }
     },
     scrollBox: {
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: '5%',
         textAlign: 'center',
         [theme.breakpoints.down('xs')]: {
-            display:'none'
+            display: 'none'
         }
     },
     mouseScroll: {
@@ -79,9 +79,9 @@ export function Sbanner({
     return (
         <>
 
-            <div className={classes.mainBox} //style={{ backgroundImage: `url(${Background})` }}
-            >
-            <img className={classes.backImg} src={Background} alt="background" />
+            <div className={classes.mainBox} >
+                <img className={classes.backImg} src={Background} alt="background" />
+
                 <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
 
                 <span className={classes.redLine}></span>
@@ -93,8 +93,11 @@ export function Sbanner({
                 </h2>
 
                 <div className={classes.scrollBox}>
+
                     <img className={classes.mouseScroll} src={mouse} alt="Scroll image" />
+
                     <h6 className={classes.mouseScrollTxt}>Scroll</h6>
+                
                 </div>
 
             </div>

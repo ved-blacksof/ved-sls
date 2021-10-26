@@ -1,12 +1,11 @@
 import React from 'react'
 import { makeStyles, IconButton, Toolbar, AppBar } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
-
+import { Menu } from '@material-ui/icons'
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        // background: 'rgba(0, 49, 137,0.85)',
-        // opacity:'0.8',
-        background: '#003189',
+        background: '#354B9C',
+        // opacity:'0.75',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -22,31 +21,34 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     logo: {
-        width: '100%',
-        height: '100%'
+        maxWidth: '100%',
+        maxeight: '100%'
     },
     navUL: {
-        width: '50%',
         display: 'flex',
-        justifyContent: 'space-around',
         alignItems: 'center',
         listStyle: 'none',
         [theme.breakpoints.down('sm')]: {
-            width: '70%',
-        },
-        [theme.breakpoints.down('xs')]: {
             display: 'none'
         }
     },
-    navLinks: {
+    navLI: {
         textDecoration: 'none',
         font: 'normal normal normal 1rem Access',
         color: 'white',
+        margin:' 0px 10px'
     },
     act: {
         margin: '2px',
         padding: '5px 1px',
         borderBottom: '1px solid white'
+    },
+    menuIcon:{
+        display:'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+            fontSize:'2.2rem'
+        }
     }
 }))
 
@@ -62,12 +64,24 @@ export function Navbar() {
                         <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
                     </IconButton>
 
+                    <Menu className={classes.menuIcon} />
+
                     <ul className={classes.navUL}>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Home</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>About Us</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Industries</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Services</NavLink></li>
-                        <li className={classes.navLinks} > <NavLink to="/" activeClassName={classes.navLinks}>Contact Us</NavLink> </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/" activeClassName={classes.navLinks}>Home</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/about" activeClassName={classes.navLinks}>About Us</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/evcharger" activeClassName={classes.navLinks}>Industries</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/cloud" activeClassName={classes.navLinks}>Services</NavLink>
+                        </li>
+                        <li className={classes.navLI} >
+                            <NavLink className={classes.navLI} to="/contact" activeClassName={classes.navLinks}>Contact Us</NavLink>
+                        </li>
                     </ul>
                 </Toolbar>
             </AppBar>

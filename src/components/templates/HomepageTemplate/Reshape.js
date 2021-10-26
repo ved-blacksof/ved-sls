@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     BoxImages: {
         height: '80vh',
         width: '100%',
-        background: `url('/images/man-worker-firld-by-solar-panels.png')`,
+        backgroundImage: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.59))`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

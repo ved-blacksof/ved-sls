@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '15% auto'
     },
     rightBox: {
-        border: '2px solid red',
+       
         "& img": {
             width: '100%'
         }
@@ -25,7 +25,7 @@ export function LOC({
     const classes = useStyles()
     return (
         <>
-            <Container fixed style={{ border: '2px solid red' }} className={classes.locContainer}>
+            <Container fixed  className={classes.locContainer}>
                 <Grid container >
                     <Grid xs={12} sm={6} className={classes.leftBox}>
                         <GeneralHeading
@@ -34,6 +34,7 @@ export function LOC({
                             subtitle1="Loccarto is an RF Independent Geolocation Tracking solution that offers GPS-free
                              tracking capabilities across IoT and a wide spectrum of applications. Reinvent asset tracking,
                             smart industry application, and much more with this business-first cloud offering."
+                            redline='redline'
                         />
                         <MapIcon1 data={loc}/>
                     </Grid>
