@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     logo: {
         maxWidth: '100%',
-        maxeight: '100%'
+        maxHeight: '100%'
     },
     navUL: {
         display: 'flex',
