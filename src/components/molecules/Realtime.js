@@ -108,7 +108,6 @@ const useStyles = makeStyles((theme) => ({
                 color: '#D9393E'
             }
         },
-
     },
     boxes: {
         margin: "3%",
@@ -166,7 +165,7 @@ export function Realtime({
             arrows: false,
             infinite: true,
             speed: 1000,
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 0,
             autoplay: true,
@@ -178,7 +177,6 @@ export function Realtime({
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: true
                     }
                 },
                 {
@@ -193,7 +191,8 @@ export function Realtime({
                     breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        // dots: true,
                     }
                 }
             ]
@@ -223,7 +222,7 @@ export function Realtime({
                         </Box> : ''
                     }
 
-                    <Box fixed className={classes.sliderSec}>
+                    <Box className={classes.sliderSec}>
 
                         <Box className={classes.box}>
                             {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />

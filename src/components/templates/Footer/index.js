@@ -7,7 +7,9 @@ const useStyles = makeStyles((theme) => ({
         background: 'white',
         margin:'0% 1%',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '10%'
+            marginTop: '10%',
+            width:'90%',
+            margin:'0% auto'
         }
     },
     headBox: {

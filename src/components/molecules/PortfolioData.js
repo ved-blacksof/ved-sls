@@ -11,6 +11,14 @@ export const research = [
         images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
         text:"reasearch"
     },
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearch"
+    },
+    {
+        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text:"reasearch"
+    },
 ]
 
 

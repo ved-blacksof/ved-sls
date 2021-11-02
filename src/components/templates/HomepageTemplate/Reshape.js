@@ -19,10 +19,19 @@ const useStyles = makeStyles((theme) => ({
     },
     flicks: {
         width: '100%',
-        height: '80vh',
-        [theme.breakpoints.down('xs')]: {
-            height: '30vh',
-        }
+        "& .flicking-pagination": {
+            bottom: '4%',   
+        },
+        "& .flicking-pagination-bullet" :{
+            width: '2.5rem !important',
+            height: '.20rem !important',
+            margin: '0 .2rem !important',
+            borderRadius: '1rem !important',
+            backgroundColor: 'rgb(255, 255, 255) !important',
+          },
+         "& .flicking-pagination-bullet-active":{
+            backgroundColor: '#ff0000 !important'
+          }
     },
     BoxWidth:{
         height: '100%',
@@ -33,9 +42,9 @@ const useStyles = makeStyles((theme) => ({
 
     },
     BoxImages: {
-        height: '80vh',
+        padding:'30% 0%',
         width: '100%',
-        backgroundImage: `url('/images/man-worker-firld-by-solar-panels.png'), linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.59))`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url('/images/man-worker-firld-by-solar-panels.png')`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -45,42 +54,36 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         textAlign: 'center',
         paddingBottom: '3%',
-        [theme.breakpoints.down('xs')]: {
-            height: '30vh',
+        [theme.breakpoints.down('sm')]: {
             backgroundPosition: 'top',
+            
         }
     },
     subHead: {
         width: '100%',
-        marginTop: '2%'
     },
     txt: {
-        width: '40%',
+        width: '100%',
         zIndex: '1',
         font: 'normal normal normal 3rem BebasNeue',
         [theme.breakpoints.down('sm')]: {
-            width: '70%'
-        }
+           fontSize:'2rem'
+        },
+    },
+    subSMTxt:{
+        width: '30%',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        },
     },
     subTxt: {
-        width: '40%',
+        width: '80%',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
-            width: '70%'
-        },
-        [theme.breakpoints.down('xs')]: {
-            display: 'none'
-        }
+            fontSize:'1rem'
+         },
+        
     },
-    // bg: {
-    //     width: '100%',
-    //     height: '100%',
-    //     background: 'linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59))',
-    //     backgroundPosition: 'center',
-    //     backgroundSize: 'cover',
-    //     backgroundRepeat: 'no-repeat',
-    //     // zIndex: '0'
-    // }
 
 }))
 
@@ -105,8 +108,8 @@ export function Reshape() {
                     <Box className={classes.BoxWidth}>
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                            <hr />
-                            <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                            <hr style={{width:'25%'}}/>
+                            <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
                         </Box>
@@ -114,8 +117,8 @@ export function Reshape() {
                     <Box className={classes.BoxWidth}>
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                            <hr />
-                            <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                            <hr style={{width:'25%'}}/>
+                            <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
                         </Box>
@@ -123,8 +126,17 @@ export function Reshape() {
                     <Box className={classes.BoxWidth}>
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                            <hr />
-                            <h6 className={classes.subTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                            <hr style={{width:'25%'}}/>
+                            <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
+                            <br />
+                            <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
+                        </Box>
+                    </Box>
+                    <Box className={classes.BoxWidth}>
+                        <Box className={classes.BoxImages} >
+                            <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
+                            <hr style={{width:'25%'}}/>
+                            <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
                         </Box>

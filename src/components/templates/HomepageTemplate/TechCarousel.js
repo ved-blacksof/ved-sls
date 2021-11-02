@@ -46,13 +46,27 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-        }
+        },
+        "& .flicking-pagination": {
+            bottom: '0%',
+            left: '0px',
+        },
+        "& .flicking-pagination-bullet" :{
+            width: '2.5rem !important',
+            height: '.33rem !important',
+            margin: '0 .2rem !important',
+            borderRadius: '1rem !important',
+            backgroundColor: 'rgb(255, 255, 255) !important',
+          },
+         "& .flicking-pagination-bullet-active":{
+            backgroundColor: '#ff0000 !important'
+          }
 
     },
     slide: {
         width: '100%',
         margin: "0% 100px",
-        padding: '8% 0%',
+        padding: '3% 0%',
         display: 'inline-flex',
         justifyContent: 'center',
         alignItems: 'unset',
