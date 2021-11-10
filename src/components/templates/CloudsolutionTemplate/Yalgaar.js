@@ -47,11 +47,14 @@ export function Yalgaar({
             <Container fixed className={classes.mainContainer}>
 
                 <GeneralHeading
-                    title="Yalgaar"
-                    subtitle="Ace your products with real-time pub-sub messaging infrastructure"
+                    icons="./images/Layer_x0020_1_yalgaar.svg"
+                    redline="redline"
+                    subtitle="Ace your products with real-time "
+                    subtitle_1="pub-sub messaging infrastructure"
+                    br1="br1"
                 />
 
-                <img className={classes.yImage} src={'./images/luo-lei-Xa4pTwafe5U-unsplash.png'} />
+                <img className={classes.yImage} src={'./images/Group 49262.png'} />
 
                 <h6>Yalgaar is a real-time pub/sub messaging framework that allows businesses to create
                     a range of scalable applications on the cloud. With ready-to-use SDKs and end-to-end support infrastructure,

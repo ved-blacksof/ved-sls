@@ -1,12 +1,16 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImageReverse , Paragraphs } from "../atoms"
+import { PositionImageReverse, Paragraphs } from "../atoms"
 
 
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        margin:'10% auto' ,
+        margin: '10% auto',
+        width: '70%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        },
     },
     bigHead: {
         color: 'black',
@@ -14,16 +18,26 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '3rem',
         marginTop: '2%'
     },
-    gridContainer: {
-        display:'flex',
-        [theme.breakpoints.down('sm')]:{
-            flexDirection:'column-reverse',
-            marginTop:'20%',
-        }
+    BoxLeft: {
+        width: '50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        },
     },
-    gridLeft: {
+    BoxRight: {
+        width: '50%',
+        alignSelf: 'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        },
+    },
+    gridContainer: {
         display: 'flex',
-        alignItems: 'center',
+        width: '100%',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column-reverse',
+            marginTop: '20%',
+        }
     },
     text: {
         color: 'black',
@@ -41,18 +55,18 @@ export function QualityReverse({
     thirdli,
     fourthli,
     style,
-    list,  
+    list,
 }) {
     const classes = useStyles()
     return (
         <>
-            <Container fixed className={classes.qualityContainer}>
+            <Box fixed className={classes.qualityContainer}>
                 <h2 className={classes.bigHead}>{mainheading}</h2>
 
-                <Box container spacing={4} className={classes.gridContainer}
+                <Box container className={classes.gridContainer}
                     style={style} >
 
-                    <Grid item xs={12} md={6}>
+                    <Box className={classes.BoxLeft}>
                         <Paragraphs
                             title={heading}
                             subtitle={subtitle}
@@ -64,13 +78,13 @@ export function QualityReverse({
                             fourthli={fourthli}
 
                         />
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} md={6} className={classes.gridLeft}>
+                    <Box className={classes.Boxright}>
                         <PositionImageReverse imageBG={imageBG} />
-                    </Grid>
+                    </Box>
                 </Box>
-            </Container>
+            </Box>
         </>
     )
 }

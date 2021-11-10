@@ -1,4 +1,4 @@
-import { Container, makeStyles } from '@material-ui/core'
+import { Box, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 
 
@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     image:{
         width:'100%',
         height:'100%',
+        overflow:'hidden',
         borderRadius:'1rem',
     },
     blue: {
@@ -51,7 +52,7 @@ export function PositionImageReverse({
     const classes = useStyles();
 
     return (
-        <Container fixed className={classes.mainBox}>
+        <Box className={classes.mainBox}>
             <div className={classes.imageBox}>
                 <img className={classes.image} src={imageBG} alt="image" />
 
@@ -60,6 +61,6 @@ export function PositionImageReverse({
                 <img className={classes.blue} src={'./images/Polygon 1.svg'} alt="image" />
 
             </div>
-        </Container >
+        </Box >
     )
 }

@@ -266,7 +266,7 @@ export const middleware = [
 
 export const yalgar = [
     {
-        images: './images/BlueIcons -20-01-1-white (1).svg',
+        images: './images/BlueIcons -20-03.svg',
         text: 'Chat and Social Media Sites'
     },
     {
@@ -274,7 +274,7 @@ export const yalgar = [
         text: 'IoT and M2M Connected Devices'
     },
     {
-        images: './images/BlueIcons -20-03.svg',
+        images: './images/BlueIcons -20-03.svg',    
         text: 'Real-time Tracking'
     },
     {

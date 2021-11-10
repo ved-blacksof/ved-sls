@@ -7,9 +7,23 @@ const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
         margin: '15% auto',
-        // display: 'flex',
-        // alignItems: 'center',
-        // flexDirection: 'column'
+        width:'70%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
+    },
+    BoxLeft:{
+        width:'50%',
+        alignSelf:'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        },
+    },
+    BoxRight:{
+        width:'50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        },
     },
     bigHead: {
         width: '50%',
@@ -60,7 +74,7 @@ export function Quality({
     const classes = useStyles()
     return (
         <>
-            <Container fixed className={classes.qualityContainer}>
+            <Box className={classes.qualityContainer}>
                 {
                     mainheading ?
                         <Box style={{ display: 'flex', justifyContent: 'center', }}>
@@ -72,11 +86,11 @@ export function Quality({
 
                 <Box className={classes.gridContainer}
                     style={style}>
-                    <Grid item xs={12} md={6} className={classes.gridLeft}>
+                    <Box className={classes.BoxLeft}>
                         <PositionImage imageBG={imageBG} />
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} md={6}>
+                    <Box className={classes.BoxRight}>
                         <Paragraphs
                             title={heading}
                             subtitle={subtitle}
@@ -88,10 +102,10 @@ export function Quality({
                             thirdli={thirdli}
                             fourthli={fourthli}
                         />
-                    </Grid>
+                    </Box>
 
                 </Box>
-            </Container>
+            </Box>
         </>
     )
 }

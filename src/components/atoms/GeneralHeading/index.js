@@ -27,23 +27,29 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function GeneralHeading({
+    icons,
     title,
     title1,
-    subtitle,
     redline,
+    subtitle,
+    subtitle_1,
     subtitle1,
     style,
-    br
+    br,
+    br1
 }) {
     const classes = useStyles()
 
     return (
         <Box className={classes.paraBox} style={style}>
+            {
+                icons ? <img className={classes.icon} src={icons} /> : ''
+            }
             <h3 className={classes.head}>{title}  { br ? <br /> : '' } {title1}</h3>
             {
                 redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
             }
-            <h4 className={classes.portSubHead}>{subtitle}</h4>
+            <h4 className={classes.portSubHead}>{subtitle}  { br1 ? <br /> : '' }  {subtitle_1} </h4>
             <h6 style={{ color: 'black', margin: '4% 0%' }}>{subtitle1}</h6>
         </Box>
 

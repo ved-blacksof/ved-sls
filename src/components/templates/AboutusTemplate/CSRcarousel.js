@@ -12,6 +12,10 @@ import { GeneralHeading } from '../../atoms'
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         marginTop: '10%',
+        width: '70%',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%'
+        },
     },
     head: {
         color: 'black'

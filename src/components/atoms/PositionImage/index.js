@@ -53,7 +53,7 @@ export function PositionImage({
     const classes = useStyles();
 
     return (
-        <Container fixed className={classes.mainBox}>
+        <Box className={classes.mainBox}>
             <div className={classes.imageBox}>
                 <img className={classes.image} src={imageBG} alt="image" />
 
@@ -62,6 +62,6 @@ export function PositionImage({
                 <img className={classes.blue} src={'./images/Polygon 1.svg'} alt="image" />
 
             </div>
-        </Container >
+        </Box >
     )
 }

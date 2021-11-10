@@ -9,7 +9,11 @@ import {
 const useStyles = makeStyles((theme) => ({
     container1: {
         margin: '10% auto',
-        // height:'40vh'
+        // height:'40vh',
+        // width:'70%',
+        // [theme.breakpoints.down('xs')]: {
+        //     width: '90%'
+        // },
     },
     mainBox: {
         width: '100%',

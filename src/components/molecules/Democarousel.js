@@ -7,8 +7,12 @@ import { CustomButtonGroupAsArrows } from '../atoms'
 const useStyles = makeStyles((theme) => ({
     realText: {
         marginTop: '10%',
+        width:'70%',
+        [theme.breakpoints.down('sm')]:{
+            width:'90%',
+            margin: "20% 0%",
+        },
         [theme.breakpoints.down('xs')]: {
-            margin: "20% 0%"
         }
     },
     sliderSec: {

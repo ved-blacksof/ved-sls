@@ -3,6 +3,12 @@ import { makeStyles, Container, Box } from '@material-ui/core'
 
 
 const useStyles = makeStyles((theme) => ({
+    mainContainer:{
+         width:'70%',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%'
+        },
+    },
     container: {
         width:'100%',
         marginTop: '10%',
@@ -76,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
 export function Dnumbers() {
     const classes = useStyles()
     return (
-        <Container fixed>
+        <Container fixed className={classes.mainContainer}>
             <Box  className={classes.container}>
                 <Box className={classes.headBox}>
                     <h2 className={classes.head}>100+</h2>
