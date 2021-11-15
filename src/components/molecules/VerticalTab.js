@@ -70,10 +70,13 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
     },
     tabPanel: {
-        width: '60%',
+        width: '70%',
         position: 'absolute',
         zIndex: '1',
-        bottom: '0',
+        top: '-68%',
+        [theme.breakpoints.down('md')]: {
+            top: '-50%',
+         },
         [theme.breakpoints.down('sm')]: {
             position: 'static',
             height: 'fit-content',

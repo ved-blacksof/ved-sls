@@ -3,17 +3,19 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        // height:'80vh',
-        padding:'16% 0%',
+        padding:'15% 0%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
         backgroundPosition:'center',
         backgroundSize:'cover',
+        backgroundRepeat:'no-repeat',
         position: 'relative',
+        width:'100%',
+        height:'',
         [theme.breakpoints.down('sm')]: {
-            padding:'25% 0%',
+            padding:'20% 0%',
         },
         // [theme.breakpoints.down('xs')]: {
         //     padding:'16% 0%',

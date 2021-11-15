@@ -6,19 +6,26 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import { VerticalTab } from '../../molecules'
+import { MainContainer } from '../../atoms';
 
 
 
 const useStyles = makeStyles((theme) => ({
     whiteBox: {
-        marginTop:'20%',
-        paddingBottom:'5%'
+        marginTop: '20%',
+        paddingBottom: '5%',
     },
     expand: {
         color: 'black'
     },
     blueBox: {
         background: '#354B9C',
+    },
+    blueBoxContainer: {
+        // width: '70%',
+        // [theme.breakpoints.down('sm')]: {
+        //     width: '100%'
+        // }
     }
 }))
 
@@ -29,13 +36,19 @@ export function Expanding() {
 
     return (
         <>
-            <Container fixed className={classes.whiteBox}>
-                <h3 className={classes.expand}>EXPANDING THE CORE  <br/> OF OUR PRIMARY OFFERINGS</h3>
-            </Container>
-            <Box className={classes.blueBox}>
-                <Container fixed  style={{padding:'5% 0%'}}> 
-                    <VerticalTab />
+            <MainContainer>
+                <Container className={classes.whiteBox}>
+                    <h3 className={classes.expand}>EXPANDING THE CORE  <br /> OF OUR PRIMARY OFFERINGS</h3>
                 </Container>
+            </MainContainer>
+            <Box className={classes.blueBox}>
+
+                <MainContainer>
+                    <Container fixed className={classes.blueBoxContainer} style={{ padding: '5% 0%' }}>
+                        <VerticalTab />
+                    </Container>
+                </MainContainer>
+
             </Box>
         </>
     )

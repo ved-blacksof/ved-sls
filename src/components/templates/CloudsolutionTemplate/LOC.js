@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
         margin: '15% auto'
     },
     rightBox: {
-       
         "& img": {
             width: '100%'
         }

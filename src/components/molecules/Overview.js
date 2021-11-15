@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Container, Box } from '@material-ui/core'
-import { MapIcon } from '../atoms'
+import { MainContainer, MapIcon } from '../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,10 +14,6 @@ const useStyles = makeStyles((theme) => ({
     },
     overInBox: {
         paddingTop: '5%',
-        width:'70%',
-        [theme.breakpoints.down('sm')]:{
-            width:'90%'
-        }
     },
     paths: {
         marginBottom: '5%',
@@ -26,10 +22,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '1% 0%'
     },
     portSubHead: {
-        width: '70%',
-        [theme.breakpoints.down('xs')]: {
-            width: '90%'
-        }
+        width: '90%',
     },
     //List CSS for IOT PAge
     list: {
@@ -57,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Overview({
-    sub1,   
+    sub1,
     sub2,
     path,
     style,
@@ -75,52 +68,54 @@ export function Overview({
 
     return (
         <Box className={classes.overBox} style={style}>
-            <Container fixed className={classes.overInBox}>
-                <h6 className={classes.paths}> {path} </h6>
+            <MainContainer>
+                <Container fixed className={classes.overInBox}>
+                    <h6 className={classes.paths}> {path} </h6>
 
-                <h3 className={classes.head}>Overview</h3>
+                    <h3 className={classes.head}>Overview</h3>
 
-                <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
+                    <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
 
-                <h4 className={classes.portSubHead}>{sub1}</h4>
+                    <h4 className={classes.portSubHead}>{sub1}</h4>
 
-                <h4 className={classes.portSubHead}>{sub2}</h4>
+                    <h4 className={classes.portSubHead}>{sub2}</h4>
 
-                {
-                    prop ?
-                        <img src={prop} alt="image" /> : ''
-                }
+                    {
+                        prop ?
+                            <img src={prop} alt="image" /> : ''
+                    }
 
-                {
-                    list ?
-                        <>
-                            <Box className={classes.list}>
-                                <Container fixed className={classes.box1}>
-                                    <ul className={classes.UL}>
-                                        
-                                        <li className={classes.LI}>{li1}</li>
-                                        <li className={classes.LI}>{li2}</li>
-                                        <li className={classes.LI}>{li3} </li>
-                                    </ul>
-                                </Container>
-                            </Box>
-                        </> : ''
-                }
+                    {
+                        list ?
+                            <>
+                                <Box className={classes.list}>
+                                    <Container fixed className={classes.box1}>
+                                        <ul className={classes.UL}>
 
-                {
-                    icons ? 
-                    <>
-                        <MapIcon 
-                            data={data}
-                            fill="white"
-                            color="white"
-                        />
-                    </> : ''
-                }
+                                            <li className={classes.LI}>{li1}</li>
+                                            <li className={classes.LI}>{li2}</li>
+                                            <li className={classes.LI}>{li3} </li>
+                                        </ul>
+                                    </Container>
+                                </Box>
+                            </> : ''
+                    }
+
+                    {
+                        icons ?
+                            <>
+                                <MapIcon
+                                    data={data}
+                                    fill="white"
+                                    color="white"
+                                />
+                            </> : ''
+                    }
 
 
 
-            </Container>
+                </Container>
+            </MainContainer>
         </Box>
     )
 }

@@ -9,7 +9,7 @@ import {
     makeStyles,
 } from '@material-ui/core';
 
-import { GeneralHeading } from '../../atoms'
+import { GeneralHeading, MainContainer } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     partner: {
@@ -51,24 +51,26 @@ export function Partners() {
     const classes = useStyles()
     return (
         <>
-            <Container fixed className={classes.partner}>
-                <GeneralHeading
-                    title="PARTNERSHIP & ASSOCIATIONS COVERS MULTIPLE SEGMENTS"
-                    subtitle="Using our robust in-house expertise to develop pioneering solutions catering to various business domains."
-                    redline="redline"
-                />
-                <Box className={classes.partnersIcons}>
-                    <div className={classes.iconsBox}>
-                        <img src={'./images/download (1).png'} alt="Partners Icons" />
-                    </div>
-                    <div className={classes.iconsBox}>
-                        <img src={'./images/NoPath.c6058ac7.png'} alt="Partners Icons" />
-                    </div>
-                    <div className={classes.iconsBox}>
-                        <img src={'./images/download (2).png'} alt="Partners Icons" />
-                    </div>
-                </Box>
-            </Container>
+            <MainContainer>
+                <Container fixed className={classes.partner}>
+                    <GeneralHeading
+                        title="PARTNERSHIP & ASSOCIATIONS COVERS MULTIPLE SEGMENTS"
+                        subtitle="Using our robust in-house expertise to develop pioneering solutions catering to various business domains."
+                        redline="redline"
+                    />
+                    <Box className={classes.partnersIcons}>
+                        <div className={classes.iconsBox}>
+                            <img src={'./images/download (1).png'} alt="Partners Icons" />
+                        </div>
+                        <div className={classes.iconsBox}>
+                            <img src={'./images/NoPath.c6058ac7.png'} alt="Partners Icons" />
+                        </div>
+                        <div className={classes.iconsBox}>
+                            <img src={'./images/download (2).png'} alt="Partners Icons" />
+                        </div>
+                    </Box>
+                </Container>
+            </MainContainer>
         </>
     )
 }

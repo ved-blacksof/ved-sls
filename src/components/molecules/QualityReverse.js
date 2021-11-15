@@ -1,16 +1,13 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImageReverse, Paragraphs } from "../atoms"
+import { PositionImageReverse, Paragraphs, MainContainer } from "../atoms"
 
 
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        margin: '10% auto',
-        width: '70%',
-        [theme.breakpoints.down('sm')]: {
-            width: '100%'
-        },
+        margin: '15% auto',
+        width:'100%'
     },
     bigHead: {
         color: 'black',
@@ -25,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     BoxRight: {
+        alignSelf: 'center',    
         width: '50%',
-        alignSelf: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
         },
@@ -60,31 +57,33 @@ export function QualityReverse({
     const classes = useStyles()
     return (
         <>
-            <Box fixed className={classes.qualityContainer}>
-                <h2 className={classes.bigHead}>{mainheading}</h2>
+            <MainContainer>
+                <Container fixed className={classes.qualityContainer}>
+                    <h2 className={classes.bigHead}>{mainheading}</h2>
 
-                <Box container className={classes.gridContainer}
-                    style={style} >
+                    <Box container className={classes.gridContainer}
+                        style={style} >
 
-                    <Box className={classes.BoxLeft}>
-                        <Paragraphs
-                            title={heading}
-                            subtitle={subtitle}
-                            list={list}
-                            redline={redline}
-                            firstli={firstli}
-                            secli={secli}
-                            thirdli={thirdli}
-                            fourthli={fourthli}
+                        <Box className={classes.BoxLeft}>
+                            <Paragraphs
+                                title={heading}
+                                subtitle={subtitle}
+                                list={list}
+                                redline={redline}
+                                firstli={firstli}
+                                secli={secli}
+                                thirdli={thirdli}
+                                fourthli={fourthli}
 
-                        />
+                            />
+                        </Box>
+
+                        <Box className={classes.BoxRight}>
+                            <PositionImageReverse imageBG={imageBG} />
+                        </Box>
                     </Box>
-
-                    <Box className={classes.Boxright}>
-                        <PositionImageReverse imageBG={imageBG} />
-                    </Box>
-                </Box>
-            </Box>
+                </Container>
+            </MainContainer>
         </>
     )
 }

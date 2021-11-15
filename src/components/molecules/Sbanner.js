@@ -3,24 +3,25 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        height: '100vh',
+        // height: '100vh',
+        padding:'21% 0%',   
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
         background: 'linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59))',
         position: 'relative',
-        [theme.breakpoints.down('sm')]: {
-            height: '80vh'
-        },
-        [theme.breakpoints.down('xs')]: {
-            height: '40vh'
-        }
+        // [theme.breakpoints.down('sm')]: {
+        //     height: '80vh'
+        // },
+        // [theme.breakpoints.down('xs')]: {
+        //     height: '40vh'
+        // }
 
     },
     backImg: {
         position: 'absolute',
-        width: '100%',
+        maxWidth: '100%',
         height: '100%',
         zIndex: '-1',
 
@@ -76,6 +77,10 @@ export function Sbanner({
     mouse
 }) {
     const classes = useStyles()
+
+    const scroll = () =>{
+        window.scroll({ top: 1000, left: 0, behavior: 'smooth' });
+    }
     return (
         <>
 
@@ -94,9 +99,9 @@ export function Sbanner({
 
                 <div className={classes.scrollBox}>
 
-                    <img className={classes.mouseScroll} src={mouse} alt="Scroll image" />
+                    <img className={classes.mouseScroll} src={mouse} alt="Scroll image" onClick={scroll}/>
 
-                    <h6 className={classes.mouseScrollTxt}>Scroll</h6>
+                    <h6 className={classes.mouseScrollTxt} >Scroll</h6>
                 
                 </div>
 

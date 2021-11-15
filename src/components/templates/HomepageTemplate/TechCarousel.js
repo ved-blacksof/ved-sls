@@ -7,11 +7,11 @@ import {
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
-import { AutoPlay,Pagination } from "@egjs/flicking-plugins";
+import { AutoPlay, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
 
-import { ParagraphsBlue } from '../../atoms'
+import { ParagraphsBlue, MainContainer } from '../../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,15 +22,13 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start ',
-        // width:'70%',
         [theme.breakpoints.down('sm')]: {
-            width:'100%',
             flexDirection: 'column',
             height: 'fit-content',
         }
     },
     box1: {
-        width: '45%',
+        width: '50%',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
@@ -40,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     box2: {
-        width: '60%',
+        width: '50%',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
@@ -51,16 +49,16 @@ const useStyles = makeStyles((theme) => ({
             bottom: '0%',
             left: '0px',
         },
-        "& .flicking-pagination-bullet" :{
+        "& .flicking-pagination-bullet": {
             width: '2.5rem !important',
             height: '.33rem !important',
             margin: '0 .2rem !important',
             borderRadius: '1rem !important',
             backgroundColor: 'rgb(255, 255, 255) !important',
-          },
-         "& .flicking-pagination-bullet-active":{
+        },
+        "& .flicking-pagination-bullet-active": {
             backgroundColor: '#ff0000 !important'
-          }
+        }
 
     },
     slide: {
@@ -87,8 +85,8 @@ const useStyles = makeStyles((theme) => ({
     boxBig: {
         background: 'white',
         color: 'red',
-        height: '13rem',
-        width: '15rem',
+        width: '16vw',
+        height: '16vw',
         '& h1': {
             color: '#D9393E',
             fontSize: '5vw',
@@ -100,20 +98,20 @@ const useStyles = makeStyles((theme) => ({
             textAlign: 'center'
         },
         [theme.breakpoints.down('sm')]: {
-            height: '12rem',
-            width: '12rem',
+            height: '30vw',
+            width: '30vw',
         }
 
     },
     boxSmall: {
-        height: '10rem',
-        width: '10rem',
+        height: '11vw',
+        width: '10vw',
         background: 'white',
         display: 'flex',
         flexDirection: 'column',
-        [theme.breakpoints.down('xs')]: {
-            height: '8rem',
-            width: '8rem',
+        [theme.breakpoints.down('sm')]: {
+            height: '20vw',
+            width: '22vw',
         },
         "& h3": {
             color: '#D9393E',
@@ -137,94 +135,96 @@ export function TechCarousel() {
 
     const paginationsPlugins = new Pagination({ type: 'bullet' });
 
-    const plugins = [ autoPlugins, paginationsPlugins];
+    const plugins = [autoPlugins, paginationsPlugins];
 
     return (
 
         <>
-            <Container fixed className={classes.newBox}>
-                <Box className={classes.box1}>
-                    <ParagraphsBlue
-                        title="TECHNOLOGY PARTNERS IN HARDWARE AND SOFTWARE OFFERINGS"
-                        subtitle="Serving as a turnkey technology solution provider for the past 20 years."
-                        list="We specialize in -"
-                        firstli="Research & Development"
-                        secli=" Product Design"
-                        thirdli="Manufacturing"
-                    />
-                </Box>
+            <MainContainer>
+                <Container fixed className={classes.newBox}>
+                    <Box className={classes.box1}>
+                        <ParagraphsBlue
+                            title="TECHNOLOGY PARTNERS IN HARDWARE AND SOFTWARE OFFERINGS"
+                            subtitle="Serving as a turnkey technology solution provider for the past 20 years."
+                            list="We specialize in -"
+                            firstli="Research & Development"
+                            secli=" Product Design"
+                            thirdli="Manufacturing"
+                        />
+                    </Box>
 
-                <Box className={classes.box2}>
-                    <Flicking
-                        // selector="center"
-                        // plugins={autoPlugins}
-                        plugins={plugins}
-                        align="center"
-                        defaultIndex='1'
-                        circular={true}
-                    >
+                    <Box className={classes.box2}>
+                        <Flicking
+                            // selector="center"
+                            // plugins={autoPlugins}
+                            plugins={plugins}
+                            align="center"
+                            defaultIndex='1'
+                            circular={true}
+                        >
 
-                        {/* Slide1 */}
-                        <Box className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
-                                <div className={classes.boxBig} >
-                                    <h1>356<h2>ENGINEERS</h2></h1>
+                            {/* Slide1 */}
+                            <Box className={classes.slide} >
+                                <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                    <div className={classes.boxBig} >
+                                        <h1>356<h2>ENGINEERS</h2></h1>
+                                    </div>
+
+                                    <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                        <img src={'./images/Layer 2.svg'} />
+                                    </div>
                                 </div>
 
-                                <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
-                                    <img src={'./images/Layer 2.svg'} />
+                                <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                    <h3>100+</h3>
+                                    <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
                                 </div>
-                            </div>
+                                <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                    <img src={'./images/mission.svg'} />
 
-                            <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                <h3>100+</h3>
-                                <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
-                            </div>
-                            <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
-                                <img src={'./images/mission.svg'} />
-
-                            </div>
-                            <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                <h3>06</h3>
-                                <h4 >BUSINESS VERTICALS</h4>
-                            </div>
-                        </Box>
+                                </div>
+                                <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                    <h3>06</h3>
+                                    <h4 >BUSINESS VERTICALS</h4>
+                                </div>
+                            </Box>
 
 
-                        {/* Slide2 */}
-                        <Box className={classes.slide} >
-                            <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
-                                <div className={classes.boxBig} >
-                                    <h1>356<h2>ENGINEERS</h2></h1>
+                            {/* Slide2 */}
+                            <Box className={classes.slide} >
+                                <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                    <div className={classes.boxBig} >
+                                        <h1>356<h2>ENGINEERS</h2></h1>
+                                    </div>
+
+                                    <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                        <img src={'./images/Layer 2.svg'} />
+                                    </div>
                                 </div>
 
-                                <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
-                                    <img src={'./images/Layer 2.svg'} />
+                                <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                    <h3>100+</h3>
+                                    <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
                                 </div>
-                            </div>
+                                <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                    <img src={'./images/mission.svg'} />
 
-                            <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                <h3>100+</h3>
-                                <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
-                            </div>
-                            <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
-                                <img src={'./images/mission.svg'} />
-
-                            </div>
-                            <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                <h3>06</h3>
-                                <h4 >BUSINESS VERTICALS</h4>
-                            </div>
-                        </Box>
+                                </div>
+                                <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                    <h3>06</h3>
+                                    <h4 >BUSINESS VERTICALS</h4>
+                                </div>
+                            </Box>
 
 
-                        <ViewportSlot >
-                            <span className="flicking-pagination "></span>
-                        </ViewportSlot>
+                            <ViewportSlot >
+                                <span className="flicking-pagination "></span>
+                            </ViewportSlot>
 
-                    </Flicking>
-                </Box>
-            </Container>
+                        </Flicking>
+                    </Box>
+                </Container>
+            </MainContainer>
         </>
     )
 }

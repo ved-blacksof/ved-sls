@@ -1,34 +1,40 @@
 import { Box, Container, Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
-import { Paragraphs } from '../../atoms'
+import { MainContainer, Paragraphs } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
-    mainContainer:{
-        margin: "10% auto",
-        display:'flex',
-        height:'50vh'
+    mainContainer: {
+        marginTop: "10%",
+        display: 'flex',
+        [theme.breakpoints.down('sm')]:{
+            flexDirection:'column'
+        }
     },
-    leftBox:{
-        width:'50%'
+    leftBox: {
+        width: '45%',
+        paddingBottom:'10%',
+        [theme.breakpoints.down('sm')]: {
+            width:'100%'
+        }
     },
     rightBox: {
-        width:'50%',
+        width: '50%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        // [theme.breakpoints.down('xs')]: {
-        //     height: '40vh',
-        // }
+        alignItems: 'flex-end',
+        [theme.breakpoints.down('sm')]: {
+            width:'100%'
+        }
     },
     mobileBox: {
-        width: '18rem',
-        height: '18rem',
+        width: '20vw',
+        height: '20vw',
         borderRadius: '4rem 0rem 4rem 4rem',
         position: 'relative',
         background: '#354B9C',
         [theme.breakpoints.down('sm')]: {
-            width: '15rem',
-            height: '15rem',
+            width: '60vw',
+            height: '60vw',
         }
     },
     mobileImages: {
@@ -37,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         bottom: '10%',
         margin: '0 auto',
-
     }
 
 }))
@@ -45,7 +50,8 @@ const useStyles = makeStyles((theme) => ({
 export function MobileApplication() {
     const classes = useStyles()
     return (
-        <Container className={classes.mainContainer}>
+        <MainContainer>
+            <Container className={classes.mainContainer}>
                 <Box className={classes.leftBox}>
                     <Paragraphs
                         title="MOBILE APPLICATION"
@@ -65,6 +71,7 @@ export function MobileApplication() {
                         <img className={classes.mobileImages} src={'./images/Group 82858.png'} />
                     </Box>
                 </Box>
-        </Container>
+            </Container>
+        </MainContainer>
     )
 }

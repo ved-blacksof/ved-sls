@@ -6,8 +6,11 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         height: 'fit-content',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         zIndex: '1',
+        [theme.breakpoints.down('sm')]:{
+            justifyContent:'center'
+        }
     },
     imageBox: {
         width:'70%',
@@ -15,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
         background:'white' ,
         borderRadius:'1rem',
         boxShadow:'0px 0px 2px grey',
+        [theme.breakpoints.down('sm')]:{
+            width:'80%',
+            justifyContent:'center'
+        }
     },
     image:{
         width:'100%',

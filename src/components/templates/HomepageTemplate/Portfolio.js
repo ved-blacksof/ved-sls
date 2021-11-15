@@ -5,11 +5,12 @@ import {
     Grid,
     makeStyles,
 } from '@material-ui/core';
-import { GeneralHeading, MapIcon } from '../../atoms'
+import { GeneralHeading, MainContainer, MapIcon } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     portContainer: {
         marginTop: '10%',
+    
     },
     portHead: {
         color: 'black',
@@ -67,22 +68,24 @@ export function Portfolio({
     const classes = useStyles();
     return (
 
-        <Container fixed className={classes.portContainer}>
-            <GeneralHeading
-                title="OUR RICH PORTFOLIO"
-                title1="COVERS MULTIPLE SEGMENTS"
-                br="br"
-                redline="redline"
-                subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
+        <MainContainer>
+            <Container fixed className={classes.portContainer}>
+                <GeneralHeading
+                    title="OUR RICH PORTFOLIO"
+                    title1="COVERS MULTIPLE SEGMENTS"
+                    br="br"
+                    redline="redline"
+                    subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
                 of products and services."
-            />
+                />
 
-            <MapIcon data={data} />
+                <MapIcon data={data} />
 
-            <Box className={classes.knowMore}>
-                <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'} /> </button>
-            </Box>
+                <Box className={classes.knowMore}>
+                    <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'} /> </button>
+                </Box>
 
-        </Container>
+            </Container>
+        </MainContainer>
     )
 }

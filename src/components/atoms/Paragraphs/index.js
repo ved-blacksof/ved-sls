@@ -3,14 +3,14 @@ import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
     paraBox: {
-        width: '80%',
+        width: '100%',
         height:'100%',
         display:'flex',
         justifyContent:'center',
         alignItems:'flex-start',
         flexDirection:'column',
         [theme.breakpoints.down('sm')]: {
-            margin: '10%'
+            margin: '15% 0%'
         }
     },
     head: {
@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     portSubHead: {
         color: 'black',
         width: '100%',
-        [theme.breakpoints.down('xs')]: {
-            width: '70%',
+        [theme.breakpoints.down('sm')]: {
+            // width: '70%',
         },
     },
     redLine: {

@@ -5,15 +5,15 @@ import "slick-carousel/slick/slick-theme.css";
 import './styled.css'
 import { makeStyles, Container, Box, Button } from '@material-ui/core'
 import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons'
-import { GeneralHeading } from '../atoms'
+import { GeneralHeading, MainContainer } from '../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
     realText: {
         marginTop: '10%',
-        width:'70%',
+        // width:'70%',
         [theme.breakpoints.down('sm')]: {
-            width: '90%',
+            // width: '90%',
             margin: "20% auto"
         },
     },
@@ -131,9 +131,20 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
     },
-    imgBox:{
-        height:"80%",
+    imgBox: {
+        height: "80%",
     },
+    iconBox: {
+        marginTop: '10%',
+        width: '80%',
+        '& img': {
+            width: '100%',
+            maxHeight: '100%',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '90%'
+        }
+    }
 }))
 
 
@@ -149,6 +160,7 @@ export function Realtime({
     subtitle1,
     cases,
     redline,
+    grpicons,
     br
 }) {
     const classes = useStyles()
@@ -203,83 +215,91 @@ export function Realtime({
         return (
             <>
 
-                {/* only slider */}
-                <Container fixed className={classes.realText}>
-                    <GeneralHeading
-                        title={title}
-                        title1={title1}
-                        image={image}
-                        subtitle={subtitle}
-                        subtitle1={subtitle1}
-                        redline={redline}
-                        br={br}
-                    />
-                    {
-                        filters ? <Box className={classes.filters}>
-                            <h6>All</h6>
-                            <h6>NEWS & EVENTS</h6>
-                            <h6>CSR</h6>
-                            <h6>BLOGS</h6>
-                            <h6>CASE STUDIES</h6>
-                        </Box> : ''
-                    }
+                <MainContainer>
+                    {/* only slider */}
+                    <Container fixed className={classes.realText}>
+                        <GeneralHeading
+                            title={title}
+                            title1={title1}
+                            image={image}
+                            subtitle={subtitle}
+                            subtitle1={subtitle1}
+                            redline={redline}
+                            br={br}
+                        />
+                        {
+                            filters ? <Box className={classes.filters}>
+                                <h6>All</h6>
+                                <h6>NEWS & EVENTS</h6>
+                                <h6>CSR</h6>
+                                <h6>BLOGS</h6>
+                                <h6>CASE STUDIES</h6>
+                            </Box> : ''
+                        }
 
-                    <Box className={classes.sliderSec}>
+                        <Box className={classes.sliderSec}>
 
-                        <Box className={classes.box}>
-                            {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
+                            <Box className={classes.box}>
+                                {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
                             <img src={"./images/Group 82851.svg"} onClick={next} /> */}
-                            {/* <ArrowBackIos className={classes.btn}/> */}
-                            <Box className={classes.btn} onClick={previous} ><ArrowBackIos /></Box>
-                            <Box className={classes.btn} onClick={next}><ArrowForwardIos /></Box>
+                                {/* <ArrowBackIos className={classes.btn}/> */}
+                                <Box className={classes.btn} onClick={previous} ><ArrowBackIos /></Box>
+                                <Box className={classes.btn} onClick={next}><ArrowForwardIos /></Box>
+                            </Box>
+
+                            <Slider ref={sliderRef} {...settings} className={classes.slider}>
+
+                                {/* CARDS */}
+
+                                {
+                                    data ? data.map((item, index) => {
+                                        return (
+                                            <Box>
+                                                <Box className={classes.card} >
+                                                    <img className={classes.cardImage} src={item.images} alt="Robot Hand" />
+
+                                                    <Box className={classes.cardTxt}>
+                                                        {
+                                                            cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
+                                                        }
+                                                        <h4 className={classes.cardHead}>{item.head}</h4>
+                                                        <h6 className={classes.cardSubHead}>{item.para}</h6>
+                                                        <a href="/#" className={classes.readMore}>{item.read}</a>
+                                                    </Box>
+                                                </Box>
+                                            </Box>
+
+                                        )
+                                    }) : ''
+                                }
+
+                                {
+                                    squarecarddata ? squarecarddata.map((item, index) => {
+                                        return (
+                                            <Box style={{ padding: '2rem', }}>
+                                                <Box className={classes.boxes}>
+                                                    <Box className={classes.imgBox}>
+                                                        <img src={item.images} alt="Mission Icon" />
+                                                    </Box>
+                                                    <h4>{item.subtitle} </h4>
+                                                </Box>
+                                            </Box>
+                                        )
+                                    }) : ''
+                                }
+
+
+
+                            </Slider>
                         </Box>
+                        {
+                            grpicons ? <Box className={classes.iconBox}>
+                                <img src={grpicons} />
+                            </Box> : ''
+                        }
+                    </Container>
 
-                        <Slider ref={sliderRef} {...settings} className={classes.slider}>
-
-                            {/* CARDS */}
-
-                            {
-                                data ? data.map((item, index) => {
-                                    return (
-                                        <Box>
-                                            <Box className={classes.card} >
-                                                <img className={classes.cardImage} src={item.images} alt="Robot Hand" />
-
-                                                <Box className={classes.cardTxt}>
-                                                    {
-                                                        cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
-                                                    }
-                                                    <h4 className={classes.cardHead}>{item.head}</h4>
-                                                    <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                    <a href="/#" className={classes.readMore}>{item.read}</a>
-                                                </Box>
-                                            </Box>
-                                        </Box>
-
-                                    )
-                                }) : ''
-                            }
-
-                            {
-                                squarecarddata ? squarecarddata.map((item, index) => {
-                                    return (
-                                        <Box style={{ padding:'2rem',}}>
-                                            <Box className={classes.boxes}>
-                                                <Box className={classes.imgBox}>
-                                                    <img src={item.images} alt="Mission Icon" />
-                                                </Box>
-                                                <h4>{item.subtitle} </h4>
-                                            </Box>
-                                        </Box>
-                                    )
-                                }) : ''
-                            }
-
-
-
-                        </Slider>
-                    </Box>
-                </Container>
+                </MainContainer>
             </>
         )
     }

@@ -11,9 +11,9 @@ export function AboutusTemplate() {
     return (
         <div>
             <Ubanner
-                Background=""
+                Background={"./images/luo-lei-Xa4pTwafe5U-unsplash.jpg"}
                 maintext="About us"
-                subtext="sddfsdf"
+                subtext="Technology Partner in your Business Growth Journey"
             />
 
             <Navbar />
@@ -65,6 +65,8 @@ export function AboutusTemplate() {
             <Realtime
                 data={certification}
                 title="Certifications and Policies"
+                grpicons={"./images/Screen Shot 2021-05-29 at 2.50.04 AM.jpg"}
+
             // subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
             // cases="cases"
             />

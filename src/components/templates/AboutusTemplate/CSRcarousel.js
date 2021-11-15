@@ -6,16 +6,13 @@ import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
-import { GeneralHeading } from '../../atoms'
+import { GeneralHeading, MainContainer } from '../../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         marginTop: '10%',
-        width: '70%',
-        [theme.breakpoints.down('sm')]: {
-            width: '90%'
-        },
+       
     },
     head: {
         color: 'black'
@@ -136,55 +133,57 @@ export function CSRcarousel({
 
     return (
         <>
-            <Container fixed className={classes.mainContainer}>
+            <MainContainer>
+                <Container fixed className={classes.mainContainer}>
 
-                <GeneralHeading
-                    title="CSR"
-                    subtitle="How we are helping the world be a better place"
-                    redline="redline"
-                />
+                    <GeneralHeading
+                        title="CSR"
+                        subtitle="How we are helping the world be a better place"
+                        redline="redline"
+                    />
 
-                <Box className={classes.flicks}>
-                    <Flicking
-                        selector="center"
-                        // plugins={Fades}
-                        plugins={Paginations}
-                        // align="center"
-                        defaultIndex='1'
-                        circular={true}
+                    <Box className={classes.flicks}>
+                        <Flicking
+                            selector="center"
+                            // plugins={Fades}
+                            plugins={Paginations}
+                            // align="center"
+                            defaultIndex='1'
+                            circular={true}
 
-                    >
+                        >
 
-                        {
-                            data.map((item, index) => {
-                                return (
+                            {
+                                data.map((item, index) => {
+                                    return (
 
-                                    <Box className={classes.BoxWidth}>
-                                        <Box className={classes.iconBox}>
-                                            <img className={classes.icon} src={'./images/Layer 2.svg'} />
+                                        <Box className={classes.BoxWidth}>
+                                            <Box className={classes.iconBox}>
+                                                <img className={classes.icon} src={'./images/Layer 2.svg'} />
+                                            </Box>
+
+                                            <Box className={classes.blueBox}>
+                                                <h6 className={classes.blueBoxPara}>{item.para}</h6>
+                                                <Button variant='outlined' className={classes.btn}>Read More</Button>
+                                            </Box>
+
+                                            <Box className={classes.imageBox}>
+                                                <img className={classes.image}
+                                                    src={item.images}
+                                                    alt="Carousel Images" data-aos="fade-up" />
+                                            </Box>
                                         </Box>
+                                    )
+                                })
+                            }
+                            <ViewportSlot >
+                                <span className="flicking-pagination "></span>
+                            </ViewportSlot>
+                        </Flicking>
+                    </Box>
 
-                                        <Box className={classes.blueBox}>
-                                            <h6 className={classes.blueBoxPara}>{item.para}</h6>
-                                            <Button variant='outlined' className={classes.btn}>Read More</Button>
-                                        </Box>
-
-                                        <Box className={classes.imageBox}>
-                                            <img className={classes.image}
-                                                src={item.images}
-                                                alt="Carousel Images" data-aos="fade-up" />
-                                        </Box>
-                                    </Box>
-                                )
-                            })
-                        }
-                        <ViewportSlot >
-                            <span className="flicking-pagination "></span>
-                        </ViewportSlot>
-                    </Flicking>
-                </Box>
-
-            </Container>
+                </Container>
+            </MainContainer>
         </>
     )
 }

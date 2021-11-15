@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
 
-import { ParagraphsBlue } from '../../atoms'
+import { MainContainer, ParagraphsBlue } from '../../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '10% 0%',
         borderRadius: '0rem 5rem 0rem 5rem',
         [theme.breakpoints.down('sm')]: {
-            height: 'fit-content'
+            paddingBottom:'60%',
         }
     },
     container: {
@@ -32,12 +32,12 @@ const useStyles = makeStyles((theme) => ({
     },
     rightBox: {
         position: 'absolute',
-        maxWidth: '50%',
+        width: '50%',
         maxHeight: '100%',
         right: '-5%',
         bottom: '-10%',
         [theme.breakpoints.down('sm')]: {
-            position: 'static',
+            // position: 'static',
             width: '80%',
             margin: '5% auto'
         }
@@ -52,25 +52,27 @@ const useStyles = makeStyles((theme) => ({
 export function ChargingMangement() {
     const classes = useStyles()
     return (
-        <Box style={{height:'fit-content', paddingBottom:'1%',overflow:'hidden'}}>
+        <Box style={{ height: 'fit-content', paddingBottom: '1%', overflow: 'hidden' }}>
             <Box className={classes.mainBox}>
-                <Container fixed className={classes.container}>
+                <MainContainer>
+                    <Container fixed className={classes.container}>
 
-                    <Box className={classes.leftBox} >
-                        <ParagraphsBlue
-                            maintitle="Software OFFERING"
-                            title="Charging Management Software"
-                            subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
-                            list="list"
-                            firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
-                            secli="Dynamic load management capabilities"
-                            thirdli="ROI Analytics"
-                            fourthli="Partner/Fleet management"
-                        />
-                    </Box>
+                        <Box className={classes.leftBox} >
+                            <ParagraphsBlue
+                                maintitle="Software OFFERING"
+                                title="Charging Management Software"
+                                subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
+                                list="list"
+                                firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
+                                secli="Dynamic load management capabilities"
+                                thirdli="ROI Analytics"
+                                fourthli="Partner/Fleet management"
+                            />
+                        </Box>
 
 
-                </Container>
+                    </Container>
+                </MainContainer>
                 <Box className={classes.rightBox}>
                     <img className={classes.lap} src={'./images/Image 2.png'} />
                 </Box>

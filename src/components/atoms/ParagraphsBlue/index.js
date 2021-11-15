@@ -3,7 +3,7 @@ import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
     paraBox: {
-        width: '80%',
+        width: '100%',
     },
     head: {
         marginTop:'10%'
