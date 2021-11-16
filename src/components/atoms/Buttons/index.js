@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         height: '100%',
         width: '100%',
-        background: '#354B9C',
+        background: '#182AC3',
         color: 'white',
         display:'flex', 
         font: 'normal normal normal 1rem Access',
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '4px',
         '&:hover': {
             background: 'white',
-            color: '#354B9C'
+            color: '#182AC3'
         },
     },
     arrow: {

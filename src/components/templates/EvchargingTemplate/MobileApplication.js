@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         height: '20vw',
         borderRadius: '4rem 0rem 4rem 4rem',
         position: 'relative',
-        background: '#354B9C',
+        background: '#182AC3',
         [theme.breakpoints.down('sm')]: {
             width: '60vw',
             height: '60vw',

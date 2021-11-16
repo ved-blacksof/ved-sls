@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     centerBtn: {
-        background: '#354B9C',
+        background: '#182AC3',
         border: 'none',
         borderRadius: '3px',
         color: 'white',

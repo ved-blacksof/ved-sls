@@ -4,7 +4,7 @@ import { useHistory, NavLink } from 'react-router-dom';
 import { Menu } from '@material-ui/icons'
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        background: '#354B9C',
+        // background: '#182AC3',
         // opacity:'0.75',
         display: 'flex',
         justifyContent: 'center',
@@ -58,7 +58,7 @@ export function Navbar() {
     const history = useHistory();
     return (
         <>
-            <AppBar position='relative' className={classes.mainBox}>
+            <AppBar position='relative' color='transparent' className={classes.mainBox}>
                 <Toolbar className={classes.navbar}>
                     <IconButton edge="start" color="inherit" aria-label="menu">
                         <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />

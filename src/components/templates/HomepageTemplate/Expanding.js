@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black'
     },
     blueBox: {
-        background: '#354B9C',
+        background: '#182AC3',
     },
     blueBoxContainer: {
         // width: '70%',

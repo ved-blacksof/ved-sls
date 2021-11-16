@@ -1,22 +1,25 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
-import { Overview, Ubanner, Quality, QualityReverse,Visit } from '../../molecules'
+import { GridBlue } from '../../atoms'
+import { Overview, Ubanner, Quality, QualityReverse, Visit } from '../../molecules'
 import { digital } from '../../molecules/PortfolioData'
-import {Letstalk} from './Letstalk'
+import { Letstalk } from './Letstalk'
 
 export function ContactusTemplate() {
     return (
         <>
             <Ubanner
-                Background="/images/luo-lei-Xa4pTwafe5U-unsplash-digital.png"
+                Background="/images/luo-lei-Xa4pTwafe5U-unsplash-contactus.png"
                 maintext="Contact us"
                 subtext="Ww would love to connect  with you to disscuss your ideas! Ping us anytime"
             />
 
-            <Navbar />
+            <GridBlue>
+                <Navbar />
 
 
-            <Letstalk />
+                <Letstalk />
+            </GridBlue>
 
 
             <Footer />

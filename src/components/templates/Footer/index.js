@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         margin:'0% 1%',
         [theme.breakpoints.down('sm')]: {
             marginTop: '10%',
-            width:'90%',
+            width:'85%',
             margin:'0% auto'
         }
     },
@@ -147,7 +147,7 @@ export function Footer() {
                         <li> <a className={classes.links} href="/softdev"> SOFTWARE DEVELOPMENT  </a> </li>
                         <li> <a className={classes.links}
                             onClick={() => { show === false ? setShow(true) : setShow(false) }}
-                            style={{ color: '#354B9C' }}> + VIEW MORE  </a> </li>
+                            style={{ color: '#182AC3' }}> + VIEW MORE  </a> </li>
                         {show ?
                             <>
                                 {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}

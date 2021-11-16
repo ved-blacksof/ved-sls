@@ -17,13 +17,24 @@ const useStyles = makeStyles((theme) => ({
     portSubHead: {
         color: 'black',
         width: '60%',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '70%',
         },
     },
     redLine: {
         margin: '1% 0%'
     },
+    icon:{
+        width:'10rem',
+        // height:'10',
+        "& img":{
+            width:'100%',
+            maxHeight:'100%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '40%',
+        },
+    }
 }))
 
 export function GeneralHeading({
@@ -43,7 +54,7 @@ export function GeneralHeading({
     return (
         <Box className={classes.paraBox} style={style}>
             {
-                icons ? <img className={classes.icon} src={icons} /> : ''
+                icons ? <Box className={classes.icon}> <img src={icons} /> </Box> : ''
             }
             <h3 className={classes.head}>{title}  { br ? <br /> : '' } {title1}</h3>
             {

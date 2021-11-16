@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Container } from '@material-ui/core'
 
-import { GeneralHeading, MapIcon } from '../../atoms'
+import { GeneralHeading, MainContainer, MapIcon } from '../../atoms'
 import { Visit } from '../../molecules'
 
 
@@ -10,7 +10,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '10%',
         "& h6": {
             color: 'black',
-            width: '70%'
+            width: '60%',
+            [theme.breakpoints.down('sm')]: {
+                width: '90%',
+            },
         }
     },
     yImage: {
@@ -25,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
     },
     btns: {
-        width: '20%',
+        width: '30%',
         marginTop: '3%',
         [theme.breakpoints.down('md')]: {
             width: '40%'
@@ -43,7 +46,7 @@ export function Yalgaar({
 }) {
     const classes = useStyles()
     return (
-        <>
+        <MainContainer>
             <Container fixed className={classes.mainContainer}>
 
                 <GeneralHeading
@@ -74,9 +77,9 @@ export function Yalgaar({
 
                 <Visit
                     goto="Start your journey with Yalgaar now!"
-                    title="Visit the Web" />
+                    title="Visit the Website" />
             </Container>
 
-        </>
+        </MainContainer>
     )
 }

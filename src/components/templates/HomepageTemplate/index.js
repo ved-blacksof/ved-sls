@@ -9,24 +9,25 @@ import { Portfolio } from './Portfolio'
 import { Expanding } from './Expanding'
 import { Partners } from './Partners'
 import { port, realtime, research } from '../../molecules/PortfolioData'
+import { GridBlue } from '../../atoms'
 
 export function HomepageTemplate() {
     return (
         <Box>
             <Sbanner Background={'/images/sls-office3.1e9e26cb.png'} mouse={'./images/scroll.svg'} />
 
-            <Box style={{ background: '#354B9C',paddingBottom:'10%' }}>
+            <GridBlue>
                 <Navbar />
 
                 <TechCarousel />
 
-                <Research 
-                    title="INTEGRATION SPECIALIST ACROSS VARIOUS VERTICALS"    
+                <Research
+                    title="INTEGRATION SPECIALIST ACROSS VARIOUS VERTICALS"
                     subtitle="Assisting companies to avoid pitfalls in the product design and development phase, our experienced team at System Level Solutions uses provides innovative solutions across levels to materialize the creative perspective of a client."
                     generalheadingblue="generalheadingblue"
                     data={research}
-                    />
-            </Box>
+                />
+            </GridBlue>
 
             <Reshape />
 

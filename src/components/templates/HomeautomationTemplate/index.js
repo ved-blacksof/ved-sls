@@ -5,7 +5,8 @@ import { Navbar, Footer } from '..'
 import { Ubanner, Overview, Squareboxes1, Visit } from '../../molecules'
 import { homeproducts } from '../../molecules/PortfolioData'
 
-import {Homeapplication} from './Homeapplication'
+import { Homeapplication } from './Homeapplication'
+import { GridBlue } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -38,18 +39,20 @@ export function HomeautomationTemplate({
     return (
         <div>
             <Ubanner
-                Background="./images/nasa-Q1p7bh3SHj8-unsplash-1.png"
+                Background="./images/luo-lei-Xa4pTwafe5U-unsplash@2xx.png"
                 maintext="Home Automation"
                 subtext="Giving Life to Smart and Interative Spaces"
             />
 
-            <Navbar />
+            <GridBlue>
+                <Navbar />
 
-            <Overview
-                path="Industries / Home Automation"
-                sub1="SLS has always been at the forefront in leveraging new technologies to design innovative products. Utilizing AI and IoT in Space Automation is 
-                our new focus area. We offer a range of smart, interactive, and easy-to-use space automation products that are redefining how users interect with their surroundings."
-            />
+                <Overview
+                    path="Industries / Home Automation"
+                    sub1="SLS has always been at the forefront in leveraging new technologies to design innovative products. Utilizing AI and IoT in Space Automation is 
+                    our new focus area. We offer a range of smart, interactive, and easy-to-use space automation products that are redefining how users interect with their surroundings."
+                />
+            </GridBlue>
 
 
             <Squareboxes1
@@ -57,9 +60,9 @@ export function HomeautomationTemplate({
                 data={homeproducts}
             />
 
-            <Homeapplication 
-                    
-                />
+            <Homeapplication
+
+            />
 
             <Visit
                 goto="Get to know us better."

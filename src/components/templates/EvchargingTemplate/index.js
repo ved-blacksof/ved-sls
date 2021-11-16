@@ -5,6 +5,7 @@ import { ChargingMangement } from './ChargingMangement'
 import { MobileApplication } from './MobileApplication'
 
 import { evchargers, evcharger3 } from '../../molecules/PortfolioData'
+import { GridBlue } from '../../atoms'
 
 
 
@@ -18,16 +19,18 @@ export function EvchargingTemplate() {
             />
 
 
-            <Navbar />
+            <GridBlue>
+                <Navbar />
 
-            <Overview
-                title="OVERVIEW"
-                path="Industries / EV Charging Infrastructure"
-                sub1="Paving a way for an EV-First universe, SLS has been an enabler in setting the 
-                ucritical EV Charging Infrastructure in India and across the world. We offer indigenously 
-                manufactured OCPP-Compliant EV Chargers with state-of-the-art hardware and software powered with IoT. 
-                Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kw- 7.4kW."
-            />
+                <Overview
+                    title="OVERVIEW"
+                    path="Industries / EV Charging Infrastructure"
+                    sub1="Paving a way for an EV-First universe, SLS has been an enabler in setting the 
+                    ucritical EV Charging Infrastructure in India and across the world. We offer indigenously 
+                    manufactured OCPP-Compliant EV Chargers with state-of-the-art hardware and software powered with IoT. 
+                    Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kw- 7.4kW."
+                />
+            </GridBlue>
 
 
             <Realtime
@@ -43,7 +46,6 @@ export function EvchargingTemplate() {
                 subtitle="We offer a range od EV AC charging controllers integrated with energy mangement, remote access, and OCPP connectivity."
                 redline="redline"
             />
-
 
             <ChargingMangement />
 

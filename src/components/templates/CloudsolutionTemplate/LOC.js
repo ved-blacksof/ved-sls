@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Container, Button, Box, Grid } from '@material-ui/core'
 
-import { GeneralHeading,MapIcon1 } from '../../atoms'
+import { GeneralHeading, MainContainer, MapIcon1 } from '../../atoms'
 import { loc } from '../../molecules/PortfolioData'
 import { Visit } from '../../molecules'
 
@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
         margin: '15% auto'
     },
     rightBox: {
+        [theme.breakpoints.down('sm')]:{
+            marginTop:'5%'
+        },
         "& img": {
             width: '100%'
         }
@@ -24,28 +27,30 @@ export function LOC({
     const classes = useStyles()
     return (
         <>
-            <Container fixed  className={classes.locContainer}>
-                <Grid container >
-                    <Grid xs={12} sm={6} className={classes.leftBox}>
-                        <GeneralHeading
-                            title="LOCCARTO"
-                            subtitle="Keep a close tab on what matters to you with GPS-free Geolocation Tracking"
-                            subtitle1="Loccarto is an RF Independent Geolocation Tracking solution that offers GPS-free
-                             tracking capabilities across IoT and a wide spectrum of applications. Reinvent asset tracking,
-                            smart industry application, and much more with this business-first cloud offering."
-                            redline='redline'
-                        />
-                        <MapIcon1 data={loc}/>
+            <MainContainer>
+                <Container fixed className={classes.locContainer}>
+                    <Grid container >
+                        <Grid xs={12} sm={6} className={classes.leftBox}>
+                            <GeneralHeading
+                                icons={"./images/Layer_x0020_1 (1).svg"}
+                                subtitle="Keep a close tab on what matters to you with GPS-free Geolocation Tracking"
+                                subtitle1="Loccarto is an RF Independent Geolocation Tracking solution that offers GPS-free
+                                tracking capabilities across IoT and a wide spectrum of applications. Reinvent asset tracking,
+                                smart industry application, and much more with this business-first cloud offering."
+                                redline='redline'
+                            />
+                            <MapIcon1 data={loc} />
+                        </Grid>
+                        <Grid xs={12} sm={6} className={classes.rightBox}>
+                            <img src={'./images/Mask Group 2.png'} />
+                        </Grid>
                     </Grid>
-                    <Grid xs={12} sm={6} className={classes.rightBox}>
-                        <img src={'./images/Mask Group 2.png'} />
-                    </Grid>
-                </Grid>
-                <Visit 
-                    goto="Want to know more about Loccarto?"
-                    title="Visit the Web"/>
+                    <Visit
+                        goto="Want to know more about Loccarto?"
+                        title="Visit the Web" />
 
-            </Container>
+                </Container>
+            </MainContainer>
         </>
     )
 }

@@ -57,7 +57,7 @@ export function Ourdesignprocess({
                                     background: 'white', color: 'black', boxShadow: '0px 0px 5px grey',
                                 }}
                                 iconStyle={{
-                                    background: '#354B9C', border: 'none', color: 'white', textAlign: 'center',cursor:'pointer'
+                                    background: '#182AC3', border: 'none', color: 'white', textAlign: 'center',cursor:'pointer'
                                 }}
                                 icon={<span className={classes.icon}>{item.count}</span>}
                             // date="2011 - present"

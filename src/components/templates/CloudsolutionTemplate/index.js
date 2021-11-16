@@ -4,9 +4,10 @@ import { Ubanner, Overview } from '../../molecules'
 import { Yalgaar } from './Yalgaar'
 import { yalgar, loc } from '../../molecules/PortfolioData'
 import { LOC } from './LOC'
+import { GridBlue } from '../../atoms'
 
 
-export  function CloudsolutionTemplate() {
+export function CloudsolutionTemplate() {
     return (
         <>
             <Ubanner
@@ -15,22 +16,24 @@ export  function CloudsolutionTemplate() {
                 subtext="Accelerate your Business Growth with our Saas-based Cloud Solutions"
             />
 
-            <Navbar/>
+            <GridBlue>
+                <Navbar />
 
-            <Overview
-                title="OVERVIEW"
-                path="Industries / Cloud Solutions"
-                sub1="Spearheading innovation in the cloud ecosystem, SLS provides a range of business-agnostic 
-                cloud-based products and services for agile and smart businesses of tomorrow. 
-                Reinvent how you expand your business reach with our electrifying cloud products and services."
-            />
+                <Overview
+                    title="OVERVIEW"
+                    path="Industries / Cloud Solutions"
+                    sub1="Spearheading innovation in the cloud ecosystem, SLS provides a range of business-agnostic 
+                    cloud-based products and services for agile and smart businesses of tomorrow. 
+                    Reinvent how you expand your business reach with our electrifying cloud products and services."
+                />
+            </GridBlue>
 
-            
-            <Yalgaar data={yalgar}/>  
 
-            <LOC data={loc}/>
+            <Yalgaar data={yalgar} />
 
-            <Footer/>
+            <LOC data={loc} />
+
+            <Footer />
         </>
     )
 }

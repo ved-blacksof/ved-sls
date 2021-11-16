@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         width: '17rem',
         height: '15rem',
-        background: '#354B9C',
+        background: '#182AC3',
         padding: '3%',
         top: '20%',
         left: '8%',

@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     subText: {
         color: 'black',
         marginTop: '8%',
+        width:'80%',
+        fontSize:'1.2rem',
+        fontWeight:'bold'
     },
 }))
 
@@ -37,7 +40,7 @@ export function MapIcon1({
                                         <img className={classes.icons} src={item.images} alt='Portfolio Icons' />
                                     </Box>
 
-                                    <h6 className={classes.subText}>{item.text}</h6>
+                                    <h4 className={classes.subText}>{item.text}</h4>
                                 </Box>
                             </Grid>
                         )

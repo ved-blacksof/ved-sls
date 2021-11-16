@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
             padding: '1% 2%',
             position: 'absolute',
             lineHeight: '1',
-            background: '#354B9C',
+            background: '#182AC3',
             zIndex:'1',
             [theme.breakpoints.down('sm')]:{
                 width:'38%'

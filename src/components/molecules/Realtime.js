@@ -39,12 +39,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        border: '2px solid #354B9C',
+        border: '2px solid #182AC3',
         borderRadius: '0px',
         marginTop: '10%',
         color: '#354B9C',
         "&:hover": {
-            background: '#354B9C',
+            background: '#182AC3',
             color: 'white'
         }
     },
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
     },
     smallBtn: {
         font: 'normal normal normal .5rem Access',
-        background: '#354B9C',
+        background: '#182AC3',
         border: 'none',
         color: 'white',
         padding: '1% 2%',

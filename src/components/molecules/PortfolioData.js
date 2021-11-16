@@ -462,47 +462,42 @@ export const solarsoftware = [
 
 export const gaminghardware = [
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/iot_bg_cloud4.png',
         productname: 'Smart Targets',
         para: 'Smart Targets are IoTargeting App controlled reactive targets powered with advanced wireless technology for a real-time practice and gaming experience. Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
-
+        read:'read'
     },
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/iot_bg_just_target.png',
         productname: 'Just Targets',
         para: 'Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. Leveraging reactive touch technology, Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.',
-
+        read:'read'
     },
-    {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
-        productname: 'MSI1500',
-        para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
 
-    },
 ]
 export const gamingsoftware = [
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         productname: 'IoTargeting Mobile App',
         para: 'The IoTargeting Mobile App is an exclusively designed Android and iOS app that takes the IoTargeting gaming experience to the next level. The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.',
-
+        read:'read'
     },
 ]
 
 
 export const gamingapplications = [
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
-        productname: 'Gaming',
+        images: './images/iot_photostrip_img_4.png',
+        productname: 'Gaming',  
 
     },
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/iot_photostrip_img_5.png',
         productname: 'Sports Training and Activites',
 
     },
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/army-soldiers-fighting-with-guns-defending-their-country_1303-26687.png',
         productname: 'Military Training',
 
     },

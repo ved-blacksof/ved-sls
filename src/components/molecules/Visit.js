@@ -11,16 +11,13 @@ const useStyles = makeStyles((theme) => ({
         margin: "5% auto"
     },
     btmText: {
-        color: '#354B9C',
+        color: '#182AC3',   
         textAlign: 'center',
         fontWeight:'bold',
     },
     btns: {
-        width: '15%',
+        width: '25%',
         marginTop:'2%',
-        [theme.breakpoints.down('md')]: {
-            width: '40%'
-        },
         [theme.breakpoints.down('xs')]: {
             width: '60%'
         },

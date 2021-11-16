@@ -5,6 +5,7 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
+import { MainContainer } from '../atoms';
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -18,29 +19,29 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         width: '100%',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         flexWrap: 'wrap',
-        margin:'0% 5%',
-        [theme.breakpoints.down('xs')]:{
-            justifyContent:'space-around',
-            margin:'0% 0%'
+        margin: '0% 5%',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'center',
+            margin: '0% 0%'
         }
-        
+
     },
     boxes: {
-        background:'white',
-        width: '30%',
+        background: 'white',
+        width: '25%',
         height: 'fit-content',
         boxShadow: '0px 0px 1.8rem grey',
-        borderBottom:'4px solid #354B9C',
+        borderBottom: '4px solid #182AC3',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-start',
         flexDirection: 'column',
         flexWrap: 'wrap',
-        marginTop: '5%',
-        [theme.breakpoints.down('xs')]: {
-            // width: '70%'
+        margin: '5% 2.5%',
+        [theme.breakpoints.down('sm')]: {
+            width: '70%'
         },
         '& h4': {
             color: 'black'
@@ -54,8 +55,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        height:'12rem',
+        // height:'12rem',
         background: 'white',
+        "& img": {
+            maxWidth: '100%',
+            height: '100%'
+        }
     },
     head: {
         color: 'black'
@@ -70,10 +75,10 @@ const useStyles = makeStyles((theme) => ({
     redLine: {
         margin: '1% 0%'
     },
-    textBox:{
-        padding:'1rem',
-        [theme.breakpoints.down('sm')]:{
-            padding:'1rem'
+    textBox: {
+        padding: '1rem',
+        [theme.breakpoints.down('sm')]: {
+            padding: '1rem'
         }
     },
     productName: {
@@ -91,10 +96,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     readMore: {
-        font: 'normal normal normal 1.4rem BebasNeue',
-        color: '#003189',
-        marginTop:'1rem',
+        marginTop: '2rem',
         textAlign: 'left',
+        marginTop: '10px',
+        "& a": {
+            font: 'normal normal normal 1.4rem BebasNeue',
+            color: '#182AC3',
+        }
     }
 }))
 
@@ -111,41 +119,43 @@ export function Cards({
 
     return (
 
-        <Container fixed className={classes.container1}>
-            <Box className={classes.paraBox}>
-                <h2 style={{ color: 'black' }}>{maintitle}</h2>
-                <h3 className={classes.head}>{title}</h3>
-                {
-                    redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
-                }
-                <h4 className={classes.portSubHead}>{subtitle}</h4>
-            </Box>
+        <MainContainer>
+            <Container fixed className={classes.container1}>
+                <Box className={classes.paraBox}>
+                    <h2 style={{ color: 'black' }}>{maintitle}</h2>
+                    <h3 className={classes.head}>{title}</h3>
+                    {
+                        redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
+                    }
+                    <h4 className={classes.portSubHead}>{subtitle}</h4>
+                </Box>
 
 
-            <Box className={classes.mainBox}>
+                <Box className={classes.mainBox}>
 
-                {
-                    data.map((item, index) => {
-                        return (
-                            <Box className={classes.boxes}>
-                                <Box className={classes.imgBox}>
-                                    <img src={item.images} alt="Product images" />
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <Box className={classes.boxes}>
+                                    <Box className={classes.imgBox}>
+                                        <img src={item.images} alt="Product images" />
+                                    </Box>
+
+                                    <Box className={classes.textBox}>
+                                        <h4 className={classes.productName} >{item.productname}</h4>
+                                        <h6 className={classes.productDetail} style={{ color: 'black', textAlign: 'left', }}>{item.para}</h6>
+                                        {
+                                            item.read ? <p className={classes.readMore}><a href="/" >READ MORE</a></p> : ''
+                                        }
+                                    </Box>
                                 </Box>
+                            )
+                        })
+                    }
 
-                                <Box className={classes.textBox}>
-                                    <h4 className={classes.productName} >{item.productname}</h4>
-                                    <h6 className={classes.productDetail} style={{ color: 'black', textAlign: 'left', }}>{item.para}</h6>
-                                    {
-                                        read ? <a href="/" className={classes.readMore}>READ MORE</a> : ''
-                                    }
-                                </Box>
-                            </Box>
-                        )
-                    })
-                }
-
-            </Box>
-        </Container>
+                </Box>
+            </Container>
+        </MainContainer>
 
     )
 }
