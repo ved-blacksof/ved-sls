@@ -3,7 +3,8 @@ import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
 import { Ubanner, Overview, Squareboxes, Realtime, Visit } from '../../molecules'
-import { middleware ,evcharger3} from '../../molecules/PortfolioData'
+import { middleware, evcharger3 } from '../../molecules/PortfolioData'
+import { GridBlue } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     list: {
@@ -41,36 +42,38 @@ export function IOTplatformTemplate({
                 subtext="Redefining Interperability With our end-to-end IoT Development Platform"
             />
 
-            <Navbar />
+            <GridBlue>
+                <Navbar />
 
-            <Overview
-                title="OVERVIEW"
-                path="Industries / IoT Platform"
-                sub1="SLS offers a heterogeneous and end-to-end IoT platform that integrates all IoT verticals under a common shed. 
-                We offer building blocks for IoT solutions and help businesses build world-class products and services in the automation
-                 industry. We also provide multiprotocol support for services including G3PLC, WiFi, BLE, Sigfox, LoRa, GSM, etc.,
-                 which makes our solution the preferred choice for industry leaders."
-                list="list"
-                li1="Ready to use device SDKs for faster time-to-market"
-                li2="Secured cloud platforms for Data Analytics and real-time Monitoring"
-                li3="Scalability purpose-built for smart and widespread business applications"
-                
-            />
+                <Overview
+                    title="OVERVIEW"
+                    path="Industries / IoT Platform"
+                    sub1="SLS offers a heterogeneous and end-to-end IoT platform that integrates all IoT verticals under a common shed. 
+                            We offer building blocks for IoT solutions and help businesses build world-class products and services in the automation
+                            industry. We also provide multiprotocol support for services including G3PLC, WiFi, BLE, Sigfox, LoRa, GSM, etc.,
+                            which makes our solution the preferred choice for industry leaders."
+                    list="list"
+                    li1="Ready to use device SDKs for faster time-to-market"
+                    li2="Secured cloud platforms for Data Analytics and real-time Monitoring"
+                    li3="Scalability purpose-built for smart and widespread business applications"
+
+                />
+            </GridBlue>
 
 
             <Squareboxes
                 title="HARDWARE OFFERINGs"
-                data={evcharger3}   
+                data={evcharger3}
             />
 
             <Realtime
                 squarecarddata={middleware}
                 title="Software Offerings"
-                // subtitle="EV Chargers"
-                // subtitle1="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
+            // subtitle="EV Chargers"
+            // subtitle1="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
             />
 
-            <Visit 
+            <Visit
                 goto="Get to know us better."
                 title="Visit the web"
             />

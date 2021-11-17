@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'flex-start',
         zIndex: '1',
         [theme.breakpoints.down('sm')]:{
-            justifyContent:'center'
+            justifyContent:'center',
+            paddingRight:'0%',
         }
     },
     imageBox: {
@@ -17,10 +18,13 @@ const useStyles = makeStyles((theme) => ({
         position:'relative ',
         background:'white' ,
         borderRadius:'1rem',
+        marginLeft:'5%',
         boxShadow:'0px 0px 2px grey',
         [theme.breakpoints.down('sm')]:{
-            width:'80%',
-            justifyContent:'center'
+            width:'90%',
+            justifyContent:'center',
+            marginLeft: '0%',
+
         }
     },
     image:{

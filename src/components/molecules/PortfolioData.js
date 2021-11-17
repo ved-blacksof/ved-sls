@@ -387,7 +387,7 @@ export const smarttraffic = [
 //White icons only 4 for SolarTemplate
 export const solar = [
     {
-        images: './images/BlueIcons -20-01-1-white (1).svg',
+        images: './images/Layer_33.png',
         text: 'End-to-end Solar and Wind Solutions'
     },
     {
@@ -506,27 +506,27 @@ export const gamingapplications = [
 
 export const expertise = [
     {
-        icon:'./images/BlueIcons -20-01.svg',
+        icon:'./images/Group 82620.svg',
         h4:'Deep Learning',
         h6:'Boost the performance of your forecasting, decision-making, and other operations with Deep Learning technology. We offer customized products and services using this more sophisticated, advanced and automated version of Machine Learning to help you attain business success and launch class-apart products.'
     },
     {
-        icon:'./images/BlueIcons -20-01.svg',
+        icon:'./images/AI.svg',
         h4:'AI-Based Solutions',
         h6:'We offer innovative and cutting-edge AI-based products and services that help solve your biggest business challenges through intelligent decision-making. Reinvent how you work at lower costs and minimize errors with our wide spectrum of solutions.'
     },
     {
-        icon:'./images/BlueIcons -20-01.svg',
+        icon:'./images/Layer_7.svg',
         h4:'Natural Language Processing',
         h6:'We have precedented expertise in providing Natural Language Processing Services leveraging our best-in-class AI tools. Our team of NLP Experts help you extract, process, analyse, and understand structured data to fetch insights that matter.'
     },
     {
-        icon:'./images/BlueIcons -20-01.svg',
+        icon:'./images/Group 82615.svg',
         h4:'Internet of Things',
         h6:'Our Internet of Things expertise helps businesses set up central data repository to house real-time sensor data and leverage data science for predictive maintenance of your remote assets helping you reduce downtime and boost service quality.'
     },
     {
-        icon:'./images/BlueIcons -20-01.svg',
+        icon:'./images/Group 82617.svg',
         h4:'Machine Learning',
         h6:'We leverage ML to build powerful solutions that automate your processes, reducing human intervention and pacing up operational efficiency. Our custom solutions are designed with a business-first approach to solve your challenges and bring about transformation at the system level.'
     },
@@ -713,6 +713,14 @@ export const homeproducts=[
 
 
 export const homeapp=[
+    {
+        images:'./images/Konnsys-Deck-home.png',
+        text:'Home'
+    },
+    {
+        images:'./images/Konnsys-Deck-home.png',
+        text:'Home'
+    },
     {
         images:'./images/Konnsys-Deck-home.png',
         text:'Home'

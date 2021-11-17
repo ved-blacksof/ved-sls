@@ -3,7 +3,7 @@ import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
     paraBox: {
-        width: '100%',
+        width: '80%',
         height:'100%',
         display:'flex',
         justifyContent:'center',
@@ -63,7 +63,7 @@ export function Paragraphs({
 
 
                 {
-                    list ?
+                    firstli ?
                         <ul className={classes.uls}>{uli}
                            {
                                firstli ?  <li className={classes.lis}>{firstli}</li> : ''

@@ -22,8 +22,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         flexWrap: 'wrap',
-        [theme.breakpoints.down('sm')]:{
-            border:'2px solid red',
+        [theme.breakpoints.down('sm')]: {
             alignItems: 'center',
         },
     },
@@ -41,10 +40,12 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
         padding: "1rem",
-        margin: '1.5rem',
-        [theme.breakpoints.down('sm')]:{
+        margin: '1.5rem 1rem',
+        [theme.breakpoints.down('sm')]: {
             width: '35vw',
             height: '35vw',
+            margin: '5% 0%',
+            padding: "1%",
         },
         '& img': {
             width: '100%',
@@ -56,14 +57,17 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     subTitle: {
-        color: '#354B9C',
-        font: 'normal normal bold 1.2rem Access'
+        color: '#182AC3',
+        font: 'normal normal bold 1.2rem Access',
+        [theme.breakpoints.down('sm')]: {
+           fontSize:'1rem'
+        },
     },
     reddiv: {
         width: '100%',
         height: '5px',
         background: '#D9393E',
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('sm')]: {
             height: '2px',
         },
     }

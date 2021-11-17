@@ -7,34 +7,30 @@ import {
 } from '@material-ui/core';
 import { Research } from '../../molecules'
 import { homeapp } from '../../molecules/PortfolioData'
+import { MainContainer } from '../../atoms';
 
 
 
 const useStyles = makeStyles((theme) => ({
     whiteBox: {
-        marginTop: '20%',
-        padding:'30% 0%',
+        marginTop: '10%',
+        paddingBottom: '20%',
         [theme.breakpoints.down('sm')]: {
-            height: '20vh'
+            // height: '20vh'
         }
-    },
-    expand: {
-        color: 'black'
     },
     blueBox: {
         position: 'relative',
-        background: '#003189',
-        padding:'18% 0%',
-        display:'flex',
-        justifyContent:'center',
+        background: '#182AC3',
+        padding: '15% 0%',
         [theme.breakpoints.down('sm')]: {
-            padding:'20% 0%'
+            padding: '20% 0%'
         },
     },
     carouselPos: {
-        width:'100%',
+        width: '100%',
         position: 'absolute',
-        bottom: '40%',
+        top: '-50%',
     }
 }))
 
@@ -43,17 +39,27 @@ export function Homeapplication() {
 
     return (
         <>
-            <Container fixed className={classes.whiteBox}>
-                <h2 style={{ color: 'black', textAlign: 'center' }}>Application</h2>
-            </Container>
+            <MainContainer>
+                <Container fixed className={classes.whiteBox}>
+                    <h2 style={{ color: 'black', textAlign: 'center' }}>Applications</h2>
+                </Container>
+            </MainContainer>
+            {/* <Box className={classes.carouselPos}>
+                <Research
+                    data={homeapp}
+                    text="HOME"
+
+                />
+            </Box> */}
             <Box className={classes.blueBox}>
-                <Container fixed className={classes.carouselPos}>
+
+                <Box className={classes.carouselPos}>
                     <Research
                         data={homeapp}
                         text="HOME"
-                    // className={classes.}
+
                     />
-                </Container>
+                </Box>
             </Box>
         </>
     )

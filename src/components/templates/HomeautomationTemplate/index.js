@@ -60,9 +60,7 @@ export function HomeautomationTemplate({
                 data={homeproducts}
             />
 
-            <Homeapplication
-
-            />
+            <Homeapplication/>
 
             <Visit
                 goto="Get to know us better."

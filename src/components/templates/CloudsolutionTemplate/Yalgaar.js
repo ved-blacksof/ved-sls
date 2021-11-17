@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '3% auto'
     },
     btmText: {
-        color: '#354B9C',
+        color: '#182AC3',
         textAlign: 'center',
         marginTop: '5%',
         fontWeight: 'bold',

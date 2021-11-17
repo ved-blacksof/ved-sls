@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign:'center',
         color: 'white',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '4rem'
+            fontSize: '3rem'
         },
     },
     redLine: {

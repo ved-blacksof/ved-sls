@@ -118,7 +118,7 @@ export function Footer() {
                         <li> <a className={classes.links} href="/"> E-MOBILITY </a> </li>
                         <li> <a className={classes.links}
                             onClick={() => show1 === false ? setShow1(true) : setShow1(false)}
-                            style={{ color: '#354B9C' }}> + VIEW MORE  </a> </li>
+                            style={{ color: '#182AC3' }}> + VIEW MORE  </a> </li>
 
 
                         {show1 ?

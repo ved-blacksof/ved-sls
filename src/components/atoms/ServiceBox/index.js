@@ -7,11 +7,12 @@ const useStyles = makeStyles((theme) => ({
         width: '18rem',
         height: '18rem',
         padding: '10%',
-        margin:'20px 0px',
+        margin: '20px 0px',
         border: '1px solid #DCDCDC',
         boxShadow: '0px 3px 10px #00000017',
         '& h4': {
-            paddingTop: '4%'
+            paddingTop: '4%',
+            fontWeight:'600'
         },
         '& h6': {
             paddingTop: '3%'
@@ -19,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     },
     images: {
         width: '40%',
+        "& img":{
+            maxWidth:'100%',
+        }
     }
 }))
 
@@ -32,12 +36,14 @@ export function ServiceBox({
     const classes = useStyles()
     return (
         <Box className={classes.boxes}>
-            <img className={classes.images} src={imgs} />
-            <h4 style={{ color: '#354B9C' }}>{title}</h4>
+            <Box className={classes.images}>
+                <img  src={imgs} />
+            </Box>
+            <h4 style={{ color: '#182AC3' }}>{title}</h4>
             <h6 style={{ color: 'black' }}>- {li1}</h6>
             <h6 style={{ color: 'black' }}>- {li2}</h6>
             {
-                li3 ?  <h6 style={{ color: 'black' }}>- {li3}</h6> : ''
+                li3 ? <h6 style={{ color: 'black' }}>- {li3}</h6> : ''
             }
         </Box>
     )

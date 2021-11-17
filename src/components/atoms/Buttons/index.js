@@ -8,23 +8,39 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         background: '#182AC3',
         color: 'white',
-        display:'flex', 
+        // display: 'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        alignSelf:'center',
         font: 'normal normal normal 1rem Access',
         border: 'none',
         padding: '.5rem 1rem',
-        textTransform:'none',
+        textTransform: 'none',
         borderRadius: '4px',
         '&:hover': {
-            background: 'white',
-            color: '#182AC3'
+            // background: 'white',
+            color: '#182AC3',
+            // border:'1px solid blue',
         },
     },
     arrow: {
-        fontSize:'1.5rem',
-        marginLeft: '3px',
+        width:'1.2rem',
+        marginLeft: '4%',
+        marginTop:'1px',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
         '&:hover': {
-            color: '#354B9C'
+            // color: '#182AC3'
         },
+        "& img":{
+            maxWidth:'100%',
+            height:'100%',
+            alignSelf:'center',
+        },
+        [theme.breakpoints.down('sm')]:{
+            width:'1rem'
+        }
     }
 }))
 
@@ -37,12 +53,15 @@ export function Buttons({
     const classes = useStyles()
     return (
         <Box className={className}>
-            <Button 
+            {/* material ui Button */}
+            <Button
                 className={classes.btn}
                 style={style}
-                >
-                    {title}
-                <img className={classes.arrow} src={arrowIcon} />
+            >
+                {title}
+                <Box className={classes.arrow}>
+                    <img src={arrowIcon} />
+                </Box>
             </Button>
         </Box>
     )

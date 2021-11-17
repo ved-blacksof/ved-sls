@@ -7,11 +7,11 @@ const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
         margin: '15% auto',
-        width:'100%'
+        width: '100%'
     },
     BoxLeft: {
         width: '50%',
-        alignSelf: 'center',    
+        alignSelf: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
         },
@@ -24,15 +24,21 @@ const useStyles = makeStyles((theme) => ({
     },
     bigHead: {
         color: 'black',
-        textAlign: 'center',    
+        textAlign: 'center',
         marginBottom: '10%',
         [theme.breakpoints.down('sm')]: {
 
         }
     },
     bigSubHead: {
+        width: '60%',
         color: 'black',
         textAlign: 'center',
+        margin: '0% auto',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+
+        }
     },
     gridContainer: {
         display: 'flex',

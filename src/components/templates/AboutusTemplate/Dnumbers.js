@@ -82,12 +82,12 @@ export function Dnumbers() {
             <Container fixed className={classes.mainContainer}>
                 <Box className={classes.container}>
                     <Box className={classes.headBox}>
-                        <h2 className={classes.head}>100+</h2>
-                        <h6 className={classes.subHead}>active projects across the globe</h6>
-                    </Box>
-                    <Box className={classes.headBox}>
                         <h2 className={classes.head}>300+</h2>
                         <h6 className={classes.subHead}>In-house Engineers</h6>
+                    </Box>
+                    <Box className={classes.headBox}>
+                        <h2 className={classes.head}>100+</h2>
+                        <h6 className={classes.subHead}>active projects across the globe</h6>
                     </Box>
                     <Box className={classes.headBox}>
                         <h2 className={classes.head}>20+</h2>

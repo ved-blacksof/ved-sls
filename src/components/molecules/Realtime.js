@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         border: '2px solid #182AC3',
         borderRadius: '0px',
         marginTop: '10%',
-        color: '#354B9C',
+        color: '#182AC3',
         "&:hover": {
             background: '#182AC3',
             color: 'white'
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         padding: '1% 2%',
         '&:hover': {
-            color: '#354B9C',
+            color: '#182AC3',
             fontWeight: 'bold'
         }
     },
@@ -95,14 +95,14 @@ const useStyles = makeStyles((theme) => ({
     },
     readMore: {
         font: 'normal normal normal 1rem BebasNeue',
-        color: '#354B9C',
+        color: '#182AC3',
         paddingTop: '1rem',
     },
     filters: {
         display: 'flex',
         margin: '0% 5%',
         "& h6": {
-            color: '#354B9C',
+            color: '#182AC3',
             fontWeight: 'bold',
             marginRight: '3%',
             cursor: 'pointer',
