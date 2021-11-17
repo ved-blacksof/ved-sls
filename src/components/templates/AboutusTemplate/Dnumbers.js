@@ -82,7 +82,7 @@ export function Dnumbers() {
             <Container fixed className={classes.mainContainer}>
                 <Box className={classes.container}>
                     <Box className={classes.headBox}>
-                        <h2 className={classes.head}>300+</h2>
+                        <h2 className={classes.head}>356+</h2>
                         <h6 className={classes.subHead}>In-house Engineers</h6>
                     </Box>
                     <Box className={classes.headBox}>
@@ -94,7 +94,7 @@ export function Dnumbers() {
                         <h6 className={classes.subHead}>years and counting</h6>
                     </Box>
                     <Box className={classes.headBox}>
-                        <h2 className={classes.head}>6+</h2>
+                        <h2 className={classes.head}>06</h2>
                         <h6 className={classes.subHead}>Business Verticals</h6>
                     </Box>
                     <Box className={classes.headBox}>
