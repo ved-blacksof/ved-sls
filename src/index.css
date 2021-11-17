@@ -8,9 +8,17 @@
   font-family: BebasNeue;
   src: url(./components/assets/fonts/Bebas/BebasNeue-Regular.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: Access;
   src: url(./components/assets/fonts/Access/Access-Regular.ttf);
+} */
+/* @font-face {
+  font-family: Access;
+  src: url(./components/assets/fonts/Acces/ACCESS-REGULAR.OTF);
+} */
+@font-face {
+  font-family: Access;
+  src: url(./components/assets/fonts/Acces/ACCESS-REGULAR.woff);
 }
 
 h1{

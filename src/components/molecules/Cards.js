@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         background: 'white',
         width: '25%',
         height: 'fit-content',
-        boxShadow: '0px 0px 1.8rem grey',
+        boxShadow: '0px 30px 50px #00000029',
         borderBottom: '4px solid #182AC3',
         display: 'flex',
         justifyContent: 'center',
@@ -96,11 +96,10 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     readMore: {
-        marginTop: '2rem',
+        marginTop: '10%',
         textAlign: 'left',
-        marginTop: '10px',
         "& a": {
-            font: 'normal normal normal 1.4rem BebasNeue',
+            font: 'normal normal normal 1.2rem BebasNeue',
             color: '#182AC3',
         }
     }

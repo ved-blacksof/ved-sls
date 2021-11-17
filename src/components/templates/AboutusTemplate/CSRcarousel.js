@@ -12,7 +12,7 @@ import { GeneralHeading, MainContainer } from '../../atoms'
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         marginTop: '10%',
-       
+
     },
     head: {
         color: 'black'
@@ -28,43 +28,67 @@ const useStyles = makeStyles((theme) => ({
         margin: '1% 0%'
     },
     flicks: {
-        width: '80%',
-        height: '60vh',
+        width: '100%',
         marginTop: '3%',
-        [theme.breakpoints.down('sm')]: {
-            height: '40vh',
-            width: '100%'
+        // [theme.breakpoints.down('sm')]: {
+        //     height: '40vh',
+        //     width: '100%'
+        // },
+        // [theme.breakpoints.down('xs')]: {
+        //     height: '30vh',
+        // },
+        "& .flicking-pagination": {
+            display: 'flex',
+            flexDirection: 'column',
+            bottom: '8%',
+            left: '11%',
+            [theme.breakpoints.down('sm')]: {
+                left: '8%',
+            },
         },
-        [theme.breakpoints.down('xs')]: {
-            height: '30vh',
+        "& .flicking-pagination-bullet": {
+            height: '1.5rem !important',
+            width: '.32rem !important',
+            margin: '.2rem .2rem !important',
+            borderRadius: '10px !important',
+            backgroundColor: 'blue !important',
+            [theme.breakpoints.down('sm')]: {
+                height: '.8rem !important',
+                width: '.2rem !important',
+            },
+        },
+        "& .flicking-pagination-bullet-active": {
+            backgroundColor: '#ff0000 !important'
         }
+
     },
     BoxWidth: {
         width: '100%',
-        height: '60vh',
-        margin: "0rem 5rem",
+        padding: '22% 0%',
+        margin: "0% 2%",
         position: 'relative',
-        [theme.breakpoints.down('sm')]: {
-            height: '40vh',
-        },
-        [theme.breakpoints.down('xs')]: {
-            height: '30vh',
-        }
+        // [theme.breakpoints.down('sm')]: {
+        //     height: '40vh',
+        // },
+        // [theme.breakpoints.down('xs')]: {
+        //     height: '30vh',
+        // }
     },
     iconBox: {
-        width: '6rem',
-        height: '5rem',
-        background: '#CA0017',
+        width: '8vw',
+        height: '7vw',
+        background: '#DE141A',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        top: '8%',
-        left: '0%',
+        top: '20%',
+        left: '5%',
         zIndex: '1',
-        [theme.breakpoints.down('xs')]: {
-            width: '4rem',
-            height: '3.5rem',
+        [theme.breakpoints.down('sm')]: {
+            // width: '4rem',
+            // height: '3.5rem',
+            // display:'none'
         }
 
     },
@@ -73,20 +97,14 @@ const useStyles = makeStyles((theme) => ({
     },
     blueBox: {
         position: 'absolute',
-        width: '17rem',
-        height: '15rem',
+        width: '23vw',
+        height: '21vw',
         background: '#182AC3',
-        padding: '3%',
-        top: '20%',
-        left: '8%',
+        padding: '5%',
+        top: '30%',
+        left: '14%',
         [theme.breakpoints.down('sm')]: {
-            width: '15rem',
-            height: '13rem',
-        },
-        [theme.breakpoints.down('xs')]: {
-            // width: '35%',
-            // height: '12rem',
-            display: 'none'
+
         },
     },
     blueBoxPara: {
@@ -98,24 +116,24 @@ const useStyles = makeStyles((theme) => ({
     },
     btn: {
         color: 'white',
-        border: '2px solid white',
-        fontSize: '.6rem',
+        border: '1px solid white',
+        fontSize: '.8rem',
         marginTop: '3%'
     },
     imageBox: {
         width: '60%',
-        height: '80%',
+        height: '100%',
         position: 'absolute',
         top: '5%',
-        left: '35%',
+        left: '40%',
         zIndex: '-1',
         [theme.breakpoints.down('xs')]: {
-            width: '80%',
-            left: '8%',
-            top: '10%'
+            // width: '80%',
+            // left: '8%',
+            // top: '10%'
         },
         '& img': {
-            maxWidth: '100%',
+            width: '100%',
             maxHeight: '100%'
         }
     },

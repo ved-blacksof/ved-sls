@@ -387,23 +387,23 @@ export const smarttraffic = [
 //White icons only 4 for SolarTemplate
 export const solar = [
     {
-        images: './images/Layer_33.png',
+        images: './images/Layer_33.svg',
         text: 'End-to-end Solar and Wind Solutions'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (2).svg',
+        images: './images/Layer_28.svg',
         text: 'Powered through IoT'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (3).svg',
+        images: './images/BlueIcons -20-01-solar.svg',
         text: 'Real-time alerts on detection'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/Layer_41.svg',
         text: 'Real-time reports of panel-wise energy generation'
     },
     {
-        images: './images/BlueIcons -20-01-1-white (4).svg',
+        images: './images/Layer_44.svg',
         text: 'Predictive energy optimization'
     },
 ]
@@ -414,21 +414,23 @@ export const solar = [
 // Components = Cards.js molecule, 
 export const solarhardware = [
     {
-        images: './images/lite.png',
+        images: './images/Micro Inverter 2 (1).png',
         productname: 'MSI1500',
         para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
+        read:'read'
+    },
+    {
+        images: './images/DKS_9053e.png',
+        productname: 'MSI1500',
+        para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
+        read:'read'
 
     },
     {
-        images: './images/ocpp-controller_350x350.png',
+        images: './images/1.0-solar.png',
         productname: 'MSI1500',
         para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
-
-    },
-    {
-        images: './images/1.0.png',
-        productname: 'MSI1500',
-        para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
+        read:'read'
 
     },
 ]
@@ -438,9 +440,10 @@ export const solarhardware = [
 // Components = Cards.js molecule, 
 export const solarsoftware = [
     {
-        images: './images/lite.png',
+        images: './images/SunSight_Live_final_new_kept-on-website-page-.png',
         productname: 'SunSights Live',
         para: 'SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more.',
+        read:'read'
 
     },
     // {

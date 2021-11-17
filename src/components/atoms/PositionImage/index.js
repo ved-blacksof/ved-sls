@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         background:'white' ,
         borderRadius:'1rem',
         marginLeft:'5%',
-        boxShadow:'0px 0px 2px grey',
+        boxShadow:'0px 0px 5px #0000001A',
         [theme.breakpoints.down('sm')]:{
             width:'90%',
             justifyContent:'center',

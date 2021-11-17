@@ -20,8 +20,6 @@ const useStyles = makeStyles((theme) => ({
     reaserchMain: {
         marginTop: "10%",
         position: 'relative',
-        
-
     },
     flicks: {
         // width: '90%',

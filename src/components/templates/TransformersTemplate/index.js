@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
+import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
 import { transformer } from '../../molecules/PortfolioData'
 import { Application } from './Application'
@@ -13,18 +14,20 @@ export function TransformersTemplate() {
                 subtext="Helping Discoms smartly monitor and manage their transformers"
             />
 
-            <Navbar />
+            <GridBlue>
+                <Navbar />
 
-            <Overview
-                path="Industries / Intelligent Transformer Monitoring"
-                sub1="SLS’s Intelligent Transformer Monitoring System is an end-to-end solution that helps companies remotely control and monitor individual transformers. We provide the necessary hardware infrastructure to monitor power transformers at power plants and distribution transformers for local power distribution. The monitoring software optimizes loading and maximizes asset life through features like data logging, event recording, and dynamic loading analysis, etc."
-                data={transformer}
-                icons="icons"
-                style={{ height: 'fit-content', paddingBottom: '10%' }}
-            />
+                <Overview
+                    path="Industries / Intelligent Transformer Monitoring"
+                    sub1="SLS’s Intelligent Transformer Monitoring System is an end-to-end solution that helps companies remotely control and monitor individual transformers. We provide the necessary hardware infrastructure to monitor power transformers at power plants and distribution transformers for local power distribution. The monitoring software optimizes loading and maximizes asset life through features like data logging, event recording, and dynamic loading analysis, etc."
+                    data={transformer}
+                    icons="icons"
+                    style={{ height: 'fit-content', paddingBottom: '10%' }}
+                />
+            </GridBlue>
 
             <Application
-            
+
             />
 
 

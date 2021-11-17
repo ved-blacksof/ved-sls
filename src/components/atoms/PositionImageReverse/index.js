@@ -14,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
     },
     imageBox: {
         width: '70%',
-        position: 'relative ',
+        position: 'relative',
         background: 'white',
         marginLeft: '5%',
-        borderRadius: '1rem',
-        boxShadow: '0px 0px 2px grey',
+        borderRadius: '1rem', 
+        boxShadow:'0px 0px 5px #0000001A',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
             justifyContent: 'center',
