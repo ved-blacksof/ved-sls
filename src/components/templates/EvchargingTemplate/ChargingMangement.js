@@ -7,7 +7,7 @@ import { GridBlue, MainContainer, ParagraphsBlue } from '../../atoms'
 const useStyles = makeStyles((theme) => ({
     mainBox: {
         position: 'relative',
-        margin: '10% 0%',
+        margin: '5% 0%',
     },
     container: {
         display: 'flex',
@@ -59,7 +59,7 @@ export function ChargingMangement() {
                                             maintitle="Software OFFERING"
                                             title="Charging Management Software"
                                             subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
-                                            list="list"
+                                            list
                                             firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
                                             secli="Dynamic load management capabilities"
                                             thirdli="ROI Analytics"

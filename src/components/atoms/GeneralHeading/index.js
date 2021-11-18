@@ -3,8 +3,8 @@ import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
     paraBox: {
-        [theme.breakpoints.down('xs')]: {
-            width: '80%'
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
         }
     },
     head: {
@@ -18,20 +18,19 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         width: '60%',
         [theme.breakpoints.down('sm')]: {
-            width: '70%',
+            width: '100%',
         },
     },
     redLine: {
-        margin: '1% 0%'
+        margin: '2% 0%'
     },
     icon:{
         width:'10rem',
-        // height:'10',
         "& img":{
             width:'100%',
-            maxHeight:'100%'
+            maxHeight:'100%',
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '40%',
         },
     }

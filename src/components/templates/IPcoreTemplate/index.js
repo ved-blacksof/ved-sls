@@ -51,7 +51,7 @@ export function IPcoreTemplate() {
 
             <Visit
                 goto="Know more about our solution for Railways."
-                title="Visit the web"
+                title="Visit the Website"
             />
 
 

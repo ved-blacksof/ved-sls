@@ -199,44 +199,36 @@ export const csrcarousel = [
 
 export const evchargers = [
     {
-        images: './images/Nebulae_Website Images-05.png',
+        images: './images/bharat_ac.png',
         subtitle: 'Bharat AC 001',
         case: '123',
     },
     {
-        images: './images/Nebulae_Website Images-06.png',
-        subtitle: 'Bharat AC 001',
+        images: './images/hybrid_ac.png',
+        subtitle: 'Hybrid AC Charger',
     },
     {
-        images: './images/Nebulae_Website Images-07.png',
-        subtitle: 'Bharat AC 001',
+        images: './images/single_gun.png',
+        subtitle: 'Type 2 AC Single Gun',
     },
     {
-        images: './images/Nebulae_Website Images-08.png',
-        subtitle: 'Bharat AC 001',
-    },
-    {
-        images: './images/Nebulae_Website Images-07.png',
-        subtitle: 'Bharat AC 001',
-    },
-    {
-        images: './images/Nebulae_Website Images-08.png',
-        subtitle: 'Bharat AC 001',
+        images: './images/dual_gun.png',
+        subtitle: 'Type 2 AC Dual Gun',
     },
 ]
 
 export const evcharger3 = [
     {
-        images: './images/Nebulae-Catalogue-(2)-(1)-8.png',
-        subtitle: 'Gateways',
+        images: './images/lite.png',
+        subtitle: 'Type 2 AC Charger Controller',
     },
     {
-        images: './images/Nebulae-Catalogue-(2)-(1)-17.png',
-        subtitle: 'Nodes',
+        images: './images/1.0.png',
+        subtitle: 'Bharat AC 001 Charger Controller',
     },
     {
-        images: './images/Nebulae-Catalogue-(2)-(1)-30.png',
-        subtitle: 'Controller',
+        images: './images/ocpp-controller_350x350.png',
+        subtitle: 'OCPP Controller',
     },
 ]
 
@@ -288,10 +280,6 @@ export const yalgar = [
     {
         images: './images/BlueIcons -20-06.svg',
         text: 'Financial Data Streaming'
-    },
-    {
-        images: './images/BlueIcons -20-10.svg',
-        text: 'Live Polling/Blogging'
     },
 ]
 

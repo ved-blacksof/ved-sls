@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
             color: 'white'
         },
         [theme.breakpoints.down('xs')]: {
-            width: '20%'
+            // width: '20%'
         },
     },
     slider: {
@@ -114,10 +114,10 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     boxes: {
-        margin: "3%",
-        width: '15rem',
-        height: '15rem',
-        boxShadow: '0px 0px 20px #0000000F',
+        margin: "1% 1rem",
+        width: '17vw',
+        height: '17vw',
+        boxShadow: '0px 0px 40px #0000001F',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
@@ -134,11 +134,11 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     imgBox: {
-        height: "80%",
+        height: "100%",
     },
     iconBox: {
-        marginTop: '10%',
-        width: '80%',
+        margin: '15% 0%',
+        width: '100%',
         '& img': {
             width: '100%',
             maxHeight: '100%',
@@ -242,9 +242,13 @@ export function Realtime({
                         <Box className={classes.sliderSec}>
 
                             <Box className={classes.box}>
+
                                 {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
-                            <img src={"./images/Group 82851.svg"} onClick={next} /> */}
-                                {/* <ArrowBackIos className={classes.btn}/> */}
+                                    <img src={"./images/Group 82851.svg"} onClick={next} /> 
+                                */}
+                                    {/* <ArrowBackIos className={classes.btn}/> */}
+
+
                                 <Box ><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Box>
                                 <Box  ><KeyboardArrowRight className={classes.btn} onClick={next} /></Box>
                             </Box>
@@ -278,7 +282,7 @@ export function Realtime({
                                 {
                                     squarecarddata ? squarecarddata.map((item, index) => {
                                         return (
-                                            <Box style={{ padding: '2rem', }}>
+                                            <Box style={{ }}>
                                                 <Box className={classes.boxes}>
                                                     <Box className={classes.imgBox}>
                                                         <img src={item.images} alt="Mission Icon" />

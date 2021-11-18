@@ -21,11 +21,14 @@ const useStyles = makeStyles((theme) => ({
         listStyle: 'inside',
         font: 'normal normal normal 1.1rem Access',
         margin: '3% 0%',
-        color:'white'
+        color:'white',
+
     },
     lis: {
-        margin: '2%',
-        color: 'white'
+        textIndent: '-25px',
+        marginLeft:'25px',
+        color: 'white',
+        margin:'1% 0%'
     }
 }))
 

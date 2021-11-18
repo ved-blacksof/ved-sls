@@ -75,7 +75,7 @@ export function IOTplatformTemplate({
 
             <Visit
                 goto="Get to know us better."
-                title="Visit the web"
+                title="Visit the Website"
             />
 
 

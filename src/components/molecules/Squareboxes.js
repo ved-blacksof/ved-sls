@@ -22,9 +22,9 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap'
     },
     boxes: {
-        width: '16rem',
-        height: '16rem',
-        boxShadow: '0px 0px 20px #0000000F',
+        width: '17vw',
+        height: '17vw',
+        boxShadow: '0px 0px 40px #0000000F',
         background: 'white',
         textAlign: 'center',
         display: 'flex',

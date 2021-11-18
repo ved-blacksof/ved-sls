@@ -42,7 +42,7 @@ export function SolarTemplate() {
 
             <Visit
                 goto="Explore more about our Solar and Wind Solutions."
-                title="Visit the web"
+                title="Visit the Website"
             />
 
             <Footer />

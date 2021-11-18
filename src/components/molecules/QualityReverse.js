@@ -47,6 +47,7 @@ export function QualityReverse({
     heading,
     subtitle,
     redline,
+    uli,
     firstli,
     secli,
     thirdli,
@@ -70,6 +71,7 @@ export function QualityReverse({
                                 subtitle={subtitle}
                                 list={list}
                                 redline={redline}
+                                uli={uli}
                                 firstli={firstli}
                                 secli={secli}
                                 thirdli={thirdli}

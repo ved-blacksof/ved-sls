@@ -8,11 +8,11 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         background: '#182AC3',
         color: 'white',
-        // display: 'flex',
+        display: 'flex',
         justifyContent:'center',
         alignItems:'center',
         alignSelf:'center',
-        font: 'normal normal normal 1rem Access',
+        font: 'normal normal normal 16px Access',
         border: 'none',
         padding: '.5rem 1rem',
         textTransform: 'none',
@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
             color: '#182AC3',
             // border:'1px solid blue',
         },
+        [theme.breakpoints.down('sm')]:{
+            fontSize:'10px'
+        }
     },
     arrow: {
         width:'1.2rem',
@@ -31,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent:'center',
         alignItems:'center',
         '&:hover': {
-            // color: '#182AC3'
+            
         },
         "& img":{
             maxWidth:'100%',
@@ -60,7 +63,7 @@ export function Buttons({
             >
                 {title}
                 <Box className={classes.arrow}>
-                    <img src={arrowIcon} />
+                    <img src={arrowIcon} alt="arrow"/>
                 </Box>
             </Button>
         </Box>

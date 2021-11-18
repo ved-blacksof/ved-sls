@@ -4,11 +4,12 @@ import React from 'react'
 const useStyles = makeStyles((theme) => ({
 
     gridBox: {
-        height: '100%'
+        height: '100%',
+        marginTop:'5%'
     },
     iconsBox: {
-        height: '6rem',
-        width: '100%',
+        width: '80%',
+        padding:'2% 0%'
     },
     icons: {
         width: '50%',
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subText: {
         color: 'black',
-        marginTop: '8%',
+        paddingTop: '5%',
         width:'80%',
         fontSize:'1.2rem',
         fontWeight:'bold'

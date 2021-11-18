@@ -43,7 +43,7 @@ export function GamingTemplate() {
 
             <Visit
                 goto="Want to ace your game?"
-                title="Visit the web"
+                title="Visit the Website"
             />
 
             <Footer />

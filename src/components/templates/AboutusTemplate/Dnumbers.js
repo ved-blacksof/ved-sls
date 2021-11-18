@@ -9,11 +9,12 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         marginTop: '10%',
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-            flexWrap: 'wrap'
+            flexWrap: 'wrap',
+            justifyContent:'space-around'
         },
 
     },
@@ -24,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '1',
         [theme.breakpoints.down('sm')]: {
             width: '30%',
-            height: '6rem',
         },
     },
     head: {
@@ -83,23 +83,23 @@ export function Dnumbers() {
                 <Box className={classes.container}>
                     <Box className={classes.headBox}>
                         <h2 className={classes.head}>356+</h2>
-                        <h6 className={classes.subHead}>In-house Engineers</h6>
+                        <h4 className={classes.subHead}>In-house Engineers</h4>
                     </Box>
                     <Box className={classes.headBox}>
                         <h2 className={classes.head}>100+</h2>
-                        <h6 className={classes.subHead}>active projects across the globe</h6>
+                        <h4 className={classes.subHead}>active projects across the globe</h4>
                     </Box>
                     <Box className={classes.headBox}>
                         <h2 className={classes.head}>20+</h2>
-                        <h6 className={classes.subHead}>years and counting</h6>
+                        <h4 className={classes.subHead}>years and counting</h4>
                     </Box>
                     <Box className={classes.headBox}>
                         <h2 className={classes.head}>06</h2>
-                        <h6 className={classes.subHead}>Business Verticals</h6>
+                        <h4 className={classes.subHead}>Business Verticals</h4>
                     </Box>
                     <Box className={classes.headBox}>
                         <h2 className={classes.head}>1</h2>
-                        <h6 className={classes.subHead}>Manufacturing Plant</h6>
+                        <h4 className={classes.subHead}>Manufacturing Plant</h4>
                     </Box>
                 </Box>
 

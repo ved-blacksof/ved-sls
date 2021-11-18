@@ -1,25 +1,47 @@
 import React from 'react'
-import { makeStyles, Container } from '@material-ui/core'
+import { makeStyles, Container, Box } from '@material-ui/core'
 
-import { GeneralHeading, MainContainer, MapIcon } from '../../atoms'
+import { GeneralHeading, MainContainer, MapIcon, MapIcon1 } from '../../atoms'
 import { Visit } from '../../molecules'
 
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        marginTop: '10%',
+        width: '100%',
+        margin: '10% 0%',
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column'
+        },
         "& h6": {
             color: 'black',
-            width: '60%',
+            width: '95%',
             [theme.breakpoints.down('sm')]: {
                 width: '90%',
             },
         }
     },
+    leftBox: {
+        width: '50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+
+        },
+    },
+    rightBox: {
+        width: '50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            margin:'10% 0%'
+        },
+    },
     yImage: {
         width: '100%',
         maxHeight: '100%',
-        margin: '3% auto'
+        "& img": {
+            width: '100%',
+            maxHeight: '100%'
+        }
     },
     btmText: {
         color: '#182AC3',
@@ -49,22 +71,28 @@ export function Yalgaar({
         <MainContainer>
             <Container fixed className={classes.mainContainer}>
 
-                <GeneralHeading
-                    icons="./images/Layer_x0020_1_yalgaar.svg"
-                    redline="redline"
-                    subtitle="Ace your products with real-time "
-                    subtitle_1="pub-sub messaging infrastructure"
-                    br1="br1"
-                />
+                <Box className={classes.leftBox}>
+                    <GeneralHeading
+                        icons="./images/Layer_x0020_1_yalgaar.svg"
+                        redline="redline"
+                        subtitle="Ace your products with real-time pub-sub messaging infrastructure"
+                        // subtitle_1=""
+                        subtitle1="Yalgaar is a real-time pub/sub messaging framework that allows businesses to create a 
+                                    range of scalable applications on the cloud. With ready-to-use SDKs and end-to-end
+                                    support infrastructure, you can now expedite the time-to-market of your products exponentially."
+                    // br1="br1"
+                    />
 
-                <img className={classes.yImage} src={'./images/Group 49262.png'} />
+                    <MapIcon1 data={data} />
+                </Box>
 
-                <h6>Yalgaar is a real-time pub/sub messaging framework that allows businesses to create
-                    a range of scalable applications on the cloud. With ready-to-use SDKs and end-to-end support infrastructure,
-                    you can now expedite the time-to-market of your products exponentially.</h6>
 
-                <MapIcon data={data} />
 
+                <Box className={classes.rightBox}>
+                    <Box className={classes.yImage}>
+                        <img src={'./images/Group 49262.png'} />
+                    </Box>
+                </Box>
                 {/* <Box style={{ display:'flex', justifyContent:'center',flexDirection:'column', alignItems:'center',marginTop:"5%" }}>
                     <h4 className={classes.btmText}> Start your journey with Yalgaar now!</h4>
 
@@ -75,10 +103,10 @@ export function Yalgaar({
                     />
                 </Box> */}
 
-                <Visit
-                    goto="Start your journey with Yalgaar now!"
-                    title="Visit the Website" />
             </Container>
+            <Visit
+                goto="Start your journey with Yalgaar now!"
+                title="Visit the Website" />
 
         </MainContainer>
     )

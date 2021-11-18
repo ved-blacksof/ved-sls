@@ -61,7 +61,7 @@ export function SmartstreetTemplate() {
 
             <Visit
                 goto="Reinvent how your brand advertises and connects."
-                title="Visit the web"
+                title="Visit the Website"
             />
 
             <Footer />

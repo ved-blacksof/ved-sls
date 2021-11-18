@@ -17,10 +17,14 @@ const useStyles = makeStyles((theme) => ({
         width:'80%'
     },
     btns: {
-        width: '25%',
+        width: '28%',
         marginTop: '2%',
-        [theme.breakpoints.down('xs')]: {
+        // fontSize:'1rem',
+        [theme.breakpoints.down('sm')]: {
             width: '60%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '70%'
         },
     }
 }))
@@ -40,6 +44,7 @@ export function Visit({
                     className={classes.btns}
                     title={title}
                     arrowIcon="./images/Icon feather-arrow-right.svg"
+                    
                 />
             </Box>
         </MainContainer>

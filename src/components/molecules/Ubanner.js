@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat:'no-repeat',
         position: 'relative',
         width:'100%',
-        height:'',
+        height:'100%',
         [theme.breakpoints.down('sm')]: {
             padding:'20% 0%',
         },

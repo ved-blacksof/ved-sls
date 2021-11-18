@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems:'flex-start',
         flexDirection:'column',
         [theme.breakpoints.down('sm')]: {
-            margin: '15% 0%'
+            margin: '15% 0%',
+            width:'100%'
         }
     },
     head: {
@@ -28,15 +29,16 @@ const useStyles = makeStyles((theme) => ({
     },
     uls: {
         color: 'black',
-        font: 'normal normal bold 1.2rem Access',
-        // lineHeight:'3'
+        font: 'normal normal normal 1rem Access',
+        margin:'2% 0%', 
+        lineHeight:'2.5'
     },
     lis: {
         font: 'normal normal normal 1rem Access',
         color: 'black',
         marginLeft: '25px',
         textIndent: '0px',
-        lineHeight:'2'
+        lineHeight:'1.8'
     }
 }))
 
@@ -63,7 +65,7 @@ export function Paragraphs({
 
 
                 {
-                    firstli ?
+                    list ?
                         <ul className={classes.uls}>{uli}
                            {
                                firstli ?  <li className={classes.lis}>{firstli}</li> : ''

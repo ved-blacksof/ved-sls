@@ -5,11 +5,11 @@ import { useHistory, NavLink } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     footerMain: {
         background: 'white',
-        margin:'0% 1%',
+        margin: '0% 1%',
         [theme.breakpoints.down('sm')]: {
             marginTop: '10%',
-            width:'85%',
-            margin:'0% auto'
+            width: '85%',
+            margin: '0% auto'
         }
     },
     headBox: {
@@ -86,8 +86,8 @@ export function Footer() {
 
     const history = useHistory();
     return (
-        <Box style={{background:'white', paddingTop:'5%'}}>
-            <Box  className={classes.footerMain}>
+        <Box style={{ background: 'white', paddingTop: '5%' }}>
+            <Box className={classes.footerMain}>
                 <Box className={classes.headBox}>
                     <img className=" col-md-2" src={'/images/Layer_x0020_1-1.svg'} alt="SLS Icon" />
                     <h6 className={classes.head}>Over the years, we have added numerous products to our portfolio
@@ -127,8 +127,8 @@ export function Footer() {
 
                                 <li> <a className={classes.links} href="/solar"> SOLAR & WIND </a> </li>
                                 <li> <a className={classes.links} href="/smartmeter"> SMART METERING </a> </li>
-                                <li> <a className={classes.links} href="/"> SMART GRID </a> </li>
-                                <li> <a className={classes.links} href="/"> HOME AUTOMATION </a> </li>
+                                {/* <li> <a className={classes.links} href="/"> SMART GRID </a> </li> */}
+                                <li> <a className={classes.links} href="/homeauto"> HOME AUTOMATION </a> </li>
                                 <li> <a className={classes.links} href="/smartstreet"> SMART STREET LIGHTS </a> </li>
                                 <li> <a className={classes.links} href="/railways"> RAILWAYS </a> </li>
                                 <li> <a className={classes.links} href="/gaming"> GAMING </a> </li>
@@ -154,7 +154,7 @@ export function Footer() {
 
                                 <li> <a className={classes.links} href="/electronics"> ELECTRONICS MANUFACTURING </a> </li>
                                 <li> <a className={classes.links} href="/testing">TESTING AND CALIBRATION </a> </li>
-                                <li> <a className={classes.links} href="/"> ML & AI </a> </li>
+                                <li> <a className={classes.links} href="/ml"> ML & AI </a> </li>
                             </>
                             : null
                         }
@@ -163,8 +163,8 @@ export function Footer() {
 
 
                     <ul className={classes.linkUL}>
-                        <li>CONTACT US</li>
-                        <li> <a className={classes.links} href="/"> CAREERS </a> </li>
+                        <li><a className={classes.links} href="/contact"> CONTACT US </a> </li>
+                        {/* <li> <a className={classes.links} href="/careers"> CAREERS </a> </li> */}
                     </ul>
 
 
