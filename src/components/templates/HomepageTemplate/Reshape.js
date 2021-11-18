@@ -109,6 +109,7 @@ export function Reshape() {
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
                             <hr style={{width:'25%'}}/>
+                            <br/>
                             <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>

@@ -181,10 +181,10 @@ export function Footer() {
                 <div className={classes.copyBox}>
                     <a> System Level Solutions Inc. Copyright &copy; 2021 </a>
                     <div className="links">
-                        <a href="/" >Facebook</a><i>|</i>
-                        <a href="/" >Instagram</a><i>|</i>
-                        <a href="/" >Twitter</a><i>|</i>
-                        <a href="/" >LinkedIn</a>
+                        <a target="_blank" href="https://www.facebook.com/system.level.solutions.corp" >Facebook</a><i>|</i>
+                        <a target="_blank" href="https://www.instagram.com/system_level_solutions/" >Instagram</a><i>|</i>
+                        <a target="_blank" href="https://twitter.com/S_L_S" >Twitter</a><i>|</i>
+                        <a target="_blank" href="https://www.linkedin.com/company/system-level-solutions-india-pvt.-ltd/" >LinkedIn</a>
                     </div>
                 </div>
 

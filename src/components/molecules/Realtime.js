@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './styled.css'
 import { makeStyles, Container, Box, Button } from '@material-ui/core'
-import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons'
+import { ArrowBackIos, ArrowForwardIos, KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
 import { GeneralHeading, MainContainer } from '../atoms'
 
 
@@ -37,16 +37,18 @@ const useStyles = makeStyles((theme) => ({
         width: '50px',
         height: '50px',
         display: 'flex',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         alignItems: 'center',
         border: '2px solid #182AC3',
-        borderRadius: '0px',
         marginTop: '10%',
         color: '#182AC3',
         "&:hover": {
             background: '#182AC3',
             color: 'white'
-        }
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '20%'
+        },
     },
     slider: {
         width: '95%',
@@ -243,8 +245,8 @@ export function Realtime({
                                 {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
                             <img src={"./images/Group 82851.svg"} onClick={next} /> */}
                                 {/* <ArrowBackIos className={classes.btn}/> */}
-                                <Box className={classes.btn} onClick={previous} ><ArrowBackIos /></Box>
-                                <Box className={classes.btn} onClick={next}><ArrowForwardIos /></Box>
+                                <Box ><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Box>
+                                <Box  ><KeyboardArrowRight className={classes.btn} onClick={next} /></Box>
                             </Box>
 
                             <Slider ref={sliderRef} {...settings} className={classes.slider}>

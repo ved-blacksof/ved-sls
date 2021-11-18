@@ -50,6 +50,10 @@ const useStyles = makeStyles((theme) => ({
     leftBox: {
         width: '50%',
         height: '100%',
+        padding:'5% 0%',
+        [theme.breakpoints.down('sm')]: {
+            padding:'0%',
+         },
     },
     tabs: {
         padding: '5%',
@@ -73,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
         width: '70%',
         position: 'absolute',
         zIndex: '1',
-        top: '-68%',
+        top: '-45%',
         [theme.breakpoints.down('md')]: {
             top: '-50%',
          },

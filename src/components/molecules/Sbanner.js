@@ -1,21 +1,23 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { Box, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        // height: '100vh',
-        padding:'21% 0%',   
+        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        background: 'linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59))',
+        backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)),url('./images/sls-office3.1e9e26cb.png')`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         position: 'relative',
         // [theme.breakpoints.down('sm')]: {
-        //     height: '80vh'
+
         // },
         // [theme.breakpoints.down('xs')]: {
-        //     height: '40vh'
+
         // }
 
     },
@@ -24,7 +26,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         height: '100%',
         zIndex: '-1',
+        "& img": {
+            maxWidth: '100%',
+            height: '100%',
 
+        }
     },
     mainText: {
         font: 'normal normal normal 5rem BebasNeue',
@@ -58,16 +64,27 @@ const useStyles = makeStyles((theme) => ({
         bottom: '5%',
         textAlign: 'center',
         [theme.breakpoints.down('xs')]: {
-            display: 'none'
+
         }
     },
     mouseScroll: {
 
+        "& img": {
+            maxWidth: '100%',
+            transition: 'all .2s ease-in-out',
+            "&:hover": {
+                transform: 'scale(1.1)',
+                cursor: 'pointer'
+            }
+        }
     },
     mouseScrollTxt: {
         color: 'white',
-        font: 'normal normal normal 1rem Roboto',
-        marginTop: '3%'
+        font: 'normal normal normal 1rem Access',
+        marginTop: '3%',
+        "&:hover": {
+            cursor: 'pointer'
+        }
     }
 
 }))
@@ -78,14 +95,16 @@ export function Sbanner({
 }) {
     const classes = useStyles()
 
-    const scroll = () =>{
-        window.scroll({ top: 1000, left: 0, behavior: 'smooth' });
+    const scroll = () => {
+        window.scroll({ top: '800', left: '0', behavior: 'smooth' });
     }
     return (
         <>
 
             <div className={classes.mainBox} >
-                <img className={classes.backImg} src={Background} alt="background" />
+                <Box className={classes.backImg}>
+                    {/* <img src={Background} alt="background" /> */}
+                </Box>
 
                 <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
 
@@ -99,10 +118,12 @@ export function Sbanner({
 
                 <div className={classes.scrollBox}>
 
-                    <img className={classes.mouseScroll} src={mouse} alt="Scroll image" onClick={scroll}/>
+                    <Box className={classes.mouseScroll} >
+                        <img src={mouse} alt="Scroll image" onClick={scroll} />
+                    </Box>
 
                     <h6 className={classes.mouseScrollTxt} >Scroll</h6>
-                
+
                 </div>
 
             </div>

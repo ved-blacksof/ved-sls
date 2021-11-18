@@ -7,7 +7,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '80%',
+        width: '75%',
         margin:'0 auto',
         [theme.breakpoints.down('md')]: {
             width: '80%'

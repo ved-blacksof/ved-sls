@@ -6,6 +6,7 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import { GeneralHeading, MainContainer, MapIcon } from '../../atoms'
+import { Visit } from '../../molecules';
 
 const useStyles = makeStyles((theme) => ({
     portContainer: {
@@ -47,9 +48,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '10% 0%',
+        margin: '8% 0%',
         [theme.breakpoints.down('sm')]: {
-
         }
     },
     centerBtn: {
@@ -81,9 +81,17 @@ export function Portfolio({
 
                 <MapIcon data={data} />
 
-                <Box className={classes.knowMore}>
+                {/* <Box className={classes.knowMore}>
                     <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'} /> </button>
-                </Box>
+                </Box> */}
+                
+                <br/>
+                <br/>
+                <br/>
+
+                <Visit 
+                    title="Know More"
+                />
 
             </Container>
         </MainContainer>

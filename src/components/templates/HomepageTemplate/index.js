@@ -14,7 +14,7 @@ import { GridBlue } from '../../atoms'
 export function HomepageTemplate() {
     return (
         <Box>
-            <Sbanner Background={'/images/sls-office3.1e9e26cb.png'} mouse={'./images/scroll.svg'} />
+            <Sbanner Background={'./images/sls-office3.1e9e26cb.png'} mouse={'./images/scroll.svg'} />
 
             <GridBlue>
                 <Navbar />

@@ -13,7 +13,7 @@ import { MainContainer } from '../../atoms';
 const useStyles = makeStyles((theme) => ({
     whiteBox: {
         marginTop: '20%',
-        paddingBottom: '5%',
+        paddingBottom: '8%',
     },
     expand: {
         color: 'black'
@@ -22,10 +22,7 @@ const useStyles = makeStyles((theme) => ({
         background: '#182AC3',
     },
     blueBoxContainer: {
-        // width: '70%',
-        // [theme.breakpoints.down('sm')]: {
-        //     width: '100%'
-        // }
+
     }
 }))
 
