@@ -12,20 +12,22 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-start',
         flexWrap: 'wrap',
+        marginTop:'5%',
         [theme.breakpoints.down('sm')]: {
             flexWrap: 'wrap',
         }
     },
     boxes: {
         width: '25%',
-        margin: '5% 0%',
+        margin: '3% 0%',
         '& h4': {
             paddingTop: '4%',
             fontWeight: 'bold'
         },
         '& h6': {
             paddingTop: '3%',
-            width: "50%",
+            // marginRight:'15%',
+            width: "60%",
             lineHeight: '1.8',
             [theme.breakpoints.down('xs')]: {
                 width: '80%'

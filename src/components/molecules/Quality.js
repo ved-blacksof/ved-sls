@@ -4,6 +4,13 @@ import { PositionImage, Paragraphs, MainContainer } from "../atoms"
 
 
 const useStyles = makeStyles((theme) => ({
+    mainHeads: {
+        display: 'flex',
+        justifyContent: 'center',
+        [theme.breakpoints.down('sm')]: {
+            lineHeight: '1.2',
+        },
+    },
     qualityContainer: {
         height: 'fit-content',
         margin: '15% auto',
@@ -78,7 +85,7 @@ export function Quality({
                 <Container className={classes.qualityContainer}>
                     {
                         mainheading ?
-                            <Box style={{ display: 'flex', justifyContent: 'center', }}>
+                            <Box className={classes.mainHeads}>
                                 <h2 className={classes.bigHead}>{mainheading}
                                     <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
                                 </h2>

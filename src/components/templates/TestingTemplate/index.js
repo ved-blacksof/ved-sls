@@ -26,14 +26,14 @@ export function TestingTemplate() {
 
             <Quality
                 mainheading="Offerings"
-                imageBG="./images/Group 82860.png"
+                imageBG="./images/Group82860.png"
                 heading="In protocol Validation"
                 redline="redline"
                 subtitle="Our smart traffic management controller retrofits with the existing traffic infrastructure and transforms it into a smarter, more interactive traffic solution."
             />
 
             <QualityReverse
-                imageBG="./images/hardware test tools.png"
+                imageBG="./images/hardwaretesttools.png"    
                 heading="Hardware test tools"
                 redline="redline"
                 subtitle="Our Traffic Management Dashboard is a cloud-based intuitive dashboard that allows you to remotely control and monitor your intelligent traffic infrastructure."

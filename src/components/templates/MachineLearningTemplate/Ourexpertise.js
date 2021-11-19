@@ -8,26 +8,28 @@ const useStyles = makeStyles((theme) => ({
     mainContainer: {
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         flexWrap: 'wrap',
         marginTop:'10%'
     },
     simpleCard: {
-        margin: '3% auto',
+        margin: '2% 0%',
         width: '50%',
         lineHeight: '2',
         [theme.breakpoints.down('sm')]: {
-            width: '100%'
+            width: '100%',
+            marginTop:'2%'
         }
     },
     iconBox: {
-        width: '20%',
+        width: '6rem',
         '& img': {
             width: '100%',
             height: '100%'
         },
         [theme.breakpoints.down('sm')]: {
-            width: '30%'
+            width: '5rem',
+            marginTop:'2rem'
         }
     },
     textBox:{

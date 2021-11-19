@@ -14,23 +14,34 @@ const useStyles = makeStyles((theme) => ({
     },
     imageBox: {
         width: '70%',
-        position: 'relative',
         background: 'white',
+        // padding: '25% 0%',
+        // backgroundPosition: 'center',
+        // backgroundRepeat: 'no-repeat',
+        // backgroundSize: 'cover',
+        background: 'white',
+        borderRadius: '1rem',
+        position: 'relative ',
         marginLeft: '5%',
-        borderRadius: '1rem', 
-        boxShadow:'0px 0px 5px #0000001A',
+        boxShadow: '0px 0px 5px #0000001A',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
             justifyContent: 'center',
             marginLeft: '0%',
-
         }
     },
-    image: {
-        width: '100%',
-        height: '100%',
-        overflow: 'hidden',
-        borderRadius: '1rem',
+    productImageBox:{
+        height:'16vw',
+        // background: 'white',
+        // borderRadius: '1rem',
+        overflow:'hidden',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    image:{
+        width:'100%',
+        maxHeight:'100%'
     },
     blue: {
         width: '40%',
@@ -63,9 +74,13 @@ export function PositionImageReverse({
 
     return (
         <Box className={classes.mainBox}>
-            <div className={classes.imageBox}>
-                <img className={classes.image} src={imageBG} alt="image" />
-
+            <div
+                className={classes.imageBox}
+            // style={{ backgroundImage: `url(${imageBG})`}}
+            >
+                <Box className={classes.productImageBox}>
+                    <img className={classes.image} src={imageBG} alt="image" />
+                </Box>
                 <img className={classes.red} src={'./images/Polygon 2.svg'} alt="image" />
                 <img className={classes.white} src={'./images/Polygon 3.svg'} alt="image" />
                 <img className={classes.blue} src={'./images/Polygon 1.svg'} alt="image" />

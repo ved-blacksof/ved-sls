@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#182AC3',
         textAlign: 'center',
         fontWeight: 'bold',
-        width:'80%'
+        width: '80%'
     },
     btns: {
         width: '28%',
@@ -41,10 +41,11 @@ export function Visit({
                 <h4 className={classes.btmText}> {goto}</h4>
 
                 <Buttons
+                    disableRipple
                     className={classes.btns}
                     title={title}
                     arrowIcon="./images/Icon feather-arrow-right.svg"
-                    
+
                 />
             </Box>
         </MainContainer>

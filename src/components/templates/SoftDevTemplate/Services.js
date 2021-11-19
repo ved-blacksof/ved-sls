@@ -9,27 +9,28 @@ const useStyles = makeStyles((theme) => ({
     },
     mainBox: {
         display: 'flex',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-
+            // flexWrap: 'wrap',
+            // justifyContent: 'center',
+            flexDirection:'column'
         }
     },
     mainInbox: {
-        margin: '0% 2%',
+        margin: '0% 0%',
         background: 'white',
-
     },
     boxMargin1: {
         marginTop: '3%',
+        marginRight:'3rem',
         [theme.breakpoints.down('xs')]: {
             marginTop: '0%',
         }
     },
     boxMargin2: {
         marginTop: '6%',
+        marginRight:'3rem',
         [theme.breakpoints.down('xs')]: {
             marginTop: '0%',
         }
@@ -58,6 +59,7 @@ export function Services() {
                             li2="Custom Web Application"
                         />
                         <ServiceBox
+                            style={{ marginTop: '15%' }}
                             imgs="./images/Layer_26-soft-dev.svg"
                             title="Embedded Solutions"
                             li1="Firmware Development"
@@ -72,6 +74,7 @@ export function Services() {
                             li2="Product Development"
                         />
                         <ServiceBox
+                            style={{ marginTop: '15%' }}
                             imgs="./images/Layer_24-soft-dev.svg"
                             title="Enterprise Solutions"
                             li1="HRM System"
@@ -86,6 +89,7 @@ export function Services() {
                             li2="Driver Development"
                         />
                         <ServiceBox
+                            style={{ marginTop: '15%' }}
                             imgs="./images/Layer_25-soft-dev.svg"
                             title="Mobile App Development"
                             li1="Application Development"

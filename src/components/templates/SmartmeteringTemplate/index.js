@@ -4,6 +4,7 @@ import { GridBlue } from '../../atoms'
 import { Overview, Ubanner } from '../../molecules'
 
 import {MeterTabs} from './MeterTabs'
+import { NewMeterTabs } from './NewMeterTabs'
 
 
 export function SmartmeteringTemplate() {

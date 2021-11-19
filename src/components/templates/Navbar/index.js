@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, IconButton, Toolbar, AppBar } from '@material-ui/core'
+import { makeStyles, IconButton, Toolbar, AppBar, Box } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
 import { Menu } from '@material-ui/icons'
 const useStyles = makeStyles((theme) => ({
@@ -20,6 +20,16 @@ const useStyles = makeStyles((theme) => ({
             width: '100%'
         }
     },
+    logoBox: {
+        width: '8rem',
+        "& img": {
+            width: '100%',
+            maxHeight: '100%'
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '6rem'
+        }
+    },
     logo: {
         maxWidth: '100%',
         maxHeight: '100%'
@@ -34,20 +44,20 @@ const useStyles = makeStyles((theme) => ({
     },
     navLI: {
         textDecoration: 'none',
-        font: 'normal normal normal 1rem Access',
+        // font: 'normal normal normal 1rem Access',
         color: 'white',
-        margin:' 0px 10px'
+        margin: ' 0px 10px'
     },
     act: {
         margin: '2px',
         padding: '5px 1px',
         borderBottom: '1px solid white'
     },
-    menuIcon:{
-        display:'none',
+    menuIcon: {
+        display: 'none',
         [theme.breakpoints.down('sm')]: {
             display: 'block',
-            fontSize:'2.2rem'
+            fontSize: '2.2rem'
         }
     }
 }))
@@ -60,27 +70,37 @@ export function Navbar() {
         <>
             <AppBar position='relative' color='transparent' className={classes.mainBox}>
                 <Toolbar className={classes.navbar}>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
-                        <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
-                    </IconButton>
+                    <Box className={classes.logoBox} disableRipple disableFocusRipple disableTouchRipple edge="start" color="inherit" aria-label="menu">
+                        <img disableRipple className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
+                    </Box>
 
                     <Menu className={classes.menuIcon} />
 
                     <ul className={classes.navUL}>
                         <li className={classes.navLI} >
-                            <NavLink className={classes.navLI} to="/" activeClassName={classes.navLinks}>Home</NavLink>
+                            <h4>
+                                <NavLink className={classes.navLI} to="/" activeClassName={classes.navLinks}>Home</NavLink>
+                            </h4>
                         </li>
                         <li className={classes.navLI} >
-                            <NavLink className={classes.navLI} to="/about" activeClassName={classes.navLinks}>About Us</NavLink>
+                            <h4>
+                                <NavLink className={classes.navLI} to="/about" activeClassName={classes.navLinks}>About Us</NavLink>
+                            </h4>
                         </li>
                         <li className={classes.navLI} >
-                            <NavLink className={classes.navLI} to="/evcharger" activeClassName={classes.navLinks}>Industries</NavLink>
+                            <h4>
+                                <NavLink className={classes.navLI} to="/evcharger" activeClassName={classes.navLinks}>Industries</NavLink>
+                            </h4>
                         </li>
                         <li className={classes.navLI} >
-                            <NavLink className={classes.navLI} to="/cloud" activeClassName={classes.navLinks}>Services</NavLink>
+                            <h4>
+                                <NavLink className={classes.navLI} to="/cloud" activeClassName={classes.navLinks}>Services</NavLink>
+                            </h4>
                         </li>
                         <li className={classes.navLI} >
-                            <NavLink className={classes.navLI} to="/contact" activeClassName={classes.navLinks}>Contact Us</NavLink>
+                            <h4>
+                                <NavLink className={classes.navLI} to="/contact" activeClassName={classes.navLinks}>Contact Us</NavLink>
+                            </h4>
                         </li>
                     </ul>
                 </Toolbar>

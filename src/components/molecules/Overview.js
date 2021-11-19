@@ -18,7 +18,11 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '5%',
     },
     redLine: {
-        margin: '1% 0%'
+        margin: '1% 0%',
+        // width:'20%',
+        "& img": {
+            // width:'100%',
+        }
     },
     portSubHead: {
         width: '90%',
@@ -73,11 +77,15 @@ export function Overview({
 
                     <h3 className={classes.head}>Overview</h3>
 
-                    <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
+                    <Box className={classes.redLine}>
+                        <img src={'/images/Component 4 – 1.svg'} />
+                    </Box>
 
-                    <h4 className={classes.portSubHead}>{sub1}</h4>
+                    <Box style={{lineHeight:'1.6'}}>
+                        <h4 className={classes.portSubHead}>{sub1}</h4>
 
-                    <h4 className={classes.portSubHead}>{sub2}</h4>
+                        <h4 className={classes.portSubHead}>{sub2}</h4>
+                    </Box>
 
                     {
                         prop ?

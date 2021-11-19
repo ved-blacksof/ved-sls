@@ -13,13 +13,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         position: 'relative',
-        // [theme.breakpoints.down('sm')]: {
-
-        // },
-        // [theme.breakpoints.down('xs')]: {
-
-        // }
-
     },
     backImg: {
         position: 'absolute',
@@ -29,34 +22,37 @@ const useStyles = makeStyles((theme) => ({
         "& img": {
             maxWidth: '100%',
             height: '100%',
-
         }
     },
     mainText: {
-        font: 'normal normal normal 5rem BebasNeue',
+        lineHeight:'.8',
         zIndex: '1',
         color: 'white',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '4rem'
+            // fontSize: '4rem'
         },
         [theme.breakpoints.down('xs')]: {
-            fontSize: '3rem'
+            // fontSize: '3rem'
         }
     },
     redLine: {
         background: '#CA0017',
         height: '2px',
-        width: '25%'
-    },
-    subText: {
-        width: '30%',
-        font: 'normal normal normal 1rem Access',
-        color: 'white',
-        textAlign: 'center',
-        paddingTop: '2%',
+        width: '25%',
+        margin:'1% 0%',
         [theme.breakpoints.down('sm')]: {
             width: '70%',
-            fontSize: '1rem'
+
+        }
+    },
+    subText: {
+        width: '40%',
+        // font: 'normal normal normal 1rem Access',
+        color: 'white',
+        textAlign: 'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '70%',
+            // fontSize: '1rem'
         }
     },
     scrollBox: {
@@ -80,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     },
     mouseScrollTxt: {
         color: 'white',
-        font: 'normal normal normal 1rem Access',
+        // font: 'normal normal normal 1rem Access',
         marginTop: '3%',
         "&:hover": {
             cursor: 'pointer'
@@ -102,19 +98,19 @@ export function Sbanner({
         <>
 
             <div className={classes.mainBox} >
-                <Box className={classes.backImg}>
-                    {/* <img src={Background} alt="background" /> */}
-                </Box>
+                {/* <Box className={classes.backImg}>
+                    <img src={Background} alt="background" />
+                </Box> */}
 
                 <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
 
                 <span className={classes.redLine}></span>
 
-                <h2 className={classes.subText}>
+                <h6 className={classes.subText}>
                     Industry leaders in providing solutions catering to the domains
                     of intellectual property, hardware design &
                     prototyping, software design, and manufacturing.
-                </h2>
+                </h6>
 
                 <div className={classes.scrollBox}>
 
