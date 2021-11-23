@@ -144,7 +144,8 @@ export function TechCarousel() {
                 <Container fixed className={classes.newBox}>
                     <Box className={classes.box1}>
                         <ParagraphsBlue
-                            title="TECHNOLOGY PARTNERS IN HARDWARE AND SOFTWARE OFFERINGS"
+                            title="TECHNOLOGY PARTNERS "
+                            title1="IN HARDWARE AND SOFTWARE OFFERINGS"
                             subtitle="Serving as a turnkey technology solution provider for the past 20 years."
                             list="We specialize in -"
                             firstli="Research & Development"

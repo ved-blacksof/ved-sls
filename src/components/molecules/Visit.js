@@ -42,6 +42,7 @@ export function Visit({
 
                 <Buttons
                     disableRipple
+                    disabl
                     className={classes.btns}
                     title={title}
                     arrowIcon="./images/Icon feather-arrow-right.svg"

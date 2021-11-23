@@ -11,7 +11,7 @@ export function ContactusTemplate() {
             <Ubanner
                 Background="/images/luo-lei-Xa4pTwafe5U-unsplash-contactus.png"
                 maintext="Contact us"
-                subtext="Ww would love to connect  with you to disscuss your ideas! Ping us anytime"
+                subtext="We would love to connect  with you to disscuss your ideas! Ping us anytime"
             />
 
             <GridBlue>

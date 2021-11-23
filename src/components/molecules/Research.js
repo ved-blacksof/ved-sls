@@ -82,9 +82,9 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         bottom: '-15%',
         left: '-6%',
-        fontSize: '8rem',
+        // fontSize: '8rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3.5rem',
+            // fontSize: '3.5rem',
         },
     }
 }))
@@ -92,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
 export function Research({
     generalheadingblue,
     title,
+    title1,
     subtitle,
     data,
 
@@ -112,7 +113,7 @@ export function Research({
                 {
                     generalheadingblue ?
                         <>
-                            <h3 className={classes.head}>{title}</h3>
+                            <h3 className={classes.head}>{title}<br/>{title1}</h3>
                             <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                             <h4 className={classes.subHead}>{subtitle}</h4>
                         </> : ''
@@ -138,7 +139,7 @@ export function Research({
                                             <Box >
                                                 <img className={classes.BoxImages} src={item.images} alt="Carousel Images" data-aos="fade-up" />
                                             </Box>
-                                            <h1 className={classes.txtReserch}>{item.text}</h1>
+                                            <h5 className={classes.txtReserch}>{item.text}</h5>
                                         </Box>
                                     </Box>
                                 )

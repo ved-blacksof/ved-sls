@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '5%'
     },
     smallBtn: {
-        font: 'normal normal normal .5rem Access',
+        font: 'normal normal normal .7rem Access',
         background: '#182AC3',
         border: 'none',
         color: 'white',
@@ -83,12 +83,16 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             color: '#182AC3',
             fontWeight: 'bold'
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize:'.6rem'
         }
     },
     cardHead: {
-        font: 'normal normal normal 1.1rem Access',
+        // font: 'normal normal normal 1.1rem Access',
         color: 'black',
-        marginTop: '3%'
+        marginTop: '3%',
+        fontWeight:'bold'
 
     },
     cardSubHead: {
@@ -96,9 +100,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3%'
     },
     readMore: {
-        font: 'normal normal normal 1rem BebasNeue',
+        // font: 'normal normal normal 1.2rem BebasNeue',
         color: '#182AC3',
-        paddingTop: '1rem',
+        fontFamily:'BebasNeue',
+        marginTop: '3%',
     },
     filters: {
         display: 'flex',
@@ -246,7 +251,7 @@ export function Realtime({
                                 {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
                                     <img src={"./images/Group 82851.svg"} onClick={next} /> 
                                 */}
-                                    {/* <ArrowBackIos className={classes.btn}/> */}
+                                {/* <ArrowBackIos className={classes.btn}/> */}
 
 
                                 <Box ><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Box>
@@ -270,7 +275,9 @@ export function Realtime({
                                                         }
                                                         <h4 className={classes.cardHead}>{item.head}</h4>
                                                         <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                        <a href="/#" className={classes.readMore}>{item.read}</a>
+                                                        <h4 className={classes.readMore}>
+                                                            <a href="/#" >{item.read}</a>
+                                                        </h4>
                                                     </Box>
                                                 </Box>
                                             </Box>
@@ -282,7 +289,7 @@ export function Realtime({
                                 {
                                     squarecarddata ? squarecarddata.map((item, index) => {
                                         return (
-                                            <Box style={{ }}>
+                                            <Box style={{}}>
                                                 <Box className={classes.boxes}>
                                                     <Box className={classes.imgBox}>
                                                         <img src={item.images} alt="Mission Icon" />

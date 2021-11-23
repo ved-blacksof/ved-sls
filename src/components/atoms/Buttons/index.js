@@ -9,10 +9,10 @@ const useStyles = makeStyles((theme) => ({
         background: '#182AC3',
         color: 'white',
         display: 'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        alignSelf:'center',
-        font: 'normal normal normal 16px Access',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center',
+        // font: 'normal normal normal 16px Access',
         border: 'none',
         padding: '.5rem 1rem',
         textTransform: 'none',
@@ -22,27 +22,27 @@ const useStyles = makeStyles((theme) => ({
             color: '#182AC3',
             // border:'1px solid blue',
         },
-        [theme.breakpoints.down('sm')]:{
-            fontSize:'10px'
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '10px'
         }
     },
     arrow: {
-        width:'1.2rem',
+        width: '1.2rem',
         marginLeft: '4%',
-        marginTop:'1px',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
+        marginTop: '1px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         '&:hover': {
-            
+
         },
-        "& img":{
-            maxWidth:'100%',
-            height:'100%',
-            alignSelf:'center',
+        "& img": {
+            maxWidth: '100%',
+            height: '100%',
+            alignSelf: 'center',
         },
-        [theme.breakpoints.down('sm')]:{
-            width:'1rem'
+        [theme.breakpoints.down('sm')]: {
+            width: '1rem'
         }
     }
 }))
@@ -58,12 +58,13 @@ export function Buttons({
         <Box className={className}>
             {/* material ui Button */}
             <Button
+                disableRipple
                 className={classes.btn}
                 style={style}
             >
-                {title}
+                <h6>{title}</h6>
                 <Box className={classes.arrow}>
-                    <img src={arrowIcon} alt="arrow"/>
+                    <img src={arrowIcon} alt="arrow" />
                 </Box>
             </Button>
         </Box>

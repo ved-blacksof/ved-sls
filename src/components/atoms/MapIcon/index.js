@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
     gridBox: {
         height: '100%',
-        marginTop:'15%'
+        marginBottom:'10%'
     },
     iconsBox: {
         height: '6rem',

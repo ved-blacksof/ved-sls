@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     redLine: {
-        margin: '2% 0%'
+        margin: '1.2% 0%'
     },
     uls: {
         listStyle: 'inside',
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function ParagraphsBlue({
     maintitle,
-    title,
+    title,title1,
     subtitle,
     list,
     firstli,
@@ -49,6 +49,7 @@ export function ParagraphsBlue({
                 <h2 > {maintitle} </h2>
                 <br/>
                 <h3 className={classes.head}>{title}</h3>
+                <h3>{title1}</h3>
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
                 <h4 className={classes.portSubHead}>{subtitle}</h4>
 

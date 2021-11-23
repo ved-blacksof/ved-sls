@@ -76,7 +76,7 @@ export function Portfolio({
                     br="br"
                     redline="redline"
                     subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
-                of products and services."
+                            of products and services."
                 />
 
                 <MapIcon data={data} />

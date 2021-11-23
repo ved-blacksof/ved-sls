@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     redLine: {
-        margin: '2% 0%'
+        margin: '1.5% 0%'
     },
     icon:{
         width:'10rem',

@@ -22,7 +22,8 @@ export function HomepageTemplate() {
                 <TechCarousel />
 
                 <Research
-                    title="INTEGRATION SPECIALIST ACROSS VARIOUS VERTICALS"
+                    title="INTEGRATION SPECIALIST"
+                    title1="ACROSS VARIOUS VERTICALS"
                     subtitle="Assisting companies to avoid pitfalls in the product design and development phase, our experienced team at System Level Solutions uses provides innovative solutions across levels to materialize the creative perspective of a client."
                     generalheadingblue="generalheadingblue"
                     data={research}
