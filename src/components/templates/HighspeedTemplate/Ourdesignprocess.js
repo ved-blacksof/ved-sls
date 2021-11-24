@@ -7,7 +7,7 @@ import { Paragraphs } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     mainContain: {
-        margin: '5% auto',
+        margin: '15% auto',
         padding: '0px',
         width: '65%',
         [theme.breakpoints.down('sm')]: {
@@ -24,7 +24,10 @@ const useStyles = makeStyles((theme) => ({
         },
         "& .vertical-timeline": {
             padding: '0px',
-        }
+        },
+        // [theme.breakpoints.down('sm')]: {
+        //     margin: '10% auto',
+        // },
 
     },
     icon: {

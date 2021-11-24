@@ -14,16 +14,16 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'center',
         // font: 'normal normal normal 16px Access',
         border: 'none',
-        padding: '.5rem 1rem',
+        // padding: '.5rem .5rem',
         textTransform: 'none',
         borderRadius: '4px',
         '&:hover': {
-            // background: 'white',
+            background: '#1E00F9',
             color: '#182AC3',
-            // border:'1px solid blue',
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '10px'
+            fontSize: '10px',
+            padding: '.2rem .5rem',
         }
     },
     arrow: {
@@ -58,11 +58,11 @@ export function Buttons({
         <Box className={className}>
             {/* material ui Button */}
             <Button
-                disableRipple
+                // disableRipple
                 className={classes.btn}
                 style={style}
             >
-                <h6>{title}</h6>
+                <h4>{title}</h4>
                 <Box className={classes.arrow}>
                     <img src={arrowIcon} alt="arrow" />
                 </Box>

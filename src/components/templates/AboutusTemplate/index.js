@@ -42,9 +42,9 @@ export function AboutusTemplate() {
                 imageBG="./images/louis-reed-53jnUK5LqEY-unsplash.png"
                 heading="Quality Policy"
                 subtitle="We are committed to consistently meet our customers requirement as well as applicable 
-                        statutory and regulatory requirement for the quality of products and services and performance
-                        at optimum cost through our competent human resource and continual improvement of quality 
-                        management system."
+                            statutory and regulatory requirement for the quality of products and services and performance
+                            at optimum cost through our competent human resource and continual improvement of quality 
+                            management system."
                 list="list"
                 uli="To achieve our aim, we will"
                 firstli="Effectively manage projects and ensures they are done in timely manner."

@@ -57,7 +57,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'none',
         [theme.breakpoints.down('sm')]: {
             display: 'block',
-            fontSize: '2.2rem'
+            fontSize: '2.2rem',
+            color:'white'
         }
     }
 }))
@@ -66,6 +67,14 @@ export function Navbar() {
     const classes = useStyles()
 
     const history = useHistory();
+
+    // const [menu, ]
+
+    const showMenu = () => {
+        <div>
+            sdfhfjh
+        </div>
+    }
     return (
         <>
             <AppBar position='relative' color='transparent' className={classes.mainBox}>
@@ -74,7 +83,9 @@ export function Navbar() {
                         <img disableRipple className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
                     </Box>
 
-                    <Menu className={classes.menuIcon} />
+                    <Menu className={classes.menuIcon} onClick={showMenu} />
+
+                    {showMenu}
 
                     <ul className={classes.navUL}>
                         <li className={classes.navLI} >

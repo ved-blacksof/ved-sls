@@ -31,14 +31,22 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         font: 'normal normal normal 1rem Access',
         margin:'2% 0%', 
-        lineHeight:'2.5'
+        lineHeight:'2.5',
+        [theme.breakpoints.down('sm')]: {
+            fontSize:'.8rem',
+            lineHeight:'1.5'
+        }
     },
     lis: {
         font: 'normal normal normal 1rem Access',
         color: 'black',
         marginLeft: '25px',
         textIndent: '0px',
-        lineHeight:'1.8'
+        lineHeight:'1.8',
+        [theme.breakpoints.down('sm')]: {
+            fontSize:'.8rem',
+            lineHeight:'1.5'
+        }
     }
 }))
 

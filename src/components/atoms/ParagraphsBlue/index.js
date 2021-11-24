@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
         font: 'normal normal normal 1.1rem Access',
         margin: '3% 0%',
         color:'white',
+        [theme.breakpoints.down('sm')]:{
+            fontSize:'.8rem'
+        }
 
     },
     lis: {

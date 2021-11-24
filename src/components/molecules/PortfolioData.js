@@ -571,6 +571,8 @@ export const highspeed = [
 
 ]
 
+
+
 export const technologystack = [
     {
         images: './images/BlueIcons -20-01.svg',
@@ -659,6 +661,44 @@ export const transformer = [
     {
         images: './images/Layer_34.svg',
         text: 'Oil Flow and Level Monitoring'
+    },
+]
+
+//  Used in IPCORE page @/ipcore
+//  component name IPcoreTemplates >>  OurExpertiseBlue.js
+
+export const expertiseblue = [
+    {
+        images: './images/ipcore-Layer_12.svg',
+        text: 'Architecture design'
+    },
+    {
+        images: './images/ipcore-Layer_13.svg',
+        text: 'RTL coding (Verilog, System Verilog)'
+    },
+    {
+        images: './images/ipcore-Layer_14.svg',
+        text: 'Functional verification'
+    },
+    {
+        images: './images/ipcore-Layer_15.svg',
+        text: 'Validation on hardware platform'
+    },
+    {
+        images: './images/ipcore-Layer_16.svg',
+        text: 'Circuit design'
+    },
+    {
+        images: './images/ipcore-Layer_16.svg',
+        text: 'FPGA Design Tools'
+    },
+    {
+        images: './images/ipcore-Layer_17.svg',
+        text: 'Excellent customer support'
+    },
+    {
+        images: './images/ipcore-Layer_18.svg',
+        text: 'Serving customers since 20+ Years'
     },
 ]
 

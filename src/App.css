@@ -35,14 +35,14 @@ body {
   
   h2{
     font-family: BebasNeue;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: normal;
     color:white;
   }
   
   h3{
     font-family: BebasNeue;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: normal;
     color: white;
     text-transform: lowercase;
@@ -52,7 +52,7 @@ body {
   
   h4{
     font-family: Access;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: normal;
     color: white;
   }
@@ -66,9 +66,15 @@ body {
   
   h6{
     font-family: Access;
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: normal;
     color: white;
+  }
+  br{
+    display: none;
+  }
+  hr{
+    margin: 1% 0%;
   }
    
 
@@ -101,7 +107,7 @@ body {
       
       h4{
         font-family: Access;
-        font-size: 1.1rem;
+        font-size: .9rem;
         font-weight: normal;
         color: white;
       }
@@ -114,7 +120,7 @@ body {
       
       h6{
         font-family: Access;
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: normal;
         color: white;
       }
@@ -151,7 +157,7 @@ body {
       
       h4{
         font-family: Access;
-        font-size: 1.1rem;
+        font-size: .9rem;
         font-weight: normal;
         color: white;
       }
@@ -165,7 +171,7 @@ body {
       
       h6{
         font-family: Access;
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: normal;
         color: white;
       }
@@ -183,7 +189,7 @@ body {
       
       h2{
         font-family: BebasNeue;
-        font-size: 2.8rem;
+        font-size: 4rem;
         font-weight: normal;
         color:white;
       }
@@ -214,7 +220,7 @@ body {
       
       h6{
         font-family: Access;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-weight: normal;
         color: white;
       }
@@ -233,7 +239,7 @@ body {
       
       h2{
         font-family: BebasNeue;
-        font-size: 2.8rem;
+        font-size: 5.2rem;
         font-weight: normal;
         color:white;
       }

@@ -17,10 +17,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             padding:'20% 0%',
         },
-        // [theme.breakpoints.down('xs')]: {
-        //     padding:'16% 0%',
-        // }
-
     },
     backImgBox:{
         position: 'absolute',

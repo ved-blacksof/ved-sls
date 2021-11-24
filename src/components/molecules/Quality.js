@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
     gridContainer: {
         display: 'flex',
+        width:'100%',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             margin: '10% 0%'
@@ -82,7 +83,7 @@ export function Quality({
     return (
         <>
             <MainContainer>
-                <Container className={classes.qualityContainer}>
+                <Container fixed className={classes.qualityContainer}>
                     {
                         mainheading ?
                             <Box className={classes.mainHeads}>
@@ -94,9 +95,10 @@ export function Quality({
 
                     <Box className={classes.gridContainer}
                         style={style}>
+
                         <Box className={classes.BoxLeft}>
                             <PositionImage imageBG={imageBG} />
-                        </Box>
+                        </Box>  
 
                         <Box className={classes.BoxRight}>
                             <Paragraphs

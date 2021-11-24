@@ -5,17 +5,25 @@ const useStyles = makeStyles((theme) => ({
     gridMainBox: {
         height: 'fit-content',
         marginTop: '3%',
-        [theme.breakpoints.down('xs')]: {
-            height: 'fit-content'
+        [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
         }
     },
     gridBox: {
         height: '100%',
-        marginBottom:'10%'
+        marginBottom: '10%',
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: '0'
+        }
     },
     iconsBox: {
         height: '6rem',
         width: '50%',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '0',
+            height: '4rem',
+
+        }
     },
     icons: {
         width: '100%',
@@ -24,9 +32,13 @@ const useStyles = makeStyles((theme) => ({
     subText: {
         color: 'black',
         marginTop: '8%',
-        width:'80%',
-        fontSize:'1.2rem',
-        fontWeight:'bold'
+        width: '80%',
+        fontWeight: 'bold',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '5%',
+            width: '100%',
+
+        }
     },
 }))
 
@@ -47,7 +59,7 @@ export function MapIcon({
                                         <img className={classes.icons} src={item.images} alt='Icons' />
                                     </Box>
 
-                                    <h4 className={classes.subText} style={{color:`${color}`}}>{item.text}</h4>
+                                    <h4 className={classes.subText} style={{ color: `${color}` }}>{item.text}</h4>
                                 </Box>
                             </Grid>
 

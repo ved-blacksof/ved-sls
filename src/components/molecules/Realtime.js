@@ -11,9 +11,7 @@ import { GeneralHeading, MainContainer } from '../atoms'
 const useStyles = makeStyles((theme) => ({
     realText: {
         marginTop: '10%',
-        // width:'70%',
         [theme.breakpoints.down('sm')]: {
-            // width: '90%',
             margin: "20% auto"
         },
     },
@@ -24,20 +22,18 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3%'
     },
     box: {
-        width: '5%',
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         flexDirection: 'column',
-        [theme.breakpoints.down('xs')]: {
-            width: '20%'
+        [theme.breakpoints.down('sm')]: {
+
         },
     },
     btn: {
         width: '50px',
         height: '50px',
         display: 'flex',
-        // justifyContent: 'center',
         alignItems: 'center',
         border: '2px solid #182AC3',
         marginTop: '10%',
@@ -46,23 +42,26 @@ const useStyles = makeStyles((theme) => ({
             background: '#182AC3',
             color: 'white'
         },
-        [theme.breakpoints.down('xs')]: {
-            // width: '20%'
+        [theme.breakpoints.down('sm')]: {
+            width: '40px',
+            height: '40px',
         },
     },
+
+    //slider section
     slider: {
-        width: '95%',
+        width: '100%',
         justifyContent: 'space-around',
-        [theme.breakpoints.down('xs')]: {
-            width: '90%'
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
         }
     },
     card: {
-        boxShadow: '0px 0px 40px #0000001F',
+        boxShadow: '0px 0px 20px #0000001F',
         margin: "0% 1rem",
         borderBottom: '3px solid #354B9C',
         background: 'white',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '80%'
         }
     },
@@ -84,15 +83,15 @@ const useStyles = makeStyles((theme) => ({
             color: '#182AC3',
             fontWeight: 'bold'
         },
-        [theme.breakpoints.down('sm')]:{
-            fontSize:'.6rem'
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '.6rem'
         }
     },
     cardHead: {
         // font: 'normal normal normal 1.1rem Access',
         color: 'black',
         marginTop: '3%',
-        fontWeight:'bold'
+        fontWeight: 'bold'
 
     },
     cardSubHead: {
@@ -102,12 +101,12 @@ const useStyles = makeStyles((theme) => ({
     readMore: {
         // font: 'normal normal normal 1.2rem BebasNeue',
         color: '#182AC3',
-        fontFamily:'BebasNeue',
+        fontFamily: 'BebasNeue',
         marginTop: '3%',
     },
     filters: {
         display: 'flex',
-        margin: '0% 5%',
+        marginLeft: '70px',
         "& h6": {
             color: '#182AC3',
             fontWeight: 'bold',
@@ -117,12 +116,17 @@ const useStyles = makeStyles((theme) => ({
                 color: '#D9393E'
             }
         },
+        [theme.breakpoints.down('sm')]: {
+            // fontSize:'1rem',
+            marginLeft: '0%',
+
+        }
     },
     boxes: {
         margin: "1% 1rem",
         width: '17vw',
         height: '17vw',
-        boxShadow: '0px 0px 40px #0000001F',
+        boxShadow: '0px 0px 20px #0000001F',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
@@ -137,6 +141,12 @@ const useStyles = makeStyles((theme) => ({
             width: '100%',
             maxHeight: '100%',
         },
+        [theme.breakpoints.down('sm')]: {
+            width:'12rem',
+            height:'12rem'
+        },
+       
+        
     },
     imgBox: {
         height: "100%",
@@ -289,7 +299,7 @@ export function Realtime({
                                 {
                                     squarecarddata ? squarecarddata.map((item, index) => {
                                         return (
-                                            <Box style={{}}>
+                                            <Box >
                                                 <Box className={classes.boxes}>
                                                     <Box className={classes.imgBox}>
                                                         <img src={item.images} alt="Mission Icon" />

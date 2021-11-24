@@ -20,20 +20,20 @@ const useStyles = makeStyles((theme) => ({
     flicks: {
         width: '100%',
         "& .flicking-pagination": {
-            bottom: '4%',   
+            bottom: '4%',
         },
-        "& .flicking-pagination-bullet" :{
+        "& .flicking-pagination-bullet": {
             width: '2.5rem !important',
             height: '.20rem !important',
             margin: '0 .2rem !important',
             borderRadius: '1rem !important',
             backgroundColor: 'rgb(255, 255, 255) !important',
-          },
-         "& .flicking-pagination-bullet-active":{
+        },
+        "& .flicking-pagination-bullet-active": {
             backgroundColor: '#ff0000 !important'
-          }
+        }
     },
-    BoxWidth:{
+    BoxWidth: {
         height: '100%',
         width: '100%',
         display: 'flex',
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     BoxImages: {
-        padding:'30% 0%',
+        paddingTop: '30%',
         width: '100%',
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url('/images/man-worker-firld-by-solar-panels.png')`,
         backgroundPosition: 'center',
@@ -56,7 +56,8 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '3%',
         [theme.breakpoints.down('sm')]: {
             backgroundPosition: 'top',
-            
+            paddingBottom: '5%',
+
         }
     },
     subHead: {
@@ -67,12 +68,13 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '1',
         font: 'normal normal normal 3rem BebasNeue',
         [theme.breakpoints.down('sm')]: {
-           fontSize:'2rem'
+            fontSize: '2rem'
         },
     },
-    subSMTxt:{
+    subSMTxt: {
         width: '30%',
         [theme.breakpoints.down('sm')]: {
+            width: '80%',
             display: 'none'
         },
     },
@@ -80,10 +82,18 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
-            fontSize:'1rem'
-         },
-        
+            // fontSize: '.8rem'
+        },
+
     },
+    hr: {
+        margin: '5px 0%',
+        width: '25%',
+        boxShadow: 'none',
+        [theme.breakpoints.down('sm')]: {
+            width: '60%'
+        },
+    }
 
 }))
 
@@ -108,8 +118,8 @@ export function Reshape() {
                     <Box className={classes.BoxWidth}>
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                            <hr style={{width:'25%'}}/>
-                            <br/>
+                            <hr className={classes.hr} />
+                            <br />
                             <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
@@ -118,7 +128,7 @@ export function Reshape() {
                     <Box className={classes.BoxWidth}>
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                            <hr style={{width:'25%'}}/>
+                            <hr className={classes.hr} />
                             <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
@@ -127,7 +137,7 @@ export function Reshape() {
                     <Box className={classes.BoxWidth}>
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                            <hr style={{width:'25%'}}/>
+                            <hr className={classes.hr} />
                             <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>
@@ -136,7 +146,7 @@ export function Reshape() {
                     <Box className={classes.BoxWidth}>
                         <Box className={classes.BoxImages} >
                             <h3 className={classes.txt}>RESHAPING THE FUTURE OF THE WORLD</h3>
-                            <hr style={{width:'25%'}}/>
+                            <hr className={classes.hr} />
                             <h6 className={classes.subSMTxt}>We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.</h6>
                             <br />
                             <h4 className={classes.subTxt}>MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS</h4>

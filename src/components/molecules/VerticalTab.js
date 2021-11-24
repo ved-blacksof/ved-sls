@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         paddingLeft:'1rem',
         [theme.breakpoints.down('sm')]: {
-           fontSize:'1rem'
+           fontSize:'.8rem'
         },
     },
     rightBox: {

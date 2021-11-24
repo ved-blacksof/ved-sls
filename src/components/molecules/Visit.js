@@ -21,10 +21,11 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '2%',
         // fontSize:'1rem',
         [theme.breakpoints.down('sm')]: {
-            width: '60%'
+            width: '40%',
+        marginTop: '4%'
         },
         [theme.breakpoints.down('xs')]: {
-            width: '70%'
+            width: '60%'
         },
     }
 }))
@@ -41,12 +42,9 @@ export function Visit({
                 <h4 className={classes.btmText}> {goto}</h4>
 
                 <Buttons
-                    disableRipple
-                    disabl
                     className={classes.btns}
                     title={title}
                     arrowIcon="./images/Icon feather-arrow-right.svg"
-
                 />
             </Box>
         </MainContainer>

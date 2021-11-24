@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         margin: '5% 0%',
         '& div': {
-            width: '28%',
+            width: '35%',
             padding: '1% 2%',
             position: 'absolute',
             lineHeight: '1',
@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
             zIndex:'1',
             [theme.breakpoints.down('sm')]:{
                 width:'38%'
+            },
+            [theme.breakpoints.down('xs')]:{
+                width:'55%'
             },
             '&::before': {
                 content: "''",
@@ -45,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
         right: '25%',
     },
     power: {
-        fontSize: '3rem',
+        // fontSize: '3rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '2rem'
         },

@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles, Box, Container, IconButton, Toolbar, AppBar } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
+    mainPadding: {
+        background: 'white', paddingTop: '4%'
+
+    },
     footerMain: {
         background: 'white',
         margin: '0% 1%',
@@ -24,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         width: '40%',
         marginTop: '2%',
         [theme.breakpoints.down('sm')]: {
-            width: '70%'
+            width: '80%'
         }
     },
     linkList: {
@@ -32,19 +36,24 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-around',
         alignItems: 'baseline',
         marginTop: '5%',
-        [theme.breakpoints.down('xs')]: {
-            flexDirection: 'column'
+        [theme.breakpoints.down('sm')]: {
+            // flexDirection: 'column'
+            flexWrap: 'wrap                                                                                                                                      '
         }
     },
     linkUL: {
+        width: '',
         listStyle: 'none',
+        [theme.breakpoints.down('sm')]: {
+            width: '45%'
+        },
         '& li': {
             paddingTop: '1.5rem'
         },
         '& li:first-child': {
             font: 'normal normal bold 1rem Access',
-            [theme.breakpoints.down('xs')]: {
-                fontSize: '1.5rem'
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1rem'
             }
         }
     },
@@ -53,8 +62,8 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'none',
         color: 'black',
         cursor: 'pointer',
-        [theme.breakpoints.down('xs')]: {
-            fontSize: '1rem'
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '.8rem'
         }
     },
     copyBox: {
@@ -70,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
         '& i': {
             padding: '0rem .5rem'
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             flexDirection: 'column-reverse',
 
         }
@@ -78,15 +87,27 @@ const useStyles = makeStyles((theme) => ({
 
 }))
 
+
 export function Footer() {
     const classes = useStyles()
 
-    const [show, setShow] = React.useState(false)
     const [show1, setShow1] = React.useState(false)
+    const [show, setShow] = React.useState(false)
+
+    const [viewmore1, setViewmore1] = useState("+ VIEW MORE")
+    const [viewmore, setViewmore] = useState("+ VIEW MORE")
+
+    const view1 = () => {
+        show1 === false ? setViewmore1("- VIEW LESS") || setShow1(true) : setViewmore1("- VIEW MORE") || setShow1(false)
+    }
+    const view = () => {
+        show === false ? setViewmore("- VIEW LESS") || setShow(true) : setViewmore("- VIEW MORE") || setShow(false)
+    }
 
     const history = useHistory();
+
     return (
-        <Box style={{ background: 'white', paddingTop: '5%' }}>
+        <Box className={classes.mainPadding} style={{}}>
             <Box className={classes.footerMain}>
                 <Box className={classes.headBox}>
                     <img className=" col-md-2" src={'/images/Layer_x0020_1-1.svg'} alt="SLS Icon" />
@@ -115,12 +136,7 @@ export function Footer() {
                         <li>INDUSTRIES</li>
                         <li> <a className={classes.links} href="/iot"> IoT PLATFORM </a> </li>
                         <li> <a className={classes.links} href="/cloud"> CLOUD SOLUTIONS </a> </li>
-                        <li> <a className={classes.links} href="/"> E-MOBILITY </a> </li>
-                        <li> <a className={classes.links}
-                            onClick={() => show1 === false ? setShow1(true) : setShow1(false)}
-                            style={{ color: '#182AC3' }}> + VIEW MORE  </a> </li>
-
-
+                        {/* <li> <a className={classes.links} href="/"> E-MOBILITY </a> </li> */}
                         {show1 ?
                             <>
                                 {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
@@ -136,6 +152,14 @@ export function Footer() {
                             </>
                             : null
                         }
+                        <li>
+                            <a
+                                className={classes.links}
+                                onClick={view1}
+                                style={{ color: '#182AC3' }}> {viewmore1}
+                            </a>
+                        </li>
+
                     </ul>
 
 
@@ -145,25 +169,31 @@ export function Footer() {
                         <li> <a className={classes.links} href="/ipcore"> ASIC/FPGA/SOC DESIGN SERVICES </a> </li>
                         <li> <a className={classes.links} href="/highspeed"> HIGH SPEED PCB DESIGN SERVICES </a> </li>
                         <li> <a className={classes.links} href="/softdev"> SOFTWARE DEVELOPMENT  </a> </li>
-                        <li> <a className={classes.links}
-                            onClick={() => { show === false ? setShow(true) : setShow(false) }}
-                            style={{ color: '#182AC3' }}> + VIEW MORE  </a> </li>
-                        {show ?
-                            <>
-                                {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
+                        {
+                            show ?
+                                <>
+                                    {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
 
-                                <li> <a className={classes.links} href="/electronics"> ELECTRONICS MANUFACTURING </a> </li>
-                                <li> <a className={classes.links} href="/testing">TESTING AND CALIBRATION </a> </li>
-                                <li> <a className={classes.links} href="/ml"> ML & AI </a> </li>
-                            </>
-                            : null
+                                    <li> <a className={classes.links} href="/electronics"> ELECTRONICS MANUFACTURING </a> </li>
+                                    <li> <a className={classes.links} href="/testing">TESTING AND CALIBRATION </a> </li>
+                                    <li> <a className={classes.links} href="/ml"> ML & AI </a> </li>
+                                </>
+                                : null
                         }
+                        <li>
+                            <a className={classes.links}
+                                onClick={view}
+                                style={{ color: '#182AC3' }}> {viewmore}
+                            </a>
+                        </li>
                     </ul>
 
 
 
                     <ul className={classes.linkUL}>
-                        <li><a className={classes.links} href="/contact"> CONTACT US </a> </li>
+                        <li>  CONTACT US </li>
+
+                        <li><a className={classes.links} href="/contact"> CAREERS </a> </li>
                         {/* <li> <a className={classes.links} href="/careers"> CAREERS </a> </li> */}
                     </ul>
 
@@ -172,11 +202,8 @@ export function Footer() {
 
                 </Box>
 
-                <br />
-                <br />
-                <br />
 
-                <hr />
+                <hr className='hr' />
 
                 <div className={classes.copyBox}>
                     <a> System Level Solutions Inc. Copyright &copy; 2021 </a>

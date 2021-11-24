@@ -2,6 +2,8 @@ import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ourexpertise } from '../MachineLearningTemplate/Ourexpertise'
+import { OurexpertiseBlue } from './OurexpertiseBlue'
 
 export function IPcoreTemplate() {
     return (
@@ -54,6 +56,7 @@ export function IPcoreTemplate() {
                 title="Visit the Website"
             />
 
+            <OurexpertiseBlue />
 
             <Footer />
         </div>

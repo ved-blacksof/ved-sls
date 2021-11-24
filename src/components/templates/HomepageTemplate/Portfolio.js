@@ -86,8 +86,6 @@ export function Portfolio({
                 </Box> */}
                 
                 <br/>
-                <br/>
-                <br/>
 
                 <Visit 
                     title="Know More"

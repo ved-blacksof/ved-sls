@@ -4,7 +4,7 @@ import { MainContainer } from '../../atoms'
 
 
 const useStyles = makeStyles((theme) => ({
-    
+
     container: {
         width: '100%',
         marginTop: '10%',
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '100%',
             flexWrap: 'wrap',
-            justifyContent:'space-around'
+            justifyContent: 'space-around'
         },
 
     },
@@ -24,7 +24,10 @@ const useStyles = makeStyles((theme) => ({
         padding: '3% 0%',
         lineHeight: '1',
         [theme.breakpoints.down('sm')]: {
-            width: '30%',
+            width: '50%',
+            height: '6rem',
+            padding: '3% 2%',
+
         },
     },
     head: {
@@ -43,10 +46,12 @@ const useStyles = makeStyles((theme) => ({
     },
     container1: {
         display: 'flex',
+        marginTop: '2%',
         justifyContent: 'space-between',
         [theme.breakpoints.down('sm')]: {
             flexWrap: 'wrap',
             alignItems: 'center',
+            marginTop: '0%',
             flexDirection: 'column',
         }
     },

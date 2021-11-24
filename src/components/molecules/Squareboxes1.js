@@ -30,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
         width: '50%'
     },
     boxes: {
-        width: '18vw',
-        height: '18vw',
+        width: '20vw',
+        height: '20vw',
         border: '1px solid #0000000F',
         background: 'white',
         textAlign: 'center',
@@ -58,9 +58,9 @@ const useStyles = makeStyles((theme) => ({
     },
     subTitle: {
         color: '#182AC3',
-        font: 'normal normal bold 1.2rem Access',
-        [theme.breakpoints.down('sm')]: {
-           fontSize:'1rem'
+        fontWeight:'bold',
+        [theme.breakpoints.down('xs')]: {
+            fontSize:'.8rem'
         },
     },
     reddiv: {
@@ -87,7 +87,9 @@ export function Squareboxes1({
         <MainContainer>
             <Container fixed className={classes.container1}>
                 <h2 className={classes.mainTitle}> {maintitle} </h2>
-
+<br/>
+<br/>
+<br/>
                 <Box className={classes.mainBox}>
 
                     {

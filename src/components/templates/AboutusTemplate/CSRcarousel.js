@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, Container, Box, Button } from '@material-ui/core'
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
-import { Arrow, Pagination } from "@egjs/flicking-plugins";
+import { Arrow, AutoPlay, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
             bottom: '8%',
             left: '11%',
             [theme.breakpoints.down('sm')]: {
-                left: '8%',
+                left: '5%',
+                bottom:'1%'
             },
         },
         "& .flicking-pagination-bullet": {
@@ -67,12 +68,12 @@ const useStyles = makeStyles((theme) => ({
         padding: '22% 0%',
         margin: "0% 2%",
         position: 'relative',
-        // [theme.breakpoints.down('sm')]: {
-        //     height: '40vh',
-        // },
-        // [theme.breakpoints.down('xs')]: {
-        //     height: '30vh',
-        // }
+        [theme.breakpoints.down('sm')]: {
+            padding: '30% 0%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '50% 0%'
+        },
     },
     iconBox: {
         width: '8vw',
@@ -85,12 +86,13 @@ const useStyles = makeStyles((theme) => ({
         top: '20%',
         left: '5%',
         zIndex: '1',
-        [theme.breakpoints.down('sm')]: {
-            // width: '4rem',
-            // height: '3.5rem',
+        [theme.breakpoints.down('xs')]: {
+            width: '3rem',
+            height: '3rem', 
+            left: '2%',
+            top: '20%'
             // display:'none'
         }
-
     },
     icon: {
         width: '55%'
@@ -103,15 +105,23 @@ const useStyles = makeStyles((theme) => ({
         padding: '5%',
         top: '30%',
         left: '14%',
-        [theme.breakpoints.down('sm')]: {
-
+        [theme.breakpoints.down('xs')]: {
+            width: '10rem',
+            height: '9rem',
+            top: '36%',
+            left: '10%',
         },
     },
     blueBoxPara: {
-        width: '100%',
-        fontSize: '1rem',
+        width: '100%',  
         [theme.breakpoints.down('sm')]: {
-            fontSize: '.8rem'
+            fontSize: '.8rem',
+            height:'4.5rem',
+            overflow:'hidden'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '.8rem',
+            height:'4.5rem',
         },
     },
     btn: {
@@ -127,10 +137,9 @@ const useStyles = makeStyles((theme) => ({
         top: '5%',
         left: '40%',
         zIndex: '-1',
-        [theme.breakpoints.down('xs')]: {
-            // width: '80%',
-            // left: '8%',
-            // top: '10%'
+        [theme.breakpoints.down('sm')]: {
+            left: '20%',
+            width: '80%',
         },
         '& img': {
             width: '100%',
@@ -147,7 +156,11 @@ export function CSRcarousel({
 
     const classes = useStyles()
 
-    const Paginations = [new Pagination({ type: 'bullet' })]
+    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
+
+    const Paginations = new Pagination({ type: 'bullet' })
+
+    const plugins = [autoPlugins, Paginations]
 
     return (
         <>
@@ -164,7 +177,7 @@ export function CSRcarousel({
                         <Flicking
                             selector="center"
                             // plugins={Fades}
-                            plugins={Paginations}
+                            plugins={plugins}
                             // align="center"
                             defaultIndex='1'
                             circular={true}

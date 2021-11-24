@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             marginTop: '5%',
             width: '100%',
+            display:'none'
 
         },
         "& img": {

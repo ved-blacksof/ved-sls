@@ -14,11 +14,12 @@ const useStyles = makeStyles((theme) => ({
     },
     imageBox: {
         width: '70%',
-        background: 'white',
+        // background: 'white',
         // padding: '25% 0%',
         // backgroundPosition: 'center',
         // backgroundRepeat: 'no-repeat',
         // backgroundSize: 'cover',
+        height:'16vw',
         background: 'white',
         borderRadius: '1rem',
         position: 'relative ',
@@ -28,16 +29,21 @@ const useStyles = makeStyles((theme) => ({
             width: '90%',
             justifyContent: 'center',
             marginLeft: '0%',
+            height:'20rem',
+        },
+        [theme.breakpoints.down('xs')]:{
+            height:'50vw'
         }
     },
     productImageBox:{
-        height:'16vw',
-        // background: 'white',
-        // borderRadius: '1rem',
+        height:'100%',
+        width:'100%',
+        borderRadius: '1rem',
         overflow:'hidden',
         display:'flex',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+      
     },
     image:{
         width:'100%',

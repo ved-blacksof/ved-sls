@@ -5,7 +5,7 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
-import { MainContainer } from '../atoms';
+import { GeneralHeading, MainContainer } from '../atoms';
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -40,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
             width: '100%',
             maxHeight: '100%',
         },
+        [theme.breakpoints.down('sm')]: {
+            width: '12rem',
+            height: '12rem'
+        },
     },
     paraBox: {
         width: '80%',
@@ -63,9 +67,15 @@ const useStyles = makeStyles((theme) => ({
 export function Squareboxes({
     maintitle,
     title,
+    title1,
+    filters,
+    image,
     subtitle,
+    subtitle1,
     redline,
-    data
+    data,
+    br
+
 }) {
 
     const classes = useStyles()
@@ -73,13 +83,15 @@ export function Squareboxes({
         <MainContainer>
             <Container fixed className={classes.container1}>
                 <h2 className={classes.mainTitle}> {maintitle} </h2>
-                <Box className={classes.paraBox}>
-                    <h3 className={classes.head}>{title}</h3>
-                    {
-                        redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
-                    }
-                    <h4 className={classes.portSubHead}>{subtitle}</h4>
-                </Box>
+                <GeneralHeading
+                    title={title}
+                    title1={title1}
+                    image={image}
+                    subtitle={subtitle}
+                    subtitle1={subtitle1}
+                    redline={redline}
+                    br={br}
+                />
 
                 <Box className={classes.mainBox}>
 

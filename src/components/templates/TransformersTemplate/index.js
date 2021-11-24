@@ -26,11 +26,7 @@ export function TransformersTemplate() {
                 />
             </GridBlue>
 
-            <Application
-
-            />
-
-
+            <Application />
 
             <Visit
                 goto="Want to know more about this offering?"

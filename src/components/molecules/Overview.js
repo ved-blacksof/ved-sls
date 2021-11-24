@@ -24,6 +24,12 @@ const useStyles = makeStyles((theme) => ({
             // width:'100%',
         }
     },
+    para: {
+        lineHeight: '1.5',
+        [theme.breakpoints.down('sm')]: {
+
+        }
+    },
     portSubHead: {
         width: '90%',
     },
@@ -41,13 +47,20 @@ const useStyles = makeStyles((theme) => ({
         border: 'none',
     },
     UL: {
-        font: 'normal normal normal 1rem Access',
         color: 'white',
+        textIndent: '-18px',
+        margin: '-10px',
         listStyle: 'inside',
-        // margin: '3% 0%'
+        [theme.breakpoints.down('sm')]: {
+            textIndent: '-15px',
+            margin: '-0px',
+        }
     },
     LI: {
-        margin: '1% '
+        margin: '1% ',
+        [theme.breakpoints.down('sm')]: {
+
+        }
     },
 
 }))
@@ -81,7 +94,7 @@ export function Overview({
                         <img src={'/images/Component 4 – 1.svg'} />
                     </Box>
 
-                    <Box style={{lineHeight:'1.6'}}>
+                    <Box className={classes.para} >
                         <h4 className={classes.portSubHead}>{sub1}</h4>
 
                         <h4 className={classes.portSubHead}>{sub2}</h4>
@@ -98,10 +111,9 @@ export function Overview({
                                 <Box className={classes.list}>
                                     <Container fixed className={classes.box1}>
                                         <ul className={classes.UL}>
-
-                                            <li className={classes.LI}>{li1}</li>
-                                            <li className={classes.LI}>{li2}</li>
-                                            <li className={classes.LI}>{li3} </li>
+                                            <h6><li className={classes.LI}>{li1}</li></h6>
+                                            <h6><li className={classes.LI}>{li2}</li></h6>
+                                            <h6><li className={classes.LI}>{li3}</li></h6>
                                         </ul>
                                     </Container>
                                 </Box>

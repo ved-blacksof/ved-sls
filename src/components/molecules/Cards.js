@@ -55,12 +55,15 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        // height:'12rem',
+        height:'12vw', 
         background: 'white',
         "& img": {
-            maxWidth: '100%',
-            height: '100%'
-        }
+            width: '100%',
+            maxHeight: '100%'
+        },
+        [theme.breakpoints.down('sm')]: {
+            height:'fit-content', 
+        },
     },
     head: {
         color: 'black'
@@ -82,24 +85,27 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     productName: {
-        font: 'normal normal bold 1rem Access',
+        // font: 'normal normal bold 1rem Access',
+        fontWeight:'bold',
         color: 'black',
         textAlign: 'left',
 
     },
     productDetail: {
+        height:'10rem',
+        overflow:'hidden',
         color: 'black',
         marginTop: '.5rem',
         textAlign: 'left',
         [theme.breakpoints.down('sm')]: {
-            display: 'none'
+            height:'4.8rem',
         },
     },
     readMore: {
         marginTop: '10%',
         textAlign: 'left',
         "& a": {
-            font: 'normal normal normal 1.2rem BebasNeue',
+            fontFamily:'BebasNeue',
             color: '#182AC3',
         }
     }
@@ -142,9 +148,11 @@ export function Cards({
 
                                     <Box className={classes.textBox}>
                                         <h4 className={classes.productName} >{item.productname}</h4>
-                                        <h6 className={classes.productDetail} style={{ color: 'black', textAlign: 'left', }}>{item.para}</h6>
+                                       {
+                                           item.para ?  <h6 className={classes.productDetail} style={{ color: 'black', textAlign: 'left', }}>{item.para}</h6> : ''
+                                       }
                                         {
-                                            item.read ? <p className={classes.readMore}><a href="/" >READ MORE</a></p> : ''
+                                            item.read ? <h4 className={classes.readMore}><a href="/" >READ MORE</a></h4> : ''
                                         }
                                     </Box>
                                 </Box>

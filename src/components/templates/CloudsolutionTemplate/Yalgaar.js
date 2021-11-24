@@ -11,7 +11,9 @@ const useStyles = makeStyles((theme) => ({
         margin: '10% 0%',
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column'
+            flexDirection: 'column',
+            margin: '20% 0%',
+
         },
         "& h6": {
             color: 'black',
@@ -32,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
         width: '50%',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-            margin:'10% 0%'
+            margin: '10% 0%',
+            display: 'none'
         },
     },
     yImage: {
@@ -93,6 +96,8 @@ export function Yalgaar({
                         <img src={'./images/Group 49262.png'} />
                     </Box>
                 </Box>
+
+
                 {/* <Box style={{ display:'flex', justifyContent:'center',flexDirection:'column', alignItems:'center',marginTop:"5%" }}>
                     <h4 className={classes.btmText}> Start your journey with Yalgaar now!</h4>
 

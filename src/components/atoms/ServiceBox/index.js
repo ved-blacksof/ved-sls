@@ -5,7 +5,7 @@ import React from 'react'
 const useStyles = makeStyles((theme) => ({
     boxes: {
         width: '20vw',
-        height: '18vw',
+        height: '20vw',
         padding: '10%',
         margin: '20px 0px',
         border: '1px solid #DCDCDC',
@@ -13,6 +13,13 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '15rem',
             height: '15rem',
+            margin: '10px 10px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '14rem',
+            height: '14rem',
+            marginTop: '15px',
+
         },
         '& h4': {
             paddingTop: '4%',
@@ -36,20 +43,23 @@ export function ServiceBox({
     li1,
     li2,
     li3,
-    style
+    style,
+    className
 }) {
     const classes = useStyles()
     return (
-        <Box className={classes.boxes} style={style}>
-            <Box className={classes.images}>
-                <img src={imgs} />
+        <Box className={className}>
+            <Box className={classes.boxes} style={style}>
+                <Box className={classes.images}>
+                    <img src={imgs} />
+                </Box>
+                <h4 style={{ color: '#182AC3' }}>{title}</h4>
+                <h6 style={{ color: 'black' }}>- {li1}</h6>
+                <h6 style={{ color: 'black' }}>- {li2}</h6>
+                {
+                    li3 ? <h6 style={{ color: 'black' }}>- {li3}</h6> : ''
+                }
             </Box>
-            <h4 style={{ color: '#182AC3' }}>{title}</h4>
-            <h6 style={{ color: 'black' }}>- {li1}</h6>
-            <h6 style={{ color: 'black' }}>- {li2}</h6>
-            {
-                li3 ? <h6 style={{ color: 'black' }}>- {li3}</h6> : ''
-            }
         </Box>
     )
 }

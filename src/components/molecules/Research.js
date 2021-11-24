@@ -18,7 +18,7 @@ import { MainContainer } from '../atoms';
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
-        marginTop: "10%",
+        margin: "12% 0%",
         position: 'relative',
     },
     flicks: {

@@ -51,7 +51,6 @@ export function EvchargingTemplate() {
 
             <MobileApplication />
 
-
             <Visit
                 title="Visit the website"
             />
