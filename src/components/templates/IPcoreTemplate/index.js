@@ -3,6 +3,7 @@ import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
 import { Ourexpertise } from '../MachineLearningTemplate/Ourexpertise'
+import { Industries } from './Industries'
 import { OurexpertiseBlue } from './OurexpertiseBlue'
 
 export function IPcoreTemplate() {
@@ -51,13 +52,15 @@ export function IPcoreTemplate() {
                 imageBG="./images/FPGA_Website_Image (2).png"
             />
 
+
+            <OurexpertiseBlue />
+
+            <Industries />
+
             <Visit
                 goto="Know more about our solution for Railways."
                 title="Visit the Website"
             />
-
-            <OurexpertiseBlue />
-
             <Footer />
         </div>
     )

@@ -4,8 +4,11 @@ import { expertiseblue } from '../../molecules/PortfolioData'
 import { GridBlue, MainContainer, MapIcon, MapIcon1 } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
-    margin: {
-        margin: '20% 0%'
+    margins: {
+        margin: '10% 0%',
+        [theme.breakpoints.down('sm')]: {
+            margin: '20% 0%',
+        }
     },
     mainContainer: {
         display: 'flex',
@@ -51,7 +54,7 @@ export function OurexpertiseBlue({
     const classes = useStyles()
     return (
         <>
-            <Box className={classes.margin}>
+            <Box className={classes.margins}>
                 <GridBlue>
                     <MainContainer>
                         <Box style={{ padding: '10% 0%' }}>

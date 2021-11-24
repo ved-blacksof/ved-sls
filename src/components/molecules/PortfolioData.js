@@ -1,23 +1,23 @@
 export const research = [
     {
-        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
-        text:"research"
+        images: "./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text: "research"
     },
     {
-        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
-        text:"research"
+        images: "./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text: "research"
     },
     {
-        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
-        text:"research"
+        images: "./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text: "research"
     },
     {
-        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
-        text:"research"
+        images: "./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text: "research"
     },
     {
-        images:"./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
-        text:"research"
+        images: "./images/side-view-of-data-analyst-pointing-with-finger-at--4DGBGUW.png",
+        text: "research"
     },
 ]
 
@@ -266,7 +266,7 @@ export const yalgar = [
         text: 'IoT and M2M Connected Devices'
     },
     {
-        images: './images/BlueIcons -20-03.svg',    
+        images: './images/BlueIcons -20-03.svg',
         text: 'Real-time Tracking'
     },
     {
@@ -405,20 +405,20 @@ export const solarhardware = [
         images: './images/Micro Inverter 2 (1).png',
         productname: 'MSI1500',
         para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
-        read:'read'
+        read: 'read'
     },
     {
         images: './images/DKS_9053e.png',
         productname: 'MSI1500',
         para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
-        read:'read'
+        read: 'read'
 
     },
     {
         images: './images/1.0-solar.png',
         productname: 'MSI1500',
         para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
-        read:'read'
+        read: 'read'
 
     },
 ]
@@ -431,7 +431,7 @@ export const solarsoftware = [
         images: './images/SunSight_Live_final_new_kept-on-website-page-.png',
         productname: 'SunSights Live',
         para: 'SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more.',
-        read:'read'
+        read: 'read'
 
     },
     // {
@@ -456,13 +456,13 @@ export const gaminghardware = [
         images: './images/iot_bg_cloud4.png',
         productname: 'Smart Targets',
         para: 'Smart Targets are IoTargeting App controlled reactive targets powered with advanced wireless technology for a real-time practice and gaming experience. Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
-        read:'read'
+        read: 'read'
     },
     {
         images: './images/iot_bg_just_target.png',
         productname: 'Just Targets',
         para: 'Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. Leveraging reactive touch technology, Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.',
-        read:'read'
+        read: 'read'
     },
 
 ]
@@ -471,7 +471,7 @@ export const gamingsoftware = [
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         productname: 'IoTargeting Mobile App',
         para: 'The IoTargeting Mobile App is an exclusively designed Android and iOS app that takes the IoTargeting gaming experience to the next level. The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.',
-        read:'read'
+        read: 'read'
     },
 ]
 
@@ -479,7 +479,7 @@ export const gamingsoftware = [
 export const gamingapplications = [
     {
         images: './images/iot_photostrip_img_4.png',
-        productname: 'Gaming',  
+        productname: 'Gaming',
 
     },
     {
@@ -497,29 +497,29 @@ export const gamingapplications = [
 
 export const expertise = [
     {
-        icon:'./images/Group 82620.svg',
-        h4:'Deep Learning',
-        h6:'Boost the performance of your forecasting, decision-making, and other operations with Deep Learning technology. We offer customized products and services using this more sophisticated, advanced and automated version of Machine Learning to help you attain business success and launch class-apart products.'
+        icon: './images/Group 82620.svg',
+        h4: 'Deep Learning',
+        h6: 'Boost the performance of your forecasting, decision-making, and other operations with Deep Learning technology. We offer customized products and services using this more sophisticated, advanced and automated version of Machine Learning to help you attain business success and launch class-apart products.'
     },
     {
-        icon:'./images/AI.svg',
-        h4:'AI-Based Solutions',
-        h6:'We offer innovative and cutting-edge AI-based products and services that help solve your biggest business challenges through intelligent decision-making. Reinvent how you work at lower costs and minimize errors with our wide spectrum of solutions.'
+        icon: './images/AI.svg',
+        h4: 'AI-Based Solutions',
+        h6: 'We offer innovative and cutting-edge AI-based products and services that help solve your biggest business challenges through intelligent decision-making. Reinvent how you work at lower costs and minimize errors with our wide spectrum of solutions.'
     },
     {
-        icon:'./images/Layer_7.svg',
-        h4:'Natural Language Processing',
-        h6:'We have precedented expertise in providing Natural Language Processing Services leveraging our best-in-class AI tools. Our team of NLP Experts help you extract, process, analyse, and understand structured data to fetch insights that matter.'
+        icon: './images/Layer_7.svg',
+        h4: 'Natural Language Processing',
+        h6: 'We have precedented expertise in providing Natural Language Processing Services leveraging our best-in-class AI tools. Our team of NLP Experts help you extract, process, analyse, and understand structured data to fetch insights that matter.'
     },
     {
-        icon:'./images/Group 82615.svg',
-        h4:'Internet of Things',
-        h6:'Our Internet of Things expertise helps businesses set up central data repository to house real-time sensor data and leverage data science for predictive maintenance of your remote assets helping you reduce downtime and boost service quality.'
+        icon: './images/Group 82615.svg',
+        h4: 'Internet of Things',
+        h6: 'Our Internet of Things expertise helps businesses set up central data repository to house real-time sensor data and leverage data science for predictive maintenance of your remote assets helping you reduce downtime and boost service quality.'
     },
     {
-        icon:'./images/Group 82617.svg',
-        h4:'Machine Learning',
-        h6:'We leverage ML to build powerful solutions that automate your processes, reducing human intervention and pacing up operational efficiency. Our custom solutions are designed with a business-first approach to solve your challenges and bring about transformation at the system level.'
+        icon: './images/Group 82617.svg',
+        h4: 'Machine Learning',
+        h6: 'We leverage ML to build powerful solutions that automate your processes, reducing human intervention and pacing up operational efficiency. Our custom solutions are designed with a business-first approach to solve your challenges and bring about transformation at the system level.'
     },
 
 ]
@@ -527,46 +527,46 @@ export const expertise = [
 
 export const highspeed = [
     {
-        count:'01',
-        uli:'Requirements Analysis',
-        firstli:'Design and Architecture specification',
-        secli:'',
-        thirdli:'',
-        fourthli:'',
+        count: '01',
+        uli: 'Requirements Analysis',
+        firstli: 'Design and Architecture specification',
+        secli: '',
+        thirdli: '',
+        fourthli: '',
     },
     {
-        count:'02',
-        uli:'Design',
-        firstli:'Electronic component engineering',
-        secli:'Power and Clock design',
-        thirdli:'Enclosure Modeling, CAD Design',
+        count: '02',
+        uli: 'Design',
+        firstli: 'Electronic component engineering',
+        secli: 'Power and Clock design',
+        thirdli: 'Enclosure Modeling, CAD Design',
     },
     {
-        count:'03',
-        uli:'Implementation',
-        firstli:'Schematic',
-        secli:'Placement and Routing',
-        thirdli:'Signal Integrity'
+        count: '03',
+        uli: 'Implementation',
+        firstli: 'Schematic',
+        secli: 'Placement and Routing',
+        thirdli: 'Signal Integrity'
     },
     {
-        count:'04',
-        uli:'Prototyping',
+        count: '04',
+        uli: 'Prototyping',
     },
     {
-        count:'05',
-        uli:'Translation services',
-        firstli:'Fabrication',
-        secli:'Assembly - In house',
-        thirdli:'Packaging',
-        fourthli:'Rapid Prototyping for Enclosures',
+        count: '05',
+        uli: 'Translation services',
+        firstli: 'Fabrication',
+        secli: 'Assembly - In house',
+        thirdli: 'Packaging',
+        fourthli: 'Rapid Prototyping for Enclosures',
     },
     {
-        count:'06',
-        uli:'Diagnostics',
-        firstli:'Reliability analysis',
-        secli:'Thermal analysis',
-        thirdli:'Pre and post layout signal integrity check and cross talk analysis',
-        fourthli:'EMI and EMC analysis',
+        count: '06',
+        uli: 'Diagnostics',
+        firstli: 'Reliability analysis',
+        secli: 'Thermal analysis',
+        thirdli: 'Pre and post layout signal integrity check and cross talk analysis',
+        fourthli: 'EMI and EMC analysis',
     },
 
 ]
@@ -576,63 +576,63 @@ export const highspeed = [
 export const technologystack = [
     {
         images: './images/BlueIcons -20-01.svg',
-        number:'01',
+        number: '01',
         title: 'Web Servers',
-        subtitle:'IIS, Apache, NGINX , Jetty'
+        subtitle: 'IIS, Apache, NGINX , Jetty'
     },
     {
         images: './images/BlueIcons -20-02.svg',
-        number:'02',
+        number: '02',
         title: 'UI development',
-        subtitle:'Bootstrap, jquery, Javascript, HTML5, CSS3, Angular'
+        subtitle: 'Bootstrap, jquery, Javascript, HTML5, CSS3, Angular'
     },
     {
         images: './images/BlueIcons -20-03.svg',
-        number:'03',
+        number: '03',
         title: 'Server Side Languages',
-        subtitle:'.NET, C#, PHP, .NET MVC, .NET Core, WPF, JAVA, Python'
+        subtitle: '.NET, C#, PHP, .NET MVC, .NET Core, WPF, JAVA, Python'
     },
     {
         images: './images/BlueIcons -20-04.svg',
-        number:'04',
+        number: '04',
         title: 'Databases',
-        subtitle:'PostGreSQL, MySQL, MSSQL, MongoDB, Cassandra, sqlite'
+        subtitle: 'PostGreSQL, MySQL, MSSQL, MongoDB, Cassandra, sqlite'
     },
     {
         images: './images/BlueIcons -20-06.svg',
-        number:'05',
+        number: '05',
         title: 'Messaging',
-        subtitle:'MQTT, WS, AMQP, Nodejs, RabbitMQ'
+        subtitle: 'MQTT, WS, AMQP, Nodejs, RabbitMQ'
     },
     {
         images: './images/BlueIcons -20-10.svg',
-        number:'06',
+        number: '06',
         title: 'Frameworks',
-        subtitle:'Joomla, Wordpress, Spring boot, Gradle, Spring, MVC, Hibernate Build'
+        subtitle: 'Joomla, Wordpress, Spring boot, Gradle, Spring, MVC, Hibernate Build'
     },
     {
         images: './images/BlueIcons -20-08.svg',
-        number:'07',
+        number: '07',
         title: 'Version management',
-        subtitle:'Jenkins, Docker, Github'
+        subtitle: 'Jenkins, Docker, Github'
     },
     {
         images: './images/BlueIcons -20-14.svg',
-        number:'08',
+        number: '08',
         title: 'OS',
-        subtitle:'Windows, Linux, CentOS'
+        subtitle: 'Windows, Linux, CentOS'
     },
     {
         images: './images/BlueIcons -20-16.svg',
-        number:'09',
+        number: '09',
         title: 'Data Exchange',
-        subtitle:'JSON, AJAX, XML, SOAP'
+        subtitle: 'JSON, AJAX, XML, SOAP'
     },
     {
         images: './images/BlueIcons -20-02.svg',
-        number:'10',
+        number: '10',
         title: 'Mobile',
-        subtitle:'Android, Flutter, iOS, React Native'
+        subtitle: 'Android, Flutter, iOS, React Native'
     },
 ]
 
@@ -701,63 +701,101 @@ export const expertiseblue = [
         text: 'Serving customers since 20+ Years'
     },
 ]
-
-
-export const homeproducts=[
+export const industries = [
     {
-        images:'./images/bulb2.png',
-        subtitle:'Smart Bulb'
+        images: './images/ipcore-Path 2086.svg',
+        text: 'Consumer Electronics'
     },
     {
-        images:'./images/kitpro_smartsolution.png',
-        subtitle:'Hub'
+        images: './images/ipcore-Path 2111.svg',
+        text: 'Military'
     },
     {
-        images:'./images/gas.png',
-        subtitle:'Motion Sensor'
+        images: './images/ipcore-Group 82847.svg',
+        text: 'Test and Measurement'
     },
     {
-        images:'./images/motion_sensor.png',
-        subtitle:'Humidity Sensor'
+        images: './images/ipcore-Path 2112.svg',
+        text: 'High Speed Camera'
     },
     {
-        images:'./images/temp-humidity.png',
-        subtitle:'Gas Detector'
+        images: './images/ipcore-Path 2081.svg',
+        text: 'Automobile'
     },
     {
-        images:'./images/Multi-function.png',
-        subtitle:'Multi-function Button'
+        images: './images/ipcore-Path 2082.svg',
+        text: 'Medical Devices'
     },
     {
-        images:'./images/smart-cabinate-lock.png',
-        subtitle:'Smart Cabinet Lock'
+        images: './images/ipcore-Path 2118.svg',
+        text: 'Security Product'
     },
     {
-        images:'./images/smoke.png',
-        subtitle:'Smoke Detector'
+        images: './images/ipcore-Path 2113.svg',
+        text: 'Avionics'
     },
     {
-        images:'./images/three_gang.png',
-        subtitle:'Gang Switch'
+        images: './images/ipcore-Group 82848.svg',
+        text: 'Multimedia'
     },
 ]
 
 
-export const homeapp=[
+export const homeproducts = [
     {
-        images:'./images/Konnsys-Deck-home.png',
-        text:'Home'
+        images: './images/bulb2.png',
+        subtitle: 'Smart Bulb'
     },
     {
-        images:'./images/Konnsys-Deck-home.png',
-        text:'Home'
+        images: './images/kitpro_smartsolution.png',
+        subtitle: 'Hub'
     },
     {
-        images:'./images/Konnsys-Deck-home.png',
-        text:'Home'
+        images: './images/gas.png',
+        subtitle: 'Motion Sensor'
     },
     {
-        images:'./images/Konnsys-Deck-home.png',
-        text:'Home'
+        images: './images/motion_sensor.png',
+        subtitle: 'Humidity Sensor'
+    },
+    {
+        images: './images/temp-humidity.png',
+        subtitle: 'Gas Detector'
+    },
+    {
+        images: './images/Multi-function.png',
+        subtitle: 'Multi-function Button'
+    },
+    {
+        images: './images/smart-cabinate-lock.png',
+        subtitle: 'Smart Cabinet Lock'
+    },
+    {
+        images: './images/smoke.png',
+        subtitle: 'Smoke Detector'
+    },
+    {
+        images: './images/three_gang.png',
+        subtitle: 'Gang Switch'
+    },
+]
+
+
+export const homeapp = [
+    {
+        images: './images/Konnsys-Deck-home.png',
+        text: 'Home'
+    },
+    {
+        images: './images/Konnsys-Deck-home.png',
+        text: 'Home'
+    },
+    {
+        images: './images/Konnsys-Deck-home.png',
+        text: 'Home'
+    },
+    {
+        images: './images/Konnsys-Deck-home.png',
+        text: 'Home'
     }
 ]
