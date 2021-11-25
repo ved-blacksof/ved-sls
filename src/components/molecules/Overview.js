@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Container, Box } from '@material-ui/core'
 import { MapIcon } from '../atoms'
+import Bounce from 'react-reveal/Bounce';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Overview({
-    sub1,   
+    sub1,
     sub2,
     path,
     style,
@@ -70,21 +71,24 @@ export function Overview({
     const classes = useStyles()
 
     return (
+
         <Box className={classes.overBox} style={style}>
             <Container fixed className={classes.overInBox}>
-                <h6 className={classes.paths}> {path} </h6>
+                <Bounce right>
+                    <h6 className={classes.paths}> {path} </h6>
 
-                <h3 className={classes.head}>Overview</h3>
+                    <h3 className={classes.head}>Overview</h3>
 
-                <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
+                    <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
 
-                <h4 className={classes.portSubHead}>{sub1}</h4>
-
-                <h4 className={classes.portSubHead}>{sub2}</h4>
+                    <h4 className={classes.portSubHead}>{sub1}</h4>
+                    <br />
+                    <h4 className={classes.portSubHead}>{sub2}</h4>
+                </Bounce>
 
                 {
                     prop ?
-                        <img src={prop} alt="image" /> : ''
+                        <Bounce left>  <img src={prop} alt="image" /></Bounce> : ''
                 }
 
                 {
@@ -93,7 +97,7 @@ export function Overview({
                             <Box className={classes.list}>
                                 <Container fixed className={classes.box1}>
                                     <ul className={classes.UL}>
-                                        
+
                                         <li className={classes.LI}>{li1}</li>
                                         <li className={classes.LI}>{li2}</li>
                                         <li className={classes.LI}>{li3} </li>
@@ -104,19 +108,20 @@ export function Overview({
                 }
 
                 {
-                    icons ? 
-                    <>
-                        <MapIcon 
-                            data={data}
-                            fill="white"
-                            color="white"
-                        />
-                    </> : ''
+                    icons ?
+                        <>
+                            <MapIcon
+                                data={data}
+                                fill="white"
+                                color="white"
+                            />
+                        </> : ''
                 }
 
 
 
             </Container>
         </Box>
+
     )
 }

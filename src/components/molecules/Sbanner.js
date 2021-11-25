@@ -1,5 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
+import Fade from 'react-reveal/Fade';
+import Roll from 'react-reveal/Roll';
+import Jello from 'react-reveal/Jello';
+
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -82,22 +86,26 @@ export function Sbanner({
             <div className={classes.mainBox} >
                 <img className={classes.backImg} src={Background} alt="background" />
 
-                <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
+                <Fade top>
+                    <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
+                </Fade>
 
-                <span className={classes.redLine}></span>
+                <Roll> <span className={classes.redLine}></span></Roll>
 
-                <h2 className={classes.subText}>
-                    Industry leaders in providing solutions catering to the domains
-                    of intellectual property, hardware design &
-                    prototyping, software design, and manufacturing.
-                </h2>
+                <Fade bottom>
+                    <h2 className={classes.subText}>
+                        Industry leaders in providing solutions catering to the domains
+                        of intellectual property, hardware design &
+                        prototyping, software design, and manufacturing.
+                    </h2>
+                </Fade>
 
                 <div className={classes.scrollBox}>
+                    <Jello>
+                        <img className={classes.mouseScroll} src={mouse} alt="Scroll image" />
 
-                    <img className={classes.mouseScroll} src={mouse} alt="Scroll image" />
-
-                    <h6 className={classes.mouseScrollTxt}>Scroll</h6>
-                
+                        <h6 className={classes.mouseScrollTxt}>Scroll</h6>
+                    </Jello>
                 </div>
 
             </div>

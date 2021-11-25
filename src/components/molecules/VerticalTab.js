@@ -8,6 +8,8 @@ import {
     Typography,
     makeStyles,
 } from '@material-ui/core';
+import Fade from 'react-reveal/Fade';
+
 
 import './molecule.css'
 
@@ -128,36 +130,85 @@ export function VerticalTab() {
 
                 </Tabs>
 
-                <TabPanel className={classes.tabPanel} value={value} index={0}>
-                    <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
-                        rich turnkey offerings cover a vast range of target platforms.
-                    </h6>
+                <Box>
+                    <TabPanel className={classes.tabPanel} value={value} index={0}>
+                        <Fade bottom>
+                            <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
+                        </Fade>
+                        <Fade bottom>
+                            <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                                rich turnkey offerings cover a vast range of target platforms.
+                            </h6>
+                        </Fade>
+                    </TabPanel>
 
-                </TabPanel>
+                    <TabPanel className={classes.tabPanel} value={value} index={0}>
+                        <Fade bottom>
+                            <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
+                        </Fade>
+                        <Fade bottom>
+                            <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                                rich turnkey offerings cover a vast range of target platforms.
+                            </h6>
+                        </Fade>
+                    </TabPanel>
 
-                <TabPanel className={classes.tabPanel} value={value} index={1}>
-                    <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <h6 style={{ lineHeight: '1.5' }}>of our technical expertise, our ready-to-integrate,
-                        rich turnkey offerings cover a vast range of target platforms.
-                    </h6>
-                </TabPanel>
+                    <TabPanel className={classes.tabPanel} value={value} index={1}>
+                        <Fade bottom>
+                            <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
+                        </Fade>
+                        <Fade bottom>
+                            <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                                rich turnkey offerings cover a vast range of target platforms.
+                            </h6>
+                        </Fade>
+                    </TabPanel>
 
-                <TabPanel className={classes.tabPanel} value={value} index={2}>
-                    <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
-                    <h6 style={{ lineHeight: '1.5' }}> expertise, our ready-to-integrate,
-                        rich turnkey offerings cover a vast range of target platforms.
-                    </h6>
-                </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={3}>
-                    Item Four
-                </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={4}>
-                    Item Four
-                </TabPanel>
-                <TabPanel className={classes.tabPanel} value={value} index={5}>
-                    Item Four
-                </TabPanel>
+                    <TabPanel className={classes.tabPanel} value={value} index={2}>
+                        <Fade bottom>
+                            <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
+                        </Fade>
+                        <Fade bottom>
+                            <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                                rich turnkey offerings cover a vast range of target platforms.
+                            </h6>
+                        </Fade>
+                    </TabPanel>
+
+                    <TabPanel className={classes.tabPanel} value={value} index={3}>
+                        <Fade bottom>
+                            <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
+                        </Fade>
+                        <Fade bottom>
+                            <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                                rich turnkey offerings cover a vast range of target platforms.
+                            </h6>
+                        </Fade>
+                    </TabPanel>
+
+                    <TabPanel className={classes.tabPanel} value={value} index={4}>
+                        <Fade bottom>
+                            <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
+                        </Fade>
+                        <Fade bottom>
+                            <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                                rich turnkey offerings cover a vast range of target platforms.
+                            </h6>
+                        </Fade>
+                    </TabPanel>
+
+                    <TabPanel className={classes.tabPanel} value={value} index={5}>
+                        <Fade bottom>
+                            <img src={'./images/thisisengineering-raeng-ZPeXrWxOjRQ-unsplash.png'} />
+                        </Fade>
+                        <Fade bottom>
+                            <h6 style={{ lineHeight: '1.5' }}>Forming the core of our technical expertise, our ready-to-integrate,
+                                rich turnkey offerings cover a vast range of target platforms.
+                            </h6>
+                        </Fade>
+                    </TabPanel>
+
+                </Box>
             </Box>
         </>
     )

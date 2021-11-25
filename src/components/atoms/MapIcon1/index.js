@@ -1,5 +1,6 @@
 import { Box, Container, makeStyles, Grid } from '@material-ui/core'
 import React from 'react'
+import Rotate from 'react-reveal/Rotate';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -34,10 +35,11 @@ export function MapIcon1({
                             <Grid item xs={6} sm={6} key={index}>
                                 <Box className={classes.gridBox} >
                                     <Box className={classes.iconsBox}>
-                                        <img className={classes.icons} src={item.images} alt='Portfolio Icons' />
+                                        <Rotate bottom right> <img className={classes.icons} src={item.images} alt='Portfolio Icons' /></Rotate>
                                     </Box>
-
-                                    <h6 className={classes.subText}>{item.text}</h6>
+                                    <Rotate top left>
+                                        <h6 className={classes.subText}>{item.text}</h6>
+                                    </Rotate>
                                 </Box>
                             </Grid>
                         )

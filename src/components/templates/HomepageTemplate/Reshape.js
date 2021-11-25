@@ -13,6 +13,11 @@ import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 import "@egjs/flicking-plugins/dist/pagination.css";
 
+import Flip from 'react-reveal/Flip';
+
+
+
+
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
         position: 'relative',
@@ -91,7 +96,8 @@ export function Reshape() {
     const Paginations = [new Pagination({ type: 'bullet' })]
 
     return (
-
+        
+        <Flip top>
         <Box className={classes.reaserchMain}>
             <Box className={classes.flicks}>
                 <Flicking
@@ -138,5 +144,6 @@ export function Reshape() {
             </Box>
 
         </Box>
+        </Flip>
     )
 }

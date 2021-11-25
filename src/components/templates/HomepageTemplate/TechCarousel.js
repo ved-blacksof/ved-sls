@@ -11,7 +11,8 @@ import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import { FrameGrid, FrameGridOptions } from "@egjs/grid";
 import { ParagraphsBlue } from '../../atoms'
-
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
@@ -92,20 +93,20 @@ const useStyles = makeStyles((theme) => ({
         height: '10rem',
         width: '10rem',
         background: 'white',
-        display:'flex',
-        flexDirection:'column',
+        display: 'flex',
+        flexDirection: 'column',
         [theme.breakpoints.down('xs')]: {
             height: '8rem',
             width: '8rem',
         },
-        "& h3":{
-            color:'#D9393E',
-            fontSize:'3vw'
+        "& h3": {
+            color: '#D9393E',
+            fontSize: '3vw'
         },
-        "& h4":{
-            font:'normal normal normal 1.4vw BebasNeue',
-            color:'#003189',
-            textAlign:'center'
+        "& h4": {
+            font: 'normal normal normal 1.4vw BebasNeue',
+            color: '#003189',
+            textAlign: 'center'
         }
     },
 
@@ -124,7 +125,8 @@ export function TechCarousel() {
         <>
             <Container fixed className={classes.newBox}>
                 <Box className={classes.box1}>
-                    <ParagraphsBlue
+                    <Fade left> 
+                     <ParagraphsBlue
                         title="TECHNOLOGY PARTNERS IN HARDWARE AND SOFTWARE OFFERINGS"
                         subtitle="Serving as a turnkey technology solution provider for the past 20 years."
                         list="We specialize in -"
@@ -132,6 +134,7 @@ export function TechCarousel() {
                         secli=" Product Design"
                         thirdli="Manufacturing"
                     />
+                    </Fade>
                 </Box>
                 <Box className={classes.box2}>
                     <Flicking
@@ -142,17 +145,15 @@ export function TechCarousel() {
                         circular={true}
                     >
 
-
-
-
                         <div className={classes.slide} >
+                        <Zoom bottom>
                             <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
                                 <div className={classes.boxBig} >
                                     <h1>356<h2>ENGINEERS</h2></h1>
                                 </div>
 
                                 <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
-                                    <img src={'./images/Layer 2.svg'}/>
+                                    <img src={'./images/Layer 2.svg'} />
                                 </div>
                             </div>
 
@@ -160,14 +161,15 @@ export function TechCarousel() {
                                 <h3>100+</h3>
                                 <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
                             </div>
-                            <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom:'2px solid white' }}>
-                            <img src={'./images/mission.svg'}/>
-                                
+                            <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                <img src={'./images/mission.svg'} />
+
                             </div>
                             <div className={classes.boxSmall} style={{ background: 'white' }} >
                                 <h3>06</h3>
                                 <h4 >BUSINESS VERTICALS</h4>
                             </div>
+                            </Zoom>
                         </div>
 
 

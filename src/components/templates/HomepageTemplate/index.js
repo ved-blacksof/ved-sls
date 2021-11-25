@@ -16,6 +16,7 @@ export function HomepageTemplate() {
             <Sbanner Background={'/images/sls-office3.1e9e26cb.png'} mouse={'./images/scroll.svg'} />
 
             <Box style={{ background: '#354B9C',paddingBottom:'10%' }}>
+            
                 <Navbar />
 
                 <TechCarousel />

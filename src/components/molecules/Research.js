@@ -13,6 +13,8 @@ import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 import "@egjs/flicking-plugins/dist/pagination.css";
+import Fade from 'react-reveal/Fade';
+
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
@@ -21,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
     },
     flicks: {
         width: '90%',
-        marginTop:'3%'
+        marginTop: '3%'
     },
     BoxWidth: {
-        padding:'0% 3% 8% 6%',
+        padding: '0% 3% 8% 6%',
         position: 'relative',
         width: '100%',
     },
@@ -45,11 +47,11 @@ const useStyles = makeStyles((theme) => ({
     txtReserch: {
         position: 'absolute',
         bottom: '-15%',
-        left:'-6%',
+        left: '-6%',
         fontSize: '8rem',
         [theme.breakpoints.down('sm')]: {
             // fontSize: '4rem'
-            display:'none'
+            display: 'none'
         },
     }
 }))
@@ -72,9 +74,9 @@ export function Research({
             {
                 generalheadingblue ?
                     <>
-                        <h3 className={classes.head}>{title}</h3>
-                        <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-                        <h4 className={classes.subHead}>{subtitle}</h4>
+                        <Fade left> <h3 className={classes.head}>{title}</h3></Fade>
+                        <Fade right> <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /></Fade>
+                        <Fade left>   <h4 className={classes.subHead}>{subtitle}</h4> </Fade>
                     </> : ''
             }
 
@@ -93,11 +95,16 @@ export function Research({
                         data.map((item, index) => {
                             return (
                                 <Box className={classes.BoxWidth}>
-                                    <Box style={{ position: 'relative'}}>
+
+                                    <Box style={{ position: 'relative' }}>
                                         <Box >
-                                            <img className={classes.BoxImages} src={item.images} alt="Carousel Images" data-aos="fade-up" />
+                                            <Fade top>
+                                                <img className={classes.BoxImages} src={item.images} alt="Carousel Images" data-aos="fade-up" />
+                                            </Fade>
                                         </Box>
-                                        <h1 className={classes.txtReserch}>{item.text}</h1>
+                                        <Fade bottom>
+                                            <h1 className={classes.txtReserch}>{item.text}</h1>
+                                        </Fade>
                                     </Box>
                                 </Box>
                             )

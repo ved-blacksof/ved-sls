@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
 import { PositionImage, Paragraphs } from "../atoms"
+import Bounce from 'react-reveal/Bounce';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -64,20 +65,24 @@ export function Quality({
                 {
                     mainheading ?
                         <Box style={{ display: 'flex', justifyContent: 'center', }}>
-                            <h2 className={classes.bigHead}>{mainheading}
-                            <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
-                            </h2>
+
+                            <Bounce bottom>
+                                <h2 className={classes.bigHead}>{mainheading}
+                                    <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
+                                </h2>
+                            </Bounce>
+
                         </Box> : ''
                 }
 
                 <Box className={classes.gridContainer}
                     style={style}>
                     <Grid item xs={12} md={6} className={classes.gridLeft}>
-                        <PositionImage imageBG={imageBG} />
+                        <Bounce left> <PositionImage imageBG={imageBG} /></Bounce>
                     </Grid>
 
                     <Grid item xs={12} md={6}>
-                        <Paragraphs
+                        <Bounce right> <Paragraphs
                             title={heading}
                             subtitle={subtitle}
                             redline={redline}
@@ -87,7 +92,7 @@ export function Quality({
                             secli={secli}
                             thirdli={thirdli}
                             fourthli={fourthli}
-                        />
+                        /></Bounce>
                     </Grid>
 
                 </Box>

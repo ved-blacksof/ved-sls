@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles, Button, Box } from '@material-ui/core'
+import RubberBand from 'react-reveal/RubberBand';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -8,11 +9,11 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         background: '#354B9C',
         color: 'white',
-        display:'flex', 
+        display: 'flex',
         font: 'normal normal normal 1rem Access',
         border: 'none',
         padding: '.5rem 1rem',
-        textTransform:'none',
+        textTransform: 'none',
         borderRadius: '4px',
         '&:hover': {
             background: 'white',
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     arrow: {
-        fontSize:'1.5rem',
+        fontSize: '1.5rem',
         marginLeft: '3px',
         '&:hover': {
             color: '#354B9C'
@@ -37,12 +38,14 @@ export function Buttons({
     const classes = useStyles()
     return (
         <Box className={className}>
-            <Button 
+            <Button
                 className={classes.btn}
                 style={style}
-                >
+            >
+                <RubberBand>
                     {title}
-                <img className={classes.arrow} src={arrowIcon} />
+                    <img className={classes.arrow} src={arrowIcon} />
+                </RubberBand>
             </Button>
         </Box>
     )

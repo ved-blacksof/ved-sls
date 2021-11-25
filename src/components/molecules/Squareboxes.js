@@ -5,14 +5,16 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
+import Fade from 'react-reveal/Fade';
+
 
 const useStyles = makeStyles((theme) => ({
     container1: {
         margin: '10% auto',
     },
-    mainTitle:{
-        color:'black',
-        textAlign:'center'
+    mainTitle: {
+        color: 'black',
+        textAlign: 'center'
     },
     mainBox: {
         width: '100%',
@@ -24,11 +26,11 @@ const useStyles = makeStyles((theme) => ({
         width: '16rem',
         height: '16rem',
         boxShadow: '0px 0px 20px #0000000F',
-        background:'white',
+        background: 'white',
         textAlign: 'center',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',   
+        alignItems: 'center',
         flexDirection: 'column',
         padding: "2rem",
         marginTop: '5%',
@@ -70,25 +72,29 @@ export function Squareboxes({
     const classes = useStyles()
     return (
         <Container fixed className={classes.container1}>
-            <h2 className={classes.mainTitle}> {maintitle} </h2>
+            <Fade bottom><h2 className={classes.mainTitle}>{maintitle} </h2> </Fade>
             <Box className={classes.paraBox}>
-                <h3 className={classes.head}>{title}</h3>
+                <Fade left><h3 className={classes.head}>{title}</h3> </Fade>
                 {
-                    redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
+                    redline ? <Fade right> <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> </Fade> : ''
                 }
-                <h4 className={classes.portSubHead}>{subtitle}</h4>
+                <Fade left> <h4 className={classes.portSubHead}>{subtitle}</h4> </Fade>
             </Box>
 
             <Box className={classes.mainBox}>
 
                 {
-                data.map((item, index) => {
+                    data.map((item, index) => {
                         return (
                             <Box className={classes.boxes}>
                                 <Box className={classes.imgBox}>
-                                    <img src={item.images} alt="Mission Icon" />
+                                    <Fade bottom>
+                                        <img src={item.images} alt="Mission Icon" />
+                                    </Fade>
                                 </Box>
-                                <h4>{item.subtitle} </h4>
+                                <Fade bottom>
+                                    <h4>{item.subtitle} </h4>
+                                </Fade>
                             </Box>
                         )
                     })

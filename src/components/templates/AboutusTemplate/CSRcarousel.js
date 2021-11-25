@@ -7,6 +7,7 @@ import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
 import { GeneralHeading } from '../../atoms'
+import Roll from 'react-reveal/Roll';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -141,45 +142,46 @@ export function CSRcarousel({
                 />
 
                 <Box className={classes.flicks}>
-                    <Flicking
-                        selector="center"
-                        // plugins={Fades}
-                        plugins={Paginations}
-                        // align="center"
-                        defaultIndex='1'
-                        circular={true}
+                    <Roll bottom>
+                        <Flicking
+                            selector="center"
+                            // plugins={Fades}
+                            plugins={Paginations}
+                            // align="center"
+                            defaultIndex='1'
+                            circular={true}
 
-                    >
+                        >
 
-                        {
-                            data.map((item, index) => {
-                                return (
+                            {
+                                data.map((item, index) => {
+                                    return (
 
-                                    <Box className={classes.BoxWidth}>
-                                        <Box className={classes.iconBox}>
-                                            <img className={classes.icon} src={'./images/Layer 2.svg'} />
+                                        <Box className={classes.BoxWidth}>
+                                            <Box className={classes.iconBox}>
+                                                <img className={classes.icon} src={'./images/Layer 2.svg'} />
+                                            </Box>
+
+                                            <Box className={classes.blueBox}>
+                                                <h6 className={classes.blueBoxPara}>{item.para}</h6>
+                                                <Button variant='outlined' className={classes.btn}>Read More</Button>
+                                            </Box>
+
+                                            <Box className={classes.imageBox}>
+                                                <img className={classes.image}
+                                                    src={item.images}
+                                                    alt="Carousel Images" data-aos="fade-up" />
+                                            </Box>
                                         </Box>
-
-                                        <Box className={classes.blueBox}>
-                                            <h6 className={classes.blueBoxPara}>{item.para}</h6>
-                                            <Button variant='outlined' className={classes.btn}>Read More</Button>
-                                        </Box>
-
-                                        <Box className={classes.imageBox}>
-                                            <img className={classes.image}
-                                                src={item.images}
-                                                alt="Carousel Images" data-aos="fade-up" />
-                                        </Box>
-                                    </Box>
-                                )
-                            })
-                        }
-                        <ViewportSlot >
-                            <span className="flicking-pagination "></span>
-                        </ViewportSlot>
-                    </Flicking>
+                                    )
+                                })
+                            }
+                            <ViewportSlot >
+                                <span className="flicking-pagination "></span>
+                            </ViewportSlot>
+                        </Flicking>
+                    </Roll>
                 </Box>
-
             </Container>
         </>
     )

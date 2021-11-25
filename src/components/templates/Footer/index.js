@@ -1,6 +1,10 @@
 import React from 'react'
 import { makeStyles, Box, Container, IconButton, Toolbar, AppBar } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
+import RubberBand from 'react-reveal/RubberBand';
+import Jello from 'react-reveal/Jello';
+import Fade from 'react-reveal/Fade';
+
 
 const useStyles = makeStyles((theme) => ({
     footerMain: {
@@ -83,91 +87,100 @@ export function Footer() {
 
     const history = useHistory();
     return (
-        <Box style={{background:'white', paddingTop:'5%'}}>
+        <Box style={{ background: 'white', paddingTop: '5%' }}>
             <Container fixed className={classes.footerMain}>
                 <Box className={classes.headBox}>
-                    <img className=" col-md-2" src={'/images/Layer_x0020_1-1.svg'} alt="SLS Icon" />
-                    <h6 className={classes.head}>Over the years, we have added numerous products to our portfolio
-                        and have served as important technology partners for various verticals.
-                    </h6>
+
+                    <RubberBand>
+                        <img className=" col-md-2" src={'/images/Layer_x0020_1-1.svg'} alt="SLS Icon" />
+                    </RubberBand>
+
+                    <Jello>
+                        <h6 className={classes.head}>Over the years, we have added numerous products to our portfolio
+                            and have served as important technology partners for various verticals.
+                        </h6>
+                    </Jello>
+
                 </Box>
 
-                <Box className={classes.linkList}>
+                <Fade bottom>
+                    <Box className={classes.linkList}>
 
 
-                    <ul className={classes.linkUL}>
-                        <li>ABOUT SLS</li>
-                        <li> <a className={classes.links} href="/"> IN A SNAPSHOT </a> </li>
-                        <li> <a className={classes.links} href="/"> CSR INITIATIVES </a> </li>
-                        <li> <a className={classes.links} href="/"> CERTIFICATIONS AND TIE-UPS </a> </li>
-                        {/* 
+                        <ul className={classes.linkUL}>
+                            <li>ABOUT SLS</li>
+                            <li> <a className={classes.links} href="/"> IN A SNAPSHOT </a> </li>
+                            <li> <a className={classes.links} href="/"> CSR INITIATIVES </a> </li>
+                            <li> <a className={classes.links} href="/"> CERTIFICATIONS AND TIE-UPS </a> </li>
+                            {/* 
                     <li> <a className={classes.links} href="/"> ASIC/FPGA.SOC DESIGN SERVICES </a> </li>
                     <li> <a className={classes.links} href="/"> CAREERS </a> </li> 
                     */}
-                    </ul>
+                        </ul>
 
 
 
-                    <ul className={classes.linkUL}>
-                        <li>INDUSTRIES</li>
-                        <li> <a className={classes.links} href="/iot"> IoT PLATFORM </a> </li>
-                        <li> <a className={classes.links} href="/cloud"> CLOUD SOLUTIONS </a> </li>
-                        <li> <a className={classes.links} href="/"> E-MOBILITY </a> </li>
-                        <li> <a className={classes.links}
-                            onClick={() => show1 === false ? setShow1(true) : setShow1(false)}
-                            style={{ color: '#354B9C' }}> + VIEW MORE  </a> </li>
+                        <ul className={classes.linkUL}>
+                            <li>INDUSTRIES</li>
+                            <li> <a className={classes.links} href="/iot"> IoT PLATFORM </a> </li>
+                            <li> <a className={classes.links} href="/cloud"> CLOUD SOLUTIONS </a> </li>
+                            <li> <a className={classes.links} href="/"> E-MOBILITY </a> </li>
+                            <li> <a className={classes.links}
+                                onClick={() => show1 === false ? setShow1(true) : setShow1(false)}
+                                style={{ color: '#354B9C' }}> + VIEW MORE  </a> </li>
 
 
-                        {show1 ?
-                            <>
-                                {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
+                            {show1 ?
+                                <>
+                                    {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
 
-                                <li> <a className={classes.links} href="/solar"> SOLAR & WIND </a> </li>
-                                <li> <a className={classes.links} href="/smartmeter"> SMART METERING </a> </li>
-                                <li> <a className={classes.links} href="/"> SMART GRID </a> </li>
-                                <li> <a className={classes.links} href="/"> HOME AUTOMATION </a> </li>
-                                <li> <a className={classes.links} href="/smartstreet"> SMART STREET LIGHTS </a> </li>
-                                <li> <a className={classes.links} href="/railways"> RAILWAYS </a> </li>
-                                <li> <a className={classes.links} href="/gaming"> GAMING </a> </li>
-                                <li> <a className={classes.links} href="/smarttraffic"> TRAFFIC SOLUTIONS </a> </li>
-                            </>
-                            : null
-                        }
-                    </ul>
-
-
-
-                    <ul className={classes.linkUL}>
-                        <li>  SERVICES </li>
-                        <li> <a className={classes.links} href="/ipcore"> ASIC/FPGA/SOC DESIGN SERVICES </a> </li>
-                        <li> <a className={classes.links} href="/highspeed"> HIGH SPEED PCB DESIGN SERVICES </a> </li>
-                        <li> <a className={classes.links} href="/softdev"> SOFTWARE DEVELOPMENT  </a> </li>
-                        <li> <a className={classes.links}
-                            onClick={() => { show === false ? setShow(true) : setShow(false) }}
-                            style={{ color: '#354B9C' }}> + VIEW MORE  </a> </li>
-                        {show ?
-                            <>
-                                {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
-
-                                <li> <a className={classes.links} href="/electronics"> ELECTRONICS MANUFACTURING </a> </li>
-                                <li> <a className={classes.links} href="/testing">TESTING AND CALIBRATION </a> </li>
-                                <li> <a className={classes.links} href="/"> ML & AI </a> </li>
-                            </>
-                            : null
-                        }
-                    </ul>
+                                    <li> <a className={classes.links} href="/solar"> SOLAR & WIND </a> </li>
+                                    <li> <a className={classes.links} href="/smartmeter"> SMART METERING </a> </li>
+                                    <li> <a className={classes.links} href="/"> SMART GRID </a> </li>
+                                    <li> <a className={classes.links} href="/"> HOME AUTOMATION </a> </li>
+                                    <li> <a className={classes.links} href="/smartstreet"> SMART STREET LIGHTS </a> </li>
+                                    <li> <a className={classes.links} href="/railways"> RAILWAYS </a> </li>
+                                    <li> <a className={classes.links} href="/gaming"> GAMING </a> </li>
+                                    <li> <a className={classes.links} href="/smarttraffic"> TRAFFIC SOLUTIONS </a> </li>
+                                </>
+                                : null
+                            }
+                        </ul>
 
 
 
-                    <ul className={classes.linkUL}>
-                        <li>CONTACT US</li>
-                        <li> <a className={classes.links} href="/"> CAREERS </a> </li>
-                    </ul>
+                        <ul className={classes.linkUL}>
+                            <li>  SERVICES </li>
+                            <li> <a className={classes.links} href="/ipcore"> ASIC/FPGA/SOC DESIGN SERVICES </a> </li>
+                            <li> <a className={classes.links} href="/highspeed"> HIGH SPEED PCB DESIGN SERVICES </a> </li>
+                            <li> <a className={classes.links} href="/softdev"> SOFTWARE DEVELOPMENT  </a> </li>
+                            <li> <a className={classes.links}
+                                onClick={() => { show === false ? setShow(true) : setShow(false) }}
+                                style={{ color: '#354B9C' }}> + VIEW MORE  </a> </li>
+                            {show ?
+                                <>
+                                    {/* <li className={classes.liShow} onClick={() => { history.push('/watchproduct1') }}>Smartwatch</li> */}
+
+                                    <li> <a className={classes.links} href="/electronics"> ELECTRONICS MANUFACTURING </a> </li>
+                                    <li> <a className={classes.links} href="/testing">TESTING AND CALIBRATION </a> </li>
+                                    <li> <a className={classes.links} href="/"> ML & AI </a> </li>
+                                </>
+                                : null
+                            }
+                        </ul>
+
+
+
+                        <ul className={classes.linkUL}>
+                            <li>CONTACT US</li>
+                            <li> <a className={classes.links} href="/"> CAREERS </a> </li>
+                        </ul>
 
 
 
 
-                </Box>
+                    </Box>
+                </Fade>
 
                 <br />
                 <br />
@@ -175,15 +188,18 @@ export function Footer() {
 
                 <hr />
 
-                <div className={classes.copyBox}>
-                    <a> System Level Solutions Inc. Copyright &copy; 2021 </a>
-                    <div className="links">
-                        <a href="/" >Facebook</a><i>|</i>
-                        <a href="/" >Instagram</a><i>|</i>
-                        <a href="/" >Twitter</a><i>|</i>
-                        <a href="/" >LinkedIn</a>
+                <Fade top>
+                    <div className={classes.copyBox}>
+                        <a> System Level Solutions Inc. Copyright &copy; 2021 </a>
+                        <div className="links">
+                            <a href="/" >Facebook</a><i>|</i>
+                            <a href="/" >Instagram</a><i>|</i>
+                            <a href="/" >Twitter</a><i>|</i>
+                            <a href="/" >LinkedIn</a>
+                        </div>
                     </div>
-                </div>
+                </Fade>
+
 
 
             </Container>

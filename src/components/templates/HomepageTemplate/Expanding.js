@@ -6,15 +6,16 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import { VerticalTab } from '../../molecules'
+import Fade from 'react-reveal/Fade';
 
 
 
 const useStyles = makeStyles((theme) => ({
     whiteBox: {
-        marginTop:'20%',
+        marginTop: '20%',
         height: '20vh',
-        [theme.breakpoints.down('xs')]:{
-            height:'10vh'
+        [theme.breakpoints.down('xs')]: {
+            height: '10vh'
         }
     },
     expand: {
@@ -23,11 +24,11 @@ const useStyles = makeStyles((theme) => ({
     blueBox: {
         background: '#354B9C',
         height: '65vh',
-        [theme.breakpoints.down('sm')]:{
-            height:'50vh'
+        [theme.breakpoints.down('sm')]: {
+            height: '50vh'
         },
-        [theme.breakpoints.down('xs')]:{
-            height:'fit-content'
+        [theme.breakpoints.down('xs')]: {
+            height: 'fit-content'
         }
     }
 }))
@@ -39,14 +40,19 @@ export function Expanding() {
 
     return (
         <>
+
             <Container fixed className={classes.whiteBox}>
-                <h3 className={classes.expand}>EXPANDING THE CORE  <br/> OF OUR PRIMARY OFFERINGS</h3>
+                <Fade left>
+                    <h3 className={classes.expand}>EXPANDING THE CORE  <br /> OF OUR PRIMARY OFFERINGS</h3>
+                </Fade>
             </Container>
-            <Box className={classes.blueBox}>
-                <Container fixed>
-                    <VerticalTab />
-                </Container>
-            </Box>
+            <Fade right>
+                <Box className={classes.blueBox}>
+                    <Container fixed>
+                        <VerticalTab />
+                    </Container>
+                </Box>
+            </Fade>
         </>
     )
 }

@@ -1,12 +1,13 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImageReverse , Paragraphs } from "../atoms"
+import { PositionImageReverse, Paragraphs } from "../atoms"
+import Bounce from 'react-reveal/Bounce';
 
 
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        margin:'10% auto' ,
+        margin: '10% auto',
     },
     bigHead: {
         color: 'black',
@@ -15,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '2%'
     },
     gridContainer: {
-        display:'flex',
-        [theme.breakpoints.down('sm')]:{
-            flexDirection:'column-reverse',
-            marginTop:'20%',
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column-reverse',
+            marginTop: '20%',
         }
     },
     gridLeft: {
@@ -41,7 +42,7 @@ export function QualityReverse({
     thirdli,
     fourthli,
     style,
-    list,  
+    list,
 }) {
     const classes = useStyles()
     return (
@@ -53,7 +54,7 @@ export function QualityReverse({
                     style={style} >
 
                     <Grid item xs={12} md={6}>
-                        <Paragraphs
+                        <Bounce left> <Paragraphs
                             title={heading}
                             subtitle={subtitle}
                             list={list}
@@ -62,12 +63,11 @@ export function QualityReverse({
                             secli={secli}
                             thirdli={thirdli}
                             fourthli={fourthli}
-
-                        />
+                        /></Bounce>
                     </Grid>
 
                     <Grid item xs={12} md={6} className={classes.gridLeft}>
-                        <PositionImageReverse imageBG={imageBG} />
+                        <Bounce right> <PositionImageReverse imageBG={imageBG} /></Bounce>
                     </Grid>
                 </Box>
             </Container>

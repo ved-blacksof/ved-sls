@@ -1,16 +1,18 @@
 import React from 'react'
 import { makeStyles, Container, Button, Box, Grid } from '@material-ui/core'
 
-import { GeneralHeading,MapIcon1 } from '../../atoms'
+import { GeneralHeading, MapIcon1 } from '../../atoms'
 import { loc } from '../../molecules/PortfolioData'
 import { Visit } from '../../molecules'
+import Bounce from 'react-reveal/Bounce';
+
 
 const useStyles = makeStyles((theme) => ({
     locContainer: {
         margin: '15% auto'
     },
     rightBox: {
-        border: '2px solid red',
+        // border: '2px solid red',
         "& img": {
             width: '100%'
         }
@@ -25,7 +27,7 @@ export function LOC({
     const classes = useStyles()
     return (
         <>
-            <Container fixed style={{ border: '2px solid red' }} className={classes.locContainer}>
+            <Container fixed className={classes.locContainer}>
                 <Grid container >
                     <Grid xs={12} sm={6} className={classes.leftBox}>
                         <GeneralHeading
@@ -35,15 +37,15 @@ export function LOC({
                              tracking capabilities across IoT and a wide spectrum of applications. Reinvent asset tracking,
                             smart industry application, and much more with this business-first cloud offering."
                         />
-                        <MapIcon1 data={loc}/>
+                        <MapIcon1 data={loc} />
                     </Grid>
                     <Grid xs={12} sm={6} className={classes.rightBox}>
-                        <img src={'./images/Mask Group 2.png'} />
+                        <Bounce right> <img src={'./images/Mask Group 2.png'} /></Bounce>
                     </Grid>
                 </Grid>
-                <Visit 
+                <Visit
                     goto="Want to know more about Loccarto?"
-                    title="Visit the Web"/>
+                    title="Visit the Web" />
 
             </Container>
         </>

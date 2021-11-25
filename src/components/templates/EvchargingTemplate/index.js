@@ -4,7 +4,7 @@ import { Ubanner, Overview, Realtime, Squareboxes } from '../../molecules'
 import { ChargingMangement } from './ChargingMangement'
 import { MobileApplication } from './MobileApplication'
 
-import { evchargers,evcharger3 } from '../../molecules/PortfolioData'
+import { evchargers, evcharger3 } from '../../molecules/PortfolioData'
 
 
 
@@ -16,7 +16,6 @@ export function EvchargingTemplate() {
                 maintext="EV Charging Solutions"
                 subtext="Helping in making the world EV-First!"
             />
-
 
             <Navbar />
 
@@ -30,7 +29,7 @@ export function EvchargingTemplate() {
             />
 
 
-             <Realtime
+            <Realtime
                 data={evchargers}
                 title="ev chargers"
                 subtitle="We offer a complete range of AC Chargers purpose-built for a wide range of applications."

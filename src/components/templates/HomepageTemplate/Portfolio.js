@@ -6,6 +6,8 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import { GeneralHeading, MapIcon } from '../../atoms'
+import Bounce from 'react-reveal/Bounce';
+
 
 const useStyles = makeStyles((theme) => ({
     portContainer: {
@@ -68,12 +70,15 @@ export function Portfolio({
     return (
 
         <Container fixed className={classes.portContainer}>
-            <GeneralHeading
-                title="OUR RICH PORTFOLIO COVERS MULTIPLE SEGMENTS"
-                redline="redline"
-                subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
+            <Bounce top>
+                <GeneralHeading
+                    title="OUR RICH PORTFOLIO COVERS MULTIPLE SEGMENTS"
+                    redline="redline"
+                    subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
                 of products and services."
-            />
+                />
+            </Bounce>
+
 
             <MapIcon data={data} />
 
@@ -82,5 +87,6 @@ export function Portfolio({
             </Box>
 
         </Container>
+
     )
 }

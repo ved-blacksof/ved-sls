@@ -5,11 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 import './styled.css'
 import { makeStyles, Container, Box, Button } from '@material-ui/core'
 import { GeneralHeading } from '../atoms'
+import Fade from 'react-reveal/Fade';
 
 
 const useStyles = makeStyles((theme) => ({
     realText: {
         marginTop: '10%',
+        overflow: 'hidden',
         [theme.breakpoints.down('xs')]: {
             margin: "20% 0%"
         }
@@ -34,17 +36,17 @@ const useStyles = makeStyles((theme) => ({
     slider: {
         width: '100%',
         justifyContent: 'space-around',
-        [theme.breakpoints.down('xs')]:{
-            width:'80%'
+        [theme.breakpoints.down('xs')]: {
+            width: '80%'
         }
     },
     card: {
         boxShadow: '0px 0px 40px #0000001F',
         margin: "0% 1rem",
-        borderBottom:'3px solid #354B9C',
-        background:'white',
-        [theme.breakpoints.down('xs')]:{
-            width:'80%'
+        borderBottom: '3px solid #354B9C',
+        background: 'white',
+        [theme.breakpoints.down('xs')]: {
+            width: '80%'
         }
     },
     cardImage: {
@@ -63,23 +65,23 @@ const useStyles = makeStyles((theme) => ({
         padding: '1% 2%',
         '&:hover': {
             color: '#354B9C',
-            fontWeight:'bold'
+            fontWeight: 'bold'
         }
     },
     cardHead: {
         font: 'normal normal normal 1.1rem Access',
         color: 'black',
-        marginTop:'3%'
+        marginTop: '3%'
 
     },
     cardSubHead: {
         color: 'black',
-        marginTop:'3%'
+        marginTop: '3%'
     },
     readMore: {
         font: 'normal normal normal 1rem BebasNeue',
         color: '#354B9C',
-        paddingTop:'1rem',
+        paddingTop: '1rem',
     }
 }))
 
@@ -154,12 +156,10 @@ export function Realtime({
 
                     <Box fixed className={classes.sliderSec}>
 
-                        
                         <Box className={classes.box}>
-                            <img style={{margin:'20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
-                            <img src={"./images/Group 82851.svg"} onClick={next} />
+                            <Fade left> <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} /></Fade>
+                            <Fade right>  <img src={"./images/Group 82851.svg"} onClick={next} /></Fade>
                         </Box>
-
 
 
                         <Slider ref={sliderRef} {...settings} className={classes.slider}>
@@ -171,15 +171,18 @@ export function Realtime({
                                     return (
                                         <Box>
                                             <Box className={classes.card} >
-                                                <img className={classes.cardImage} src={item.images} alt="Robot Hand" />
+
+                                                <Fade bottom><img className={classes.cardImage} src={item.images} alt="Robot Hand" /> </Fade>
 
                                                 <Box className={classes.cardTxt}>
                                                     {
-                                                        cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
+                                                        cases ? <Fade left> <Button className={classes.smallBtn} >{item.case}</Button> </Fade> : ''
                                                     }
-                                                    <h4 className={classes.cardHead}>{item.head}</h4>
-                                                    <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                    <a href="/#" className={classes.readMore}>{item.read}</a>
+                                                    <Fade right>
+                                                        <h4 className={classes.cardHead}>{item.head}</h4>
+                                                        <h6 className={classes.cardSubHead}>{item.para}</h6>
+                                                        <a href="/#" className={classes.readMore}>{item.read}</a>
+                                                    </Fade>
                                                 </Box>
                                             </Box>
                                         </Box>

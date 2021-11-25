@@ -1,6 +1,10 @@
 import React from 'react'
 import { makeStyles, IconButton, Toolbar, AppBar } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
+import Flip from 'react-reveal/Flip';
+import Zoom from 'react-reveal/Zoom';
+
+
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -58,9 +62,12 @@ export function Navbar() {
             <AppBar position='relative' className={classes.mainBox}>
                 <Toolbar className={classes.navbar}>
                     <IconButton edge="start" color="inherit" aria-label="menu">
-                        <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
+                    <Flip left>   
+                    <img className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
+                    </Flip>
                     </IconButton>
 
+                    <Zoom right>
                     <ul className={classes.navUL}>
                         <li className={classes.navLI} >
                             <NavLink className={classes.navLI} to="/" activeClassName={classes.navLinks}>Home</NavLink>
@@ -78,6 +85,7 @@ export function Navbar() {
                             <NavLink className={classes.navLI} to="/contact" activeClassName={classes.navLinks}>Contact Us</NavLink>
                         </li>
                     </ul>
+                    </Zoom>
                 </Toolbar>
             </AppBar>
         </>

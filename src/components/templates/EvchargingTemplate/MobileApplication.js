@@ -1,13 +1,14 @@
 import { Box, Container, Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
 import { Paragraphs } from '../../atoms'
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     rightBox: {
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        height:'fit-content',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 'fit-content',
         [theme.breakpoints.down('xs')]: {
             height: '40vh',
         }
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
     mobileImages: {
         width: '100%',
-        padding:'0rem 15%',
+        padding: '0rem 15%',
         position: 'absolute',
         bottom: '10%',
         margin: '0 auto',
@@ -37,24 +38,27 @@ const useStyles = makeStyles((theme) => ({
 export function MobileApplication() {
     const classes = useStyles()
     return (
-        <Container style={{ margin:"10% auto",}}>
+        <Container style={{ margin: "10% auto", }}>
             <Grid container >
                 <Grid xs={12} sm={6}>
-                    <Paragraphs
-                        title="MOBILE APPLICATION"
-                        subtitle="We offer a white-label end-user mobile application that lets your customer 
+                    <Fade bottom>
+                        <Paragraphs
+                            title="MOBILE APPLICATION"
+                            subtitle="We offer a white-label end-user mobile application that lets your customer 
                                     utilize your EV Charging services worldwide."
-                        firstli="Android and iOS Support"
-                        secli="Shows Real-time Charge seats"
-                        thirdli="UPI, Credit, and Online Payment Options"
-                        fourthli="Slot Reservation"
-
-                    />
+                            firstli="Android and iOS Support"
+                            secli="Shows Real-time Charge seats"
+                            thirdli="UPI, Credit, and Online Payment Options"
+                            fourthli="Slot Reservation"
+                        />
+                    </Fade>
                 </Grid>
                 <Grid xs={12} sm={6} className={classes.rightBox}>
-                    <Box className={classes.mobileBox}>
-                        <img className={classes.mobileImages} src={'./images/Group 82858.png'} />
-                    </Box>
+                    <Fade left>
+                        <Box className={classes.mobileBox}>
+                            <Fade right><img className={classes.mobileImages} src={'./images/Group 82858.png'} /></Fade>
+                        </Box>
+                    </Fade>
                 </Grid>
             </Grid>
         </Container>
