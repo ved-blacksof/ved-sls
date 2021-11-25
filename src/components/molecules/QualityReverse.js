@@ -1,13 +1,14 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
 import { PositionImageReverse, Paragraphs, MainContainer } from "../atoms"
+import Bounce from 'react-reveal/Bounce';
 
 
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
         margin: '15% auto',
-        width:'100%'
+        width: '100%'
     },
     bigHead: {
         color: 'black',
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     BoxRight: {
-        alignSelf: 'center',    
+        alignSelf: 'center',
         width: '50%',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
@@ -66,22 +67,20 @@ export function QualityReverse({
                         style={style} >
 
                         <Box className={classes.BoxLeft}>
-                            <Paragraphs
+                            <Bounce left> <Paragraphs
                                 title={heading}
                                 subtitle={subtitle}
                                 list={list}
                                 redline={redline}
-                                uli={uli}
                                 firstli={firstli}
                                 secli={secli}
                                 thirdli={thirdli}
                                 fourthli={fourthli}
-
-                            />
+                            /></Bounce>
                         </Box>
 
                         <Box className={classes.BoxRight}>
-                            <PositionImageReverse imageBG={imageBG} />
+                            <Bounce right> <PositionImageReverse imageBG={imageBG} /></Bounce>
                         </Box>
                     </Box>
                 </Container>

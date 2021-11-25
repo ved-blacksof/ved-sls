@@ -6,6 +6,7 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import { GeneralHeading, MainContainer } from '../atoms';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -82,7 +83,7 @@ export function Squareboxes({
     return (
         <MainContainer>
             <Container fixed className={classes.container1}>
-                <h2 className={classes.mainTitle}> {maintitle} </h2>
+                <Fade bottom><h2 className={classes.mainTitle}>{maintitle} </h2> </Fade>
                 <GeneralHeading
                     title={title}
                     title1={title1}
@@ -100,9 +101,13 @@ export function Squareboxes({
                             return (
                                 <Box className={classes.boxes}>
                                     <Box className={classes.imgBox}>
-                                        <img src={item.images} alt="Mission Icon" />
+                                        <Fade bottom>
+                                            <img src={item.images} alt="Mission Icon" />
+                                        </Fade>
                                     </Box>
-                                    <h4>{item.subtitle} </h4>
+                                    <Fade bottom>
+                                        <h4>{item.subtitle} </h4>
+                                    </Fade>
                                 </Box>
                             )
                         })

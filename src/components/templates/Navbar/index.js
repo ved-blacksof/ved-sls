@@ -2,6 +2,10 @@ import React from 'react'
 import { makeStyles, IconButton, Toolbar, AppBar, Box } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
 import { Menu } from '@material-ui/icons'
+import Flip from 'react-reveal/Flip';
+import Zoom from 'react-reveal/Zoom';
+
+
 const useStyles = makeStyles((theme) => ({
     mainBox: {
         // background: '#182AC3',
@@ -58,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             display: 'block',
             fontSize: '2.2rem',
-            color:'white'
+            color: 'white'
         }
     }
 }))
@@ -80,40 +84,43 @@ export function Navbar() {
             <AppBar position='relative' color='transparent' className={classes.mainBox}>
                 <Toolbar className={classes.navbar}>
                     <Box className={classes.logoBox} disableRipple disableFocusRipple disableTouchRipple edge="start" color="inherit" aria-label="menu">
-                        <img disableRipple className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
+                        <Flip left>
+                            <img disableRipple className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
+                        </Flip>
                     </Box>
 
                     <Menu className={classes.menuIcon} onClick={showMenu} />
 
                     {showMenu}
-
-                    <ul className={classes.navUL}>
-                        <li className={classes.navLI} >
-                            <h4>
-                                <NavLink className={classes.navLI} to="/" activeClassName={classes.navLinks}>Home</NavLink>
-                            </h4>
-                        </li>
-                        <li className={classes.navLI} >
-                            <h4>
-                                <NavLink className={classes.navLI} to="/about" activeClassName={classes.navLinks}>About Us</NavLink>
-                            </h4>
-                        </li>
-                        <li className={classes.navLI} >
-                            <h4>
-                                <NavLink className={classes.navLI} to="/evcharger" activeClassName={classes.navLinks}>Industries</NavLink>
-                            </h4>
-                        </li>
-                        <li className={classes.navLI} >
-                            <h4>
-                                <NavLink className={classes.navLI} to="/cloud" activeClassName={classes.navLinks}>Services</NavLink>
-                            </h4>
-                        </li>
-                        <li className={classes.navLI} >
-                            <h4>
-                                <NavLink className={classes.navLI} to="/contact" activeClassName={classes.navLinks}>Contact Us</NavLink>
-                            </h4>
-                        </li>
-                    </ul>
+                    <Zoom right>
+                        <ul className={classes.navUL}>
+                            <li className={classes.navLI} >
+                                <h4>
+                                    <NavLink className={classes.navLI} to="/" activeClassName={classes.navLinks}>Home</NavLink>
+                                </h4>
+                            </li>
+                            <li className={classes.navLI} >
+                                <h4>
+                                    <NavLink className={classes.navLI} to="/about" activeClassName={classes.navLinks}>About Us</NavLink>
+                                </h4>
+                            </li>
+                            <li className={classes.navLI} >
+                                <h4>
+                                    <NavLink className={classes.navLI} to="/evcharger" activeClassName={classes.navLinks}>Industries</NavLink>
+                                </h4>
+                            </li>
+                            <li className={classes.navLI} >
+                                <h4>
+                                    <NavLink className={classes.navLI} to="/cloud" activeClassName={classes.navLinks}>Services</NavLink>
+                                </h4>
+                            </li>
+                            <li className={classes.navLI} >
+                                <h4>
+                                    <NavLink className={classes.navLI} to="/contact" activeClassName={classes.navLinks}>Contact Us</NavLink>
+                                </h4>
+                            </li>
+                        </ul>
+                    </Zoom>
                 </Toolbar>
             </AppBar>
         </>

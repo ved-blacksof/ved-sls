@@ -6,6 +6,8 @@ import './styled.css'
 import { makeStyles, Container, Box, Button } from '@material-ui/core'
 import { ArrowBackIos, ArrowForwardIos, KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
 import { GeneralHeading, MainContainer } from '../atoms'
+import Fade from 'react-reveal/Fade';
+
 
 const useStyles = makeStyles((theme) => ({
     realText: {
@@ -141,11 +143,11 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width:'12rem',
-            height:'12rem'
+            width: '12rem',
+            height: '12rem'
         },
-       
-        
+
+
     },
     imgBox: {
         height: "100%",
@@ -263,8 +265,8 @@ export function Realtime({
                                 {/* <ArrowBackIos className={classes.btn}/> */}
 
 
-                                <Box ><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Box>
-                                <Box  ><KeyboardArrowRight className={classes.btn} onClick={next} /></Box>
+                                <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                                <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
                             </Box>
 
                             <Slider ref={sliderRef} {...settings} className={classes.slider}>
@@ -276,17 +278,18 @@ export function Realtime({
                                         return (
                                             <Box>
                                                 <Box className={classes.card} >
-                                                    <img className={classes.cardImage} src={item.images} alt="Robot Hand" />
-
+                                                    <Fade bottom><img className={classes.cardImage} src={item.images} alt="Robot Hand" /> </Fade>
                                                     <Box className={classes.cardTxt}>
                                                         {
                                                             cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
                                                         }
-                                                        <h4 className={classes.cardHead}>{item.head}</h4>
-                                                        <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                        <h4 className={classes.readMore}>
-                                                            <a href="/#" >{item.read}</a>
-                                                        </h4>
+                                                        <Fade right>
+                                                            <h4 className={classes.cardHead}>{item.head}</h4>
+                                                            <h6 className={classes.cardSubHead}>{item.para}</h6>
+                                                            <h4 className={classes.readMore}>
+                                                                <a href="/#" >{item.read}</a>
+                                                            </h4>
+                                                        </Fade>
                                                     </Box>
                                                 </Box>
                                             </Box>

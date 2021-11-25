@@ -1,5 +1,8 @@
 import React from 'react'
 import { Box, makeStyles } from '@material-ui/core'
+import Fade from 'react-reveal/Fade';
+import Roll from 'react-reveal/Roll';
+import Jello from 'react-reveal/Jello';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -25,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     mainText: {
-        lineHeight:'.8',
+        lineHeight: '.8',
         zIndex: '1',
         color: 'white',
         [theme.breakpoints.down('sm')]: {
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         background: '#CA0017',
         height: '2px',
         width: '25%',
-        margin:'1% 0%',
+        margin: '1% 0%',
         [theme.breakpoints.down('sm')]: {
             width: '70%',
 
@@ -47,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subText: {
         width: '40%',
-        // font: 'normal normal normal 1rem Access',
+        font: 'normal normal normal 1rem Access',
         color: 'white',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
@@ -102,23 +105,27 @@ export function Sbanner({
                     <img src={Background} alt="background" />
                 </Box> */}
 
-                <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
+                <Fade top>
+                    <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
+                </Fade>
 
-                <span className={classes.redLine}></span>
+                <Roll> <span className={classes.redLine}></span></Roll>
 
-                <h6 className={classes.subText}>
+
+                <h2 className={classes.subText}> <Fade bottom>
                     Industry leaders in providing solutions catering to the domains
                     of intellectual property, hardware design &
-                    prototyping, software design, and manufacturing.
-                </h6>
+                    prototyping, software design, and manufacturing.  </Fade>
+                </h2>
+
 
                 <div className={classes.scrollBox}>
 
                     <Box className={classes.mouseScroll} >
-                        <img src={mouse} alt="Scroll image" onClick={scroll} />
+                        <Jello><img src={mouse} alt="Scroll image" onClick={scroll} /></Jello>
                     </Box>
 
-                    <h6 className={classes.mouseScrollTxt} >Scroll</h6>
+                    <Jello> <h6 className={classes.mouseScrollTxt} >Scroll</h6></Jello>
 
                 </div>
 

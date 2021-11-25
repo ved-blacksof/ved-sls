@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
 import { PositionImage, Paragraphs, MainContainer } from "../atoms"
+import Bounce from 'react-reveal/Bounce';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     },
     gridContainer: {
         display: 'flex',
-        width:'100%',
+        width: '100%',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             margin: '10% 0%'
@@ -87,9 +88,11 @@ export function Quality({
                     {
                         mainheading ?
                             <Box className={classes.mainHeads}>
-                                <h2 className={classes.bigHead}>{mainheading}
-                                    <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
-                                </h2>
+                                <Bounce bottom>
+                                    <h2 className={classes.bigHead}>{mainheading}
+                                        <h6 className={classes.bigSubHead}> {mainsubheading}</h6>
+                                    </h2>
+                                </Bounce>
                             </Box> : ''
                     }
 
@@ -97,11 +100,11 @@ export function Quality({
                         style={style}>
 
                         <Box className={classes.BoxLeft}>
-                            <PositionImage imageBG={imageBG} />
-                        </Box>  
+                            <Bounce left> <PositionImage imageBG={imageBG} /></Bounce>
+                        </Box>
 
                         <Box className={classes.BoxRight}>
-                            <Paragraphs
+                            <Bounce right> <Paragraphs
                                 title={heading}
                                 subtitle={subtitle}
                                 redline={redline}
@@ -111,7 +114,7 @@ export function Quality({
                                 secli={secli}
                                 thirdli={thirdli}
                                 fourthli={fourthli}
-                            />
+                            /></Bounce>
                         </Box>
 
                     </Box>

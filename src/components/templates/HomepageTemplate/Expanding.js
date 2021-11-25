@@ -7,6 +7,7 @@ import {
 } from '@material-ui/core';
 import { VerticalTab } from '../../molecules'
 import { MainContainer } from '../../atoms';
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -35,15 +36,19 @@ export function Expanding() {
         <>
             <MainContainer>
                 <Container className={classes.whiteBox}>
-                    <h3 className={classes.expand}>EXPANDING THE CORE  <br /> OF OUR PRIMARY OFFERINGS</h3>
+                    <Fade left>
+                        <h3 className={classes.expand}>EXPANDING THE CORE  <br /> OF OUR PRIMARY OFFERINGS</h3>
+                    </Fade>
                 </Container>
             </MainContainer>
             <Box className={classes.blueBox}>
 
                 <MainContainer>
-                    <Container fixed className={classes.blueBoxContainer} style={{ padding: '5% 0%' }}>
-                        <VerticalTab />
-                    </Container>
+                    <Fade right>
+                        <Container fixed className={classes.blueBoxContainer} style={{ padding: '5% 0%' }}>
+                            <VerticalTab />
+                        </Container>
+                    </Fade>
                 </MainContainer>
 
             </Box>

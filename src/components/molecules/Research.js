@@ -15,6 +15,8 @@ import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 import "@egjs/flicking-plugins/dist/pagination.css";
 import { MainContainer } from '../atoms';
+import Fade from 'react-reveal/Fade';
+
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
@@ -113,9 +115,9 @@ export function Research({
                 {
                     generalheadingblue ?
                         <>
-                            <h3 className={classes.head}>{title}<br/>{title1}</h3>
-                            <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
-                            <h4 className={classes.subHead}>{subtitle}</h4>
+                            <Fade left> <h3 className={classes.head}>{title}</h3></Fade>
+                            <Fade right> <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /></Fade>
+                            <Fade left>   <h4 className={classes.subHead}>{subtitle}</h4> </Fade>
                         </> : ''
                 }
 
@@ -136,10 +138,10 @@ export function Research({
                                 return (
                                     <Box className={classes.BoxWidth}>
                                         <Box style={{ position: 'relative' }}>
-                                            <Box >
+                                            <Fade top>
                                                 <img className={classes.BoxImages} src={item.images} alt="Carousel Images" data-aos="fade-up" />
-                                            </Box>
-                                            <h5 className={classes.txtReserch}>{item.text}</h5>
+                                            </Fade>
+                                            <Fade bottom> <h5 className={classes.txtReserch}>{item.text}</h5> </Fade>
                                         </Box>
                                     </Box>
                                 )

@@ -8,6 +8,8 @@ import {
     Typography,
     makeStyles,
 } from '@material-ui/core';
+import Bounce from 'react-reveal/Bounce';
+
 
 import { GeneralHeading, MainContainer } from '../../atoms'
 
@@ -59,15 +61,23 @@ export function Partners() {
                         redline="redline"
                     />
                     <Box className={classes.partnersIcons}>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/download (1).png'} alt="Partners Icons" />
-                        </div>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/NoPath.c6058ac7.png'} alt="Partners Icons" />
-                        </div>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/download (2).png'} alt="Partners Icons" />
-                        </div>
+                        <Bounce left>
+                            <div className={classes.iconsBox}>
+                                <img src={'./images/download (1).png'} alt="Partners Icons" />
+                            </div>
+                        </Bounce>
+
+                        <Bounce bottom>
+                            <div className={classes.iconsBox}>
+                                <img src={'./images/NoPath.c6058ac7.png'} alt="Partners Icons" />
+                            </div>
+                        </Bounce>
+
+                        <Bounce right>
+                            <div className={classes.iconsBox}>
+                                <img src={'./images/download (2).png'} alt="Partners Icons" />
+                            </div>
+                        </Bounce>
                     </Box>
                 </Container>
             </MainContainer>

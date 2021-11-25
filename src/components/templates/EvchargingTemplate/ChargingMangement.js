@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
 
 import { GridBlue, MainContainer, ParagraphsBlue } from '../../atoms'
-
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -50,29 +50,33 @@ export function ChargingMangement() {
             <Box className={classes.mainBox}>
                 <Box style={{ borderRadius: '0rem 5rem 0rem 5rem', overflow: 'hidden' }}>
                     <GridBlue >
+
                         <Box style={{ padding: '10% 0%', }}>
                             <MainContainer>
                                 <Container fixed className={classes.container}>
 
                                     <Box className={classes.leftBox} >
-                                        <ParagraphsBlue
-                                            maintitle="Software OFFERING"
-                                            title="Charging Management Software"
-                                            subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
-                                            list
-                                            firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
-                                            secli="Dynamic load management capabilities"
-                                            thirdli="ROI Analytics"
-                                            fourthli="Partner/Fleet management"
-                                        />
+                                        <Fade bottom>
+                                            <ParagraphsBlue
+                                                maintitle="Software OFFERING"
+                                                title="Charging Management Software"
+                                                subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
+                                                list
+                                                firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
+                                                secli="Dynamic load management capabilities"
+                                                thirdli="ROI Analytics"
+                                                fourthli="Partner/Fleet management"
+                                            />
+                                        </Fade>
                                     </Box>
 
 
                                 </Container>
                             </MainContainer>
                         </Box>
+
                         <Box className={classes.rightBox}>
-                            <img className={classes.lap} src={'./images/Image 2.png'} />
+                            <Fade bottom><img className={classes.lap} src={'./images/Image 2.png'} /></Fade>
                         </Box>
                     </GridBlue>
                 </Box>

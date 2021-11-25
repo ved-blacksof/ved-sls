@@ -12,7 +12,8 @@ import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
 
 import { ParagraphsBlue, MainContainer } from '../../atoms'
-
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
@@ -143,15 +144,17 @@ export function TechCarousel() {
             <MainContainer>
                 <Container fixed className={classes.newBox}>
                     <Box className={classes.box1}>
-                        <ParagraphsBlue
-                            title="TECHNOLOGY PARTNERS "
-                            title1="IN HARDWARE AND SOFTWARE OFFERINGS"
-                            subtitle="Serving as a turnkey technology solution provider for the past 20 years."
-                            list="We specialize in -"
-                            firstli="Research & Development"
-                            secli=" Product Design"
-                            thirdli="Manufacturing"
-                        />
+                        <Fade left>
+                            <ParagraphsBlue
+                                title="TECHNOLOGY PARTNERS "
+                                title1="IN HARDWARE AND SOFTWARE OFFERINGS"
+                                subtitle="Serving as a turnkey technology solution provider for the past 20 years."
+                                list="We specialize in -"
+                                firstli="Research & Development"
+                                secli=" Product Design"
+                                thirdli="Manufacturing"
+                            />
+                        </Fade>
                     </Box>
 
                     <Box className={classes.box2}>
@@ -166,55 +169,59 @@ export function TechCarousel() {
 
                             {/* Slide1 */}
                             <Box className={classes.slide} >
-                                <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
-                                    <div className={classes.boxBig} >
-                                        <h1>356<h2>ENGINEERS</h2></h1>
+                                <Zoom bottom>
+                                    <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                        <div className={classes.boxBig} >
+                                            <h1>356<h2>ENGINEERS</h2></h1>
+                                        </div>
+
+                                        <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                            <img src={'./images/Layer 2.svg'} />
+                                        </div>
                                     </div>
 
-                                    <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
-                                        <img src={'./images/Layer 2.svg'} />
+                                    <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                        <h3>100+</h3>
+                                        <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
                                     </div>
-                                </div>
+                                    <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                        <img src={'./images/mission.svg'} />
 
-                                <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                    <h3>100+</h3>
-                                    <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
-                                </div>
-                                <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
-                                    <img src={'./images/mission.svg'} />
-
-                                </div>
-                                <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                    <h3>06</h3>
-                                    <h4 >BUSINESS VERTICALS</h4>
-                                </div>
+                                    </div>
+                                    <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                        <h3>06</h3>
+                                        <h4 >BUSINESS VERTICALS</h4>
+                                    </div>
+                                </Zoom>
                             </Box>
 
 
                             {/* Slide2 */}
                             <Box className={classes.slide} >
-                                <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
-                                    <div className={classes.boxBig} >
-                                        <h1>356<h2>ENGINEERS</h2></h1>
+                                <Zoom bottom>
+                                    <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                        <div className={classes.boxBig} >
+                                            <h1>356<h2>ENGINEERS</h2></h1>
+                                        </div>
+
+                                        <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                            <img src={'./images/Layer 2.svg'} />
+                                        </div>
                                     </div>
 
-                                    <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
-                                        <img src={'./images/Layer 2.svg'} />
+                                    <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                        <h3>100+</h3>
+                                        <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
                                     </div>
-                                </div>
+                                    <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                        <img src={'./images/mission.svg'} />
 
-                                <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                    <h3>100+</h3>
-                                    <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
-                                </div>
-                                <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
-                                    <img src={'./images/mission.svg'} />
-
-                                </div>
-                                <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                    <h3>06</h3>
-                                    <h4 >BUSINESS VERTICALS</h4>
-                                </div>
+                                    </div>
+                                    <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                        <h3>06</h3>
+                                        <h4 >BUSINESS VERTICALS</h4>
+                                    </div>
+                                </Zoom>
                             </Box>
 
 

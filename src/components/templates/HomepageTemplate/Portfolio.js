@@ -7,11 +7,13 @@ import {
 } from '@material-ui/core';
 import { GeneralHeading, MainContainer, MapIcon } from '../../atoms'
 import { Visit } from '../../molecules';
+import Bounce from 'react-reveal/Bounce';
+
 
 const useStyles = makeStyles((theme) => ({
     portContainer: {
         marginTop: '10%',
-    
+
     },
     portHead: {
         color: 'black',
@@ -70,24 +72,24 @@ export function Portfolio({
 
         <MainContainer>
             <Container fixed className={classes.portContainer}>
-                <GeneralHeading
-                    title="OUR RICH PORTFOLIO"
-                    title1="COVERS MULTIPLE SEGMENTS"
-                    br="br"
-                    redline="redline"
-                    subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
-                            of products and services."
-                />
+                <Bounce top>
+                    <GeneralHeading
+                        title="OUR RICH PORTFOLIO COVERS MULTIPLE SEGMENTS"
+                        redline="redline"
+                        subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
+            of products and services."
+                    />
+                </Bounce>
 
                 <MapIcon data={data} />
 
                 {/* <Box className={classes.knowMore}>
                     <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'} /> </button>
                 </Box> */}
-                
-                <br/>
 
-                <Visit 
+                <br />
+
+                <Visit
                     title="Know More"
                 />
 

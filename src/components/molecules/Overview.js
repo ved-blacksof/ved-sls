@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Container, Box } from '@material-ui/core'
 import { MainContainer, MapIcon } from '../atoms'
+import Bounce from 'react-reveal/Bounce';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -86,19 +87,24 @@ export function Overview({
         <Box className={classes.overBox} style={style}>
             <MainContainer>
                 <Container fixed className={classes.overInBox}>
-                    <h6 className={classes.paths}> {path} </h6>
+                    <Bounce right>
+                        <h6 className={classes.paths}> {path} </h6>
+                    </Bounce>
+                    <Bounce left>
+                        <h3 className={classes.head}>Overview</h3>
+                    </Bounce>
+                    <Bounce right>
+                        <Box className={classes.redLine}>
+                            <img src={'/images/Component 4 – 1.svg'} />
+                        </Box>
+                    </Bounce>
+                    <Bounce right>
+                        <Box className={classes.para} >
+                            <h4 className={classes.portSubHead}>{sub1}</h4>
 
-                    <h3 className={classes.head}>Overview</h3>
-
-                    <Box className={classes.redLine}>
-                        <img src={'/images/Component 4 – 1.svg'} />
-                    </Box>
-
-                    <Box className={classes.para} >
-                        <h4 className={classes.portSubHead}>{sub1}</h4>
-
-                        <h4 className={classes.portSubHead}>{sub2}</h4>
-                    </Box>
+                            <h4 className={classes.portSubHead}>{sub2}</h4>
+                        </Box>
+                    </Bounce>
 
                     {
                         prop ?
@@ -110,11 +116,13 @@ export function Overview({
                             <>
                                 <Box className={classes.list}>
                                     <Container fixed className={classes.box1}>
-                                        <ul className={classes.UL}>
-                                            <h6><li className={classes.LI}>{li1}</li></h6>
-                                            <h6><li className={classes.LI}>{li2}</li></h6>
-                                            <h6><li className={classes.LI}>{li3}</li></h6>
-                                        </ul>
+                                        <Bounce left>
+                                            <ul className={classes.UL}>
+                                                <h6><li className={classes.LI}>{li1}</li></h6>
+                                                <h6><li className={classes.LI}>{li2}</li></h6>
+                                                <h6><li className={classes.LI}>{li3}</li></h6>
+                                            </ul>
+                                        </Bounce>
                                     </Container>
                                 </Box>
                             </> : ''
