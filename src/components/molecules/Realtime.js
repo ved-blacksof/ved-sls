@@ -7,7 +7,6 @@ import { makeStyles, Container, Box, Button } from '@material-ui/core'
 import { ArrowBackIos, ArrowForwardIos, KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
 import { GeneralHeading, MainContainer } from '../atoms'
 
-
 const useStyles = makeStyles((theme) => ({
     realText: {
         marginTop: '10%',
