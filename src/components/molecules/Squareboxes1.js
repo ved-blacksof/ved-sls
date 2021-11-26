@@ -6,6 +6,8 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import { GeneralHeading, MainContainer } from '../atoms'
+import Bounce from 'react-reveal/Bounce';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -58,9 +60,9 @@ const useStyles = makeStyles((theme) => ({
     },
     subTitle: {
         color: '#182AC3',
-        fontWeight:'bold',
+        fontWeight: 'bold',
         [theme.breakpoints.down('xs')]: {
-            fontSize:'.8rem'
+            fontSize: '.8rem'
         },
     },
     reddiv: {
@@ -87,9 +89,9 @@ export function Squareboxes1({
         <MainContainer>
             <Container fixed className={classes.container1}>
                 <h2 className={classes.mainTitle}> {maintitle} </h2>
-<br/>
-<br/>
-<br/>
+                <br />
+                <br />
+                <br />
                 <Box className={classes.mainBox}>
 
                     {
@@ -97,9 +99,9 @@ export function Squareboxes1({
                             return (
                                 <Box className={classes.boxes}>
                                     <Box className={classes.imgBox}>
-                                        <img src={item.images} alt="Mission Icon" />
+                                        <Bounce bottom> <img src={item.images} alt="Mission Icon" /> </Bounce>
                                     </Box>
-                                    <h4 className={classes.subTitle}>{item.subtitle} </h4>
+                                    <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
                                     <Box className={classes.reddiv}></Box>
                                 </Box>
                             )

@@ -1,5 +1,7 @@
 import { makeStyles, Box } from '@material-ui/core'
 import React from 'react'
+import Bounce from 'react-reveal/Bounce';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -51,13 +53,13 @@ export function ServiceBox({
         <Box className={className}>
             <Box className={classes.boxes} style={style}>
                 <Box className={classes.images}>
-                    <img src={imgs} />
+                    <Bounce bottom><img src={imgs} /></Bounce>
                 </Box>
-                <h4 style={{ color: '#182AC3' }}>{title}</h4>
-                <h6 style={{ color: 'black' }}>- {li1}</h6>
-                <h6 style={{ color: 'black' }}>- {li2}</h6>
+                <Bounce bottom><h4 style={{ color: '#182AC3' }}>{title}</h4></Bounce>
+                <Bounce bottom><h6 style={{ color: 'black' }}>- {li1}</h6></Bounce>
+                <Bounce bottom><h6 style={{ color: 'black' }}>- {li2}</h6></Bounce>
                 {
-                    li3 ? <h6 style={{ color: 'black' }}>- {li3}</h6> : ''
+                    li3 ? <Bounce bottom><h6 style={{ color: 'black' }}>- {li3}</h6></Bounce> : ''
                 }
             </Box>
         </Box>

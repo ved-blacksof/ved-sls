@@ -3,6 +3,7 @@ import { makeStyles, Container, Box } from '@material-ui/core'
 
 import { GeneralHeading, MainContainer, MapIcon, MapIcon1 } from '../../atoms'
 import { Visit } from '../../molecules'
+import LightSpeed from 'react-reveal/LightSpeed';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -93,7 +94,7 @@ export function Yalgaar({
 
                 <Box className={classes.rightBox}>
                     <Box className={classes.yImage}>
-                        <img src={'./images/Group 49262.png'} />
+                        <LightSpeed right>  <img src={'./images/Group 49262.png'} /></LightSpeed >
                     </Box>
                 </Box>
 

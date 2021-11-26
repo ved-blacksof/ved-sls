@@ -6,6 +6,9 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import { MainContainer } from '../atoms';
+import Fade from 'react-reveal/Fade';
+
+
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -55,14 +58,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        height:'12vw', 
+        height: '12vw',
         background: 'white',
         "& img": {
             width: '100%',
             maxHeight: '100%'
         },
         [theme.breakpoints.down('sm')]: {
-            height:'fit-content', 
+            height: 'fit-content',
         },
     },
     head: {
@@ -86,26 +89,26 @@ const useStyles = makeStyles((theme) => ({
     },
     productName: {
         // font: 'normal normal bold 1rem Access',
-        fontWeight:'bold',
+        fontWeight: 'bold',
         color: 'black',
         textAlign: 'left',
 
     },
     productDetail: {
-        height:'10rem',
-        overflow:'hidden',
+        height: '10rem',
+        overflow: 'hidden',
         color: 'black',
         marginTop: '.5rem',
         textAlign: 'left',
         [theme.breakpoints.down('sm')]: {
-            height:'4.8rem',
+            height: '4.8rem',
         },
     },
     readMore: {
         marginTop: '10%',
         textAlign: 'left',
         "& a": {
-            fontFamily:'BebasNeue',
+            fontFamily: 'BebasNeue',
             color: '#182AC3',
         }
     }
@@ -143,16 +146,16 @@ export function Cards({
                             return (
                                 <Box className={classes.boxes}>
                                     <Box className={classes.imgBox}>
-                                        <img src={item.images} alt="Product images" />
+                                        <Fade bottom> <img src={item.images} alt="Product images" />  </Fade>
                                     </Box>
 
                                     <Box className={classes.textBox}>
-                                        <h4 className={classes.productName} >{item.productname}</h4>
-                                       {
-                                           item.para ?  <h6 className={classes.productDetail} style={{ color: 'black', textAlign: 'left', }}>{item.para}</h6> : ''
-                                       }
+                                        <Fade bottom>  <h4 className={classes.productName} >{item.productname}</h4>  </Fade>
                                         {
-                                            item.read ? <h4 className={classes.readMore}><a href="/" >READ MORE</a></h4> : ''
+                                            item.para ? <Fade bottom><h6 className={classes.productDetail} style={{ color: 'black', textAlign: 'left', }}>{item.para}</h6> </Fade> : ''
+                                        }
+                                        {
+                                            item.read ? <Fade bottom><h4 className={classes.readMore}><a href="/" >READ MORE</a></h4> </Fade> : ''
                                         }
                                     </Box>
                                 </Box>

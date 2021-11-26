@@ -2,6 +2,7 @@ import { Box, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 import { industries } from '../../molecules/PortfolioData'
 import { GridBlue, MainContainer, MapIcon, MapIcon1 } from '../../atoms'
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     margins: {
@@ -9,11 +10,11 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             margin: '20% 0%',
         },
-        "& h6":{
-            width:'50%',
-            margin:'0% auto',
-            [theme.breakpoints.down('sm')]:{
-                width:'80%'
+        "& h6": {
+            width: '50%',
+            margin: '0% auto',
+            [theme.breakpoints.down('sm')]: {
+                width: '80%'
             }
         }
     },
@@ -23,43 +24,43 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-start',
         flexWrap: 'wrap',
     },
-    borderBox:{
-        border:'2px solid black',
-        width:'30%',
-        display:'flex',
-        flexWrap:'wrap',
-        margin:'2% 0%',
+    borderBox: {
+        border: '2px solid black',
+        width: '30%',
+        display: 'flex',
+        flexWrap: 'wrap',
+        margin: '2% 0%',
 
-        [theme.breakpoints.down('sm')]:{
-            width:'45%'
+        [theme.breakpoints.down('sm')]: {
+            width: '45%'
         },
-        [theme.breakpoints.down('xs')]:{
-            width:'100%'
+        [theme.breakpoints.down('xs')]: {
+            width: '100%'
         },
 
     },
-    iconBox:{
-        borderRight:'2px solid black',
-        width:'3.5rem',
-        height:'3.5rem',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        padding:'.5rem',
-        "& img":{
-            maxWidth:'100%',
-            maxHeight:'100%'
+    iconBox: {
+        borderRight: '2px solid black',
+        width: '3.5rem',
+        height: '3.5rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '.5rem',
+        "& img": {
+            maxWidth: '100%',
+            maxHeight: '100%'
         },
-        [theme.breakpoints.down('xs')]:{
-            width:'3rem',
-            height:'3rem',
+        [theme.breakpoints.down('xs')]: {
+            width: '3rem',
+            height: '3rem',
         },
     },
-    textBox:{
-        alignSelf:'center',
-        padding:'1%',
-        "& h4":{
-            color:'black'
+    textBox: {
+        alignSelf: 'center',
+        padding: '1%',
+        "& h4": {
+            color: 'black'
         }
     }
 
@@ -86,15 +87,15 @@ export function Industries({
                     </Box>
                     <Container fixed className={classes.mainContainer}>
                         {
-                            industries.map((item, index)=>{
-                                return(
+                            industries.map((item, index) => {
+                                return (
                                     <>
                                         <Box className={classes.borderBox}>
                                             <Box className={classes.iconBox} >
-                                                <img src={item.images}/>
+                                                <Fade bottom><img src={item.images} /></Fade>
                                             </Box>
                                             <Box className={classes.textBox}>
-                                                <h4>{item.text}</h4>
+                                                <Fade top><h4>{item.text}</h4></Fade>
                                             </Box>
                                         </Box>
                                     </>

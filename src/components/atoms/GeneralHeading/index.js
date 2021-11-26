@@ -2,6 +2,7 @@ import { Box, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 import Fade from 'react-reveal/Fade';
 import Roll from 'react-reveal/Roll';
+import Pulse from 'react-reveal/Pulse';
 
 const useStyles = makeStyles((theme) => ({
     paraBox: {
@@ -55,7 +56,7 @@ export function GeneralHeading({
     return (
         <Box className={classes.paraBox} style={style}>
             {
-                icons ? <Box className={classes.icon}> <img src={icons} /> </Box> : ''
+                icons ? <Box className={classes.icon}><Pulse> <img src={icons} /> </Pulse></Box> : ''
             }
             <Fade bottom> <h3 className={classes.head}>{title}  {br ? <br /> : ''} {title1}</h3> </Fade>
             {

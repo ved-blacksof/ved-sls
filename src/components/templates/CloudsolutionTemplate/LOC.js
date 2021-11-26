@@ -4,6 +4,9 @@ import { makeStyles, Container, Button, Box, Grid } from '@material-ui/core'
 import { GeneralHeading, MainContainer, MapIcon1 } from '../../atoms'
 import { loc } from '../../molecules/PortfolioData'
 import { Visit } from '../../molecules'
+import LightSpeed from 'react-reveal/LightSpeed';
+
+
 
 const useStyles = makeStyles((theme) => ({
     locContainer: {
@@ -27,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             marginTop: '5%',
             width: '100%',
-            display:'none'
+            display: 'none'
 
         },
         "& img": {
@@ -63,7 +66,7 @@ export function LOC({
 
                     <Box className={classes.rightBox}>
 
-                        <img src={'./images/Mask Group 2.png'} />
+                        <LightSpeed right> <img src={'./images/Mask Group 2.png'} /></LightSpeed>
 
                     </Box>
                 </Container>
