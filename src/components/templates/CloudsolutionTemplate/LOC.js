@@ -4,7 +4,7 @@ import { makeStyles, Container, Button, Box, Grid } from '@material-ui/core'
 import { GeneralHeading, MainContainer, MapIcon1 } from '../../atoms'
 import { loc } from '../../molecules/PortfolioData'
 import { Visit } from '../../molecules'
-import LightSpeed from 'react-reveal/LightSpeed';
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -66,7 +66,7 @@ export function LOC({
 
                     <Box className={classes.rightBox}>
 
-                        <LightSpeed right> <img src={'./images/Mask Group 2.png'} /></LightSpeed>
+                        <Fade bottom> <img src={'./images/Mask Group 2.png'} /></Fade>
 
                     </Box>
                 </Container>

@@ -13,7 +13,6 @@ import "@egjs/flicking-plugins/dist/pagination.css";
 
 import { ParagraphsBlue, MainContainer } from '../../atoms'
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
@@ -144,7 +143,7 @@ export function TechCarousel() {
             <MainContainer>
                 <Container fixed className={classes.newBox}>
                     <Box className={classes.box1}>
-                        <Fade left>
+                        <Fade bottom>
                             <ParagraphsBlue
                                 title="TECHNOLOGY PARTNERS "
                                 title1="IN HARDWARE AND SOFTWARE OFFERINGS"
@@ -169,36 +168,35 @@ export function TechCarousel() {
 
                             {/* Slide1 */}
                             <Box className={classes.slide} >
-                                <Zoom bottom>
-                                    <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
-                                        <div className={classes.boxBig} >
-                                            <h1>356<h2>ENGINEERS</h2></h1>
-                                        </div>
 
-                                        <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
-                                            <img src={'./images/Layer 2.svg'} />
-                                        </div>
+                                <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
+                                    <div className={classes.boxBig} >
+                                        <Fade bottom><h1>356<h2>ENGINEERS</h2></h1></Fade>
                                     </div>
 
-                                    <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h3>100+</h3>
-                                        <h4 >ACTIVE PROJECTS AROUND THE WORLD</h4>
+                                    <div className={classes.boxSmall} style={{ background: '#D9393E' }}>
+                                        <Fade bottom><img src={'./images/Layer 2.svg'} /></Fade>
                                     </div>
-                                    <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
-                                        <img src={'./images/mission.svg'} />
+                                </div>
 
-                                    </div>
-                                    <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h3>06</h3>
-                                        <h4 >BUSINESS VERTICALS</h4>
-                                    </div>
-                                </Zoom>
+                                <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                    <Fade bottom><h3>100+</h3></Fade>
+                                    <Fade bottom><h4 >ACTIVE PROJECTS AROUND THE WORLD</h4></Fade>
+                                </div>
+                                <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                    <Fade bottom><img src={'./images/mission.svg'} /></Fade>
+                                </div>
+                                <div className={classes.boxSmall} style={{ background: 'white' }} >
+                                    <Fade bottom><h3>06</h3></Fade>
+                                    <Fade bottom><h4 >BUSINESS VERTICALS</h4></Fade>
+                                </div>
+
                             </Box>
 
 
                             {/* Slide2 */}
                             <Box className={classes.slide} >
-                                <Zoom bottom>
+                                <Fade bottom>
                                     <div style={{ width: '100%', justifyContent: 'center', alignItems: 'flex-end' }}>
                                         <div className={classes.boxBig} >
                                             <h1>356<h2>ENGINEERS</h2></h1>
@@ -221,7 +219,7 @@ export function TechCarousel() {
                                         <h3>06</h3>
                                         <h4 >BUSINESS VERTICALS</h4>
                                     </div>
-                                </Zoom>
+                                </Fade>
                             </Box>
 
 

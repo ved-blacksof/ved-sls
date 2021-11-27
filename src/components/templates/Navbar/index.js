@@ -2,8 +2,7 @@ import React from 'react'
 import { makeStyles, IconButton, Toolbar, AppBar, Box } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
 import { Menu } from '@material-ui/icons'
-import Flip from 'react-reveal/Flip';
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -84,15 +83,15 @@ export function Navbar() {
             <AppBar position='relative' color='transparent' className={classes.mainBox}>
                 <Toolbar className={classes.navbar}>
                     <Box className={classes.logoBox} disableRipple disableFocusRipple disableTouchRipple edge="start" color="inherit" aria-label="menu">
-                        <Flip left>
+                        <Fade bottom>
                             <img disableRipple className={classes.logo} src={'/images/Layer_x0020_1.svg'} onClick={() => { history.push('/') }} />
-                        </Flip>
+                        </Fade>
                     </Box>
 
                     <Menu className={classes.menuIcon} onClick={showMenu} />
 
                     {showMenu}
-                    <Zoom right>
+                    <Fade bottom>
                         <ul className={classes.navUL}>
                             <li className={classes.navLI} >
                                 <h4>
@@ -120,7 +119,7 @@ export function Navbar() {
                                 </h4>
                             </li>
                         </ul>
-                    </Zoom>
+                    </Fade>
                 </Toolbar>
             </AppBar>
         </>

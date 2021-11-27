@@ -283,7 +283,7 @@ export function Realtime({
                                                         {
                                                             cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
                                                         }
-                                                        <Fade right>
+                                                        <Fade bottom>
                                                             <h4 className={classes.cardHead}>{item.head}</h4>
                                                             <h6 className={classes.cardSubHead}>{item.para}</h6>
                                                             <h4 className={classes.readMore}>
@@ -319,7 +319,7 @@ export function Realtime({
                         </Box>
                         {
                             grpicons ? <Box className={classes.iconBox}>
-                                <img src={grpicons} />
+                                <Fade bottom><img src={grpicons} /></Fade>
                             </Box> : ''
                         }
                     </Container>

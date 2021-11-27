@@ -1,8 +1,7 @@
 import { Box, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 import Fade from 'react-reveal/Fade';
-import Roll from 'react-reveal/Roll';
-import Pulse from 'react-reveal/Pulse';
+import Flip from 'react-reveal/Flip';
 
 const useStyles = makeStyles((theme) => ({
     paraBox: {
@@ -56,13 +55,13 @@ export function GeneralHeading({
     return (
         <Box className={classes.paraBox} style={style}>
             {
-                icons ? <Box className={classes.icon}><Pulse> <img src={icons} /> </Pulse></Box> : ''
+                icons ? <Box className={classes.icon}><Fade bottom> <img src={icons} /></Fade> </Box> : ''
             }
             <Fade bottom> <h3 className={classes.head}>{title}  {br ? <br /> : ''} {title1}</h3> </Fade>
             {
-                redline ? <Roll><img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /></Roll> : ''
+                redline ? <Flip left><img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /></Flip> : ''
             }
-            <Fade top><h4 className={classes.portSubHead}>{subtitle}  {br1 ? <br /> : ''}  {subtitle_1} </h4>
+            <Fade bottom><h4 className={classes.portSubHead}>{subtitle}  {br1 ? <br /> : ''}  {subtitle_1} </h4>
                 <h6 style={{ color: 'black', margin: '4% 0%' }}>{subtitle1}</h6>  </Fade>
         </Box>
 

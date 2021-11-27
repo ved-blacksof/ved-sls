@@ -13,7 +13,7 @@ import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 import "@egjs/flicking-plugins/dist/pagination.css";
 
-import Flip from 'react-reveal/Flip';
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
@@ -106,7 +106,7 @@ export function Reshape() {
     const Paginations = [new Pagination({ type: 'bullet' })]
 
     return (
-        <Flip top>
+        <Fade bottom>
         <Box className={classes.reaserchMain}>
             <Box className={classes.flicks}>
                 <Flicking
@@ -163,6 +163,6 @@ export function Reshape() {
             </Box>
 
         </Box>
-            </Flip>
+            </Fade>
     )
 }

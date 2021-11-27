@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { makeStyles, Box, Container, IconButton, Toolbar, AppBar } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
 import RubberBand from 'react-reveal/RubberBand';
-import Jello from 'react-reveal/Jello';
 import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
@@ -113,14 +112,14 @@ export function Footer() {
         <Box className={classes.mainPadding} style={{}}>
             <Box className={classes.footerMain}>
                 <Box className={classes.headBox}>
-                    <RubberBand>
+                    <Fade bottom>
                         <img className=" col-md-2" src={'/images/Layer_x0020_1-1.svg'} alt="SLS Icon" />
-                    </RubberBand>
-                    <Jello>
+                    </Fade>
+                    <Fade bottom>
                         <h6 className={classes.head}>Over the years, we have added numerous products to our portfolio
                             and have served as important technology partners for various verticals.
                         </h6>
-                    </Jello>
+                    </Fade>
                 </Box>
 
                 <Fade bottom>

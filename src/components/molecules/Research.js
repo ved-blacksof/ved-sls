@@ -138,9 +138,9 @@ export function Research({
                                 return (
                                     <Box className={classes.BoxWidth}>
                                         <Box style={{ position: 'relative' }}>
-                                            <Fade top>
-                                                <img className={classes.BoxImages} src={item.images} alt="Carousel Images" data-aos="fade-up" />
-                                            </Fade>
+
+                                            <img className={classes.BoxImages} src={item.images} alt="Carousel Images" data-aos="fade-up" />
+
                                             <Fade bottom> <h5 className={classes.txtReserch}>{item.text}</h5> </Fade>
                                         </Box>
                                     </Box>

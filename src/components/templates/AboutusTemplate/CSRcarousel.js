@@ -7,7 +7,7 @@ import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
 import { GeneralHeading, MainContainer } from '../../atoms'
-import Roll from 'react-reveal/Roll';
+import Fade from 'react-reveal/Fade';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -175,7 +175,7 @@ export function CSRcarousel({
                     />
 
                     <Box className={classes.flicks}>
-                    <Roll bottom> 
+                    <Fade bottom> 
                         <Flicking
                             selector="center"
                             // plugins={Fades}
@@ -213,7 +213,7 @@ export function CSRcarousel({
                                 <span className="flicking-pagination "></span>
                             </ViewportSlot>
                         </Flicking>
-                        </Roll>
+                        </Fade>
                     </Box>
 
                 </Container>

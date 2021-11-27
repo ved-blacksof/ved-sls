@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import { GeneralHeading, MainContainer, MapIcon } from '../../atoms'
 import { Visit } from '../../molecules';
-import Bounce from 'react-reveal/Bounce';
+import Fade from 'react-reveal/Fade';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -72,14 +72,14 @@ export function Portfolio({
 
         <MainContainer>
             <Container fixed className={classes.portContainer}>
-                <Bounce top>
+                <Fade top>
                     <GeneralHeading
                         title="OUR RICH PORTFOLIO COVERS MULTIPLE SEGMENTS"
                         redline="redline"
                         subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
             of products and services."
                     />
-                </Bounce>
+                </Fade>
 
                 <MapIcon data={data} />
 

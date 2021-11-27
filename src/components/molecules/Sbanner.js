@@ -105,27 +105,29 @@ export function Sbanner({
                     <img src={Background} alt="background" />
                 </Box> */}
 
-                <Fade top>
+                <Fade bottom>
                     <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
                 </Fade>
 
-                <Roll> <span className={classes.redLine}></span></Roll>
+                <Fade bottom><span className={classes.redLine}></span></Fade>
 
 
-                <h2 className={classes.subText}> <Fade bottom>
-                    Industry leaders in providing solutions catering to the domains
-                    of intellectual property, hardware design &
-                    prototyping, software design, and manufacturing.  </Fade>
+                <h2 className={classes.subText}>
+                    <Fade bottom>
+                        Industry leaders in providing solutions catering to the domains
+                        of intellectual property, hardware design &
+                        prototyping, software design, and manufacturing.
+                    </Fade>
                 </h2>
 
 
                 <div className={classes.scrollBox}>
 
                     <Box className={classes.mouseScroll} >
-                        <Jello><img src={mouse} alt="Scroll image" onClick={scroll} /></Jello>
+                        <Fade top><img src={mouse} alt="Scroll image" onClick={scroll} /></Fade>
                     </Box>
 
-                    <Jello> <h6 className={classes.mouseScrollTxt} >Scroll</h6></Jello>
+                    <Fade top> <h6 className={classes.mouseScrollTxt} >Scroll</h6></Fade>
 
                 </div>
 

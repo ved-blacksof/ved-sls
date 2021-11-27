@@ -72,15 +72,15 @@ export function Ubanner({
                     <img className={classes.backImg} src={Background} alt="background" />
                 </div> */}
 
-                <Fade up>
+                <Fade bottom>
                     <h1 className={classes.mainText}>{maintext}</h1>
                 </Fade>
 
-                <Fade left>
+                <Fade bottom>
                     <span className={classes.redLine}></span>
                 </Fade>
 
-                <Fade bottom>
+                <Fade left>
                     <h2 className={classes.subText}>{subtext}</h2>
                 </Fade>
 
