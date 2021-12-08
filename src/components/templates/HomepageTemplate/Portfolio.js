@@ -13,7 +13,7 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) => ({
     portContainer: {
         marginTop: '10%',
-
+        margin: '0% auto'
     },
     portHead: {
         color: 'black',
@@ -72,27 +72,29 @@ export function Portfolio({
 
         <MainContainer>
             <Container fixed className={classes.portContainer}>
-                <Fade top>
-                    <GeneralHeading
-                        title="OUR RICH PORTFOLIO COVERS MULTIPLE SEGMENTS"
-                        redline="redline"
-                        subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
+                <Box style={{margin:'0% auto'}}>
+                    <Fade top>
+                        <GeneralHeading
+                            title="OUR RICH PORTFOLIO COVERS MULTIPLE SEGMENTS"
+                            redline="redline"
+                            subtitle="Catering to multiple industrial use cases, System Level Solutions provides a wide array
                             of products and services."
-                    />
-                </Fade>
+                        />
+                    </Fade>
 
-                <MapIcon data={data} />
+                    <MapIcon data={data} />
 
-                {/* <Box className={classes.knowMore}>
+                    {/* <Box className={classes.knowMore}>
                     <button className={classes.centerBtn} title='Know More' > Know More <img src={'./images/Icon feather-arrow-right.svg'} /> </button>
                 </Box> */}
 
-                <br />
+                    <br />
 
-                {/* <Visit
+                    {/* <Visit
                     title="Know More"
                 /> */}
 
+                </Box>
             </Container>
         </MainContainer>
     )

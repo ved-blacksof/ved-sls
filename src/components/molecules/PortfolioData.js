@@ -1,3 +1,11 @@
+import fifteen1 from '../assets/certificates/ISO9001-2021_CERT_2015_1.pdf'
+import fifteen2 from '../assets/certificates/ISO9001 - 2015 CERT_2015_2.pdf'
+import fifteen3 from '../assets/certificates/ISO_14001_2015_CERT_SLSCORP_2021_2015_3.pdf'
+
+import eight1 from '../assets/certificates/ISO9001-2008 CERT_2015_2008_1.pdf'
+import eight2 from '../assets/certificates/ISO9001-2008 CERT_2012_2008_2.pdf'
+import eight3 from '../assets/certificates/ISO9001-2008 CERT_2008_3.pdf'
+
 export const research = [
     {
         images: "./images/reaserch-Asset_01.png",
@@ -179,42 +187,55 @@ export const realtime = [
 
 ]
 
+
+
 export const certification = [
     {
         images: './images/Mask Group 3.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href:`${fifteen1}`
     },
     {
         images: './images/Mask Group 3.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href:`${fifteen2}`
+
     },
     {
         images: './images/Mask Group 5.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href:`${fifteen3}`
+
     },
     {
         images: './images/Mask Group 6.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href:`${eight1}`
+        
     },
     {
         images: './images/Mask Group 5.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href:`${eight2}`
+
     },
     {
         images: './images/Mask Group 6.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href:`${eight3}`
+
     }
 
 ]
@@ -532,7 +553,7 @@ export const gaminghardware = [
 
 export const gamingsoftware = [
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/gaming/Gaming-Iot-targeting-App.png',
         productname: 'IoT Targeting Mobile App',
         para: 'The Iot Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.',
         read: 'read'

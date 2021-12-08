@@ -44,6 +44,7 @@ export function ElectronicTemplate() {
             <Visit
                 goto="Know more about our Electronics Manufacturing Capabilities"
                 title="Know More"
+                href={"/contact"}
             />
 
             <Footer />

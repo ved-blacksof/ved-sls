@@ -7,6 +7,9 @@ import { Quality, QualityReverse, Offerings } from '../../molecules'
 import { SLSTimeline } from './SLSTimeline'
 import { certification, csrcarousel } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
+import quality from '../../assets/policies/Quality_Policy.pdf'
+import ems from '../../assets/policies/EMS_Policy.pdf'
+
 
 export function AboutusTemplate() {
     return (
@@ -39,8 +42,8 @@ export function AboutusTemplate() {
 
             <Quality
                 mainheading="quality & reliabilty"
-                imageBG="./images/about/Quality-policy.png"
                 heading="Quality Policy"
+                imageBG="./images/about/Quality-policy.png"
                 subtitle="We are committed to consistently meet our customers requirement as well as applicable 
                             statutory and regulatory requirement for the quality of products and services and performance
                             at optimum cost through our competent human resource and continual improvement of quality 
@@ -52,11 +55,13 @@ export function AboutusTemplate() {
                 thirdli="Ensure enhanced customer satisfaction through our products and services."
                 fourthli="Ensure proper fulfillment of needs and expectations of relevant interested parties."
                 redline="redline"
+                download="download policy"
+                href={quality}
             />
 
             <QualityReverse
-                imageBG="./images/annie-spratt-hCb3lIB8L8E-unsplash.jpg"
                 heading="Environmental Policy"
+                imageBG="./images/annie-spratt-hCb3lIB8L8E-unsplash.jpg"
                 subtitle="We are committed to meet all statutory and legal compliance in our business activities under the environmental affairs."
                 list="list"
                 uli="To achieve our aim, we will"
@@ -65,14 +70,15 @@ export function AboutusTemplate() {
                 thirdli="Ensure our production and service activities do not have any adverse effect on the environment."
                 fourthli="Strive to continually improve EMS by enhancing environmental performance."
                 redline="redline"
+                download="download policy"
+                href={ems}
             />
 
             <Realtime
                 data={certification}
                 title="Certifications and Policies"
-                download
+                download="download"
             // grpicons={"./images/Screen Shot 2021-05-29 at 2.50.04 AM.jpg"}
-
             // subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
             // cases="cases"
             />

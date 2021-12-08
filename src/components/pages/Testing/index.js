@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { TestingTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Testing() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Testing() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <TestingTemplate />            
         </div>
     )

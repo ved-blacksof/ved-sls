@@ -49,6 +49,7 @@ export function SolarTemplate() {
             <Visit
                 goto1="A DIVISION OF SYSTEM LEVEL SOLUTIONS; SUNSIGHTS"
                 title="Visit the website"
+                href={"https://www.getsunsights.com/"}
                 style={{fontFamily:'BebasNeue',fontWeight:'normal'}}
             />
 

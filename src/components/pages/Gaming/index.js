@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { GamingTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Gaming() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Gaming() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <GamingTemplate />            
         </div>
     )

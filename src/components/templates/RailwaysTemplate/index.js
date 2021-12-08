@@ -8,7 +8,7 @@ export function RailwaysTemplate() {
     return (
         <div>
             <Ubanner
-                Background="./images/luo-lei-Xa4pTwafe5U-unsplash-railways.png"
+                Background="./images/railways/Railway.png"
                 maintext="Railways"
                 subtext="Firing the Rolling Stock of India"
             />

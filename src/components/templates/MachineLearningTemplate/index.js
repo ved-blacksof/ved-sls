@@ -8,7 +8,7 @@ export function MachineLearningTemplate() {
     return (
         <div>
             <Ubanner
-                Background="./images/luo-lei-Xa4pTwafe5U-unsplash-mlai.png"
+                Background="./images/ml/ML-and-AI.png"
                 maintext="Machine learning and artificial intelligence"
                 subtext="Leveraging Novel Tchnologies for the Betterment of the Mankind"
             />
@@ -43,6 +43,8 @@ export function MachineLearningTemplate() {
             <Visit
                 goto="Find out how we can help your business with AI and ML solutions"
                 title="Click Here"
+                href={"/contact"}
+
             />
 
 

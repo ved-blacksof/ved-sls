@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { HighspeedTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Highspeed() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Highspeed() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <HighspeedTemplate />            
         </div>
     )

@@ -12,7 +12,7 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     realText: {
-        margin: '15% 0%',
+        margin: '15% auto',
         [theme.breakpoints.down('sm')]: {
             margin: "20% auto"
         },
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
         background: '#182AC3',
         border: 'none',
         color: 'white',
-        padding: '1% 2%',
+        padding: '8px 15px',
         '&:hover': {
             background: 'blue'
         },
@@ -167,7 +167,7 @@ const useStyles = makeStyles((theme) => ({
 
         },
         "&:hover img": {
-            transform: 'scale(0.92)'
+            transform: 'scale(1.1)'
         },
     },
     iconBox: {
@@ -281,13 +281,6 @@ export function Realtime({
                         <Box className={classes.sliderSec}>
 
                             <Box className={clsx(classes.box)} style={style} >
-
-                                {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
-                                    <img src={"./images/Group 82851.svg"} onClick={next} /> 
-                                */}
-                                {/* <ArrowBackIos className={classes.btn}/> */}
-
-
                                 <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
                                 <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
                             </Box>
@@ -357,7 +350,15 @@ export function Realtime({
                                                                 <a href="/" >{item.read}</a>
                                                             </h4>
                                                             {
-                                                                download ? <Button className={classes.smallBtn} >Download </Button> : ''
+                                                                download ?
+                                                                    <Button
+                                                                        className={classes.smallBtn}
+                                                                        href={item.href}
+                                                                        onclick={() => window.open(`${item.href}`, '_blank')}
+                                                                        target="_blank"
+                                                                    >
+                                                                        {download}
+                                                                    </Button> : ''
                                                             }
                                                         </Fade>
                                                     </Box>

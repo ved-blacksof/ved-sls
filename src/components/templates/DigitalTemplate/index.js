@@ -8,7 +8,7 @@ export function DigitalTemplate() {
     return (
         <>
             <Ubanner
-                Background="/images/luo-lei-Xa4pTwafe5U-unsplash123.png"
+                Background="/images/digital-signage/Digital-signage.png"
                 maintext="Digital signage"
                 subtext="Connecting the world  through Smart Screens"
             />
@@ -61,6 +61,7 @@ export function DigitalTemplate() {
             <Visit
                 goto="Reinvent how your brand advertises and connects."
                 title="Visit the website"
+                href={"/contact"}
             />
 
             <Footer />

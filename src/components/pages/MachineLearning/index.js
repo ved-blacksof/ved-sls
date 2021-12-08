@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { MachineLearningTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function MachineLearning() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function MachineLearning() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <MachineLearningTemplate />            
         </div>
     )

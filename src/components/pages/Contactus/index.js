@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { ContactusTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Contactus() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Contactus() {
     }, [1])
     return (
         <>
+            <ScrollTop />
             <ContactusTemplate/>
         </>
     )

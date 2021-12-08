@@ -72,6 +72,8 @@ export function HighspeedTemplate() {
             <Visit
                 goto="Explore all about our products and services!"
                 title="Visit the website"
+                href={"https://www.slscorp.com/services/high-speed-pcb-design-services.html"}
+
             />
 
 

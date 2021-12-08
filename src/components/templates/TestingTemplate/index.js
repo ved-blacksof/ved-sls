@@ -68,6 +68,7 @@ export function TestingTemplate() {
             <Visit
                 goto="Click here to know more about our testing and calibration services!"
                 title="Know More"
+                href={"/contact"}
             />
 
             <Footer />

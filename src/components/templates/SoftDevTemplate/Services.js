@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
             alignItems:'center'
         }
     },
-    margins:{
+    margins:{   
         marginTop: '2rem',
         [theme.breakpoints.down('sm')]: {
             marginTop: '0rem',

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import {CloudsolutionTemplate} from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Cloudsolution() {
     useEffect(() => {
@@ -8,6 +9,7 @@ export function Cloudsolution() {
 
     return (
         <div>
+            <ScrollTop />
             <CloudsolutionTemplate/>  
         </div>
     )

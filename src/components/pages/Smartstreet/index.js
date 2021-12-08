@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { SmartstreetTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Smartstreet() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Smartstreet() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <SmartstreetTemplate />            
         </div>
     )

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { RailwaysTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Railways() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Railways() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <RailwaysTemplate />            
         </div>
     )

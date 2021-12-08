@@ -183,9 +183,12 @@ body {
       
       h6{
         font-family: Access;
-        font-size: .8rem;
+        font-size: 1rem;
         font-weight: normal;
         color: white;
+      }
+      br{
+        display: block;
       }
       ul{
         font: normal normal normal 0.8rem Access;

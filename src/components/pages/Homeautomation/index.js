@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { HomeautomationTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Homeautomation() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Homeautomation() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <HomeautomationTemplate />            
         </div>
     )

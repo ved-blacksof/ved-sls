@@ -7,8 +7,8 @@ import { Facebook, Instagram, LinkedIn, Twitter } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     mainPadding: {
-        background: 'white', paddingTop: '4%'
-
+        background: 'white', 
+        paddingTop: '4%'
     },
     footerMain: {
         background: 'white',
@@ -85,8 +85,8 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         '& a': {
-            font: 'normal normal normal .8rem Access',
             textDecoration: 'none',
+            verticalAlign:'middle',
             color: 'black',
             [theme.breakpoints.down('sm')]: {
                 fontSize: '.7rem',
@@ -96,31 +96,37 @@ const useStyles = makeStyles((theme) => ({
             padding: '0rem .5rem'
         },
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column-reverse',
-
+            flexDirection: 'column-reverse'
         }
     },
     socialBox: {
-        // verticalAlign:'center',
+        verticalAlign: 'middle',
         margin: '1% 0%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+
     },
     socialIcons: {
-        verticalAlign: 'text-bottom',
-        padding: '2px',
+        verticalAlign: 'middle',
+        paddingRight: '3px',
         [theme.breakpoints.down('sm')]: {
             padding: '0px',
         }
     },
     socialText: {
+        color:'black',
+        display:'inline',
         [theme.breakpoints.down('sm')]: {
             display: 'none'
         }
     },
+    anchor:{
+        display:'flex',
+        alignItems:'center',
+    },  
     hrs: {
-        margin: '2% 0%'
+        // margin: '1% 0%'
     }
 
 }))
@@ -254,12 +260,20 @@ export function Footer() {
                 <hr className={classes.hrs} />
                 <Fade top>
                     <div className={classes.copyBox}>
-                        <a> System Level Solutions Inc. Copyright &copy; 2021 </a>
+                        <h6 className={classes.socialText}>System Level Solutions Inc. Copyright &copy; 2021</h6>
                         <div className={classes.socialBox}>
-                            <a target="_blank" href="https://www.facebook.com/system.level.solutions.corp" ><Facebook className={classes.socialIcons} /> <span className={classes.socialText}>Facebook</span></a><i>|</i>
-                            <a target="_blank" href="https://www.instagram.com/system_level_solutions/" ><Instagram className={classes.socialIcons} /> <span className={classes.socialText}>Instagram</span> </a><i>|</i>
-                            <a target="_blank" href="https://twitter.com/S_L_S" ><Twitter className={classes.socialIcons} /> <span className={classes.socialText}>Twitter</span> </a><i>|</i>
-                            <a target="_blank" href="https://www.linkedin.com/company/system-level-solutions-india-pvt.-ltd/" > <LinkedIn className={classes.socialIcons} /> <span className={classes.socialText}>LinkedIn</span></a>
+                            <a target="_blank" href="https://www.facebook.com/system.level.solutions.corp" className={classes.anchor}><Facebook className={classes.socialIcons} />
+                                <h6 className={classes.socialText}>Facebook</h6>
+                            </a><i>|</i>
+                            <a target="_blank" href="https://www.instagram.com/system_level_solutions/" className={classes.anchor}><Instagram className={classes.socialIcons} />
+                                <h6 className={classes.socialText}>Instagram</h6>
+                            </a><i>|</i>
+                            <a target="_blank" href="https://twitter.com/S_L_S" className={classes.anchor}><Twitter className={classes.socialIcons} />
+                                <h6 className={classes.socialText}>Twitter</h6>
+                            </a><i>|</i>
+                            <a target="_blank" href="https://www.linkedin.com/company/system-level-solutions-india-pvt.-ltd/" className={classes.anchor}> <LinkedIn className={classes.socialIcons} />
+                                <h6 className={classes.socialText}>LinkedIn</h6>
+                            </a>
                         </div>
                     </div>
                 </Fade>

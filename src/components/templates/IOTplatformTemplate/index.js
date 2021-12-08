@@ -79,9 +79,9 @@ export function IOTplatformTemplate({
             />
 
             <Visit
-                href="https://www.nebulae.io/home"
                 goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; NEBULAE"
                 title="Visit the website"
+                href="https://www.nebulae.io/home"
             />
 
 
