@@ -28,7 +28,7 @@ export function SolarTemplate() {
                 />
             </GridBlue>
             <Realtime
-                    maintitle="Hardware Offerings"
+                    maintitle="Hardware "
                     data={solarhardware}
                     style={{opacity:'0'}}
                 
