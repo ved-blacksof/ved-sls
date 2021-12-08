@@ -30,13 +30,13 @@ export function SolarTemplate() {
             <Realtime
                     maintitle="Hardware Offerings"
                     data={solarhardware}
-                    // style={{opacity:'0'}}
+                    style={{opacity:'0'}}
                 
             />
             <Realtime
                     maintitle="Software Offerings"
                     data1={solarsoftware}
-                    // style={{opacity:'0'}}
+                    style={{opacity:'0'}}
                 
             />
 
