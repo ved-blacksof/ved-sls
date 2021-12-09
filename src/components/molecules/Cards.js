@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        height: '14vw',
+        maxHeight: '14vw',
         background: 'white',
         "& img": {
             width: '100%',

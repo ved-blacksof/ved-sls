@@ -65,6 +65,7 @@ export function SmartstreetTemplate() {
                     goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; VIALIGHTS"
                     title="Visit the website"
                     href="https://www.vialights.com/"
+                    rightlogo="./images/smartstreet/logo.png"
                 />
             </MainContainer>
 

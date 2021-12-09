@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Container } from '@material-ui/core'
-import { Sbanner, Research, Realtime, Offerings, Democarousel } from '../../molecules'
+import { Sbanner, Research, Realtime, Offerings, Democarousel, Visit } from '../../molecules'
 
 import { TechCarousel } from './TechCarousel'
 import { Navbar, Footer, Navbar1 } from '..'
@@ -49,6 +49,11 @@ export function HomepageTemplate() {
             />
 
             <Partners />
+
+            <Visit
+                title="Contact Us"
+                
+            />
 
             <Footer />
         </Box>

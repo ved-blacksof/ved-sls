@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Cards, Visit, Realtime } from '../../molecules'
+import { Ubanner, Overview, Cards, Visit, Realtime, Visit1 } from '../../molecules'
 
 import { solar, solarhardware, solarsoftware } from '../../molecules/PortfolioData'
 
@@ -28,16 +28,16 @@ export function SolarTemplate() {
                 />
             </GridBlue>
             <Realtime
-                    maintitle="Hardware Offerings"
-                    data={solarhardware}
-                    style={{opacity:'0'}}
-                
+                maintitle="Hardware Offerings"
+                data={solarhardware}
+                style={{ opacity: '0' }}
+
             />
             <Realtime
-                    maintitle="Software Offerings"
-                    data1={solarsoftware}
-                    style={{opacity:'0'}}
-                
+                maintitle="Software Offerings"
+                data1={solarsoftware}
+                style={{ opacity: '0' }}
+
             />
 
             {/* <Cards
@@ -46,11 +46,12 @@ export function SolarTemplate() {
 
             /> */}
 
-            <Visit
+            <Visit1
                 goto1="A DIVISION OF SYSTEM LEVEL SOLUTIONS; SUNSIGHTS"
                 title="Visit the website"
+                rightlogo="./images/solar/SunSights.png"
                 href={"https://www.getsunsights.com/"}
-                style={{fontFamily:'BebasNeue',fontWeight:'normal'}}
+                style={{ fontFamily: 'BebasNeue', fontWeight: 'normal' }}
             />
 
             <Footer />

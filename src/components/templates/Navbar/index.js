@@ -371,7 +371,7 @@ export function Navbar() {
                                                     className={classes.megaMenu}
                                                 >
                                                     {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                                    <MenuList>
+                                                   <MenuList>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/iot')} onClick={() => history.push('/iot')}>
                                                             <h6><NavLink to="/iot" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >IoT Platform</NavLink ></h6>
                                                         </MenuItem>
@@ -475,25 +475,25 @@ export function Navbar() {
                                                 >
                                                     {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
                                                     <MenuList>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/ipcore')}>
+                                                        <MenuItem className={classes.menuItem}>
                                                             <h6><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >IP CORE/FPGA/SOC Design Services</NavLink ></h6>
                                                         </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/highspeed')} >
+                                                        <MenuItem className={classes.menuItem} >
                                                             <h6><NavLink to="/highspeed" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} > High Speed PCB Design Services</NavLink ></h6>
                                                         </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/softdev')} >
+                                                        <MenuItem className={classes.menuItem} >
                                                             <h6><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Software Development</NavLink ></h6>
                                                         </MenuItem>
                                                     </MenuList>
                                                     <hr className={classes.hrs} />
                                                     <MenuList>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/electronics')}>
+                                                        <MenuItem className={classes.menuItem}>
                                                             <h6><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Solutions</NavLink ></h6>
                                                         </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/testing')}>
+                                                        <MenuItem className={classes.menuItem}>
                                                             <h6><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Testing & Calibration</NavLink ></h6>
                                                         </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/ml')}>
+                                                        <MenuItem className={classes.menuItem}>
                                                             <h6><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >ML & AI</NavLink ></h6>
                                                         </MenuItem>
                                                     </MenuList>

@@ -142,32 +142,33 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
         padding: "2rem",
-        "&:hover img": {
-            transition: '.5s ease-in-out',
-            transform: 'scale(0.92)'
-        },
-        '& h4': {
-            color: 'black'
-        },
-        '& img': {
-            width: '100%',
-            maxHeight: '100%',
-        },
         [theme.breakpoints.down('sm')]: {
             width: '12rem',
             height: '12rem'
         },
-
+        '& h4': {
+            color: 'black'
+        },
+        '&:hover': {
+            border: '1px solid white',
+            "& $imgBox": {
+                transform: 'scale(1.2)',
+            },
+            "& $red": {
+                background: '#DE141A',
+                animation: `$redbar 800ms ease-in-out`,
+                animationIterationCount: 1,
+                animationDuration: '800ms',
+            },
+        },
 
     },
     imgBox: {
         height: "100%",
         "& img": {
-            transition: '.5s ease-in-out',
-
-        },
-        "&:hover img": {
-            transform: 'scale(1.1)'
+            transition: 'all 800ms ease-in-out',
+            width: '100%',
+            maxHeight: '100%',
         },
     },
     iconBox: {
@@ -180,7 +181,43 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '90%'
         }
-    }
+    },
+
+    //red line
+    reddiv: {
+        width: '100%',
+        height: '8px',
+        overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            height: '2px',
+            background: 'red'
+        },
+    },
+    red: {
+        height: '100%',
+        transition: 'all 500ms ease-in-out',
+
+    },
+    "@keyframes redbar": {
+        "0%": {
+            opacity: 0,
+            transform: "translateX(-200%)"
+        },
+        "100%": {
+            opacity: 1,
+            transform: "translateX(0)"
+        },
+    },
+    "@keyframes redbar1": {
+        "100%": {
+            opacity: 0,
+            transform: "translateX(-200%)"
+        },
+        "0%": {
+            opacity: 1,
+            transform: "translateX(0)"
+        },
+    },
 }))
 
 
@@ -384,6 +421,10 @@ export function Realtime({
                                                                         <img src={item.images} alt="Mission Icon" />
                                                                     </Box>
                                                                     <h4>{item.subtitle} </h4>
+                                                                </Box>
+                                                                <Box className={classes.reddiv}>
+                                                                    <Box className={classes.red}>
+                                                                    </Box>
                                                                 </Box>
                                                             </a>
                                                         </Box>

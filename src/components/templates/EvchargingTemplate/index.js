@@ -64,6 +64,7 @@ export function EvchargingTemplate() {
                         goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; VERDEMOBILITY"
                         title="Visit the website"
                         href="https://www.verdemobility.com/Home/Index"
+                        rightlogo="./images/evcharger/1.png"
                     /> 
             </MainContainer>
 
