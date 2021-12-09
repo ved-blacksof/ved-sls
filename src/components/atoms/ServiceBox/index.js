@@ -9,9 +9,10 @@ const useStyles = makeStyles((theme) => ({
         width: '20vw',
         height: '20vw',
         padding: '10%',
-        margin: '20px 0px',
+        margin: '30px 0px',
         border: '1px solid #DCDCDC',
         boxShadow: '0px 3px 10px #00000017',
+        transition: 'all 300ms ease-in-out',
         [theme.breakpoints.down('sm')]: {
             width: '15rem',
             height: '15rem',
@@ -20,8 +21,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             width: '14rem',
             height: '14rem',
-            marginTop: '15px',
-
+            marginTop: '15px'
         },
         '& h4': {
             paddingTop: '4%',
@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
         },
         '& h6': {
             paddingTop: '3%'
+        },
+        '&:hover': {
+            border: '1px solid white',
         }
     },
     images: {
@@ -52,7 +55,7 @@ export function ServiceBox({
     return (
         <Box className={className}>
             <Box className={classes.boxes} style={style}>
-                <Box className={classes.images}>
+                <Box className={classes.imgBox}>
                     <Bounce bottom><img src={imgs} /></Bounce>
                 </Box>
                 <Bounce bottom><h4 style={{ color: '#182AC3' }}>{title}</h4></Bounce>

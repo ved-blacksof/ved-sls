@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
     Box,
@@ -8,6 +8,7 @@ import {
 import { GeneralHeading, MainContainer } from '../atoms'
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -19,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     },
     mainBox: {
         width: '100%',
-        // marginTop: '8%',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -29,12 +29,15 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     imgBox: {
-        width: '50%'
+        width: '50%',
+        transition: 'all 800ms ease-in-out',
+
     },
     boxes: {
         width: '20vw',
         height: '20vw',
-        border: '1px solid #0000000F',
+        border: '1px solid #DCDCDC',
+        boxShadow: '0px 3px 10px #00000017',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
@@ -43,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         padding: "1rem",
         margin: '1.5rem 1rem',
+        cursor:'pointer',
+        transition: 'all 300ms ease-in-out',
         [theme.breakpoints.down('sm')]: {
             width: '35vw',
             height: '35vw',
@@ -54,9 +59,18 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         '&:hover': {
-            boxShadow: '0px 0px 20px #0000000F',
-            border: 'none'
-        }
+            border: '1px solid white',
+            "& $imgBox": {
+                transform: 'scale(1.2)',
+            },
+            "& $red": {
+                background: '#DE141A',
+                animation: `$redbar 800ms ease-in-out`,
+                animationIterationCount: 1,
+                animationDuration: '800ms',
+            },
+        },
+
     },
     subTitle: {
         color: '#182AC3',
@@ -67,12 +81,38 @@ const useStyles = makeStyles((theme) => ({
     },
     reddiv: {
         width: '100%',
-        height: '5px',
-        background: '#D9393E',
+        height: '8px',
+        overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
             height: '2px',
+            background: 'red'
         },
-    }
+    },
+    red: {
+        height: '100%',
+        transition: 'all 500ms ease-in-out',
+
+    },
+    "@keyframes redbar": {
+        "0%": {
+            opacity: 0,
+            transform: "translateX(-200%)"
+        },
+        "100%": {
+            opacity: 1,
+            transform: "translateX(0)"
+        },
+    },
+    "@keyframes redbar1": {
+        "100%": {
+            opacity: 0,
+            transform: "translateX(-200%)"
+        },
+        "0%": {
+            opacity: 1,
+            transform: "translateX(0)"
+        },
+    },
 
 }))
 
@@ -85,6 +125,8 @@ export function Squareboxes1({
 }) {
 
     const classes = useStyles()
+
+    const [exit, setExit] = useState(false)
     return (
         <MainContainer>
             <Container fixed className={classes.container1}>
@@ -97,16 +139,25 @@ export function Squareboxes1({
                     {
                         data.map((item, index) => {
                             return (
-                                <Box className={classes.boxes}>
+                                <Box
+                                    className={clsx(classes.boxes, {[classes.animatedItemExiting]: exit})}
+                                >
                                     <Box className={classes.imgBox}>
-                                        <Bounce bottom> <img src={item.images} alt="Mission Icon" /> </Bounce>
+                                        <Bounce bottom>
+                                            <img src={item.images} alt="Mission Icon" />
+                                        </Bounce>
                                     </Box>
                                     <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
-                                    <Box className={classes.reddiv}></Box>
+                                    <Box className={classes.reddiv}>
+                                        <Box className={classes.red}>
+                                        </Box>
+                                    </Box>
                                 </Box>
                             )
                         })
                     }
+
+                    
 
                 </Box>
             </Container>

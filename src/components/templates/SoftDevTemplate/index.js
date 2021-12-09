@@ -1,10 +1,10 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Cards, Visit } from '../../molecules'
+import { Ubanner, Overview, Cards, Visit, Squareboxes1 } from '../../molecules'
 import { Services } from './Services'
 import { Technologystack } from './Technologystack'
 
-import { solar } from '../../molecules/PortfolioData'
+import { softdevservices } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
 
 export function SoftDevTemplate() {
@@ -26,6 +26,8 @@ export function SoftDevTemplate() {
             </GridBlue>
 
             <Services />
+
+            {/* <Squareboxes1 data1={softdevservices}/> */}
 
             <Technologystack />
 

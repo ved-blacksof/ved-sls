@@ -195,14 +195,14 @@ export const certification = [
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href:`${fifteen1}`
+        href: `${fifteen1}`
     },
     {
         images: './images/Mask Group 3.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href:`${fifteen2}`
+        href: `${fifteen2}`
 
     },
     {
@@ -210,7 +210,7 @@ export const certification = [
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href:`${fifteen3}`
+        href: `${fifteen3}`
 
     },
     {
@@ -218,15 +218,15 @@ export const certification = [
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href:`${eight1}`
-        
+        href: `${eight1}`
+
     },
     {
         images: './images/Mask Group 5.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href:`${eight2}`
+        href: `${eight2}`
 
     },
     {
@@ -234,7 +234,7 @@ export const certification = [
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href:`${eight3}`
+        href: `${eight3}`
 
     }
 
@@ -537,14 +537,14 @@ export const gaminghardware = [
         images: './images/iot_bg_cloud4.png',
         productname: 'Smart Targets',
         para: 'Smart Targets are Iot Targeting App controlled reactive targets powered with advanced wireless technology for a real-time practice and gaming experience.',
-        para1:' Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
+        para1: ' Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
         read: 'read'
     },
     {
         images: './images/iot_bg_just_target.png',
         productname: 'Just Targets',
         para: 'Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. ',
-        para1:'Leveraging reactive touch technology, Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.',
+        para1: 'Leveraging reactive touch technology, Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.',
         read: 'read'
     },
 
@@ -906,6 +906,48 @@ export const homeproducts = [
 ]
 
 
+
+
+export const softdevservices = [
+    {
+        images:"./images/Layer_20-soft-dev.svg",
+        title:"Web Development",
+        li1:"Cloud Solutions",
+        li2:"Custom Web Application",
+    },
+    {
+        images:"./images/Layer_21-soft-dev.svg",
+        title:"Application Development",
+        li1:"Windows Development",
+        li2:"Product Development",
+    },
+    {
+        images:"./images/Layer_23-soft-dev.svg",
+        title:"System Development",
+        li1:"System Porting & Customization",
+        li2:"Driver Development",
+    },
+    {
+        images:"./images/Layer_26-soft-dev.svg",
+        title:"Embedded Solutions",
+        li1:"Firmware Development",
+        li2:"Driver Development",
+    },
+    {
+        images:"./images/Layer_24-soft-dev.svg",
+        title:"Enterprise Solutions",
+        li1:"HRM System",
+        li2:"ERP System",
+    },
+    {
+        images:"./images/Layer_25-soft-dev.svg",
+        title:"Mobile App Development",
+        li1:"Application Development",
+        li2:"System Porting & Customization",
+    },
+]
+
+
 export const homeapp = [
     {
         images: './images/homeautomation/SLS0.png',
@@ -924,3 +966,4 @@ export const homeapp = [
         text: 'Home'
     }
 ]
+
