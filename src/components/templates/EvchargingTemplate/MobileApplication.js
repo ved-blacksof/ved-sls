@@ -5,45 +5,45 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        margin: "10% auto" ,
+        margin: "20% auto",
         display: 'flex',
+        background: '#F3F3F3',
+        borderRadius: '1rem',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column'
         }
     },
     leftBox: {
-        width: '45%',
-        paddingBottom: '10%',
-        [theme.breakpoints.down('sm')]: {
-            width: '100%'
-        }
-    },
-    rightBox: {
         width: '50%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'flex-end',
+        position: 'relative',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        }
+    },
+    rgtBox: {
+        padding:'8% 0%',
+        width: '50%',
+        // display:'flex',
+        // alignItems:'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
         }
     },
     mobileBox: {
-        width: '20vw',
-        height: '20vw',
-        borderRadius: '4rem 0rem 4rem 4rem',
-        position: 'relative',
-        background: '#182AC3',
+        width: '65%',
+        maxHeight: '100%',
+        position: 'absolute',
+        top: '-10%',
         [theme.breakpoints.down('sm')]: {
-            width: '60vw',
-            height: '60vw',
+            
         }
     },
     mobileImages: {
         width: '100%',
-        padding: '0rem 15%',
-        position: 'absolute',
-        bottom: '10%',
-        margin: '0 auto',
+        maxHeight: '100%',
     }
 
 }))
@@ -54,6 +54,11 @@ export function MobileApplication() {
         <MainContainer>
             <Container className={classes.mainContainer}>
                 <Box className={classes.leftBox}>
+                    <Box className={classes.mobileBox}>
+                        <Fade right><img className={classes.mobileImages} src={'./images/Group 82858.png'} /></Fade>
+                    </Box>
+                </Box>
+                <Box className={classes.rgtBox}>
                     <Fade bottom>
                         <Paragraphs
                             title="MOBILE APPLICATION"
@@ -67,13 +72,6 @@ export function MobileApplication() {
                             fifthli="Option for an Offline Wallet"
                             redline="redline"
                         />
-                    </Fade>
-                </Box>
-                <Box className={classes.rightBox}>
-                    <Fade left>
-                        <Box className={classes.mobileBox}>
-                            <Fade right><img className={classes.mobileImages} src={'./images/Group 82858.png'} /></Fade>
-                        </Box>
                     </Fade>
                 </Box>
             </Container>

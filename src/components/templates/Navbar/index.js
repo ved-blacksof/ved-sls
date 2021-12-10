@@ -5,6 +5,7 @@ import { ArrowDownward, ArrowDropDown, MenuOpen, MenuOutlined } from '@material-
 import clsx from 'clsx'
 import { MobileMenu } from './MobileMenu';
 import Fade from 'react-reveal/Fade';
+import './styles.css'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -80,23 +81,40 @@ const useStyles = makeStyles((theme) => ({
             background: 'transparent',
             color: '#d1d1d1',
             "& h4:hover": {
-                color: '#d1d1d1'
+                // color: '#182AC3'
+            },
+            "& $slider": {
+                width: '100%'
             }
         },
         "&:hover": {
-            color: '#d1d1d1'
+            color: 'white',
+            "& $slider": {
+                width: '100%',
+
+            }
         },
+    },
+    slider: {
+        margin: '0 auto',
+        height: '5px',
+        background: '#000',
+        width: '10%',
+        transition: 'width 1s ease',
     },
     clsbeforePos: {
         textDecoration: 'none',
         color: 'white',
+        opacity: '0.8',
         cursor: 'pointer',
         "&:hover": {
             color: '#d1d1d1'
         }
     },
     linkActive: {
-        color: 'grey',
+        // color: '',
+        fontWeight: 'bold',
+        opacity: '1'
     },
     megaMenu: {
         height: 'fit-content',
@@ -114,17 +132,31 @@ const useStyles = makeStyles((theme) => ({
             padding: '1rem',
         }
     },
-    menuItem:{
-          padding:'20px 30px'
+    menuItem: {
+        padding: '15px 30px',
+        boxSizing: 'border-box',
+        mozBoxSizing: 'border-box',
+        webkitBoxSizing: 'border-box',
+
+        transition:'all .3s ease-in-out',
+        "&:hover": {
+            background:'transparent',
+
+            "& $lios": {
+                // borderLeft: '3px solid #182AC3',
+                boxShadow:'-6px 0px 0px 0px #182AC3   ',
+                color: '#182AC3'
+            }
+        }
     },
     lios: {
         textDecoration: 'none',
-        color: '#182AC3',
+        color: '#000',
         pointer: 'cursor',
+        paddingLeft:'8px',
+        transition:'all .3s ease-in-out',
     },
-    activeLios: {
 
-    },
     act: {
         margin: '2px',
         padding: '5px 1px',
@@ -153,25 +185,27 @@ const useStyles = makeStyles((theme) => ({
             transform: 'translate 100%'
         }
     },
-    
+
     hrs: {
         border: '1px solid #182AC3',
         borderRadius: '3px',
-        opacity:'.2'
+        opacity: '.2'
     },
     clsAfterPos: {
-        color: '#182AC3'
+        color: '#000'
     },
     popper: {
         zIndex: '3',
         marginTop: '1%'
     },
-    menuBorder:{
-        border:'2px solid red'
+    menuBorder: {
+        border: '2px solid red'
     }
 }))
 
-export function Navbar() {
+export function Navbar({
+    style
+}) {
     const classes = useStyles()
 
     const history = useHistory();
@@ -270,6 +304,7 @@ export function Navbar() {
                 position='static'
                 color='transparent'
                 className={clsx(classes.mainBox, classes[navref.current])}
+                style={style}
             >
                 <Toolbar className={classes.navbar}>
                     <Box className={classes.logoBox} disableRipple disableFocusRipple disableTouchRipple edge="start" color="inherit" aria-label="menu">
@@ -308,12 +343,14 @@ export function Navbar() {
                     <Fade bottom>
                         <ul className={classes.navUL}>
                             <li className={classes.navLI} >
-                                <h4>
+                                <h4 className="fromCenter">
                                     <NavLink
                                         className={clsx(classes.clsbeforePos, classes[navlinkref.current])}
                                         to="/home"
                                         activeClassName={classes.linkActive} style={{ marginRight: '10px' }}>Home</NavLink>
                                 </h4>
+
+                                {/* <span className={classes.slider}></span> */}
                             </li>
                             <li className={classes.navLI} >
                                 <h4>
@@ -371,7 +408,7 @@ export function Navbar() {
                                                     className={classes.megaMenu}
                                                 >
                                                     {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                                   <MenuList>
+                                                    <MenuList>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/iot')} onClick={() => history.push('/iot')}>
                                                             <h6><NavLink to="/iot" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >IoT Platform</NavLink ></h6>
                                                         </MenuItem>
@@ -381,33 +418,30 @@ export function Navbar() {
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/evcharger')} >
                                                             <h6><NavLink to="/evcharger" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >EV Charging Solutions</NavLink ></h6>
                                                         </MenuItem>
-                                                    </MenuList>
-                                                    <hr className={classes.hrs} />
-                                                    <MenuList>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/solar')}>
                                                             <h6><NavLink to="/solar" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Solar & Wind</NavLink ></h6>
                                                         </MenuItem>
+                                                    </MenuList>
+                                                    {/* <hr className={classes.hrs} /> */}
+                                                    <MenuList>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/smartmeter')}>
                                                             <h6><NavLink to="/smartmeter" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Metering</NavLink ></h6>
                                                         </MenuItem>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/homeauto')}>
                                                             <h6><NavLink to="/homeauto" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Home Automation</NavLink ></h6>
                                                         </MenuItem>
-                                                    </MenuList>
-                                                    <hr className={classes.hrs} />
-                                                    <MenuList>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/smartstreet')}>
                                                             <h6><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Street Lights</NavLink ></h6>
                                                         </MenuItem>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/railways')}>
                                                             <h6><NavLink to="/railways" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Railways</NavLink ></h6>
                                                         </MenuItem>
+                                                    </MenuList>
+                                                    {/* <hr className={classes.hrs} /> */}
+                                                    <MenuList>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/gaming')}>
                                                             <h6><NavLink to="/gaming" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Gaming</NavLink ></h6>
                                                         </MenuItem>
-                                                    </MenuList>
-                                                    <hr className={classes.hrs} />
-                                                    <MenuList>
                                                         <MenuItem className={classes.menuItem} onClick={() => history.push('/smarttraffic')}>
                                                             <h6><NavLink to="/smarttraffic" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Traffic Solutions</NavLink ></h6>
                                                         </MenuItem>
@@ -485,7 +519,7 @@ export function Navbar() {
                                                             <h6><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Software Development</NavLink ></h6>
                                                         </MenuItem>
                                                     </MenuList>
-                                                    <hr className={classes.hrs} />
+                                                    {/* <hr className={classes.hrs} /> */}
                                                     <MenuList>
                                                         <MenuItem className={classes.menuItem}>
                                                             <h6><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Solutions</NavLink ></h6>

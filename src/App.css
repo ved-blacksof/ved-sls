@@ -83,6 +83,11 @@ body {
   li{
     font: normal normal normal 0.6rem Access;
   }
+
+  .li{
+    text-indent: -14px;
+    margin-left: 22px;
+  }
    
 
     
@@ -169,7 +174,7 @@ body {
       
       h4{
         font-family: Access;
-        font-size: .9rem;
+        font-size: 1rem;
         font-weight: normal;
         color: white;
       }
@@ -195,8 +200,10 @@ body {
       }
       li{
         font: normal normal normal 0.7rem Access;
-        /* text-indent: -18px;
-        margin-left: 21px; */
+      }
+      .li{
+        text-indent: -16px;
+        margin-left: 22px;
       }
       
     }
@@ -253,8 +260,10 @@ body {
       }
       li{
         font: normal normal normal 0.8rem Access;
-        /* text-indent: -18px;
-        margin-left: 21px; */
+      }
+      .li{
+        text-indent: -20px;
+        margin-left: 20px;
       }
     }
     @media screen and (min-width: 1441px) {
@@ -278,7 +287,6 @@ body {
         font-size: 3rem;
         font-weight: normal;
         color: white;
-        /* text-transform: lowercase; */
       
       }
       
@@ -312,8 +320,11 @@ body {
       }
       li{
         font: normal normal normal 1rem Access;
-        /* text-indent: -25px;
-        margin-left: 30px; */
+       
+      }
+      .li{
+        text-indent: -21px;
+        margin-left: 21px;
       }
     }
     

@@ -68,7 +68,7 @@ export const port = [
         link: 'iot'
     },
     {
-        images: './images/homepage-icons/2._Cloud_Solution.png',
+        images: './images/homepage-icons/2._Cloud_Solution.svg',
         text: 'Cloud Solutions',
         link: 'cloud'
     },
@@ -83,7 +83,7 @@ export const port = [
         link: 'solar'
     },
     {
-        images: './images/homepage-icons/5._Smart_Metering.png',
+        images: './images/homepage-icons/5._Smart_Metering.svg',
         text: 'Smart Metering',
         link: 'smartmeter'
     },
@@ -98,7 +98,7 @@ export const port = [
         link: 'smartstreet'
     },
     {
-        images: './images/homepage-icons/9._Railways.png',
+        images: './images/homepage-icons/9._Railways.svg',
         text: 'Railways',
         link: 'railways'
     },
@@ -117,11 +117,11 @@ export const port = [
         text: 'Gaming',
         link: 'gaming',
     },
-    {
-        images: './images/homepage-icons/32._IP Core- FPGA.svg',
-        text: 'IP Core / FPGA ',
-        link: 'ipcore'
-    },
+    // {
+    //     images: './images/homepage-icons/32._IP Core- FPGA.svg',
+    //     text: 'IP Core / FPGA ',
+    //     link: 'ipcore'
+    // },
 ]
 
 
@@ -438,27 +438,33 @@ export const smartstreet = [
 //White icons only 4 for SmarttrafficTemplate
 export const smarttraffic = [
     {
-        images: './images/Layer_27-smarttraffic02.svg',
+        // images: './images/Layer_27-smarttraffic02.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'LED Embedded Warning Signs'
     },
     {
-        images: './images/Layer_35-smarttraffic03.svg',
+        // images: './images/Layer_35-smarttraffic03.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'School Zone Warning'
     },
     {
-        images: './images/Layer_36-smarttraffic04.svg',
+        // images: './images/Layer_36-smarttraffic04.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Pedestrian Crosswalk Solutions'
     },
     {
-        images: './images/Layer_37-smarttraffic05.svg',
+        // images: './images/Layer_37-smarttraffic05.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Dynamic Curve warning'
     },
     {
-        images: './images/Layer_38-smarttraffic06.svg',
+        // images: './images/Layer_38-smarttraffic06.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Wrong-Way Detection'
     },
     {
-        images: './images/Layer_39-smarttraffic07.svg',
+        // images: './images/Layer_39-smarttraffic07.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Variable Message Signs'
     },
 ]
@@ -513,6 +519,13 @@ export const solarhardware = [
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
         read: 'read more'
     },
+    {
+        // images: './images/1.0-solar.png',
+        images: './images/cloud/SunsightDataLogger.png',
+        head: 'Data Logger',
+        // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
+        read: 'read more'
+    },
 ]
 
 
@@ -520,7 +533,7 @@ export const solarhardware = [
 // Components = Cards.js molecule, 
 export const solarsoftware = [
     {
-        images: './images/cloud/SunsightDataLogger.png',
+        images: './images/solar/SunSight_Live_2x.png',
         head: 'SunSights Live',
         productname: 'SunSights Live',
         // para: 'SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more.',
@@ -950,20 +963,20 @@ export const softdevservices = [
 
 export const homeapp = [
     {
-        images: './images/homeautomation/SLS0.png',
+        images: './images/homeautomation/living-room.png',
         text: 'Home'
     },
     {
         images: './images/homeautomation/Industria.png',
-        text: 'Home'
+        text: 'Industries'
     },
     {
         images: './images/homeautomation/Office.png',
-        text: 'Home'
+        text: 'Offices'
     },
     {
         images: './images/homeautomation/Warehouse.png',
-        text: 'Home'
+        text: 'Warehouse'
     }
 ]
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Cards, Visit, Realtime, Visit1 } from '../../molecules'
+import { Ubanner, Overview, Cards, Visit, Realtime, Visit1, SoftOfferingsBlue } from '../../molecules'
 
 import { solar, solarhardware, solarsoftware } from '../../molecules/PortfolioData'
 
@@ -30,14 +30,22 @@ export function SolarTemplate() {
             <Realtime
                 maintitle="Hardware Offerings"
                 data={solarhardware}
-                style={{ opacity: '0' }}
+                // style={{ opacity: '0' }}
 
             />
-            <Realtime
+            {/* <Realtime
                 maintitle="Software Offerings"
                 data1={solarsoftware}
                 style={{ opacity: '0' }}
 
+            /> */}
+
+            <SoftOfferingsBlue
+                 maintitle="Software OFFERINGS"
+                 title="SunSights Live"
+                 subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
+                
+                 images='./images/solar/SunSight_Live_2x.png'
             />
 
             {/* <Cards

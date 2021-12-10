@@ -23,8 +23,7 @@ export function IPcoreTemplate() {
                     sub1="SLS has been spearheading the design and delivery of world-class FPGA and IP Core services for more than two decades. We hold an extensive portfolio of IP Cores with exceptional time-to-market and ever-growing functionalities, serving 150+ clients globally. Our ready-to-deploy FPGA solutions are designed to meet the dynamic needs of the market and match pace with the changing technology status quo, always aiming to deliver excellence."
                 />
             </GridBlue>
-            
-            <Products/>
+
 
             <Quality
                 mainheading="Offerings"
@@ -52,6 +51,7 @@ export function IPcoreTemplate() {
                 imageBG="./images/FPGA_Website_Image (2).png"
             />
 
+            <Products />
 
 
             <OurexpertiseBlue />

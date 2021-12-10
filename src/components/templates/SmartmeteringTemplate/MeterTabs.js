@@ -45,10 +45,9 @@ const useStyles = makeStyles((theme) => ({
     },
     tabsBox: {
         width: '100%',
-        padding: '0% 10%',
-        margin:'2% 0%',
+        padding: '0% 7%',
         position:'sticky',
-        top:'8%',
+        top:'70px',
         zIndex:'2',
         background:'white',
         transition:'all 0.5s ease-in-out',
@@ -90,6 +89,7 @@ export function MeterTabs() {
         <>
 
             <Box className={classes.mainContainer}>
+                <br/>
                 <Box className={classes.tabsBox}>
                     <Tabs value={value}
                         onChange={handleChange}
