@@ -1,8 +1,9 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
 import { smarttraffic } from '../../molecules/PortfolioData'
+import { PosBoxes } from './PosBoxes'
 
 export function SmarttrafficTemplate() {
     return (
@@ -20,11 +21,15 @@ export function SmarttrafficTemplate() {
                     path="Industries / Smart Traffic Solutions"
                     sub1="Continuing with its mission to create technological solutions that positively impact the world, SLS has developed the Smart Traffic Management Solution. 
                          The interoperable cloud solution is powered with IoT to set a connected and intelligent traffic ecosystem that is safe, interactive, and highly efficient."
-                    icons="icons"
+                    // icons="icons"
                     data={smarttraffic}
-                    style={{ paddingBottom: '10%' ,height:'fit-content'}}
+                    style={{ paddingBottom: '15%', height: 'fit-content' }}
                 />
             </GridBlue>
+
+            <PosBoxes />
+
+
 
             <Quality
                 mainheading="Offerings"
@@ -41,6 +46,14 @@ export function SmarttrafficTemplate() {
                 redline="redline"
 
             />
+
+            {/* <SoftOfferingsBlue
+                maintitle="Software Offering"
+                title="Traffic Management Dashboard"
+                subtitle="Our Traffic Management Dashboard is a cloud-based intuitive dashboard that allows you to remotely control and monitor your intelligent traffic infrastructure."
+
+                images='./images/about-imac-smarttraffic01.png'
+            /> */}
 
             <Visit
                 goto="Switch to Smart Traffic Management now!"

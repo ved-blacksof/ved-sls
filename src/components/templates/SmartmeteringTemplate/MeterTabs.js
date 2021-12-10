@@ -44,11 +44,16 @@ const useStyles = makeStyles((theme) => ({
 
     },
     tabsBox: {
-        width: '90%',
-        margin: '3% auto',
+        width: '100%',
+        padding: '0% 7%',
+        position:'sticky',
+        top:'70px',
+        zIndex:'2',
+        background:'white',
+        transition:'all 0.5s ease-in-out',
     },
     tabs: {
-
+        paddingTop:'10px',
         "& > span": {
             maxWidth: 40,
             width: "100%",
@@ -84,6 +89,7 @@ export function MeterTabs() {
         <>
 
             <Box className={classes.mainContainer}>
+                <br/>
                 <Box className={classes.tabsBox}>
                     <Tabs value={value}
                         onChange={handleChange}
@@ -134,6 +140,7 @@ export function MeterTabs() {
 
                         <Visit
                             title="Know More"
+                            href={"http://www.smets2design.com/"}
                         />
                     </Box>
 

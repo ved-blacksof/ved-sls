@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Squareboxes, Realtime, Visit } from '../../molecules'
+import { Ubanner, Overview, Squareboxes, Realtime, Visit, Visit1 } from '../../molecules'
 import { middleware, iotnebulink } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
 
@@ -78,10 +78,11 @@ export function IOTplatformTemplate({
             // subtitle1="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
             />
 
-            <Visit
-                href="https://www.nebulae.io/home"
+            <Visit1
                 goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; NEBULAE"
                 title="Visit the website"
+                href="https://www.nebulae.io/home"
+                rightlogo="./images/iot/Nebulae.png"
             />
 
 

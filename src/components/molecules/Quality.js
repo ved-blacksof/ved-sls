@@ -78,6 +78,9 @@ export function Quality({
     subhead1,
     subtitle1,
     redline,
+    download,
+    download1,
+    href,
     list,
     uli,
     firstli,
@@ -126,6 +129,10 @@ export function Quality({
                                     secli={secli}
                                     thirdli={thirdli}
                                     fourthli={fourthli}
+                                    download={download}
+                                    download1={download1}
+                                    href={href}
+
                                 /></Bounce>
                         </Box>
 

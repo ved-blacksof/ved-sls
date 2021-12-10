@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { IPcoreTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function IPcore() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function IPcore() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <IPcoreTemplate />            
         </div>
     )

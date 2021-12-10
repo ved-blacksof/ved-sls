@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core';
 
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
-import { Arrow, Pagination } from "@egjs/flicking-plugins";
+import { Arrow, AutoPlay, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
@@ -107,15 +107,20 @@ export function Reshape() {
 
     const classes = useStyles()
 
-    const Paginations = [new Pagination({ type: 'bullet' })]
+    const paginationsPlugins = new Pagination({ type: 'bullet' })
+
+    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
+    
+    const plugins = [autoPlugins, paginationsPlugins];
+    
 
     return (
         <Fade bottom>
             <Box className={classes.reaserchMain}>
                 <Box className={classes.flicks}>
                     <Flicking
-                        selector="center"
-                        plugins={Paginations}
+                        selector="center"   
+                        plugins={plugins}
                         defaultIndex='0'
                         circular={true}
 

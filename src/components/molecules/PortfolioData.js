@@ -1,3 +1,11 @@
+import fifteen1 from '../assets/certificates/ISO9001-2021_CERT_2015_1.pdf'
+import fifteen2 from '../assets/certificates/ISO9001 - 2015 CERT_2015_2.pdf'
+import fifteen3 from '../assets/certificates/ISO_14001_2015_CERT_SLSCORP_2021_2015_3.pdf'
+
+import eight1 from '../assets/certificates/ISO9001-2008 CERT_2015_2008_1.pdf'
+import eight2 from '../assets/certificates/ISO9001-2008 CERT_2012_2008_2.pdf'
+import eight3 from '../assets/certificates/ISO9001-2008 CERT_2008_3.pdf'
+
 export const research = [
     {
         images: "./images/reaserch-Asset_01.png",
@@ -60,7 +68,7 @@ export const port = [
         link: 'iot'
     },
     {
-        images: './images/homepage-icons/2._Cloud_Solution.png',
+        images: './images/homepage-icons/2._Cloud_Solution.svg',
         text: 'Cloud Solutions',
         link: 'cloud'
     },
@@ -75,7 +83,7 @@ export const port = [
         link: 'solar'
     },
     {
-        images: './images/homepage-icons/5._Smart_Metering.png',
+        images: './images/homepage-icons/5._Smart_Metering.svg',
         text: 'Smart Metering',
         link: 'smartmeter'
     },
@@ -90,7 +98,7 @@ export const port = [
         link: 'smartstreet'
     },
     {
-        images: './images/homepage-icons/9._Railways.png',
+        images: './images/homepage-icons/9._Railways.svg',
         text: 'Railways',
         link: 'railways'
     },
@@ -109,11 +117,11 @@ export const port = [
         text: 'Gaming',
         link: 'gaming',
     },
-    {
-        images: './images/homepage-icons/32._IP Core- FPGA.svg',
-        text: 'IP Core / FPGA ',
-        link: 'ipcore'
-    },
+    // {
+    //     images: './images/homepage-icons/32._IP Core- FPGA.svg',
+    //     text: 'IP Core / FPGA ',
+    //     link: 'ipcore'
+    // },
 ]
 
 
@@ -179,42 +187,55 @@ export const realtime = [
 
 ]
 
+
+
 export const certification = [
     {
         images: './images/Mask Group 3.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${fifteen1}`
     },
     {
         images: './images/Mask Group 3.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${fifteen2}`
+
     },
     {
         images: './images/Mask Group 5.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${fifteen3}`
+
     },
     {
         images: './images/Mask Group 6.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${eight1}`
+
     },
     {
         images: './images/Mask Group 5.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${eight2}`
+
     },
     {
         images: './images/Mask Group 6.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${eight3}`
+
     }
 
 ]
@@ -417,27 +438,33 @@ export const smartstreet = [
 //White icons only 4 for SmarttrafficTemplate
 export const smarttraffic = [
     {
-        images: './images/Layer_27-smarttraffic02.svg',
+        // images: './images/Layer_27-smarttraffic02.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'LED Embedded Warning Signs'
     },
     {
-        images: './images/Layer_35-smarttraffic03.svg',
+        // images: './images/Layer_35-smarttraffic03.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'School Zone Warning'
     },
     {
-        images: './images/Layer_36-smarttraffic04.svg',
+        // images: './images/Layer_36-smarttraffic04.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Pedestrian Crosswalk Solutions'
     },
     {
-        images: './images/Layer_37-smarttraffic05.svg',
+        // images: './images/Layer_37-smarttraffic05.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Dynamic Curve warning'
     },
     {
-        images: './images/Layer_38-smarttraffic06.svg',
+        // images: './images/Layer_38-smarttraffic06.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Wrong-Way Detection'
     },
     {
-        images: './images/Layer_39-smarttraffic07.svg',
+        // images: './images/Layer_39-smarttraffic07.svg',
+        images: './images/technician-technology-electronics.png',
         text: 'Variable Message Signs'
     },
 ]
@@ -492,6 +519,13 @@ export const solarhardware = [
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
         read: 'read more'
     },
+    {
+        // images: './images/1.0-solar.png',
+        images: './images/cloud/SunsightDataLogger.png',
+        head: 'Data Logger',
+        // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
+        read: 'read more'
+    },
 ]
 
 
@@ -499,7 +533,7 @@ export const solarhardware = [
 // Components = Cards.js molecule, 
 export const solarsoftware = [
     {
-        images: './images/cloud/SunsightDataLogger.png',
+        images: './images/solar/SunSight_Live_2x.png',
         head: 'SunSights Live',
         productname: 'SunSights Live',
         // para: 'SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more.',
@@ -516,14 +550,14 @@ export const gaminghardware = [
         images: './images/iot_bg_cloud4.png',
         productname: 'Smart Targets',
         para: 'Smart Targets are Iot Targeting App controlled reactive targets powered with advanced wireless technology for a real-time practice and gaming experience.',
-        para1:' Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
+        para1: ' Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
         read: 'read'
     },
     {
         images: './images/iot_bg_just_target.png',
         productname: 'Just Targets',
         para: 'Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. ',
-        para1:'Leveraging reactive touch technology, Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.',
+        para1: 'Leveraging reactive touch technology, Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.',
         read: 'read'
     },
 
@@ -532,7 +566,7 @@ export const gaminghardware = [
 
 export const gamingsoftware = [
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/gaming/Gaming-Iot-targeting-App.png',
         productname: 'IoT Targeting Mobile App',
         para: 'The Iot Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.',
         read: 'read'
@@ -885,21 +919,64 @@ export const homeproducts = [
 ]
 
 
+
+
+export const softdevservices = [
+    {
+        images:"./images/Layer_20-soft-dev.svg",
+        title:"Web Development",
+        li1:"Cloud Solutions",
+        li2:"Custom Web Application",
+    },
+    {
+        images:"./images/Layer_21-soft-dev.svg",
+        title:"Application Development",
+        li1:"Windows Development",
+        li2:"Product Development",
+    },
+    {
+        images:"./images/Layer_23-soft-dev.svg",
+        title:"System Development",
+        li1:"System Porting & Customization",
+        li2:"Driver Development",
+    },
+    {
+        images:"./images/Layer_26-soft-dev.svg",
+        title:"Embedded Solutions",
+        li1:"Firmware Development",
+        li2:"Driver Development",
+    },
+    {
+        images:"./images/Layer_24-soft-dev.svg",
+        title:"Enterprise Solutions",
+        li1:"HRM System",
+        li2:"ERP System",
+    },
+    {
+        images:"./images/Layer_25-soft-dev.svg",
+        title:"Mobile App Development",
+        li1:"Application Development",
+        li2:"System Porting & Customization",
+    },
+]
+
+
 export const homeapp = [
     {
-        images: './images/homeautomation/SLS0.png',
+        images: './images/homeautomation/living-room.png',
         text: 'Home'
     },
     {
         images: './images/homeautomation/Industria.png',
-        text: 'Home'
+        text: 'Industries'
     },
     {
         images: './images/homeautomation/Office.png',
-        text: 'Home'
+        text: 'Offices'
     },
     {
         images: './images/homeautomation/Warehouse.png',
-        text: 'Home'
+        text: 'Warehouse'
     }
 ]
+

@@ -7,26 +7,30 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        // background: '#182AC3',
-        // opacity:'0.75',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         paddingTop: '3%',
         boxShadow: 'none',
+        border: '2px solid red',
+        display:'none',
+        [theme.breakpoints.down('sm')]: {
+            display:'block',
+        }
     },
     navRelative: {
         position: 'relative',
         boxShadow: 'none',
+        color: 'black'
     },
     navFixed: {
         position: 'fixed',
-        top: '0%',
+        top: '0px',
         boxShadow: '2px 2px 5px grey',
         background: 'white',
         padding: '.8rem 0rem',
         transition: 'all ease-in-out .3s',
-        "& ": {
+        "& $navbarlink": {
             color: 'black'
         }
     },
@@ -72,13 +76,16 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     navbarLink: {
+        width: '100%',
         textDecoration: 'none',
         color: 'white',
         cursor: 'pointer',
-        width: '100%',
+        "&:hover": {
+            color: '#d1d1d1'
+        }
     },
     linkActive: {
-        // color: 'blue',
+        color: 'blue',
     },
     megaMenu: {
         height: 'fit-content',
@@ -102,13 +109,9 @@ const useStyles = makeStyles((theme) => ({
         pointer: 'cursor',
         padding: '10px',
     },
-    activeLios: {
-        color: '#'
-    },
     act: {
         margin: '2px',
         padding: '5px 1px',
-        borderBottom: '1px solid white'
     },
     menuIcon: {
         display: 'none',
@@ -117,8 +120,18 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '2.2rem',
             color: 'white'
         }
-    }
-
+    },
+    clsbeforePos: {
+        textDecoration: 'none',
+        color: 'black',
+        cursor: 'pointer',
+        "&:hover": {
+            color: '#d1d1d1'
+        }
+    },
+    clsAfterPos: {
+        color: '#182AC3'
+    },
 }))
 
 export function MobileMenu() {
@@ -129,7 +142,8 @@ export function MobileMenu() {
 
     const [navPos, setNavPos] = React.useState('navRelative')
 
-    const [navLink, setNavLink] = React.useState('navLI')
+    const [navAfterPos, setnavAfterPos] = React.useState('clsAfterPos')
+
 
     // materail ui navbar drops
     const [open, setOpen] = React.useState(false);
@@ -183,8 +197,10 @@ export function MobileMenu() {
 
 
     const navref = React.useRef()
+    const navlinkref = React.useRef()
 
     navref.current = navPos
+    navlinkref.current = navAfterPos
 
     const mobileMenuClose = (e) => {
         history.push(e)
@@ -198,14 +214,18 @@ export function MobileMenu() {
 
             if (show) {
                 setNavPos('navFixed')
+                setnavAfterPos('clsAfterPos')
+
             } else {
                 setNavPos('navRelative')
+                setnavAfterPos('navbarLink')
+
             }
         }
-        document.addEventListener('scroll', handleScroll)
+        document.addEventListener('click', handleScroll)
 
         return () => {
-            document.removeEventListener('scroll', handleScroll)
+            document.removeEventListener('click', handleScroll)
         }
     }, [])
     return (
@@ -214,19 +234,19 @@ export function MobileMenu() {
                 <ul className={classes.navUL}>
                     <li className={classes.navLI} >
                         <h4>
-                            <NavLink className={classes.navbarLink} to="/home"
+                            <NavLink className={clsx(classes.navbarLink, classes[navlinkref.current])} to="/home"
                                 activeClassName={classes.linkActive}>Home</NavLink>
                         </h4>
                     </li>
                     <li className={classes.navLI} >
                         <h4>
-                            <NavLink className={classes.navbarLink} to="/about"
+                            <NavLink className={clsx(classes.navbarLink, classes[navlinkref.current])} to="/about"
                                 activeClassName={classes.linkActive}>About Us</NavLink>
                         </h4>
                     </li>
                     <li className={classes.navLI} >
                         <Button
-                            className={classes.navbarLink}
+                            className={clsx(classes.navbarLink, classes[navlinkref.current])}
                             disableRipple disableFocusRipple disableTouchRipple
                             ref={anchorRef}
                             id="composition-button"
@@ -236,7 +256,7 @@ export function MobileMenu() {
                             onClick={handleToggle}
                             onMouseOver={handleToggle}
                             style={{ textTransform: 'none' }}>
-                            <h4 style={{ cursor: 'pointer', }}>Industries </h4><ArrowDropDown style={{ fontSize: '1rem', }} size={40} />
+                            <h4 className={clsx(classes.navbarLink, classes[navlinkref.current])}>Industries </h4><ArrowDropDown style={{ fontSize: '1rem', }} size={40} />
                         </Button>
 
                         <Popper
@@ -313,7 +333,7 @@ export function MobileMenu() {
 
                     <li className={classes.navLI} >
                         <Button
-                            className={classes.navbarLink}
+                            className={clsx(classes.navbarLink, classes[navlinkref.current])}
                             disableRipple disableFocusRipple disableTouchRipple
                             ref={anchorRef}
                             id="services-button"
@@ -323,7 +343,7 @@ export function MobileMenu() {
                             onClick={handleToggle1}
                             onMouseOver={handleToggle1}
                             style={{ textTransform: 'none' }}>
-                            <h4 style={{ cursor: 'pointer' }}>Services</h4><ArrowDropDown style={{ fontSize: '1rem', }} size={40} />
+                            <h4 className={clsx(classes.navbarLink, classes[navlinkref.current])}>Services</h4><ArrowDropDown style={{ fontSize: '1rem', }} size={40} />
                         </Button>
 
                         <Popper
@@ -381,7 +401,7 @@ export function MobileMenu() {
 
                     <li className={classes.navLI} >
                         <h4>
-                            <NavLink className={classes.navbarLink}
+                            <NavLink className={clsx(classes.navbarLink, classes[navlinkref.current])}
                                 to="/contact"
                                 activeClassName={classes.linkActive}>Contact Us</NavLink>
                         </h4>

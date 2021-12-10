@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { DigitalTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Digital() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Digital() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <DigitalTemplate/>
         </div>
     )

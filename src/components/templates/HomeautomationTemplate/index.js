@@ -8,6 +8,7 @@ import {  MainContainer } from '../../atoms'
 
 
 
+
 import { Homeapplication } from './Homeapplication'
 import { GridBlue } from '../../atoms'
 
@@ -74,6 +75,7 @@ export function HomeautomationTemplate({
                     goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; KONNSYS"
                     title="Visit the website"
                     href="https://www.konnsys.com/"
+                    rightlogo="./images/homeautomation/Konnsys.png"
                 />
             </MainContainer>
 

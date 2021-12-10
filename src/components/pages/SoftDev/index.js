@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { SoftDevTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function SoftDev() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function SoftDev() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <SoftDevTemplate />            
         </div>
     )

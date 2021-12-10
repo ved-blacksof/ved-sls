@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { SolarTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Solar() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Solar() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <SolarTemplate />            
         </div>
     )

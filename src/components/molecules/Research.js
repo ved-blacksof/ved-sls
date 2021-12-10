@@ -20,7 +20,7 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
-        margin: "12% 0%",
+        margin: "12% auto",
         position: 'relative',
     },
     flicks: {

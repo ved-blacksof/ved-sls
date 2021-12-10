@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
             alignItems:'center'
         }
     },
-    margins:{
+    margins:{   
         marginTop: '2rem',
         [theme.breakpoints.down('sm')]: {
             marginTop: '0rem',
@@ -84,7 +84,7 @@ export function Services() {
                             li2="Driver Development"
                         />
                     </Box>
-                    <Box className={clsx(classes.mainInbox, classes.boxMargin2)} >
+                    <Box className={clsx(classes.mainInbox, classes.boxMargin1)} >
                         <ServiceBox
                             imgs="./images/Layer_21-soft-dev.svg"
                             title="Application Development"
@@ -99,7 +99,7 @@ export function Services() {
                             li2="ERP System"
                         />
                     </Box>
-                    <Box className={clsx(classes.mainInbox, classes.boxMargin3)} >
+                    <Box className={clsx(classes.mainInbox, classes.boxMargin1)} >
                         <ServiceBox
                             imgs="./images/Layer_23-soft-dev.svg"
                             title="System Development"

@@ -73,13 +73,13 @@ const useStyles = makeStyles((theme) => ({
     },
     rightBox: {
         width: '50%',
-        position: 'relative',
+        // position: 'relative',
     },
     tabPanel: {
-        width: '70%',
+        width: '50%',
         position: 'absolute',
         zIndex: '1',
-        top: '-45%',
+        top: '0%',
         [theme.breakpoints.down('md')]: {
             top: '-50%',
         },

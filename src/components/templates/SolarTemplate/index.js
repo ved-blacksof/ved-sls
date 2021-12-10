@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Cards, Visit, Realtime } from '../../molecules'
+import { Ubanner, Overview, Cards, Visit, Realtime, Visit1, SoftOfferingsBlue } from '../../molecules'
 
 import { solar, solarhardware, solarsoftware } from '../../molecules/PortfolioData'
 
@@ -28,16 +28,24 @@ export function SolarTemplate() {
                 />
             </GridBlue>
             <Realtime
-                    maintitle="Hardware Offerings"
-                    data={solarhardware}
-                    style={{opacity:'0'}}
-                
+                maintitle="Hardware Offerings"
+                data={solarhardware}
+                // style={{ opacity: '0' }}
+
             />
-            <Realtime
-                    maintitle="Software Offerings"
-                    data1={solarsoftware}
-                    style={{opacity:'0'}}
+            {/* <Realtime
+                maintitle="Software Offerings"
+                data1={solarsoftware}
+                style={{ opacity: '0' }}
+
+            /> */}
+
+            <SoftOfferingsBlue
+                 maintitle="Software OFFERINGS"
+                 title="SunSights Live"
+                 subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
                 
+                 images='./images/solar/SunSight_Live_2x.png'
             />
 
             {/* <Cards
@@ -46,10 +54,12 @@ export function SolarTemplate() {
 
             /> */}
 
-            <Visit
+            <Visit1
                 goto1="A DIVISION OF SYSTEM LEVEL SOLUTIONS; SUNSIGHTS"
                 title="Visit the website"
-                style={{fontFamily:'BebasNeue',fontWeight:'normal'}}
+                rightlogo="./images/solar/SunSights.png"
+                href={"https://www.getsunsights.com/"}
+                style={{ fontFamily: 'BebasNeue', fontWeight: 'normal' }}
             />
 
             <Footer />

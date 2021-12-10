@@ -1,17 +1,30 @@
 import { Box, Container, makeStyles } from '@material-ui/core'
+import clsx from 'clsx'
 import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
     paraBox: {
         width: '100%',
+      
+    },
+    mainTitle:{
+        textAlign:'left',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            textAlign:'center',
+            marginTop:'2%'
+        },
     },
     head: {
-        marginTop:'10%'
+        marginTop:'10%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
     },
     portSubHead: {
         width: '100%',
         [theme.breakpoints.down('xs')]: {
-            width: '70%',
+            width: '100%',
         },
     },
     redLine: {
@@ -19,19 +32,16 @@ const useStyles = makeStyles((theme) => ({
     },
     uls: {
         listStyle: 'inside',
-        font: 'normal normal normal 1.1rem Access',
         margin: '3% 0%',
         color:'white',
         [theme.breakpoints.down('sm')]:{
-            fontSize:'.8rem'
+            
         }
 
     },
     lis: {
-        textIndent: '-25px',
-        marginLeft:'25px',
         color: 'white',
-        margin:'1% 0%',
+        marginTop:'1%',
         "& h6":{
             display:'inline'
         }
@@ -53,7 +63,7 @@ export function ParagraphsBlue({
     return (
         <>
             <Box className={classes.paraBox} >
-                <h2 > {maintitle} </h2>
+                <h2 className={classes.mainTitle}> {maintitle} </h2>
                 <br/>
                 <h3 className={classes.head}>{title}</h3>
                 <h3>{title1}</h3>
@@ -67,11 +77,11 @@ export function ParagraphsBlue({
                     list ?
                         <ul className={classes.uls}>
                             {list}
-                            <li className={classes.lis}> <h6> {firstli} </h6></li>
-                            <li className={classes.lis}> <h6> {secli}</h6></li>
-                            <li className={classes.lis}> <h6> {thirdli}</h6></li>
+                            <li className={clsx(classes.lis, 'li')}> <h6> {firstli} </h6></li>
+                            <li className={clsx(classes.lis, 'li')}> <h6> {secli}</h6></li>
+                            <li className={clsx(classes.lis, 'li')}> <h6> {thirdli}</h6></li>
                             {
-                                fourthli ? <li className={classes.lis}> <h6> {fourthli} </h6></li> : ''
+                                fourthli ? <li className={clsx(classes.lis, 'li')}> <h6> {fourthli} </h6></li> : ''
                             }
                         </ul> : ''
                 }

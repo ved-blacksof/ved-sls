@@ -1,4 +1,4 @@
-import { Box, Container, makeStyles } from '@material-ui/core'
+import { Box, Button, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
@@ -27,22 +27,45 @@ const useStyles = makeStyles((theme) => ({
     redLine: {
         margin: '2% 0%'
     },
+    btnBox: {
+        width: '100%',
+        marginTop: '6%',
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    smallBtn: {
+        font: 'normal normal normal 1rem Access',
+        background: '#182AC3',
+        textDecoration:'none',
+        textTransform: 'uppercase',
+        border: 'none',
+        color: 'white',
+        padding: '2% 3%',
+        margin: '0% auto',
+        '&:hover': {
+            background: 'blue'
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '.7rem'
+        }
+    },
     uls: {
         color: 'black',
-        font: 'normal normal normal 1rem Access',
         margin: '2% 0%',
         lineHeight: '2.5',
         [theme.breakpoints.down('sm')]: {
             fontSize: '.8rem',
             lineHeight: '1.5'
-        }
+        },
+        "& h6": {
+            color: 'black'
+        },
     },
     lis: {
-        font: 'normal normal normal 1rem Access',
         color: 'black',
         marginLeft: '25px',
         textIndent: '0px',
-        lineHeight: '1.8',
+        lineHeight: '1.7',
         [theme.breakpoints.down('sm')]: {
             fontSize: '.8rem',
             lineHeight: '1.5'
@@ -68,7 +91,10 @@ export function Paragraphs({
     secli,
     thirdli,
     fourthli,
-    fifthli
+    download,
+    download1,
+    fifthli,
+    href,
 }) {
     const classes = useStyles()
     return (
@@ -78,10 +104,11 @@ export function Paragraphs({
                 {
                     redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
                 }
+
+
                 {
                     subhead ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead}</h4> : ''
                 }
-
                 <h4 className={classes.portSubHead}>{subtitle}</h4>
 
                 {
@@ -96,23 +123,51 @@ export function Paragraphs({
 
                 {
                     list ?
-                        <ul className={classes.uls}>{uli}
+                        <ul className={classes.uls}><h6>{uli}</h6>
                             {
-                                firstli ? <li className={classes.lis}>{firstli}</li> : ''
+                                firstli ? <li className={classes.lis}><h6> {firstli}  </h6></li> : ''
                             }
                             {
-                                secli ? <li className={classes.lis}>{secli}</li> : ''
+                                secli ? <li className={classes.lis}><h6> {secli}  </h6></li> : ''
                             }
                             {
-                                thirdli ? <li className={classes.lis}>{thirdli}</li> : ''
+                                thirdli ? <li className={classes.lis}><h6> {thirdli}  </h6></li> : ''
                             }
                             {
-                                fourthli ? <li className={classes.lis}>{fourthli}</li> : ''
+                                fourthli ? <li className={classes.lis}><h6> {fourthli}  </h6></li> : ''
                             }
                             {
-                                fifthli ? <li className={classes.lis}>{fifthli}</li> : ''
+                                fifthli ? <li className={classes.lis}><h6> {fifthli}  </h6></li> : ''
                             }
                         </ul> : ''
+                }
+                {
+                    download ?
+                        <Box className={classes.btnBox}>
+                            <Button
+                                className={classes.smallBtn}
+                                href={href}
+                                onclick={() => window.open(`${href}`, '_blank')}
+                                target="_blank"
+                            >
+                                {download}
+                            </Button>
+                        </Box>
+                        : ''
+                }
+                {
+                    download1 ?
+                        <Box className={classes.btnBox}>
+                            <a
+                                className={classes.smallBtn}
+                                href={href}
+                                // download="pdf"
+                                target="_blank"
+                            >
+                                {download1}
+                            </a>
+                        </Box>
+                        : ''
                 }
             </Box>
         </>

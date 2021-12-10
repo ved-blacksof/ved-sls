@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Realtime, Squareboxes, Visit, Visit1 } from '../../molecules'
+import { Ubanner, Overview, Realtime, Squareboxes, Visit, Visit1, SoftOfferingsBlue } from '../../molecules'
 import { ChargingMangement } from './ChargingMangement'
 import { MobileApplication } from './MobileApplication'
 
@@ -29,7 +29,7 @@ export function EvchargingTemplate() {
                     sub1="Paving a way for an EV-First universe, SLS has been an enabler in setting the 
                     critical EV Charging Infrastructure in India and across the world. We offer indigenously 
                     manufactured OCPP-Compliant EV Chargers with state-of-the-art hardware and software powered with IoT. 
-                    Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kw- 7.4kW."
+                    Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kW- 7.4kW."
                 />
             </GridBlue>
 
@@ -55,16 +55,29 @@ export function EvchargingTemplate() {
                 redline="redline"
             /> */}
 
-            <ChargingMangement />
+            {/* <ChargingMangement /> */}
+
+            <SoftOfferingsBlue
+                maintitle="Software OFFERINGS"
+                title="Charging Management Software"
+                subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
+                list
+                firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
+                secli="Dynamic load management capabilities"
+                thirdli="ROI Analytics"
+                fourthli="Partner/Fleet management"
+                images='./images/evcharger/Image 2.png'
+            />
 
             <MobileApplication />
 
             <MainContainer>
-                    <Visit1
-                        goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; VERDEMOBILITY"
-                        title="Visit the website"
-                        href="https://www.verdemobility.com/Home/Index"
-                    /> 
+                <Visit1
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; VERDEMOBILITY"
+                    title="Visit the website"
+                    href="https://www.verdemobility.com/Home/Index"
+                    rightlogo="./images/evcharger/1.png"
+                />
             </MainContainer>
 
             <Footer />

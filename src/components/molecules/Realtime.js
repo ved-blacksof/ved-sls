@@ -12,7 +12,7 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     realText: {
-        margin: '15% 0%',
+        margin: '15% auto',
         [theme.breakpoints.down('sm')]: {
             margin: "20% auto"
         },
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
         background: '#182AC3',
         border: 'none',
         color: 'white',
-        padding: '1% 2%',
+        padding: '8px 15px',
         '&:hover': {
             background: 'blue'
         },
@@ -142,32 +142,33 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
         padding: "2rem",
-        "&:hover img": {
-            transition: '.5s ease-in-out',
-            transform: 'scale(0.92)'
-        },
-        '& h4': {
-            color: 'black'
-        },
-        '& img': {
-            width: '100%',
-            maxHeight: '100%',
-        },
         [theme.breakpoints.down('sm')]: {
             width: '12rem',
             height: '12rem'
         },
-
+        '& h4': {
+            color: 'black'
+        },
+        '&:hover': {
+            border: '1px solid white',
+            "& $imgBox": {
+                transform: 'scale(1.2)',
+            },
+            "& $red": {
+                background: '#DE141A',
+                animation: `$redbar 800ms ease-in-out`,
+                animationIterationCount: 1,
+                animationDuration: '800ms',
+            },
+        },
 
     },
     imgBox: {
         height: "100%",
         "& img": {
-            transition: '.5s ease-in-out',
-
-        },
-        "&:hover img": {
-            transform: 'scale(0.92)'
+            transition: 'all 800ms ease-in-out',
+            width: '100%',
+            maxHeight: '100%',
         },
     },
     iconBox: {
@@ -180,7 +181,43 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '90%'
         }
-    }
+    },
+
+    //red line
+    reddiv: {
+        width: '100%',
+        height: '8px',
+        overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            height: '2px',
+            background: 'red'
+        },
+    },
+    red: {
+        height: '100%',
+        transition: 'all 500ms ease-in-out',
+
+    },
+    "@keyframes redbar": {
+        "0%": {
+            opacity: 0,
+            transform: "translateX(-200%)"
+        },
+        "100%": {
+            opacity: 1,
+            transform: "translateX(0)"
+        },
+    },
+    "@keyframes redbar1": {
+        "100%": {
+            opacity: 0,
+            transform: "translateX(-200%)"
+        },
+        "0%": {
+            opacity: 1,
+            transform: "translateX(0)"
+        },
+    },
 }))
 
 
@@ -281,13 +318,6 @@ export function Realtime({
                         <Box className={classes.sliderSec}>
 
                             <Box className={clsx(classes.box)} style={style} >
-
-                                {/* <img style={{ margin: '20% 0%' }} src={"./images/Group 82850.svg"} onClick={previous} />
-                                    <img src={"./images/Group 82851.svg"} onClick={next} /> 
-                                */}
-                                {/* <ArrowBackIos className={classes.btn}/> */}
-
-
                                 <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
                                 <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
                             </Box>
@@ -357,7 +387,15 @@ export function Realtime({
                                                                 <a href="/" >{item.read}</a>
                                                             </h4>
                                                             {
-                                                                download ? <Button className={classes.smallBtn} >Download </Button> : ''
+                                                                download ?
+                                                                    <Button
+                                                                        className={classes.smallBtn}
+                                                                        href={item.href}
+                                                                        onclick={() => window.open(`${item.href}`, '_blank')}
+                                                                        target="_blank"
+                                                                    >
+                                                                        {download}
+                                                                    </Button> : ''
                                                             }
                                                         </Fade>
                                                     </Box>
@@ -383,6 +421,10 @@ export function Realtime({
                                                                         <img src={item.images} alt="Mission Icon" />
                                                                     </Box>
                                                                     <h4>{item.subtitle} </h4>
+                                                                </Box>
+                                                                <Box className={classes.reddiv}>
+                                                                    <Box className={classes.red}>
+                                                                    </Box>
                                                                 </Box>
                                                             </a>
                                                         </Box>

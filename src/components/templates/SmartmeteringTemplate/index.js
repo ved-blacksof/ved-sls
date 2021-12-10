@@ -14,10 +14,11 @@ export function SmartmeteringTemplate() {
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-smartmeter.png"
                 maintext="smart metering"
                 subtext=" Spearheading the Smart Metering Landscape Worldwide "
+                
             />
 
             <GridBlue>
-                <Navbar />
+                <Navbar style={{ boxShadow:'none' }}/>
 
                 <Overview
                     path="Industries / Smart Metering"

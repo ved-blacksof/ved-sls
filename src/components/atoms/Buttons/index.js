@@ -59,7 +59,6 @@ export function Buttons({
         <Box className={className}>
             {/* material ui Button */}
             <Button
-                // disableRipple
                 className={classes.btn}
                 style={style}
                 href={href}

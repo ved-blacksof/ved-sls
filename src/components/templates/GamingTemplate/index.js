@@ -44,6 +44,7 @@ export function GamingTemplate() {
             <Visit
                 goto="Want to ace your game?"
                 title="Visit the website"
+                href={"https://iotargeting.com/"}
             />
 
             <Footer />

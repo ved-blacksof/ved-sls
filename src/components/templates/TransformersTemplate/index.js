@@ -9,7 +9,7 @@ export function TransformersTemplate() {
     return (
         <>
             <Ubanner
-                Background="./images/luo-lei-Xa4pTwafe5U-unsplash11.png"
+                Background="./images/transformers/Transformer.png"
                 maintext="Intelligent Transformer Monitoring"
                 subtext="Helping Discoms smartly monitor and manage their "
             />
@@ -31,6 +31,7 @@ export function TransformersTemplate() {
             <Visit
                 goto="Want to know more about this offering?"
                 title="Visit the website"
+                href={"/contact"}
             />
 
             <Footer />

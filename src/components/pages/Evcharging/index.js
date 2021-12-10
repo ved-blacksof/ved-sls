@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { EvchargingTemplate } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Evcharging() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Evcharging() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <EvchargingTemplate />
         </div>
     )

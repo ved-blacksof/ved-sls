@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-start',
         flexWrap: 'wrap',
-        margin: '0% 5%',
+        margin: '0% 3%',
         [theme.breakpoints.down('sm')]: {
             justifyContent: 'center',
             margin: '0% 0%'
@@ -34,16 +34,16 @@ const useStyles = makeStyles((theme) => ({
     },
     boxes: {
         background: 'white',
-        width: '25%',
-        height: 'fit-content',
+        width: '30%',
+        maxHeight: '100%',
         boxShadow: '0px 30px 50px #00000029',
         borderBottom: '4px solid #182AC3',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'flex-start',
         flexDirection: 'column',
         flexWrap: 'wrap',
-        margin: '5% 2.5%',
+        margin: '5% 2%',
         [theme.breakpoints.down('sm')]: {
             width: '70%'
         },
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        height: '14vw',
+        maxHeight: '14vw',
         background: 'white',
         "& img": {
             width: '100%',

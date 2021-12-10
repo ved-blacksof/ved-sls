@@ -55,6 +55,9 @@ export function QualityReverse({
     subhead2,
     redline,
     uli,
+    download,
+    download1,
+    href,
     firstli,
     secli,
     thirdli,
@@ -74,20 +77,27 @@ export function QualityReverse({
                         style={style} >
 
                         <Box className={classes.BoxLeft}>
-                            <Bounce left> <Paragraphs
-                                title={heading}
-                                subhead={subhead}
-                                subhead1={subhead1}
-                                subhead2={subhead2}
-                                subtitle={subtitle}
-                                subtitle1={subtitle1}
-                                list={list}
-                                redline={redline}
-                                firstli={firstli}
-                                secli={secli}
-                                thirdli={thirdli}
-                                fourthli={fourthli}
-                            /></Bounce>
+                            <Bounce left>
+                                <Paragraphs
+                                    title={heading}
+                                    subhead={subhead}
+                                    subhead1={subhead1}
+                                    subhead2={subhead2}
+                                    subtitle={subtitle}
+                                    subtitle1={subtitle1}
+                                    uli={uli}
+                                    list={list}
+                                    redline={redline}
+                                    firstli={firstli}
+                                    secli={secli}
+                                    thirdli={thirdli}
+                                    fourthli={fourthli}
+                                    download={download}
+                                    download1={download1}
+                                    href={href}
+                                />
+                                
+                                </Bounce>
                         </Box>
 
                         <Box className={classes.BoxRight}>

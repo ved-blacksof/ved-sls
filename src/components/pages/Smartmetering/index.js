@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { SmartmeteringTemplate  } from '../../templates'
+import { ScrollTop } from '../../molecules'
 
 export function Smartmetering() {
     useEffect(() => {
@@ -7,6 +8,7 @@ export function Smartmetering() {
     }, [1])
     return (
         <div>
+            <ScrollTop />
             <SmartmeteringTemplate />            
         </div>
     )
