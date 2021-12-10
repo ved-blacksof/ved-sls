@@ -1,16 +1,16 @@
 import React from 'react'
 import { makeStyles, Container, Box } from '@material-ui/core'
 
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+
+
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        background: "#003189",
 
-        border: '2px solid green'
     },
     timelineBox: {
         height: '50vh',
         position: 'relative',
-        border: '2px solid red',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -53,9 +53,8 @@ export function SLSTimeline() {
 
     return (
         <Box className={classes.mainBox}>
-            <Container >
                 <Box className={classes.timelineBox}>
-
+                    
 
                     <Box className={classes.imageBox}>
                         <img src={'./images/Repeat Grid 10.svg'} />
@@ -83,7 +82,6 @@ export function SLSTimeline() {
 
 
                 </Box>
-            </Container>
         </Box>
     )
 }

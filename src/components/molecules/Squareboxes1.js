@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     imgBox: {
         width: '50%',
         transition: 'all 800ms ease-in-out',
-
     },
     boxes: {
         width: '20vw',
