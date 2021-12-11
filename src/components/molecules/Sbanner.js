@@ -3,6 +3,9 @@ import { Box, makeStyles } from '@material-ui/core'
 import Fade from 'react-reveal/Fade';
 import Roll from 'react-reveal/Roll';
 import Jello from 'react-reveal/Jello';
+import $ from 'jquery'
+import './Sbanner.css'
+
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -15,9 +18,11 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        overflow: 'hidden',
         position: 'relative',
         // transform: ' translate3d(0px, 0px, 0px)',
         // transition: 'all 700ms ease',
+
     },
     backImg: {
         position: 'absolute',
@@ -28,6 +33,18 @@ const useStyles = makeStyles((theme) => ({
             maxWidth: '100%',
             height: '100%',
         }
+    },
+    textBox: {
+        height: '100vh',
+        width:'100%',
+        textAlign:'center',
+        position:'absolute',
+        top:'0px',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        flexDirection:'column'
+
     },
     mainText: {
         lineHeight: '.8',
@@ -92,60 +109,65 @@ const useStyles = makeStyles((theme) => ({
 
 export function Sbanner({
     Background,
+    Background1,
     mouse
 }) {
     const classes = useStyles()
 
-    // var pageHeight = window.innerHeight;
+    var pageHeight = window.innerHeight;
 
-    // document.addEventListener('scroll', function () {
-    //     document.body.scrollTop = 0;
-    // });
+    $(function () {
+        let currentPosition = 0;
+        let photo = $('.photo');
+        let photoNums = photo.length;
 
-    // document.addEventListener('wheel', function (e) {
-    //     if (e.deltaY > 0) {
-    //         scrollDown();
-    //     } else {
-    //         scrollUp();
-    //     }
-    // }
-    // );
+        let speed = 3000;
+        let timeout = 5000;
+        $('.photo').eq(0).show();
 
-    // function scrollDown() {
-    //     document.body.style.transform = 'translate3d(0px, -' + pageHeight + 'px, 0px)';
-    // }
-
-    // function scrollUp() {
-    //     document.body.style.transform = 'translate3d(0px, 0px, 0px)';
-    // }
+        function move() {
+            let nextPhoto = (currentPosition + 1) % photoNums;
+            photo.eq(currentPosition).fadeOut(speed);
+            photo.eq(nextPhoto).fadeIn(speed);
+            currentPosition = nextPhoto;
+        }
+        setInterval(move, timeout);
+    })
 
     const scroll = () => {
-        window.scroll({ top: '800', left: '0', behavior: 'smooth' });
+        window.scroll({ top: `${pageHeight}`, left: '0', behavior: 'smooth' });
     }
     return (
         <>
 
             <div className={classes.mainBox}
                 style={{
-                    backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background})`,
+                    // backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background})`,
                 }}
             >
                 {/* <Box className={classes.backImg}>
                     <img src={Background} alt="background" />
                 </Box> */}
+                <div id="slider">
+                    <div class="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background})` }}></div>
+                    <div class="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background1})` }}></div>
+                    {/* <div class="photo" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background2})` }}></div> */}
+                </div>
 
-                <Fade bottom>
-                    <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
-                </Fade>
-
-                <Fade bottom><span className={classes.redLine}></span></Fade>
-
-
-                <h2 className={classes.subText}>
+                <div className={classes.textBox}>
                     <Fade bottom>
-                        Industry leaders in providing solutions catering to the domains of intellectual property, hardware design & prototyping, software design, and manufacturing.
+                        <h1 className={classes.mainText}>SYSTEM LEVEL SOLUTIONS</h1>
                     </Fade>
-                </h2>
+
+                    <Fade bottom><span className={classes.redLine}></span></Fade>
+
+
+                    <h2 className={classes.subText}>
+                        <Fade bottom>
+                            Industry leaders in providing solutions catering to the domains of intellectual property, hardware design & prototyping, software design, and manufacturing.
+                        </Fade>
+                    </h2>
+                </div>
 
 
                 <div className={classes.scrollBox}>
@@ -159,6 +181,12 @@ export function Sbanner({
                 </div>
 
             </div>
+
+            {/* <div style={{height:'100vh', width:'100%', border:'2px solid red',
+                    backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background})`,
+                    display:'flex', alignItems:'center'}}>
+                    <img style={{ width:'100%', objectFit:'contain'}} src={Background}/>
+            </div> */}
         </>
     )
 }

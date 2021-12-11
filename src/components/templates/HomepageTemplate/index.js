@@ -10,11 +10,16 @@ import { Expanding } from './Expanding'
 import { Partners } from './Partners'
 import { port, realtime, research } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
+import Homepage from '../../assets/Homepage.png'
+import Homepage2 from '../../assets/Homepage1.png'
 
 export function HomepageTemplate() {
     return (
         <Box>
-            <Sbanner Background={'./images/homepage-icons/Homepage.png'} mouse={'./images/scroll.svg'} />
+            <Sbanner 
+            Background={Homepage} 
+            Background1={Homepage2} 
+            mouse={'./images/scroll.svg'} />
 
             <GridBlue>
                 <Navbar />

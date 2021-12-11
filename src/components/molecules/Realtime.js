@@ -124,7 +124,6 @@ const useStyles = makeStyles((theme) => ({
             }
         },
         [theme.breakpoints.down('sm')]: {
-            // fontSize:'1rem',
             marginLeft: '0%',
 
         }
@@ -142,6 +141,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
         padding: "2rem",
+        transition: 'all .3s ease-in-out',
         [theme.breakpoints.down('sm')]: {
             width: '12rem',
             height: '12rem'
@@ -150,13 +150,12 @@ const useStyles = makeStyles((theme) => ({
             color: 'black'
         },
         '&:hover': {
-            border: '1px solid white',
             "& $imgBox": {
-                transform: 'scale(1.2)',
+                transform: 'scale(1.1)',
             },
-            "& $red": {
+            "& $reddiv": {
                 background: '#DE141A',
-                animation: `$redbar 800ms ease-in-out`,
+                animation: `$redbar 800ms linear`,
                 animationIterationCount: 1,
                 animationDuration: '800ms',
             },
@@ -165,6 +164,7 @@ const useStyles = makeStyles((theme) => ({
     },
     imgBox: {
         height: "100%",
+        transition: 'all .3s ease-in-out',
         "& img": {
             transition: 'all 800ms ease-in-out',
             width: '100%',
@@ -185,19 +185,36 @@ const useStyles = makeStyles((theme) => ({
 
     //red line
     reddiv: {
-        width: '100%',
-        height: '8px',
+        // width: '100%',
+        // height: '8px',
+        // border: '1px solid red',
+        transition: 'all .3s linear',
         overflow: 'hidden',
+        position:'relative',
         [theme.breakpoints.down('sm')]: {
             height: '2px',
             background: 'red'
         },
+        "&::before": {
+            content: '""',
+            height: '8px',
+            width: '0%',
+            position: 'absolute',
+            top: '0',
+            background: 'black'
+        },
+        "&::after": {
+            content: '""',
+            height: '8px',
+            position: 'absolute',
+            top: '0',
+            width: '100%',
+        }
     },
-    red: {
-        height: '100%',
-        transition: 'all 500ms ease-in-out',
-
-    },
+    // red: {
+    //     height: '100%',
+    //     transition: 'all .3s linear',
+    // },
     "@keyframes redbar": {
         "0%": {
             opacity: 0,
@@ -410,7 +427,7 @@ export function Realtime({
                                 {
                                     squarecarddata ? squarecarddata.map((item, index) => {
                                         return (
-                                            <Box >
+                                            < >
                                                 {
                                                     item.link ?
 
@@ -421,9 +438,9 @@ export function Realtime({
                                                                         <img src={item.images} alt="Mission Icon" />
                                                                     </Box>
                                                                     <h4>{item.subtitle} </h4>
-                                                                </Box>
-                                                                <Box className={classes.reddiv}>
-                                                                    <Box className={classes.red}>
+                                                                    <Box className={classes.reddiv}>
+                                                                        {/* <Box className={classes.red}>
+                                                                        </Box> */}
                                                                     </Box>
                                                                 </Box>
                                                             </a>
@@ -435,9 +452,13 @@ export function Realtime({
                                                                 <img src={item.images} alt="Mission Icon" />
                                                             </Box>
                                                             <h4>{item.subtitle} </h4>
+                                                            <Box className={classes.reddiv}>
+                                                                <Box className={classes.red}>
+                                                                </Box>
+                                                            </Box>
                                                         </Box>
                                                 }
-                                            </Box>
+                                            </>
                                         )
                                     }) : ''
                                 }

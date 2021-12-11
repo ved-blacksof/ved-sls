@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     imageBox: {
-        width: '15rem',
+        width: '10rem',
         "& img": {
             width: '100%',
             maxHeight: '100%'
@@ -263,16 +263,16 @@ export function Footer() {
                         <h6 className={classes.socialText}>System Level Solutions Inc. Copyright &copy; 2021</h6>
                         <div className={classes.socialBox}>
                             <a target="_blank" href="https://www.facebook.com/system.level.solutions.corp" className={classes.anchor}><Facebook className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>Facebook</h6>
+                                {/* <h6 className={classes.socialText}>Facebook</h6> */}
                             </a><i>|</i>
                             <a target="_blank" href="https://www.instagram.com/system_level_solutions/" className={classes.anchor}><Instagram className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>Instagram</h6>
+                                {/* <h6 className={classes.socialText}>Instagram</h6> */}
                             </a><i>|</i>
                             <a target="_blank" href="https://twitter.com/S_L_S" className={classes.anchor}><Twitter className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>Twitter</h6>
+                                {/* <h6 className={classes.socialText}>Twitter</h6> */}
                             </a><i>|</i>
                             <a target="_blank" href="https://www.linkedin.com/company/system-level-solutions-india-pvt.-ltd/" className={classes.anchor}> <LinkedIn className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>LinkedIn</h6>
+                                {/* <h6 className={classes.socialText}>LinkedIn</h6> */}
                             </a>
                         </div>
                     </div>

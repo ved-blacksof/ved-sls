@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { makeStyles, IconButton, Toolbar, AppBar, Box, Button, Menu, MenuItem, ListItemText, Popper, Grow, Paper, ClickAwayListener, MenuList } from '@material-ui/core'
 import { useHistory, NavLink, Link } from 'react-router-dom';
 import { ArrowDownward, ArrowDropDown, MenuOpen, MenuOutlined } from '@material-ui/icons'
@@ -9,30 +9,24 @@ import './styles.css'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        // background: '#182AC3',
-        // opacity:'0.75',
         display: 'flex',
         justifyContent: 'center',
-        paddingtop: '2%',
         alignItems: 'center',
         boxShadow: 'none',
+        
     },
     navRelative: {
         position: 'relative',
         boxShadow: 'none',
-        height: '8rem',
     },
     navFixed: {
         position: 'fixed',
-        height: '5.8rem',
         top: '0px',
-        boxShadow: '2px 2px 5px grey',
+        boxShadow: '0px 0px 5px #777',
         background: 'white',
-        // padding: '.8rem 0rem',
+        zIndex: '4',
         transition: 'all ease-in-out .3s',
-        "& ": {
-            color: 'black'
-        }
+
     },
     navbar: {
         width: '90%',
@@ -64,29 +58,20 @@ const useStyles = makeStyles((theme) => ({
     },
     navUL: {
         display: 'flex',
-        alignItems: 'center',
         listStyle: 'none',
         [theme.breakpoints.down('sm')]: {
             display: 'none'
         }
     },
     navLI: {
+        height: '5rem',
+        display: 'flex',
+        alignItems: 'center',
         verticalAlign: 'middle',
-        margin: ' 0px 10px',
+        margin: '0px 15px',
         background: 'transparent',
         boxShadow: 'none',
-        padding: '0px',
         textTranform: 'none',
-        "& button:hover": {
-            background: 'transparent',
-            color: '#d1d1d1',
-            "& h4:hover": {
-                // color: '#182AC3'
-            },
-            "& $slider": {
-                width: '100%'
-            }
-        },
         "&:hover": {
             color: 'white',
             "& $slider": {
@@ -111,10 +96,22 @@ const useStyles = makeStyles((theme) => ({
             color: '#d1d1d1'
         }
     },
+    clsAfterPos: {
+        textDecoration: 'none',
+        color: 'black',
+        opacity: '0.8',
+        cursor: 'pointer',
+        "&:hover": {
+            color: '#d1d1d1'
+        }
+    },
     linkActive: {
-        // color: '',
         fontWeight: 'bold',
         opacity: '1'
+    },
+    linkActiveAfterPos: {
+        color: '#182AC3',
+        fontWeight: 'bold',
     },
     megaMenu: {
         height: 'fit-content',
@@ -138,13 +135,11 @@ const useStyles = makeStyles((theme) => ({
         mozBoxSizing: 'border-box',
         webkitBoxSizing: 'border-box',
 
-        transition:'all .3s ease-in-out',
+        transition: 'all .3s ease-in-out',
         "&:hover": {
-            background:'transparent',
-
+            background: 'transparent',
             "& $lios": {
-                // borderLeft: '3px solid #182AC3',
-                boxShadow:'-6px 0px 0px 0px #182AC3   ',
+                boxShadow: '-6px 0px 0px 0px #182AC3   ',
                 color: '#182AC3'
             }
         }
@@ -153,8 +148,8 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'none',
         color: '#000',
         pointer: 'cursor',
-        paddingLeft:'8px',
-        transition:'all .3s ease-in-out',
+        paddingLeft: '8px',
+        transition: 'all .3s ease-in-out',
     },
 
     act: {
@@ -176,7 +171,6 @@ const useStyles = makeStyles((theme) => ({
         color: 'black'
     },
     menu: {
-        // marginTop:'10%',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
             paddingBottom: '1%',
@@ -187,19 +181,14 @@ const useStyles = makeStyles((theme) => ({
     },
 
     hrs: {
-        border: '1px solid #182AC3',
         borderRadius: '3px',
         opacity: '.2'
     },
-    clsAfterPos: {
-        color: '#000'
-    },
     popper: {
-        zIndex: '3',
-        marginTop: '1%'
+        zIndex: '10',
     },
     menuBorder: {
-        border: '2px solid red'
+        // border: '2px solid red'
     }
 }))
 
@@ -210,16 +199,18 @@ export function Navbar({
 
     const history = useHistory();
 
-    const [navPos, setNavPos] = React.useState('navRelative')
+    const [navPos, setNavPos] = useState('navRelative')
 
-    const [navAfterPos, setnavAfterPos] = React.useState('clsAfterPos')
+    const [navAfterPos, setnavAfterPos] = useState('clsAfterPos')
+
+    const [linkActivePos, setlinkActivePos] = useState('linkActive')
 
     // materail ui navbar drops
-    const [open, setOpen] = React.useState(false);
-    const [open1, setOpen1] = React.useState(false);
-    const [mobileMenu, setMobileMenu] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [open1, setOpen1] = useState(false);
+    const [mobileMenu, setMobileMenu] = useState(false);
 
-    const anchorRef = React.useRef(null);
+    const anchorRef = useRef(null);
 
     const handleToggle = () => {
         setOpen((prevOpen) => !prevOpen);
@@ -267,9 +258,11 @@ export function Navbar({
 
     const navref = React.useRef()
     const navlinkref = React.useRef()
+    const linkactiveref = React.useRef()
 
     navref.current = navPos
     navlinkref.current = navAfterPos
+    linkactiveref.current = linkActivePos
 
 
     const mobileMenuClose = (e) => {
@@ -282,14 +275,19 @@ export function Navbar({
         const handleScroll = () => {
             const pageHeight = window.innerHeight
             const show = window.scrollY >= pageHeight
+            setOpen(false)
+            setOpen1(false)
 
             if (show) {
                 setNavPos('navFixed')
                 setnavAfterPos('clsAfterPos')
+                setlinkActivePos('linkActiveAfterPos')
 
             } else {
                 setNavPos('navRelative')
                 setnavAfterPos('clsbeforePos')
+                setlinkActivePos('linkActive')
+
             }
         }
         document.addEventListener('scroll', handleScroll)
@@ -299,7 +297,7 @@ export function Navbar({
         }
     }, [])
     return (
-        <>
+        <Box style={{marginTop:'2%'}}>
             <AppBar
                 position='static'
                 color='transparent'
@@ -345,127 +343,140 @@ export function Navbar({
                             <li className={classes.navLI} >
                                 <h4 className="fromCenter">
                                     <NavLink
-                                        className={clsx(classes.clsbeforePos, classes[navlinkref.current])}
-                                        to="/home"
-                                        activeClassName={classes.linkActive} style={{ marginRight: '10px' }}>Home</NavLink>
+                                        className={clsx(classes[navlinkref.current])}
+                                        activeClassName={clsx(classes[linkactiveref.current])}
+                                        to="/home" >Home</NavLink>
                                 </h4>
-
-                                {/* <span className={classes.slider}></span> */}
                             </li>
                             <li className={classes.navLI} >
                                 <h4>
                                     <NavLink
-                                        className={clsx(classes.clsbeforePos, classes[navlinkref.current])}
-                                        to="/about"
-                                        activeClassName={classes.linkActive} style={{ marginRight: '10px' }}>About Us</NavLink>
+                                        className={clsx(classes[navlinkref.current])}
+                                        activeClassName={clsx(classes[linkactiveref.current])}
+                                        to="/about" >About Us</NavLink>
                                 </h4>
                             </li>
-                            <li className={classes.navLI} >
-                                <Button
-                                    className={clsx(classes.clsbeforePos, classes[navlinkref.current])}
-                                    activeClassName={classes.linkActive}
+
+                            <li className={classes.navLI}
+                                onMouseEnter={handleToggle}
+                                onClick={handleToggle}
+                            >
+                                <NavLink
+                                    to="#"
+                                    className={clsx(classes[navlinkref.current])}
+                                    activeClassName={clsx(classes[linkactiveref.current])}
                                     disableRipple disableFocusRipple disableTouchRipple
                                     ref={anchorRef}
                                     id="composition-button"
                                     aria-controls={open ? 'composition-menu' : undefined}
                                     aria-expanded={open ? 'true' : undefined}
                                     aria-haspopup="true"
-                                    onClick={handleToggle}
-                                    style={{ textTransform: 'none' }}>
-                                    <h4
-                                        onMouseEnter={handleToggle}
-                                        // onMouseOut={handleClose}
-                                        className={clsx(classes.clsbeforePos, classes[navlinkref.current])}>
-                                        Industries
-                                    </h4>
-                                    <ArrowDropDown style={{ fontSize: '2rem', }} size={40} />
-                                </Button>
-
-                                <Popper
-                                    open={open}
-                                    anchorEl={anchorRef.current}
-                                    role={undefined}
-                                    placement="bottom-start"
-                                    transition
-                                    className={classes.popper}
                                 >
-                                    {({ TransitionProps, placement }) => (
-                                        <Grow
-                                            // {...TransitionProps}
-                                            style={{
-                                                marginTop: '10%',
-                                                transformOrigin:
-                                                    placement === 'bottom' ? 'left top' : 'left bottom',
-                                            }}
-                                            sx={classes.menuBorder}
-                                        >
-                                            <ClickAwayListener onClickAway={handleClose}>
-                                                <MenuList
-                                                    autoFocusItem={open}
-                                                    id="composition-menu"
-                                                    aria-labelledby="composition-button"
-                                                    onKeyDown={handleListKeyDown}
-                                                    className={classes.megaMenu}
+                                    <h4
+                                        className={clsx(classes[navlinkref.current])}>
+                                        Industries
+                                        {/* <ArrowDropDown style={{ fontSize: '2rem', }} size={40} /> */}
+                                    </h4>
+
+                                    <Popper
+                                        open={open}
+                                        anchorEl={anchorRef.current}
+                                        role={undefined}
+                                        placement="bottom"
+                                        transition
+                                        className={classes.popper}
+                                    >
+                                        {({ TransitionProps, placement }) => (
+                                            <Grow
+                                                {...TransitionProps}
+                                                style={{
+                                                    transformOrigin:
+                                                        placement === 'bottom' ? 'left top' : 'left bottom',
+                                                        bottom: '100px'
+                                                }}
+                                                sx={classes.menuBorder}
+                                            >
+                                                <ClickAwayListener
+                                                    onClickAway={handleClose}
+
                                                 >
-                                                    {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                                    <MenuList>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/iot')} onClick={() => history.push('/iot')}>
-                                                            <h6><NavLink to="/iot" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >IoT Platform</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/cloud')} >
-                                                            <h6><NavLink to="/cloud" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Cloud Solutions</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/evcharger')} >
-                                                            <h6><NavLink to="/evcharger" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >EV Charging Solutions</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/solar')}>
-                                                            <h6><NavLink to="/solar" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Solar & Wind</NavLink ></h6>
-                                                        </MenuItem>
+                                                    <MenuList
+                                                        autoFocusItem={open}
+                                                        id="composition-menu"
+                                                        aria-labelledby="composition-button"
+                                                        onKeyDown={handleListKeyDown}
+                                                        className={classes.megaMenu}
+                                                    >
+                                                        {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                                                        <MenuList>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/iot')} onClick={() => history.push('/iot')}>
+                                                                <h6><NavLink to="/iot" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >IoT Platform</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/cloud')} >
+                                                                <h6><NavLink to="/cloud" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Cloud Solutions</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/evcharger')} >
+                                                                <h6><NavLink to="/evcharger" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >EV Charging Solutions</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/solar')}>
+                                                                <h6><NavLink to="/solar" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Solar & Wind</NavLink ></h6>
+                                                            </MenuItem>
+                                                        </MenuList>
+                                                        {/* <hr className={classes.hrs} /> */}
+                                                        <MenuList>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/smartmeter')}>
+                                                                <h6><NavLink to="/smartmeter" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Metering</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/homeauto')}>
+                                                                <h6><NavLink to="/homeauto" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Home Automation</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/smartstreet')}>
+                                                                <h6><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Street Lights</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/railways')}>
+                                                                <h6><NavLink to="/railways" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Railways</NavLink ></h6>
+                                                            </MenuItem>
+                                                        </MenuList>
+                                                        {/* <hr className={classes.hrs} /> */}
+                                                        <MenuList>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/gaming')}>
+                                                                <h6><NavLink to="/gaming" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Gaming</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/smarttraffic')}>
+                                                                <h6><NavLink to="/smarttraffic" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Traffic Solutions</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/digital')}>
+                                                                <h6><NavLink to="/digital" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Digital Signage</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} onClick={() => history.push('/transformers')}>
+                                                                <h6><NavLink to="/transformers" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Intelligent Transformer Monitoring</NavLink ></h6>
+                                                            </MenuItem>
+                                                        </MenuList>
                                                     </MenuList>
-                                                    {/* <hr className={classes.hrs} /> */}
-                                                    <MenuList>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/smartmeter')}>
-                                                            <h6><NavLink to="/smartmeter" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Metering</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/homeauto')}>
-                                                            <h6><NavLink to="/homeauto" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Home Automation</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/smartstreet')}>
-                                                            <h6><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Street Lights</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/railways')}>
-                                                            <h6><NavLink to="/railways" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Railways</NavLink ></h6>
-                                                        </MenuItem>
-                                                    </MenuList>
-                                                    {/* <hr className={classes.hrs} /> */}
-                                                    <MenuList>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/gaming')}>
-                                                            <h6><NavLink to="/gaming" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Gaming</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/smarttraffic')}>
-                                                            <h6><NavLink to="/smarttraffic" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Traffic Solutions</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/digital')}>
-                                                            <h6><NavLink to="/digital" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Digital Signage</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} onClick={() => history.push('/transformers')}>
-                                                            <h6><NavLink to="/transformers" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Intelligent Transformer Monitoring</NavLink ></h6>
-                                                        </MenuItem>
-                                                    </MenuList>
-                                                </MenuList>
-                                            </ClickAwayListener>
-                                        </Grow>
-                                    )}
-                                </Popper>
+                                                </ClickAwayListener>
+                                            </Grow>
+                                        )}
+                                    </Popper>
+                                </NavLink>
+
+
                             </li>
 
 
                             {/* ############# Services ############  */}
 
 
-                            <li className={classes.navLI} >
-                                <Button
-                                    className={clsx(classes.clsbeforePos, classes[navlinkref.current])}
+                            <li
+                                className={classes.navLI}
+                                onMouseEnter={handleToggle1}
+                            // onMouseOut={handleClose1}
+                            >
+                                <NavLink
+                                    to="#"
+                                    className={clsx(classes[navlinkref.current])}
+                                    activeClassName={clsx(classes[linkactiveref.current])}
+
+
                                     disableRipple disableFocusRipple disableTouchRipple
                                     ref={anchorRef}
                                     id="services-button"
@@ -474,68 +485,66 @@ export function Navbar({
                                     aria-haspopup="true"
                                     onClick={handleToggle1}
                                     style={{ textTransform: 'none' }}>
-                                    <h4
-                                        onMouseEnter={handleToggle1}
-                                        onMouseOut={handleClose1}
-                                        className={clsx(classes.clsbeforePos, classes[navlinkref.current])}>
-                                        Services
-                                    </h4><ArrowDropDown style={{ fontSize: '2rem', }} size={40} />
-                                </Button>
 
-                                <Popper
-                                    open={open1}
-                                    anchorEl={anchorRef.current}
-                                    role={undefined}
-                                    placement="bottom-start"
-                                    transition
-                                    className={classes.popper}
-                                >
-                                    {({ TransitionProps, placement }) => (
-                                        <Grow
-                                            {...TransitionProps}
-                                            style={{
-                                                marginTop: '20%',
-                                                transformOrigin:
-                                                    placement === 'bottom-start' ? 'left top' : 'left bottom',
-                                            }}
-                                        >
-                                            <ClickAwayListener onClickAway={handleClose1}>
-                                                <MenuList
-                                                    autoFocusItem={open}
-                                                    id="services-menu"
-                                                    aria-labelledby="services-button"
-                                                    onKeyDown={handleListKeyDown}
-                                                    className={classes.megaMenu}
-                                                >
-                                                    {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                                    <MenuList>
-                                                        <MenuItem className={classes.menuItem}>
-                                                            <h6><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >IP CORE/FPGA/SOC Design Services</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} >
-                                                            <h6><NavLink to="/highspeed" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} > High Speed PCB Design Services</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} >
-                                                            <h6><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Software Development</NavLink ></h6>
-                                                        </MenuItem>
+                                    <h4 className={clsx(classes[navlinkref.current])}>
+                                        Services
+                                        {/* <ArrowDropDown style={{ fontSize: '2rem', }} size={40} /> */}
+                                    </h4>
+
+                                    <Popper
+                                        open={open1}
+                                        anchorEl={anchorRef.current}
+                                        role={undefined}
+                                        placement="bottom-start"
+                                        transition
+                                        className={classes.popper}
+                                    >
+                                        {({ TransitionProps, placement }) => (
+                                            <Grow
+                                                {...TransitionProps}
+                                                style={{
+                                                    transformOrigin:
+                                                        placement === 'bottom-start' ? 'left top' : 'left bottom',
+                                                }}
+                                            >
+                                                <ClickAwayListener onClickAway={handleClose1}>
+                                                    <MenuList
+                                                        autoFocusItem={open}
+                                                        id="services-menu"
+                                                        aria-labelledby="services-button"
+                                                        onKeyDown={handleListKeyDown}
+                                                        className={classes.megaMenu}
+                                                    >
+                                                        {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                                                        <MenuList>
+                                                            <MenuItem className={classes.menuItem}>
+                                                                <h6><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >IP CORE/FPGA/SOC Design Services</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} >
+                                                                <h6><NavLink to="/highspeed" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} > High Speed PCB Design Services</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem} >
+                                                                <h6><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Software Development</NavLink ></h6>
+                                                            </MenuItem>
+                                                        </MenuList>
+                                                        {/* <hr className={classes.hrs} /> */}
+                                                        <MenuList>
+                                                            <MenuItem className={classes.menuItem}>
+                                                                <h6><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Solutions</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem}>
+                                                                <h6><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Testing & Calibration</NavLink ></h6>
+                                                            </MenuItem>
+                                                            <MenuItem className={classes.menuItem}>
+                                                                <h6><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >ML & AI</NavLink ></h6>
+                                                            </MenuItem>
+                                                        </MenuList>
                                                     </MenuList>
-                                                    {/* <hr className={classes.hrs} /> */}
-                                                    <MenuList>
-                                                        <MenuItem className={classes.menuItem}>
-                                                            <h6><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Solutions</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem}>
-                                                            <h6><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Testing & Calibration</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem}>
-                                                            <h6><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >ML & AI</NavLink ></h6>
-                                                        </MenuItem>
-                                                    </MenuList>
-                                                </MenuList>
-                                            </ClickAwayListener>
-                                        </Grow>
-                                    )}
-                                </Popper>
+                                                </ClickAwayListener>
+                                            </Grow>
+                                        )}
+                                    </Popper>
+                                </NavLink>
                             </li>
 
 
@@ -543,9 +552,11 @@ export function Navbar({
                             <li className={classes.navLI} >
                                 <h4>
                                     <NavLink
-                                        className={clsx(classes.clsbeforePos, classes[navlinkref.current])}
+                                        className={clsx(classes[navlinkref.current])}
+                                        activeClassName={clsx(classes[linkactiveref.current])}
+
                                         to="/contact"
-                                        activeClassName={classes.linkActive}>Contact Us</NavLink>
+                                    >Contact Us</NavLink>
                                 </h4>
                             </li>
                         </ul>
@@ -559,6 +570,6 @@ export function Navbar({
                         : ''
                 }
             </AppBar>
-        </>
+        </Box>
     )
 }

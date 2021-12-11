@@ -33,7 +33,6 @@ export function ScrollTop() {
             style={{
                 borderRadius: "2rem",
                 boxShadow: '0px 0px 20px #0000001F',
-                // padding: '5px',
                 background: 'white',
                 height: '45px',
                 width: '45px',
