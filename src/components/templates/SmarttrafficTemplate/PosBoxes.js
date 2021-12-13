@@ -7,7 +7,7 @@ import { smarttraffic } from '../../molecules';
 const useStyles = makeStyles((theme) => ({
     containers: {
         position:'relative',
-        padding:'25% 2%',
+        padding:'25% 0%',
 
     },
     mainBox: {
@@ -24,11 +24,11 @@ const useStyles = makeStyles((theme) => ({
     boxes: {
         width: '30%',
         height: '100%',
-        margin:'1% 0%',
-
+        margin:'1% auto',
     },
     imgBox: {
-        
+        height:'18vw',
+        objectFit:'contain',
     },
     images: {
         maxWidth: '100%',
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
     txt: {
         color: 'black',
-        margin:'4% auto'
+        margin:'5% auto',
         
     }
 

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     newBox: {
         height: 'fit-content',
         display: 'flex',
-        margin: '12% auto',
+        margin: '8% auto',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start ',

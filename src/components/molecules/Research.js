@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
     },
     BoxImages: {
-        
+
         "& img": {
             height: '100%',
             width: '100%',

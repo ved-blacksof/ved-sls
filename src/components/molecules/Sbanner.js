@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         height: '100vh',
         display: 'flex',
+        background: 'black',
         zIndex: '0',
         justifyContent: 'center',
         alignItems: 'center',
@@ -36,14 +37,14 @@ const useStyles = makeStyles((theme) => ({
     },
     textBox: {
         height: '100vh',
-        width:'100%',
-        textAlign:'center',
-        position:'absolute',
-        top:'0px',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        flexDirection:'column'
+        width: '100%',
+        textAlign: 'center',
+        position: 'absolute',
+        top: '0px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column'
 
     },
     mainText: {
@@ -69,7 +70,8 @@ const useStyles = makeStyles((theme) => ({
     },
     subText: {
         width: '40%',
-        font: 'normal normal normal 1rem Access',
+        fontFamily: 'Access',
+        // font: 'normal normal normal 1rem Access',
         color: 'white',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
@@ -110,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
 export function Sbanner({
     Background,
     Background1,
+    Background2,
     mouse
 }) {
     const classes = useStyles()
@@ -122,7 +125,7 @@ export function Sbanner({
         let photoNums = photo.length;
 
         let speed = 3000;
-        let timeout = 5000;
+        let timeout = 4000;
         $('.photo').eq(0).show();
 
         function move() {
@@ -142,16 +145,14 @@ export function Sbanner({
 
             <div className={classes.mainBox}
                 style={{
-                    // backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background})`,
-                }}
-            >
-                {/* <Box className={classes.backImg}>
-                    <img src={Background} alt="background" />
-                </Box> */}
+                    // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background})`,
+                }}>
+
                 <div id="slider">
-                    <div class="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background})` }}></div>
-                    <div class="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background1})` }}></div>
-                    {/* <div class="photo" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.59),rgba(0, 0, 0, 0.59)), url(${Background2})` }}></div> */}
+                    <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}></div>
+                    <div className="photos photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background1})` }}></div>
+                    <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}></div>
+                    <div className="photos photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background1})` }}></div>
                 </div>
 
                 <div className={classes.textBox}>
@@ -162,11 +163,11 @@ export function Sbanner({
                     <Fade bottom><span className={classes.redLine}></span></Fade>
 
 
-                    <h2 className={classes.subText}>
+                    <h6 className={classes.subText}>
                         <Fade bottom>
                             Industry leaders in providing solutions catering to the domains of intellectual property, hardware design & prototyping, software design, and manufacturing.
                         </Fade>
-                    </h2>
+                    </h6>
                 </div>
 
 

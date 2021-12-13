@@ -129,7 +129,8 @@ export const port = [
 
 export const realtime = [
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/homepage-icons/11._Traffic_Solutions.png',
+        // images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'CASE STUDIES',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -439,34 +440,48 @@ export const smartstreet = [
 export const smarttraffic = [
     {
         // images: './images/Layer_27-smarttraffic02.svg',
-        images: './images/technician-technology-electronics.png',
+        images: './images/smarttraffic/LED-embedded-warning-signs.jpg',
         text: 'LED Embedded Warning Signs'
     },
     {
         // images: './images/Layer_35-smarttraffic03.svg',
-        images: './images/technician-technology-electronics.png',
+        images: './images/smarttraffic/School-Zone-warning.jpg',
         text: 'School Zone Warning'
     },
     {
         // images: './images/Layer_36-smarttraffic04.svg',
-        images: './images/technician-technology-electronics.png',
+        images: './images/smarttraffic/Pedestrain-crosswalk-solution.jpg',
         text: 'Pedestrian Crosswalk Solutions'
     },
     {
         // images: './images/Layer_37-smarttraffic05.svg',
-        images: './images/technician-technology-electronics.png',
+        images: './images/smarttraffic/Dynamic-curve-warning.jpg',
         text: 'Dynamic Curve warning'
     },
     {
         // images: './images/Layer_38-smarttraffic06.svg',
-        images: './images/technician-technology-electronics.png',
+        images: './images/smarttraffic/Wrong-way-detection.png',
         text: 'Wrong-Way Detection'
     },
     {
         // images: './images/Layer_39-smarttraffic07.svg',
-        images: './images/technician-technology-electronics.png',
+        images: './images/smarttraffic/Variable-message-signs.jpg',
         text: 'Variable Message Signs'
     },
+]
+export const smarttrafficCards = [
+    {
+        images: './images/slider2-smarttraffic10.png',
+        texthead: 'Controller',
+        text:'Our smart traffic management controller retrofits with the existing traffic infrastructure and transforms it into a smarter, more interactive traffic solution.'
+
+    },
+    {
+        images: './images/about-imac-smarttraffic01.png',
+        texthead: 'Traffic Management Dashboard',
+        text: 'Our Traffic Management Dashboard is a cloud-based intuitive dashboard that allows you to remotly control and monitor your intelligent traffic infrastructure.'
+    },
+  
 ]
 
 

@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         boxShadow: 'none',
-        
+
     },
     navRelative: {
         position: 'relative',
@@ -25,8 +25,19 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '0px 0px 5px #777',
         background: 'white',
         zIndex: '4',
-        transition: 'all ease-in-out .3s',
-
+        scrollBehaviour:'smooth',
+        transition: 'all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)',
+        animation: `$translates 800ms linear`,
+        animationIterationCount: 1,
+        animationDuration: '800ms',
+    },
+    "@keyframes translates": {
+        "0%": {
+            transform: "translateY(-50px)"
+        },
+        "100%": {
+            transform: "translateY(0px)"
+        }
     },
     navbar: {
         width: '90%',
@@ -67,9 +78,10 @@ const useStyles = makeStyles((theme) => ({
         height: '5rem',
         display: 'flex',
         alignItems: 'center',
-        verticalAlign: 'middle',
         margin: '0px 15px',
         background: 'transparent',
+        transition: 'all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)',
+
         boxShadow: 'none',
         textTranform: 'none',
         "&:hover": {
@@ -80,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
             }
         },
     },
+
     slider: {
         margin: '0 auto',
         height: '5px',
@@ -273,7 +286,7 @@ export function Navbar({
     React.useEffect(() => {
 
         const handleScroll = () => {
-            const pageHeight = window.innerHeight
+            const pageHeight = window.innerHeight + 100
             const show = window.scrollY >= pageHeight
             setOpen(false)
             setOpen1(false)
@@ -297,7 +310,7 @@ export function Navbar({
         }
     }, [])
     return (
-        <Box style={{marginTop:'2%'}}>
+        <Box style={{ marginTop: '2%' }}>
             <AppBar
                 position='static'
                 color='transparent'
@@ -392,7 +405,7 @@ export function Navbar({
                                                 style={{
                                                     transformOrigin:
                                                         placement === 'bottom' ? 'left top' : 'left bottom',
-                                                        bottom: '100px'
+                                                    bottom: '100px'
                                                 }}
                                                 sx={classes.menuBorder}
                                             >

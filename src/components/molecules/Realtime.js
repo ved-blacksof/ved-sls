@@ -68,12 +68,16 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cardImage: {
-        height: '14vw',
-        width: '100%'
+        height: '15vw',
+        width: '100%',
+        overflow:'hidden',
+        [theme.breakpoints.down('sm')]: {
+            height: '50vw',
+        }
     },
     images: {
+        maxHeight:'100%',
         width: '100%',
-        maxHeight: '100%',
     },
     cardTxt: {
         padding: '5%'
@@ -190,7 +194,7 @@ const useStyles = makeStyles((theme) => ({
         // border: '1px solid red',
         transition: 'all .3s linear',
         overflow: 'hidden',
-        position:'relative',
+        position: 'relative',
         [theme.breakpoints.down('sm')]: {
             height: '2px',
             background: 'red'
