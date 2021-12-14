@@ -1,8 +1,8 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
-import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
-import { smarttraffic } from '../../molecules/PortfolioData'
+import { GridBlue , } from '../../atoms'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, NewPosCards } from '../../molecules'
+import { smarttraffic , smarttrafficCards} from '../../molecules/PortfolioData'
 import { PosBoxes } from './PosBoxes'
 
 export function SmarttrafficTemplate() {
@@ -29,10 +29,10 @@ export function SmarttrafficTemplate() {
 
             <PosBoxes />
 
-            
+            <NewPosCards  data={smarttrafficCards}/>
 
 
-            <Quality
+            {/* <Quality
                 mainheading="Offerings"
                 imageBG="./images/slider2-smarttraffic10.png"
                 heading="Controller"
@@ -41,12 +41,12 @@ export function SmarttrafficTemplate() {
             />
 
             <QualityReverse
-                imageBG="./images/about-imac-smarttraffic01.png"
+                imageBG="   "
                 heading="Traffic Management Dashboard"
                 subtitle="Our Traffic Management Dashboard is a cloud-based intuitive dashboard that allows you to remotely control and monitor your intelligent traffic infrastructure."
                 redline="redline"
 
-            />
+            /> */}
 
             {/* <SoftOfferingsBlue
                 maintitle="Software Offering"

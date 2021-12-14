@@ -45,8 +45,10 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         padding: "1rem",
         margin: '1.5rem 1rem',
-        cursor:'pointer',
+        cursor: 'pointer',
         transition: 'all 300ms ease-in-out',
+
+
         [theme.breakpoints.down('sm')]: {
             width: '35vw',
             height: '35vw',
@@ -57,18 +59,18 @@ const useStyles = makeStyles((theme) => ({
             width: '100%',
             maxHeight: '100%',
         },
-        '&:hover': {
-            border: '1px solid white',
-            "& $imgBox": {
-                transform: 'scale(1.2)',
-            },
-            "& $red": {
-                background: '#DE141A',
-                animation: `$redbar 800ms ease-in-out`,
-                animationIterationCount: 1,
-                animationDuration: '800ms',
-            },
-        },
+        // '&:hover': {
+        //     border: '1px solid white',
+        //     "& $imgBox": {
+        //         transform: 'scale(1.2)',
+        //     },
+        //     "& $red": {
+        //         background: '#DE141A',
+        //         animation: `$redbar 800ms linear`,
+        //         // animationIterationCount: 1,
+        //         animationDuration: '800ms',
+        //     },
+        // },
 
     },
     subTitle: {
@@ -89,27 +91,28 @@ const useStyles = makeStyles((theme) => ({
     },
     red: {
         height: '100%',
-        transition: 'all 500ms ease-in-out',
-
+        // animation: `$redbargo 800ms linear`,
+        // // animationIterationCount: 1,
+        // animationDuration: '800ms',
     },
     "@keyframes redbar": {
         "0%": {
-            opacity: 0,
+            // opacity: 0,
             transform: "translateX(-200%)"
         },
         "100%": {
-            opacity: 1,
+            // opacity: 1,
             transform: "translateX(0)"
         },
     },
-    "@keyframes redbar1": {
-        "100%": {
-            opacity: 0,
-            transform: "translateX(-200%)"
-        },
+    "@keyframes redbargo": {
         "0%": {
-            opacity: 1,
+            // opacity: 1,
             transform: "translateX(0)"
+        },
+        "100%": {
+            // opacity: 0,
+            transform: "translateX(-200%)"
         },
     },
 
@@ -126,6 +129,8 @@ export function Squareboxes1({
     const classes = useStyles()
 
     const [exit, setExit] = useState(false)
+
+
     return (
         <MainContainer>
             <Container fixed className={classes.container1}>
@@ -139,7 +144,7 @@ export function Squareboxes1({
                         data.map((item, index) => {
                             return (
                                 <Box
-                                    className={clsx(classes.boxes, {[classes.animatedItemExiting]: exit})}
+                                    className={clsx(classes.boxes,'redbarBox' )}
                                 >
                                     <Box className={classes.imgBox}>
                                         <Bounce bottom>
@@ -147,8 +152,8 @@ export function Squareboxes1({
                                         </Bounce>
                                     </Box>
                                     <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
-                                    <Box className={classes.reddiv}>
-                                        <Box className={classes.red}>
+                                    <Box className={clsx(classes.reddiv)}>
+                                        <Box className={clsx(classes.red, "redbar")}>
                                         </Box>
                                     </Box>
                                 </Box>
@@ -156,7 +161,7 @@ export function Squareboxes1({
                         })
                     }
 
-                    
+
 
                 </Box>
             </Container>
