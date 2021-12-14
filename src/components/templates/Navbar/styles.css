@@ -9,3 +9,8 @@
 .slider:hover:after { transform: scaleX(1); }
 /* h1.fromRight:after{ transform-origin:100% 50%; }
 h1.fromLeft:after{  transform-origin:  0% 50%; } */
+
+
+ .makeStyles-popper-781 {
+  border:2px solid red !important;
+}

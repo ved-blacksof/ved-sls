@@ -16,17 +16,42 @@
     background-size:cover;
     
   }
-  
   .photo{
-      animation: zoomout 5s;
+      animation: zoomout 8000ms;
+    }
+
+
+  .photos {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+  }
+  
+  .photos{
+      animation: zoomin 8000ms;
     }
 
 
   @keyframes zoomout{
     0%{
-      transform: scale(1.3);
+      transform: scale(1.2) rotateZ(5deg);
+      
     }
     100%{
-      transform: scale(1);
+      transform: scale(1) rotateZ(0deg);
+    }
+  }
+  @keyframes zoomin{
+    0%{
+      transform: scale(1.2) rotateZ(-5deg);
+      
+    }
+    100%{
+      transform: scale(1) rotateZ(0deg);
     }
   }
