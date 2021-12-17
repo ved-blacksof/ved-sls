@@ -59,7 +59,7 @@ export function HomepageTemplate() {
 
             <Visit
                 title="Contact Us"
-                
+                href="/contact"
             />
 
             <Footer />
