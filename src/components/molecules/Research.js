@@ -14,13 +14,13 @@ import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 import "@egjs/flicking-plugins/dist/pagination.css";
-import { MainContainer } from '../atoms';
+import { GeneralHeading, MainContainer, Paragraphs } from '../atoms';
 import Fade from 'react-reveal/Fade';
 
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
-        margin: "12% auto",
+        margin: "0% 0% auto",
         position: 'relative',
     },
     flicks: {
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
             width: '.30rem !important',
             margin: '.2rem .2rem !important',
             borderRadius: '10px !important',
-            backgroundColor: 'rgb(255, 255, 255) !important',
+            backgroundColor: '#182AC3 !important',
             [theme.breakpoints.down('sm')]: {
                 height: '.8rem !important',
                 width: '.2rem !important',
@@ -54,13 +54,6 @@ const useStyles = makeStyles((theme) => ({
         }
 
     },
-    // pagination: {
-    //     // transform: 'translateX(-48%) translateY(-8rem) rotate(-90deg)',
-    //     width:'100%',
-    //     [theme.breakpoints.down('sm')]: {
-    //         // bottom: '50px',
-    //     }
-    // },
     BoxWidth: {
         padding: '0% 3% 8% 6%',
         position: 'relative',
@@ -88,10 +81,19 @@ const useStyles = makeStyles((theme) => ({
         bottom: '-15%',
         left: '-6%',
         lineHeight: '1',
-        // fontSize: '8rem',
+        color: '#182AC3',
+        textShadow: '2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff',
         [theme.breakpoints.down('sm')]: {
-            // fontSize: '3.5rem',
+
         },
+    },
+    bgGrey: {
+        position: 'absolute',
+        bottom: '0',
+        background: '#F3F3F3',
+        padding: '12% 0%',
+        opacity: '.6',
+        width: '100%'
     }
 }))
 
@@ -101,6 +103,8 @@ export function Research({
     title1,
     subtitle,
     data,
+    bggrey,
+    br
 
 }) {
 
@@ -114,52 +118,68 @@ export function Research({
 
     return (
 
-        <MainContainer>
-            <Container fixed className={classes.reaserchMain} >
-                {
-                    generalheadingblue ?
-                        <>
-                            <Fade left> <h3 className={classes.head}>{title}</h3></Fade>
-                            <Fade right> <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /></Fade>
-                            <Fade left>   <h4 className={classes.subHead}>{subtitle}</h4> </Fade>
-                        </> : ''
-                }
+        <Box style={{ position: 'relative', padding: '10% 0%' }}>
+            <MainContainer>
+                <Container fixed className={classes.reaserchMain} >
+                    {
+                        generalheadingblue ?
+                            <>
+                                <Fade left> <h3 className={classes.head}>{title}</h3></Fade>
+                                <Fade right> <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /></Fade>
+                                <Fade left>   <h4 className={classes.subHead}>{subtitle}</h4> </Fade>
+                            </> : ''
+                    }
 
-                <Box className={classes.flicks}>
-                    <Flicking
-                        selector="center"
-                        // plugins={Fades}
-                        plugins={plugins}
-                        // align="center"
-                        defaultIndex='1'
-                        circular={true}
-                        className={classes.flicker}
+                    {
+                        title ?
+                            <GeneralHeading
+                                title={title}
+                                title1={title1}
+                                br={br}
+                                subtitle={subtitle}
+                                redline
+                            /> : ''
 
-                    >
+                    }
+                    <Box className={classes.flicks}>
+                        <Flicking
+                            selector="center"
+                            // plugins={Fades}
+                            plugins={plugins}
+                            defaultIndex='1'
+                            circular={true}
+                            className={classes.flicker}
 
-                        {
-                            data.map((item, index) => {
-                                return (
-                                    <Box className={classes.BoxWidth}>
-                                        <Box style={{ position: 'relative' }}>
+                        >
 
-                                            <Box className={classes.BoxImages}>
-                                                <img src={item.images} alt="Carousel Images" data-aos="fade-up" />
+                            {
+                                data.map((item, index) => {
+                                    return (
+                                        <Box className={classes.BoxWidth}>
+                                            <Box style={{ position: 'relative' }}>
+
+                                                <Box className={classes.BoxImages}>
+                                                    <img src={item.images} alt="Carousel Images" data-aos="fade-up" />
+                                                </Box>
+
+                                                <Fade bottom> <h5 className={classes.txtReserch}>{item.text}</h5> </Fade>
                                             </Box>
-
-                                            <Fade bottom> <h5 className={classes.txtReserch}>{item.text}</h5> </Fade>
                                         </Box>
-                                    </Box>
-                                )
-                            })
-                        }
-                        <ViewportSlot >
-                            {/* <span className="flicking-pagination"></span> */}
-                            <span className={clsx(classes.pagination, 'flicking-pagination')}></span>
-                        </ViewportSlot>
-                    </Flicking>
-                </Box>
-            </Container>
-        </MainContainer>
+                                    )
+                                })
+                            }
+                            <ViewportSlot >
+                                <span className={clsx(classes.pagination, 'flicking-pagination')}></span>
+                            </ViewportSlot>
+                        </Flicking>
+                    </Box>
+
+                </Container>
+            </MainContainer>
+            {
+                bggrey ? <Box className={classes.bgGrey}></Box> :''
+            }
+        </Box>
+
     )
 }

@@ -70,13 +70,13 @@ const useStyles = makeStyles((theme) => ({
     cardImage: {
         height: '15vw',
         width: '100%',
-        overflow:'hidden',
+        overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
             height: '50vw',
         }
     },
     images: {
-        maxHeight:'100%',
+        maxHeight: '100%',
         width: '100%',
     },
     cardTxt: {
@@ -133,19 +133,22 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     boxes: {
-        margin: "1% 1rem",
-        cursor: 'pointer',
         width: '17vw',
         height: '17vw',
-        boxShadow: '0px 0px 20px #0000001F',
+        border: '1px solid #DCDCDC',
+        boxShadow: '0px 0px 20px #00000017',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: "2rem",
-        transition: 'all .3s ease-in-out',
+        padding: "1rem",
+        margin: '0% 4%',
+        cursor: 'pointer',
+        position: 'relative',
+        transition: 'all 300ms ease-in-out',
+        transform: 'width .6s ease-in-out',  //for red line
         [theme.breakpoints.down('sm')]: {
             width: '12rem',
             height: '12rem'
@@ -153,28 +156,63 @@ const useStyles = makeStyles((theme) => ({
         '& h4': {
             color: 'black'
         },
-        '&:hover': {
+        "&::before": {
+            content: "''",
+            height: '7px',
+            width: '0',
+            background: '#DE141A',
+            position: 'absolute',
+            bottom: '5%',
+            left: '5%',
+            transition: 'all 800ms ease-in-out',
+            [theme.breakpoints.down('sm')]: {
+                height: '5px'
+            }
+        },
+        "&:hover": {
+            color: '#182AC3',
+            boxShadow: '0px 0px 25px #00000033',
+            // border: '2px solid white',
             "& $imgBox": {
-                transform: 'scale(1.1)',
+                transform: 'scale(1.1)'
             },
-            "& $reddiv": {
-                background: '#DE141A',
-                animation: `$redbar 800ms linear`,
-                animationIterationCount: 1,
-                animationDuration: '800ms',
+            "&::before": {
+                height: '7px',
+                width: '90%',
+                opacity: '1',
+                [theme.breakpoints.down('sm')]: {
+                    height: '5px'
+                }
             },
+            "&::after": {
+                height: '0%',
+            },
+
         },
 
     },
     imgBox: {
-        height: "100%",
-        transition: 'all .3s ease-in-out',
-        "& img": {
-            transition: 'all 800ms ease-in-out',
-            width: '100%',
-            maxHeight: '100%',
-        },
+        width: '70%',
+        transition: 'all 500ms ease-in-out',
+        marginBottom: '2%'
     },
+    image: {
+        width: '100%',
+        maxHeight: '100%'
+    },
+    // imgBox: {
+    //     height: "100%",
+    //     transition: 'all .3s ease-in-out',
+    //     "& img": {
+    //         transition: 'all 500ms ease-in-out',
+    //         width: '100%',
+    //         maxHeight: '100%',
+    //     },
+    // },
+    // image: {
+    //     width: '100%',
+    //     maxHeight: '100%'
+    // },
     iconBox: {
         margin: '15% 0%',
         width: '100%',
@@ -189,9 +227,6 @@ const useStyles = makeStyles((theme) => ({
 
     //red line
     reddiv: {
-        // width: '100%',
-        // height: '8px',
-        // border: '1px solid red',
         transition: 'all .3s linear',
         overflow: 'hidden',
         position: 'relative',
@@ -439,13 +474,9 @@ export function Realtime({
                                                             <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
                                                                 <Box className={classes.boxes}>
                                                                     <Box className={classes.imgBox}>
-                                                                        <img src={item.images} alt="Mission Icon" />
+                                                                        <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                                     </Box>
                                                                     <h4>{item.subtitle} </h4>
-                                                                    <Box className={classes.reddiv}>
-                                                                        {/* <Box className={classes.red}>
-                                                                        </Box> */}
-                                                                    </Box>
                                                                 </Box>
                                                             </a>
                                                         </Box>
@@ -453,13 +484,9 @@ export function Realtime({
 
                                                         <Box className={classes.boxes}>
                                                             <Box className={classes.imgBox}>
-                                                                <img src={item.images} alt="Mission Icon" />
+                                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                             </Box>
                                                             <h4>{item.subtitle} </h4>
-                                                            <Box className={classes.reddiv}>
-                                                                <Box className={classes.red}>
-                                                                </Box>
-                                                            </Box>
                                                         </Box>
                                                 }
                                             </>

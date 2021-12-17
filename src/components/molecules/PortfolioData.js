@@ -73,7 +73,7 @@ export const port = [
         link: 'cloud'
     },
     {
-        images: './images/homepage-icons/3._E-Mobility.png',
+        images: './images/homepage-icons/3._E-Mobility.svg',
         text: 'EV Charging Solutions',
         link: 'evcharger'
     },
@@ -129,8 +129,8 @@ export const port = [
 
 export const realtime = [
     {
-        images: './images/homepage-icons/11._Traffic_Solutions.png',
-        // images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        // images: './images/homepage-icons/11._Traffic_Solutions.png',
+        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'CASE STUDIES',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -420,19 +420,19 @@ export const digital = [
 //White icons only 4 for SmartstreetTemplate
 export const smartstreet = [
     {
-        images: './images/smartstreet/14._Retrofit for existing infrastructure (RF and LoRa variants).svg',
+        images: './images/smartstreet/14._Retrofit for existing infrastructure-(RF and LoRa variants).svg',
         text: 'Retrofit for existing infrastructure (RF and LoRa variants)'
     },
     {
-        images: './images/smartstreet/13._Energy efficient with motion & ambient light sensors.svg',
+        images: './images/smartstreet/13._Energy efficient with motion-& ambient light sensors.svg',
         text: 'Energy efficient with motion and ambient light sensors'
     },
     {
-        images: './images/smartstreet/15._Real-time alerts on malfunctions.svg',
+        images: './images/smartstreet/15._Real-time alerts-on malfunctions.svg',
         text: 'Real-time alerts on malfunctions'
     },
     {
-        images: './images/smartstreet/16._Real-time reports for lighting status, performance, energy consumption, etc.svg',
+        images: './images/smartstreet/16._Real-time reports for lighting status,-performance, energy consumption, etc.svg',
         text: 'Real-time reports for lighting status, performance, energy consumption, etc.'
     },
 ]
@@ -469,12 +469,38 @@ export const smarttraffic = [
         text: 'Variable Message Signs'
     },
 ]
+export const ipcoreBoxes = [
+    {
+        // images: './images/Layer_27-smarttraffic02.svg',
+        images:"./images/FPGA_Website_Image (5).png",
+        text: 'IP Core Development and Customization'
+    },
+    {
+        // images: './images/Layer_35-smarttraffic03.svg',
+        images: './images/FPGA_Website_Image (1).png',
+        text: "FPGA Turnkey Solutions"
+    },
+    {
+        // images: './images/Layer_36-smarttraffic04.svg',
+        images: './images/FPGA_Website_Image (4).png',
+        text: "IP CORE-to-FPGA Solutions"
+    },
+    {
+        // images: './images/Layer_37-smarttraffic05.svg',
+        images: './images/FPGA_Website_Image (3).png',
+        text: "Product Customization"
+    },
+    {
+        // images: './images/Layer_38-smarttraffic06.svg',
+        images: './images/FPGA_Website_Image (2).png',
+        text: 'Driver Development'
+    },
+]
 export const smarttrafficCards = [
     {
         images: './images/slider2-smarttraffic10.png',
         texthead: 'Controller',
         text:'Our smart traffic management controller retrofits with the existing traffic infrastructure and transforms it into a smarter, more interactive traffic solution.'
-
     },
     {
         images: './images/about-imac-smarttraffic01.png',
@@ -489,25 +515,25 @@ export const smarttrafficCards = [
 //White icons only 4 for SolarTemplate
 export const solar = [
     {
-        images: './images/Layer_33.svg',
+        images: './images/solar/icons/38._End-to-end Solar and Wind Solutions.svg',
         text: 'End-to-end Solar and Wind Solutions'
     },
     {
-        images: './images/Layer_28.svg',
+        images: './images/solar/icons/39._Powered through IoT.svg',
         text: 'Powered through IoT'
     },
     {
-        images: './images/BlueIcons -20-01-solar.svg',
+        images: './images/solar/icons/40._Real-time alerts on-abnormality detection.svg',
         text: 'Real-time alerts on abnormality detection'
     },
     {
-        images: './images/Layer_41.svg',
+        images: './images/solar/icons/41._Real-time reports of panel-wise-energy generation.svg',
         text: 'Real-time reports of panel-wise energy generation'
     },
-    {
-        images: './images/Layer_44.svg',
-        text: 'Predictive energy optimization'
-    },
+    // {
+    //     images: './images/solar/icons/42._Predictive energy optimization.svg',
+    //     text: 'Predictive energy optimization'
+    // },
 ]
 
 
@@ -519,27 +545,27 @@ export const solarhardware = [
         images: './images/Micro Inverter 2 (1).png',
         head: 'MSI1500',
         // para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
-        read: 'read more'
+        // read: 'read more'
     },
     {
         images: './images/DKS_9053e.png',
         head: 'MS1700',
         // para: 'The MS1700 is MNRE-certified smart micro inverter solutions that comes with 2 MPPTs. The solution provides various smart features including module-wise remote monitoring and controlling. This helps owners leverage the best output out of their solar inverters right and benefit from high energy generation as compared to regular solar panel systems.',
-        read: 'read more'
+        // read: 'read more'
 
     },
     {
         images: './images/1.0-solar.png',
         head: 'Universal Stick Logger',
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
-        read: 'read more'
+        // read: 'read more'
     },
     {
         // images: './images/1.0-solar.png',
         images: './images/cloud/SunsightDataLogger.png',
         head: 'Data Logger',
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
-        read: 'read more'
+        // read: 'read more'
     },
 ]
 
@@ -818,35 +844,35 @@ export const ipcoreproducts = [
 
 export const expertiseblue = [
     {
-        images: './images/ipcore-Layer_12.svg',
+        images: './images/ipcore/expertise/36._Architecture design.svg',
         text: 'Architecture design'
     },
     {
-        images: './images/ipcore-Layer_13.svg',
+        images: './images/ipcore/expertise/ipcore-Layer_13.svg',
         text: 'RTL coding (Verilog, System Verilog)'
     },
     {
-        images: './images/ipcore-Layer_14.svg',
+        images: './images/ipcore/expertise/ipcore-Layer_14.svg',
         text: 'Functional verification'
     },
     {
-        images: './images/ipcore-Layer_15.svg',
+        images: './images/ipcore/expertise/ipcore-Layer_15.svg',
         text: 'Validation on hardware platform'
     },
     {
-        images: './images/ipcore-Layer_16.svg',
+        images: './images/ipcore/expertise/ipcore-Layer_16.svg',
         text: 'Circuit design'
     },
     {
-        images: './images/ipcore-Layer_16.svg',
+        images: './images/ipcore/expertise/37._FPGA design Tools.svg',
         text: 'FPGA Design Tools'
     },
     {
-        images: './images/ipcore-Layer_17.svg',
+        images: './images/ipcore/expertise/ipcore-Layer_17.svg',
         text: 'Excellent customer support'
     },
     {
-        images: './images/ipcore-Layer_18.svg',
+        images: './images/ipcore/expertise/ipcore-Layer_18.svg',
         text: 'Serving customers since 20+ Years'
     },
 ]

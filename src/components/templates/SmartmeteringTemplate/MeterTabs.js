@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         padding: '0% 7%',
         position:'sticky',
-        top:'70px',
+        top:'80px',
         zIndex:'2',
         background:'white',
         transition:'all 0.5s ease-in-out',

@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 
 }))
 
-export function PositionImageReverse({
+export function PositionImage({
     imageBG,
 }) {
     const classes = useStyles();

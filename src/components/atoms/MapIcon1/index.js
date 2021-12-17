@@ -39,11 +39,11 @@ export function MapIcon1({
                             <Grid item xs={6} sm={6} key={index}>
                                 <Box className={classes.gridBox} >
                                     <Box className={classes.iconsBox}>
-                                    <Fade bottom><img className={classes.icons} src={item.images} alt='Portfolio Icons' /> </Fade>
+                                        <Fade bottom><img className={classes.icons} src={item.images} alt='Portfolio Icons' /> </Fade>
                                     </Box>
-                                   
+
                                     <Fade bottom>
-                                    <h4 className={classes.subText}>{item.text}</h4>
+                                        <h4 className={classes.subText}>{item.text}</h4>
                                     </Fade>
                                 </Box>
                             </Grid>

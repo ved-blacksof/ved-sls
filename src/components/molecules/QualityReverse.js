@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImageReverse, Paragraphs, MainContainer } from "../atoms"
+import { PositionImage, Paragraphs, MainContainer } from "../atoms"
 import Bounce from 'react-reveal/Bounce';
 
 
@@ -101,7 +101,7 @@ export function QualityReverse({
                         </Box>
 
                         <Box className={classes.BoxRight}>
-                            <Bounce right> <PositionImageReverse imageBG={imageBG} /></Bounce>
+                            <Bounce right> <PositionImage imageBG={imageBG} /></Bounce>
                         </Box>
                     </Box>
                 </Container>

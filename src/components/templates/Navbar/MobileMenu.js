@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         paddingTop: '3%',
         boxShadow: 'none',
-        border: '2px solid red',
         display:'none',
         [theme.breakpoints.down('sm')]: {
             display:'block',

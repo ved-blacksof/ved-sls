@@ -16,18 +16,18 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         width: '80%'
     },
-     btmText1: {
+    btmText1: {
         width: '100%',
         textAlign: 'center',
         // color: '#182AC3',
         fontWeight: 'bold',
     },
     btns: {
-        width: '28%',
+        width: '30%',
         marginTop: '2%',
         [theme.breakpoints.down('sm')]: {
             width: '40%',
-        marginTop: '4%'
+            marginTop: '4%'
         },
         [theme.breakpoints.down('xs')]: {
             width: '60%'

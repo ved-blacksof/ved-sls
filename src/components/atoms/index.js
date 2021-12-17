@@ -1,6 +1,6 @@
 export * from './Buttons'
 export * from './PositionImage'
-export * from './PositionImageReverse'
+export * from './PositionImage'
 export * from './Paragraphs'
 export * from './ParagraphsBlue'
 export * from './GeneralHeading'

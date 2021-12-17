@@ -7,32 +7,29 @@ import Flip from 'react-reveal/Flip';
 const useStyles = makeStyles((theme) => ({
     visitBox: {
         margin: "5% auto",
-        width: '100%',
+        width: '80%',
     },
     textLinkBox: {
         display: 'flex',
-        width: '100%',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: '2%'
+        justifyContent:'center',
+        alignItems:'center',
+        marginBottom:'4%'
     },
     btmText: {
-        width: '60%',
         color: '#182AC3',
         fontWeight: 'bold',
-        margin: '0% auto'
     },
     btmText1: {
-        width: '100%',
         textAlign: 'left',
         color: '#182AC3',
         fontWeight: 'bold',
     },
     iconMainBox: {
-        width: '40%',
+        marginLeft:'2%',
+        
     },
     icon: {
-        float: 'right',
+        textAlign: 'left',
         width: '10rem',
         "& img": {
             width: '100%',
@@ -43,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     btns: {
-        width: '28%',
+        width: '30%',
         marginTop: '2%',
         margin: '0% auto',
         [theme.breakpoints.down('sm')]: {
@@ -68,8 +65,8 @@ export function Visit1({
 
     const classes = useStyles()
     return (
-           <Container>
-                <Box className={classes.visitBox}>
+        <Container>
+            <Box className={classes.visitBox}>
                 <Box className={classes.textLinkBox}>
                     {
                         goto ? <h4 className={classes.btmText} style={style}> {goto}</h4> : ''
@@ -91,6 +88,6 @@ export function Visit1({
                     arrowIcon="./images/Icon feather-arrow-right.svg"
                 />
             </Box>
-           </Container>
+        </Container>
     )
 }
