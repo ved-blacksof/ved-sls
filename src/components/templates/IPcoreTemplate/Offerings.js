@@ -6,8 +6,13 @@ import { PosBoxes } from '../../molecules'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        width: '100%',
-        marginTop: '20%',
+        // width: '100%',
+        marginTop: '10%',
+        margin:'0 auto',
+        [theme.breakpoints.down('sm')]:{
+            // width:'70%',
+
+        }
     },
 
 

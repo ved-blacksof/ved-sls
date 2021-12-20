@@ -24,9 +24,10 @@ export function SmartstreetTemplate() {
                         We offer a new-edge comprehensive platform that provides single-point monitoring and control of 
                         retrofit and new street lighting infrastructure. We aim to bring this entire infrastructure under one 
                         common roof for definite control, optimized energy-saving, and data-driven decisions."
-                    icons="icons"
+                    // icons="icons"
+                    mapIconPosition="mapIconPosition"
                     data={smartstreet}
-                    style={{ height: 'fit-content', paddingBottom: '5%' }}
+                    style={{ height: 'fit-content', marginBottom:'20%' }}
                 />
             </GridBlue>
 

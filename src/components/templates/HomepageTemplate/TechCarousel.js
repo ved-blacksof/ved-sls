@@ -16,13 +16,12 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
-        height: 'fit-content',
+        height: '90vh',
         display: 'flex',
-        paddingBottom:'5%',
-        margin: '8% auto',
+        paddingBottom:'8%',
         display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start ',
+        justifyContent: 'center',
+        alignItems: 'center ',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             height: 'fit-content',

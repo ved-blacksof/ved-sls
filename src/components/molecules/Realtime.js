@@ -234,7 +234,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::before": {
             content: '""',
-            height: '8px',
+            height: '6px',
             width: '0%',
             position: 'absolute',
             top: '0',
@@ -242,7 +242,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::after": {
             content: '""',
-            height: '8px',
+            height: '6px',
             position: 'absolute',
             top: '0',
             width: '100%',

@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         display: 'flex',
         justifyContent:'space-between',
-        margin: '5% auto',
+        padding: '5% auto',
+        // border:'2px solid red',
         [theme.breakpoints.down('sm')]:{
             flexDirection:'column',
             width:'80%'
@@ -62,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
     },
     textBtm: {
         width: '50%',
-        margin: '10% auto',
+        margin: '0% auto',
+        padding:'8% 0%',
         textAlign:'center',
         [theme.breakpoints.down('sm')]:{
             width: '80%',

@@ -63,12 +63,12 @@ export const reshape = [
 
 export const port = [
     {
-        images: './images/homepage-icons/32._IP Core- FPGA.svg',
+        images: './images/homepage-icons/32._IP Core-FPGA.svg',
         text: 'IP Core / FPGA ',
         link: 'ipcore'
     },
     {
-        images: './images/homepage-icons/1._IOT_Platform.png',
+        images: './images/homepage-icons/1._IOT_Platform.svg',
         text: 'IoT Platform',
         link: 'iot'
     },
@@ -83,7 +83,7 @@ export const port = [
         link: 'evcharger'
     },
     {
-        images: './images/homepage-icons/4._Solar_&_Wind.png',
+        images: './images/homepage-icons/4._Solar_&_Wind.svg',
         text: 'Solar & Wind',
         link: 'solar'
     },
@@ -93,12 +93,12 @@ export const port = [
         link: 'smartmeter'
     },
     {
-        images: './images/homepage-icons/7._Home_Automation.png',
+        images: './images/homepage-icons/7._Home_Automation.svg',
         text: 'Home Automation',
         link: 'homeauto'
     },
     {
-        images: './images/homepage-icons/8._Smart_Street_Light.png',
+        images: './images/homepage-icons/8._Smart_Street_Light.svg',
         text: 'Smart Street Lights',
         link: 'smartstreet'
     },
@@ -113,12 +113,12 @@ export const port = [
         link: 'digital'
     },
     {
-        images: './images/homepage-icons/11._Traffic_Solutions.png',
+        images: './images/homepage-icons/11._Traffic_Solutions.svg',
         text: 'Traffic Solutions',
         link: 'smarttraffic'
     },
     {
-        images: './images/homepage-icons/10._Gaming.png',
+        images: './images/homepage-icons/10._Gaming.svg',
         text: 'Gaming',
         link: 'gaming',
     },
@@ -615,6 +615,8 @@ export const gamingsoftware = [
 ]
 
 
+
+
 export const gamingapplications = [
     {
         images: './images/iot_photostrip_img_4.png',
@@ -628,6 +630,24 @@ export const gamingapplications = [
         images: './images/army-soldiers-fighting-with-guns-defending-their-country_1303-26687.png',
         productname: 'Military Training',
     },
+]
+
+
+
+//yet to update
+export const gamingOverview = [
+    {
+        images: './images/gaming/33._Android and iOS App control.svg',
+        text: 'Android and iOS App control'
+    },
+    {
+        images: './images/gaming/33._Android and iOS App control.svg',
+        text: 'Wi-Fi Connectivity'
+    },
+    {
+        images: './images/gaming/33._Android and iOS App control.svg',
+        text: 'Cloud for online and offline mode operations'
+    }
 ]
 
 
@@ -778,10 +798,10 @@ export const transformer = [
         images: './images/Layer_34.svg',
         text: 'Oil Flow and Level Monitoring'
     },
-    {
-        images: './images/Layer_29.svg',
-        text: 'Fire Alerts'
-    },
+    // {
+    //     images: './images/Layer_29.svg',
+    //     text: 'Fire Alerts'
+    // },
     {
         images: './images/Layer_30.svg',
         text: 'Top and Bottom Oil Temperature Management'
@@ -794,10 +814,10 @@ export const transformer = [
         images: './images/Layer_32.svg',
         text: 'Phase voltage, current & overload capacity measurement'
     },
-    {
-        images: './images/Layer_19.svg',
-        text: 'Data Logging',
-    },
+    // {
+    //     images: './images/Layer_19.svg',
+    //     text: 'Data Logging',
+    // },
 ]
 
 //  Used in IP CORE page @/ipcore
@@ -902,12 +922,12 @@ export const industries = [
         text: 'Data Acquisition'
     },
     {
-        images: './images/ipcore-Path 2118.svg',
-        text: 'Medical Devices'
-    },
-    {
         images: './images/Group 82849.svg',
         text: 'Security Product'
+    },
+    {
+        images: './images/ipcore-Path 2118.svg',
+        text: 'Medical Devices'
     },
     {
         images: './images/ipcore-Path 2113.svg',

@@ -3,7 +3,9 @@ import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Cards, Visit, CardsReadMore } from '../../molecules'
 
-import { solar, gaminghardware, gamingsoftware, gamingapplications } from '../../molecules/PortfolioData'
+import { solar, gaminghardware, gamingsoftware, gamingapplications, gamingOverview } from '../../molecules/PortfolioData'
+import { GamingHardware } from './GamingHardware'
+import { GamingSoftware } from './GamingSoftware'
 
 export function GamingTemplate() {
     return (
@@ -20,31 +22,35 @@ export function GamingTemplate() {
                 <Overview
                     path="Industries / Smart Gaming"
                     sub1="Leveraging its targeting technology and training systems, SLS has developed a state-of-the-art Wireless Smart Targeting System. The application allows simulation-based gaming to create a premise for experiential skill development. Users can now connect with wireless targets for military training or advancement in chosen sports."
-                    list="list"
-                    li1="Android and iOS App control"
-                    li2="Wi-Fi Connectivity"
-                    li3="Cloud for online and offline mode operations"
+                    // list="list"
+                    // li1="Android and iOS App control"
+                    // li2="Wi-Fi Connectivity"
+                    // li3="Cloud for online and offline mode operations"
+                    mapIconPosition="mapIconPosition"
+                    data={gamingOverview}
+                    style={{ height: 'fit-content', marginBottom:'20%' }}
                 />
             </GridBlue>
 
+            <GamingHardware />
+            <GamingSoftware />
 
-            <Cards
+
+            {/* <Cards
                 maintitle="Hardware Offerings"
                 data={gaminghardware}
-            />
-
-            <CardsReadMore />
-            <Cards
+            /> */}
+            {/* <Cards
                 maintitle="Software Offerings"
                 data={gamingsoftware}
-            />
+            /> */}
             <Cards
                 maintitle="Applications"
                 data={gamingapplications}
             />
 
             <Visit
-                goto="Want to ace your game?"
+                goto="Want to ace your game?"   
                 title="Visit the website"
                 href={"https://iotargeting.com/"}
             />

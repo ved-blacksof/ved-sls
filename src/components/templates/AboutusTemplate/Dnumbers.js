@@ -112,7 +112,7 @@ export function Dnumbers() {
                 <Box className={classes.container1}>
                     <Box className={classes.boxes}>
                         <Fade bottom><img src={'./images/mission.svg'} alt="Mission Icon" /></Fade>
-                        <Fade bottom><h4>Operating Base <br /> India, UK, USA</h4></Fade>
+                        <Fade bottom><h4>Operating Bases <br /> India, UK, USA</h4></Fade>
                     </Box>
                     <Box className={classes.boxes} style={{ background: '#D9393E' }}>
                         <Fade bottom><img src={'./images/Layer 2.svg'} alt="Help Icon" /></Fade>

@@ -28,17 +28,16 @@ const useStyles = makeStyles((theme) => ({
         border: '1px solid #DCDCDC',
         background: 'white',
         width: '30%',
-        height: '32vw',
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        flexWrap: 'wrap',
+        height: '35vw',
+        position:'relative',
         marginTop: '2%',
         marginRight: '3%',
         padding: '2%',
+        transition: 'all 300ms ease-in-out',
+        transform: 'width .6s ease-in-out',  //for red line
         [theme.breakpoints.down('sm')]: {
             width: '45%',
-            height: '20rem',
+            height: '25rem',
             marginTop: '10%',
             padding: '5%',
 
@@ -50,12 +49,47 @@ const useStyles = makeStyles((theme) => ({
             padding: '10%',
 
         },
+        "&::before": {
+            content: "''",
+            height: '6px',
+            width: '0',
+            background: '#DE141A',
+            position: 'absolute',
+            bottom: '3%',
+            left: '5%',
+            transition: 'all 800ms ease-in-out',
+            [theme.breakpoints.down('sm')]: {
+                height: '5px'
+            }
+        },
+        "&:hover": {
+            color: '#182AC3',
+            cursor:'pointer',
+            boxShadow: '0px 0px 10px #00000033',
+            border: '1px solid white',
+            "& $imgBox": {
+                transform: 'scale(1.1)'
+            },
+            "&::before": {
+                height: '6px',
+                width: '90%',
+                opacity: '1',
+                [theme.breakpoints.down('sm')]: {
+                    height: '5px'
+                }
+            },
+            "&::after": {
+                height: '0%',
+            },
+
+        },
+
 
     },
     iconBox: {
         width: '8vw',
         height: '8vw',
-        margin:'8% auto',
+        margin: '8% auto',
         padding: '.5rem',
         "& img": {
             maxWidth: '100%',
@@ -78,18 +112,12 @@ const useStyles = makeStyles((theme) => ({
     },
     lis: {
         color: 'black',
-        listStyle: 'inside',
-        // textIndent: '-25px',
-        // marginLeft: '30px',
-        marginTop: '5%',
-        [theme.breakpoints.down('sm')]: {
-            textIndent: '-15px',
-            marginLeft: '20px',
-        },
-        [theme.breakpoints.down('xs')]: {
-            textIndent: '-15px',
-            marginLeft: '15px',
-        },
+        marginTop: '4%',
+        marginLeft: '5%',
+        "& h6": {
+            color: 'black',
+            display: 'inline'
+        }
     }
 
 }))
@@ -125,24 +153,24 @@ export function Products({
                                             {
                                                 item.uli ?
                                                     <h4>
-                                                        <ul className={classes.uls}>{item.uli}
+                                                        <ul className={classes.uls}><h4 className={classes.uls}>{item.uli}</h4>
                                                             {
-                                                                item.firstli ? <li className={classes.lis}>{item.firstli}</li> : ''
+                                                                item.firstli ? <li className={classes.lis}><h6>{item.firstli}</h6></li> : ''
                                                             }
                                                             {
-                                                                item.secli ? <li className={classes.lis}>{item.secli}</li> : ''
+                                                                item.secli ? <li className={classes.lis}> <h6> {item.secli} </h6> </li> : ''
                                                             }
                                                             {
-                                                                item.thirdli ? <li className={classes.lis}>{item.thirdli}</li> : ''
+                                                                item.thirdli ? <li className={classes.lis}> <h6> {item.thirdli} </h6> </li> : ''
                                                             }
                                                             {
-                                                                item.fourthli ? <li className={classes.lis}>{item.fourthli}</li> : ''
+                                                                item.fourthli ? <li className={classes.lis}> <h6> {item.fourthli} </h6> </li> : ''
                                                             }
                                                             {
-                                                                item.fifthli ? <li className={classes.lis}>{item.fifthli}</li> : ''
+                                                                item.fifthli ? <li className={classes.lis}> <h6> {item.fifthli} </h6> </li> : ''
                                                             }
                                                             {
-                                                                item.sixthli ? <li className={classes.lis}>{item.sixthli}</li> : ''
+                                                                item.sixthli ? <li className={classes.lis}> <h6> {item.sixthli} </h6> </li> : ''
                                                             }
                                                         </ul>
                                                     </h4> : ''

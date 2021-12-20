@@ -53,11 +53,12 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '7rem',
+            width: '2rem',
         },
     },
     btns: {
-        width: '30%',
+        width: '35%',
+        marginTop: '2%',
         margin: '0% auto',
         [theme.breakpoints.down('sm')]: {
             width: '40%',

@@ -57,7 +57,6 @@ export function IPcoreTemplate() {
 
             <Products />
 
-
             <OurexpertiseBlue />
 
             <Industries />

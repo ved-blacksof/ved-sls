@@ -175,7 +175,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     menuItem: {
-        padding: '20px 40px',
+        padding: '15px 30px',
         boxSizing: 'border-box',
         mozBoxSizing: 'border-box',
         webkitBoxSizing: 'border-box',
@@ -196,19 +196,22 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '8px',
         "&::before": {
             content: "''",
-            height: '0%',
-            width: '0',
+            height: '25px',
+            width: '6px',
             background: '#182AC3',
             borderRadius: '2rem',
             position: 'absolute',
-            left: '5%',
-            transition: 'all .5s ease-in-out',
+            left: '0%',
+            transform: 'translateY(0, -20px)',
+            transition: 'all .3s ease-in-out',
+            opacity: '0',
+            visibility: 'hidden',
         },
         "&:hover": {
             color: '#182AC3',
             "&::before": {
-                height: '30%',
-                width: '5px',
+                visibility: 'visible',
+                display: 'block',
                 opacity: '1',
             },
             "&::after": {
@@ -375,7 +378,7 @@ export function Navbar({
         }
     }, [])
     return (
-        <Box style={{ marginTop: '2%' }}>
+        <Box style={{ paddingTop: '2%' }}>
             <AppBar
                 position='static'
                 color='transparent'
@@ -439,7 +442,7 @@ export function Navbar({
                         {/* class onhover Mega menu */}
                         <li className={clsx(classes[navlinkref.current], classes.navLI)}
 
-                            
+
                             // onMouseEnter={handleToggle}
                             // onMouseLeave={handleClose}
                             onClick={handleToggle}
@@ -472,7 +475,7 @@ export function Navbar({
                                             {...TransitionProps}
                                             style={{
                                                 transformOrigin:
-                                                    placement === 'bottom-start' ? 'left top' : 'left bottom',
+                                                    placement === 'bottom' ? 'left top' : 'left bottom',
                                                 // top: '10%',
                                                 marginTop: '10%'
                                             }}
@@ -551,9 +554,9 @@ export function Navbar({
                         <li
                             className={clsx(classes[navlinkref.current], classes.navLI)}
                             onClick={handleToggle1}
-                            // onMouseEnter={handleToggle1}
-                            // onMouseLeave={handleClose1}
-                            
+                        // onMouseEnter={handleToggle1}
+                        // onMouseLeave={handleClose1}
+
 
                         >
                             <NavLink

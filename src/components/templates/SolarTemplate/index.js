@@ -22,9 +22,9 @@ export function SolarTemplate() {
                     sub1="Contributing to its mission of making this world greener, SLS has developed a range of BIS-approved end-to-end 
                     smart solar and wind energy solutions. With the aspiration of always delivering more than expected, 
                     we have capacitated these solutions with intelligent features that increase usability and make the switch to renewable energy easier."
-                    icons="icons"
+                    mapIconPosition="mapIconPosition"
                     data={solar}
-                    style={{ height: 'fit-content', paddingBottom: '10%' }}
+                    style={{ height: 'fit-content', marginBottom:'20%' }}
                 />
             </GridBlue>
             <Realtime
@@ -33,6 +33,8 @@ export function SolarTemplate() {
                 // style={{ opacity: '0' }}
 
             />
+
+
             {/* <Realtime
                 maintitle="Software Offerings"
                 data1={solarsoftware}

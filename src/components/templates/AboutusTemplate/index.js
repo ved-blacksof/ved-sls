@@ -31,7 +31,7 @@ export function AboutusTemplate() {
                     sub2='We have the in-house capability to rapidly develop, prototype, provide proof of concept and mass production
                         services across hardware, software, firmware, and wireless technologies. Our motive is to work hand-in-hand with your business goals to
                         deliver market-ready products boasting class-apart design, innovative functionalities, excellent quality.'
-                        // style={{height:'fit-content'}}
+                    // style={{ height: 'fit-content' }}
                 />
 
 

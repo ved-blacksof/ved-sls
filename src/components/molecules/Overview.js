@@ -1,12 +1,14 @@
 import React from 'react'
 import { makeStyles, Container, Box } from '@material-ui/core'
-import { MainContainer, MapIcon } from '../atoms'
+import { MainContainer, MapIcon, MapIconPosition } from '../atoms'
 import Bounce from 'react-reveal/Bounce';
 
 
 const useStyles = makeStyles((theme) => ({
     overBox: {
-        height: '90vh',
+        // height: '90vh',
+        height: 'fit-content',
+        paddingBottom: '6%',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
             paddingBottom: '5%'
@@ -78,7 +80,9 @@ export function Overview({
     prop,
     list,
     icons,
-    data
+    mapIconPosition,
+    data,
+
 }) {
 
     const classes = useStyles()
@@ -135,6 +139,16 @@ export function Overview({
                                     data={data}
                                     fill="white"
                                     color="white"
+                                />
+                            </> : ''
+                    }
+                    {
+                        mapIconPosition ?
+                            <>
+                                <MapIconPosition
+                                    data={data}
+                                    fill="white"
+                                    color="black"
                                 />
                             </> : ''
                     }

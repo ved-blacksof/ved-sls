@@ -9,12 +9,11 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         width: '100%',
-        margin: '10% 0%',
+        margin: '10% auto',
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
-            margin: '20% 0%',
-
+            margin: '20% auto',
         },
         "& h6": {
             color: 'black',
