@@ -19,35 +19,49 @@ const useStyles = makeStyles((theme) => ({
         // backgroundPosition: 'center',
         // backgroundRepeat: 'no-repeat',
         // backgroundSize: 'cover',
-        height:'16vw',
+        // height: '16vw',
         background: 'white',
         borderRadius: '1rem',
         position: 'relative',
         marginLeft: '5%',
-        boxShadow: '0px 0px 5px #0000001A', 
+        boxShadow: '0px 0px 5px #0000001A',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
             justifyContent: 'center',
             marginLeft: '0%',
-            height:'20rem',
+            height: '20rem',
         },
-        [theme.breakpoints.down('xs')]:{
-            height:'50vw'
+        [theme.breakpoints.down('xs')]: {
+            height: '50vw'
         }
     },
-    productImageBox:{
-        height:'100%',
-        width:'100%',
+    productImageBox: {
+        height: '100%',
+        width: '100%',
         borderRadius: '1rem',
-        overflow:'hidden',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-       
+        overflow: 'hidden',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-    image:{
-        width:'100%',
-        maxHeight:'100%'
+    newbg:{
+        position:'absolute',
+        top:'-8%',
+        left:'-7%',
+        zIndex:'-1',
+        width: '110%',
+        height:'116%',
+        "& img":{
+            width:'100%',
+            maxHeight:'100%'
+        }
+
+    },
+    image: {
+        width: '100%',
+        maxHeight: '100%',
+        // objectFit:'cover',
+
     },
     red: {
         width: '18%',
@@ -81,18 +95,20 @@ export function PositionImage({
 
     return (
         <Box className={classes.mainBox}>
-            <div
-                className={classes.imageBox}
-                // style={{ backgroundImage: `url(${imageBG})`, }}
+            <div className={classes.imageBox}
+            // style={{ backgroundImage: `url(${imageBG})`, }}
             >
-
                 <Box className={classes.productImageBox}>
                     <img className={classes.image} src={imageBG} alt="image" />
                 </Box>
 
-                <img className={classes.red} src={'./images/Polygon 2.svg'} alt="image" />
+                {/* <img className={classes.red} src={'./images/Polygon 2.svg'} alt="image" />
                 <img className={classes.white} src={'./images/Polygon 3.svg'} alt="image" />
-                <img className={classes.blue} src={'./images/Polygon 1.svg'} alt="image" />
+                <img className={classes.blue} src={'./images/Polygon 1.svg'} alt="image" /> */}
+
+                <Box className={classes.newbg}>
+                    <img src={'./images/Group 82914.png'} alt="image" />
+                </Box>
 
             </div>
         </Box >

@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     newBox: {
         height: 'fit-content',
         display: 'flex',
+        paddingBottom:'5%',
         margin: '8% auto',
         display: 'flex',
         justifyContent: 'flex-start',
@@ -84,43 +85,57 @@ const useStyles = makeStyles((theme) => ({
     },
     boxBig: {
         background: 'white',
+        padding:'1%',
         color: 'red',
         width: '16vw',
         height: '16vw',
         '& h1': {
             color: '#D9393E',
             fontSize: '5vw',
-            textAlign: 'center'
+            textAlign: 'center',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1.8rem'
+            }
         },
         '& h2': {
             color: '#003189',
             fontSize: '2vw',
-            textAlign: 'center'
+            textAlign: 'center',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1.2rem'
+            }
         },
         [theme.breakpoints.down('sm')]: {
-            height: '30vw',
-            width: '30vw',
+            height: '40vw',
+            width: '40vw',
         }
 
     },
     boxSmall: {
         height: '11vw',
         width: '10vw',
+        padding:'1%',
         background: 'white',
         display: 'flex',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
-            height: '20vw',
-            width: '22vw',
+            height: '28vw',
+            width: '26vw',
         },
         "& h3": {
             color: '#D9393E',
-            fontSize: '3vw'
+            fontSize: '3vw',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1rem'
+            }
         },
         "& h4": {
             font: 'normal normal normal 1.4vw BebasNeue',
             color: '#003189',
-            textAlign: 'center'
+            textAlign: 'center',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1rem'
+            }
         }
     },
 
@@ -208,7 +223,7 @@ export function TechCarousel() {
                                     </div>
 
                                     <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h3 style={{ fontSize: '2vw', textAlign:'center' }}>Operating Bases</h3>
+                                        <h4 style={{  textAlign:'center', color:'#D9393E', fontSize:'2vw' }}>Operating Bases</h4>
                                         <h4 >India, UK, USA</h4>
                                     </div>
                                     <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>

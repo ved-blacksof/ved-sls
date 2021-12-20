@@ -55,7 +55,7 @@ export function SolarTemplate() {
             /> */}
 
             <Visit1
-                goto1="A DIVISION OF SYSTEM LEVEL SOLUTIONS; SUNSIGHTS"
+                goto1="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
                 title="Visit the website"
                 rightlogo="./images/solar/SunSights.png"
                 href={"https://www.getsunsights.com/"}

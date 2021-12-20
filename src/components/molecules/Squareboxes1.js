@@ -28,93 +28,78 @@ const useStyles = makeStyles((theme) => ({
             alignItems: 'center',
         },
     },
-    imgBox: {
-        width: '50%',
-        transition: 'all 800ms ease-in-out',
-    },
+
     boxes: {
         width: '20vw',
         height: '20vw',
         border: '1px solid #DCDCDC',
-        boxShadow: '0px 3px 10px #00000017',
+        boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
         padding: "1rem",
-        margin: '1.5rem 1rem',
+        margin: '1.5rem 1%',
         cursor: 'pointer',
         transition: 'all 300ms ease-in-out',
-
-
+        transform: 'width .6s ease-in-out',  //for red line
         [theme.breakpoints.down('sm')]: {
             width: '35vw',
             height: '35vw',
             margin: '5% 0%',
             padding: "1%",
         },
-        '& img': {
-            width: '100%',
-            maxHeight: '100%',
+        "&::before": {
+            content: "''",
+            height: '5px',
+            width: '0',
+            background: '#DE141A',
+            position: 'absolute',
+            bottom: '5%',
+            left: '5%',
+            transition: 'all 800ms ease-in-out',
+            [theme.breakpoints.down('sm')]: {
+                height: '5px'
+            }
         },
-        // '&:hover': {
-        //     border: '1px solid white',
-        //     "& $imgBox": {
-        //         transform: 'scale(1.2)',
-        //     },
-        //     "& $red": {
-        //         background: '#DE141A',
-        //         animation: `$redbar 800ms linear`,
-        //         // animationIterationCount: 1,
-        //         animationDuration: '800ms',
-        //     },
-        // },
+        "&:hover": {
+            color: '#182AC3',
+            boxShadow: '0px 0px 20px #00000017',
+            border:'1px solid white',
+            "& $imgBox": {
+                transform: 'scale(1.2)'
+            },
+            "&::before": {
+                height: '5px',
+                width: '90%',
+                opacity: '1',
+                [theme.breakpoints.down('sm')]: {
+                    height: '5px'
+                }
+            },
+        },
 
+
+    },
+    imgBox: {
+        width: '50%',
+        transition: 'all 600ms ease-in-out',
+    },
+    image: {
+        width: '100%',
+        maxHeight: '100%'
     },
     subTitle: {
         color: '#182AC3',
         fontWeight: 'bold',
+        marginTop: '5%',
         [theme.breakpoints.down('xs')]: {
             fontSize: '.8rem'
         },
     },
-    reddiv: {
-        width: '100%',
-        height: '8px',
-        overflow: 'hidden',
-        [theme.breakpoints.down('sm')]: {
-            height: '2px',
-            background: 'red'
-        },
-    },
-    red: {
-        height: '100%',
-        // animation: `$redbargo 800ms linear`,
-        // // animationIterationCount: 1,
-        // animationDuration: '800ms',
-    },
-    "@keyframes redbar": {
-        "0%": {
-            // opacity: 0,
-            transform: "translateX(-200%)"
-        },
-        "100%": {
-            // opacity: 1,
-            transform: "translateX(0)"
-        },
-    },
-    "@keyframes redbargo": {
-        "0%": {
-            // opacity: 1,
-            transform: "translateX(0)"
-        },
-        "100%": {
-            // opacity: 0,
-            transform: "translateX(-200%)"
-        },
-    },
+
 
 }))
 
@@ -144,18 +129,14 @@ export function Squareboxes1({
                         data.map((item, index) => {
                             return (
                                 <Box
-                                    className={clsx(classes.boxes,'redbarBox' )}
+                                    className={clsx(classes.boxes, 'redbarBox')}
                                 >
                                     <Box className={classes.imgBox}>
                                         <Bounce bottom>
-                                            <img src={item.images} alt="Mission Icon" />
+                                            <img className={classes.image} src={item.images} alt="Mission Icon" />
                                         </Bounce>
                                     </Box>
                                     <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
-                                    <Box className={clsx(classes.reddiv)}>
-                                        <Box className={clsx(classes.red, "redbar")}>
-                                        </Box>
-                                    </Box>
                                 </Box>
                             )
                         })

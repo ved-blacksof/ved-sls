@@ -46,6 +46,12 @@ function a11yProps(index) {
 }
 
 const useStyles = makeStyles((theme) => ({
+    smBlock:{
+        display:'none',
+        [theme.breakpoints.down('sm')]:{
+            display:'block'
+        }
+    },
     mainBox: {
         display: 'flex',
     },
@@ -127,111 +133,108 @@ export function VerticalTab() {
     };
     return (
         <>
-            <Box className={classes.mainBox}>
-                <Box className={classes.leftBox}>
-                    <Tabs
-                        disableRipple
-                        orientation="vertical"
-                        variant="scrollable"
-                        value={value}
-                        onChange={handleChange}
-                        aria-label="Vertical tabs example"
-                        className={classes.tabs}
-                        TabIndicatorProps={{
-                            style: {
-                                left: '0',
-                                width: '4px',
-                                height: '22px',
-                                marginTop: '11px',
-                                borderRadius: '2px'
-                            }
-                        }}
-                    >
-                        <Tab className={classes.tab} disableRipple label="IP CORE/FPGA/SoC Design Services" {...a11yProps(0)} />
-                        <Tab className={classes.tab} disableRipple label="High Speed PCB Design Services" {...a11yProps(1)} />
-                        <Tab className={classes.tab} disableRipple label="Software Development" {...a11yProps(2)} />
-                        <Tab className={classes.tab} disableRipple label="Electronics Manufacturing Services (EMS)" {...a11yProps(3)} />
-                        <Tab className={classes.tab} disableRipple label="Testing and Calibration" {...a11yProps(4)} />
-                        <Tab className={classes.tab} disableRipple label="Machine Learning & Artificial Intelligence" {...a11yProps(5)} />
+            <Box className={classes.smBlock}>
+                <Box className={classes.mainBox}>
+                    <Box className={classes.leftBox}>
+                        <Tabs
+                            disableRipple
+                            orientation="vertical"
+                            variant="scrollable"
+                            value={value}
+                            onChange={handleChange}
+                            aria-label="Vertical tabs example"
+                            className={classes.tabs}
+                            TabIndicatorProps={{
+                                style: {
+                                    left: '0',
+                                    width: '4px',
+                                    height: '22px',
+                                    marginTop: '11px',
+                                    borderRadius: '2px'
+                                }
+                            }}
+                        >
+                            <Tab className={classes.tab} disableRipple label="IP CORE/FPGA/SoC Design Services" {...a11yProps(0)} />
+                            <Tab className={classes.tab} disableRipple label="High Speed PCB Design Services" {...a11yProps(1)} />
+                            <Tab className={classes.tab} disableRipple label="Software Development" {...a11yProps(2)} />
+                            <Tab className={classes.tab} disableRipple label="Electronics Manufacturing Services (EMS)" {...a11yProps(3)} />
+                            <Tab className={classes.tab} disableRipple label="Testing and Calibration" {...a11yProps(4)} />
+                            <Tab className={classes.tab} disableRipple label="Machine Learning & Artificial Intelligence" {...a11yProps(5)} />
 
-                    </Tabs>
+                        </Tabs>
+                    </Box>
+
+
+
+                    <Box className={classes.rightBox}>
+                        <TabPanel className={classes.tabPanel} value={value} index={0}>
+                            <Fade bottom>
+                                <img src={'./images/homepage-icons/expanding/FPGA1.png'} />
+                            </Fade>
+                            <Fade bottom>
+                                <h6 style={{ lineHeight: '1.5' }}>
+                                    Ready-to-deploy FPGA solutions designed to meet dynamic market needs & keep up with the changing status quo.
+                                </h6>
+                            </Fade>
+                        </TabPanel>
+
+                        <TabPanel className={classes.tabPanel} value={value} index={1}>
+                            <Fade bottom>
+                                <img src={'./images/homepage-icons/expanding/PCB.png'} />
+                            </Fade>
+                            <Fade bottom>
+                                <h6 style={{ lineHeight: '1.5' }}>
+                                    Use case-specific high-speed, multi-layered, multi-CPU PCB Board Designs to help companies cut down the deployment time.
+                                </h6>
+                            </Fade>
+                        </TabPanel>
+
+                        <TabPanel className={classes.tabPanel} value={value} index={2}>
+                            <Fade bottom>
+                                <img src={'./images/homepage-icons/expanding/Software-Development.png'} />
+                            </Fade>
+                            <Fade bottom>
+                                <h6 style={{ lineHeight: '1.5' }}>
+                                    Industry leaders in turnkey software solutions. Expertise in Embedded, Android, iOS, Web Applications, and windows-based software development.
+                                </h6>
+                            </Fade>
+                        </TabPanel>
+
+                        <TabPanel className={classes.tabPanel} value={value} index={3}>
+                            <Fade bottom>
+                                <img src={'./images/homepage-icons/expanding/Electronics-manufacturing.png'} />
+                            </Fade>
+                            <Fade bottom>
+                                <h6 style={{ lineHeight: '1.5' }}>
+                                    Turnkey EMS provider helping businesses with PCB Assembly, Prototyping, Small & Medium Volume Production.
+                                </h6>
+                            </Fade>
+                        </TabPanel>
+
+
+                        <TabPanel className={classes.tabPanel} value={value} index={4}>
+                            <Fade bottom>
+                                <img src={'./images/homepage-icons/expanding/Testing-calibration.png'} />
+                            </Fade>
+                            <Fade bottom>
+                                <h6 style={{ lineHeight: '1.5' }}>
+                                    Easing quality checks, compliances, and certifications, we help companies build and deploy quality-tested products.
+                                </h6>
+                            </Fade>
+                        </TabPanel>
+                        <TabPanel className={classes.tabPanel} value={value} index={5}>
+                            <Fade bottom>
+                                <img src={'./images/homepage-icons/expanding/ML-AI.png'} />
+                            </Fade>
+                            <Fade bottom>
+                                <h6 style={{ lineHeight: '1.5' }}>
+                                    Catering to the healthcare sector through new-age intelligence, offering innovative solutions to ease diagnosis.
+                                </h6>
+                            </Fade>
+                        </TabPanel>
+
+                    </Box>
                 </Box>
-
-
-
-                <Box className={classes.rightBox}>
-                    <TabPanel className={classes.tabPanel} value={value} index={0}>
-                        <Fade bottom>
-                            <img src={'./images/homepage-icons/expanding/FPGA1.png'} />
-                        </Fade>
-                        <Fade bottom>
-                            <h6 style={{ lineHeight: '1.5' }}>
-                                Ready-to-deploy FPGA solutions designed to meet dynamic market needs & keep up with the changing status quo.
-                            </h6>
-                        </Fade>
-                    </TabPanel>
-
-                    <TabPanel className={classes.tabPanel} value={value} index={1}>
-                        <Fade bottom>
-                            <img src={'./images/homepage-icons/expanding/PCB.png'} />
-                        </Fade>
-                        <Fade bottom>
-                            <h6 style={{ lineHeight: '1.5' }}>
-                                Use case-specific high-speed, multi-layered, multi-CPU PCB Board Designs to help companies cut down the deployment time.
-                            </h6>
-                        </Fade>
-                    </TabPanel>
-
-                    <TabPanel className={classes.tabPanel} value={value} index={2}>
-                        <Fade bottom>
-                            <img src={'./images/homepage-icons/expanding/Software-Development.png'} />
-                        </Fade>
-                        <Fade bottom>
-                            <h6 style={{ lineHeight: '1.5' }}>
-                                Industry leaders in turnkey software solutions. Expertise in Embedded, Android, iOS, Web Applications, and windows-based software development.
-                            </h6>
-                        </Fade>
-                    </TabPanel>
-
-                    <TabPanel className={classes.tabPanel} value={value} index={3}>
-                        <Fade bottom>
-                            <img src={'./images/homepage-icons/expanding/Electronics-manufacturing.png'} />
-                        </Fade>
-                        <Fade bottom>
-                            <h6 style={{ lineHeight: '1.5' }}>
-                                Turnkey EMS provider helping businesses with PCB Assembly, Prototyping, Small & Medium Volume Production.
-                            </h6>
-                        </Fade>
-                    </TabPanel>
-
-
-                    <TabPanel className={classes.tabPanel} value={value} index={4}>
-                        <Fade bottom>
-                            <img src={'./images/homepage-icons/expanding/Testing-calibration.png'} />
-                        </Fade>
-                        <Fade bottom>
-                            <h6 style={{ lineHeight: '1.5' }}>
-                                Easing quality checks, compliances, and certifications, we help companies build and deploy quality-tested products.
-                            </h6>
-                        </Fade>
-                    </TabPanel>
-                    <TabPanel className={classes.tabPanel} value={value} index={5}>
-                        <Fade bottom>
-                            <img src={'./images/homepage-icons/expanding/ML-AI.png'} />
-                        </Fade>
-                        <Fade bottom>
-                            <h6 style={{ lineHeight: '1.5' }}>
-                                Catering to the healthcare sector through new-age intelligence, offering innovative solutions to ease diagnosis.
-                            </h6>
-                        </Fade>
-                    </TabPanel>
-
-                </Box>
-
-
-
-
-
             </Box>
         </>
     )

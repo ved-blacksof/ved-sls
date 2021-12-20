@@ -3,7 +3,7 @@ import { Navbar, Footer } from '..'
 import { GridBlue , } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit, NewPosCards } from '../../molecules'
 import { smarttraffic , smarttrafficCards} from '../../molecules/PortfolioData'
-import { PosBoxes } from './PosBoxes'
+import { PosBoxes } from '../../molecules/PosBoxes'
 
 export function SmarttrafficTemplate() {
     return (
@@ -27,7 +27,7 @@ export function SmarttrafficTemplate() {
                 />
             </GridBlue>
 
-            <PosBoxes />
+            <PosBoxes data={smarttraffic} />
 
             <NewPosCards  data={smarttrafficCards}/>
 

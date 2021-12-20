@@ -72,7 +72,7 @@ export function HomeautomationTemplate({
 
             <MainContainer>
                 <Visit1
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; KONNSYS"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
                     title="Visit the website"
                     href="https://www.konnsys.com/"
                     rightlogo="./images/homeautomation/Konnsys.png"

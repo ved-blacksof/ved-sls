@@ -73,7 +73,7 @@ export function EvchargingTemplate() {
 
             <MainContainer>
                 <Visit1
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; VERDEMOBILITY"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
                     title="Visit the website"
                     href="https://www.verdemobility.com/Home/Index"
                     rightlogo="./images/evcharger/1.png"

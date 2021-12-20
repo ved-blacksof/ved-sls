@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Cards, Visit } from '../../molecules'
+import { Ubanner, Overview, Cards, Visit, CardsReadMore } from '../../molecules'
 
 import { solar, gaminghardware, gamingsoftware, gamingapplications } from '../../molecules/PortfolioData'
 
@@ -32,6 +32,8 @@ export function GamingTemplate() {
                 maintitle="Hardware Offerings"
                 data={gaminghardware}
             />
+
+            <CardsReadMore />
             <Cards
                 maintitle="Software Offerings"
                 data={gamingsoftware}

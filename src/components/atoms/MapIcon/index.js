@@ -56,11 +56,11 @@ export function MapIcon({
     const history = useHistory()
     return (
         <>
-            <Grid container spacing={4} className={classes.gridMainBox}>
+            <Grid container spacing={6} className={classes.gridMainBox}>
                 {
                     data.map((item, index) => {
                         return (
-                            <Grid item xs={6} sm={3} md={3} key={index}>
+                            <Grid item xs={6}  sm={3} md={3} key={index}>
                                 <Box className={classes.gridBox} >
                                     {
                                         !item.link ?
@@ -79,7 +79,7 @@ export function MapIcon({
                                     }
 
 
-                                    {/* below it will show when we provide link from data */}
+                                    {/* below, it will show when we provide link from data */}
 
                                     {
                                         item.link ?

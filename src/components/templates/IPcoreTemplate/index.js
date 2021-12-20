@@ -4,6 +4,7 @@ import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
 import { Ourexpertise } from '../MachineLearningTemplate/Ourexpertise'
 import { Industries } from './Industries'
+import { Offerings } from './Offerings'
 import { OurexpertiseBlue } from './OurexpertiseBlue'
 import { Products } from './Products'
 
@@ -24,32 +25,35 @@ export function IPcoreTemplate() {
                 />
             </GridBlue>
 
+            
+            <Offerings />
+        
 
-            <Quality
-                mainheading="Offerings"
-                heading="IP Core Development and Customization"
-                imageBG="./images/FPGA_Website_Image (5).png"
-            />
+                {/* <Quality
+                    mainheading="Offerings"
+                    heading="IP Core Development and Customization"
+                    imageBG="./images/FPGA_Website_Image (5).png"
+                />
 
-            <QualityReverse
-                heading="FPGA Turnkey Solutions"
-                imageBG="./images/FPGA_Website_Image (1).png"
-            />
+                <QualityReverse
+                    heading="FPGA Turnkey Solutions"
+                    imageBG="./images/FPGA_Website_Image (1).png"
+                />
 
-            <Quality
-                heading="IP CORE-to-FPGA Solutions"
-                imageBG="./images/FPGA_Website_Image (4).png"
-            />
+                <Quality
+                    heading="IP CORE-to-FPGA Solutions"
+                    imageBG="./images/FPGA_Website_Image (4).png"
+                />
 
-            <QualityReverse
-                heading="Product Customization"
-                imageBG="./images/FPGA_Website_Image (3).png"
-            />
+                <QualityReverse
+                    heading="Product Customization"
+                    imageBG="./images/FPGA_Website_Image (3).png"
+                />
 
-            <Quality
-                heading="Driver Development"
-                imageBG="./images/FPGA_Website_Image (2).png"
-            />
+                <Quality
+                    heading="Driver Development"
+                    imageBG="./images/FPGA_Website_Image (2).png"
+                /> */}
 
             <Products />
 

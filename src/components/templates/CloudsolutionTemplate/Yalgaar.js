@@ -111,7 +111,7 @@ export function Yalgaar({
             </Container>
                 <Visit1
                     href="https://www.yalgaar.io/"
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; YALGAAR"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; "
                     rightlogo="./images/Layer_x0020_1_yalgaar.svg"
                     title="Visit the website" />
 
