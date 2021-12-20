@@ -778,10 +778,10 @@ export const transformer = [
         images: './images/Layer_34.svg',
         text: 'Oil Flow and Level Monitoring'
     },
-    {
-        images: './images/Layer_29.svg',
-        text: 'Fire Alerts'
-    },
+    // {
+    //     images: './images/Layer_29.svg',
+    //     text: 'Fire Alerts'
+    // },
     {
         images: './images/Layer_30.svg',
         text: 'Top and Bottom Oil Temperature Management'
@@ -794,10 +794,10 @@ export const transformer = [
         images: './images/Layer_32.svg',
         text: 'Phase voltage, current & overload capacity measurement'
     },
-    {
-        images: './images/Layer_19.svg',
-        text: 'Data Logging',
-    },
+    // {
+    //     images: './images/Layer_19.svg',
+    //     text: 'Data Logging',
+    // },
 ]
 
 //  Used in IP CORE page @/ipcore

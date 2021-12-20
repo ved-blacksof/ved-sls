@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     btns: {
-        width: '30%',
+        width: '35%',
         marginTop: '2%',
         margin: '0% auto',
         [theme.breakpoints.down('sm')]: {
