@@ -375,7 +375,7 @@ export function Navbar({
         }
     }, [])
     return (
-        <Box style={{ marginTop: '2%' }}>
+        <Box style={{ paddingTop:'2%' }}>
             <AppBar
                 position='static'
                 color='transparent'
@@ -472,7 +472,7 @@ export function Navbar({
                                             {...TransitionProps}
                                             style={{
                                                 transformOrigin:
-                                                    placement === 'bottom-start' ? 'left top' : 'left bottom',
+                                                    placement === 'bottom' ? 'left top' : 'left bottom',
                                                 // top: '10%',
                                                 marginTop: '10%'
                                             }}

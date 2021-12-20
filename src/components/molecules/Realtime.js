@@ -158,7 +158,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::before": {
             content: "''",
-            height: '7px',
+            height: '6px',
             width: '0',
             background: '#DE141A',
             position: 'absolute',
@@ -177,7 +177,7 @@ const useStyles = makeStyles((theme) => ({
                 transform: 'scale(1.1)'
             },
             "&::before": {
-                height: '7px',
+                height: '6px',
                 width: '90%',
                 opacity: '1',
                 [theme.breakpoints.down('sm')]: {
@@ -236,7 +236,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::before": {
             content: '""',
-            height: '8px',
+            height: '6px',
             width: '0%',
             position: 'absolute',
             top: '0',
@@ -244,7 +244,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::after": {
             content: '""',
-            height: '8px',
+            height: '6px',
             position: 'absolute',
             top: '0',
             width: '100%',

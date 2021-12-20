@@ -63,6 +63,11 @@ export const reshape = [
 
 export const port = [
     {
+        images: './images/homepage-icons/32._IP Core- FPGA.svg',
+        text: 'IP Core / FPGA ',
+        link: 'ipcore'
+    },
+    {
         images: './images/homepage-icons/1._IOT_Platform.png',
         text: 'IoT Platform',
         link: 'iot'
@@ -117,11 +122,6 @@ export const port = [
         text: 'Gaming',
         link: 'gaming',
     },
-    // {
-    //     images: './images/homepage-icons/32._IP Core- FPGA.svg',
-    //     text: 'IP Core / FPGA ',
-    //     link: 'ipcore'
-    // },
 ]
 
 
@@ -615,6 +615,8 @@ export const gamingsoftware = [
 ]
 
 
+
+
 export const gamingapplications = [
     {
         images: './images/iot_photostrip_img_4.png',
@@ -628,6 +630,24 @@ export const gamingapplications = [
         images: './images/army-soldiers-fighting-with-guns-defending-their-country_1303-26687.png',
         productname: 'Military Training',
     },
+]
+
+
+
+//yet to update
+export const gamingOverview = [
+    {
+        images: './images/smartstreet/14._Retrofit for existing infrastructure-(RF and LoRa variants).svg',
+        text: 'Android and iOS App control'
+    },
+    {
+        images: './images/smartstreet/13._Energy efficient with motion-& ambient light sensors.svg',
+        text: 'Wi-Fi Connectivity'
+    },
+    {
+        images: './images/smartstreet/15._Real-time alerts-on malfunctions.svg',
+        text: 'Cloud for online and offline mode operations'
+    }
 ]
 
 
@@ -902,12 +922,12 @@ export const industries = [
         text: 'Data Acquisition'
     },
     {
-        images: './images/ipcore-Path 2118.svg',
-        text: 'Medical Devices'
-    },
-    {
         images: './images/Group 82849.svg',
         text: 'Security Product'
+    },
+    {
+        images: './images/ipcore-Path 2118.svg',
+        text: 'Medical Devices'
     },
     {
         images: './images/ipcore-Path 2113.svg',

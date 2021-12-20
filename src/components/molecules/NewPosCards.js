@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         paddingTop: '19%',
         padding: '3%',
-        boxShadow: '0px 0px 20px #00000029',
+        boxShadow: '0px 0px 20px #00000029',    
         borderRadius: '5px',
     },
     imageBox: {

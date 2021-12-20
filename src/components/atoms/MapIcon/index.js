@@ -60,7 +60,7 @@ export function MapIcon({
                 {
                     data.map((item, index) => {
                         return (
-                            <Grid item xs={6} spacing={6} sm={3} md={3} key={index}>
+                            <Grid item xs={6} spacing={6} sm={3} md={3} key={index}>        
                                 <Box className={classes.gridBox} >
                                     {
                                         !item.link ?

@@ -30,9 +30,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     boxes: {
-        width: '30%',
+        width: '28%',
         height: '100%',
-        margin: '1% 1%',
+        margin: '1% 2%',
         [theme.breakpoints.down('sm')]: {
             width: '45%',
             marginRight: '2%',
@@ -73,7 +73,7 @@ export function PosBoxes({
 
     return (
         <MainContainer>
-            <Container className={classes.containers}>
+            <Container fixed className={classes.containers}>
                 <Box className={classes.mainBox}>
                     {
                         data.map((item, index) => {

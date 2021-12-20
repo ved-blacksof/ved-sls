@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent:'center',
         alignItems:'center',
-        marginBottom:'4%'
+        marginBottom:'4%',
     },
     btmText: {
         color: '#182AC3',
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '40%',
+            width: '2rem%',
         },
     },
     btns: {

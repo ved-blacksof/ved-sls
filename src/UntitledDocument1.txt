@@ -2,3 +2,34 @@ High speed > cutomize board replace Image by vector (text Done)
 Digtal Signage > Icons
 replace partners Icons > Sent by Huzefa
 
+
+
+
+
+
+yet to update
+gamingOverview
+
+
+
+Requirements:
+
+Home > Reshaping Carousel Image
+     > news & events filter
+About > policy COntent to be reduced
+      > Certificates logo & content
+Iot > Overview Icons
+
+cloud > Overview Icons (Suyash said)
+      > 
+
+solar > Overview Icons  
+        > Read more button is removed.
+        >Dashboard Image
+
+Smart Meter > CTA removed and added to UK smart metering 
+
+
+
+
+

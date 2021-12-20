@@ -23,8 +23,10 @@ export function DigitalTemplate() {
                     emergency messages on public announcement
                     boards, etc. with remote intelligence, customizations, and grasping control."
                     path="Industries / Digital Signage"
+                    
+                    mapIconPosition="mapIconPosition"
                     data={digital}
-                    icons="icons"
+                    style={{ height: 'fit-content', marginBottom:'20%' }}
 
                 />
             </GridBlue>
@@ -40,7 +42,7 @@ export function DigitalTemplate() {
             />
 
             <QualityReverse
-                imageBG="./images/denny-muller-HfWA-Axq6Ek-unsplash.png"
+                imageBG="./images/Group 82859.jpg"
                 heading="DigitalSyne Android Player"
                 subtitle="Ace your advertisement game by converting your Android Screens
                  into intelligent displays and stream data like never before."
