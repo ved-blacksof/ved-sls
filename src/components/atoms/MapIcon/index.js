@@ -56,7 +56,7 @@ export function MapIcon({
     const history = useHistory()
     return (
         <>
-            <Grid container  className={classes.gridMainBox}>
+            <Grid container spacing={6} className={classes.gridMainBox}>
                 {
                     data.map((item, index) => {
                         return (

@@ -58,6 +58,8 @@ export function ParagraphsBlue({
     secli,
     thirdli,
     fourthli,
+    fifthli,
+    sixthli,
 }) {
     const classes = useStyles()
     return (
@@ -82,6 +84,12 @@ export function ParagraphsBlue({
                             <li className={clsx(classes.lis, 'li')}> <h6> {thirdli}</h6></li>
                             {
                                 fourthli ? <li className={clsx(classes.lis, 'li')}> <h6> {fourthli} </h6></li> : ''
+                            }
+                            {
+                                fifthli ? <li className={clsx(classes.lis, 'li')}> <h6> {fifthli} </h6></li> : ''
+                            }
+                            {
+                                sixthli ? <li className={clsx(classes.lis, 'li')}> <h6> {sixthli} </h6></li> : ''
                             }
                         </ul> : ''
                 }

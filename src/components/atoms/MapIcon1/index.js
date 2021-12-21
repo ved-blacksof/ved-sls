@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '5%'
     },
     iconsBox: {
-        width: '80%',
+        width: '60%',
         padding: '2% 0%'
     },
     icons: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '5%',
         width: '80%',
         // fontSize:'1.2rem',
-        fontWeight: 'bold'
+        // fontWeight: 'bold'
     },
 }))
 
@@ -32,7 +32,7 @@ export function MapIcon1({
     const classes = useStyles()
     return (
         <>
-            <Grid container spacing={4} className={classes.gridMainBox}>
+            <Grid container spacing={2} className={classes.gridMainBox}>
                 {
                     data.map((item, index) => {
                         return (

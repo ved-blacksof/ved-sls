@@ -90,9 +90,9 @@ const useStyles = makeStyles((theme) => ({
     bgGrey: {
         position: 'absolute',
         bottom: '0',
-        background: '#F3F3F3',
+        background: '#c8c8c8d9',
         padding: '12% 0%',
-        opacity: '.6',
+        // opacity: '1',
         width: '100%'
     }
 }))

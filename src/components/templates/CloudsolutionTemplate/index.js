@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Footer } from '..'
 import { Ubanner, Overview } from '../../molecules'
 import { Yalgaar } from './Yalgaar'
-import { yalgar, loc } from '../../molecules/PortfolioData'
+import { yalgar, loc,cloudOverview } from '../../molecules/PortfolioData'
 import { LOC } from './LOC'
 import { GridBlue } from '../../atoms'
 
@@ -25,6 +25,10 @@ export function CloudsolutionTemplate() {
                     sub1="Spearheading innovation in the cloud ecosystem, SLS provides a range of business-agnostic 
                     cloud-based products and services for agile and smart businesses of tomorrow. 
                     Reinvent how you expand your business reach with our electrifying cloud products and services."
+
+                    mapIconPosition="mapIconPosition"
+                    data={cloudOverview}
+                    style={{ height: 'fit-content', marginBottom:'20%' }}
                 />
             </GridBlue>
 

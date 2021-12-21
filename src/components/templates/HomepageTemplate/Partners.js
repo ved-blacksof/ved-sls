@@ -12,6 +12,7 @@ import Fade from 'react-reveal/Fade';
 
 
 import { GeneralHeading, MainContainer } from '../../atoms'
+import { Infinite } from '../../molecules';
 
 const useStyles = makeStyles((theme) => ({
     partner: {
@@ -59,6 +60,36 @@ const useStyles = makeStyles((theme) => ({
 
 }))
 
+const PartnersIcons = [
+    {
+        images: "./images/homepage-icons/partners/Asset 8@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 10@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 11@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 2@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 3@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 7@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 4@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 6@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 5@300x-8.png"
+    },
+]
+
 export function Partners() {
     const classes = useStyles()
     return (
@@ -73,66 +104,9 @@ export function Partners() {
                 </Container>
             </MainContainer>
 
+            {/* <Infinite squarecarddata={PartnersIcons} /> */}
 
-            <marquee behaviour="scroll" onMouseOver={document.getElementsByClassName('picons').stop}  direction="left" >
-                <Box className={classes.partnersIcons} id="picons">
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 8@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
 
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 10@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 11@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-                    {/* </Box>
-                        <Box className={classes.partnersIcons}> */}
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 2@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 3@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 7@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-
-                    {/* </Box>
-                        <Box className={classes.partnersIcons}> */}
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 4@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 6@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-
-                    <Fade bottom>
-                        <div className={classes.iconsBox}>
-                            <img src={'./images/homepage-icons/partners/Asset 5@300x-8.png'} alt="Partners Icons" />
-                        </div>
-                    </Fade>
-                </Box>
-            </marquee>
         </>
     )
 }

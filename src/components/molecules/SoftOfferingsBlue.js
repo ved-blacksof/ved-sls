@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function SoftOfferingsBlue({
     maintitle,title,subtitle,images,
-    list,firstli ,secli, thirdli, fourthli
+    list,firstli ,secli, thirdli, fourthli,fifthli,sixthli
 }) {
 
     const classes = useStyles()
@@ -56,7 +56,7 @@ export function SoftOfferingsBlue({
                 <Box style={{ borderRadius: '0rem 5rem 0rem 5rem', overflow: 'hidden' }}>
                     <GridBlue >
 
-                        <Box style={{ padding: '10% 0%', }}>
+                        <Box style={{ padding: '10% 0%', }}>    
                             <MainContainer>
                                 <Container fixed className={classes.container}>
 
@@ -71,6 +71,8 @@ export function SoftOfferingsBlue({
                                                 secli={secli}
                                                 thirdli={thirdli}
                                                 fourthli={fourthli}
+                                                fifthli={fifthli}
+                                                sixthli={sixthli}
                                             />
                                         </Fade>
                                     </Box>

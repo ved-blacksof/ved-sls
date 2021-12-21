@@ -10,7 +10,8 @@ export function TestingTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-testing.png"
                 maintext="testing and calibration"
-                subtext="Helping companies test their product."
+                // subtext="Helping companies test their product."
+                subtext="Helping build next-gen products through world-class Testing and Calibration infrastructure"
             />
 
             <GridBlue>

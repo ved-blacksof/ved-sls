@@ -47,53 +47,43 @@ const useStyles = makeStyles((theme) => ({
     },
     BoxImages: {
         width: '100%',
-        paddingTop: '25%',
+        position: 'relative',
+        padding: '18% 0%',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        flexDirection: 'column',
-        textAlign: 'center',
-        paddingBottom: '3%',
+        justifyContent: 'center',
         [theme.breakpoints.down('sm')]: {
             backgroundPosition: 'top',
-            // paddingBottom: '3%',
-            paddingTop: '20%',
-
+            padding: '50% 0%',
         }
     },
-    subHead: {
-        width: '100%',
+    fronText: {
+        padding:'0% 1%',
+        position: 'absolute',
+        bottom: '8%',
+        [theme.breakpoints.down('sm')]: {
+            bottom: '5%',
+        }
     },
     txt: {
-        width: '100%',
-        zIndex: '1',
-        font: 'normal normal normal 3rem BebasNeue',
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '2rem'
-        },
+        textAlign: 'center',
+        marginTop: '5px',
     },
-    subSMTxt: {
-        width: '50%',
-        height:'2.5rem',
+    txt2: {
+        width: '60%',
+        textAlign: 'center',
+        margin: '1% auto',
         [theme.breakpoints.down('sm')]: {
             width: '80%',
-            display: 'none'
-        },
-    },
-    subTxt: {
-        width: '80%',
-        textAlign: 'center',
-        textTransform:'uppercase',
-        [theme.breakpoints.down('sm')]: {
-            // fontSize: '.8rem'
-        },
+            display:'none'
 
+        },
     },
     hr: {
-        margin: '5px 0%',
+        margin: '1% auto',height:'2px',
+        backgroundColor: 'white',
         width: '25%',
         boxShadow: 'none',
         [theme.breakpoints.down('sm')]: {
@@ -110,16 +100,16 @@ export function Reshape() {
     const paginationsPlugins = new Pagination({ type: 'bullet' })
 
     const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
-    
+
     const plugins = [autoPlugins, paginationsPlugins];
-    
+
 
     return (
         <Fade bottom>
             <Box className={classes.reaserchMain}>
                 <Box className={classes.flicks}>
                     <Flicking
-                        selector="center"   
+                        selector="center"
                         plugins={plugins}
                         defaultIndex='0'
                         circular={true}
@@ -129,22 +119,16 @@ export function Reshape() {
                             reshape.map((item, index) => {
                                 return (
                                     <Box className={classes.BoxWidth}>
-                                        
-                                        <Box className={classes.BoxImages} 
-                                                style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(${item.images})`,}}
-                                                >
-                                            <h3 className={classes.txt}>{item.text1}</h3>
-                                            <hr className={classes.hr} />
-                                            <br />
-                                            <h6 className={classes.subSMTxt}>{item.text2}</h6>
-                                            {
-                                                item.br ? <br/> : ''
-                                            }
-                                            {
-                                                item.br1 ? <br/> : ''
-                                            }
-                                            <br />
-                                            <h4 className={classes.subTxt}>{item.text3}</h4>
+
+                                        <Box className={classes.BoxImages}
+                                            style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(${item.images})`, }}
+                                        >
+                                            <Box className={classes.fronText}>
+                                                <h3 className={classes.txt}>{item.text1}</h3>
+                                                <div className={classes.hr}></div>
+                                                <h6 className={classes.txt2}>{item.text2}</h6>
+                                                <h4 className={classes.txt}>{item.text3}</h4>
+                                            </Box>
                                         </Box>
                                     </Box>
                                 )
@@ -155,7 +139,7 @@ export function Reshape() {
                             <span className={clsx(classes.pagination, 'flicking-pagination')}></span>
                         </ViewportSlot>
 
-                       
+
                     </Flicking>
                 </Box>
 

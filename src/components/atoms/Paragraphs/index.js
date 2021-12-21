@@ -79,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function Paragraphs({
     title,
+    style,
     redline,
     subtitle,
     subtitle1,
@@ -99,7 +100,7 @@ export function Paragraphs({
     const classes = useStyles()
     return (
         <>
-            <Box className={classes.paraBox}>
+            <Box className={classes.paraBox} style={style}>
                 <h3 className={classes.head}>{title}</h3>
                 {
                     redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''

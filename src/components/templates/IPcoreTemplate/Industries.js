@@ -40,8 +40,8 @@ const useStyles = makeStyles((theme) => ({
     },
     iconBox: {
         borderRight: '2px solid #182AC3',
-        width: '3.1rem',
-        height: '3.1rem',
+        width: '3.5rem',
+        height: '3.5rem',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         width: '20vw',
         height: '20vw',
         border: '1px solid #DCDCDC',
-        boxShadow: '0px 0px 20px #00000017',
+        boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::before": {
             content: "''",
-            height: '7px',
+            height: '5px',
             width: '0',
             background: '#DE141A',
             position: 'absolute',
@@ -66,23 +66,19 @@ const useStyles = makeStyles((theme) => ({
         },
         "&:hover": {
             color: '#182AC3',
-            boxShadow: '0px 0px 40px #00000017',
-            border:'2px solid white',
+            boxShadow: '0px 0px 20px #00000017',
+            border:'1px solid white',
             "& $imgBox": {
                 transform: 'scale(1.2)'
             },
             "&::before": {
-                height: '7px',
+                height: '5px',
                 width: '90%',
                 opacity: '1',
                 [theme.breakpoints.down('sm')]: {
                     height: '5px'
                 }
             },
-            "&::after": {
-                height: '0%',
-            },
-
         },
 
 

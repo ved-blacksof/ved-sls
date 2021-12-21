@@ -28,13 +28,13 @@ const useStyles = makeStyles((theme) => ({
 
     },
     imageBox: {
-        width: '10rem',
+        width: '8rem',
         "& img": {
             width: '100%',
             maxHeight: '100%'
         },
         [theme.breakpoints.down('sm')]: {
-            width: '10rem',
+            width: '7rem',
         }
     },
     head: {

@@ -31,7 +31,6 @@ export function SolarTemplate() {
                 maintitle="Hardware Offerings"
                 data={solarhardware}
                 // style={{ opacity: '0' }}
-
             />
 
 
@@ -47,7 +46,7 @@ export function SolarTemplate() {
                  title="SunSights Live"
                  subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
                 
-                 images='./images/solar/SunSight_Live_2x.png'
+                 images='./images/solar/Sunsight-Dashboard.png'
             />
 
             {/* <Cards

@@ -18,44 +18,65 @@ const useStyles = makeStyles((theme) => ({
         top: '100%',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
+            width: '100%',
+            position: 'static',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between'
+
         }
     },
     boxes: {
-        height: '15vw',
+        height: '14vw',
         width: '15vw',
-        display:'flex',
-        // justifyContent:'space-evenly',
-        alignItems:'center',
+        display: 'flex',
+        alignItems: 'center',
         borderRadius: '.8rem',
         marginRight: '3%',
         boxShadow: '0px 0px 20px #00000029',
-        padding: '3% 1%',
+        padding: '2% 1%',
         background: 'white',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
-            marginBottom: '0'
-        }
+            width: '20vw',
+            height: '20vw',
+            padding: '3% 2%',
+
+            borderRadius: '.5rem',
+            margin: '5% 2%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '35vw',
+            height: '35vw',
+            padding: '3% 2%',
+
+            borderRadius: '.5rem',
+            margin: '5% 2%',
+        },
+
     },
     iconsBox: {
-        height: '6rem',
-        marginTop:'5%',
+        height: '5rem',
+        marginTop: '1%',
         textAlign: 'center',
-        border:'1px solid red',
         cursor: 'pointer',
         [theme.breakpoints.down('sm')]: {
             marginTop: '0',
             height: '4rem'
         },
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '0',
+            height: '3rem'
+        },
 
     },
     icons: {
-        maxWidth: '100%',
-        height: '100%',
+        width: '100%',
+        maxHeight: '100%',
     },
     subText: {
-
+        fontWeight:'bold',
         color: 'black',
         textDecoration: 'none',
         cursor: 'pointer',

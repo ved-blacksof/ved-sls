@@ -1,21 +1,21 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImage, Paragraphs, MainContainer } from "../atoms"
+import { PositionImage, Paragraphs, MainContainer, MapIcon1 } from "../atoms"
 import Bounce from 'react-reveal/Bounce';
+import { yalgar } from '.';
 
 
 const useStyles = makeStyles((theme) => ({
     mainHeads: {
         display: 'flex',
         justifyContent: 'center',
-        // alignItems:'center',
         [theme.breakpoints.down('sm')]: {
             lineHeight: '1.2',
         },
     },
     qualityContainer: {
         height: 'fit-content',
-        margin: '15% auto',
+        margin: '10% auto',
         width: '100%'
     },
     BoxLeft: {
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     BoxRight: {
         width: '50%',
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
@@ -69,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function Quality({
+    data1,
     mainheading,
     mainsubheading,
     imageBG,
@@ -133,8 +135,20 @@ export function Quality({
                                     download1={download1}
                                     href={href}
 
-                                /></Bounce>
+                                />
+
+                                {
+                                    data1 ?
+                                        <MapIcon1
+                                            data={data1}
+                                        />
+                                        : ''
+                                }
+
+                            </Bounce>
                         </Box>
+
+
 
                     </Box>
                 </Container>

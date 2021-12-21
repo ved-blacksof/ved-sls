@@ -15,6 +15,7 @@ import { MainContainer } from '../../atoms';
 
 import '../../molecules/molecule.css'
 import Fade from 'react-reveal/Fade';
+import { VerticalTab } from '../../molecules';
 
 
 function TabPanel(props) {
@@ -56,11 +57,16 @@ const useStyles = makeStyles((theme) => ({
     whiteBox: {
         marginTop: '20%',
         paddingBottom: '8%',
+
     },
     expand: {
         color: 'black',
-        width:'50%',
-        textAlign:'left'
+        width: '50%',
+        textAlign: 'left',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+
+        },
     },
     blueBox: {
         background: '#182AC3',
@@ -73,7 +79,10 @@ const useStyles = makeStyles((theme) => ({
     //vertical Tabs Box
     mainBox: {
         display: 'flex',
-        paddingBottom:'15%'
+        paddingBottom: '15%',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
     },
     leftBox: {
         width: '50%',
@@ -102,8 +111,11 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         zIndex: '1',
         top: '0%',
-        left:'55%'
+        left: '55%',
         // position: 'relative',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
     },
     tabPanel: {
         width: '100%',
@@ -124,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
             height: '100%'
         },
         '&::before': {
-            content: "''",
+            // content: "''",
             height: '40%',
             width: '30%',
             background: '#D9393E',
@@ -234,8 +246,6 @@ export function Expanding() {
 
                     <MainContainer>
                         <Fade right>
-                            {/* <Container fixed className={classes.blueBoxContainer} > */}
-                            {/* <VerticalTab /> */}
                             <Container fixed className={classes.mainBox} >
                                 <Box className={classes.leftBox}>
                                     <Tabs
@@ -265,13 +275,9 @@ export function Expanding() {
 
                                     </Tabs>
                                 </Box>
-
-
-
-
                             </Container>
-                            {/* </Container> */}
                         </Fade>
+                        <VerticalTab />
                     </MainContainer>
 
                 </Box>

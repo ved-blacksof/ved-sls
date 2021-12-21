@@ -26,15 +26,15 @@ const useStyles = makeStyles((theme) => ({
         width: '6rem',
         '& img': {
             width: '100%',
-            height: '100%'
+            maxHeight: '100%'
         },
         [theme.breakpoints.down('sm')]: {
             width: '5rem',
-            marginTop: '2rem'
+            marginTop: '1%'
         }
     },
     textBox: {
-        width: '65%',
+        width: '75%',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
         }

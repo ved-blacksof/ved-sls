@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         height: '50px',
         display: 'flex',
         alignItems: 'center',
-        border: '2px solid #182AC3',
+        border: '1px solid #182AC3',
         marginTop: '10%',
         color: '#182AC3',
         "&:hover": {
@@ -136,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
         width: '17vw',
         height: '17vw',
         border: '1px solid #DCDCDC',
-        boxShadow: '0px 0px 20px #00000017',
+        boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
@@ -156,9 +156,12 @@ const useStyles = makeStyles((theme) => ({
         '& h4': {
             color: 'black'
         },
+        '& h6': {
+            color: 'black'
+        },
         "&::before": {
             content: "''",
-            height: '6px',
+            height: '5px',
             width: '0',
             background: '#DE141A',
             position: 'absolute',
@@ -171,28 +174,23 @@ const useStyles = makeStyles((theme) => ({
         },
         "&:hover": {
             color: '#182AC3',
-            boxShadow: '0px 0px 25px #00000033',
-            // border: '2px solid white',
+            boxShadow: '0px 0px 10px #00000017',
+            border:'1px solid white',
             "& $imgBox": {
                 transform: 'scale(1.1)'
             },
             "&::before": {
-                height: '6px',
+                height: '5px',
                 width: '90%',
                 opacity: '1',
                 [theme.breakpoints.down('sm')]: {
                     height: '5px'
                 }
             },
-            "&::after": {
-                height: '0%',
-            },
-
         },
-
     },
     imgBox: {
-        width: '70%',
+        width: '60%',
         transition: 'all 500ms ease-in-out',
         marginBottom: '2%'
     },
@@ -250,10 +248,7 @@ const useStyles = makeStyles((theme) => ({
             width: '100%',
         }
     },
-    // red: {
-    //     height: '100%',
-    //     transition: 'all .3s linear',
-    // },
+
     "@keyframes redbar": {
         "0%": {
             opacity: 0,
@@ -476,7 +471,7 @@ export function Realtime({
                                                                     <Box className={classes.imgBox}>
                                                                         <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                                     </Box>
-                                                                    <h4>{item.subtitle} </h4>
+                                                                    <h6>{item.subtitle} </h6>
                                                                 </Box>
                                                             </a>
                                                         </Box>
@@ -486,7 +481,7 @@ export function Realtime({
                                                             <Box className={classes.imgBox}>
                                                                 <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                             </Box>
-                                                            <h4>{item.subtitle} </h4>
+                                                            <h6>{item.subtitle} </h6>
                                                         </Box>
                                                 }
                                             </>

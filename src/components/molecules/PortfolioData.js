@@ -63,12 +63,12 @@ export const reshape = [
 
 export const port = [
     {
-        images: './images/homepage-icons/32._IP Core- FPGA.svg',
+        images: './images/homepage-icons/32._IP Core-FPGA.svg',
         text: 'IP Core / FPGA ',
         link: 'ipcore'
     },
     {
-        images: './images/homepage-icons/1._IOT_Platform.png',
+        images: './images/homepage-icons/1._IOT_Platform.svg',
         text: 'IoT Platform',
         link: 'iot'
     },
@@ -83,7 +83,7 @@ export const port = [
         link: 'evcharger'
     },
     {
-        images: './images/homepage-icons/4._Solar_&_Wind.png',
+        images: './images/homepage-icons/4._Solar_&_Wind.svg',
         text: 'Solar & Wind',
         link: 'solar'
     },
@@ -93,12 +93,12 @@ export const port = [
         link: 'smartmeter'
     },
     {
-        images: './images/homepage-icons/7._Home_Automation.png',
+        images: './images/homepage-icons/7._Home_Automation.svg',
         text: 'Home Automation',
         link: 'homeauto'
     },
     {
-        images: './images/homepage-icons/8._Smart_Street_Light.png',
+        images: './images/homepage-icons/8._Smart_Street_Light.svg',
         text: 'Smart Street Lights',
         link: 'smartstreet'
     },
@@ -113,12 +113,12 @@ export const port = [
         link: 'digital'
     },
     {
-        images: './images/homepage-icons/11._Traffic_Solutions.png',
+        images: './images/homepage-icons/11._Traffic_Solutions.svg',
         text: 'Traffic Solutions',
         link: 'smarttraffic'
     },
     {
-        images: './images/homepage-icons/10._Gaming.png',
+        images: './images/homepage-icons/10._Gaming.svg',
         text: 'Gaming',
         link: 'gaming',
     },
@@ -192,14 +192,14 @@ export const realtime = [
 
 export const certification = [
     {
-        images: './images/Mask Group 3.png',
+        images: './images/about/certificatesLogo/Logo1.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         href: `${fifteen1}`
     },
     {
-        images: './images/Mask Group 3.png',
+        images: './images/about/certificatesLogo/Logo2.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -207,7 +207,7 @@ export const certification = [
 
     },
     {
-        images: './images/Mask Group 5.png',
+        images: './images/about/certificatesLogo/Logo3.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -215,7 +215,7 @@ export const certification = [
 
     },
     {
-        images: './images/Mask Group 6.png',
+        images: './images/about/certificatesLogo/Logo4.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -223,7 +223,7 @@ export const certification = [
 
     },
     {
-        images: './images/Mask Group 5.png',
+        images: './images/about/certificatesLogo/Logo5.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -231,7 +231,7 @@ export const certification = [
 
     },
     {
-        images: './images/Mask Group 6.png',
+        images: './images/about/certificatesLogo/Logo6.png',
         case: 'ISO 9001',
         head: 'Heading',
         para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -376,6 +376,24 @@ export const yalgar = [
         text: 'Financial Data Streaming'
     },
 ]
+export const transSmartFirm = [
+    {
+        images: './images/transformers/iconsOverview/47._Handles arithmetic and logical operations.svg',
+        text: 'Handles arithmetic and logical operations'
+    },
+    {
+        images: './images/transformers/iconsOverview/48._Data collection at unit levels.svg',
+        text: 'Data collection at unit levels'
+    },
+    {
+        images: './images/transformers/iconsOverview/49._Monitors communication with the cloud.svg',
+        text: 'Monitors communication with the cloud'
+    },
+    {
+        images: './images/transformers/iconsOverview/50._Communication with DTMS mobile app.svg',
+        text: 'Communication with DTMS mobile app'
+    },
+]
 
 
 export const loc = [
@@ -416,16 +434,35 @@ export const digital = [
         text: 'Easy Authentication'
     },
 ]
+//White icons only 4 for DigitalTemplate
+export const cloudOverview = [
+    {
+        images: './images/cloud/cloudOverview/73._APIs for real-time tracking.svg',
+        text: 'APIs for real-time tracking'
+    },
+    {
+        images: './images/cloud/cloudOverview/74._Easy to integrate.svg',
+        text: 'Easy to integrate'
+    },
+    {
+        images: './images/cloud/cloudOverview/75._Scalable Solutions.svg',
+        text: 'Scalable Solutions'
+    },
+    {
+        images: './images/cloud/cloudOverview/76._Developer-friendly features.svg',
+        text: 'Developer-friendly features'
+    },
+]
 
 //White icons only 4 for SmartstreetTemplate
 export const smartstreet = [
     {
         images: './images/smartstreet/14._Retrofit for existing infrastructure-(RF and LoRa variants).svg',
-        text: 'Retrofit for existing infrastructure (RF and LoRa variants)'
+        text: 'Retrofit for existing infrastructure'
     },
     {
         images: './images/smartstreet/13._Energy efficient with motion-& ambient light sensors.svg',
-        text: 'Energy efficient with motion and ambient light sensors'
+        text: 'Energy efficient with different sensors'
     },
     {
         images: './images/smartstreet/15._Real-time alerts-on malfunctions.svg',
@@ -433,7 +470,7 @@ export const smartstreet = [
     },
     {
         images: './images/smartstreet/16._Real-time reports for lighting status,-performance, energy consumption, etc.svg',
-        text: 'Real-time reports for lighting status, performance, energy consumption, etc.'
+        text: 'Detailed reports shown in real-time'
     },
 ]
 //White icons only 4 for SmarttrafficTemplate
@@ -473,7 +510,7 @@ export const ipcoreBoxes = [
     {
         // images: './images/Layer_27-smarttraffic02.svg',
         images:"./images/FPGA_Website_Image (5).png",
-        text: 'IP Core Development and Customization'
+        text: 'IP Core Development & Customization'
     },
     {
         // images: './images/Layer_35-smarttraffic03.svg',
@@ -515,23 +552,23 @@ export const smarttrafficCards = [
 //White icons only 4 for SolarTemplate
 export const solar = [
     {
-        images: './images/solar/icons/38._End-to-end Solar and Wind Solutions.svg',
-        text: 'End-to-end Solar and Wind Solutions'
+        images: './images/solar/icons/36._End-to-end Solar and Wind Solutions.svg',
+        text: 'End-to-end Solar & Wind Solutions'
     },
     {
-        images: './images/solar/icons/39._Powered through IoT.svg',
+        images: './images/solar/icons/37._Powered through IoT.svg',
         text: 'Powered through IoT'
     },
     {
-        images: './images/solar/icons/40._Real-time alerts on-abnormality detection.svg',
-        text: 'Real-time alerts on abnormality detection'
+        images: './images/solar/icons/38._Real-time alerts on-abnormality detection.svg',
+        text: 'Abnormality detection in real-time'
     },
     {
-        images: './images/solar/icons/41._Real-time reports of panel-wise-energy generation.svg',
-        text: 'Real-time reports of panel-wise energy generation'
+        images: './images/solar/icons/39._Real-time reports of panel-wise energy generation.svg',
+        text: 'Panel-wise energy reports in real-time'
     },
     // {
-    //     images: './images/solar/icons/42._Predictive energy optimization.svg',
+    //     images: './images/solar/icons/40._Predictive energy optimization.svg',
     //     text: 'Predictive energy optimization'
     // },
 ]
@@ -637,16 +674,16 @@ export const gamingapplications = [
 //yet to update
 export const gamingOverview = [
     {
-        images: './images/smartstreet/14._Retrofit for existing infrastructure-(RF and LoRa variants).svg',
-        text: 'Android and iOS App control'
+        images: './images/gaming/33._Android and iOS App control.svg',
+        text: 'Android & iOS App control'
     },
     {
-        images: './images/smartstreet/13._Energy efficient with motion-& ambient light sensors.svg',
+        images: './images/gaming/34._Wi-Fi Connectivity.svg',
         text: 'Wi-Fi Connectivity'
     },
     {
-        images: './images/smartstreet/15._Real-time alerts-on malfunctions.svg',
-        text: 'Cloud for online and offline mode operations'
+        images: './images/gaming/35._Cloud for online and-offline mode operations.svg',
+        text: 'Cloud for online & offline mode'
     }
 ]
 
@@ -655,7 +692,7 @@ export const expertise = [
     {
         icon: './images/Group 82620.svg',
         h4: 'Deep Learning',
-        h6: 'Boost the performance of your forecasting, decision-making, and other operations with Deep Learning technology. We offer customized products and services using this more sophisticated, advanced and automated version of Machine Learning to help you attain business success and launch class-apart products.'
+        h6: 'Boost the performance of your forecasting, decision-making, and other operations with Deep Learning technology. Our deep learning based solutions are customized to help you attain business excellence and create class-apart product and service offerings.'
     },
     {
         icon: './images/AI.svg',
@@ -675,7 +712,7 @@ export const expertise = [
     {
         icon: './images/Group 82617.svg',
         h4: 'Machine Learning',
-        h6: 'We leverage ML to build powerful solutions that automate your processes, reducing human intervention and pacing up operational efficiency. Our custom solutions are designed with a business-first approach to solve your challenges and bring about transformation at the system level.'
+        h6: 'We leverage ML with a business-first outlook to build powerful and customized solutions of automation. Our offerings help you reduce human intervention thereby optimizing costs, throughput, and organizational efficiency at large.'
     },
 
 ]
@@ -795,27 +832,29 @@ export const technologystack = [
 //White icons only 4 for transformersTemplate overview
 export const transformer = [
     {
-        images: './images/Layer_34.svg',
-        text: 'Oil Flow and Level Monitoring'
+        images: './images/transformers/iconsOverview/41._Oil Flow & Level Monitoring.svg',
+        text: 'Oil Flow & Level Monitoring'
     },
     // {
-    //     images: './images/Layer_29.svg',
+    //     images: './images/transformers/iconsOverview/42._Fire Alerts.svg',
     //     text: 'Fire Alerts'
     // },
     {
-        images: './images/Layer_30.svg',
-        text: 'Top and Bottom Oil Temperature Management'
+        images: './images/transformers/iconsOverview/43._Top and Bottom Oil Temprature Management.svg',
+        text: 'Oil Temperature Management',
+        // text: 'Top & Bottom Oil Temperature Management'
     },
     {
-        images: './images/Layer_31.svg',
-        text: 'Fan Control and Cooling Monitoring'
+        images: './images/transformers/iconsOverview/44._Fan Control & Cooling Monitoring.svg',
+        text: 'Fan Control & Cooling Monitoring'
     },
     {
-        images: './images/Layer_32.svg',
-        text: 'Phase voltage, current & overload capacity measurement'
+        images: './images/transformers/iconsOverview/45._Phase voltage, current & overload capacity measurment.svg',
+        text: 'Voltage & Current Measurement',
+        // text: 'Phase voltage, current & overload capacity measurement',
     },
     // {
-    //     images: './images/Layer_19.svg',
+    //     images: './images/transformers/iconsOverview/46._Data Logging.svg',
     //     text: 'Data Logging',
     // },
 ]
@@ -825,7 +864,7 @@ export const transformer = [
 
 export const ipcoreproducts = [
     {
-        images: './images/ipcore/Path 2108.svg',
+        images: './images/ipcore/Products/60._Communication Cores.svg',
         uli: 'Communication Cores',
         firstli: 'Embedded USB3.1 Gen2 Device Controller',
         secli: 'Embedded USB3.1 Gen 1 Device Controller',
@@ -833,24 +872,24 @@ export const ipcoreproducts = [
         fourthli: 'USB 1.1 Device/Host Controller',
     },
     {
-        images: './images/ipcore/Layer 2.svg',
+        images: './images/ipcore/Products/61._Interface Cores.svg',
         uli: 'Interface Cores',
         firstli: 'I2S Controller',
         secli: 'I2C Master/Slave/Controller',
         thirdli: 'SPI Slave to Avalon Master Bridge',
     },
     {
-        images: './images/ipcore/Layer 1.svg',
+        images: './images/ipcore/Products/62._Memory Controller Core.svg',
         uli: 'Memory Controller Core',
         firstli: 'SD/eMMC Host Controller',
     },
     {
-        images: './images/ipcore/Layer 2-1.svg',
+        images: './images/ipcore/Products/63._OS and HAL Drivers to support IP Cores.svg',
         uli: 'OS and HAL Drivers to support IP cores',
         firstli: 'End-to-end product development of applications to support IP Core',
     },
     {
-        images: './images/ipcore/Layer 2-2.svg',
+        images: './images/ipcore/Products/64._Hardware Boards.svg',
         uli: 'Hardware Boards',
         firstli: 'FMC Snap On Boards',
         secli: 'HSMC Snap On Boards',
@@ -864,77 +903,77 @@ export const ipcoreproducts = [
 
 export const expertiseblue = [
     {
-        images: './images/ipcore/expertise/36._Architecture design.svg',
+        images: './images/ipcore/expertise/65._Architecture design.svg',
         text: 'Architecture design'
     },
     {
-        images: './images/ipcore/expertise/ipcore-Layer_13.svg',
+        images: './images/ipcore/expertise/66._RTL Coding (Verilog, System Verilog).svg',
         text: 'RTL coding (Verilog, System Verilog)'
     },
     {
-        images: './images/ipcore/expertise/ipcore-Layer_14.svg',
+        images: './images/ipcore/expertise/67._Functional Verification.svg',
         text: 'Functional verification'
     },
     {
-        images: './images/ipcore/expertise/ipcore-Layer_15.svg',
+        images: './images/ipcore/expertise/68._Validation on Hardware platform.svg',
         text: 'Validation on hardware platform'
     },
     {
-        images: './images/ipcore/expertise/ipcore-Layer_16.svg',
+        images: './images/ipcore/expertise/69._Circuit Design.svg',
         text: 'Circuit design'
     },
     {
-        images: './images/ipcore/expertise/37._FPGA design Tools.svg',
+        images: './images/ipcore/expertise/70._FPGA Design Tools.svg',
         text: 'FPGA Design Tools'
     },
     {
-        images: './images/ipcore/expertise/ipcore-Layer_17.svg',
+        images: './images/ipcore/expertise/71._Excellent Customer.svg',
         text: 'Excellent customer support'
     },
     {
-        images: './images/ipcore/expertise/ipcore-Layer_18.svg',
+        images: './images/ipcore/expertise/72._Serving customers since 20+ years.svg',
         text: 'Serving customers since 20+ Years'
     },
 ]
 export const industries = [
     {
-        images: './images/ipcore-Path 2086.svg',
+        images: './images/ipcore/Industries/77._Consumer Electronics.svg',
         text: 'Consumer Electronics'
     },
     {
-        images: './images/ipcore-Path 2111.svg',
+        images: './images/ipcore/Industries/78._Defence.svg',
         text: 'Defence'
     },
     {
-        images: './images/ipcore-Group 82847.svg',
+        images: './images/ipcore/Industries/79._Test & Measurment.svg',
         text: 'Test and Measurement'
     },
     {
-        images: './images/ipcore-Path 2112.svg',
+        images: './images/ipcore/Industries/80._High Speed Camera.svg',
         text: 'High Speed Camera'
     },
     {
-        images: './images/ipcore-Path 2081.svg',
+        images: './images/ipcore/Industries/81._Automobile.svg',
         text: 'Automobile'
     },
     {
-        images: './images/ipcore-Path 2082.svg',
+        images: './images/ipcore/Industries/82._Data Acquisition.svg',
         text: 'Data Acquisition'
     },
     {
-        images: './images/Group 82849.svg',
+        images: './images/ipcore/Industries/84._Security Product.svg',
         text: 'Security Product'
     },
     {
-        images: './images/ipcore-Path 2118.svg',
+        images: './images/ipcore/Industries/83._Medical Devices.svg',
         text: 'Medical Devices'
     },
     {
-        images: './images/ipcore-Path 2113.svg',
+        images: './images/ipcore/Industries/85._Avionics.svg',
         text: 'Avionics'
     },
     {
-        images: './images/ipcore-Group 82848.svg',
+        images: './images/ipcore/Industries/86._Multimedia.svg',
         text: 'Multimedia'
     },
 ]

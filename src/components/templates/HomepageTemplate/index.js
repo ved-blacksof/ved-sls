@@ -20,7 +20,7 @@ export function HomepageTemplate() {
             <Sbanner
                 Background={Homepage}
                 Background1={Homepage1}
-                // Background2={Homepage2} 
+                Background2={Homepage2} 
                 mouse={'./images/scroll.svg'} />
 
             <GridBlue>
@@ -60,8 +60,8 @@ export function HomepageTemplate() {
             <Partners />
 
             <Visit
-                title="Contact Us"  
-
+                title="Contact Us"
+                href="/contact"
             />
 
             <Footer />

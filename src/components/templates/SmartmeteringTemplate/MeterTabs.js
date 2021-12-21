@@ -115,9 +115,10 @@ export function MeterTabs() {
                         <Quality
                             mainheading="smart metering"
                             mainsubheading="SLS has continually been engaged in developing breakthrough products in the Smart Metering Landscape. We offer a wide range of solutions built using a culmination of new-edge technologies over the functional blocks of HES, WAN cluster for smart devices and, DCU and HAN application for residential metering applications."
-                            imageBG="./images/Smart_Metering_Profile.png"
+                            imageBG="./images/smartmeter/RF-Tower.png"
+                            // imageBG="./images/smartmeter/Smart_Metering_Profile.png"
                             heading="RF Canopy"
-                            subtitle="Our Smart Metering Infrastructure is powered through RF Technology and Network Interface Card that offers robust network capacity to all the connected devices. Our products use lower bandwidth radio frequencies that are less congested and offer reliable connectivity across the Smart Metering Infrastructure.  "
+                            subtitle="Our Smart Metering Infrastructure is powered through RF Technology that uses lower bandwidth radio frequencies and Network Interface Card to offer robust network capacity to all the connected devices."
                             list="list"
                             firstli="Wi-Sun Protocol"
                             secli="LoRaWAN Network"

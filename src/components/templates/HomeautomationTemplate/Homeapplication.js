@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     blueBox: {
         position: 'relative',
         background: '#182AC3',
-        padding: '15% 0%',
+        padding: '18% 0%',
         [theme.breakpoints.down('sm')]: {
             padding: '20% 0%'
         },

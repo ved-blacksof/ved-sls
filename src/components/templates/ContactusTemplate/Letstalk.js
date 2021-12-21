@@ -1,28 +1,31 @@
 import Grid from '@egjs/grid'
 import { Box, Button, Container, Input, makeStyles, TextField } from '@material-ui/core'
 import React from 'react'
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { Buttons, GeneralHeading, MainContainer, ParagraphsBlue } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
         display: 'flex',
-        justifyContent:'space-between',
-        margin: '5% auto',
-        [theme.breakpoints.down('sm')]:{
-            flexDirection:'column',
-            width:'80%'
+        justifyContent: 'space-between',
+        padding: '5% auto',
+        // border:'2px solid red',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            width: '80%'
         }
 
     },
     leftBox: {
         width: '50%',
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
         }
     },
     rightBox: {
         width: '40%',
-        [theme.breakpoints.down('sm')]:{
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
         }
     },
@@ -32,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: '2px solid white',
         color: 'white'
     },
-    cssLabel:{
-        color:'white'
+    cssLabel: {
+        color: 'white'
     },
-    cssFocused:{
-        color:'white'
+    cssFocused: {
+        color: 'white'
     },
     btn: {
         background: 'white',
@@ -47,24 +50,25 @@ const useStyles = makeStyles((theme) => ({
         padding: '.6rem 2rem',
         float: 'right',
         borderRadius: '3px',
-        "&:hover":{
-            background:'#182AC3',
-            boxShadow:'0px 0px 3px white',
-            color:'white'
+        "&:hover": {
+            background: '#182AC3',
+            boxShadow: '0px 0px 3px white',
+            color: 'white'
         }
     },
     iconBox: {
-        display:'flex',
-        alignItems:'flex-end'
+        display: 'flex',
+        alignItems: 'flex-end'
     },
     address: {
-        marginTop:'2%',
+        marginTop: '2%',
     },
     textBtm: {
         width: '50%',
-        margin: '10% auto',
-        textAlign:'center',
-        [theme.breakpoints.down('sm')]:{
+        margin: '0% auto',
+        padding: '8% 0%',
+        textAlign: 'center',
+        [theme.breakpoints.down('sm')]: {
             width: '80%',
         }
     }
@@ -72,6 +76,9 @@ const useStyles = makeStyles((theme) => ({
 
 export function Letstalk() {
     const classes = useStyles()
+    function onChange(value) {
+        console.log("Captcha value:", value);
+    }
     return (
         <>
             <MainContainer>
@@ -91,15 +98,15 @@ export function Letstalk() {
                             color="black"
                             InputLabelProps={{
                                 classes: {
-                                  root: classes.cssLabel,
-                                  focused: classes.cssFocused
+                                    root: classes.cssLabel,
+                                    focused: classes.cssFocused
                                 }
                             }}
                             InputProps={{
                                 classes: {
-                                  root: classes.cssOutlinedInput,
-                                  focused: classes.cssFocused,
-                                  notchedOutline: classes.notchedOutline
+                                    root: classes.cssOutlinedInput,
+                                    focused: classes.cssFocused,
+                                    notchedOutline: classes.notchedOutline
                                 }
                             }}
                         />
@@ -111,15 +118,15 @@ export function Letstalk() {
                             color="black"
                             InputLabelProps={{
                                 classes: {
-                                  root: classes.cssLabel,
-                                  focused: classes.cssFocused
+                                    root: classes.cssLabel,
+                                    focused: classes.cssFocused
                                 }
                             }}
                             InputProps={{
                                 classes: {
-                                  root: classes.cssOutlinedInput,
-                                  focused: classes.cssFocused,
-                                  notchedOutline: classes.notchedOutline
+                                    root: classes.cssOutlinedInput,
+                                    focused: classes.cssFocused,
+                                    notchedOutline: classes.notchedOutline
                                 }
                             }}
 
@@ -132,19 +139,27 @@ export function Letstalk() {
                             color="black"
                             InputLabelProps={{
                                 classes: {
-                                  root: classes.cssLabel,
-                                  focused: classes.cssFocused
+                                    root: classes.cssLabel,
+                                    focused: classes.cssFocused
                                 }
                             }}
                             InputProps={{
                                 classes: {
-                                  root: classes.cssOutlinedInput,
-                                  focused: classes.cssFocused,
-                                  notchedOutline: classes.notchedOutline
+                                    root: classes.cssOutlinedInput,
+                                    focused: classes.cssFocused,
+                                    notchedOutline: classes.notchedOutline
                                 }
                             }}
 
                         />
+
+                        <Box>
+                            <ReCAPTCHA
+                                // ref={recaptchaRef}
+                                sitekey="Your client site key"
+                                onChange={onChange}
+                            />
+                        </Box>
 
 
                         <Button className={classes.btn}>
@@ -154,40 +169,40 @@ export function Letstalk() {
                     </Box>
 
                     <Box className={classes.rightBox}>
-                        <Box style={{marginTop:'10%'}}>
+                        <Box style={{ marginTop: '10%' }}>
                             <Box className={classes.iconBox}>
-                                <img src={'./images/contactus/Layer_x0020_1.svg'} /> <h4 style={{marginLeft:"5%"}}>INDIA</h4>
+                                <img src={'./images/contactus/Layer_x0020_1.svg'} /> <h4 style={{ marginLeft: "5%" }}>INDIA</h4>
                             </Box>
                             <Box className={classes.address}>
-                                <h6>Systems Level Solutions (I) Pvt. Ltd. 
-                                    <br/>
-                                    32, D4, Phase 1,
-                                    GIDC Estate V.U. Nagar 
-                                    <br/>
-                                    Gujarat 388 121, India 
-                                    <br/>
-                                    Tel.: +91-2692-232 501/502 (Ext. 53)
-                                </h6>
+                                <h6> Systems Level Solutions (India) Pvt. Ltd.</h6>
+                                <h6> 32, D4, Phase 1, GIDC Estate </h6>
+                                <h6> V.U. Nagar : 388 121 </h6>
+                                <h6> Gujarat, India. </h6>
+                                <h6> Tel.: +91-2692-232 501/502 (Ext. 53) </h6>
                             </Box>
                         </Box>
-                        <Box style={{marginTop:'10%'}}>
+                        <Box style={{ marginTop: '10%' }}>
                             <Box className={classes.iconBox}>
-                                <img src={'./images/contactus/Layer_x0020_1-1.svg'} /><h4 style={{marginLeft:"6%"}}>USA</h4>
+                                <img src={'./images/contactus/Layer_x0020_1-1.svg'} /><h4 style={{ marginLeft: "6%" }}>USA</h4>
                             </Box>
                             <Box className={classes.address}>
-                                <h6>
-                                511 N. Washington Avenue, Marshall <br/>Texas 75670 <br/> Ph: 001-408-852-0067  <br/>Ph: 001-408-705-2339 (Rings in India)
-                                </h6>
+                                <h6> System Level Solutions, Inc. </h6>
+                                <h6> 511 N. Washington Avenue,  </h6>
+                                <h6>  Marshall, Texas 75670 </h6>
+                                <h6> Ph: 001-408-852-0067  </h6>
+                                <h6> Ph: 001-408-705-2339 (Rings in India)</h6>
                             </Box>
                         </Box>
-                        <Box style={{marginTop:'10%'}}>
+                        <Box style={{ marginTop: '10%' }}>
                             <Box className={classes.iconBox}>
-                                <img src={'./images/contactus/Layer_x0020_1-2.svg'} /><h4 style={{marginLeft:"11%"}} >UK</h4>
+                                <img src={'./images/contactus/Layer_x0020_1-2.svg'} /><h4 style={{ marginLeft: "11%" }} >UK</h4>
                             </Box>
                             <Box className={classes.address}>
-                                <h6>
-                                20 Mortlake, 20 Mortlake High Street, <br/> London, SW14 8JN
-                                </h6>
+                                <h6> SLS Overseas </h6>
+                                <h6> C/O Davanti Business Solutions Ltd, </h6>
+                                <h6> 20 Mortlake, 20 Mortlake High Street,</h6>
+                                <h6> London, SW14 8JN</h6>
+
                             </Box>
                         </Box>
 

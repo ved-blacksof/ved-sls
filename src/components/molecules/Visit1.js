@@ -8,25 +8,42 @@ const useStyles = makeStyles((theme) => ({
     visitBox: {
         margin: "5% auto",
         width: '80%',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+
+        }
     },
     textLinkBox: {
         display: 'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        marginBottom:'4%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '4%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            flexDirection:'column-reverse'
+
+        }
     },
     btmText: {
         color: '#182AC3',
         fontWeight: 'bold',
+        [theme.breakpoints.down('sm')]: {
+            textAlign:'center'
+         }
     },
     btmText1: {
         textAlign: 'left',
         color: '#182AC3',
         fontWeight: 'bold',
+        [theme.breakpoints.down('sm')]: {
+           textAlign:'center'
+        }
     },
     iconMainBox: {
-        marginLeft:'2%',
-        
+        marginLeft: '2%',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '1%',
+        }
     },
     icon: {
         textAlign: 'left',
@@ -36,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '2rem%',
+            width: '2rem',
         },
     },
     btns: {
@@ -48,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
             marginTop: '4%'
         },
         [theme.breakpoints.down('xs')]: {
-            width: '60%'
+            width: '70%'
         },
     },
 
