@@ -3,6 +3,7 @@ import React from 'react'
 import { MainContainer, ServiceBox } from '../atoms'
 import clsx from 'clsx';
 import { smarttraffic } from '.';
+import Fade from 'react-reveal'
 
 const useStyles = makeStyles((theme) => ({
     containers: {
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     boxes: {
         width: '28%',
         height: '100%',
-        margin: '1% 2%',
+        margin: '1% 2.5%',
         [theme.breakpoints.down('sm')]: {
             width: '45%',
             marginRight: '2%',
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     imgBox: {
-        height: '230px',
+        // height: '230px',
         width: '100%',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
@@ -80,10 +81,12 @@ export function PosBoxes({
                             return (
                                 <Box className={classes.boxes}>
                                     <Box className={classes.imgBox}>
-                                        <img className={classes.images} style={style} src={item.images} />
+                                        <Fade bottom><img className={classes.images} style={style} src={item.images} /></Fade>
                                     </Box>
 
-                                    <h4 className={classes.txt}>{item.text}</h4>
+                                    <Fade bottom>
+                                        <h4 className={classes.txt}>{item.text}</h4>
+                                    </Fade>
                                 </Box>
                             )
                         })

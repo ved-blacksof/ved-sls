@@ -28,7 +28,7 @@ export function TransformersTemplate() {
             </GridBlue>
 
             <Quality
-                imageBG="./images/transformers/Smart_Firmware.png"
+                imageBG="./images/transformers/Smart_Firmware.jpg"
                 mainheading="Offerings"
                 heading="Smart Firmware"
                 redline="redline"

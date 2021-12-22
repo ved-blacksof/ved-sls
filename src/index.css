@@ -1,7 +1,14 @@
+
+
 *{
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -392,96 +399,28 @@ body {
         text-indent: -21px;
         margin-left: 21px;
       }
-
-      /* header.linkActive{
-        color:'white',
-
-      }
-
-      header.linkActive.clsAfterPos{
-        color:'red',
-      } */
     }
-    
 
 
 
 
-
-    /* //animtion */
-
-  .redbarBox{
-    position: relative;
-    overflow: hidden;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 5px 83px 0 rgb(9 29 62 / 5%);
-    box-shadow: 0 5px 83px 0 rgb(9 29 62 / 5%);
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-  }
-.redbarBox{
-  transition: all 800ms linear;
-  position: relative;
- }
 
  
-
-.redbarBox .redbar::before{
-  width: calc(80% );
-  background-color: #e6e8eb;
-}
-
-
-.redbarBox .redbar::before , .redbarBox .redbar::after {
-    content: '';
-    position: absolute;
-    bottom: 5%;
-    left: 10%;
-    border:2px solid red;
-    height: 8px;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear;
-}
-
-
-.redbarBox:hover .redbar::after{
-  /* width: 100%; */
-  background-color: red;
-
-}
-
-
-
-/* .redbar{
-  animation: redbarOut 800ms linear ;
-}
-
-
-  .redbarBox:hover .redbar{
-    background: #DE141A;
-    animation-name: redbarIn;
-    animation-timing-function: ease-in;
-    animation-duration: 1000ms;
-  }
-
-
-    @keyframes redbarIn {
-        0% {
-          transform: translateX(-100%)
-        };
-        100%{
-          transform: translateX(0%)
-        }
+    ::-webkit-scrollbar {
+      width: 10px;
+      /* border-radius: 20px; */
     }
-
-    @keyframes redbarOut {
-        0% {
-          transform: translateX(0%)
-        };
-        100%{
-          transform: translateX(-200%)
-        }
-    } */
-
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 2px grey;
+      /* border: 2px solid red; */
+      background: transparent;
+      /* border-radius: 10px; */
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #182AC3;
+      border-radius: 10px;
+    }

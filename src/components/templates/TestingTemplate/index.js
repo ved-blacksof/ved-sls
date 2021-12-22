@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
-import { smartstreet } from '../../molecules/PortfolioData'
+import { smartstreet,testingAnalysers } from '../../molecules/PortfolioData'
 
 export function TestingTemplate() {
     return (
@@ -39,22 +39,29 @@ export function TestingTemplate() {
             />
 
             <QualityReverse
-                imageBG="./images/hardwaretesttools.png"
                 heading="RF Test Tools"
                 redline="redline"
                 subhead="Logic analyser"
                 subtitle="The Logic Analyzer is a PCB-based full-featured tool with 36 channels & 100 MHz sampling frequency used for troubleshooting & performance verification of digital circuits."
                 subhead1="Pattern generator"
                 subtitle1="The Pattern Generators is a PCB-based tool which tests, debugs, and characterizes any digital hardware with the use of a variety of digital signals."
-
+                subhead2="In-house anechoic chamber"
+                subtitle2="SLS has an in-house Anechoic Chamber that is equipped with a gamut of RF capabilities offering a range of RF and pre-compliance testing. We help businesses ready their products for market deployments with strict standard and quality checks."
+                data={testingAnalysers}
             />
+
 
             <Quality
-                imageBG="./images/processed_2.png"
-                heading="In-house anechoic chamber"
+                imageBG="./images/"
+                heading="EMI Testing: Conducted Emission EMI Receiver and LISN"
                 redline="redline"
-                subtitle="SLS has an in-house Anechoic Chamber that is equipped with a gamut of RF capabilities offering a range of RF and pre-compliance testing. We help businesses ready their products for market deployments with strict standard and quality checks."
+                subhead=""
+                subtitle="SLS provides testing facilities for EMI (Electromagnetic Interference) and EMC (Electromagnetic Compatibility). With AC and powerline device testing, the EMI and EMC testing provides EM noise detection and electrostatic discharge values."
+                subhead1=""
+                subtitle1=""
+
             />
+
 
             <QualityReverse
                 imageBG="./images/Environmental Test Chamber.png"
@@ -64,7 +71,7 @@ export function TestingTemplate() {
                 subhead1="Thermal Shock Testing"
                 subhead2="Dust Resistance Chambers"
 
-           />
+            />
 
             <Visit
                 goto="Click here to know more about our testing and calibration services!"

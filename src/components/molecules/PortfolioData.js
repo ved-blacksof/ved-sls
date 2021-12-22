@@ -1,6 +1,7 @@
 import fifteen1 from '../assets/certificates/ISO9001-2021_CERT_2015_1.pdf'
 import fifteen2 from '../assets/certificates/ISO9001 - 2015 CERT_2015_2.pdf'
 import fifteen3 from '../assets/certificates/ISO_14001_2015_CERT_SLSCORP_2021_2015_3.pdf'
+// import fifteen4 from '../assets/certificates/ISO_14001_2015_CERT_SLSCORP_2021_2015_4.pdf'
 
 import eight1 from '../assets/certificates/ISO9001-2008 CERT_2015_2008_1.pdf'
 import eight2 from '../assets/certificates/ISO9001-2008 CERT_2012_2008_2.pdf'
@@ -12,7 +13,7 @@ export const research = [
         text: "research"
     },
     {
-        images: "./images/research-01.jpg",
+        images: "./images/research-03.png",
         text: "Design "
     },
     {
@@ -24,10 +25,38 @@ export const research = [
     //     text: "Prototype Testing"
     // },
     {
-        images: "./images/research-04.jpg",
+        // images: "./images/research-04.jpg",
+        images: "./images/reserch-manufacturing.png",
         text: "manufacturing"
     },
 ]
+
+
+export const testingAnalysers = [
+    {
+        images: "./images/hardwaretesttools.png",
+        // text: "research"
+    },
+    {
+        images: "./images/research-03.png",
+        // text: "Design "
+    },
+    {
+        images: "./images/processed_2.png",
+        // text: "Development"
+    },
+    // {
+    //     images: "./images/research-03.jpg",
+    //     text: "Prototype Testing"
+    // },
+    {
+        // images: "./images/research-04.jpg",
+        images: "./images/reserch-manufacturing.png",
+        text: "manufacturing"
+    },
+]
+
+
 
 
 export const reshape = [
@@ -192,49 +221,57 @@ export const realtime = [
 
 export const certification = [
     {
-        images: './images/about/certificatesLogo/Logo1.png',
-        case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href: `${fifteen1}`
-    },
-    {
         images: './images/about/certificatesLogo/Logo2.png',
         case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href: `${fifteen2}`
-
+        head: 'UKAS Intertek',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${fifteen1}`
     },
     {
         images: './images/about/certificatesLogo/Logo3.png',
         case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        head: 'Ukas',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${fifteen2}`
+        
+    },
+    {
+        images: './images/about/certificatesLogo/Logo1.png',
+        case: 'ISO 9001',
+        head: 'QEC',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         href: `${fifteen3}`
 
     },
     {
-        images: './images/about/certificatesLogo/Logo4.png',
+        images: './images/about/certificatesLogo/Logo1.png',
         case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href: `${eight1}`
-
-    },
-    {
-        images: './images/about/certificatesLogo/Logo5.png',
-        case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href: `${eight2}`
+        head: 'QEC1',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${fifteen3}`
 
     },
     {
         images: './images/about/certificatesLogo/Logo6.png',
         case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        head: 'ukas dark',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${eight1}`
+        
+    },
+    {
+        images: './images/about/certificatesLogo/Logo5.png',
+        case: 'ISO 9001',
+        head: 'Heading5',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        href: `${eight2}`
+        
+    },
+    {
+        images: './images/about/certificatesLogo/Logo4.png',
+        case: 'ISO 9001',
+        head: 'Heading6',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         href: `${eight3}`
 
     }
@@ -304,6 +341,22 @@ export const evchargers = [
         images: './images/evcharger/Front view 4.JPG',
         subtitle: 'Type 2 AC Dual Socket Charger',
     },
+]
+
+export const iotOverview = [
+    {
+        images: './images/iot/iotOverview/57._Ready to use device-SDKs for faster time-to-market.svg',
+        text: 'Ready-to-use SDKs'
+    },
+    {
+        images: './images/iot/iotOverview/58._Secured cloud platforms for Data Analytics & Real-time Monitoring.svg',
+        text: 'Secured Cloud Platform',
+    },
+    {
+        images: './images/iot/iotOverview/59._Scalability purpose-built for smart & widespread business applications.svg',
+        text: 'Scalability for widespread applications'
+    },
+   
 ]
 
 

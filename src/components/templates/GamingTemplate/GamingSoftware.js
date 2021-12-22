@@ -180,11 +180,11 @@ export function GamingSoftware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                The Iot Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. The application facilitates both, 
+                                The Iot Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. 
                                     {
                                         show ?
                                             <h6 style={{ color: 'black', textAlign: 'left', display: 'inline' }}>
-                                                online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.
+                                                The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.
                                             </h6> : ''
                                     }
                                 </h6>

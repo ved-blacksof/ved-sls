@@ -3,7 +3,7 @@ import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
 import { Ubanner, Overview, Squareboxes, Realtime, Visit, Visit1 } from '../../molecules'
-import { middleware, iotnebulink } from '../../molecules/PortfolioData'
+import { middleware, iotnebulink,iotOverview } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
@@ -52,10 +52,14 @@ export function IOTplatformTemplate({
                             We offer building blocks for IoT solutions and help businesses build world-class products and services in the automation
                             industry. We also provide multiprotocol support for services including G3PLC, WiFi, BLE, Sigfox, LoRa, GSM, etc.,
                             which makes our solution the preferred choice for industry leaders."
-                    list="list"
+                    // list="list"
                     li1="Ready to use device SDKs for faster time-to-market"
                     li2="Secured cloud platforms for Data Analytics and real-time Monitoring"
                     li3="Scalability purpose-built for smart and widespread business applications"
+
+                    mapIconPosition="mapIconPosition"
+                    data={iotOverview}
+                    style={{ height: 'fit-content', marginBottom:'20%' }}
 
                 />
             </GridBlue>

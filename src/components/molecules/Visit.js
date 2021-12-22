@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Box } from '@material-ui/core'
 import { Buttons, MainContainer } from '../atoms'
+import Fade from 'react-reveal'
 
 const useStyles = makeStyles((theme) => ({
     visitBox: {
@@ -47,15 +48,18 @@ export function Visit({
     return (
         <MainContainer>
             <Box className={classes.visitBox}>
-                <h4 className={classes.btmText} style={style}> {goto}</h4>
-                <h3 className={classes.btmText} style={style}> {goto1}</h3>
+                <Fade bottom>
+                    <h4 className={classes.btmText} style={style}> {goto}</h4>
+                    <h3 className={classes.btmText} style={style}> {goto1}</h3>
 
+                </Fade>
                 <Buttons
                     className={classes.btns}
                     title={title}
                     href={href}
                     arrowIcon="./images/Icon feather-arrow-right.svg"
                 />
+
             </Box>
         </MainContainer>
     )

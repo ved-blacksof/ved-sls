@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImage, Paragraphs, MainContainer } from "../atoms"
+import { PositionImage, Paragraphs, MainContainer, AnalyserCarousel } from "../atoms"
 import Bounce from 'react-reveal/Bounce';
 
 
@@ -49,10 +49,13 @@ export function QualityReverse({
     imageBG,
     heading,
     subhead,
-    subtitle,
     subhead1,
-    subtitle1,
     subhead2,
+    subhead3,
+    subtitle,
+    subtitle1,
+    subtitle2,
+    subtitle3,
     redline,
     uli,
     download,
@@ -65,6 +68,7 @@ export function QualityReverse({
     style,
     style1,
     list,
+    data
 }) {
     const classes = useStyles()
     return (
@@ -83,8 +87,11 @@ export function QualityReverse({
                                     subhead={subhead}
                                     subhead1={subhead1}
                                     subhead2={subhead2}
+                                    subhead3={subhead3}
                                     subtitle={subtitle}
                                     subtitle1={subtitle1}
+                                    subtitle2={subtitle2}
+                                    subtitle3={subtitle3}
                                     uli={uli}
                                     list={list}
                                     redline={redline}
@@ -96,13 +103,28 @@ export function QualityReverse({
                                     download1={download1}
                                     href={href}
                                 />
-                                
-                                </Bounce>
-                        </Box>
 
-                        <Box className={classes.BoxRight}>
-                            <Bounce right> <PositionImage imageBG={imageBG} /></Bounce>
+                            </Bounce>
                         </Box>
+                        {
+                            imageBG ?
+                                <Box className={classes.BoxRight}>
+                                    <Bounce right> <PositionImage imageBG={imageBG}  /></Bounce>
+                                </Box>
+                                :
+                                <Box className={classes.BoxRight}>
+                                    <Bounce right> <PositionImage  data={data} /></Bounce>
+                                </Box>
+                        }
+
+                        {/* {
+                            data ?
+                                <Box className={classes.BoxRight}>
+                                    <Bounce right>
+                                        <AnalyserCarousel data={data} />
+                                    </Bounce>
+                                </Box> : ''
+                        } */}
                     </Box>
                 </Container>
             </MainContainer>

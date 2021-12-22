@@ -8,7 +8,7 @@ import {
 import clsx from 'clsx';
 
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
-import { AutoPlay, Pagination } from "@egjs/flicking-plugins";
+import { AutoPlay, Pagination} from "@egjs/flicking-plugins";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
@@ -16,7 +16,6 @@ import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
 import { GeneralHeading, MainContainer, Paragraphs } from '../atoms';
 import Fade from 'react-reveal/Fade';
-
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
@@ -112,7 +111,7 @@ export function Research({
 
     const paginationsPlugins = new Pagination({ type: 'bullet' })
 
-    const autoPlugins = new AutoPlay({ duration: 3000, direction: "NEXT", stopOnHover: false });
+    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
 
     const plugins = [paginationsPlugins, autoPlugins];
 
@@ -149,7 +148,7 @@ export function Research({
                             defaultIndex='1'
                             circular={true}
                             className={classes.flicker}
-
+                            duration= '2000'
                         >
 
                             {

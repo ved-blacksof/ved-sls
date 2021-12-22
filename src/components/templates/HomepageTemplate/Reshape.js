@@ -105,7 +105,7 @@ export function Reshape() {
 
 
     return (
-        <Fade bottom>
+        <Fade top>
             <Box className={classes.reaserchMain}>
                 <Box className={classes.flicks}>
                     <Flicking
@@ -113,7 +113,7 @@ export function Reshape() {
                         plugins={plugins}
                         defaultIndex='0'
                         circular={true}
-
+                        duration="1500"
                     >
                         {
                             reshape.map((item, index) => {

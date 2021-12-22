@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     smallBtn: {
         font: 'normal normal normal 1rem Access',
         background: '#182AC3',
-        textDecoration:'none',
+        textDecoration: 'none',
         textTransform: 'uppercase',
         border: 'none',
         color: 'white',
@@ -81,11 +81,14 @@ export function Paragraphs({
     title,
     style,
     redline,
-    subtitle,
-    subtitle1,
     subhead,
     subhead1,
     subhead2,
+    subhead3,
+    subtitle,
+    subtitle1,
+    subtitle2,
+    subtitle3,
     list,
     uli,
     firstli,
@@ -105,10 +108,13 @@ export function Paragraphs({
                 {
                     redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
                 }
+
+
                 {
                     subhead ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead}</h4> : ''
                 }
                 <h4 className={classes.portSubHead}>{subtitle}</h4>
+
 
                 {
                     subhead1 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead1}</h4> : ''
@@ -116,8 +122,20 @@ export function Paragraphs({
                 {
                     subtitle1 ? <h4 className={classes.portSubHead}>{subtitle1}</h4> : ''
                 }
+
+
                 {
                     subhead2 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead2}</h4> : ''
+                }
+                {
+                    subtitle2 ? <h4 className={classes.portSubHead}>{subtitle2}</h4> : ''
+                }
+
+                {
+                    subhead3 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead3}</h4> : ''
+                }
+                {
+                    subhead3 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead3}</h4> : ''
                 }
 
                 {

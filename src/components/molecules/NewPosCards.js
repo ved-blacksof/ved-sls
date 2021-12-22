@@ -2,6 +2,8 @@ import { Box, Button, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
 import { MainContainer, Paragraphs } from '../atoms'
 
+import { Bounce, Fade } from 'react-reveal'
+
 const useStyles = makeStyles((theme) => ({
     mainhead: {
         color: 'black',
@@ -25,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         paddingTop: '19%',
         padding: '3%',
-        boxShadow: '0px 0px 20px #00000029',    
+        boxShadow: '0px 0px 20px #00000029',
         borderRadius: '5px',
     },
     imageBox: {
@@ -69,18 +71,24 @@ export function NewPosCards({
             <MainContainer>
                 <Container fixed>
 
-                    <h2 className={classes.mainhead}>Offerings</h2>
+                   <Fade top> <h2 className={classes.mainhead}>Offerings</h2></Fade>
                     <Box className={classes.mainBox}>
                         {
                             data.map((item, index) => {
                                 return (
                                     <Box className={classes.inBox}>
                                         <Box className={classes.imageBox}>
-                                            <img src={item.images} />
+                                            <Fade bottom>
+                                                <img src={item.images} />
+                                            </Fade>
                                         </Box>
-                                        <h4 className={classes.textHead}>{item.texthead}</h4>
+                                        <Fade bottom>
+                                            <h4 className={classes.textHead}>{item.texthead}</h4>
+                                        </Fade>
 
-                                        <h6 className={classes.text}>{item.text}</h6>
+                                        <Fade bottom>
+                                            <h6 className={classes.text}>{item.text}</h6>
+                                        </Fade>
 
                                     </Box>
                                 )

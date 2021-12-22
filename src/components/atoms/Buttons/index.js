@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Button, Box } from '@material-ui/core'
 import { ArrowForward, ArrowForwardIos, ArrowForwardIosOutlined, ArrowForwardSharp } from '@material-ui/icons'
+import Fade from 'react-reveal'
 
 const useStyles = makeStyles((theme) => ({
 
@@ -14,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         border: 'none',
         textTransform: 'none',
-        // borderRadius: '4px',
         '&:hover': {
             background: '#1E00F9',
             color: '#182AC3',
@@ -43,11 +43,11 @@ const useStyles = makeStyles((theme) => ({
             width: '1rem'
         }
     },
-    arrow1:{
-        marginLeft:'5px',
+    arrow1: {
+        marginLeft: '5px',
         [theme.breakpoints.down('sm')]: {
-            marginLeft:'5px',
-            fontSize:'1.2rem'
+            marginLeft: '5px',
+            fontSize: '1.2rem'
         }
     }
 }))
@@ -63,23 +63,25 @@ export function Buttons({
     return (
         <Box className={className}>
             {/* material ui Button */}
-            <Button
-                className={classes.btn}
-                style={style}
-                href={href}
-                onclick={() => window.open(`${href}`, '_blank', '')}
-                target="_blank"
-            >
-                <h6 style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', verticalAlign: 'middle' }}>
-                    {title}
+            <Fade bottom>
+                <Button
+                    className={classes.btn}
+                    style={style}
+                    href={href}
+                    onclick={() => window.open(`${href}`, '_blank', '')}
+                    target="_blank"
+                >
+                    <h6 style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', verticalAlign: 'middle' }}>
+                        {title}
 
-                    <ArrowForwardSharp className={classes.arrow1}/>
-                </h6>
-                {/* <Box className={classes.arrow}>
+                        <ArrowForwardSharp className={classes.arrow1} />
+                    </h6>
+                    {/* <Box className={classes.arrow}>
                     <img src={arrowIcon} alt="arrow" />
                 </Box> */}
 
-            </Button>
+                </Button>
+            </Fade>
         </Box>
     )
 }

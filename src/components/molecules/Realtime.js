@@ -310,7 +310,7 @@ export function Realtime({
             slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 0,
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 2000,
             responsive: [
                 {

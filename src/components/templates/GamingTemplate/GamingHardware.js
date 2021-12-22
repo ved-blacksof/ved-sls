@@ -228,11 +228,11 @@ export function GamingHardware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. Leveraging reactive touch technology, Just Targets 
+                                Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. Leveraging reactive touch technology, Just
                                     {
                                         show1 ?
                                             <h6 style={{ color: 'black', textAlign: 'left', display: 'inline' }}>
-                                               Just Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.
+                                               Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.
                                             </h6> : ''
                                     }
                                 </h6>

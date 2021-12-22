@@ -1,5 +1,13 @@
+import Flicking from '@egjs/flicking';
+import { AutoPlay, Pagination } from '@egjs/flicking-plugins';
+import { ViewportSlot } from '@egjs/react-flicking';
 import { Container, makeStyles, Box } from '@material-ui/core'
+import clsx from 'clsx';
 import React from 'react'
+
+import "@egjs/react-flicking/dist/flicking.css";
+import "@egjs/react-flicking/dist/flicking-inline.css";
+import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -44,16 +52,16 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    newbg:{
-        position:'absolute',
-        top:'-8%',
-        left:'-7%',
-        zIndex:'-1',
+    newbg: {
+        position: 'absolute',
+        top: '-8%',
+        left: '-7%',
+        zIndex: '-1',
         width: '110%',
-        height:'116%',
-        "& img":{
-            width:'100%',
-            maxHeight:'100%'
+        height: '116%',
+        "& img": {
+            width: '100%',
+            maxHeight: '100%'
         }
 
     },
@@ -89,18 +97,57 @@ const useStyles = makeStyles((theme) => ({
 
 export function PositionImage({
     imageBG,
+    data
 }) {
 
     const classes = useStyles();
+
+    const paginationsPlugins = new Pagination({ type: 'bullet' })
+
+    const Auto = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false })
+
+    const plugins = [Auto, paginationsPlugins];
 
     return (
         <Box className={classes.mainBox}>
             <div className={classes.imageBox}
             // style={{ backgroundImage: `url(${imageBG})`, }}
             >
-                <Box className={classes.productImageBox}>
-                    <img className={classes.image} src={imageBG} alt="image" />
-                </Box>
+                {
+                    imageBG ?
+                        <Box className={classes.productImageBox}>
+                            <img className={classes.image} src={imageBG} alt="image" />
+                        </Box> : ''
+                }
+
+                {
+                    data ?
+                        <Box className={classes.productImageBox}>
+                            {/* <Flicking
+                                selector="center"
+                                plugins={plugins}
+                                defaultIndex='1'
+                                circular={true}
+                            >
+                                {
+                                    data.map((item, index) => {
+                                        return (
+                                            <>
+                                                <Box className={classes.productImageBox} style={style}>
+                                                    <img className={classes.image} src={item.images} alt="Carousel Images" />
+                                                </Box>
+                                            </>
+                                        )
+                                    })
+                                }
+
+                                <ViewportSlot>
+                                    <span className={clsx("flicking-pagination")} ></span>
+                                </ViewportSlot>
+
+                            </Flicking> */}
+                        </Box> : ''
+                }
 
                 {/* <img className={classes.red} src={'./images/Polygon 2.svg'} alt="image" />
                 <img className={classes.white} src={'./images/Polygon 3.svg'} alt="image" />
