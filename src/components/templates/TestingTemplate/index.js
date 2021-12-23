@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
-import { smartstreet,testingAnalysers } from '../../molecules/PortfolioData'
+import { smartstreet, testingAnalysers } from '../../molecules/PortfolioData'
 
 export function TestingTemplate() {
     return (
@@ -47,12 +47,19 @@ export function TestingTemplate() {
                 subtitle1="The Pattern Generators is a PCB-based tool which tests, debugs, and characterizes any digital hardware with the use of a variety of digital signals."
                 subhead2="In-house anechoic chamber"
                 subtitle2="SLS has an in-house Anechoic Chamber that is equipped with a gamut of RF capabilities offering a range of RF and pre-compliance testing. We help businesses ready their products for market deployments with strict standard and quality checks."
-                data={testingAnalysers}
+                // data={testingAnalysers}
+
+                carousel='carousel'
+                images1="./images/hardwaretesttools.png"
+                images2="./images/research-03.png"
+                images3="./images/processed_2.png"
+
+
             />
 
 
             <Quality
-                imageBG="./images/"
+                imageBG="./images/testing/LISN-EMI.jpg"
                 heading="EMI Testing: Conducted Emission EMI Receiver and LISN"
                 redline="redline"
                 subhead=""

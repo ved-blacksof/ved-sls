@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
 import { PositionImage, Paragraphs, MainContainer, AnalyserCarousel } from "../atoms"
 import Bounce from 'react-reveal/Bounce';
+import { data } from 'jquery';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -66,9 +67,11 @@ export function QualityReverse({
     thirdli,
     fourthli,
     style,
-    style1,
+    carousel,
+    images1,
+    images2,
+    images3,
     list,
-    data
 }) {
     const classes = useStyles()
     return (
@@ -109,11 +112,18 @@ export function QualityReverse({
                         {
                             imageBG ?
                                 <Box className={classes.BoxRight}>
-                                    <Bounce right> <PositionImage imageBG={imageBG}  /></Bounce>
+                                    <Bounce right> <PositionImage imageBG={imageBG} /></Bounce>
                                 </Box>
                                 :
                                 <Box className={classes.BoxRight}>
-                                    <Bounce right> <PositionImage  data={data} /></Bounce>
+                                    <Bounce right>
+                                        <PositionImage
+                                            carousel={carousel}
+                                            images1={images1}
+                                            images2={images2}
+                                            images3={images3}
+                                        />
+                                    </Bounce>
                                 </Box>
                         }
 

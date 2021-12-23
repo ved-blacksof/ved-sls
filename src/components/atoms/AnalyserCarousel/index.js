@@ -65,7 +65,7 @@ export function AnalyserCarousel({
         <Box className={className}>
             {/* material ui Button */}
             <Fade bottom>
-sdsd
+
             </Fade>
         </Box>
     )

@@ -1,13 +1,16 @@
-import Flicking from '@egjs/flicking';
-import { AutoPlay, Pagination } from '@egjs/flicking-plugins';
-import { ViewportSlot } from '@egjs/react-flicking';
+
+import Flicking, { ViewportSlot } from "@egjs/react-flicking";
+import { AutoPlay, Pagination } from "@egjs/flicking-plugins";
 import { Container, makeStyles, Box } from '@material-ui/core'
-import clsx from 'clsx';
-import React from 'react'
+
 
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
+import "@egjs/flicking-plugins/dist/pagination.css";
+
+import React from 'react'
+import clsx from "clsx";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,16 +44,30 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('xs')]: {
             height: '50vw'
+        },
+        "&:hover":{
+            "& $newbg":{
+                transform:'scale(.98)',
+                // webkitTransform: 'scale(1.1)',
+            },
+            "& $image":{
+                transform:'scale(1.05)',
+
+            }
+            
         }
     },
     productImageBox: {
-        height: '100%',
+        height: '16vw',
+        cursor:'pointer',
         width: '100%',
         borderRadius: '1rem',
         overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        transition:'transform .3s',
+      
     },
     newbg: {
         position: 'absolute',
@@ -58,7 +75,8 @@ const useStyles = makeStyles((theme) => ({
         left: '-7%',
         zIndex: '-1',
         width: '110%',
-        height: '116%',
+        height: '115%',
+        transition:'transform .3s ease-in-out',
         "& img": {
             width: '100%',
             maxHeight: '100%'
@@ -67,8 +85,9 @@ const useStyles = makeStyles((theme) => ({
     },
     image: {
         width: '100%',
-        maxHeight: '100%',
-        // objectFit:'cover',
+        height: '100%',
+        objectFit:'cover',
+        transition:'transform .5s ease-in-out',
 
     },
     red: {
@@ -92,12 +111,33 @@ const useStyles = makeStyles((theme) => ({
         left: '-8%',
         bottom: '-15%'
     },
+    // carousel
+    pagination:{
+        "& .flicking-pagination": {
+            // bottom: '0%',
+            // left: '0px',
+        },
+        "& .flicking-pagination-bullet": {
+            width: '1.5rem !important',
+            height: '.33rem !important',
+            margin: '0 .2rem !important',
+            borderRadius: '1rem !important',
+            backgroundColor: '#182AC3!important',
+        },
+        "& .flicking-pagination-bullet-active": {
+            backgroundColor: '#ff0000 !important'
+        }
+    }
 
 }))
 
 export function PositionImage({
     imageBG,
-    data
+    carousel,
+    images1,
+    images2,
+    images3,
+    style
 }) {
 
     const classes = useStyles();
@@ -111,7 +151,6 @@ export function PositionImage({
     return (
         <Box className={classes.mainBox}>
             <div className={classes.imageBox}
-            // style={{ backgroundImage: `url(${imageBG})`, }}
             >
                 {
                     imageBG ?
@@ -121,32 +160,32 @@ export function PositionImage({
                 }
 
                 {
-                    data ?
-                        <Box className={classes.productImageBox}>
-                            {/* <Flicking
-                                selector="center"
+                    carousel ?
+                        <>
+                            <Flicking
+                                duration="1000"
                                 plugins={plugins}
+                                align="center"
                                 defaultIndex='1'
                                 circular={true}
+
                             >
-                                {
-                                    data.map((item, index) => {
-                                        return (
-                                            <>
-                                                <Box className={classes.productImageBox} style={style}>
-                                                    <img className={classes.image} src={item.images} alt="Carousel Images" />
-                                                </Box>
-                                            </>
-                                        )
-                                    })
-                                }
+                                <Box className={classes.productImageBox}>
+                                    <img className={classes.image} src={images1} alt="image" />
+                                </Box>
+                                <Box className={classes.productImageBox}>
+                                    <img className={classes.image} src={images2} alt="image" />
+                                </Box>
+                                <Box className={classes.productImageBox}>
+                                    <img className={classes.image} src={images3} alt="image" />
+                                </Box>
 
-                                <ViewportSlot>
-                                    <span className={clsx("flicking-pagination")} ></span>
+                                <ViewportSlot >
+                                    <span className={clsx(classes.pagination,"flicking-pagination")}></span>
                                 </ViewportSlot>
-
-                            </Flicking> */}
-                        </Box> : ''
+                            </Flicking>
+                        </>
+                        : ''
                 }
 
                 {/* <img className={classes.red} src={'./images/Polygon 2.svg'} alt="image" />

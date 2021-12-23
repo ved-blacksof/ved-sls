@@ -87,7 +87,9 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         marginLeft: '25px',
+        // cursor: 'pointer',
         background: 'transparent',
+        // border:'1px solid red',
         transition: 'all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)',
         boxShadow: 'none',
         color: 'white',
@@ -654,7 +656,11 @@ export function Navbar({
 
 
 
-                        <li className={classes.navLI} >
+                        <li 
+                            className={clsx(classes[navlinkref.current], classes.navLI)}
+                            onClick={handleToggle2}
+
+                        >
                             <NavLink
                                 to="#"
                                 className={clsx(classes[navlinkref.current])}
@@ -664,10 +670,11 @@ export function Navbar({
                                 aria-controls={open2 ? 'contact-menu' : undefined}
                                 aria-expanded={open2 ? 'true' : undefined}
                                 aria-haspopup="true"
-                                // onClick={handleToggle2}
+                                onClick={handleToggle2}
                             >
                                 <h4 className={clsx(classes[navlinkref.current])}
-                                    onClick={handleToggle2}>
+                                    onClick={handleToggle2}
+                                >
                                     Let's Connect
                                 </h4>
                                 <KeyboardArrowDown className={classes.arrow} />
