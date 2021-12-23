@@ -113,6 +113,7 @@ export function Sbanner({
     Background,
     Background1,
     Background2,
+    Background3,
     mouse
 }) {
     const classes = useStyles()
@@ -151,6 +152,7 @@ export function Sbanner({
                 <div id="slider">
                     <div className="photos photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background1})` }}></div>
                     <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background2})` }}></div>
+                    {/* <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background3})` }}></div> */}
                     <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}></div>
                     {/* <div className="photos photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background1})` }}></div> */}
                     {/* <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}></div>

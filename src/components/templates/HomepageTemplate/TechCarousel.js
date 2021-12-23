@@ -159,7 +159,7 @@ export function TechCarousel() {
                     <Box className={classes.box1}>
                         <Fade bottom>
                             <ParagraphsBlue
-                                title="TECHNOLOGY PARTNERS "
+                                title="TECHNOLOGY PARTNERS"
                                 title1="IN HARDWARE AND SOFTWARE OFFERINGS"
                                 subtitle="Serving as a turnkey technology solution provider for the past 20 years."
                                 list="We specialize in -"
@@ -231,7 +231,7 @@ export function TechCarousel() {
 
                                     </div>
                                     <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h3 style={{textTransform:'lowercase'}}>Clients</h3>
+                                        <h3 style={{ textAlign:'center', color:'#D9393E', fontSize:'2vw'}}>Clients</h3>
                                         <h4 >in 18+ Countries</h4>
                                     </div>
                                 </Fade>

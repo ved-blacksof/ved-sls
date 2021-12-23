@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function SoftOfferingsBlue({
     maintitle,title,subtitle,images,
-    list,firstli ,secli, thirdli, fourthli,fifthli,sixthli
+    list,firstli ,secli, thirdli, fourthli, fifthli, sixthli
 }) {
 
     const classes = useStyles()

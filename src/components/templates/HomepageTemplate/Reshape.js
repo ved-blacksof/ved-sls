@@ -114,6 +114,7 @@ export function Reshape() {
                         defaultIndex='0'
                         circular={true}
                         duration="1500"
+                        
                     >
                         {
                             reshape.map((item, index) => {

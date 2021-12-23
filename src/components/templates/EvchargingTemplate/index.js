@@ -66,7 +66,7 @@ export function EvchargingTemplate() {
                 secli="Dynamic load management capabilities"
                 thirdli="ROI Analytics"
                 fourthli="Partner/Fleet management"
-                images='./images/evcharger/Image 2.png'
+                images='./images/dashboards/verde-DB.png'
             />
 
             <MobileApplication />

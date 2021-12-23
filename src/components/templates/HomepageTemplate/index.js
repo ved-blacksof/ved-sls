@@ -13,6 +13,8 @@ import { GridBlue } from '../../atoms'
 import Homepage from '../../assets/Homepage.png'
 import Homepage1 from '../../assets/Homepage1.png'
 import Homepage2 from '../../assets/Homepage2.png'
+import Homepage3 from '../../assets/Homepage03.jpg'
+import { Blogs } from './Blogs'
 
 export function HomepageTemplate() {
     return (
@@ -21,6 +23,7 @@ export function HomepageTemplate() {
                 Background={Homepage}
                 Background1={Homepage1}
                 Background2={Homepage2} 
+                Background3={Homepage3} 
                 mouse={'./images/scroll.svg'} />
 
             <GridBlue>
@@ -46,7 +49,7 @@ export function HomepageTemplate() {
 
             <Expanding />
 
-            <Realtime
+            {/* <Realtime
                 data={realtime}
                 title="GET ACQUAINTED WITH"
                 title1="INDUSTRY TRENDS IN REAL-TIME"
@@ -55,7 +58,19 @@ export function HomepageTemplate() {
                 cases="cases"
                 redline="redline"
                 br="br"
+            /> */}
+            <Blogs
+                title="GET ACQUAINTED WITH"
+                title1="INDUSTRY TRENDS IN REAL-TIME"
+                filters="filters"
+                subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
+                cases="cases"
+                redline="redline"
+                br="br"
             />
+
+            
+
 
             <Partners />
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Overview, Ubanner, Quality, QualityReverse, Visit } from '../../molecules'
+import { Overview, Ubanner, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
 import { digital } from '../../molecules/PortfolioData'
 
 export function DigitalTemplate() {
@@ -23,10 +23,10 @@ export function DigitalTemplate() {
                     emergency messages on public announcement
                     boards, etc. with remote intelligence, customizations, and grasping control."
                     path="Industries / Digital Signage"
-                    
+
                     mapIconPosition="mapIconPosition"
                     data={digital}
-                    style={{ height: 'fit-content', marginBottom:'20%' }}
+                    style={{ height: 'fit-content', marginBottom: '20%' }}
 
                 />
             </GridBlue>
@@ -50,14 +50,13 @@ export function DigitalTemplate() {
 
             />
 
-            <Quality
-                // imageBG="./images/Group 82859.jpg"
-                imageBG="./images/CMD.png"
-                heading="Content Management Director (CMD)"
+            <SoftOfferingsBlue
+                maintitle="Software Offering"
+                title="Content Management Director (CMD)"
                 subtitle="Manage all your digital ad displays through this multi-featured and easy-to-use CMD. 
                 The CMD helps you script, monitor, diagnose, and control each andevery intricacy of all your displays."
-                redline="redline"
-
+                
+                images='./images/dashboards/Dynamic-Signage.png'
             />
 
             <Visit

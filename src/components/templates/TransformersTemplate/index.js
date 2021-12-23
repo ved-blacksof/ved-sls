@@ -45,6 +45,7 @@ export function TransformersTemplate() {
 
 
             <SoftOfferingsBlue
+                maintitle="Software offering"
                 title="Smart Portal"
                 subtitle="DTMS Portal represents all the monitored and historical data related to energy and other important parameters exactly in one place."
                 list
@@ -54,7 +55,7 @@ export function TransformersTemplate() {
                 fourthli="Alarm Management"
                 fifthli="Fault Management"
                 sixthli="Transformer Management"
-                images='./images/evcharger/Image 2.png'
+                images='./images/dashboards/transformer-DB.png'
             />
 
             <Application />

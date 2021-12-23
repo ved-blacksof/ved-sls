@@ -1,7 +1,7 @@
 import { Container, makeStyles, Box, Typography, Tabs, Tab } from '@material-ui/core'
 import { PropTypes } from 'prop-types'
 import React from 'react'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
 import { MainContainer } from '../../atoms';
 import { smartstreet } from '../../molecules/PortfolioData'
 import clsx from 'clsx';
@@ -46,14 +46,14 @@ const useStyles = makeStyles((theme) => ({
     tabsBox: {
         width: '100%',
         padding: '0% 7%',
-        position:'sticky',
-        top:'80px',
-        zIndex:'2',
-        background:'white',
-        transition:'all 0.5s ease-in-out',
+        position: 'sticky',
+        top: '80px',
+        zIndex: '2',
+        background: 'white',
+        transition: 'all 0.5s ease-in-out',
     },
     tabs: {
-        paddingTop:'10px',
+        paddingTop: '10px',
         "& > span": {
             maxWidth: 40,
             width: "100%",
@@ -89,7 +89,7 @@ export function MeterTabs() {
         <>
 
             <Box className={classes.mainContainer}>
-                <br/>
+                <br />
                 <Box className={classes.tabsBox}>
                     <Tabs value={value}
                         onChange={handleChange}
@@ -132,12 +132,26 @@ export function MeterTabs() {
                             redline
                         />
 
-                        <Quality
-                            imageBG="./images/Asset 2.png"
+                        <SoftOfferingsBlue
+                            maintitle="Software offering"
+                            title="Head End System (HES)"
+                            subtitle="The HES is our scalable head-end data acquisition solution for the AMI. The HES is an IoT-powered solution that monitors and controls all Smart Meters and operates as a communication driver between MDM Systems and measurement devices."
+                            // list
+                            firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
+                            secli="Dynamic load management capabilities"
+                            thirdli="ROI Analytics"
+                            fourthli="Partner/Fleet management"
+                            images='./images/dashboards/Smart-metering-DB.png'
+                        />
+
+                        {/* <Quality
+                            imageBG="./images/dashboards/Smart-metering-DB.png"
                             heading="Head End System (HES)"
                             subtitle="The HES is our scalable head-end data acquisition solution for the AMI. The HES is an IoT-powered solution that monitors and controls all Smart Meters and operates as a communication driver between MDM Systems and measurement devices."
                             redline
-                        />
+                        /> */}
+
+
 
                         {/* <Visit
                             title="Know More"

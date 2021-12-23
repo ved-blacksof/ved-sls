@@ -58,7 +58,7 @@ export function ChargingMangement() {
                                     <Box className={classes.leftBox} >
                                         <Fade bottom>
                                             <ParagraphsBlue
-                                                maintitle="Software OFFERINGS"
+                                                maintitle="Software OFFERING"
                                                 title="Charging Management Software"
                                                 subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
                                                 list

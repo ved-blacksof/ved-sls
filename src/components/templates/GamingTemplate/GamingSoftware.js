@@ -163,7 +163,7 @@ export function GamingSoftware({
         <MainContainer>
             <Container fixed className={classes.container1}>
                 <Box className={classes.paraBox}>
-                    <h2 style={{ color: 'black' }}>SOFTWARE OFFERINGS</h2>
+                    <h2 style={{ color: 'black' }}>SOFTWARE OFFERING</h2>
                 </Box>
 
 

@@ -163,7 +163,7 @@ export function PositionImage({
                     carousel ?
                         <>
                             <Flicking
-                                duration="1000"
+                                duration="2000"
                                 plugins={plugins}
                                 align="center"
                                 defaultIndex='1'

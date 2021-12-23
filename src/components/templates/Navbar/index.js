@@ -294,6 +294,7 @@ export function Navbar({
     const anchorRef = useRef(null);
 
     const handleToggle = () => {
+        // e.preventDefault()
         setOpen((prevOpen) => !prevOpen);
         setOpen1(false)
         setOpen2(false)
@@ -315,6 +316,7 @@ export function Navbar({
         if (anchorRef.current && anchorRef.current.contains(event.target)) {
             return;
         }
+        setOpen(false)
         setOpen1(false);
         setOpen2(false);
 
@@ -324,6 +326,7 @@ export function Navbar({
             return;
         }
         setOpen(false);
+        setOpen1(false)
         setOpen2(false);
 
     };
@@ -334,7 +337,7 @@ export function Navbar({
         }
         setOpen(false);
         setOpen1(false);
-
+        setOpen2(false);
     };
 
     function handleListKeyDown(event) {
@@ -588,7 +591,8 @@ export function Navbar({
                                 aria-controls={open1 ? 'services-menu' : undefined}
                                 aria-expanded={open1 ? 'true' : undefined}
                                 aria-haspopup="true"
-                                onClick={handleToggle1}>
+                                onClick={handleToggle1}
+                            >
 
                                 <h4 className={clsx(classes[navlinkref.current])}
                                     onClick={handleToggle1}
@@ -613,7 +617,10 @@ export function Navbar({
                                                     placement === 'bottom-start' ? 'left top' : 'left bottom',
                                             }}
                                         >
-                                            <ClickAwayListener onClickAway={handleClose1}>
+                                            <ClickAwayListener
+                                                mouseEvent="onMouseDown"
+                                                touchEvent="onTouchStart"
+                                                onClickAway={handleClose1}>
                                                 <MenuList
                                                     autoFocusItem={open}
                                                     id="services-menu"
@@ -656,7 +663,7 @@ export function Navbar({
 
 
 
-                        <li 
+                        <li
                             className={clsx(classes[navlinkref.current], classes.navLI)}
                             onClick={handleToggle2}
 
@@ -670,7 +677,7 @@ export function Navbar({
                                 aria-controls={open2 ? 'contact-menu' : undefined}
                                 aria-expanded={open2 ? 'true' : undefined}
                                 aria-haspopup="true"
-                                onClick={handleToggle2}
+                            // onClick={handleToggle2}
                             >
                                 <h4 className={clsx(classes[navlinkref.current])}
                                     onClick={handleToggle2}

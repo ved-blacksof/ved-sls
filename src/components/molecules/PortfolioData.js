@@ -9,12 +9,12 @@ import eight3 from '../assets/certificates/ISO9001-2008 CERT_2008_3.pdf'
 
 export const research = [
     {
-        images: "./images/reaserch-Asset_01.png",
+        images: "./images/research-03.png",
         text: "research"
     },
     {
-        images: "./images/research-03.png",
-        text: "Design "
+        images: "./images/research-design.png",
+        text: "Design"
     },
     {
         images: "./images/research-02.jpg",
@@ -62,27 +62,27 @@ export const testingAnalysers = [
 export const reshape = [
     {
         images: "./images/man-worker-firld-by-solar-panels.png",
-        text1: "RESHAPING THE FUTURE OF THE WORLD",
-        text2: "We aim to leverage technology as a tool to build solutions that have the potential of bringing a transformational shift across sectors.",
-        text3: "MARKET LEADERS IN MULTIPLE PRODUCT DOMAINS",
+        text1: "SETTING UP BENCHMARKS IN CLEAN ENERGY TRANSITION",
+        text2: "Leveraged our inhouse capability to develop and ship around ____ Solar Micro Inverters helping generate more than ___GW across commercial and residential segments. ",
+        text3: "Market leaders in multiple product domains.",
     },
     {
         images: "./images/reshape-SLS1.png",
         text1: "TURNKEY SOLUTIONS PROVIDER FOR EV CHARGING INDUSTRY",
-        text2: "Easy-to-integrate EV Charging Solutions helping create the most innovative range of products, maximizing ROI and operational efficiencies.",
-        text3: "HELPING SWITCH TO SMARTER MEANS OF MOBILITY",
+        text2: "An enabler in setting up India’s EV Charging Infrastructure, we have designed, developed, and delivered _______ Chargers across ___ cities to date.",
+        text3: "Helping switch to smarter means of mobility",
     },
     {
         images: "./images/reshape-thirdbnner.png",
         text1: "REDEFINING INTEROPERABILITY WITH END-TO-END IOT PLATFORM",
-        text2: "A heterogeneous and end-to-end IoT platform integrating alike verticals under a single umbrella.",
+        text2: "A heterogeneous IoT platform providing multi-protocol support for services including G3-PLC, WiFi, BLE, Sigfox, LoRa, GSM, etc.",
         text3: "Stack of feature-rich SDKs for supporting IoT deployments",
     },
     {
         images: "./images/reshape-SLS3.png",
-        text1: "SPEARHEADING INNOVATION IN THE CLOUD ECOSYSTEM  ",
-        text2: "Business-agnostic cloud solutions for the agile businesses of tomorrow.",
-        text3: "Reinventing how businesses expand reach of their influence",
+        text1: "SPEARHEADING INNOVATION IN THE CLOUD ECOSYSTEM",
+        text2: "Business-agnostic cloud solutions already catered to more than ___ businesses from ____ industries.",
+        text3: "Reinventing how businesses expand the reach of their influence.",
         // br: 'br',
         // br1:'br1'
     },
@@ -160,59 +160,31 @@ export const realtime = [
     {
         // images: './images/homepage-icons/11._Traffic_Solutions.png',
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
-        case: 'CASE STUDIES',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
+        case: 'BLOGS',
+        head: 'Memory Protection Unit',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        read: 'https://www.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
-    },
-    {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
-        case: 'CASE STUDIES',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
+        head: 'Does throughput matters in USB?',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        read: 'https://www.slscorp.com/resources/blogs/160-fpga/279-does-throughput-matters-in-usb.html'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
-    },
-    {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
-        case: 'CASE STUDIES',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
+        head: 'What differentiates FPGA from ASIC',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        read: 'https://www.slscorp.com/resources/blogs/160-fpga/277-what-differentiates-fpga-from-asic.html'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
-    },
-    {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
-        case: 'CASE STUDIES',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
-    },
-    {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
-        case: 'BLOGS',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'Read More'
+        head: 'What is FPGA and Why is it Required',
+        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        read: 'https://www.slscorp.com/resources/blogs/160-fpga/276-what-is-fpga-and-why-is-it-required.html'
     },
 
 ]
@@ -280,22 +252,24 @@ export const certification = [
 
 export const csrcarousel = [
     {
-        images: './images/Mask Group 2.png',
-        case: 'ISO 9001',
-        head: 'Heading',
-        para: 'We are helping the ladies in rural parts of India so that they can not only earn,but also be self independent and become a builder of the future for their kids and family…',
+        images: './images/about/csr/csr1.png',
+        para: "As part of our mission to develop Anand from the core, we have installed free-of-cost traffic signages across the city to uplift the traffic infrastructure and contribute to Gujarat's Smart City initiative.",
     },
     {
-        images: './images/Mask Group 2.png',
-        case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        images: './images/about/csr/csr5.jpeg',
+        para: 'SLS has partnered with various NGOs to help uplift India from within India. Every year, the entire team donates necessities to orphans, handicapped, and old age people to help them lead a normal life.',
     },
+
+
     {
-        images: './images/Mask Group 5.png',
-        case: 'ISO 9001',
-        head: 'Heading',
-        para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        images: './images/about/csr/csr2.png',
+        para: 'SLS continually organizes and participates in Blood Donation Camps where the entire SLS family donates blood for free to help the economically weaker sections of the society.',
+    },
+
+
+    {
+        images: './images/about/csr/csr4.jpeg',
+        para: "The entire SLS team organizes and participates in tree plantation drives across the year. Under this initiative, we have planted and are maintaining more than 500 trees throughout our campus in Anand.",
     },
 
 ]
@@ -321,25 +295,29 @@ export const iotnebulink = [
 
 export const evchargers = [
     {
-        images: './images/evcharger/bharat_ac.png',
-        subtitle: 'Bharat AC 001',
-        case: '123',
+        images: './images/evcharger/evchargers/C1.png',
+        subtitle: 'Home Charger',
+
     },
     {
-        images: './images/hybrid_ac.png',
-        subtitle: 'Hybrid AC Charger',
+        images: './images/evcharger/evchargers/C2.png',
+        subtitle: 'Bharat AC 001 Charger',
     },
     {
-        images: './images/single_gun.png',
-        subtitle: 'Type 2 AC Single Gun',
+        images: './images/evcharger/evchargers/C3.png',
+        subtitle: 'Type ll AC Dual Gun Vertical Charger',
     },
     {
-        images: './images/dual_gun.png',
-        subtitle: 'Type 2 AC Dual Gun',
+        images: './images/evcharger/evchargers/C4.png',
+        subtitle: 'Type ll AC Dual Gun Wall-Mounted Charger',
     },
     {
-        images: './images/evcharger/Front view 4.JPG',
-        subtitle: 'Type 2 AC Dual Socket Charger',
+        images: './images/evcharger/evchargers/C5.png',
+        subtitle: 'Hybrid AC Charger with 3P Socket',
+    },
+    {
+        images: './images/evcharger/evchargers/C6.png',
+        subtitle: 'Hybrid AC Charger with IEC Socket',
     },
 ]
 
@@ -354,7 +332,7 @@ export const iotOverview = [
     },
     {
         images: './images/iot/iotOverview/59._Scalability purpose-built for smart & widespread business applications.svg',
-        text: 'Scalability for widespread applications'
+        text: 'Scalable Infrastructure'
     },
    
 ]

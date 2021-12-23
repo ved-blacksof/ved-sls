@@ -42,11 +42,12 @@ export function SolarTemplate() {
             /> */}
 
             <SoftOfferingsBlue
-                 maintitle="Software OFFERINGS"
+                 maintitle="Software OFFERING"
                  title="SunSights Live"
                  subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
                 
-                 images='./images/solar/Sunsight-Dashboard.png'
+                //  images='./images/solar/Sunsight-Dashboard.png'
+                 images='./images/dashboards/sunsights-DB.png'
             />
 
             {/* <Cards

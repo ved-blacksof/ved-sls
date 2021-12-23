@@ -65,7 +65,7 @@ export function SmartstreetTemplate() {
                  title="Lighting Management Software (LMS)"
                  subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
                 
-                 images='./images/DigitalSyne_lms.png'
+                 images='./images/dashboards/Via-lights.png'
             />
 
             <MainContainer>

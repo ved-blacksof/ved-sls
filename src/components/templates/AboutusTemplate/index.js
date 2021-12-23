@@ -31,7 +31,7 @@ export function AboutusTemplate() {
                     sub2='We have the in-house capability to rapidly develop, prototype, provide proof of concept and mass production
                         services across hardware, software, firmware, and wireless technologies. Our motive is to work hand-in-hand with your business goals to
                         deliver market-ready products boasting class-apart design, innovative functionalities, excellent quality.'
-                    // style={{ height: 'fit-content' }}
+                // style={{ height: 'fit-content' }}
                 />
 
 
@@ -47,16 +47,9 @@ export function AboutusTemplate() {
                 mainheading="quality & reliabilty"
                 heading="Quality Policy"
                 imageBG="./images/about/Quality-policy.png"
-                subtitle="We are committed to consistently meet our customers requirement as well as applicable 
-                            statutory and regulatory requirement for the quality of products and services and performance
-                            at optimum cost through our competent human resource and continual improvement of quality 
-                            management system."
-                list="list"
-                uli="To achieve our aim, we will"
-                firstli="Effectively manage projects and ensure they are done in a timely manner."
-                secli="Efficiently manage resources for efficient cost of products and services."
-                thirdli="Ensure enhanced customer satisfaction through our products and services."
-                fourthli="Ensure proper fulfillment of needs and expectations of relevant interested parties."
+                subtitle="To maintain the quality of our products and services, we have set in place a Quality Policy that helps our teams 
+                ensure top-notch quality and service delivery to our clients."
+
                 redline="redline"
                 download="download policy"
                 href={quality}
@@ -65,13 +58,9 @@ export function AboutusTemplate() {
             <QualityReverse
                 heading="Environmental Policy"
                 imageBG="./images/annie-spratt-hCb3lIB8L8E-unsplash.jpg"
-                subtitle="We are committed to meet all statutory and legal compliance in our business activities under the environmental affairs."
-                list="list"
-                uli="To achieve our aim, we will"
-                firstli="Become an environmentally responsible neighbour providing pollution free operations in the communities where we operate."
-                secli="Conserve natural resources namely water, electricity and fuel as low as possible without any intentional waste."
-                thirdli="Ensure our production and service activities do not have any adverse effect on the environment."
-                fourthli="Strive to continually improve EMS by enhancing environmental performance."
+                subtitle="We ensure our commitment towards the environment and mother earth through our Environment Policy. 
+                The policy lays down certain protocols which are stringently followed to maintain environment-friendly operations."
+               
                 redline="redline"
                 download="download policy"
                 href={ems}

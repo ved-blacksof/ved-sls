@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
         width: '23vw',
         height: '21vw',
         background: '#182AC3',
-        padding: '5%',
+        padding: '4%',
         top: '30%',
         left: '14%',
         [theme.breakpoints.down('xs')]: {
@@ -170,13 +170,14 @@ export function CSRcarousel({
 
                     <GeneralHeading
                         title="CSR"
-                        subtitle="How are we helping the world be a better place?"
+                        subtitle="Helping the world be a better place"
                         redline="redline"
                     />
 
                     <Box className={classes.flicks}>
                     <Fade bottom> 
                         <Flicking
+                        duration= '2000'
                             selector="center"
                             // plugins={Fades}
                             plugins={plugins}
@@ -197,7 +198,7 @@ export function CSRcarousel({
 
                                             <Box className={classes.blueBox}>
                                                 <h6 className={classes.blueBoxPara}>{item.para}</h6>
-                                                <Button variant='outlined' className={classes.btn}>Read More</Button>
+                                                {/* <Button variant='outlined' className={classes.btn}>Read More</Button> */}
                                             </Box>
 
                                             <Box className={classes.imageBox}>

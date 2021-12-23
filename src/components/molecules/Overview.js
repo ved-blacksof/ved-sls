@@ -105,7 +105,7 @@ export function Overview({
                     <Bounce right>
                         <Box className={classes.para} >
                             <h4 className={classes.portSubHead}>{sub1}</h4>
-
+                            <br/>
                             <h4 className={classes.portSubHead}>{sub2}</h4>
                         </Box>
                     </Bounce>
