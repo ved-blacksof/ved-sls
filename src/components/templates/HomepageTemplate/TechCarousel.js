@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
             }
         },
         '& h2': {
-            color: '#003189',
+            color: '#182AC3',
             fontSize: '2vw',
             textAlign: 'center',
             [theme.breakpoints.down('sm')]:{
@@ -105,9 +105,13 @@ const useStyles = makeStyles((theme) => ({
             }
         },
         [theme.breakpoints.down('sm')]: {
+            height: '30vw',
+            width: '30vw',
+        },
+        [theme.breakpoints.down('xs')]: {
             height: '40vw',
             width: '40vw',
-        }
+        },
 
     },
     boxSmall: {
@@ -118,9 +122,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
+            height: '20vw',
+            width: '20vw',
+        },
+        [theme.breakpoints.down('xs')]: {
             height: '28vw',
             width: '26vw',
         },
+
         "& h3": {
             color: '#D9393E',
             fontSize: '3vw',
@@ -130,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "& h4": {
             font: 'normal normal normal 1.4vw BebasNeue',
-            color: '#003189',
+            color: '#182AC3',
             textAlign: 'center',
             [theme.breakpoints.down('sm')]:{
                 fontSize:'1rem'
@@ -145,7 +154,7 @@ export function TechCarousel() {
     const classes = useStyles()
 
     // const Arrows = [new Arrow()]
-    const autoPlugins = new AutoPlay({ duration: 4000, direction: "NEXT", stopOnHover: false });
+    const autoPlugins = new AutoPlay({ duration: 4000, direction: "NEXT", stopOnHover: true });
 
     const paginationsPlugins = new Pagination({ type: 'bullet' });
 

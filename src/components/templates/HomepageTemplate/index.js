@@ -40,7 +40,7 @@ export function HomepageTemplate() {
                 subtitle="Assisting companies to avoid pitfalls in the product design & development phase, our experienced team at System Level Solutions provides innovative solutions across stages to better materialize the creative perspective of a client."
                 // generalheadingblue="generalheadingblue"
                 data={research}
-                bggrey
+                // bggrey
             />
 
             <Reshape />

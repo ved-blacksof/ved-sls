@@ -102,7 +102,7 @@ export function Yalgaar({
 
                     <Buttons
                         className={classes.btns}
-                        title="Visit the website"
+                        title="Visit website"
                         arrowIcon="./images/Icon feather-arrow-right.svg"
                     />
                 </Box> */}
@@ -112,7 +112,7 @@ export function Yalgaar({
                     href="https://www.yalgaar.io/"
                     goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; "
                     rightlogo="./images/Layer_x0020_1_yalgaar.svg"
-                    title="Visit the website" />
+                    title="Visit website" />
 
         </MainContainer>
     )

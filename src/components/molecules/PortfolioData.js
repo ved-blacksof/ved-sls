@@ -205,7 +205,7 @@ export const certification = [
         head: 'Ukas',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         href: `${fifteen2}`
-        
+
     },
     {
         images: './images/about/certificatesLogo/Logo1.png',
@@ -229,7 +229,7 @@ export const certification = [
         head: 'ukas dark',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         href: `${eight1}`
-        
+
     },
     {
         images: './images/about/certificatesLogo/Logo5.png',
@@ -237,7 +237,7 @@ export const certification = [
         head: 'Heading5',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         href: `${eight2}`
-        
+
     },
     {
         images: './images/about/certificatesLogo/Logo4.png',
@@ -295,28 +295,28 @@ export const iotnebulink = [
 
 export const evchargers = [
     {
-        images: './images/evcharger/evchargers/C1.png',
+        images: './images/evcharger/evchargers/C2.png',
         subtitle: 'Home Charger',
 
     },
     {
-        images: './images/evcharger/evchargers/C2.png',
+        images: './images/evcharger/evchargers/C3.png',
         subtitle: 'Bharat AC 001 Charger',
     },
     {
-        images: './images/evcharger/evchargers/C3.png',
+        images: './images/evcharger/evchargers/C4.png',
         subtitle: 'Type ll AC Dual Gun Vertical Charger',
     },
     {
-        images: './images/evcharger/evchargers/C4.png',
+        images: './images/evcharger/evchargers/C6.png',
         subtitle: 'Type ll AC Dual Gun Wall-Mounted Charger',
     },
     {
-        images: './images/evcharger/evchargers/C5.png',
+        images: './images/evcharger/evchargers/C1.png',
         subtitle: 'Hybrid AC Charger with 3P Socket',
     },
     {
-        images: './images/evcharger/evchargers/C6.png',
+        images: './images/evcharger/evchargers/C5.png',
         subtitle: 'Hybrid AC Charger with IEC Socket',
     },
 ]
@@ -334,7 +334,7 @@ export const iotOverview = [
         images: './images/iot/iotOverview/59._Scalability purpose-built for smart & widespread business applications.svg',
         text: 'Scalable Infrastructure'
     },
-   
+
 ]
 
 
@@ -540,7 +540,7 @@ export const smarttraffic = [
 export const ipcoreBoxes = [
     {
         // images: './images/Layer_27-smarttraffic02.svg',
-        images:"./images/FPGA_Website_Image (5).png",
+        images: "./images/FPGA_Website_Image (5).png",
         text: 'IP Core Development & Customization'
     },
     {
@@ -568,14 +568,14 @@ export const smarttrafficCards = [
     {
         images: './images/slider2-smarttraffic10.png',
         texthead: 'Controller',
-        text:'Our smart traffic management controller retrofits with the existing traffic infrastructure and transforms it into a smarter, more interactive traffic solution.'
+        text: 'Our smart traffic management controller retrofits with the existing traffic infrastructure and transforms it into a smarter, more interactive traffic solution.'
     },
     {
         images: './images/about-imac-smarttraffic01.png',
         texthead: 'Traffic Management Dashboard',
         text: 'Our Traffic Management Dashboard is a cloud-based intuitive dashboard that allows you to remotly control and monitor your intelligent traffic infrastructure.'
     },
-  
+
 ]
 
 
@@ -630,7 +630,7 @@ export const solarhardware = [
     },
     {
         // images: './images/1.0-solar.png',
-        images: './images/cloud/SunsightDataLogger.png',
+        images: './images/solar/hproducts/SunsightDataLogger.png',
         head: 'Data Logger',
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
         // read: 'read more'
@@ -1054,40 +1054,40 @@ export const homeproducts = [
 
 export const softdevservices = [
     {
-        images:"./images/Layer_20-soft-dev.svg",
-        title:"Web Development",
-        li1:"Cloud Solutions",
-        li2:"Custom Web Application",
+        images: "./images/Layer_20-soft-dev.svg",
+        title: "Web Development",
+        li1: "Cloud Solutions",
+        li2: "Custom Web Application",
     },
     {
-        images:"./images/Layer_21-soft-dev.svg",
-        title:"Application Development",
-        li1:"Windows Development",
-        li2:"Product Development",
+        images: "./images/Layer_21-soft-dev.svg",
+        title: "Application Development",
+        li1: "Windows Development",
+        li2: "Product Development",
     },
     {
-        images:"./images/Layer_23-soft-dev.svg",
-        title:"System Development",
-        li1:"System Porting & Customization",
-        li2:"Driver Development",
+        images: "./images/Layer_23-soft-dev.svg",
+        title: "System Development",
+        li1: "System Porting & Customization",
+        li2: "Driver Development",
     },
     {
-        images:"./images/Layer_26-soft-dev.svg",
-        title:"Embedded Solutions",
-        li1:"Firmware Development",
-        li2:"Driver Development",
+        images: "./images/Layer_26-soft-dev.svg",
+        title: "Embedded Solutions",
+        li1: "Firmware Development",
+        li2: "Driver Development",
     },
     {
-        images:"./images/Layer_24-soft-dev.svg",
-        title:"Enterprise Solutions",
-        li1:"HRM System",
-        li2:"ERP System",
+        images: "./images/Layer_24-soft-dev.svg",
+        title: "Enterprise Solutions",
+        li1: "HRM System",
+        li2: "ERP System",
     },
     {
-        images:"./images/Layer_25-soft-dev.svg",
-        title:"Mobile App Development",
-        li1:"Application Development",
-        li2:"System Porting & Customization",
+        images: "./images/Layer_25-soft-dev.svg",
+        title: "Mobile App Development",
+        li1: "Application Development",
+        li2: "System Porting & Customization",
     },
 ]
 

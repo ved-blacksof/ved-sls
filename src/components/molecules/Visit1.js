@@ -17,10 +17,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: '4%',
+        flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-            flexDirection:'column-reverse'
+            flexDirection: 'column-reverse'
 
         }
     },
@@ -28,21 +28,21 @@ const useStyles = makeStyles((theme) => ({
         color: '#182AC3',
         fontWeight: 'bold',
         [theme.breakpoints.down('sm')]: {
-            textAlign:'center'
-         }
+            textAlign: 'center'
+        }
     },
     btmText1: {
         textAlign: 'left',
         color: '#182AC3',
         fontWeight: 'bold',
         [theme.breakpoints.down('sm')]: {
-           textAlign:'center'
+            textAlign: 'center'
         }
     },
     iconMainBox: {
-        marginLeft: '2%',
+        margin: '3% 0%',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: '1%',
+            // marginLeft: '1%',
         }
     },
     icon: {
@@ -53,16 +53,15 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '2rem',
+            width: '5rem',
         },
     },
     btns: {
         width: '35%',
-        marginTop: '2%',
-        margin: '0% auto',
+        margin: '3% auto',
         [theme.breakpoints.down('sm')]: {
             width: '40%',
-            marginTop: '4%'
+            margin: '1% auto',
         },
         [theme.breakpoints.down('xs')]: {
             width: '70%'
@@ -84,20 +83,23 @@ export function Visit1({
     return (
         <Container>
             <Box className={classes.visitBox}>
+
                 <Box className={classes.textLinkBox}>
-                    {
-                        goto ? <h4 className={classes.btmText} style={style}> {goto}</h4> : ''
-                    }
-                    {
-                        goto1 ? <h3 className={classes.btmText1} style={style}> {goto1}</h3> : ''
-                    }
 
                     <Box className={classes.iconMainBox}>
                         <Box className={classes.icon}>
                             <Fade bottom> <img src={rightlogo} alt="rightLogo" /></Fade>
                         </Box>
                     </Box>
+                    {
+                        goto ? <h6 className={classes.btmText} style={style}> {goto}</h6> : ''
+                    }
+                    {
+                        goto1 ? <h6 className={classes.btmText1} style={style}> {goto1}</h6> : ''
+                    }
+
                 </Box>
+
                 <Buttons
                     className={classes.btns}
                     title={title}

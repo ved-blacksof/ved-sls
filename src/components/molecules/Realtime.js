@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
         border: '1px solid #182AC3',
         marginTop: '10%',
         color: '#182AC3',
+        cursor:'pointer',
         "&:hover": {
             background: '#182AC3',
             color: 'white'
@@ -135,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
     boxes: {
         width: '17vw',
         height: '17vw',
-        border: '1px solid #DCDCDC',
+        border: '1px solid #dcdcdc70',
         boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
@@ -310,7 +311,7 @@ export function Realtime({
             slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 0,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 2000,
             responsive: [
                 {

@@ -62,7 +62,7 @@ export function TransformersTemplate() {
 
             <Visit
                 goto="Want to know more about this offering?"
-                title="Visit the website"
+                title="COntact us"
                 href={"/contact"}
             />
 

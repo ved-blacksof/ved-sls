@@ -180,7 +180,7 @@ export function GamingSoftware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                The Iot Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. 
+                                The IoT Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. 
                                     {
                                         show ?
                                             <h6 style={{ color: 'black', textAlign: 'left', display: 'inline' }}>

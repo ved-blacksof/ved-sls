@@ -45,29 +45,29 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             height: '50vw'
         },
-        "&:hover":{
-            "& $newbg":{
-                transform:'scale(.98)',
+        "&:hover": {
+            "& $newbg": {
+                transform: 'scale(.98)',
                 // webkitTransform: 'scale(1.1)',
             },
-            "& $image":{
-                transform:'scale(1.05)',
+            "& $image": {
+                transform: 'scale(1.05)',
 
             }
-            
+
         }
     },
     productImageBox: {
         height: '16vw',
-        cursor:'pointer',
+        cursor: 'pointer',
         width: '100%',
         borderRadius: '1rem',
         overflow: 'hidden',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        transition:'transform .3s',
-      
+        transition: 'transform .3s',
+
     },
     newbg: {
         position: 'absolute',
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '-1',
         width: '110%',
         height: '115%',
-        transition:'transform .3s ease-in-out',
+        transition: 'transform .3s ease-in-out',
         "& img": {
             width: '100%',
             maxHeight: '100%'
@@ -86,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
     image: {
         width: '100%',
         height: '100%',
-        objectFit:'cover',
-        transition:'transform .5s ease-in-out',
+        objectFit: 'cover',
+        transition: 'transform .5s ease-in-out',
 
     },
     red: {
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: '-15%'
     },
     // carousel
-    pagination:{
+    pagination: {
         "& .flicking-pagination": {
             // bottom: '0%',
             // left: '0px',
@@ -134,6 +134,7 @@ const useStyles = makeStyles((theme) => ({
 export function PositionImage({
     imageBG,
     carousel,
+    carouselfor2,
     images1,
     images2,
     images3,
@@ -181,10 +182,33 @@ export function PositionImage({
                                 </Box>
 
                                 <ViewportSlot >
-                                    <span className={clsx(classes.pagination,"flicking-pagination")}></span>
+                                    <span className={clsx(classes.pagination, "flicking-pagination")}></span>
                                 </ViewportSlot>
                             </Flicking>
                         </>
+                        : ''
+                }
+                {
+                    carouselfor2 ?
+                            <Flicking
+                                duration="2000"
+                                plugins={plugins}
+                                align="center"
+                                defaultIndex='1'
+                                circular={true}
+
+                            >
+                                <Box className={classes.productImageBox}>
+                                    <img className={classes.image} src={images1} alt="image" />
+                                </Box>
+                                <Box className={classes.productImageBox}>
+                                    <img className={classes.image} src={images2} alt="image" />
+                                </Box>
+
+                                <ViewportSlot >
+                                    <span className={clsx(classes.pagination, "flicking-pagination")}></span>
+                                </ViewportSlot>
+                            </Flicking>
                         : ''
                 }
 

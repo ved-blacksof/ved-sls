@@ -51,7 +51,7 @@ export function TestingTemplate() {
 
                 carousel='carousel'
                 images1="./images/hardwaretesttools.png"
-                images2="./images/research-03.png"
+                images2="./images/hardwaretesttools.png"
                 images3="./images/processed_2.png"
 
 
@@ -71,7 +71,9 @@ export function TestingTemplate() {
 
 
             <QualityReverse
-                imageBG="./images/Environmental Test Chamber.png"
+                carouselfor2="carouselfor2"
+                images1="./images/Environmental Test Chamber.png"
+
                 heading="Environmental test chambers"
                 redline="redline"
                 subhead="Temperature and Humidity Chambers"

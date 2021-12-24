@@ -157,7 +157,7 @@ export function CSRcarousel({
 
     const classes = useStyles()
 
-    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
+    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true });
 
     const Paginations = new Pagination({ type: 'bullet' })
 

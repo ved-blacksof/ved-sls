@@ -153,10 +153,10 @@ export function MeterTabs() {
 
 
 
-                        {/* <Visit
+                        <Visit
                             title="Know More"
-                            href={"http://www.smets2design.com/"}
-                        /> */}
+                            href={"/contact"}
+                        />
                     </Box>
 
                 </TabPanel>
@@ -196,7 +196,7 @@ export function MeterTabs() {
 
                         <Visit
                             goto="Switch to a smarter way of Metering."
-                            title="Visit the website"
+                            title="Visit website"
                             href={"http://www.smets2design.com/"}
                         />
                     </Box>

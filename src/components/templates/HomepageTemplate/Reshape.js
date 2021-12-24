@@ -20,6 +20,7 @@ import { reshape } from '../../molecules';
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
         position: 'relative',
+        cursor: 'pointer'
     },
     flicks: {
         width: '100%',
@@ -32,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
             margin: '0 .2rem !important',
             borderRadius: '1rem !important',
             backgroundColor: 'rgb(255, 255, 255) !important',
+            [theme.breakpoints.down('sm')]: {
+                width: '1.5rem !important',
+
+            }
         },
         "& .flicking-pagination-bullet-active": {
             backgroundColor: '#ff0000 !important'
@@ -43,7 +48,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
 
+
+        }
     },
     BoxImages: {
         width: '100%',
@@ -55,12 +63,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         [theme.breakpoints.down('sm')]: {
-            backgroundPosition: 'top',
-            padding: '50% 0%',
-        }
+            padding: '30% 0%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '45% 0%',
+        },
     },
     fronText: {
-        padding:'0% 1%',
+        padding: '0% 1%',
         position: 'absolute',
         bottom: '8%',
         [theme.breakpoints.down('sm')]: {
@@ -77,12 +87,12 @@ const useStyles = makeStyles((theme) => ({
         margin: '1% auto',
         [theme.breakpoints.down('sm')]: {
             width: '80%',
-            display:'none'
+            display: 'none'
 
         },
     },
     hr: {
-        margin: '1% auto',height:'2px',
+        margin: '1% auto', height: '2px',
         backgroundColor: 'white',
         width: '25%',
         boxShadow: 'none',
@@ -99,13 +109,13 @@ export function Reshape() {
 
     const paginationsPlugins = new Pagination({ type: 'bullet' })
 
-    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
+    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true });
 
     const plugins = [autoPlugins, paginationsPlugins];
 
 
     return (
-        <Fade top>
+        <Fade bottom>
             <Box className={classes.reaserchMain}>
                 <Box className={classes.flicks}>
                     <Flicking
@@ -114,7 +124,7 @@ export function Reshape() {
                         defaultIndex='0'
                         circular={true}
                         duration="1500"
-                        
+
                     >
                         {
                             reshape.map((item, index) => {

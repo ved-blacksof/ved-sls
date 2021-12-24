@@ -8,7 +8,7 @@ import {
 import clsx from 'clsx';
 
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
-import { AutoPlay, Pagination} from "@egjs/flicking-plugins";
+import { AutoPlay, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
@@ -19,11 +19,10 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
-        margin: "0% 0% auto",
-        position: 'relative',
+        margin: "0% auto",
+        position: 'relative'
     },
     flicks: {
-        // width: '90%',
         marginTop: '3%',
         "& .flicking-pagination": {
             display: 'flex',
@@ -57,9 +56,13 @@ const useStyles = makeStyles((theme) => ({
         padding: '0% 3% 8% 6%',
         position: 'relative',
         width: '100%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        }
     },
     BoxImages: {
-
+        width:'100%',
+        maxHeight:'100%',
         "& img": {
             height: '100%',
             width: '100%',
@@ -117,7 +120,7 @@ export function Research({
 
     return (
 
-        <Box style={{ position: 'relative', padding: '10% 0%' }}>
+        <Box style={{ position: 'relative', padding: '10% 0%', }}>
             <MainContainer>
                 <Container fixed className={classes.reaserchMain} >
                     {
@@ -148,7 +151,7 @@ export function Research({
                             defaultIndex='1'
                             circular={true}
                             className={classes.flicker}
-                            duration= '2000'
+                            duration='2000'
                         >
 
                             {
@@ -176,7 +179,7 @@ export function Research({
                 </Container>
             </MainContainer>
             {
-                bggrey ? <Box className={classes.bgGrey}></Box> :''
+                bggrey ? <Box className={classes.bgGrey}></Box> : ''
             }
         </Box>
 

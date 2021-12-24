@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
 
     btn: {
         height: '100%',
-        width: '100%',
+        width: '70%',
+        margin:'0% auto',
         background: '#182AC3',
         color: 'white',
         display: 'flex',
@@ -20,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
             color: '#182AC3',
         },
         [theme.breakpoints.down('sm')]: {
-            // fontSize: '10px',
-            // padding: '.2rem .5rem',
+            width: '100%',
+
         }
     },
     arrow: {
@@ -73,7 +74,6 @@ export function Buttons({
                 >
                     <h6 style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', verticalAlign: 'middle' }}>
                         {title}
-
                         <ArrowForwardSharp className={classes.arrow1} />
                     </h6>
                     {/* <Box className={classes.arrow}>

@@ -471,7 +471,7 @@ export function Navbar({
                                 to="#"
                                 className={clsx(classes[navlinkref.current])}
                                 activeClassName={clsx(classes[linkactiveref.current])}
-                                ref={anchorRef}
+                                // ref={anchorRef}
                                 id="composition-button"
                                 aria-controls={open ? 'composition-menu' : undefined}
                                 aria-expanded={open ? 'true' : undefined}
@@ -482,7 +482,6 @@ export function Navbar({
                                 >
                                     Industries
                                     <KeyboardArrowDown className={classes.arrow} />
-
                                 </h4>
 
 
@@ -618,8 +617,6 @@ export function Navbar({
                                             }}
                                         >
                                             <ClickAwayListener
-                                                mouseEvent="onMouseDown"
-                                                touchEvent="onTouchStart"
                                                 onClickAway={handleClose1}>
                                                 <MenuList
                                                     autoFocusItem={open}
@@ -649,7 +646,7 @@ export function Navbar({
                                                             <h6 ><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Testing & Calibration</NavLink ></h6>
                                                         </MenuItem>
                                                         <MenuItem className={classes.menuItem}>
-                                                            <h6 ><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >ML & AI</NavLink ></h6>
+                                                            <h6 ><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Machine Learning & Artificial Intelligence</NavLink ></h6>
                                                         </MenuItem>
                                                     </MenuList>
                                                 </MenuList>
@@ -677,7 +674,7 @@ export function Navbar({
                                 aria-controls={open2 ? 'contact-menu' : undefined}
                                 aria-expanded={open2 ? 'true' : undefined}
                                 aria-haspopup="true"
-                            // onClick={handleToggle2}
+                                onClick={handleToggle2}
                             >
                                 <h4 className={clsx(classes[navlinkref.current])}
                                     onClick={handleToggle2}
@@ -685,46 +682,58 @@ export function Navbar({
                                     Let's Connect
                                 </h4>
                                 <KeyboardArrowDown className={classes.arrow} />
-
-                                <Popper
-                                    open={open2}
-                                    anchorEl={anchorRef.current}
-                                    role={undefined}
-                                    placement="bottom-end"
-                                    transition
-                                    className={classes.popper}
-                                >
-                                    {({ TransitionProps, placement }) => (
-                                        <Grow
-                                            {...TransitionProps}
-                                            style={{
-                                                transformOrigin:
-                                                    placement === 'bottom-start' ? 'left top' : 'left bottom',
-                                            }}
-                                        >
-                                            <ClickAwayListener onClickAway={handleClose2}>
-                                                <MenuList
-                                                    autoFocusItem={open2}
-                                                    id="contact-menu"
-                                                    aria-labelledby="contact-button"
-                                                    onKeyDown={handleListKeyDown}
-                                                    className={classes.megaMenu}
-                                                >
-                                                    {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                                    <MenuList>
-                                                        <MenuItem className={classes.menuItem}>
-                                                            <h6 ><NavLink to="/contact" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Contact us</NavLink ></h6>
-                                                        </MenuItem>
-                                                        <MenuItem className={classes.menuItem} >
-                                                            <h6 ><NavLink to="/" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} > Join us </NavLink ></h6>
-                                                        </MenuItem>
-                                                    </MenuList>
-                                                </MenuList>
-                                            </ClickAwayListener>
-                                        </Grow>
-                                    )}
-                                </Popper>
                             </NavLink>
+
+                            <Popper
+                                open={open2}
+                                anchorEl={anchorRef.current}
+                                role={undefined}
+                                placement="bottom-end"
+                                transition
+                                className={classes.popper}
+                            >
+                                {({ TransitionProps, placement }) => (
+                                    <Grow
+                                        {...TransitionProps}
+                                        style={{
+                                            transformOrigin:
+                                                placement === 'bottom-start' ? 'left top' : 'left bottom',
+                                        }}
+                                    >
+                                        <ClickAwayListener onClickAway={handleClose2}>
+                                            <MenuList
+                                                autoFocusItem={open2}
+                                                id="contact-menu"
+                                                aria-labelledby="contact-button"
+                                                onKeyDown={handleListKeyDown}
+                                                className={classes.megaMenu}
+                                            >
+                                                {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                                                <MenuList>
+                                                    <MenuItem className={classes.menuItem}>
+                                                        <h6 >
+                                                            <NavLink to="/contact" className={classes.lios} onClick={handleClose2} >Contact us</NavLink >
+                                                        </h6>
+                                                    </MenuItem>
+                                                    <MenuItem className={classes.menuItem}>
+                                                        <h6 className={classes.lios}>
+                                                            <Button href="https://www.slscorp.com/about-slscorp/careers.html" style={{ textTransform: 'none', background: 'transparent',padding:'0px' }}  >
+                                                                <h6 style={{ 
+                                                                    color:'black',
+                                                                    "&:hover":{
+                                                                        border:'1px solid red'
+                                                                    }
+                                                                    }}>Join us</h6>
+                                                            </Button >
+                                                        </h6>
+                                                    </MenuItem>
+
+                                                </MenuList>
+                                            </MenuList>
+                                        </ClickAwayListener>
+                                    </Grow>
+                                )}
+                            </Popper>
 
                         </li>
                     </ul>
@@ -738,6 +747,6 @@ export function Navbar({
                         : ''
                 }
             </AppBar>
-        </Box>
+        </Box >
     )
 }

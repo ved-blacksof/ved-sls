@@ -63,7 +63,7 @@ export function IPcoreTemplate() {
 
             <Visit
                 goto="Explore more about our FPGA Products and Services"
-                title="Visit the website"
+                title="Visit website"
                 href={"https://www.slscorp.com/services/fpgasoc-design-services.html"}
             />
             <Footer />

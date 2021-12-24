@@ -63,7 +63,7 @@ export function SmartstreetTemplate() {
              <SoftOfferingsBlue
                  maintitle="Software Offering"
                  title="Lighting Management Software (LMS)"
-                 subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
+                 subtitle="LMS is our cloud-based dashboard that offers total control over your lighting infrastructure. It provides remote access to the real-time status of lamps, generates energy consumption reports, binds devices with sensors, and helps with Astro-clock and mixed-mode scheduling."
                 
                  images='./images/dashboards/Via-lights.png'
             />
@@ -71,7 +71,7 @@ export function SmartstreetTemplate() {
             <MainContainer>
                 <Visit1
                     goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
-                    title="Visit the website"
+                    title="Visit website"
                     href="https://www.vialights.com/"
                     rightlogo="./images/smartstreet/logo.png"
                 />

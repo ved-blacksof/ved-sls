@@ -6,6 +6,7 @@ import {
     Tab,
     Typography,
     makeStyles,
+    Container,
 } from '@material-ui/core';
 
 import './molecule.css'
@@ -86,14 +87,11 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         zIndex: '1',
         top: '0%',
-        [theme.breakpoints.down('md')]: {
-            top: '-50%',
-        },
         [theme.breakpoints.down('sm')]: {
             position: 'static',
             height: 'fit-content',
             width: '80%',
-            margin: '0 auto'
+            margin: '10% 0%'
         },
         '& .MuiBox-root': {
             padding: '0px'
@@ -132,7 +130,7 @@ export function VerticalTab() {
         setValue(newValue);
     };
     return (
-        <>
+        <Container fixed>
             <Box className={classes.smBlock}>
                 <Box className={classes.mainBox}>
                     <Box className={classes.leftBox}>
@@ -236,6 +234,6 @@ export function VerticalTab() {
                     </Box>
                 </Box>
             </Box>
-        </>
+        </Container>
     )
 }

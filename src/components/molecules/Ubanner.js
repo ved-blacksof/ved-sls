@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import Fade from 'react-reveal/Fade';
-import LocomotiveScroll from 'locomotive-scroll';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -65,20 +64,12 @@ export function Ubanner({
 }) {
     const classes = useStyles()
 
-    const myScroll = new LocomotiveScroll();
     return (
         <>
 
             <div className={classes.mainBox}
-                data-scroll
-                data-scroll-speed="1"
                 style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}
             >
-
-                {/* <div className={classes.backImgBox}>
-                    <img className={classes.backImg} src={Background} alt="background" />
-                </div> */}
-
                 <Fade bottom>
                     <h1 className={classes.mainText}>{maintext}</h1>
                 </Fade>

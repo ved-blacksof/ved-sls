@@ -68,6 +68,7 @@ export function QualityReverse({
     fourthli,
     style,
     carousel,
+    carouselfor2,
     images1,
     images2,
     images3,
@@ -115,16 +116,26 @@ export function QualityReverse({
                                     <Bounce right> <PositionImage imageBG={imageBG} /></Bounce>
                                 </Box>
                                 :
-                                <Box className={classes.BoxRight}>
-                                    <Bounce right>
-                                        <PositionImage
-                                            carousel={carousel}
-                                            images1={images1}
-                                            images2={images2}
-                                            images3={images3}
-                                        />
-                                    </Bounce>
-                                </Box>
+                                carousel ?
+                                    <Box className={classes.BoxRight}>
+                                        <Bounce right>
+                                            <PositionImage
+                                                carousel={carousel}
+                                                images1={images1}
+                                                images2={images2}
+                                                images3={images3}
+                                            />
+                                        </Bounce>
+                                    </Box> :
+                                    <Box className={classes.BoxRight}>
+                                        <Bounce right>
+                                            <PositionImage
+                                                carouselfor2={carouselfor2}
+                                                images1={images1}
+                                                images2={images2}
+                                            />
+                                        </Bounce>
+                                    </Box>
                         }
 
                         {/* {

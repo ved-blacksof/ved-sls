@@ -112,7 +112,7 @@ export function ResearchBlue({
 
     const paginationsPlugins = new Pagination({ type: 'bullet' })
 
-    const autoPlugins = new AutoPlay({ duration: 3000, direction: "NEXT", stopOnHover: false });
+    const autoPlugins = new AutoPlay({ duration: 3000, direction: "NEXT", stopOnHover: true });
 
     const plugins = [paginationsPlugins, autoPlugins];
 

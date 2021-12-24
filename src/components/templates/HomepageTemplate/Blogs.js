@@ -73,8 +73,11 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
-            height: '50vw',
-        }
+            height: 'fit-content',
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '40vw',
+        },
     },
     images: {
         maxHeight: '100%',
@@ -101,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         marginTop: '3%',
         fontWeight: 'bold',
-        height:'4rem',
+        height: '4rem',
     },
     cardSubHead: {
         color: 'black',
@@ -176,7 +179,7 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
             color: '#182AC3',
             boxShadow: '0px 0px 10px #00000017',
-            border:'1px solid white',
+            border: '1px solid white',
             "& $imgBox": {
                 transform: 'scale(1.1)'
             },
@@ -311,19 +314,19 @@ export function Blogs({
             slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 0,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 2000,
             responsive: [
+                // {
+                //     breakpoint: 1024,
+                //     settings: {
+                //         slidesToShow: 2,
+                //         slidesToScroll: 1,
+                //         infinite: true,
+                //     }
+                // },
                 {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        infinite: true,
-                    }
-                },
-                {
-                    breakpoint: 600,
+                    breakpoint: 960,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
@@ -331,7 +334,7 @@ export function Blogs({
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 600,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -360,10 +363,10 @@ export function Blogs({
                         {
                             filters ? <Box className={classes.filters}>
                                 <h6>All</h6>
-                                <h6>NEWS & EVENTS</h6>
-                                <h6>CSR</h6>
+                                {/* <h6>NEWS & EVENTS</h6>
+                                <h6>CSR</h6> */}
                                 <h6>BLOGS</h6>
-                                <h6>CASE STUDIES</h6>
+                                {/* <h6>CASE STUDIES</h6> */}
                             </Box> : ''
                         }
 
@@ -385,36 +388,36 @@ export function Blogs({
                                     realtime.map((item, index) => {
                                         return (
                                             <Box>
-                                                <Box className={classes.card} >
-                                                    <Fade bottom>
+                                                <Fade bottom>
+                                                    <Box className={classes.card} >
                                                         <Box className={classes.cardImage}>
                                                             <img className={classes.images} src={item.images} alt="carousel Image" />
                                                         </Box>
-                                                    </Fade>
-                                                    <Box className={classes.cardTxt}>
-                                                        <Fade bottom>
-                                                            {
-                                                                item.case ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
-                                                            }
-                                                            <h4 className={classes.cardHead}>{item.head}</h4>
-                                                            <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                            <h4 className={classes.readMore}>
-                                                                <a href={`${item.read}`} target="_blank">READ MORE</a>
-                                                            </h4>
-                                                            {
-                                                                download ?
-                                                                    <Button
-                                                                        className={classes.smallBtn}
-                                                                        href={item.href}
-                                                                        onclick={() => window.open(`${item.href}`, '_blank')}
-                                                                        target="_blank"
-                                                                    >
-                                                                        {download}
-                                                                    </Button> : ''
-                                                            }
-                                                        </Fade>
+                                                        <Box className={classes.cardTxt}>
+                                                            <Fade bottom>
+                                                                {
+                                                                    item.case ? <Fade><Button className={classes.smallBtn} >{item.case}</Button> </Fade>: ''
+                                                                }
+                                                                <h4 className={classes.cardHead}>{item.head}</h4>
+                                                                <h6 className={classes.cardSubHead}>{item.para}</h6>
+                                                                <h4 className={classes.readMore}>
+                                                                    <a href={`${item.read}`} target="_blank">READ MORE</a>
+                                                                </h4>
+                                                                {
+                                                                    download ?
+                                                                        <Button
+                                                                            className={classes.smallBtn}
+                                                                            href={item.href}
+                                                                            onclick={() => window.open(`${item.href}`, '_blank')}
+                                                                            target="_blank"
+                                                                        >
+                                                                            {download}
+                                                                        </Button> : ''
+                                                                }
+                                                            </Fade>
+                                                        </Box>
                                                     </Box>
-                                                </Box>
+                                                </Fade>
                                             </Box>
 
                                         )
