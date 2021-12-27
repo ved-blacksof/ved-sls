@@ -154,7 +154,7 @@ export function MeterTabs() {
 
 
                         <Visit
-                            title="Know More"
+                            title="Contact us"
                             href={"/contact"}
                         />
                     </Box>
@@ -195,7 +195,7 @@ export function MeterTabs() {
                         />
 
                         <Visit
-                            goto="Switch to a smarter way of Metering."
+                            goto="Switch to a smarter way of Metering"
                             title="Visit website"
                             href={"http://www.smets2design.com/"}
                         />

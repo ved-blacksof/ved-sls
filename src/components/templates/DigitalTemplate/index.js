@@ -10,7 +10,7 @@ export function DigitalTemplate() {
             <Ubanner
                 Background="/images/digital-signage/Digital-signage.png"
                 maintext="Digital signage"
-                subtext="Connecting the world  through Smart Screens"
+                subtext="Connecting the world through smart screens"
             />
 
             <GridBlue>
@@ -61,7 +61,7 @@ export function DigitalTemplate() {
 
             <Visit
                 goto="Reinvent how your brand advertises and connects."
-                title="Visit website"
+                title="Contact us"
                 href={"/contact"}
             />
 

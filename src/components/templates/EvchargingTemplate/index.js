@@ -16,7 +16,7 @@ export function EvchargingTemplate() {
             <Ubanner
                 Background="/images/luo-lei-Xa4pTwafe5U-unsplash.png"
                 maintext="EV Charging Solutions"
-                subtext="Helping in making the world EV-First!"
+                subtext="Helping in making the world ev-first!"
             />
 
 
@@ -73,7 +73,7 @@ export function EvchargingTemplate() {
 
             <MainContainer>
                 <Visit1
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
                     title="Visit website"
                     href="https://www.verdemobility.com/"
                     rightlogo="./images/evcharger/1.png"

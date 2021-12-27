@@ -39,7 +39,7 @@ export function IOTplatformTemplate({
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-IOT.png"
                 maintext="IOT Platform"
-                subtext="Redefining Interperability With our End-to-end IoT Deployment Platform"
+                subtext="Redefining interperability with our end-to-end IoT deployment platform"
             />
 
             <GridBlue>
@@ -81,7 +81,7 @@ export function IOTplatformTemplate({
             />
 
             <Visit1
-                goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
+                goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
                 title="Visit website"
                 href="https://www.nebulae.io/"
                 rightlogo="./images/iot/Nebulae.png"

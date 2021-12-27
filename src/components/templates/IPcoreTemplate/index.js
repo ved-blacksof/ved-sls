@@ -14,7 +14,7 @@ export function IPcoreTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-ipcore.png"
                 maintext="IP CORE/FPGA/SoC Design Services"
-                subtext="World Leaders in FPGA SoC Design Services"
+                subtext="World leaders in FPGA SoC design services"
             />
             <GridBlue>
                 <Navbar />
@@ -66,6 +66,7 @@ export function IPcoreTemplate() {
                 title="Visit website"
                 href={"https://www.slscorp.com/services/fpgasoc-design-services.html"}
             />
+            
             <Footer />
         </div>
     )

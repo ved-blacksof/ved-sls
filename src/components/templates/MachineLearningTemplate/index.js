@@ -10,7 +10,7 @@ export function MachineLearningTemplate() {
             <Ubanner
                 Background="./images/ml/ML-and-AI.png"
                 maintext="Machine learning and artificial intelligence"
-                subtext="Leveraging Novel Tchnologies for the Betterment of the Mankind"
+                subtext="Leveraging novel technologies for the betterment of the mankind"
             />
             <GridBlue>
                 <Navbar />

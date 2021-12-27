@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         border: '1px solid #182AC3',
         marginTop: '10%',
         color: '#182AC3',
-        cursor:'pointer',
+        cursor: 'pointer',
         "&:hover": {
             background: '#182AC3',
             color: 'white'
@@ -76,9 +76,26 @@ const useStyles = makeStyles((theme) => ({
             height: '50vw',
         }
     },
+    cardImage1: {
+        height: '15vw',
+        width: '100%',
+        padding:'5% 8%',
+        textAlign:'center',
+        overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            height: '50vw',
+        }
+    },
+    images1: {
+        height: '100%',
+        maxWidth: '100%',
+        margin:'0% auto'
+    },
     images: {
         maxHeight: '100%',
         width: '100%',
+        margin:'0% auto'
+
     },
     cardTxt: {
         padding: '5%'
@@ -176,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
             color: '#182AC3',
             boxShadow: '0px 0px 10px #00000017',
-            border:'1px solid white',
+            border: '1px solid white',
             "& $imgBox": {
                 transform: 'scale(1.1)'
             },
@@ -417,16 +434,22 @@ export function Realtime({
                             <Slider ref={sliderRef} {...settings} className={classes.slider}>
 
                                 {/* CARDS */}
-
                                 {
                                     data ? data.map((item, index) => {
                                         return (
                                             <Box>
                                                 <Box className={classes.card} >
                                                     <Fade bottom>
-                                                        <Box className={classes.cardImage}>
-                                                            <img className={classes.images} src={item.images} alt="carousel Image" />
-                                                        </Box>
+                                                        {
+                                                            item.images ?
+                                                                <Box className={classes.cardImage}>
+                                                                    <img className={classes.images} src={item.images} alt="carousel Image" />
+                                                                </Box>
+                                                                :
+                                                                <Box className={classes.cardImage1}>
+                                                                    <img className={classes.images1} src={item.logo} alt="carousel Image" />
+                                                                </Box>
+                                                        }
                                                     </Fade>
                                                     <Box className={classes.cardTxt}>
                                                         <Fade bottom>

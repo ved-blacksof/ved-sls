@@ -13,7 +13,7 @@ export function CloudsolutionTemplate() {
             <Ubanner
                 Background="/images/luo-lei-Xa4pTwafe5U-unsplash-cloud.png"
                 maintext="Cloud Solutions"
-                subtext="Accelerate your Business Growth with our Saas-based Cloud Solutions"
+                subtext="Accelerate your business growth with our Saas-based cloud solutions"
             />
 
             <GridBlue>

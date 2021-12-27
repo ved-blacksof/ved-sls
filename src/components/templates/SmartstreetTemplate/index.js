@@ -11,7 +11,7 @@ export function SmartstreetTemplate() {
             <Ubanner
                 Background="./images/smartstreet/StreetLight.png"
                 maintext="Smart Street Lighting"
-                subtext="Bringing New Perspectives to Lights"
+                subtext="Bringing new perspectives to lights"
             />
 
             <GridBlue>
@@ -70,7 +70,7 @@ export function SmartstreetTemplate() {
 
             <MainContainer>
                 <Visit1
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
                     title="Visit website"
                     href="https://www.vialights.com/"
                     rightlogo="./images/smartstreet/logo.png"

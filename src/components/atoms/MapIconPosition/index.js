@@ -41,24 +41,24 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '20vw',
             height: '20vw',
-            padding: '3% 2%',
-
+            padding: '3% 2%',            
             borderRadius: '.5rem',
             margin: '5% 2%',
+            justifyContent:'center'
         },
         [theme.breakpoints.down('xs')]: {
             width: '35vw',
             height: '35vw',
             padding: '3% 2%',
-
             borderRadius: '.5rem',
             margin: '5% 2%',
         },
 
     },
     iconsBox: {
-        height: '5rem',
-        marginTop: '1%',
+        // height: '5rem',
+        width:'45%',
+        // marginTop: '1%',
         textAlign: 'center',
         cursor: 'pointer',
         [theme.breakpoints.down('sm')]: {
@@ -67,7 +67,9 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('xs')]: {
             marginTop: '0',
-            height: '3rem'
+            // height: '3rem'
+        width:'45%',
+
         },
 
     },
@@ -80,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         textDecoration: 'none',
         cursor: 'pointer',
-        marginTop: '8%',
+        marginTop: '4%',
         lineHeight: '1.2',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {

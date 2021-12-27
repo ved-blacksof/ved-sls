@@ -193,14 +193,14 @@ export const realtime = [
 
 export const certification = [
     {
-        images: './images/about/certificatesLogo/Logo2.png',
+        logo: './images/about/certificatesLogo/Logo2.png',
         case: 'ISO 9001',
         head: 'UKAS Intertek',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         href: `${fifteen1}`
     },
     {
-        images: './images/about/certificatesLogo/Logo3.png',
+        logo: './images/about/certificatesLogo/Logo3.png',
         case: 'ISO 9001',
         head: 'Ukas',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -208,7 +208,7 @@ export const certification = [
 
     },
     {
-        images: './images/about/certificatesLogo/Logo1.png',
+        logo: './images/about/certificatesLogo/Logo1.png',
         case: 'ISO 9001',
         head: 'QEC',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -216,7 +216,7 @@ export const certification = [
 
     },
     {
-        images: './images/about/certificatesLogo/Logo1.png',
+        logo: './images/about/certificatesLogo/Logo1.png',
         case: 'ISO 9001',
         head: 'QEC1',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -224,7 +224,7 @@ export const certification = [
 
     },
     {
-        images: './images/about/certificatesLogo/Logo6.png',
+        logo: './images/about/certificatesLogo/Logo6.png',
         case: 'ISO 9001',
         head: 'ukas dark',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -232,7 +232,7 @@ export const certification = [
 
     },
     {
-        images: './images/about/certificatesLogo/Logo5.png',
+        logo: './images/about/certificatesLogo/Logo5.png',
         case: 'ISO 9001',
         head: 'Heading5',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -240,7 +240,7 @@ export const certification = [
 
     },
     {
-        images: './images/about/certificatesLogo/Logo4.png',
+        logo: './images/about/certificatesLogo/Logo4.png',
         case: 'ISO 9001',
         head: 'Heading6',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -348,7 +348,7 @@ export const evchargercontrollers = [
         subtitle: 'Verycon 1.0',
     },
     {
-        images: './images/evcharger/Verycon2_0.jpg',
+        images: './images/evcharger/Verycon2_0.png',
         subtitle: 'Verycon 2.0',
     },
     {
@@ -600,6 +600,29 @@ export const solar = [
     },
     // {
     //     images: './images/solar/icons/40._Predictive energy optimization.svg',
+    //     text: 'Predictive energy optimization'
+    // },
+]
+
+export const homeAutoOverview = [
+    {
+        images: './images/homeautomation/overview/87._Temperature Sensor.svg',
+        text: 'Temperature Sensor'
+    },
+    {
+        images: './images/homeautomation/overview/88._Humidity Sensor.svg',
+        text: 'Humidity Sensor'
+    },
+    {
+        images: './images/homeautomation/overview/89._Motion Sensor.svg',
+        text: 'Motion Sensor'
+    },
+    {
+        images: './images/homeautomation/overview/90._Smoke Sensor.svg',
+        text: 'Smoke Sensor'
+    },
+    // {
+    //     images: './images/homeautomation/overview/87._Temperature Sensor.svg',
     //     text: 'Predictive energy optimization'
     // },
 ]

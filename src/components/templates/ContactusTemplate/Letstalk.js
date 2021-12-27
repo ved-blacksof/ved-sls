@@ -1,7 +1,8 @@
 import Grid from '@egjs/grid'
 import { Box, Button, Container, Input, makeStyles, TextField } from '@material-ui/core'
-import React from 'react'
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useState } from 'react'
+import ReCaptchaV2 from "react-google-recaptcha";
+
 
 import { Buttons, GeneralHeading, MainContainer, ParagraphsBlue } from '../../atoms'
 
@@ -10,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         padding: '5% auto',
+        margin:'0% auto',
         // border:'2px solid red',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
@@ -71,14 +73,36 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '80%',
         }
+    },
+    captcha:{
+        marginTop:'5%'
     }
 }))
 
 export function Letstalk() {
     const classes = useStyles()
-    function onChange(value) {
-        console.log("Captcha value:", value);
+    const [isVerified, setIsVerified] = useState(false)
+    const [form, setForm] = useState(false)
+
+    // function onChange(value) {
+    //     console.log("Captcha value:", value);
+    //     setIsVerified(true)
+    // }
+
+    const handleToken = (token) => {
+        setForm((currentForm) => {
+            return { ...currentForm, token }
+        })
+        setIsVerified(true)
+        
     }
+    const handleExpire = () => {
+        setForm((currentForm) => {
+            return { ...currentForm, token: null }
+        })
+    }
+
+
     return (
         <>
             <MainContainer>
@@ -153,16 +177,20 @@ export function Letstalk() {
 
                         />
 
-                        <Box>
-                            <ReCAPTCHA
-                                // ref={recaptchaRef}
-                                sitekey="Your client site key"
-                                onChange={onChange}
+                        {/* Captcha Here */}
+                        <Box className={classes.captcha}>
+                            <ReCaptchaV2
+                                // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"  //localhost
+                                // sitekey="6Lca388dAAAAANXSKi97Kd7YwQSi30N3dPeWdVyh"  //website sls-blacksof.web.app
+                                sitekey="6LfqR9AdAAAAAP7Yzt4o0LW310Dw-MiVG1rwL1Qv"  //website sls-blacksof.web.app sls-v2
+                                onChange={handleToken}
+                                onExpire={handleExpire}
                             />
                         </Box>
 
 
-                        <Button className={classes.btn}>
+
+                        <Button className={classes.btn} disabled={!isVerified}>
                             Send Message
                         </Button>
 

@@ -11,7 +11,7 @@ export function SolarTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-solar.png"
                 maintext="Solar and wind"
-                subtext="Paving the way for a sustainable Future with Solar and Wind Energy"
+                subtext="Paving the way for a sustainable future with solar and wind energy"
             />
 
             <GridBlue>
@@ -57,11 +57,10 @@ export function SolarTemplate() {
             /> */}
 
             <Visit1
-                goto1="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
+                goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
                 title="Visit website"
                 rightlogo="./images/solar/SunSights.png"
                 href={"https://www.getsunsights.com/"}
-                style={{ fontFamily: 'BebasNeue', fontWeight: 'normal' }}
             />
 
             <Footer />

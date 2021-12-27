@@ -9,7 +9,7 @@ export function ElectronicTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-elctronics.png"
                 maintext="Electronics Manufacturing Services [EMS]"
-                subtext="Providing world-class Electronics Manufacturing Services"
+                subtext="Providing world-class electronics manufacturing services"
             />
             <GridBlue>
                 <Navbar />
@@ -43,7 +43,7 @@ export function ElectronicTemplate() {
 
             <Visit
                 goto="Know more about our Electronics Manufacturing Capabilities"
-                title="Know More"
+                title="Contact us"
                 href={"/contact"}
             />
 

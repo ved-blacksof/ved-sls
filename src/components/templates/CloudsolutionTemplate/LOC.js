@@ -72,7 +72,7 @@ export function LOC({
                 </Container>
                     <Visit1
                         rightlogo={'./images/Layer_x0020_1 (1).svg'}
-                        goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS;"
+                        goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
                         href="https://loccarto.io/home"
                         title="Visit website" />
             </MainContainer>

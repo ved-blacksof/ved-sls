@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-reveal'
 import { Navbar, Footer } from '..'
 import { GridBlue , } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit, NewPosCards } from '../../molecules'
@@ -11,7 +12,7 @@ export function SmarttrafficTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-smarttraffic08.png"
                 maintext="Smart Traffic Solutions"
-                subtext="Transforming how Traffic Systems Interact with the world"
+                subtext="Transforming how traffic systems interact with the world"
             />
 
             <GridBlue>
@@ -27,7 +28,7 @@ export function SmarttrafficTemplate() {
                 />
             </GridBlue>
 
-            <PosBoxes data={smarttraffic} />
+            <Fade bottom> <PosBoxes data={smarttraffic} /></Fade>
 
             <NewPosCards  data={smarttrafficCards}/>
 

@@ -22,8 +22,8 @@ export function HomepageTemplate() {
             <Sbanner
                 Background={Homepage}
                 Background1={Homepage1}
-                Background2={Homepage2} 
-                Background3={Homepage3} 
+                Background2={Homepage2}
+                Background3={Homepage3}
                 mouse={'./images/scroll.svg'} />
 
             <GridBlue>
@@ -37,10 +37,12 @@ export function HomepageTemplate() {
                 title="INTEGRATION SPECIALIST"
                 br="br"
                 title1="ACROSS VARIOUS VERTICALS"
-                subtitle="Assisting companies to avoid pitfalls in the product design & development phase, our experienced team at System Level Solutions provides innovative solutions across stages to better materialize the creative perspective of a client."
+                subtitle="Assisting companies to avoid pitfalls in the product design & development phase, 
+                our experienced team at System Level Solutions provides innovative solutions across stages to 
+                better materialize the creative perspective of a client."
                 // generalheadingblue="generalheadingblue"
                 data={research}
-                // bggrey
+            // bggrey
             />
 
             <Reshape />
@@ -69,7 +71,7 @@ export function HomepageTemplate() {
                 br="br"
             />
 
-            
+
 
 
             <Partners />

@@ -317,17 +317,13 @@ export function Navbar({
             return;
         }
         setOpen(false)
-        setOpen1(false);
-        setOpen2(false);
 
     };
     const handleClose1 = (event) => {
         if (anchorRef.current && anchorRef.current.contains(event.target)) {
             return;
         }
-        setOpen(false);
         setOpen1(false)
-        setOpen2(false);
 
     };
 
@@ -335,8 +331,6 @@ export function Navbar({
         if (anchorRef.current && anchorRef.current.contains(event.target)) {
             return;
         }
-        setOpen(false);
-        setOpen1(false);
         setOpen2(false);
     };
 

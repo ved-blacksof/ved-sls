@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImage, Paragraphs, MainContainer, AnalyserCarousel } from "../atoms"
+import { PositionImage,PositionImageReverse , Paragraphs, MainContainer, AnalyserCarousel } from "../atoms"
 import Bounce from 'react-reveal/Bounce';
 import { data } from 'jquery';
 
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
         margin: '15% auto',
-        width: '100%'
+        width: '100%',
     },
     bigHead: {
         color: 'black',

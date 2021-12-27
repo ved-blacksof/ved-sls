@@ -17,7 +17,7 @@ export function AboutusTemplate() {
             <Ubanner
                 Background={"./images/about/About-us.png"}
                 maintext="About us"
-                subtext="Technology Partner in your Business Growth Journey"
+                subtext="Technology partner in your business growth journey"
             />
 
             <GridBlue>

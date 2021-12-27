@@ -11,7 +11,7 @@ export function TestingTemplate() {
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-testing.png"
                 maintext="testing and calibration"
                 // subtext="Helping companies test their product."
-                subtext="Helping build next-gen products through world-class Testing and Calibration infrastructure"
+                subtext="Helping build next-gen products through world-class testing and calibration infrastructure"
             />
 
             <GridBlue>
@@ -84,7 +84,7 @@ export function TestingTemplate() {
 
             <Visit
                 goto="Click here to know more about our testing and calibration services!"
-                title="Know More"
+                title="Contact us"
                 href={"/contact"}
             />
 

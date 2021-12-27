@@ -13,7 +13,7 @@ export function GamingTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-gaming.png"
                 maintext="Smart Gaming"
-                subtext="Reinventing the Art of Learning with Wireless Smart Targeting System"
+                subtext="Reinventing the art of learning with wireless smart targeting system"
             />
 
             <GridBlue>
@@ -51,9 +51,8 @@ export function GamingTemplate() {
 
             <Visit
                 goto="Want to ace your game?"
-                title="Visit website"
-                href={"https://iotargeting.com/"}
-
+                // title="Visit website"
+                // href={"https://iotargeting.com/"}
                 title="Contact us"
                 href={"/contact"}
             />

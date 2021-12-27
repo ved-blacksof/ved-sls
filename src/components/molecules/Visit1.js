@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '100%',
             flexDirection: 'column-reverse'
-
         }
     },
     btmText: {

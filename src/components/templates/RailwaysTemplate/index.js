@@ -10,7 +10,7 @@ export function RailwaysTemplate() {
             <Ubanner
                 Background="./images/railways/Railway.png"
                 maintext="Railways"
-                subtext="Firing the Rolling Stock of India"
+                subtext="Firing the rolling stock of India"
             />
             <GridBlue>
                 <Navbar />

@@ -44,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
     },
     subText: {
         width: '30%',
-        font: 'normal normal normal 1rem Access',
+        // font: 'normal normal normal 1rem Access',
         color: 'white',
         textAlign: 'center',
         paddingTop: '1%',
         [theme.breakpoints.down('sm')]: {
             width: '70%',
-            fontSize: '1rem'
+            // fontSize: '1rem'
         }
     },
 
@@ -79,7 +79,7 @@ export function Ubanner({
                 </Fade>
 
                 <Fade left>
-                    <h2 className={classes.subText}>{subtext}</h2>
+                    <h6 className={classes.subText}>{subtext}</h6>
                 </Fade>
 
             </div>

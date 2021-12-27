@@ -169,7 +169,8 @@ export function Sbanner({
 
                     <h6 className={classes.subText}>
                         <Fade bottom>
-                            Industry leaders in providing solutions catering to the domains of intellectual property, hardware design & prototyping, software design, and manufacturing.
+                            Industry leaders in providing solutions catering to the domains of intellectual property, hardware design & prototyping, 
+                            software design, and manufacturing.
                         </Fade>
                     </h6>
                 </div>

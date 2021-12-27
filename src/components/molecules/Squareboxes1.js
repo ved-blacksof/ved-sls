@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
         cursor: 'pointer',
         transition: 'all 300ms ease-in-out',
         transform: 'width .6s ease-in-out',  //for red line
+        position:'relative',
         [theme.breakpoints.down('sm')]: {
             width: '35vw',
             height: '35vw',
@@ -66,10 +67,10 @@ const useStyles = makeStyles((theme) => ({
         },
         "&:hover": {
             color: '#182AC3',
-            boxShadow: '0px 0px 20px #00000017',
-            border:'1px solid white',
+            boxShadow: '0px 0px 10px #00000017',
+            border: '1px solid white',
             "& $imgBox": {
-                transform: 'scale(1.2)'
+                transform: 'scale(1.1)'
             },
             "&::before": {
                 height: '5px',
@@ -80,8 +81,6 @@ const useStyles = makeStyles((theme) => ({
                 }
             },
         },
-
-
     },
     imgBox: {
         width: '50%',
@@ -128,9 +127,7 @@ export function Squareboxes1({
                     {
                         data.map((item, index) => {
                             return (
-                                <Box
-                                    className={clsx(classes.boxes, 'redbarBox')}
-                                >
+                                <Box className={clsx(classes.boxes)} >
                                     <Box className={classes.imgBox}>
                                         <Bounce bottom>
                                             <img className={classes.image} src={item.images} alt="Mission Icon" />
@@ -141,8 +138,6 @@ export function Squareboxes1({
                             )
                         })
                     }
-
-
 
                 </Box>
             </Container>

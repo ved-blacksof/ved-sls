@@ -11,7 +11,7 @@ export function TransformersTemplate() {
             <Ubanner
                 Background="./images/transformers/Transformer.png"
                 maintext="Intelligent Transformer Monitoring"
-                subtext="Helping Discoms smartly monitor and manage their "
+                subtext="Helping discoms smartly monitor and manage their transformers"
             />
 
             <GridBlue>

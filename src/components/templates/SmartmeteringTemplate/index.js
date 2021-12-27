@@ -13,7 +13,7 @@ export function SmartmeteringTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-smartmeter.png"
                 maintext="smart metering"
-                subtext=" Spearheading the Smart Metering Landscape Worldwide "
+                subtext=" Spearheading the smart metering landscape worldwide "
 
             />
 
