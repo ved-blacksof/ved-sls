@@ -67,7 +67,12 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         transition: 'transform .3s',
-
+        [theme.breakpoints.down('sm')]: {
+            height: '20rem',
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '50vw'
+        },
     },
     newbg: {
         position: 'absolute',

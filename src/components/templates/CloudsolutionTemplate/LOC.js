@@ -10,10 +10,13 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     locContainer: {
-        margin: '15% auto',
+        marginTop: '10%',
+        margin: '0% auto',
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column'
+            flexDirection: 'column',
+            marginTop: '15%',
+
         },
     },
     leftBox: {
@@ -70,11 +73,11 @@ export function LOC({
 
                     </Box>
                 </Container>
-                    <Visit1
-                        rightlogo={'./images/Layer_x0020_1 (1).svg'}
-                        goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
-                        href="https://loccarto.io/home"
-                        title="Visit website" />
+                <Visit1
+                    rightlogo={'./images/Layer_x0020_1 (1).svg'}
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
+                    href="https://loccarto.io/home"
+                    title="Visit website" />
             </MainContainer>
         </>
     )

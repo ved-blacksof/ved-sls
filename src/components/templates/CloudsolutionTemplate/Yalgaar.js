@@ -8,12 +8,12 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        width: '100%',
-        margin: '10% auto',
+        marginTop: '10%',
+        margin: '0% auto',
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
-            margin: '20% auto',
+            marginTop: '15%',
         },
         "& h6": {
             color: 'black',

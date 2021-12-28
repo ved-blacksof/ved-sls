@@ -11,11 +11,13 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         padding: '5% auto',
-        margin:'0% auto',
+        margin: '0% auto',
         // border:'2px solid red',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
-            width: '80%'
+            width: '80%',
+            margin: '10% auto',
+
         }
 
     },
@@ -43,15 +45,30 @@ const useStyles = makeStyles((theme) => ({
     cssFocused: {
         color: 'white'
     },
+    btnBox: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'right',
+        marginTop: '10%',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'center',
+            marginTop: '5%',
+
+        }
+    },
     btn: {
         background: 'white',
         color: '#182AC3',
-        marginTop: '10%',
         font: 'normal normal normal 1.2rem Access',
         textTransform: 'none',
         padding: '.6rem 2rem',
-        float: 'right',
         borderRadius: '3px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '.9rem',
+            padding: '.3rem 1rem',
+            
+
+        },
         "&:hover": {
             background: '#182AC3',
             boxShadow: '0px 0px 3px white',
@@ -74,8 +91,15 @@ const useStyles = makeStyles((theme) => ({
             width: '80%',
         }
     },
-    captcha:{
-        marginTop:'5%'
+    captcha: {
+        marginTop: '5%',
+        width: '100%',
+        [theme.breakpoints.down('sm')]: {
+            transform: 'scale(0.70)',
+            webkitTransform: 'scale(0.70)',
+            transformOrigin: '0 0',
+            webkitTransformOrigin: '0 0',
+        },
     }
 }))
 
@@ -94,7 +118,7 @@ export function Letstalk() {
             return { ...currentForm, token }
         })
         setIsVerified(true)
-        
+
     }
     const handleExpire = () => {
         setForm((currentForm) => {
@@ -190,9 +214,11 @@ export function Letstalk() {
 
 
 
-                        <Button className={classes.btn} disabled={!isVerified}>
-                            Send Message
-                        </Button>
+                        <Box className={classes.btnBox}>
+                            <Button className={classes.btn} disabled={!isVerified}>
+                                Send Message
+                            </Button>
+                        </Box>
 
                     </Box>
 
@@ -232,8 +258,6 @@ export function Letstalk() {
                                 <h6> London, SW14 8JN</h6>
                             </Box>
                         </Box>
-
-
 
                     </Box>
 

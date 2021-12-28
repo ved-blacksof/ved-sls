@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-            textAlign: 'center',
+            textAlign: 'left',
             marginTop: '2%'
         },
     },
@@ -66,7 +66,6 @@ export function ParagraphsBlue({
         <>
             <Box className={classes.paraBox} >
                 <h2 className={classes.mainTitle}> {maintitle} </h2>
-                <br />
                 <h3 className={classes.head}>{title}</h3>
                 <h3>{title1}</h3>
                 <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />

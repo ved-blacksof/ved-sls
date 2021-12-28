@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
+            margin: "8% auto",
 
         }
     },
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-            flexDirection: 'column-reverse'
+            // flexDirection: 'column-reverse'
         }
     },
     btmText: {
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '5rem',
+            width: '6rem',
         },
     },
     btns: {
@@ -60,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '3% auto',
         [theme.breakpoints.down('sm')]: {
             width: '40%',
-            margin: '1% auto',
+            margin: '2% auto',
         },
         [theme.breakpoints.down('xs')]: {
             width: '70%'

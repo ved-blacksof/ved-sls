@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import {
     Box,
     Container,
+    Grid,
     makeStyles,
 } from '@material-ui/core';
 import { GeneralHeading, MainContainer } from '../atoms'
@@ -20,19 +21,17 @@ const useStyles = makeStyles((theme) => ({
     },
     mainBox: {
         width: '100%',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
         [theme.breakpoints.down('sm')]: {
             alignItems: 'center',
         },
     },
 
     boxes: {
-        width: '20vw',
-        height: '20vw',
+        width: '19vw',
+        height: '19vw',
+
         border: '1px solid #DCDCDC',
+        border: '2px solid red',
         boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
@@ -41,16 +40,18 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
         padding: "1rem",
-        margin: '1.5rem 1%',
+        // margin: '2%',
         cursor: 'pointer',
         transition: 'all 300ms ease-in-out',
         transform: 'width .6s ease-in-out',  //for red line
-        position:'relative',
+        position: 'relative',
         [theme.breakpoints.down('sm')]: {
+            width: '19vw',
+            height: '19vw',
+        },
+        [theme.breakpoints.down('xs')]: {
             width: '35vw',
             height: '35vw',
-            margin: '5% 0%',
-            padding: "1%",
         },
         "&::before": {
             content: "''",
@@ -58,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
             width: '0',
             background: '#DE141A',
             position: 'absolute',
+            
             bottom: '5%',
             left: '5%',
             transition: 'all 800ms ease-in-out',
@@ -81,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
                 }
             },
         },
+
     },
     imgBox: {
         width: '50%',
@@ -122,24 +125,26 @@ export function Squareboxes1({
                 <br />
                 <br />
                 <br />
-                <Box className={classes.mainBox}>
+                <Grid container spacing={6} item className={classes.mainBox}>
 
                     {
                         data.map((item, index) => {
                             return (
-                                <Box className={clsx(classes.boxes)} >
-                                    <Box className={classes.imgBox}>
-                                        <Bounce bottom>
-                                            <img className={classes.image} src={item.images} alt="Mission Icon" />
-                                        </Bounce>
+                                <Grid sm={4} xs={6} item >
+                                    <Box className={clsx(classes.boxes)}>
+                                        <Box className={classes.imgBox}>
+                                            <Bounce bottom>
+                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
+                                            </Bounce>
+                                        </Box>
+                                        <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
                                     </Box>
-                                    <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
-                                </Box>
+                                </Grid>
                             )
                         })
                     }
 
-                </Box>
+                </Grid>
             </Container>
         </MainContainer>
     )

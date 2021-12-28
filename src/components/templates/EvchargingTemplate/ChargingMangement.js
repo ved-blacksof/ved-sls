@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) => ({
     mainBox: {
         position: 'relative',
-        margin: '10% 0%',
+        margin: '0% auto',
     },
     container: {
         display: 'flex',
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             position: 'static',
             width: '80%',
-            margin: '5% auto'
+            // margin: '5% auto'
         }
     },
     lap: {

@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         bottom: '8%',
         [theme.breakpoints.down('sm')]: {
-            bottom: '5%',
+            bottom: '8%',
         }
     },
     txt: {
@@ -92,12 +92,17 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     hr: {
-        margin: '1% auto', height: '2px',
+        margin: '1% auto',
+        height: '2px',
         backgroundColor: 'white',
         width: '25%',
         boxShadow: 'none',
         [theme.breakpoints.down('sm')]: {
-            width: '60%'
+            width: '60%',
+            margin: '2% auto',
+        },
+        [theme.breakpoints.down('xs')]: {
+            margin: '3% auto',
         },
     }
 

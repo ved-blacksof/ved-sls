@@ -35,15 +35,23 @@ const useStyles = makeStyles((theme) => ({
         color: '#D9393E',
         fontSize: '4rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3rem'
+            fontSize: '3rem',
+            textAlign:'center'
         },
         [theme.breakpoints.down('xs')]: {
-            fontSize: '2.5rem'
+            fontSize: '2.5rem',
+            textAlign:'center'
         }
     },
     subHead: {
         color: 'black',
-        lineHeight: '1'
+        lineHeight: '1',
+        [theme.breakpoints.down('sm')]: {
+            textAlign:'center'
+        },
+        [theme.breakpoints.down('xs')]: {
+            textAlign:'center'
+        }
     },
     container1: {
         display: 'flex',

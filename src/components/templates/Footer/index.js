@@ -118,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
         color:'black',
         display:'inline',
         [theme.breakpoints.down('sm')]: {
-            display: 'none'
+            // display: 'none'
         }
     },
     anchor:{

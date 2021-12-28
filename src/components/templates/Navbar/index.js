@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
         animation: `$translates 800ms linear`,
         animationIterationCount: 1,
         animationDuration: '800ms',
+        [theme.breakpoints.down('sm')]: {
+            minHeight: 'fit-content',
+        },
         "&:hover": {
             color: '#DE141A'
         }
@@ -234,7 +237,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             display: 'block',
             fontSize: '2.2rem',
-            color: 'white'
         }
     },
     menuIconPos: {
@@ -243,10 +245,10 @@ const useStyles = makeStyles((theme) => ({
         color: 'black'
     },
     menu: {
+
         [theme.breakpoints.down('sm')]: {
             width: '100%',
             paddingBottom: '1%',
-            borderBottom: '1px solid grey',
             transition: 'all 4s ease-in-out',
             transform: 'translate 100%'
         }
@@ -368,17 +370,16 @@ export function Navbar({
         setOpen(false)
         setOpen1(false)
         setOpen2(false)
+        // setMobileMenu(false)
 
         if (show) {
             setNavPos('navFixed')
             setnavAfterPos('clsAfterPos')
             setlinkActivePos('linkActiveAfterPos')
-
         } else {
             setNavPos('navRelative')
             setnavAfterPos('clsbeforePos')
             setlinkActivePos('linkActive')
-
         }
     }
 
@@ -421,8 +422,6 @@ export function Navbar({
                                         onClick={() => { history.push('/') }} />
                                 </Fade>
                         }
-
-
 
                     </Box>
 
@@ -711,13 +710,13 @@ export function Navbar({
                                                     </MenuItem>
                                                     <MenuItem className={classes.menuItem}>
                                                         <h6 className={classes.lios}>
-                                                            <Button href="https://www.slscorp.com/about-slscorp/careers.html" style={{ textTransform: 'none', background: 'transparent',padding:'0px' }}  >
-                                                                <h6 style={{ 
-                                                                    color:'black',
-                                                                    "&:hover":{
-                                                                        border:'1px solid red'
+                                                            <Button href="https://www.slscorp.com/about-slscorp/careers.html" style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
+                                                                <h6 style={{
+                                                                    color: 'black',
+                                                                    "&:hover": {
+                                                                        // border: '1px solid red'
                                                                     }
-                                                                    }}>Join us</h6>
+                                                                }}>Join us</h6>
                                                             </Button >
                                                         </h6>
                                                     </MenuItem>
@@ -733,13 +732,15 @@ export function Navbar({
                     </ul>
                     {/* </Fade> */}
                 </Toolbar>
-                {
-                    mobileMenu ?
-                        <Box className={classes.menu} data-aos="fade-down">
-                            <MobileMenu />
-                        </Box>
-                        : ''
-                }
+                <div data-aos="fade-down">
+                    {
+                        mobileMenu ?
+                            <Box className={classes.menu} >
+                                <MobileMenu />
+                            </Box>
+                            : ''
+                    }
+                </div>
             </AppBar>
         </Box >
     )

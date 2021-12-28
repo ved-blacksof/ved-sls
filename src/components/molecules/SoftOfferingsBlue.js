@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         position: 'relative',
         margin: '10% 0%',
+        [theme.breakpoints.down('sm')]: {
+            margin: '15% 0%',
+        }
     },
     container: {
         display: 'flex',
@@ -16,6 +19,13 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column'
+        }
+    },
+    pad:{
+        padding: '10% 0%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '8% 0%',
+
         }
     },
     leftBox: {
@@ -32,8 +42,9 @@ const useStyles = makeStyles((theme) => ({
         bottom: '-10%',
         [theme.breakpoints.down('sm')]: {
             position: 'static',
-            width: '80%',
-            margin: '5% auto'
+            width: '60%',
+            margin: '0% auto',
+            paddingBottom:'5%'
         }
     },
     lap: {
@@ -51,12 +62,12 @@ export function SoftOfferingsBlue({
     const classes = useStyles()
 
     return (
-        <Box style={{ height: 'fit-content', overflow: 'hidden' }}>
+        <Box style={{ height: 'fit-content' }}>
             <Box className={classes.mainBox}>
                 <Box style={{ borderRadius: '0rem 5rem 0rem 5rem', overflow: 'hidden' }}>
                     <GridBlue >
 
-                        <Box style={{ padding: '10% 0%', }}>    
+                        <Box  className={classes.pad}>    
                             <MainContainer>
                                 <Container fixed className={classes.container}>
 
