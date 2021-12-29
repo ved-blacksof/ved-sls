@@ -1,7 +1,7 @@
 import { Container, makeStyles, Box, Typography, Tabs, Tab } from '@material-ui/core'
 import { PropTypes } from 'prop-types'
 import React from 'react'
-import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue, Visit1 } from '../../molecules'
 import { MainContainer } from '../../atoms';
 import { smartstreet } from '../../molecules/PortfolioData'
 import clsx from 'clsx';
@@ -153,7 +153,7 @@ export function MeterTabs() {
 
 
 
-                        <Visit
+                        <Visit1
                             title="Contact us"
                             href={"/contact"}
                         />
@@ -194,7 +194,7 @@ export function MeterTabs() {
 
                         />
 
-                        <Visit
+                        <Visit1
                             goto="Switch to a smarter way of Metering"
                             title="Visit website"
                             href={"http://www.smets2design.com/"}

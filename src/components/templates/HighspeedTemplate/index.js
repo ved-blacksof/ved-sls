@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
 
 import { Ourdesignprocess } from './Ourdesignprocess'
 
@@ -68,9 +68,9 @@ export function HighspeedTemplate() {
             />
 
             <Ourdesignprocess />
-            <br/>
 
-            <Visit
+
+            <Visit1
                 goto="Explore all about our products and services!"
                 title="Visit website"
                 href={"https://www.slscorp.com/services/high-speed-pcb-design-services.html"}

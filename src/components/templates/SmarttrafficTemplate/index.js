@@ -2,7 +2,7 @@ import React from 'react'
 import { Fade } from 'react-reveal'
 import { Navbar, Footer } from '..'
 import { GridBlue , } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit, NewPosCards } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, NewPosCards, Visit1 } from '../../molecules'
 import { smarttraffic , smarttrafficCards} from '../../molecules/PortfolioData'
 import { PosBoxes } from '../../molecules/PosBoxes'
 
@@ -57,7 +57,7 @@ export function SmarttrafficTemplate() {
                 images='./images/about-imac-smarttraffic01.png'
             /> */}
 
-            <Visit
+            <Visit1
                 goto="Switch to Smart Traffic Management now!"
                 title="Visit website"
                 href="https://www.iotraffic.io/"

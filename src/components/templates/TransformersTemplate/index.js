@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue, Visit1 } from '../../molecules'
 import { transformer ,transSmartFirm} from '../../molecules/PortfolioData'
 import { Application } from './Application'
 
@@ -60,7 +60,7 @@ export function TransformersTemplate() {
 
             <Application />
 
-            <Visit
+            <Visit1
                 goto="Want to know more about this offering?"
                 title="COntact us"
                 href={"/contact"}

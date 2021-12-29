@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         height: '100%',
         width: '70%',
-        margin:'0% auto',
+        
         background: '#182AC3',
         color: 'white',
         display: 'flex',
@@ -62,9 +62,9 @@ export function Buttons({
 }) {
     const classes = useStyles()
     return (
-        <Box className={className}>
-            {/* material ui Button */}
-            <Fade bottom>
+        <Fade bottom>
+            <Box className={className}>
+                {/* material ui Button */}
                 <Button
                     className={classes.btn}
                     style={style}
@@ -81,7 +81,7 @@ export function Buttons({
                 </Box> */}
 
                 </Button>
-            </Fade>
-        </Box>
+            </Box>
+        </Fade>
     )
 }

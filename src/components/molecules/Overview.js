@@ -11,11 +11,14 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '6%',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
-            paddingBottom: '5%'
+            padding: '10% 0%',
         },
     },
     overInBox: {
         paddingTop: '5%',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: '0%',
+        },
     },
     paths: {
         marginBottom: '5%',

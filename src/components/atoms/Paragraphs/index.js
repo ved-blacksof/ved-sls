@@ -30,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
     btnBox: {
         width: '100%',
         marginTop: '6%',
-        display: 'flex',
-        justifyContent: 'center',
     },
     smallBtn: {
         font: 'normal normal normal 1rem Access',

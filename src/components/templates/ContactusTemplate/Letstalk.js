@@ -237,7 +237,7 @@ export function Letstalk() {
                         </Box>
                         <Box style={{ marginTop: '10%' }}>
                             <Box className={classes.iconBox}>
-                                <img src={'./images/contactus/Layer_x0020_1-1.svg'} /><h4 style={{ marginLeft: "6%" }}>USA</h4>
+                                <img src={'./images/contactus/Layer_x0020_1-1.svg'} /><h4 style={{ marginLeft: "5%" }}>USA</h4>
                             </Box>
                             <Box className={classes.address}>
                                 <h6> System Level Solutions, Inc. </h6>
@@ -249,7 +249,7 @@ export function Letstalk() {
                         </Box>
                         <Box style={{ marginTop: '10%' }}>
                             <Box className={classes.iconBox}>
-                                <img src={'./images/contactus/Layer_x0020_1-2.svg'} /><h4 style={{ marginLeft: "11%" }} >UK</h4>
+                                <img src={'./images/contactus/Layer_x0020_1-2.svg'} /><h4 style={{ marginLeft: "5%" }} >UK</h4>
                             </Box>
                             <Box className={classes.address}>
                                 <h6> SLS Overseas </h6>

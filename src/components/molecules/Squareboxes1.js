@@ -22,16 +22,15 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         width: '100%',
         [theme.breakpoints.down('sm')]: {
-            alignItems: 'center',
+            // alignItems: 'center',
+            margin: '0% auto',
         },
     },
 
     boxes: {
-        width: '19vw',
+        width: '20vw',
         height: '19vw',
-
         border: '1px solid #DCDCDC',
-        border: '2px solid red',
         boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
@@ -39,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: "1rem",
+        // padding: "1rem",
         // margin: '2%',
         cursor: 'pointer',
         transition: 'all 300ms ease-in-out',
@@ -59,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
             width: '0',
             background: '#DE141A',
             position: 'absolute',
-            
             bottom: '5%',
             left: '5%',
             transition: 'all 800ms ease-in-out',
@@ -124,8 +122,7 @@ export function Squareboxes1({
                 <h2 className={classes.mainTitle}> {maintitle} </h2>
                 <br />
                 <br />
-                <br />
-                <Grid container spacing={6} item className={classes.mainBox}>
+                <Grid container spacing={2} item className={classes.mainBox}>
 
                     {
                         data.map((item, index) => {

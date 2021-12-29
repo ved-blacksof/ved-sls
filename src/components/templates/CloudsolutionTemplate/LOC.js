@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
-            marginTop: '15%',
+            // marginTop: '15%',
 
         },
     },
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         width: '50%',
         paddingRight: '5%',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '5%',
+            // marginTop: '5%',
             width: '100%',
 
         },
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     rightBox: {
         width: '50%',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '5%',
+            // marginTop: '5%',
             width: '100%',
             display: 'none'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
 import { smartstreet, testingAnalysers } from '../../molecules/PortfolioData'
 
 export function TestingTemplate() {
@@ -82,7 +82,7 @@ export function TestingTemplate() {
 
             />
 
-            <Visit
+            <Visit1
                 goto="Click here to know more about our testing and calibration services!"
                 title="Contact us"
                 href={"/contact"}

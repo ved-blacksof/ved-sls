@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
-            margin: "8% auto",
-
+            // margin: "10% auto",
+            padding:'16% 0%',
         }
     },
     textLinkBox: {
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '6rem',
+            width: '6rem'
         },
     },
     btns: {
@@ -85,12 +85,17 @@ export function Visit1({
             <Box className={classes.visitBox}>
 
                 <Box className={classes.textLinkBox}>
+                    {
+                        rightlogo ?
+                            <Box className={classes.iconMainBox}>
+                                <Box className={classes.icon}>
+                                    <Fade bottom> <img src={rightlogo} alt="rightLogo" /></Fade>
+                                </Box>
+                            </Box>
+                        : ''
+                    }
 
-                    <Box className={classes.iconMainBox}>
-                        <Box className={classes.icon}>
-                            <Fade bottom> <img src={rightlogo} alt="rightLogo" /></Fade>
-                        </Box>
-                    </Box>
+
                     {
                         goto ? <h6 className={classes.btmText} style={style}> {goto}</h6> : ''
                     }
@@ -102,6 +107,7 @@ export function Visit1({
 
                 <Buttons
                     className={classes.btns}
+                    style={{ margin: '0% auto' }}
                     title={title}
                     href={href}
                     arrowIcon="./images/Icon feather-arrow-right.svg"

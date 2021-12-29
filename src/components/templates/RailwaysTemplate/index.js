@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
 // import { smartstreet } from '../../molecules/PortfolioData'
 
 export function RailwaysTemplate() {
@@ -46,7 +46,7 @@ export function RailwaysTemplate() {
                  realized on FPGA with in-house developed IP. It is IEC 61375 and UIC Leaflet 556 compliant."
             />
 
-            <Visit
+            <Visit1
                 goto="Know more about our solution for Railways."
                 title="Contact Us"
                 href="/contact"

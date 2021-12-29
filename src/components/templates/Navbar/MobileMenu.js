@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
         transition: 'all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)',
         boxShadow: 'none',
         color: 'white',
-        
+
     },
 
 
@@ -144,7 +144,7 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '100',
         padding: '0 1rem',
         boxShadow: '0px 1px 1px #777',
-        zIndex:'1'
+        zIndex: '1'
     },
     menuItem: {
         padding: '5px',
@@ -164,7 +164,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#000',
         pointer: 'cursor',
         transform: 'width .4s ease-in-out',
-        paddingLeft: '5px',       
+        paddingLeft: '5px',
     },
 
     act: {
@@ -199,7 +199,7 @@ const useStyles = makeStyles((theme) => ({
         opacity: '.2'
     },
     popper: {
-        zIndex: '10',  
+        zIndex: '10',
     },
     '@keyframes menuani': {
         '0%': {
@@ -359,8 +359,6 @@ export function MobileMenu() {
 
                     {/* class onhover Mega menu */}
                     <li className={clsx(classes[navlinkref.current], classes.navLI)}
-                        // onMouseEnter={handleToggle}
-                        // onMouseLeave={handleClose}
                         onClick={handleToggle}
                     >
                         <NavLink
@@ -393,10 +391,10 @@ export function MobileMenu() {
                                 {({ TransitionProps }) => (
                                     <Grow
                                         {...TransitionProps}
-                                        // style={{
-                                        //     transformOrigin:
-                                        //         placement === 'bottom' ? 'left top' : 'left bottom',
-                                        // }}
+                                    // style={{
+                                    //     transformOrigin:
+                                    //         placement === 'bottom' ? 'left top' : 'left bottom',
+                                    // }}
                                     >
                                         <ClickAwayListener
                                             onClickAway={handleClose}
@@ -527,7 +525,7 @@ export function MobileMenu() {
                                                     <MenuItem className={classes.menuItem} >
                                                         <h6 ><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Software Development</NavLink ></h6>
                                                     </MenuItem>
-                                               
+
                                                     <MenuItem className={classes.menuItem}>
                                                         <h6 ><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Solutions</NavLink ></h6>
                                                     </MenuItem>

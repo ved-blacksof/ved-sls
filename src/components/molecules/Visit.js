@@ -24,16 +24,16 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
     },
     btns: {
-        width: '30%',
-        marginTop: '2%',
+        width: '35%',
+        margin: '3% auto',
         [theme.breakpoints.down('sm')]: {
             width: '40%',
-            marginTop: '4%'
+            margin: '2% auto',
         },
         [theme.breakpoints.down('xs')]: {
-            width: '60%'
+            width: '70%'
         },
-    }
+    },
 }))
 
 export function Visit({

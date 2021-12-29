@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Cards, Visit, Squareboxes1 } from '../../molecules'
+import { Ubanner, Overview, Cards, Visit, Squareboxes1, Visit1 } from '../../molecules'
 import { Services } from './Services'
 import { Technologystack } from './Technologystack'
 
@@ -31,7 +31,7 @@ export function SoftDevTemplate() {
 
             <Technologystack />
 
-            <Visit
+            <Visit1
                 goto="Explore all about our products and services!"
                 title="Visit website"
                 href={"https://www.slscorp.com/services/software-development-services.html"}

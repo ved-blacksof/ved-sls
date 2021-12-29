@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     pos: {
         position: 'relative',
         padding: '4% 0%',
+        [theme.breakpoints.down('sm')]: {         
+            padding: '0%',
+        }
     },
     mainBox: {
         height: 'fit-content',

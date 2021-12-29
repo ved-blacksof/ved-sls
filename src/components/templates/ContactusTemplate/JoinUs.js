@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         width: '60%',
         marginTop: '15%',
-
     }
 }))
 
