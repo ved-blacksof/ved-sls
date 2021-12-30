@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles, Container, Box, Grid } from '@material-ui/core'
-import { PositionImage,PositionImageReverse , Paragraphs, MainContainer, AnalyserCarousel } from "../atoms"
+import { PositionImage, PositionImageReverse, Paragraphs, MainContainer, AnalyserCarousel } from "../atoms"
 import Bounce from 'react-reveal/Bounce';
 import { data } from 'jquery';
 
@@ -49,14 +49,8 @@ export function QualityReverse({
     mainheading,
     imageBG,
     heading,
-    subhead,
-    subhead1,
-    subhead2,
-    subhead3,
-    subtitle,
-    subtitle1,
-    subtitle2,
-    subtitle3,
+    subhead, subhead1, subhead2, subhead3, subhead4,
+    subtitle, subtitle1, subtitle2, subtitle3, subtitle4,
     redline,
     uli,
     download,
@@ -72,6 +66,7 @@ export function QualityReverse({
     images1,
     images2,
     images3,
+    images4,
     list,
 }) {
     const classes = useStyles()
@@ -92,10 +87,12 @@ export function QualityReverse({
                                     subhead1={subhead1}
                                     subhead2={subhead2}
                                     subhead3={subhead3}
+                                    subhead4={subhead4}
                                     subtitle={subtitle}
                                     subtitle1={subtitle1}
                                     subtitle2={subtitle2}
                                     subtitle3={subtitle3}
+                                    subtitle4={subtitle4}
                                     uli={uli}
                                     list={list}
                                     redline={redline}
@@ -124,6 +121,7 @@ export function QualityReverse({
                                                 images1={images1}
                                                 images2={images2}
                                                 images3={images3}
+                                                images4={images4}
                                             />
                                         </Bounce>
                                     </Box> :

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
-
+            
         },
     },
     btn: {
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         border: '1px solid #182AC3',
         marginTop: '10%',
+        cursor:'pointer',
         color: '#182AC3',
         "&:hover": {
             background: '#182AC3',

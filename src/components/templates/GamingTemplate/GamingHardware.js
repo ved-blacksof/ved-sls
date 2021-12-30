@@ -45,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         margin: '5% 1.5%',
         [theme.breakpoints.down('sm')]: {
-            width: '70%'
+            width: '100%',
+
         },
         '& h4': {
             color: 'black'
@@ -66,11 +67,13 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%'
         },
         [theme.breakpoints.down('sm')]: {
-            height: 'fit-content',
+            // height: 'fit-content',
+            maxHeight: '50vw',
         },
     },
     head: {
         color: 'black'
+
     },
     portSubHead: {
         color: 'black',
@@ -86,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
         height: 'fit-content',
         padding: '1rem',
         [theme.breakpoints.down('sm')]: {
-            padding: '1rem'
+            padding: '1rem',
         }
     },
     productName: {
@@ -103,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '.5rem',
         textAlign: 'left',
         [theme.breakpoints.down('sm')]: {
-            height: '4.8rem',
+            height: '10rem',
         },
     },
     productDetailHeight: {
@@ -112,7 +115,6 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         marginTop: '.5rem',
         textAlign: 'left',
-        border: '1px solid red',
         [theme.breakpoints.down('sm')]: {
             // height: '4.8rem',
         },
@@ -124,6 +126,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'BebasNeue',
         color: '#182AC3 !important',
         "& a": {
+
         }
     }
 }))
@@ -189,7 +192,6 @@ export function GamingHardware({
                         <Box className={classes.textBox}>
                             <Fade bottom>  <h4 className={classes.productName} >Smart Targets</h4>  </Fade>
 
-
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
                                     Smart Targets are Iot Targeting App controlled reactive targets powered with
@@ -228,11 +230,11 @@ export function GamingHardware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. Leveraging reactive touch technology, Just
+                                    Just Targets are portable, reusable, and reactive targets for everyday practice or fun gaming experiences. Leveraging reactive touch technology, Just
                                     {
                                         show1 ?
                                             <h6 style={{ color: 'black', textAlign: 'left', display: 'inline' }}>
-                                               Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.
+                                                Targets work without additional targets or connections and comes with 20 hours AA Battery life for non-stop experiential gaming and adventure.
                                             </h6> : ''
                                     }
                                 </h6>

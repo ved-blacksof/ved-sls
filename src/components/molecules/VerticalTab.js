@@ -47,20 +47,19 @@ function a11yProps(index) {
 }
 
 const useStyles = makeStyles((theme) => ({
-    smBlock:{
-        display:'none',
-        [theme.breakpoints.down('sm')]:{
-            display:'block'
+    smBlock: {
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block'
         }
     },
     mainBox: {
         display: 'flex',
     },
     leftBox: {
-        width: '50%',
-        height: '100%',
-        padding: '5% 0%',
         [theme.breakpoints.down('sm')]: {
+            width: '50%',
+            height: '100%',
             padding: '0%',
         },
     },

@@ -83,10 +83,12 @@ export function Paragraphs({
     subhead1,
     subhead2,
     subhead3,
+    subhead4,
     subtitle,
     subtitle1,
     subtitle2,
     subtitle3,
+    subtitle4,    
     list,
     uli,
     firstli,
@@ -133,8 +135,18 @@ export function Paragraphs({
                     subhead3 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead3}</h4> : ''
                 }
                 {
-                    subhead3 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead3}</h4> : ''
+                    subtitle3 ? <h4 className={classes.portSubHead} >{subtitle3}</h4> : ''
                 }
+
+
+                {
+                    subhead4 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead4}</h4> : ''
+                }
+                {
+                    subtitle4 ? <h4 className={classes.portSubHead} >{subtitle4}</h4> : ''
+                }
+
+
 
                 {
                     list ?

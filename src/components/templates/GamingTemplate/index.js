@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Cards, Visit, CardsReadMore } from '../../molecules'
+import { Ubanner, Overview, Cards, Visit, CardsReadMore, Visit1 } from '../../molecules'
 
 import { solar, gaminghardware, gamingsoftware, gamingapplications, gamingOverview } from '../../molecules/PortfolioData'
 import { GamingHardware } from './GamingHardware'
@@ -49,7 +49,7 @@ export function GamingTemplate() {
                 data={gamingapplications}
             />
 
-            <Visit
+            <Visit1
                 goto="Want to ace your game?"
                 // title="Visit website"
                 // href={"https://iotargeting.com/"}

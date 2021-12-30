@@ -352,7 +352,7 @@ export const evchargercontrollers = [
         subtitle: 'Verycon 2.0',
     },
     {
-        images: './images/evcharger/verycon_pro.JPG',
+        images: './images/evcharger/verycon_pro.jpeg',
         subtitle: 'Verycon Pro',
     },
     {

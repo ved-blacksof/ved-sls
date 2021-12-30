@@ -71,9 +71,6 @@ export function HomepageTemplate() {
                 br="br"
             />
 
-
-
-
             <Partners />
 
             <Visit1

@@ -143,6 +143,7 @@ export function PositionImage({
     images1,
     images2,
     images3,
+    images4,
     style
 }) {
 
@@ -184,6 +185,9 @@ export function PositionImage({
                                 </Box>
                                 <Box className={classes.productImageBox}>
                                     <img className={classes.image} src={images3} alt="image" />
+                                </Box>
+                                <Box className={classes.productImageBox}>
+                                    <img className={classes.image} src={images4} alt="image" />
                                 </Box>
 
                                 <ViewportSlot >

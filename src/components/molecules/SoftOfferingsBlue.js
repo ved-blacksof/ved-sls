@@ -14,6 +14,14 @@ const useStyles = makeStyles((theme) => ({
             marginBottom:'0%',
         }
     },
+    curve:{
+        borderRadius: '0rem 5rem 0rem 5rem', 
+        overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            borderRadius: '0rem', 
+
+        }
+    },
     container: {
         display: 'flex',
         justifyContent: 'left',
@@ -65,7 +73,7 @@ export function SoftOfferingsBlue({
     return (
         <Box style={{ height: 'fit-content' }}>
             <Box className={classes.mainBox}>
-                <Box style={{ borderRadius: '0rem 5rem 0rem 5rem', overflow: 'hidden' }}>
+                <Box className={classes.curve}>
                     <GridBlue >
 
                         <Box  className={classes.pad}>    

@@ -8,6 +8,7 @@ import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
 import { GeneralHeading, MainContainer } from '../atoms'
 import Fade from 'react-reveal/Fade';
 import clsx from 'clsx';
+import './molecule.css'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '15% auto',
         [theme.breakpoints.down('sm')]: {
             margin: "20% auto",
-            overflow:'hidden'
+            overflow: 'hidden'
         },
     },
     sliderSec: {
@@ -31,6 +32,16 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
 
+        },
+    },
+    box3: {
+        // display: "none",
+        opacity:'0',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
+            flexDirection: 'column',
         },
     },
     btn: {
@@ -80,8 +91,8 @@ const useStyles = makeStyles((theme) => ({
     cardImage1: {
         height: '15vw',
         width: '100%',
-        padding:'5% 8%',
-        textAlign:'center',
+        padding: '5% 8%',
+        textAlign: 'center',
         overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
             height: '50vw',
@@ -90,12 +101,12 @@ const useStyles = makeStyles((theme) => ({
     images1: {
         height: '100%',
         maxWidth: '100%',
-        margin:'0% auto'
+        margin: '0% auto'
     },
     images: {
         maxHeight: '100%',
         width: '100%',
-        margin:'0% auto'
+        margin: '0% auto'
 
     },
     cardTxt: {
@@ -295,6 +306,7 @@ export function Realtime({
     data,
     data1,
     squarecarddata,
+    carouselIndicatorSM,
     mainhead,
     maintitle,
     title,
@@ -320,6 +332,8 @@ export function Realtime({
     const previous = () => {
         sliderRef.current.slickPrev();
     };
+
+
     {
         var settings = {
             // dots: true,
@@ -385,12 +399,20 @@ export function Realtime({
                             </Box> : ''
                         }
 
-                        <Box className={classes.sliderSec}>
+                        <Box className={clsx(classes.sliderSec, "sliderBox")}>
 
-                            <Box className={clsx(classes.box)} style={style} >
-                                <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
-                                <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
-                            </Box>
+                            {
+                                carouselIndicatorSM ?
+                                    <Box className={clsx(classes.box3)} style={style} >
+                                        <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                                        <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
+                                    </Box>
+                                    :
+                                    <Box className={clsx(classes.box)} style={style} >
+                                        <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                                        <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
+                                    </Box>
+                            }
 
                             {/* for Solar templtes Blade 4 */}
 
