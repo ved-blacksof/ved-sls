@@ -15,14 +15,15 @@ const useStyles = makeStyles((theme) => ({
     realText: {
         margin: '15% auto',
         [theme.breakpoints.down('sm')]: {
-            margin: "20% auto"
+            margin: "20% auto",
+            overflow:'hidden'
         },
     },
     sliderSec: {
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',
-        marginTop: '3%'
+        marginTop: '3%',
     },
     box: {
         display: 'flex',

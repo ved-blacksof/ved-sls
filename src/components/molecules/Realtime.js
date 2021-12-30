@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     realText: {
         margin: '15% auto',
         [theme.breakpoints.down('sm')]: {
-            margin: "20% auto"
+            margin: "20% auto",
+            overflow:'hidden'
         },
     },
     sliderSec: {

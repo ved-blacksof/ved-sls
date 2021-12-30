@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Overview, Ubanner, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
+import { Overview, Ubanner, Quality, QualityReverse, Visit, SoftOfferingsBlue, Visit1 } from '../../molecules'
 import { digital } from '../../molecules/PortfolioData'
 
 export function DigitalTemplate() {
@@ -59,7 +59,7 @@ export function DigitalTemplate() {
                 images='./images/dashboards/Dynamic-Signage.png'
             />
 
-            <Visit
+            <Visit1
                 goto="Reinvent how your brand advertises and connects."
                 title="Contact us"
                 href={"/contact"}

@@ -8,8 +8,10 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         position: 'relative',
         marginTop: '10%',
+        marginBottom:'10%',
         [theme.breakpoints.down('sm')]: {
-            // margin: '15% 0%',
+            marginTop: '0%',
+            marginBottom:'0%',
         }
     },
     container: {

@@ -45,22 +45,27 @@ const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down('sm')]: {
                 flexDirection: 'row',
                 position: 'static',
-                justifyContent:'center'
+                justifyContent: 'center',
             },
         },
         "& .flicking-pagination-bullet": {
             height: '1.5rem !important',
             width: '.32rem !important',
-            margin: '.2rem .2rem !important',
+            margin: '.2rem !important',
             borderRadius: '10px !important',
             backgroundColor: 'blue !important',
             [theme.breakpoints.down('sm')]: {
                 height: '.2rem !important',
                 width: '.8rem !important',
+                borderRadius: '10px !important',
+                margin: '.5rem .2rem !important',
+
             },
         },
         "& .flicking-pagination-bullet-active": {
-            backgroundColor: '#ff0000 !important'
+            backgroundColor: '#ff0000 !important',
+            borderRadius: '10px !important',
+
         }
 
     },
@@ -70,8 +75,34 @@ const useStyles = makeStyles((theme) => ({
         margin: "0% 2%",
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
-        padding: '0%',
+            padding: '0%',
+        },
+    },
 
+
+    blueBox: {
+        position: 'absolute',
+        width: '23vw',
+        height: '20vw',
+        background: '#182AC3',
+        padding: '4%',
+        top: '30%',
+        left: '14%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            height: '8rem',
+            position: 'static',
+            padding: '0%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '10rem',
+        },
+    },
+    posRelative: {
+
+        [theme.breakpoints.down('sm')]: {
+            position: 'relative',
+            padding: '10px 0%'
         },
     },
     iconBox: {
@@ -82,45 +113,25 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        top: '20%',
-        left: '5%',
+        top: '-20%',
+        left: '-25%',
         zIndex: '1',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '3rem',
             height: '3rem',
-            left: '2%',
-            top: '20%',
-            display:'none'
+            left: '5%',
+            top: '-100%',
         }
     },
     icon: {
         width: '55%'
     },
-    blueBox: {
-        position: 'absolute',
-        width: '23vw',
-        height: '21vw',
-        background: '#182AC3',
-        padding: '4%',
-        top: '30%',
-        left: '14%',
-        [theme.breakpoints.down('sm')]: {
-            width: '100%',
-            height: '9rem',
-            position: 'static'
-            // top: '36%',
-            // left: '10%',
-        },
-    },
     blueBoxPara: {
         width: '100%',
         [theme.breakpoints.down('sm')]: {
             fontSize: '.8rem',
-            overflow: 'hidden'
-
-        },
-        [theme.breakpoints.down('xs')]: {
-            fontSize: '.8rem',
+            overflow: 'hidden',
+            padding: '1rem'
         },
     },
     btn: {
@@ -137,15 +148,14 @@ const useStyles = makeStyles((theme) => ({
         left: '40%',
         zIndex: '-1',
         [theme.breakpoints.down('sm')]: {
-            // left: '20%',
             width: '100%',
-        height: 'fit-content',
-
-            position:'static'
+            height: '60vw',
+            position: 'static',
+            textAlign: 'center'
         },
         '& img': {
-            width: '100%',
-            maxHeight: '100%'
+            maxWidth: '100%',
+            height: '100%',
         }
     },
 
@@ -192,19 +202,22 @@ export function CSRcarousel({
                                     data.map((item, index) => {
                                         return (
 
-                                            <Box className={classes.BoxWidth}>
+                                            <Box className={classes.BoxWidth} data-aos="fade-up">
                                                 <Box className={classes.imageBox}>
                                                     <img className={classes.image}
                                                         src={item.images}
-                                                        alt="Carousel Images" data-aos="fade-up" />
-                                                </Box>
-                                                <Box className={classes.iconBox}>
-                                                    <img className={classes.icon} src={'./images/Layer 2.svg'} />
+                                                        alt="Carousel Images" />
                                                 </Box>
 
+
                                                 <Box className={classes.blueBox}>
+                                                    <Box className={classes.posRelative}>
+                                                        <Box className={classes.iconBox}>
+                                                            <img className={classes.icon} src={'./images/Layer 2.svg'} />
+                                                        </Box>
+                                                        {/* <Button variant='outlined' className={classes.btn}>Read More</Button> */}
+                                                    </Box>
                                                     <h6 className={classes.blueBoxPara}>{item.para}</h6>
-                                                    {/* <Button variant='outlined' className={classes.btn}>Read More</Button> */}
                                                 </Box>
 
                                             </Box>
