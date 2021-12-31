@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         width: '50%',
         display: 'flex',
         flexDirection: 'column',
+        justifyContent:'center',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%'

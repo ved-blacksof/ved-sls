@@ -13,8 +13,7 @@
     display: none;
     background-position:center;
     background-repeat:no-repeat;
-    background-size:cover;
-    
+    background-size:cover;    
   }
   .photo{
       animation: zoomout 8000ms;
@@ -28,30 +27,30 @@
     display: none;
     background-position:center;
     background-repeat:no-repeat;
-    background-size:cover;
-    
+    background-size:cover;    
+    transition: all .8s ease-in-out;
   }
   
   .photos{
-      animation: zoomin 8000ms;
+      animation: zoomin 8000ms ease-in-out;
     }
 
 
   @keyframes zoomout{
     0%{
-      transform: scale(1.2) rotateZ(5deg);
+      transform: scale(1.2);
       
     }
     100%{
-      transform: scale(1) rotateZ(0deg);
+      transform: scale(1);
     }
   }
   @keyframes zoomin{
     0%{
-      transform: scale(1.2) rotateZ(-5deg);
+      transform: scale(1.2);;
       
     }
     100%{
-      transform: scale(1) rotateZ(0deg);
+      transform: scale(1);
     }
   }

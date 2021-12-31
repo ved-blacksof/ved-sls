@@ -3,7 +3,7 @@ import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Cards, Visit, Realtime, Visit1, SoftOfferingsBlue } from '../../molecules'
 
-import { solar, solarhardware, solarsoftware } from '../../molecules/PortfolioData'
+import { solar, solarhardware,solarhardware1, solarsoftware } from '../../molecules/PortfolioData'
 
 export function SolarTemplate() {
     return (
@@ -24,13 +24,22 @@ export function SolarTemplate() {
                     we have capacitated these solutions with intelligent features that increase usability and make the switch to renewable energy easier."
                     mapIconPosition="mapIconPosition"
                     data={solar}
-                    style={{ height: 'fit-content', marginBottom:'20%' }}
+                    style={{ height: 'fit-content', marginBottom: '20%' }}
                 />
             </GridBlue>
+
+{/* 
             <Realtime
                 maintitle="Hardware Offerings"
                 data={solarhardware}
                 // style={{ opacity: '0' }}
+            /> */}
+
+
+            <Realtime
+                maintitle="Hardware Offerings"
+                squarecarddata={solarhardware1}
+            // style={{ opacity: '0' }}
             />
 
 
@@ -42,12 +51,12 @@ export function SolarTemplate() {
             /> */}
 
             <SoftOfferingsBlue
-                 maintitle="Software OFFERING"
-                 title="SunSights Live"
-                 subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
-                
+                maintitle="Software OFFERING"
+                title="SunSights Live"
+                subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
+
                 //  images='./images/solar/Sunsight-Dashboard.png'
-                 images='./images/dashboards/sunsights-DB.png'
+                images='./images/dashboards/sunsights-DB.png'
             />
 
             {/* <Cards

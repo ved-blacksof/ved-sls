@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
             overflow: 'hidden'
         },
     },
+    
     sliderSec: {
         width: '100%',
         display: 'flex',
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
     box3: {
         // display: "none",
-        opacity:'0',
+        opacity: '0',
         [theme.breakpoints.down('sm')]: {
             display: 'flex',
             justifyContent: 'flex-end',
@@ -299,6 +300,12 @@ const useStyles = makeStyles((theme) => ({
             transform: "translateX(0)"
         },
     },
+    eco: {
+
+        "& img": {
+            width: '100%'
+        }
+    }
 }))
 
 
@@ -377,6 +384,9 @@ export function Realtime({
             <>
 
                 <MainContainer>
+
+                   
+
                     {/* only slider */}
                     <Container fixed className={classes.realText}>
                         <GeneralHeading
@@ -518,7 +528,7 @@ export function Realtime({
                                                                     <Box className={classes.imgBox}>
                                                                         <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                                     </Box>
-                                                                    <h6>{item.subtitle} </h6>
+                                                                    <h4>{item.subtitle} </h4>
                                                                 </Box>
                                                             </a>
                                                         </Box>
@@ -528,7 +538,7 @@ export function Realtime({
                                                             <Box className={classes.imgBox}>
                                                                 <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                             </Box>
-                                                            <h6>{item.subtitle} </h6>
+                                                            <h4>{item.subtitle} </h4>
                                                         </Box>
                                                 }
                                             </>

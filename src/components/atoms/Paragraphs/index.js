@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         height: '100%',
         display: 'flex',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         alignItems: 'flex-start',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
@@ -18,6 +18,20 @@ const useStyles = makeStyles((theme) => ({
         color: 'black'
     },
     portSubHead: {
+        color: 'black',
+        width: '100%',
+        // display: 'list-item'         /* This has to be "list-item"                                               */,
+        // listStyleType: 'disc',       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+        // listStylePosition: 'inside',
+        [theme.breakpoints.down('sm')]: {
+            // width: '70%',
+        },
+        "&::before": {
+            content: "''",
+
+        }
+    },
+    portSubtitle: {
         color: 'black',
         width: '100%',
         [theme.breakpoints.down('sm')]: {
@@ -88,7 +102,7 @@ export function Paragraphs({
     subtitle1,
     subtitle2,
     subtitle3,
-    subtitle4,    
+    subtitle4,
     list,
     uli,
     firstli,
@@ -113,14 +127,16 @@ export function Paragraphs({
                 {
                     subhead ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead}</h4> : ''
                 }
-                <h4 className={classes.portSubHead}>{subtitle}</h4>
+
+
+                <h4 className={classes.portSubtitle}>{subtitle}</h4>
 
 
                 {
                     subhead1 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead1}</h4> : ''
                 }
                 {
-                    subtitle1 ? <h4 className={classes.portSubHead}>{subtitle1}</h4> : ''
+                    subtitle1 ? <h4 className={classes.portSubtitle}>{subtitle1}</h4> : ''
                 }
 
 
@@ -128,14 +144,14 @@ export function Paragraphs({
                     subhead2 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead2}</h4> : ''
                 }
                 {
-                    subtitle2 ? <h4 className={classes.portSubHead}>{subtitle2}</h4> : ''
+                    subtitle2 ? <h4 className={classes.portSubtitle}>{subtitle2}</h4> : ''
                 }
 
                 {
                     subhead3 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead3}</h4> : ''
                 }
                 {
-                    subtitle3 ? <h4 className={classes.portSubHead} >{subtitle3}</h4> : ''
+                    subtitle3 ? <h4 className={classes.portSubtitle} >{subtitle3}</h4> : ''
                 }
 
 
@@ -143,7 +159,7 @@ export function Paragraphs({
                     subhead4 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead4}</h4> : ''
                 }
                 {
-                    subtitle4 ? <h4 className={classes.portSubHead} >{subtitle4}</h4> : ''
+                    subtitle4 ? <h4 className={classes.portSubtitle} >{subtitle4}</h4> : ''
                 }
 
 

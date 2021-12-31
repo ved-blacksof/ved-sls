@@ -8,8 +8,11 @@ import { data } from 'jquery';
 const useStyles = makeStyles((theme) => ({
     qualityContainer: {
         height: 'fit-content',
-        margin: '15% auto',
+        margin: '5% auto',
         width: '100%',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '15%',
+        },
     },
     bigHead: {
         color: 'black',
@@ -17,10 +20,13 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '3rem',
         marginTop: '2%'
     },
+    bigHead1: {
+        color: 'black',
+        marginTop: '2%'
+    },
     BoxLeft: {
         width: '50%',
         display: 'flex',
-        alignItems:'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%'
         },
@@ -45,9 +51,11 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export function QualityReverse({
+export function QualityReverseNew({
     mainheading,
+    mainheading1,
     imageBG,
+    removeBGicons,
     heading,
     subhead, subhead1, subhead2, subhead3, subhead4,
     subtitle, subtitle1, subtitle2, subtitle3, subtitle4,
@@ -66,6 +74,7 @@ export function QualityReverse({
     images1,
     images2,
     images3,
+    images4,
     list,
 }) {
     const classes = useStyles()
@@ -74,8 +83,16 @@ export function QualityReverse({
             <MainContainer>
                 <Container fixed className={classes.qualityContainer}>
                     <h2 className={classes.bigHead}>{mainheading}</h2>
+                    {
+                        mainheading1 ?
+                            <>
+                                <h3 className={classes.bigHead1}>{mainheading1}</h3>
+                                <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} />
+                            </> : ''
 
-                    <Box container className={classes.gridContainer} 
+                    }
+
+                    <Box container className={classes.gridContainer}
                         style={style} >
 
                         <Box className={classes.BoxLeft}>
@@ -94,14 +111,13 @@ export function QualityReverse({
                                     subtitle4={subtitle4}
                                     uli={uli}
                                     list={list}
-                                    redline={redline}
                                     firstli={firstli}
                                     secli={secli}
                                     thirdli={thirdli}
                                     fourthli={fourthli}
                                     download={download}
                                     download1={download1}
-                                    href={href} 
+                                    href={href}
                                 />
 
                             </Bounce>
@@ -109,29 +125,15 @@ export function QualityReverse({
                         {
                             imageBG ?
                                 <Box className={classes.BoxRight}>
-                                    <Bounce right> <PositionImage imageBG={imageBG} /></Bounce>
+                                    <Bounce right>
+                                        <PositionImage imageBG={imageBG}
+                                            removeBGicons={removeBGicons}
+
+                                        /></Bounce>
                                 </Box>
                                 :
-                                carousel ?
-                                    <Box className={classes.BoxRight}>
-                                        <Bounce right>
-                                            <PositionImage
-                                                carousel={carousel}
-                                                images1={images1}
-                                                images2={images2}
-                                                images3={images3}
-                                            />
-                                        </Bounce>
-                                    </Box> :
-                                    <Box className={classes.BoxRight}>
-                                        <Bounce right>
-                                            <PositionImage
-                                                carouselfor2={carouselfor2}
-                                                images1={images1}
-                                                images2={images2}
-                                            />
-                                        </Bounce>
-                                    </Box>
+                                ''
+
                         }
 
                         {/* {

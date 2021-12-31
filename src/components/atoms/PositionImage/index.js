@@ -138,6 +138,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function PositionImage({
     imageBG,
+    removeBGicons,
     carousel,
     carouselfor2,
     images1,
@@ -186,9 +187,9 @@ export function PositionImage({
                                 <Box className={classes.productImageBox}>
                                     <img className={classes.image} src={images3} alt="image" />
                                 </Box>
-                                <Box className={classes.productImageBox}>
+                                {/* <Box className={classes.productImageBox}>
                                     <img className={classes.image} src={images4} alt="image" />
-                                </Box>
+                                </Box> */}
 
                                 <ViewportSlot >
                                     <span className={clsx(classes.pagination, "flicking-pagination")}></span>
@@ -199,25 +200,25 @@ export function PositionImage({
                 }
                 {
                     carouselfor2 ?
-                            <Flicking
-                                duration="2000"
-                                plugins={plugins}
-                                align="center"
-                                defaultIndex='1'
-                                circular={true}
+                        <Flicking
+                            duration="2000"
+                            plugins={plugins}
+                            align="center"
+                            defaultIndex='1'
+                            circular={true}
 
-                            >
-                                <Box className={classes.productImageBox}>
-                                    <img className={classes.image} src={images1} alt="image" />
-                                </Box>
-                                <Box className={classes.productImageBox}>
-                                    <img className={classes.image} src={images2} alt="image" />
-                                </Box>
+                        >
+                            <Box className={classes.productImageBox}>
+                                <img className={classes.image} src={images1} alt="image" />
+                            </Box>
+                            <Box className={classes.productImageBox}>
+                                <img className={classes.image} src={images2} alt="image" />
+                            </Box>
 
-                                <ViewportSlot >
-                                    <span className={clsx(classes.pagination, "flicking-pagination")}></span>
-                                </ViewportSlot>
-                            </Flicking>
+                            <ViewportSlot >
+                                <span className={clsx(classes.pagination, "flicking-pagination")}></span>
+                            </ViewportSlot>
+                        </Flicking>
                         : ''
                 }
 
@@ -225,9 +226,12 @@ export function PositionImage({
                 <img className={classes.white} src={'./images/Polygon 3.svg'} alt="image" />
                 <img className={classes.blue} src={'./images/Polygon 1.svg'} alt="image" /> */}
 
-                <Box className={classes.newbg}>
-                    <img src={'./images/Group 82914.png'} alt="image" />
-                </Box>
+                {
+                    !removeBGicons ?
+                        <Box className={classes.newbg}>
+                            <img src={'./images/Group 82914.png'} alt="image" />
+                        </Box> : ''
+                }
 
             </div>
         </Box >

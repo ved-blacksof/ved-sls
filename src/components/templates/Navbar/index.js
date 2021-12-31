@@ -164,7 +164,8 @@ const useStyles = makeStyles((theme) => ({
     },
     arrow: {
         color: 'white',
-        fontSize: '1.8rem'
+        fontSize: '1.8rem',
+        marginTop:'4px'
     },
     // mega menu
 
@@ -590,8 +591,8 @@ export function Navbar({
                                     onClick={handleToggle1}
                                 >
                                     Services
+                                    <KeyboardArrowDown className={classes.arrow} />
                                 </h4>
-                                <KeyboardArrowDown className={classes.arrow} />
 
                                 <Popper
                                     open={open1}
@@ -673,8 +674,8 @@ export function Navbar({
                                     onClick={handleToggle2}
                                 >
                                     Let's Connect
-                                </h4>
                                 <KeyboardArrowDown className={classes.arrow} />
+                                </h4>
                             </NavLink>
 
                             <Popper

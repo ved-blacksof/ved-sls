@@ -6,11 +6,28 @@ import { MobileApplication } from './MobileApplication'
 
 import { evchargers, evchargercontrollers } from '../../molecules/PortfolioData'
 import { GridBlue, MainContainer } from '../../atoms'
-import { Container } from '@material-ui/core'
+import { Box, Container, makeStyles } from '@material-ui/core'
 
+const useStyles = makeStyles((theme) => ({
+    realText1: {
+        margin: '0% auto',
+        marginTop:'8%',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        },
+    },
+    eco:{
+        "& img":{
+            width:'100%',
+
+        }
+    }
+}))
 
 
 export function EvchargingTemplate() {
+    const classes = useStyles()
+
     return (
         <>
             <Ubanner
@@ -32,6 +49,16 @@ export function EvchargingTemplate() {
                     Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kW- 7.4kW."
                 />
             </GridBlue>
+
+
+            <MainContainer>
+                <Container fixed className={classes.realText1}>
+                    <Box className={classes.eco}>
+                        <img src="./images/evcharger/ecosystem.png" />
+                    </Box>
+                </Container>
+            </MainContainer>
+
 
 
             <Realtime

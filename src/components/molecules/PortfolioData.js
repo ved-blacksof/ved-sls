@@ -81,7 +81,8 @@ export const reshape = [
     {
         images: "./images/reshape-SLS3.png",
         text1: "SPEARHEADING INNOVATION IN THE CLOUD ECOSYSTEM",
-        text2: "Business-agnostic cloud solutions already catered to more than ___ businesses from ____ industries.",
+        // text2: "Business-agnostic cloud solutions already catered to more than ___ businesses from ____ industries.",
+        text2: "Business-agnostic cloud solutions for the agile businesses of tomorrow.",
         text3: "Reinventing how businesses expand the reach of their influence.",
         // br: 'br',
         // br1:'br1'
@@ -143,12 +144,12 @@ export const port = [
     },
     {
         images: './images/homepage-icons/11._Traffic_Solutions.svg',
-        text: 'Traffic Solutions',
+        text: 'Smart Traffic Solutions',
         link: 'smarttraffic'
     },
     {
         images: './images/homepage-icons/10._Gaming.svg',
-        text: 'Gaming',
+        text: 'Smart Gaming',
         link: 'gaming',
     },
 ]
@@ -168,21 +169,21 @@ export const realtime = [
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
-        head: 'Does throughput matters in USB?',
+        head: 'Does throughput matter in USB?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/279-does-throughput-matters-in-usb.html'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
-        head: 'What differentiates FPGA from ASIC',
+        head: 'What differentiates FPGA from ASIC?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/277-what-differentiates-fpga-from-asic.html'
     },
     {
         images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
         case: 'BLOGS',
-        head: 'What is FPGA and Why is it Required',
+        head: 'What is FPGA and why is it required?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/276-what-is-fpga-and-why-is-it-required.html'
     },
@@ -297,7 +298,6 @@ export const evchargers = [
     {
         images: './images/evcharger/evchargers/C2.png',
         subtitle: 'Home Charger',
-
     },
     {
         images: './images/evcharger/evchargers/C3.png',
@@ -318,6 +318,10 @@ export const evchargers = [
     {
         images: './images/evcharger/evchargers/C5.png',
         subtitle: 'Hybrid AC Charger with IEC Socket',
+    },
+    {
+        images: './images/evcharger/evchargers/C7.png',
+        subtitle: 'Typev ll AC Single Gun Charger',
     },
 ]
 
@@ -365,19 +369,22 @@ export const middleware = [
     {
         images: './images/Nebulae_Website Images-05.png',
         subtitle: 'IoT Middleware',
-        case: '123',
+        link:'https://www.nebulae.io/Home/Middleware'
     },
     {
         images: './images/Nebulae_Website Images-06.png',
         subtitle: 'LoRaWAN Server',
+        link:'https://www.nebulae.io/Home/LoRaWAN'
     },
     {
         images: './images/Nebulae_Website Images-07.png',
         subtitle: 'FOTA Services',
+        link:'https://www.nebulae.io/Home/FOTA'
     },
     {
         images: './images/Nebulae_Website Images-08.png',
         subtitle: 'Analytics',
+        link:'https://www.nebulae.io/Home/Analytics'
     },
 ]
 
@@ -655,6 +662,35 @@ export const solarhardware = [
         // images: './images/1.0-solar.png',
         images: './images/solar/hproducts/SunsightDataLogger.png',
         head: 'Data Logger',
+        // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
+        // read: 'read more'
+    },
+]
+
+export const solarhardware1 = [
+    {
+        images: './images/Micro Inverter 2 (1).png',
+        subtitle: 'MSI1500',
+        // para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
+        // read: 'read more'
+    },
+    {
+        images: './images/DKS_9053e.png',
+        subtitle: 'MS1700',
+        // para: 'The MS1700 is MNRE-certified smart micro inverter solutions that comes with 2 MPPTs. The solution provides various smart features including module-wise remote monitoring and controlling. This helps owners leverage the best output out of their solar inverters right and benefit from high energy generation as compared to regular solar panel systems.',
+        // read: 'read more'
+
+    },
+    {
+        images: './images/1.0-solar.png',
+        subtitle: 'Universal Stick Logger',
+        // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
+        // read: 'read more'
+    },
+    {
+        // images: './images/1.0-solar.png',
+        images: './images/solar/hproducts/SunsightDataLogger.png',
+        subtitle: 'Data Logger',
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
         // read: 'read more'
     },
