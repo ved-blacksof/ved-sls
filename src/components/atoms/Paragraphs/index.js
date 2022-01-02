@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         height: '100%',
         display: 'flex',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         alignItems: 'flex-start',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
@@ -20,6 +20,20 @@ const useStyles = makeStyles((theme) => ({
     portSubHead: {
         color: 'black',
         width: '100%',
+        // display: 'list-item'         /* This has to be "list-item"                                               */,
+        // listStyleType: 'disc',       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+        // listStylePosition: 'inside',
+        [theme.breakpoints.down('sm')]: {
+            // width: '70%',
+        },
+        "&::before": {
+            content: "''",
+
+        }
+    },
+    portSubtitle: {
+        color: 'black',
+        width: '100%',
         [theme.breakpoints.down('sm')]: {
             // width: '70%',
         },
@@ -30,13 +44,11 @@ const useStyles = makeStyles((theme) => ({
     btnBox: {
         width: '100%',
         marginTop: '6%',
-        display: 'flex',
-        justifyContent: 'center',
     },
     smallBtn: {
         font: 'normal normal normal 1rem Access',
         background: '#182AC3',
-        textDecoration:'none',
+        textDecoration: 'none',
         textTransform: 'uppercase',
         border: 'none',
         color: 'white',
@@ -79,12 +91,18 @@ const useStyles = makeStyles((theme) => ({
 
 export function Paragraphs({
     title,
+    style,
     redline,
-    subtitle,
-    subtitle1,
     subhead,
     subhead1,
     subhead2,
+    subhead3,
+    subhead4,
+    subtitle,
+    subtitle1,
+    subtitle2,
+    subtitle3,
+    subtitle4,
     list,
     uli,
     firstli,
@@ -99,7 +117,7 @@ export function Paragraphs({
     const classes = useStyles()
     return (
         <>
-            <Box className={classes.paraBox}>
+            <Box className={classes.paraBox} style={style}>
                 <h3 className={classes.head}>{title}</h3>
                 {
                     redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
@@ -109,17 +127,42 @@ export function Paragraphs({
                 {
                     subhead ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead}</h4> : ''
                 }
-                <h4 className={classes.portSubHead}>{subtitle}</h4>
+
+
+                <h4 className={classes.portSubtitle}>{subtitle}</h4>
+
 
                 {
                     subhead1 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead1}</h4> : ''
                 }
                 {
-                    subtitle1 ? <h4 className={classes.portSubHead}>{subtitle1}</h4> : ''
+                    subtitle1 ? <h4 className={classes.portSubtitle}>{subtitle1}</h4> : ''
                 }
+
+
                 {
                     subhead2 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead2}</h4> : ''
                 }
+                {
+                    subtitle2 ? <h4 className={classes.portSubtitle}>{subtitle2}</h4> : ''
+                }
+
+                {
+                    subhead3 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead3}</h4> : ''
+                }
+                {
+                    subtitle3 ? <h4 className={classes.portSubtitle} >{subtitle3}</h4> : ''
+                }
+
+
+                {
+                    subhead4 ? <h4 className={classes.portSubHead} style={{ fontWeight: 'bold', margin: '2% 0%' }}>{subhead4}</h4> : ''
+                }
+                {
+                    subtitle4 ? <h4 className={classes.portSubtitle} >{subtitle4}</h4> : ''
+                }
+
+
 
                 {
                     list ?

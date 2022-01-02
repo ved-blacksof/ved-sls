@@ -8,13 +8,12 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        width: '100%',
-        margin: '10% 0%',
+        marginTop: '10%',
+        margin: '0% auto',
         display: 'flex',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
-            margin: '20% 0%',
-
+            marginTop: '15%',
         },
         "& h6": {
             color: 'black',
@@ -103,7 +102,7 @@ export function Yalgaar({
 
                     <Buttons
                         className={classes.btns}
-                        title="Visit the website"
+                        title="Visit website"
                         arrowIcon="./images/Icon feather-arrow-right.svg"
                     />
                 </Box> */}
@@ -111,9 +110,9 @@ export function Yalgaar({
             </Container>
                 <Visit1
                     href="https://www.yalgaar.io/"
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; YALGAAR"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
                     rightlogo="./images/Layer_x0020_1_yalgaar.svg"
-                    title="Visit the website" />
+                    title="Visit website" />
 
         </MainContainer>
     )

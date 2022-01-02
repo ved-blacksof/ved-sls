@@ -7,51 +7,64 @@ import Flip from 'react-reveal/Flip';
 const useStyles = makeStyles((theme) => ({
     visitBox: {
         margin: "5% auto",
-        width: '100%',
+        width: '80%',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+            // margin: "10% auto",
+            padding:'16% 0%',
+        }
     },
     textLinkBox: {
         display: 'flex',
-        width: '100%',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: '2%'
+        flexDirection: 'column',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            // flexDirection: 'column-reverse'
+        }
     },
     btmText: {
-        width: '60%',
         color: '#182AC3',
         fontWeight: 'bold',
-        margin: '0% auto'
+        [theme.breakpoints.down('sm')]: {
+            textAlign: 'center'
+        }
     },
     btmText1: {
-        width: '100%',
         textAlign: 'left',
         color: '#182AC3',
         fontWeight: 'bold',
+        [theme.breakpoints.down('sm')]: {
+            textAlign: 'center'
+        }
     },
     iconMainBox: {
-        width: '40%',
+        margin: '3% 0%',
+        [theme.breakpoints.down('sm')]: {
+            // marginLeft: '1%',
+        }
     },
     icon: {
-        float: 'right',
+        textAlign: 'left',
         width: '10rem',
         "& img": {
             width: '100%',
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '40%',
+            width: '6rem'
         },
     },
     btns: {
-        width: '28%',
-        marginTop: '2%',
-        margin: '0% auto',
+        width: '35%',
+        margin: '3% auto',
         [theme.breakpoints.down('sm')]: {
             width: '40%',
-            marginTop: '4%'
+            margin: '2% auto',
         },
         [theme.breakpoints.down('xs')]: {
-            width: '60%'
+            width: '70%'
         },
     },
 
@@ -68,29 +81,38 @@ export function Visit1({
 
     const classes = useStyles()
     return (
-           <Container>
-                <Box className={classes.visitBox}>
+        <Container>
+            <Box className={classes.visitBox}>
+
                 <Box className={classes.textLinkBox}>
                     {
-                        goto ? <h4 className={classes.btmText} style={style}> {goto}</h4> : ''
-                    }
-                    {
-                        goto1 ? <h3 className={classes.btmText1} style={style}> {goto1}</h3> : ''
+                        rightlogo ?
+                            <Box className={classes.iconMainBox}>
+                                <Box className={classes.icon}>
+                                    <Fade bottom> <img src={rightlogo} alt="rightLogo" /></Fade>
+                                </Box>
+                            </Box>
+                        : ''
                     }
 
-                    <Box className={classes.iconMainBox}>
-                        <Box className={classes.icon}>
-                            <Fade bottom> <img src={rightlogo} alt="rightLogo" /></Fade>
-                        </Box>
-                    </Box>
+
+                    {
+                        goto ? <h6 className={classes.btmText} style={style}> {goto}</h6> : ''
+                    }
+                    {
+                        goto1 ? <h6 className={classes.btmText1} style={style}> {goto1}</h6> : ''
+                    }
+
                 </Box>
+
                 <Buttons
                     className={classes.btns}
+                    style={{ margin: '0% auto' }}
                     title={title}
                     href={href}
                     arrowIcon="./images/Icon feather-arrow-right.svg"
                 />
             </Box>
-           </Container>
+        </Container>
     )
 }

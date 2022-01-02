@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         boxSizing: 'border-box',
         backgroundImage: `url("./images/Repeat Grid 11.png")`,
         backgroundPosition: 'fixed',
-        overflow: 'hidden',
+        // overflow: 'hidden',
         // backgroundImage: 'radial-gradient(#FFFFFF 0px, transparent 20%)',
         // backgroundPosition: '0 0, 50px 50px',
         // backgroundSize: '30px 30px',

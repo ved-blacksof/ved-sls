@@ -11,7 +11,7 @@ export function SmartstreetTemplate() {
             <Ubanner
                 Background="./images/smartstreet/StreetLight.png"
                 maintext="Smart Street Lighting"
-                subtext="Bringing New Perspectives to Lights"
+                subtext="Bringing new perspectives to lights"
             />
 
             <GridBlue>
@@ -24,9 +24,10 @@ export function SmartstreetTemplate() {
                         We offer a new-edge comprehensive platform that provides single-point monitoring and control of 
                         retrofit and new street lighting infrastructure. We aim to bring this entire infrastructure under one 
                         common roof for definite control, optimized energy-saving, and data-driven decisions."
-                    icons="icons"
+                    // icons="icons"
+                    mapIconPosition="mapIconPosition"
                     data={smartstreet}
-                    style={{ height: 'fit-content', paddingBottom: '5%' }}
+                    style={{ height: 'fit-content', marginBottom:'20%' }}
                 />
             </GridBlue>
 
@@ -62,15 +63,15 @@ export function SmartstreetTemplate() {
              <SoftOfferingsBlue
                  maintitle="Software Offering"
                  title="Lighting Management Software (LMS)"
-                 subtitle="SunSights Live is an IoT-powered solar infrastructure monitoring dashboard. The web application helps in monitoring the technical and financial performance of one or more SunSights products. The dashboard enables easy management of the solar infrastructure by providing features like remote fault detection, troubleshooting, asset management, and much more."
+                 subtitle="LMS is our cloud-based dashboard that offers total control over your lighting infrastructure. It provides remote access to the real-time status of lamps, generates energy consumption reports, binds devices with sensors, and helps with Astro-clock and mixed-mode scheduling."
                 
-                 images='./images/DigitalSyne_lms.png'
+                 images='./images/dashboards/Via-lights.png'
             />
 
             <MainContainer>
                 <Visit1
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; VIALIGHTS"
-                    title="Visit the website"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
+                    title="Visit website"
                     href="https://www.vialights.com/"
                     rightlogo="./images/smartstreet/logo.png"
                 />

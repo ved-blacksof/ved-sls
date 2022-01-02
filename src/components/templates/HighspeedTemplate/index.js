@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
 
 import { Ourdesignprocess } from './Ourdesignprocess'
 
@@ -11,7 +11,7 @@ export function HighspeedTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-highspeed.png"
                 maintext="High speed pcb design services"
-                subtext="End-to-end PCB Design Solutions"
+                subtext="End-to-end PCB design solutions"
             />
             <GridBlue>
                 <Navbar />
@@ -33,7 +33,8 @@ export function HighspeedTemplate() {
             <QualityReverse
                 heading="RF Microwave PCB Design"
                 subtitle="2.4GHz, Sub-GHz Antenna-Radio Chipset Board/Module Design"
-                imageBG="./images/RF Microwave PCB Design.png"
+                // imageBG="./images/RF Microwave PCB Design.png"
+                imageBG="./images/highspeed/PCB-Final-Final.png"
                 redline
             />
 
@@ -67,11 +68,11 @@ export function HighspeedTemplate() {
             />
 
             <Ourdesignprocess />
-            <br/>
 
-            <Visit
+
+            <Visit1
                 goto="Explore all about our products and services!"
-                title="Visit the website"
+                title="Visit website"
                 href={"https://www.slscorp.com/services/high-speed-pcb-design-services.html"}
 
             />

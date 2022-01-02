@@ -8,6 +8,7 @@ import {
 import { Research } from '../../molecules'
 import { homeapp } from '../../molecules/PortfolioData'
 import { MainContainer } from '../../atoms';
+import { ResearchBlue } from '../../molecules/ReaserchBlue';
 
 
 
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     blueBox: {
         position: 'relative',
         background: '#182AC3',
-        padding: '15% 0%',
+        padding: '18% 0%',
         [theme.breakpoints.down('sm')]: {
             padding: '20% 0%'
         },
@@ -44,17 +45,11 @@ export function Homeapplication() {
                     <h2 style={{ color: 'black', textAlign: 'center' }}>Applications</h2>
                 </Container>
             </MainContainer>
-            {/* <Box className={classes.carouselPos}>
-                <Research
-                    data={homeapp}
-                    text="HOME"
 
-                />
-            </Box> */}
             <Box className={classes.blueBox}>
 
                 <Box className={classes.carouselPos}>
-                    <Research
+                    <ResearchBlue   
                         data={homeapp}
                     />
                 </Box>

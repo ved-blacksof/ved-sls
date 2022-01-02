@@ -1,9 +1,10 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
 import { Ourexpertise } from '../MachineLearningTemplate/Ourexpertise'
 import { Industries } from './Industries'
+import { Offerings } from './Offerings'
 import { OurexpertiseBlue } from './OurexpertiseBlue'
 import { Products } from './Products'
 
@@ -13,7 +14,7 @@ export function IPcoreTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-ipcore.png"
                 maintext="IP CORE/FPGA/SoC Design Services"
-                subtext="World Leaders in FPGA SoC Design Services"
+                subtext="World leaders in FPGA SoC design services"
             />
             <GridBlue>
                 <Navbar />
@@ -24,45 +25,48 @@ export function IPcoreTemplate() {
                 />
             </GridBlue>
 
+            
+            <Offerings />
+        
 
-            <Quality
-                mainheading="Offerings"
-                heading="IP Core Development and Customization"
-                imageBG="./images/FPGA_Website_Image (5).png"
-            />
+                {/* <Quality
+                    mainheading="Offerings"
+                    heading="IP Core Development and Customization"
+                    imageBG="./images/FPGA_Website_Image (5).png"
+                />
 
-            <QualityReverse
-                heading="FPGA Turnkey Solutions"
-                imageBG="./images/FPGA_Website_Image (1).png"
-            />
+                <QualityReverse
+                    heading="FPGA Turnkey Solutions"
+                    imageBG="./images/FPGA_Website_Image (1).png"
+                />
 
-            <Quality
-                heading="IP CORE-to-FPGA Solutions"
-                imageBG="./images/FPGA_Website_Image (4).png"
-            />
+                <Quality
+                    heading="IP CORE-to-FPGA Solutions"
+                    imageBG="./images/FPGA_Website_Image (4).png"
+                />
 
-            <QualityReverse
-                heading="Product Customization"
-                imageBG="./images/FPGA_Website_Image (3).png"
-            />
+                <QualityReverse
+                    heading="Product Customization"
+                    imageBG="./images/FPGA_Website_Image (3).png"
+                />
 
-            <Quality
-                heading="Driver Development"
-                imageBG="./images/FPGA_Website_Image (2).png"
-            />
+                <Quality
+                    heading="Driver Development"
+                    imageBG="./images/FPGA_Website_Image (2).png"
+                /> */}
 
             <Products />
-
 
             <OurexpertiseBlue />
 
             <Industries />
 
-            <Visit
+            <Visit1
                 goto="Explore more about our FPGA Products and Services"
-                title="Visit the website"
+                title="Visit website"
                 href={"https://www.slscorp.com/services/fpgasoc-design-services.html"}
             />
+            
             <Footer />
         </div>
     )

@@ -1,331 +1,397 @@
-/* Grid background style on whole page */
-
-body {
-  background-image: radial-gradient(#c5c5c542 3%, transparent 20%);
-  background-position: 0 0, 50px 50px;
-  background-size: 30px 30px;
-  scroll-behavior: smooth;
-  
-}
 
 
-
-
-.flicking-viewport {
-    transition: height 500ms;
-  }
-  .flicking-arrow-prev::before, 
-  .flicking-arrow-prev::after, 
-  .flicking-arrow-next::before, 
-  .flicking-arrow-next::after {
-    background-color: rebeccapurple;
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
   }
   
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    display: none;
+  html {
+    scroll-behavior: smooth;
   }
-
-  /* //font-size */
-
+  
+  body{
+    overflow-x: hidden;
+  }
+  
+  @font-face {
+    font-family: BebasNeue;
+    src: url(./components/assets/fonts/Bebas/BebasNeue-Regular.ttf);
+  }
+  
+  /* @font-face {
+    font-family: Access;
+    src: url(./components/assets/fonts/Access/Access-Regular.ttf);
+  } */
+  
+  
+  /* @font-face {
+    font-family: Access;
+    src: url(./components/assets/fonts/Acces/ACCESS-REGULAR.woff);
+  } */
+  @font-face {
+    font-family: Access;
+    src: url(./components/assets/fonts/Acces/ACCESS-REGULAR.OTF);
+  }
+  
+  @font-face {
+    font-family: Access-bold;
+    src: url(./components/assets/fonts/Acces/ACCESS-BOLD.OTF);
+  }
+  
   h1{
     font-family: BebasNeue;
-    font-size: 2rem;
+    font-size: 10rem;
     font-weight: normal;
     color: white;
   }
   
   h2{
     font-family: BebasNeue;
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: normal;
     color:white;
   }
   
   h3{
     font-family: BebasNeue;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: normal;
     color: white;
     text-transform: lowercase;
+    /* cursor: pointer; */
   
   }
   
   h4{
     font-family: Access;
-    font-size: .9rem;
-    font-weight: normal;
-    color: white;
-  }
-
-  h5{
-    font-family: BebasNeue;
-    font-size: 2.2rem;
+    font-size: 1.1rem;
     font-weight: normal;
     color: white;
   }
   
   h6{
     font-family: Access;
-    font-size: .7rem;
+    font-size: .9rem;
     font-weight: normal;
     color: white;
   }
-  br{
-    display: block;
+  
+  
+  /* Grid background style on whole page */
+  
+  body {
+    background-image: radial-gradient(#c5c5c542 3%, transparent 20%);
+    background-position: 0 0, 50px 50px;
+    background-size: 30px 30px;
+    scroll-behavior: smooth;
   }
-  hr{
-    margin: .5% 0%;
-  }
-  ul{
-    font: normal normal normal 0.7rem Access;
-  }
-  li{
-    font: normal normal normal 0.6rem Access;
-  }
-
-  .li{
-    text-indent: -14px;
-    margin-left: 22px;
-  }
-   
-
+  
+  
+  
+  
+  .flicking-viewport {
+      transition: height 500ms;
+    }
+    .flicking-arrow-prev::before, 
+    .flicking-arrow-prev::after, 
+    .flicking-arrow-next::before, 
+    .flicking-arrow-next::after {
+      background-color: rebeccapurple;
+    }
     
-
-    @media screen and (min-width: 600px) {
-      h1{
-        font-family: BebasNeue;
-        font-size: 2rem;
-        font-weight: normal;
-        color: white;
-      }
-      
-      h2{
-        font-family: BebasNeue;
-        font-size: 3rem;
-        font-weight: normal;
-        color:white;
-      }
-      
-      h3{
-        font-family: BebasNeue;
-        font-size: 2.3rem;
-        font-weight: normal;
-        color: white;
-        text-transform: lowercase;
-      
-      }
-      
-      h4{
-        font-family: Access;
-        font-size: .9rem;
-        font-weight: normal;
-        color: white;
-      }
-      h5{
-        font-family: BebasNeue;
-        font-size: 5rem;
-        font-weight: normal;
-        color: white;
-      }
-      
-      h6{
-        font-family: Access;
-        font-size: .8rem;
-        font-weight: normal;
-        color: white;
-      }
-
-      br{
-        display:none;
-      }
-
-      ul{
-        font: normal normal normal 0.8rem Access;
-      }
-      li{
-        font: normal normal normal 0.7rem Access;
-      }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      display: none;
     }
-
-    @media screen and (min-width: 960px) {
-      h1{
-        font-family: BebasNeue;
-        font-size: 5rem;
-        font-weight: normal;
-        color: white;
-      }
-      
-      h2{
-        font-family: BebasNeue;
-        font-size: 3rem;
-        font-weight: normal;
-        color:white;
-      }
-      
-      h3{
-        font-family: BebasNeue;
-        font-size: 2.3rem;
-        font-weight: normal;
-        color: white;
-        text-transform: lowercase;
-      
-      }
-      
-      h4{
-        font-family: Access;
-        font-size: 1rem;
-        font-weight: normal;
-        color: white;
-      }
-
-      h5{
-        font-family: BebasNeue;
-        font-size: 6rem;
-        font-weight: normal;
-        color: white;
-      }
-      
-      h6{
-        font-family: Access;
-        font-size: 1rem;
-        font-weight: normal;
-        color: white;
-      }
-      br{
-        display: block;
-      }
-      ul{
-        font: normal normal normal 0.8rem Access;
-      }
-      li{
-        font: normal normal normal 0.7rem Access;
-      }
-      .li{
-        text-indent: -16px;
-        margin-left: 22px;
-      }
-      
+  
+    /* //font-size */
+  
+    h1{
+      font-family: BebasNeue;
+      font-size: 2rem;
+      font-weight: normal;
+      color: white;
     }
-
-    @media screen and (min-width: 1300px) {
-      h1{
-        font-family: BebasNeue;
-        font-size: 5rem;
-        font-weight: normal;
-        color: white;
-      }
-      
-      h2{
-        font-family: BebasNeue;
-        font-size: 4rem;
-        font-weight: normal;
-        color:white;
-      }
-      
-      h3{
-        font-family: BebasNeue;
-        font-size: 2.5rem;
-        font-weight: normal;
-        color: white;
-        text-transform: lowercase;
-      
-      }
-      
-      h4{
-        font-family: Access;
-        font-size: 1.2rem;
-        font-weight: normal;
-        color: white;
-      }
-
-      h5{
-        font-family: BebasNeue;
-        font-size: 8rem;
-        font-weight: normal;
-        color: white;
-      }
-      
-      h6{
-        font-family: Access;
-        font-size: 1rem;
-        font-weight: normal;
-        color: white;
-      }
-      br{
-        display: block;
-      }
-      ul{
-        font: normal normal normal 0.9rem Access;
-      }
-      li{
-        font: normal normal normal 0.8rem Access;
-      }
-      .li{
-        text-indent: -20px;
-        margin-left: 20px;
-      }
+    
+    h2{
+      font-family: BebasNeue;
+      font-size: 2.8rem;
+      font-weight: normal;
+      color:white;
     }
-    @media screen and (min-width: 1441px) {
+    
+    h3{
+      font-family: BebasNeue;
+      font-size: 2rem;
+      font-weight: normal;
+      color: white;
+    
+    }
+    
+    h4{
+      font-family: Access;
+      font-size: .9rem;
+      font-weight: normal;
+      color: white;
+    }
+  
+    h5{
+      font-family: BebasNeue;
+      font-size: 2.2rem;
+      font-weight: normal;
+      color: white;
+    }
+    
+    h6{
+      font-family: Access;
+      font-size: .7rem;
+      font-weight: normal;
+      color: white;
+    }
+    br{
+      display: block;
+    }
+    hr{
+      margin: .5% 0%;
+    }
+  
+    .li{
+      text-indent: -14px;
+      margin-left: 22px;
+    }
+     
+  
       
-      h1{
-        font-family: BebasNeue;
-        font-size: 5.8rem;
-        font-weight: normal;
-        color: white;
+  
+      @media screen and (min-width: 600px) {
+        h1{
+          font-family: BebasNeue;
+          font-size: 2rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h2{
+          font-family: BebasNeue;
+          font-size: 3rem;
+          font-weight: normal;
+          color:white;
+        }
+        
+        h3{
+          font-family: BebasNeue;
+          font-size: 2.3rem;
+          font-weight: normal;
+          color: white;
+        
+        }
+        
+        h4{
+          font-family: Access;
+          font-size: .9rem;
+          font-weight: normal;
+          color: white;
+        }
+        h5{
+          font-family: BebasNeue;
+          font-size: 5rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h6{
+          font-family: Access;
+          font-size: .8rem;
+          font-weight: normal;
+          color: white;
+        }
+  
+        br{
+          display:none;
+        }
       }
-      
-      h2{
-        font-family: BebasNeue;
-        font-size: 5rem;
-        font-weight: normal;
-        color:white;
+  
+      @media screen and (min-width: 960px) {
+        h1{
+          font-family: BebasNeue;
+          font-size: 5rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h2{
+          font-family: BebasNeue;
+          font-size: 3rem;
+          font-weight: normal;
+          color:white;
+        }
+        
+        h3{
+          font-family: BebasNeue;
+          font-size: 2.3rem;
+          font-weight: normal;
+          color: white;
+        
+        }
+        
+        h4{
+          font-family: Access;
+          font-size: 1.2rem;
+          font-weight: normal;
+          color: white;
+        }
+  
+        h5{
+          font-family: BebasNeue;
+          font-size: 6rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h6{
+          font-family: Access;
+          font-size: 1rem;
+          font-weight: normal;
+          color: white;
+        }
+        br{
+          display: block;
+        }
+        .li{
+          text-indent: -16px;
+          margin-left: 22px;
+        }
+        
       }
-      
-      h3{
-        font-family: BebasNeue;
-        font-size: 3rem;
-        font-weight: normal;
-        color: white;
-      
-      }
-      
-      h4{
-        font-family: Access;
-        font-size: 1.5rem;
-        font-weight: normal;
-        color: white;
-      }
-      
-      h5{
-        font-family: BebasNeue;
-        font-size: 10.5rem;
-        font-weight: normal;
-        color: white;
-      }
-
-      h6{
-        font-family: Access;
-        font-size: 1.2rem;
-        font-weight: normal;
-        color: white;
-      }
-
-      br{
-        display: block;
-      }
-
-      ul{
-        font: normal normal normal 1.2rem Access;
-      }
-      li{
-        font: normal normal normal 1rem Access;
+  
+      @media screen and (min-width: 1300px) {
+        h1{
+          font-family: BebasNeue;
+          font-size: 5rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h2{
+          font-family: BebasNeue;
+          font-size: 4rem;
+          font-weight: normal;
+          color:white;
+        }
+        
+        h3{
+          font-family: BebasNeue;
+          font-size: 2.5rem;
+          font-weight: normal;
+          color: white;
+        
+        }
+        
+        h4{
+          font-family: Access;
+          font-size: 1.3rem;
+          font-weight: normal;
+          color: white;
+        }
+  
+        h5{
+          font-family: BebasNeue;
+          font-size: 8rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h6{
+          font-family: Access;
+          font-size: 1.1rem;
+          font-weight: normal;
+          color: white;
+        }
+        br{
+          display: block;
+        }
        
+        .li{
+          text-indent: -20px;
+          margin-left: 20px;
+        }
       }
-      .li{
-        text-indent: -21px;
-        margin-left: 21px;
+      @media screen and (min-width: 1441px) {
+        
+        h1{
+          font-family: BebasNeue;
+          font-size: 5.8rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h2{
+          font-family: BebasNeue;
+          font-size: 5rem;
+          font-weight: normal;
+          color:white;
+        }
+        
+        h3{
+          font-family: BebasNeue;
+          font-size: 3rem;
+          font-weight: normal;
+          color: white;
+        
+        }
+        
+        h4{
+          font-family: Access;
+          font-size: 1.5rem;
+          font-weight: normal;
+          color: white;
+        }
+        
+        h5{
+          font-family: BebasNeue;
+          font-size: 10.5rem;
+          font-weight: normal;
+          color: white;
+        }
+  
+        h6{
+          font-family: Access;
+          font-size: 1.2rem;
+          font-weight: normal;
+          color: white;
+        }
+  
+        br{
+          display: block;
+        }
+  
+        .li{
+          text-indent: -21px;
+          margin-left: 21px;
+        }
       }
-    }
-    
-
+  
+  
+  
+  
+  
+   
+      ::-webkit-scrollbar {
+        width: 10px;
+        /* border-radius: 20px; */
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 2px grey;
+        /* border: 2px solid red; */
+        background: transparent;
+        /* border-radius: 10px; */
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #182AC3;
+        border-radius: 10px;
+      }

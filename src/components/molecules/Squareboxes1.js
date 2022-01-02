@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import {
     Box,
     Container,
+    Grid,
     makeStyles,
 } from '@material-ui/core';
 import { GeneralHeading, MainContainer } from '../atoms'
@@ -17,101 +18,117 @@ const useStyles = makeStyles((theme) => ({
     mainTitle: {
         color: 'black',
         textAlign: 'center',
+        width:'100%',
+        border:'1px solid red'
     },
     mainBox: {
         width: '100%',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
+        display:'flex',
+        justifyContent:'center',
+        flexWrap:'wrap',
+        overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
-            alignItems: 'center',
+            // alignItems: 'center',
+            margin: '0% auto',
         },
     },
-    imgBox: {
-        width: '50%',
-        transition: 'all 800ms ease-in-out',
+    boxWrap:{
+        // width:'33%',
+        // padding:'2rem',
+        padding:'0rem 3rem 3rem 0rem',
+        // paddingRight:'2rem',
+        display:'flex',
+        justifyContent:'center',
+        [theme.breakpoints.down('sm')]: {
+            width:'50%'
+        },
     },
     boxes: {
-        width: '20vw',
-        height: '20vw',
+        // width: '19vw',
+        // height: '18vw',
         border: '1px solid #DCDCDC',
-        boxShadow: '0px 3px 10px #00000017',
+        boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: "1rem",
-        margin: '1.5rem 1rem',
-        cursor:'pointer',
+        cursor: 'pointer',
         transition: 'all 300ms ease-in-out',
+        transform: 'width .6s ease-in-out',  //for red line
+        position: 'relative',
+        "@media (min-width: 1440px)": {
+            width: '22rem',
+            height: '22rem',
+            border: '1px solid red',
+            // marginTop: '7%',
+            // marginRight: '7%'
+        },
+        "@media (min-width: 1300px)": {
+            width: '120rem',
+            height: '120rem',
+        },
+        "@media (min-width: 960px)": {
+            width: '16rem',
+            height: '15rem',
+        },
         [theme.breakpoints.down('sm')]: {
+            width: '16rem',
+            height: '15rem',
+        },
+        [theme.breakpoints.down('xs')]: {
             width: '35vw',
             height: '35vw',
-            margin: '5% 0%',
-            padding: "1%",
         },
-        '& img': {
-            width: '100%',
-            maxHeight: '100%',
+        "&::before": {
+            content: "''",
+            height: '5px',
+            width: '0',
+            background: '#DE141A',
+            position: 'absolute',
+            bottom: '5%',
+            left: '5%',
+            transition: 'all 800ms ease-in-out',
+            [theme.breakpoints.down('sm')]: {
+                height: '5px'
+            }
         },
-        '&:hover': {
+        "&:hover": {
+            color: '#182AC3',
+            boxShadow: '0px 0px 10px #00000017',
             border: '1px solid white',
             "& $imgBox": {
-                transform: 'scale(1.2)',
+                transform: 'scale(1.1)'
             },
-            "& $red": {
-                background: '#DE141A',
-                animation: `$redbar 800ms ease-in-out`,
-                animationIterationCount: 1,
-                animationDuration: '800ms',
+            "&::before": {
+                height: '5px',
+                width: '90%',
+                opacity: '1',
+                [theme.breakpoints.down('sm')]: {
+                    height: '5px'
+                }
             },
         },
 
+    },
+    imgBox: {
+        width: '50%',
+        transition: 'all 600ms ease-in-out',
+    },
+    image: {
+        width: '100%',
+        maxHeight: '100%'
     },
     subTitle: {
         color: '#182AC3',
         fontWeight: 'bold',
+        marginTop: '5%',
         [theme.breakpoints.down('xs')]: {
             fontSize: '.8rem'
         },
     },
-    reddiv: {
-        width: '100%',
-        height: '8px',
-        overflow: 'hidden',
-        [theme.breakpoints.down('sm')]: {
-            height: '2px',
-            background: 'red'
-        },
-    },
-    red: {
-        height: '100%',
-        transition: 'all 500ms ease-in-out',
 
-    },
-    "@keyframes redbar": {
-        "0%": {
-            opacity: 0,
-            transform: "translateX(-200%)"
-        },
-        "100%": {
-            opacity: 1,
-            transform: "translateX(0)"
-        },
-    },
-    "@keyframes redbar1": {
-        "100%": {
-            opacity: 0,
-            transform: "translateX(-200%)"
-        },
-        "0%": {
-            opacity: 1,
-            transform: "translateX(0)"
-        },
-    },
 
 }))
 
@@ -126,37 +143,34 @@ export function Squareboxes1({
     const classes = useStyles()
 
     const [exit, setExit] = useState(false)
+
+
     return (
         <MainContainer>
             <Container fixed className={classes.container1}>
                 <h2 className={classes.mainTitle}> {maintitle} </h2>
+
                 <br />
                 <br />
-                <br />
-                <Box className={classes.mainBox}>
+
+                <Box container item className={classes.mainBox}>
 
                     {
                         data.map((item, index) => {
                             return (
-                                <Box
-                                    className={clsx(classes.boxes, {[classes.animatedItemExiting]: exit})}
-                                >
-                                    <Box className={classes.imgBox}>
-                                        <Bounce bottom>
-                                            <img src={item.images} alt="Mission Icon" />
-                                        </Bounce>
-                                    </Box>
-                                    <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
-                                    <Box className={classes.reddiv}>
-                                        <Box className={classes.red}>
+                                <Box className={classes.boxWrap}>
+                                    <Box className={clsx(classes.boxes)}>
+                                        <Box className={classes.imgBox}>
+                                            <Bounce bottom>
+                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
+                                            </Bounce>
                                         </Box>
+                                        <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
                                     </Box>
                                 </Box>
                             )
                         })
                     }
-
-                    
 
                 </Box>
             </Container>

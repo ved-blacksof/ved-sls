@@ -6,17 +6,34 @@ import { MobileApplication } from './MobileApplication'
 
 import { evchargers, evchargercontrollers } from '../../molecules/PortfolioData'
 import { GridBlue, MainContainer } from '../../atoms'
-import { Container } from '@material-ui/core'
+import { Box, Container, makeStyles } from '@material-ui/core'
 
+const useStyles = makeStyles((theme) => ({
+    realText1: {
+        margin: '0% auto',
+        marginTop:'8%',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        },
+    },
+    eco:{
+        "& img":{
+            width:'100%',
+
+        }
+    }
+}))
 
 
 export function EvchargingTemplate() {
+    const classes = useStyles()
+
     return (
         <>
             <Ubanner
                 Background="/images/luo-lei-Xa4pTwafe5U-unsplash.png"
                 maintext="EV Charging Solutions"
-                subtext="Helping in making the world EV-First!"
+                subtext="Helping in making the world ev-first!"
             />
 
 
@@ -32,6 +49,16 @@ export function EvchargingTemplate() {
                     Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kW- 7.4kW."
                 />
             </GridBlue>
+
+
+            <MainContainer>
+                <Container fixed className={classes.realText1}>
+                    <Box className={classes.eco}>
+                        <img src="./images/evcharger/ecosystem.png" />
+                    </Box>
+                </Container>
+            </MainContainer>
+
 
 
             <Realtime
@@ -58,7 +85,7 @@ export function EvchargingTemplate() {
             {/* <ChargingMangement /> */}
 
             <SoftOfferingsBlue
-                maintitle="Software OFFERINGS"
+                maintitle="Software OFFERING"
                 title="Charging Management Software"
                 subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
                 list
@@ -66,16 +93,16 @@ export function EvchargingTemplate() {
                 secli="Dynamic load management capabilities"
                 thirdli="ROI Analytics"
                 fourthli="Partner/Fleet management"
-                images='./images/evcharger/Image 2.png'
+                images='./images/dashboards/verde-DB.png'
             />
 
             <MobileApplication />
 
             <MainContainer>
                 <Visit1
-                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; VERDEMOBILITY"
-                    title="Visit the website"
-                    href="https://www.verdemobility.com/Home/Index"
+                    goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
+                    title="Visit website"
+                    href="https://www.verdemobility.com/"
                     rightlogo="./images/evcharger/1.png"
                 />
             </MainContainer>

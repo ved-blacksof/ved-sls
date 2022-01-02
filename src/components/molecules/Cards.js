@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-start',
         flexWrap: 'wrap',
-        margin: '0% 3%',
+        margin: '0% 2%',
         [theme.breakpoints.down('sm')]: {
             justifyContent: 'center',
             margin: '0% 0%'
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-start',
         flexDirection: 'column',
         flexWrap: 'wrap',
-        margin: '5% 2%',
+        margin: '5% 1.5%',
         [theme.breakpoints.down('sm')]: {
             width: '70%'
         },

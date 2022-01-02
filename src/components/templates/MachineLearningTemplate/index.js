@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
 import { Ourexpertise } from './Ourexpertise'
 
 export function MachineLearningTemplate() {
@@ -10,7 +10,7 @@ export function MachineLearningTemplate() {
             <Ubanner
                 Background="./images/ml/ML-and-AI.png"
                 maintext="Machine learning and artificial intelligence"
-                subtext="Leveraging Novel Tchnologies for the Betterment of the Mankind"
+                subtext="Leveraging novel technologies for the betterment of the mankind"
             />
             <GridBlue>
                 <Navbar />
@@ -40,9 +40,9 @@ export function MachineLearningTemplate() {
 
             <Ourexpertise />
 
-            <Visit
+            <Visit1
                 goto="Find out how we can help your business with AI and ML solutions"
-                title="Click Here"
+                title="Contact us"
                 href={"/contact"}
 
             />

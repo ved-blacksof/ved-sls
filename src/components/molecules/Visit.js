@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Box } from '@material-ui/core'
 import { Buttons, MainContainer } from '../atoms'
+import Fade from 'react-reveal'
 
 const useStyles = makeStyles((theme) => ({
     visitBox: {
@@ -16,23 +17,23 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bold',
         width: '80%'
     },
-     btmText1: {
+    btmText1: {
         width: '100%',
         textAlign: 'center',
         // color: '#182AC3',
         fontWeight: 'bold',
     },
     btns: {
-        width: '28%',
-        marginTop: '2%',
+        width: '35%',
+        margin: '3% auto',
         [theme.breakpoints.down('sm')]: {
             width: '40%',
-        marginTop: '4%'
+            margin: '2% auto',
         },
         [theme.breakpoints.down('xs')]: {
-            width: '60%'
+            width: '70%'
         },
-    }
+    },
 }))
 
 export function Visit({
@@ -47,15 +48,18 @@ export function Visit({
     return (
         <MainContainer>
             <Box className={classes.visitBox}>
-                <h4 className={classes.btmText} style={style}> {goto}</h4>
-                <h3 className={classes.btmText} style={style}> {goto1}</h3>
+                <Fade bottom>
+                    <h4 className={classes.btmText} style={style}> {goto}</h4>
+                    <h3 className={classes.btmText} style={style}> {goto1}</h3>
 
+                </Fade>
                 <Buttons
                     className={classes.btns}
                     title={title}
                     href={href}
                     arrowIcon="./images/Icon feather-arrow-right.svg"
                 />
+
             </Box>
         </MainContainer>
     )

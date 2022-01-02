@@ -5,13 +5,25 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        margin: "20% auto",
+        margin: "10% auto",
+        marginTop: "25%",
+
         display: 'flex',
         background: '#F3F3F3',
         borderRadius: '1rem',
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column'
-        }
+            flexDirection: 'column',
+            height: 'fit-content',
+            marginTop: "25%",
+            marginBottom:'5%',
+            width: '100%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            flexDirection: 'column',
+            height: 'fit-content',
+            marginTop: "35%",
+            width: '100%',
+        },
     },
     leftBox: {
         width: '50%',
@@ -20,16 +32,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end',
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
-            width: '100%'
-        }
-    },
-    rgtBox: {
-        padding:'8% 0%',
-        width: '50%',
-        // display:'flex',
-        // alignItems:'center',
-        [theme.breakpoints.down('sm')]: {
-            width: '100%'
+            width: '100%',
+            padding:'30% 0%',
         }
     },
     mobileBox: {
@@ -38,13 +42,22 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         top: '-10%',
         [theme.breakpoints.down('sm')]: {
-            
+            top: '-30%',
+            width: '50%',
         }
     },
     mobileImages: {
         width: '100%',
         maxHeight: '100%',
-    }
+    },
+    rgtBox: {
+        padding: '8% 0%',
+        width: '50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            padding: '0% 0%',
+        }
+    },
 
 }))
 
@@ -52,7 +65,7 @@ export function MobileApplication() {
     const classes = useStyles()
     return (
         <MainContainer>
-            <Container className={classes.mainContainer}>
+            <Container fixed className={classes.mainContainer}>
                 <Box className={classes.leftBox}>
                     <Box className={classes.mobileBox}>
                         <Fade right><img className={classes.mobileImages} src={'./images/Group 82858.png'} /></Fade>

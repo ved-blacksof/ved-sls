@@ -5,9 +5,9 @@ import {
     makeStyles,
 } from '@material-ui/core';
 import Flicking, { ViewportSlot } from "@egjs/react-flicking";
+import { AutoPlay, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/react-flicking/dist/flicking-inline.css";
-import { AutoPlay, Pagination } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 import "@egjs/flicking-plugins/dist/pagination.css";
 
@@ -16,12 +16,12 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
-        height: 'fit-content',
+        height: '90vh',
         display: 'flex',
-        margin: '12% auto',
+        paddingBottom:'8%',
         display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start ',
+        justifyContent: 'center',
+        alignItems: 'center ',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             height: 'fit-content',
@@ -84,43 +84,66 @@ const useStyles = makeStyles((theme) => ({
     },
     boxBig: {
         background: 'white',
+        padding:'1%',
         color: 'red',
         width: '16vw',
         height: '16vw',
         '& h1': {
             color: '#D9393E',
             fontSize: '5vw',
-            textAlign: 'center'
+            textAlign: 'center',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1.8rem'
+            }
         },
         '& h2': {
-            color: '#003189',
+            color: '#182AC3',
             fontSize: '2vw',
-            textAlign: 'center'
+            textAlign: 'center',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1.2rem'
+            }
         },
         [theme.breakpoints.down('sm')]: {
             height: '30vw',
             width: '30vw',
-        }
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '40vw',
+            width: '40vw',
+        },
 
     },
     boxSmall: {
         height: '11vw',
         width: '10vw',
+        padding:'1%',
         background: 'white',
         display: 'flex',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
             height: '20vw',
-            width: '22vw',
+            width: '20vw',
         },
+        [theme.breakpoints.down('xs')]: {
+            height: '28vw',
+            width: '26vw',
+        },
+
         "& h3": {
             color: '#D9393E',
-            fontSize: '3vw'
+            fontSize: '3vw',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1rem'
+            }
         },
         "& h4": {
             font: 'normal normal normal 1.4vw BebasNeue',
-            color: '#003189',
-            textAlign: 'center'
+            color: '#182AC3',
+            textAlign: 'center',
+            [theme.breakpoints.down('sm')]:{
+                fontSize:'1rem'
+            }
         }
     },
 
@@ -131,7 +154,7 @@ export function TechCarousel() {
     const classes = useStyles()
 
     // const Arrows = [new Arrow()]
-    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
+    const autoPlugins = new AutoPlay({ duration: 4000, direction: "NEXT", stopOnHover: true });
 
     const paginationsPlugins = new Pagination({ type: 'bullet' });
 
@@ -145,7 +168,7 @@ export function TechCarousel() {
                     <Box className={classes.box1}>
                         <Fade bottom>
                             <ParagraphsBlue
-                                title="TECHNOLOGY PARTNERS "
+                                title="TECHNOLOGY PARTNERS"
                                 title1="IN HARDWARE AND SOFTWARE OFFERINGS"
                                 subtitle="Serving as a turnkey technology solution provider for the past 20 years."
                                 list="We specialize in -"
@@ -160,6 +183,7 @@ export function TechCarousel() {
                         <Flicking
                             // selector="center"
                             // plugins={autoPlugins}
+                            duration="1000"
                             plugins={plugins}
                             align="center"
                             defaultIndex='1'
@@ -208,7 +232,7 @@ export function TechCarousel() {
                                     </div>
 
                                     <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h3 style={{ fontSize: '2vw', textAlign:'center' }}>Operating Bases</h3>
+                                        <h4 style={{  textAlign:'center', color:'#D9393E', fontSize:'2vw' }}>Operating Bases</h4>
                                         <h4 >India, UK, USA</h4>
                                     </div>
                                     <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
@@ -216,7 +240,7 @@ export function TechCarousel() {
 
                                     </div>
                                     <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h3 style={{textTransform:'lowercase'}}>Clients</h3>
+                                        <h3 style={{ textAlign:'center', color:'#D9393E', fontSize:'2vw'}}>Clients</h3>
                                         <h4 >in 18+ Countries</h4>
                                     </div>
                                 </Fade>

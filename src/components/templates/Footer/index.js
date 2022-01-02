@@ -7,16 +7,19 @@ import { Facebook, Instagram, LinkedIn, Twitter } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     mainPadding: {
-        background: 'white', 
-        paddingTop: '4%'
+        background: 'white',
+        padding: '1% 0%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '2% 0%',
+            overflow:'hidden'
+        }
     },
     footerMain: {
         background: 'white',
         margin: '0% 1%',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '10%',
-            width: '85%',
-            margin: '0% auto'
+            padding: '0% 5%',
+
         }
     },
     headBox: {
@@ -25,16 +28,19 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-
+        padding: '4% 0%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '10% 0%',
+        }
     },
     imageBox: {
-        width: '15rem',
+        width: '8rem',
         "& img": {
             width: '100%',
             maxHeight: '100%'
         },
         [theme.breakpoints.down('sm')]: {
-            width: '10rem',
+            width: '7rem',
         }
     },
     head: {
@@ -51,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'baseline',
         marginTop: '5%',
         [theme.breakpoints.down('sm')]: {
-            // flexDirection: 'column'
             flexWrap: 'wrap                                                                                                                                      '
         }
     },
@@ -84,9 +89,10 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        padding:'10px 0%',
         '& a': {
             textDecoration: 'none',
-            verticalAlign:'middle',
+            verticalAlign: 'middle',
             color: 'black',
             [theme.breakpoints.down('sm')]: {
                 fontSize: '.7rem',
@@ -96,16 +102,18 @@ const useStyles = makeStyles((theme) => ({
             padding: '0rem .5rem'
         },
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column-reverse'
+            flexDirection: 'column-reverse',
+            padding: '10px 0%'
         }
     },
     socialBox: {
         verticalAlign: 'middle',
-        margin: '1% 0%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-
+        [theme.breakpoints.down('sm')]: {
+            padding: '10px 0%'
+        }
     },
     socialIcons: {
         verticalAlign: 'middle',
@@ -115,18 +123,20 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     socialText: {
-        color:'black',
-        display:'inline',
+        color: 'black',
+        display: 'inline',
         [theme.breakpoints.down('sm')]: {
-            display: 'none'
+
         }
     },
-    anchor:{
-        display:'flex',
-        alignItems:'center',
-    },  
+    anchor: {
+        display: 'flex',
+        alignItems: 'center',
+    },
     hrs: {
-        // margin: '1% 0%'
+        [theme.breakpoints.down('sm')]: {
+            // margin: '8% 0%',
+        }
     }
 
 }))
@@ -169,7 +179,8 @@ export function Footer() {
                         </Box>
                     </Fade>
                     <Fade bottom>
-                        <h6 className={classes.head}>Over the years, we have added numerous products to our portfolio
+                        <h6 className={classes.head}>
+                            Over the years, we have added numerous products to our portfolio
                             and have served as important technology partners for various verticals.
                         </h6>
                     </Fade>
@@ -252,27 +263,27 @@ export function Footer() {
 
                     </Box>
                 </Fade>  */}
-                <br />
-                <br />
-                <br />
 
 
                 <hr className={classes.hrs} />
+
+
                 <Fade top>
                     <div className={classes.copyBox}>
                         <h6 className={classes.socialText}>System Level Solutions Inc. Copyright &copy; 2021</h6>
+
                         <div className={classes.socialBox}>
                             <a target="_blank" href="https://www.facebook.com/system.level.solutions.corp" className={classes.anchor}><Facebook className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>Facebook</h6>
+                                {/* <h6 className={classes.socialText}>Facebook</h6> */}
                             </a><i>|</i>
                             <a target="_blank" href="https://www.instagram.com/system_level_solutions/" className={classes.anchor}><Instagram className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>Instagram</h6>
+                                {/* <h6 className={classes.socialText}>Instagram</h6> */}
                             </a><i>|</i>
                             <a target="_blank" href="https://twitter.com/S_L_S" className={classes.anchor}><Twitter className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>Twitter</h6>
+                                {/* <h6 className={classes.socialText}>Twitter</h6> */}
                             </a><i>|</i>
                             <a target="_blank" href="https://www.linkedin.com/company/system-level-solutions-india-pvt.-ltd/" className={classes.anchor}> <LinkedIn className={classes.socialIcons} />
-                                <h6 className={classes.socialText}>LinkedIn</h6>
+                                {/* <h6 className={classes.socialText}>LinkedIn</h6> */}
                             </a>
                         </div>
                     </div>

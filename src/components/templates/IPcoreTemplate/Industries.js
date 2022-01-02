@@ -26,12 +26,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop:'3%'
     },
     borderBox: {
-        border: '2px solid black',
+        border: '2px solid #182AC3',
         width: '30%',
         display: 'flex',
-        flexWrap: 'wrap',
         margin: '2% 0%',
-
         [theme.breakpoints.down('sm')]: {
             width: '45%'
         },
@@ -41,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     iconBox: {
-        borderRight: '2px solid black',
+        borderRight: '2px solid #182AC3',
         width: '3.5rem',
         height: '3.5rem',
         display: 'flex',
@@ -49,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         padding: '.5rem',
         "& img": {
-            maxWidth: '100%',
+            width: '100%',
             maxHeight: '100%'
         },
         [theme.breakpoints.down('xs')]: {
@@ -59,11 +57,17 @@ const useStyles = makeStyles((theme) => ({
     },
     textBox: {
         alignSelf: 'center',
-        padding: '1% 2%',
+        marginLeft:'2%',
         "& h4": {
-            color: 'black'
+            color: ' #182AC3'
         },
         
+    },
+    image:{
+        color:'blue',
+        "& svg fill":{
+            fill:'#182AC3'
+        }
     }
 
 }))
@@ -94,7 +98,7 @@ export function Industries({
                                     <>
                                         <Box className={classes.borderBox}>
                                             <Box className={classes.iconBox} >
-                                                <Fade bottom><img src={item.images} /></Fade>
+                                                <Fade bottom><img className={classes.image} src={item.images} /></Fade>
                                             </Box>
                                             <Box className={classes.textBox}>
                                                 <Fade top><h4>{item.text}</h4></Fade>

@@ -1,29 +1,28 @@
 import React from 'react'
 import { makeStyles, Button, Box } from '@material-ui/core'
+import { ArrowForward, ArrowForwardIos, ArrowForwardIosOutlined, ArrowForwardSharp } from '@material-ui/icons'
+import Fade from 'react-reveal'
 
 const useStyles = makeStyles((theme) => ({
 
     btn: {
         height: '100%',
-        width: '100%',
+        width: '70%',
+        
         background: '#182AC3',
         color: 'white',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        alignSelf: 'center',
-        // font: 'normal normal normal 16px Access',
         border: 'none',
-        // padding: '.5rem .5rem',
         textTransform: 'none',
-        borderRadius: '4px',
         '&:hover': {
             background: '#1E00F9',
             color: '#182AC3',
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '10px',
-            padding: '.2rem .5rem',
+            width: '100%',
+
         }
     },
     arrow: {
@@ -44,6 +43,13 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '1rem'
         }
+    },
+    arrow1: {
+        marginLeft: '5px',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '5px',
+            fontSize: '1.2rem'
+        }
     }
 }))
 
@@ -56,20 +62,26 @@ export function Buttons({
 }) {
     const classes = useStyles()
     return (
-        <Box className={className}>
-            {/* material ui Button */}
-            <Button
-                className={classes.btn}
-                style={style}
-                href={href}
-                onclick={()=> window.open(`${href}`, '_blank', '')}
-                target="_blank"
-            >
-                <h4>{title}</h4>
-                <Box className={classes.arrow}>
+        <Fade bottom>
+            <Box className={className}>
+                {/* material ui Button */}
+                <Button
+                    className={classes.btn}
+                    style={style}
+                    href={href}
+                    onclick={() => window.open(`${href}`, '_blank', '')}
+                    target="_blank"
+                >
+                    <h6 style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', verticalAlign: 'middle' }}>
+                        {title}
+                        <ArrowForwardSharp className={classes.arrow1} />
+                    </h6>
+                    {/* <Box className={classes.arrow}>
                     <img src={arrowIcon} alt="arrow" />
-                </Box>
-            </Button>
-        </Box>
+                </Box> */}
+
+                </Button>
+            </Box>
+        </Fade>
     )
 }

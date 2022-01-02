@@ -3,7 +3,7 @@ import { Box, Container, makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
 import { Ubanner, Overview, Squareboxes, Realtime, Visit, Visit1 } from '../../molecules'
-import { middleware, iotnebulink } from '../../molecules/PortfolioData'
+import { middleware, iotnebulink, iotOverview } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +39,7 @@ export function IOTplatformTemplate({
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-IOT.png"
                 maintext="IOT Platform"
-                subtext="Redefining Interperability With our End-to-end IoT Deployment Platform"
+                subtext="Redefining interperability with our end-to-end IoT deployment platform"
             />
 
             <GridBlue>
@@ -52,10 +52,14 @@ export function IOTplatformTemplate({
                             We offer building blocks for IoT solutions and help businesses build world-class products and services in the automation
                             industry. We also provide multiprotocol support for services including G3PLC, WiFi, BLE, Sigfox, LoRa, GSM, etc.,
                             which makes our solution the preferred choice for industry leaders."
-                    list="list"
+
                     li1="Ready to use device SDKs for faster time-to-market"
                     li2="Secured cloud platforms for Data Analytics and real-time Monitoring"
                     li3="Scalability purpose-built for smart and widespread business applications"
+
+                    mapIconPosition="mapIconPosition"
+                    data={iotOverview}
+                    style={{ height: 'fit-content', marginBottom: '20%' }}
 
                 />
             </GridBlue>
@@ -66,22 +70,21 @@ export function IOTplatformTemplate({
                 data={iotnebulink}
             /> */}
             <Realtime
-               title="HARDWARE OFFERINGs"
-               squarecarddata={iotnebulink}
-               style={{opacity:'0'}}
+                title="HARDWARE OFFERINGs"
+                squarecarddata={iotnebulink}
+                carouselIndicatorSM="carouselIndicatorSM"
+                // style={{ opacity: '0' }}
             />
 
             <Realtime
                 squarecarddata={middleware}
                 title="Software Offerings"
-            // subtitle="EV Chargers"
-            // subtitle1="We offer a complete range of AC Chargers purpose-built for a wide range of applications."
             />
 
             <Visit1
-                goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS; NEBULAE"
-                title="Visit the website"
-                href="https://www.nebulae.io/home"
+                goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
+                title="Visit website"
+                href="https://www.nebulae.io/"
                 rightlogo="./images/iot/Nebulae.png"
             />
 

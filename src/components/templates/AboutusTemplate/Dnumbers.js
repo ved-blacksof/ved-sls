@@ -35,15 +35,23 @@ const useStyles = makeStyles((theme) => ({
         color: '#D9393E',
         fontSize: '4rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3rem'
+            fontSize: '3rem',
+            textAlign:'center'
         },
         [theme.breakpoints.down('xs')]: {
-            fontSize: '2.5rem'
+            fontSize: '2.5rem',
+            textAlign:'center'
         }
     },
     subHead: {
         color: 'black',
-        lineHeight: '1'
+        lineHeight: '1',
+        [theme.breakpoints.down('sm')]: {
+            textAlign:'center'
+        },
+        [theme.breakpoints.down('xs')]: {
+            textAlign:'center'
+        }
     },
     container1: {
         display: 'flex',
@@ -74,8 +82,8 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('sm')]: {
             height: '50vw',
-            width: '50vw',
-            margin: '1%'
+            width: '100%',
+            marginTop: '4%'
         },
 
     }
@@ -112,7 +120,7 @@ export function Dnumbers() {
                 <Box className={classes.container1}>
                     <Box className={classes.boxes}>
                         <Fade bottom><img src={'./images/mission.svg'} alt="Mission Icon" /></Fade>
-                        <Fade bottom><h4>Operating Base <br /> India, UK, USA</h4></Fade>
+                        <Fade bottom><h4>Operating Bases <br /> India, UK, USA</h4></Fade>
                     </Box>
                     <Box className={classes.boxes} style={{ background: '#D9393E' }}>
                         <Fade bottom><img src={'./images/Layer 2.svg'} alt="Help Icon" /></Fade>

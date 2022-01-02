@@ -1,5 +1,6 @@
 import { Box, Container, makeStyles } from '@material-ui/core'
 import React from 'react'
+import { Quality, SoftOfferingsBlue } from '../../molecules'
 
 const useStyles = makeStyles((theme) => ({
     appBox: {
@@ -16,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
             position: 'absolute',
             lineHeight: '1',
             background: '#182AC3',
-            zIndex:'1',
-            [theme.breakpoints.down('sm')]:{
-                width:'38%'
+            zIndex: '1',
+            [theme.breakpoints.down('sm')]: {
+                width: '38%'
             },
-            [theme.breakpoints.down('xs')]:{
-                width:'55%'
+            [theme.breakpoints.down('xs')]: {
+                width: '55%'
             },
             '&::before': {
                 content: "''",
@@ -36,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         '& img': {
             width: '100%',
             maxHeight: '100%',
-            zIndex:'-1'
+            zIndex: '-1'
         }
     },
     blueBox1: {
@@ -62,15 +63,17 @@ export function Application() {
     const classes = useStyles()
     return (
         <Box className={classes.appBox}>
+
             <Box className={classes.head}>
-                <h2 style={{ color: 'black', textAlign: 'center' }}>Applications</h2>
+                <h2 style={{ color: 'black', textAlign: 'center',  }}>APPLICATIONS</h2>
             </Box>
+
 
             <Box className={classes.imageBox1}>
                 <img className={classes.appImage} src={"./images/AdobeStock_254644877_Preview.png"} />
 
                 <div className={classes.blueBox1}>
-                    <h2 className={classes.power}>Power <br/> Transformer</h2>
+                    <h2 className={classes.power}>Power <br /> Transformer</h2>
                 </div>
             </Box>
 
@@ -81,7 +84,7 @@ export function Application() {
                     <img className={classes.appImage} src={"./images/He0000e5e4bbe41f9ba7324ba2780c8a1n.png"} />
 
                     <div className={classes.blueBox2}>
-                        <h2 className={classes.power}>Distribution <br/> transformer</h2>
+                        <h2 className={classes.power}>Distribution <br /> transformer</h2>
                     </div>
                 </Box>
             </Box>

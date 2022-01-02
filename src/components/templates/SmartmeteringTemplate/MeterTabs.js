@@ -1,7 +1,7 @@
 import { Container, makeStyles, Box, Typography, Tabs, Tab } from '@material-ui/core'
 import { PropTypes } from 'prop-types'
 import React from 'react'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue, Visit1 } from '../../molecules'
 import { MainContainer } from '../../atoms';
 import { smartstreet } from '../../molecules/PortfolioData'
 import clsx from 'clsx';
@@ -46,14 +46,14 @@ const useStyles = makeStyles((theme) => ({
     tabsBox: {
         width: '100%',
         padding: '0% 7%',
-        position:'sticky',
-        top:'70px',
-        zIndex:'2',
-        background:'white',
-        transition:'all 0.5s ease-in-out',
+        position: 'sticky',
+        top: '80px',
+        zIndex: '2',
+        background: 'white',
+        transition: 'all 0.5s ease-in-out',
     },
     tabs: {
-        paddingTop:'10px',
+        paddingTop: '10px',
         "& > span": {
             maxWidth: 40,
             width: "100%",
@@ -89,7 +89,7 @@ export function MeterTabs() {
         <>
 
             <Box className={classes.mainContainer}>
-                <br/>
+                <br />
                 <Box className={classes.tabsBox}>
                     <Tabs value={value}
                         onChange={handleChange}
@@ -115,9 +115,10 @@ export function MeterTabs() {
                         <Quality
                             mainheading="smart metering"
                             mainsubheading="SLS has continually been engaged in developing breakthrough products in the Smart Metering Landscape. We offer a wide range of solutions built using a culmination of new-edge technologies over the functional blocks of HES, WAN cluster for smart devices and, DCU and HAN application for residential metering applications."
-                            imageBG="./images/Smart_Metering_Profile.png"
+                            imageBG="./images/smartmeter/RF-Tower.png"
+                            // imageBG="./images/smartmeter/Smart_Metering_Profile.png"
                             heading="RF Canopy"
-                            subtitle="Our Smart Metering Infrastructure is powered through RF Technology and Network Interface Card that offers robust network capacity to all the connected devices. Our products use lower bandwidth radio frequencies that are less congested and offer reliable connectivity across the Smart Metering Infrastructure.  "
+                            subtitle="Our Smart Metering Infrastructure is powered through RF Technology that uses lower bandwidth radio frequencies and Network Interface Card to offer robust network capacity to all the connected devices."
                             list="list"
                             firstli="Wi-Sun Protocol"
                             secli="LoRaWAN Network"
@@ -131,16 +132,30 @@ export function MeterTabs() {
                             redline
                         />
 
-                        <Quality
-                            imageBG="./images/Asset 2.png"
+                        <SoftOfferingsBlue
+                            maintitle="Software offering"
+                            title="Head End System (HES)"
+                            subtitle="The HES is our scalable head-end data acquisition solution for the AMI. The HES is an IoT-powered solution that monitors and controls all Smart Meters and operates as a communication driver between MDM Systems and measurement devices."
+                            // list
+                            firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
+                            secli="Dynamic load management capabilities"
+                            thirdli="ROI Analytics"
+                            fourthli="Partner/Fleet management"
+                            images='./images/dashboards/Smart-metering-DB.png'
+                        />
+
+                        {/* <Quality
+                            imageBG="./images/dashboards/Smart-metering-DB.png"
                             heading="Head End System (HES)"
                             subtitle="The HES is our scalable head-end data acquisition solution for the AMI. The HES is an IoT-powered solution that monitors and controls all Smart Meters and operates as a communication driver between MDM Systems and measurement devices."
                             redline
-                        />
+                        /> */}
 
-                        <Visit
-                            title="Know More"
-                            href={"http://www.smets2design.com/"}
+
+
+                        <Visit1
+                            title="Contact us"
+                            href={"/contact"}
                         />
                     </Box>
 
@@ -179,9 +194,10 @@ export function MeterTabs() {
 
                         />
 
-                        <Visit
-                            goto="Switch to a smarter way of Metering."
-                            title="Visit the website"
+                        <Visit1
+                            goto="Switch to a smarter way of Metering"
+                            title="Visit website"
+                            href={"http://www.smets2design.com/"}
                         />
                     </Box>
                 </TabPanel>

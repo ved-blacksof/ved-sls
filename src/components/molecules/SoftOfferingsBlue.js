@@ -7,7 +7,20 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) => ({
     mainBox: {
         position: 'relative',
-        margin: '10% 0%',
+        marginTop: '10%',
+        marginBottom:'10%',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '0%',
+            marginBottom:'0%',
+        }
+    },
+    curve:{
+        borderRadius: '0rem 5rem 0rem 5rem', 
+        overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            borderRadius: '0rem', 
+
+        }
     },
     container: {
         display: 'flex',
@@ -16,6 +29,12 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column'
+        }
+    },
+    pad:{
+        padding: '10% 0%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '8% 0%',
         }
     },
     leftBox: {
@@ -32,8 +51,9 @@ const useStyles = makeStyles((theme) => ({
         bottom: '-10%',
         [theme.breakpoints.down('sm')]: {
             position: 'static',
-            width: '80%',
-            margin: '5% auto'
+            width: '60%',
+            margin: '0% auto',
+            paddingBottom:'5%',
         }
     },
     lap: {
@@ -45,18 +65,18 @@ const useStyles = makeStyles((theme) => ({
 
 export function SoftOfferingsBlue({
     maintitle,title,subtitle,images,
-    list,firstli ,secli, thirdli, fourthli
+    list,firstli ,secli, thirdli, fourthli, fifthli, sixthli
 }) {
 
     const classes = useStyles()
 
     return (
-        <Box style={{ height: 'fit-content', overflow: 'hidden' }}>
+        <Box style={{ height: 'fit-content' }}>
             <Box className={classes.mainBox}>
-                <Box style={{ borderRadius: '0rem 5rem 0rem 5rem', overflow: 'hidden' }}>
+                <Box className={classes.curve}>
                     <GridBlue >
 
-                        <Box style={{ padding: '10% 0%', }}>
+                        <Box  className={classes.pad}>    
                             <MainContainer>
                                 <Container fixed className={classes.container}>
 
@@ -71,6 +91,8 @@ export function SoftOfferingsBlue({
                                                 secli={secli}
                                                 thirdli={thirdli}
                                                 fourthli={fourthli}
+                                                fifthli={fifthli}
+                                                sixthli={sixthli}
                                             />
                                         </Fade>
                                     </Box>

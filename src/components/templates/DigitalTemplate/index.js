@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Overview, Ubanner, Quality, QualityReverse, Visit } from '../../molecules'
+import { Overview, Ubanner, Quality, QualityReverse, Visit, SoftOfferingsBlue, Visit1 } from '../../molecules'
 import { digital } from '../../molecules/PortfolioData'
 
 export function DigitalTemplate() {
@@ -10,7 +10,7 @@ export function DigitalTemplate() {
             <Ubanner
                 Background="/images/digital-signage/Digital-signage.png"
                 maintext="Digital signage"
-                subtext="Connecting the world  through Smart Screens"
+                subtext="Connecting the world through smart screens"
             />
 
             <GridBlue>
@@ -23,8 +23,10 @@ export function DigitalTemplate() {
                     emergency messages on public announcement
                     boards, etc. with remote intelligence, customizations, and grasping control."
                     path="Industries / Digital Signage"
+
+                    mapIconPosition="mapIconPosition"
                     data={digital}
-                    icons="icons"
+                    style={{ height: 'fit-content', marginBottom: '20%' }}
 
                 />
             </GridBlue>
@@ -40,7 +42,7 @@ export function DigitalTemplate() {
             />
 
             <QualityReverse
-                imageBG="./images/denny-muller-HfWA-Axq6Ek-unsplash.png"
+                imageBG="./images/Group 82859.jpg"
                 heading="DigitalSyne Android Player"
                 subtitle="Ace your advertisement game by converting your Android Screens
                  into intelligent displays and stream data like never before."
@@ -48,19 +50,18 @@ export function DigitalTemplate() {
 
             />
 
-            <Quality
-                // imageBG="./images/Group 82859.jpg"
-                imageBG="./images/CMD.png"
-                heading="Content Management Director (CMD)"
+            <SoftOfferingsBlue
+                maintitle="Software Offering"
+                title="Content Management Director (CMD)"
                 subtitle="Manage all your digital ad displays through this multi-featured and easy-to-use CMD. 
                 The CMD helps you script, monitor, diagnose, and control each andevery intricacy of all your displays."
-                redline="redline"
-
+                
+                images='./images/dashboards/Dynamic-Signage.png'
             />
 
-            <Visit
+            <Visit1
                 goto="Reinvent how your brand advertises and connects."
-                title="Visit the website"
+                title="Contact us"
                 href={"/contact"}
             />
 

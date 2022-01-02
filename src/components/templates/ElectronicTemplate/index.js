@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit } from '../../molecules'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
 
 export function ElectronicTemplate() {
     return (
@@ -9,7 +9,7 @@ export function ElectronicTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-elctronics.png"
                 maintext="Electronics Manufacturing Services [EMS]"
-                subtext="Providing world-class Electronics Manufacturing Services"
+                subtext="Providing world-class electronics manufacturing services"
             />
             <GridBlue>
                 <Navbar />
@@ -41,9 +41,9 @@ export function ElectronicTemplate() {
                 subtitle="We offer a one-stop PCB manufacturing solution to our clients. Our facilities are equipped to cater services right from PCB Fabrication, Prototyping, to assembly of PCBs all at one junction. This state-of-the-art facility allows us to provide seamless execution of large-scale projects and faster time-to-market of quality checked products."
             />
 
-            <Visit
+            <Visit1
                 goto="Know more about our Electronics Manufacturing Capabilities"
-                title="Know More"
+                title="Contact us"
                 href={"/contact"}
             />
 

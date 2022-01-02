@@ -1,0 +1,56 @@
+  #slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+
+  }
+  
+  .photo {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;    
+  }
+  .photo{
+      animation: zoomout 8000ms;
+    }
+
+
+  .photos {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;    
+    transition: all .8s ease-in-out;
+  }
+  
+  .photos{
+      animation: zoomin 8000ms ease-in-out;
+    }
+
+
+  @keyframes zoomout{
+    0%{
+      transform: scale(1.2);
+      
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+  @keyframes zoomin{
+    0%{
+      transform: scale(1.2);;
+      
+    }
+    100%{
+      transform: scale(1);
+    }
+  }

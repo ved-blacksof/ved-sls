@@ -7,7 +7,7 @@ import { Paragraphs } from '../../atoms'
 
 const useStyles = makeStyles((theme) => ({
     mainContain: {
-        margin: '15% auto',
+        margin: '8% auto',
         padding: '0px',
         width: '65%',
         [theme.breakpoints.down('sm')]: {

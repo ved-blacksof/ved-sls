@@ -1,9 +1,10 @@
 import React from 'react'
+import { Fade } from 'react-reveal'
 import { Navbar, Footer } from '..'
-import { GridBlue } from '../../atoms'
-import { Ubanner, Overview, Quality, QualityReverse, Visit, SoftOfferingsBlue } from '../../molecules'
-import { smarttraffic } from '../../molecules/PortfolioData'
-import { PosBoxes } from './PosBoxes'
+import { GridBlue , } from '../../atoms'
+import { Ubanner, Overview, Quality, QualityReverse, Visit, NewPosCards, Visit1 } from '../../molecules'
+import { smarttraffic , smarttrafficCards} from '../../molecules/PortfolioData'
+import { PosBoxes } from '../../molecules/PosBoxes'
 
 export function SmarttrafficTemplate() {
     return (
@@ -11,7 +12,7 @@ export function SmarttrafficTemplate() {
             <Ubanner
                 Background="./images/luo-lei-Xa4pTwafe5U-unsplash-smarttraffic08.png"
                 maintext="Smart Traffic Solutions"
-                subtext="Transforming how Traffic Systems Interact with the world"
+                subtext="Transforming how traffic systems interact with the world"
             />
 
             <GridBlue>
@@ -27,11 +28,12 @@ export function SmarttrafficTemplate() {
                 />
             </GridBlue>
 
-            <PosBoxes />
+            <Fade bottom> <PosBoxes data={smarttraffic} /></Fade>
+
+            <NewPosCards  data={smarttrafficCards}/>
 
 
-
-            <Quality
+            {/* <Quality
                 mainheading="Offerings"
                 imageBG="./images/slider2-smarttraffic10.png"
                 heading="Controller"
@@ -40,12 +42,12 @@ export function SmarttrafficTemplate() {
             />
 
             <QualityReverse
-                imageBG="./images/about-imac-smarttraffic01.png"
+                imageBG="   "
                 heading="Traffic Management Dashboard"
                 subtitle="Our Traffic Management Dashboard is a cloud-based intuitive dashboard that allows you to remotely control and monitor your intelligent traffic infrastructure."
                 redline="redline"
 
-            />
+            /> */}
 
             {/* <SoftOfferingsBlue
                 maintitle="Software Offering"
@@ -55,9 +57,9 @@ export function SmarttrafficTemplate() {
                 images='./images/about-imac-smarttraffic01.png'
             /> */}
 
-            <Visit
+            <Visit1
                 goto="Switch to Smart Traffic Management now!"
-                title="Visit the website"
+                title="Visit website"
                 href="https://www.iotraffic.io/"
             />
 

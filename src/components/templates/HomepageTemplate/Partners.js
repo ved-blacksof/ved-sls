@@ -12,10 +12,11 @@ import Fade from 'react-reveal/Fade';
 
 
 import { GeneralHeading, MainContainer } from '../../atoms'
+import { Infinite } from '../../molecules';
 
 const useStyles = makeStyles((theme) => ({
     partner: {
-        margin: '12% auto'
+        margin: '5% auto',
     },
     head: {
         color: 'black'
@@ -30,17 +31,27 @@ const useStyles = makeStyles((theme) => ({
     redLine: {
         margin: '1% 0%'
     },
-    iconsBox: {
-        width: '20%'
-    },
+
     partnersIcons: {
-        width: '70%',
+        width: '100%',
+        margin: '0% auto',
         display: 'flex',
-        justifyContent: 'space-around',
-        margin: '5% 5%',
+        justifyContent: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
         },
+
+    },
+    iconsBox: {
+        width: '150px',
+        height: '100px',
+        marginLeft: '2%',
+        // borderRadius: '4px',
+        // background: 'white',
+        // boxShadow: '0px 0px 4px #d3d3d3',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         '& img': {
             width: '100%',
             maxHeight: '100%',
@@ -48,6 +59,36 @@ const useStyles = makeStyles((theme) => ({
     },
 
 }))
+
+const PartnersIcons = [
+    {
+        images: "./images/homepage-icons/partners/Asset 8@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 10@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 11@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 2@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 3@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 7@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 4@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 6@300x-8.png"
+    },
+    {
+        images: "./images/homepage-icons/partners/Asset 5@300x-8.png"
+    },
+]
 
 export function Partners() {
     const classes = useStyles()
@@ -60,65 +101,12 @@ export function Partners() {
                         subtitle="Serving over 20+ years in the technology industry, we have forged numerous partnerships and associated ourselves with a number of disparate Indian and global entities."
                         redline="redline"
                     />
-                    <Box className={classes.partnersIcons}>
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 2@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 3@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 4@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-                    </Box>
-                    <Box className={classes.partnersIcons}>
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 5@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 6@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 7@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-                    </Box>
-                    <Box className={classes.partnersIcons}>
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 8@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 10@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-
-                        <Fade bottom>
-                            <div className={classes.iconsBox}>
-                                <img src={'./images/homepage-icons/partners/Asset 11@300x-8.png'} alt="Partners Icons" />
-                            </div>
-                        </Fade>
-                    </Box>
                 </Container>
             </MainContainer>
+
+            {/* <Infinite squarecarddata={PartnersIcons} /> */}
+
+
         </>
     )
 }

@@ -8,15 +8,18 @@ import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
 import { GeneralHeading, MainContainer } from '../atoms'
 import Fade from 'react-reveal/Fade';
 import clsx from 'clsx';
+import './molecule.css'
 
 
 const useStyles = makeStyles((theme) => ({
     realText: {
         margin: '15% auto',
         [theme.breakpoints.down('sm')]: {
-            margin: "20% auto"
+            margin: "20% auto",
+            overflow: 'hidden'
         },
     },
+    
     sliderSec: {
         width: '100%',
         display: 'flex',
@@ -32,14 +35,25 @@ const useStyles = makeStyles((theme) => ({
 
         },
     },
+    box3: {
+        // display: "none",
+        opacity: '0',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
+            flexDirection: 'column',
+        },
+    },
     btn: {
         width: '50px',
         height: '50px',
         display: 'flex',
         alignItems: 'center',
-        border: '2px solid #182AC3',
+        border: '1px solid #182AC3',
         marginTop: '10%',
         color: '#182AC3',
+        cursor: 'pointer',
         "&:hover": {
             background: '#182AC3',
             color: 'white'
@@ -68,12 +82,33 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cardImage: {
-        height: '14vw',
-        width: '100%'
+        height: '15vw',
+        width: '100%',
+        overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            height: '50vw',
+        }
+    },
+    cardImage1: {
+        height: '15vw',
+        width: '100%',
+        padding: '5% 8%',
+        textAlign: 'center',
+        overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            height: '50vw',
+        }
+    },
+    images1: {
+        height: '100%',
+        maxWidth: '100%',
+        margin: '0% auto'
     },
     images: {
-        width: '100%',
         maxHeight: '100%',
+        width: '100%',
+        margin: '0% auto'
+
     },
     cardTxt: {
         padding: '5%'
@@ -124,24 +159,27 @@ const useStyles = makeStyles((theme) => ({
             }
         },
         [theme.breakpoints.down('sm')]: {
-            // fontSize:'1rem',
             marginLeft: '0%',
 
         }
     },
     boxes: {
-        margin: "1% 1rem",
-        cursor: 'pointer',
         width: '17vw',
         height: '17vw',
-        boxShadow: '0px 0px 20px #0000001F',
+        border: '1px solid #dcdcdc70',
+        boxShadow: '0px 0px 10px #00000017',
         background: 'white',
         textAlign: 'center',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        padding: "2rem",
+        padding: "1rem",
+        margin: '0% 4%',
+        cursor: 'pointer',
+        position: 'relative',
+        transition: 'all 300ms ease-in-out',
+        transform: 'width .6s ease-in-out',  //for red line
         [theme.breakpoints.down('sm')]: {
             width: '12rem',
             height: '12rem'
@@ -149,28 +187,61 @@ const useStyles = makeStyles((theme) => ({
         '& h4': {
             color: 'black'
         },
-        '&:hover': {
+        '& h6': {
+            color: 'black'
+        },
+        "&::before": {
+            content: "''",
+            height: '5px',
+            width: '0',
+            background: '#DE141A',
+            position: 'absolute',
+            bottom: '5%',
+            left: '5%',
+            transition: 'all 800ms ease-in-out',
+            [theme.breakpoints.down('sm')]: {
+                height: '5px'
+            }
+        },
+        "&:hover": {
+            color: '#182AC3',
+            boxShadow: '0px 0px 10px #00000017',
             border: '1px solid white',
             "& $imgBox": {
-                transform: 'scale(1.2)',
+                transform: 'scale(1.1)'
             },
-            "& $red": {
-                background: '#DE141A',
-                animation: `$redbar 800ms ease-in-out`,
-                animationIterationCount: 1,
-                animationDuration: '800ms',
+            "&::before": {
+                height: '5px',
+                width: '90%',
+                opacity: '1',
+                [theme.breakpoints.down('sm')]: {
+                    height: '5px'
+                }
             },
         },
-
     },
     imgBox: {
-        height: "100%",
-        "& img": {
-            transition: 'all 800ms ease-in-out',
-            width: '100%',
-            maxHeight: '100%',
-        },
+        width: '60%',
+        transition: 'all 500ms ease-in-out',
+        marginBottom: '2%'
     },
+    image: {
+        width: '100%',
+        maxHeight: '100%'
+    },
+    // imgBox: {
+    //     height: "100%",
+    //     transition: 'all .3s ease-in-out',
+    //     "& img": {
+    //         transition: 'all 500ms ease-in-out',
+    //         width: '100%',
+    //         maxHeight: '100%',
+    //     },
+    // },
+    // image: {
+    //     width: '100%',
+    //     maxHeight: '100%'
+    // },
     iconBox: {
         margin: '15% 0%',
         width: '100%',
@@ -185,19 +256,30 @@ const useStyles = makeStyles((theme) => ({
 
     //red line
     reddiv: {
-        width: '100%',
-        height: '8px',
+        transition: 'all .3s linear',
         overflow: 'hidden',
+        position: 'relative',
         [theme.breakpoints.down('sm')]: {
             height: '2px',
             background: 'red'
         },
+        "&::before": {
+            content: '""',
+            height: '6px',
+            width: '0%',
+            position: 'absolute',
+            top: '0',
+            background: 'black'
+        },
+        "&::after": {
+            content: '""',
+            height: '6px',
+            position: 'absolute',
+            top: '0',
+            width: '100%',
+        }
     },
-    red: {
-        height: '100%',
-        transition: 'all 500ms ease-in-out',
 
-    },
     "@keyframes redbar": {
         "0%": {
             opacity: 0,
@@ -218,6 +300,12 @@ const useStyles = makeStyles((theme) => ({
             transform: "translateX(0)"
         },
     },
+    eco: {
+
+        "& img": {
+            width: '100%'
+        }
+    }
 }))
 
 
@@ -225,6 +313,7 @@ export function Realtime({
     data,
     data1,
     squarecarddata,
+    carouselIndicatorSM,
     mainhead,
     maintitle,
     title,
@@ -250,6 +339,8 @@ export function Realtime({
     const previous = () => {
         sliderRef.current.slickPrev();
     };
+
+
     {
         var settings = {
             // dots: true,
@@ -293,6 +384,9 @@ export function Realtime({
             <>
 
                 <MainContainer>
+
+                   
+
                     {/* only slider */}
                     <Container fixed className={classes.realText}>
                         <GeneralHeading
@@ -315,12 +409,20 @@ export function Realtime({
                             </Box> : ''
                         }
 
-                        <Box className={classes.sliderSec}>
+                        <Box className={clsx(classes.sliderSec, "sliderBox")}>
 
-                            <Box className={clsx(classes.box)} style={style} >
-                                <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
-                                <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
-                            </Box>
+                            {
+                                carouselIndicatorSM ?
+                                    <Box className={clsx(classes.box3)} style={style} >
+                                        <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                                        <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
+                                    </Box>
+                                    :
+                                    <Box className={clsx(classes.box)} style={style} >
+                                        <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                                        <Box><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
+                                    </Box>
+                            }
 
                             {/* for Solar templtes Blade 4 */}
 
@@ -365,16 +467,22 @@ export function Realtime({
                             <Slider ref={sliderRef} {...settings} className={classes.slider}>
 
                                 {/* CARDS */}
-
                                 {
                                     data ? data.map((item, index) => {
                                         return (
                                             <Box>
                                                 <Box className={classes.card} >
                                                     <Fade bottom>
-                                                        <Box className={classes.cardImage}>
-                                                            <img className={classes.images} src={item.images} alt="carousel Image" />
-                                                        </Box>
+                                                        {
+                                                            item.images ?
+                                                                <Box className={classes.cardImage}>
+                                                                    <img className={classes.images} src={item.images} alt="carousel Image" />
+                                                                </Box>
+                                                                :
+                                                                <Box className={classes.cardImage1}>
+                                                                    <img className={classes.images1} src={item.logo} alt="carousel Image" />
+                                                                </Box>
+                                                        }
                                                     </Fade>
                                                     <Box className={classes.cardTxt}>
                                                         <Fade bottom>
@@ -410,7 +518,7 @@ export function Realtime({
                                 {
                                     squarecarddata ? squarecarddata.map((item, index) => {
                                         return (
-                                            <Box >
+                                            < >
                                                 {
                                                     item.link ?
 
@@ -418,13 +526,9 @@ export function Realtime({
                                                             <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
                                                                 <Box className={classes.boxes}>
                                                                     <Box className={classes.imgBox}>
-                                                                        <img src={item.images} alt="Mission Icon" />
+                                                                        <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                                     </Box>
                                                                     <h4>{item.subtitle} </h4>
-                                                                </Box>
-                                                                <Box className={classes.reddiv}>
-                                                                    <Box className={classes.red}>
-                                                                    </Box>
                                                                 </Box>
                                                             </a>
                                                         </Box>
@@ -432,12 +536,12 @@ export function Realtime({
 
                                                         <Box className={classes.boxes}>
                                                             <Box className={classes.imgBox}>
-                                                                <img src={item.images} alt="Mission Icon" />
+                                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                             </Box>
                                                             <h4>{item.subtitle} </h4>
                                                         </Box>
                                                 }
-                                            </Box>
+                                            </>
                                         )
                                     }) : ''
                                 }

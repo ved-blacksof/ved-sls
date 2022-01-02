@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import Fade from 'react-reveal/Fade';
 
+
 const useStyles = makeStyles((theme) => ({
     mainBox: {
         padding: '15% 0%',
@@ -43,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
     },
     subText: {
         width: '30%',
-        font: 'normal normal normal 1rem Access',
+        // font: 'normal normal normal 1rem Access',
         color: 'white',
         textAlign: 'center',
         paddingTop: '1%',
         [theme.breakpoints.down('sm')]: {
             width: '70%',
-            fontSize: '1rem'
+            // fontSize: '1rem'
         }
     },
 
@@ -62,16 +63,13 @@ export function Ubanner({
     mouse
 }) {
     const classes = useStyles()
+
     return (
         <>
 
-            <div className={classes.mainBox} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}
+            <div className={classes.mainBox}
+                style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}
             >
-
-                {/* <div className={classes.backImgBox}>
-                    <img className={classes.backImg} src={Background} alt="background" />
-                </div> */}
-
                 <Fade bottom>
                     <h1 className={classes.mainText}>{maintext}</h1>
                 </Fade>
@@ -81,7 +79,7 @@ export function Ubanner({
                 </Fade>
 
                 <Fade left>
-                    <h2 className={classes.subText}>{subtext}</h2>
+                    <h6 className={classes.subText}>{subtext}</h6>
                 </Fade>
 
             </div>

@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
     btn: {
         width: '60%',
         marginTop: '15%',
-
     }
 }))
 
@@ -57,6 +56,7 @@ export function JoinUs() {
                     />
                     <Buttons
                         className={classes.btn}
+                        href={'https://www.slscorp.com/about-slscorp/careers.html'}
                         title="Join the team"
                         arrowIcon="./images/Icon feather-arrow-right.svg"
                     />
