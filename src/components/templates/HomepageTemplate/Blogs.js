@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,6 +9,7 @@ import { GeneralHeading, MainContainer } from '../../atoms'
 import Fade from 'react-reveal/Fade';
 import clsx from 'clsx';
 import { realtime } from '../../molecules/PortfolioData';
+import Aos from 'aos'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '15% auto',
         [theme.breakpoints.down('sm')]: {
             margin: "20% auto",
-            overflow:'hidden'
+            overflow: 'hidden'
         },
     },
     sliderSec: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
-            
+
         },
     },
     btn: {
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         border: '1px solid #182AC3',
         marginTop: '10%',
-        cursor:'pointer',
+        cursor: 'pointer',
         color: '#182AC3',
         "&:hover": {
             background: '#182AC3',
@@ -86,14 +87,15 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
     },
     cardTxt: {
-        padding: '5%'
+        padding: '5%',
+
     },
     smallBtn: {
-        font: 'normal normal normal .7rem Access',
+        font: 'normal normal bold .7rem Access',
         background: '#182AC3',
         border: 'none',
         color: 'white',
-        padding: '8px 15px',
+        padding: '7px 15px',
         '&:hover': {
             background: 'blue'
         },
@@ -106,7 +108,9 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         marginTop: '3%',
         fontWeight: 'bold',
-        height: '4rem',
+        height: '7rem',
+        lineHeight: '1.2',
+
     },
     cardSubHead: {
         color: 'black',
@@ -124,17 +128,20 @@ const useStyles = makeStyles((theme) => ({
     filters: {
         display: 'flex',
         marginLeft: '70px',
-        "& h6": {
-            color: '#182AC3',
-            fontWeight: 'bold',
-            marginRight: '3%',
-            cursor: 'pointer',
-            "&:hover": {
-                color: '#D9393E'
-            }
-        },
         [theme.breakpoints.down('sm')]: {
             marginLeft: '0%',
+        }
+    },
+    filterBtn: {
+        background: 'transparent',
+        border: 'none',
+        // color: '#182AC3',
+        fontWeight: 'bold',
+        marginRight: '3%',
+        cursor: 'pointer',
+        "&:hover": {
+            color: '#182AC3',
+            opacity: '.8'
 
         }
     },
@@ -204,19 +211,6 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         maxHeight: '100%'
     },
-    // imgBox: {
-    //     height: "100%",
-    //     transition: 'all .3s ease-in-out',
-    //     "& img": {
-    //         transition: 'all 500ms ease-in-out',
-    //         width: '100%',
-    //         maxHeight: '100%',
-    //     },
-    // },
-    // image: {
-    //     width: '100%',
-    //     maxHeight: '100%'
-    // },
     iconBox: {
         margin: '15% 0%',
         width: '100%',
@@ -299,7 +293,30 @@ export function Blogs({
 }) {
     const classes = useStyles()
 
+
+
+
+    const [state, setState] = useState(realtime)
+
+    const [clrActive, setclrActive] = useState("")
+
+    const active = {
+        color: '#D9393E'
+    }
+    const notActive = {
+        color: '#182AC3'
+    }
+    const filterItem = (result) => {
+        const response = realtime.filter((item) => {
+            return item.case === result
+        })
+        setState(response)
+        setclrActive(true)
+    }
+
+
     const sliderRef = useRef();
+
 
     const next = () => {
         sliderRef.current.slickNext();
@@ -307,6 +324,7 @@ export function Blogs({
     const previous = () => {
         sliderRef.current.slickPrev();
     };
+    // console.warn(realtime.filter(BLOGS"))
     {
         var settings = {
             // dots: true,
@@ -317,7 +335,7 @@ export function Blogs({
             slidesToScroll: 1,
             initialSlide: 0,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 3000,
             responsive: [
                 // {
                 //     breakpoint: 1024,
@@ -346,6 +364,9 @@ export function Blogs({
             ]
         };
 
+        Aos.init();
+
+
         return (
             <>
 
@@ -364,12 +385,14 @@ export function Blogs({
                         />
                         {
                             filters ? <Box className={classes.filters}>
-                                <h6>All</h6>
+                                <h6 className={classes.filterBtn} style={state.length == 9 ? active : notActive} onClick={() => { setState(realtime) }}>All</h6>
                                 {/* <h6>NEWS & EVENTS</h6>
-                                <h6>CSR</h6> */}
-                                <h6>BLOGS</h6>
-                                {/* <h6>CASE STUDIES</h6> */}
-                            </Box> : ''
+                                <h6 className={classes.filterBtn}>CSR</h6> */}
+                                <h6 className={classes.filterBtn} style={state.length == 4 ? active : notActive} onClick={() => filterItem('BLOGS')}>BLOGS</h6>
+                                <h6 className={classes.filterBtn} style={state.length == 5 ? active : notActive} onClick={() => filterItem('CASE STUDIES')}>CASE STUDIES</h6>
+                            </Box>
+                                :
+                                ''
                         }
 
                         <Box className={classes.sliderSec}>
@@ -387,39 +410,48 @@ export function Blogs({
                                 {/* CARDS */}
 
                                 {
-                                    realtime.map((item, index) => {
+                                    state.map((item, index) => {
+
+                                        const { images, head, para, read } = item
+
                                         return (
                                             <Box>
-                                                <Fade bottom>
-                                                    <Box className={classes.card} >
-                                                        <Box className={classes.cardImage}>
-                                                            <img className={classes.images} src={item.images} alt="carousel Image" />
-                                                        </Box>
-                                                        <Box className={classes.cardTxt}>
-                                                            <Fade bottom>
-                                                                {
-                                                                    item.case ? <Fade><Button className={classes.smallBtn} >{item.case}</Button> </Fade>: ''
-                                                                }
-                                                                <h4 className={classes.cardHead}>{item.head}</h4>
-                                                                <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                                <h4 className={classes.readMore}>
-                                                                    <a href={`${item.read}`} target="_blank">READ MORE</a>
-                                                                </h4>
-                                                                {
-                                                                    download ?
-                                                                        <Button
-                                                                            className={classes.smallBtn}
-                                                                            href={item.href}
-                                                                            onclick={() => window.open(`${item.href}`, '_blank')}
-                                                                            target="_blank"
-                                                                        >
-                                                                            {download}
-                                                                        </Button> : ''
-                                                                }
-                                                            </Fade>
-                                                        </Box>
+                                                <Box className={classes.card} data-aos="fade-up">
+                                                    <Box className={classes.cardImage}>
+                                                        <img className={classes.images} src={item.images} alt="carousel Image" />
                                                     </Box>
-                                                </Fade>
+                                                    <Box className={classes.cardTxt}>
+                                                        <Fade bottom>
+                                                            {
+                                                                item.case === "BLOGS" ?
+                                                                    <Fade><Button className={classes.smallBtn} >{item.case}</Button> </Fade>
+                                                                    :
+                                                                    <Fade><Button className={classes.smallBtn} style={{ background: '#DE141A', }}>{item.case}</Button> </Fade>
+
+                                                            }
+
+                                                            <h4 className={classes.cardHead}>{item.head}</h4>
+
+                                                            <h6 className={classes.cardSubHead}>{item.para}</h6>
+
+                                                            <h4 className={classes.readMore}>
+                                                                <a href={`${item.read}`} target="_blank">READ MORE</a>
+                                                            </h4>
+
+                                                            {
+                                                                download ?
+                                                                    <Button
+                                                                        className={classes.smallBtn}
+                                                                        href={item.href}
+                                                                        onclick={() => window.open(`${item.href}`, '_blank')}
+                                                                        target="_blank"
+                                                                    >
+                                                                        {download}
+                                                                    </Button> : ''
+                                                            }
+                                                        </Fade>
+                                                    </Box>
+                                                </Box>
                                             </Box>
 
                                         )

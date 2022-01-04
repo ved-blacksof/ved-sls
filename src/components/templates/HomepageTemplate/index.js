@@ -27,8 +27,8 @@ export function HomepageTemplate() {
                 mouse={'./images/scroll.svg'} />
 
             <GridBlue>
-                {/* <Navbar /> */}
-                <Navbar1/>
+                <Navbar />
+                {/* <Navbar1/> */}
 
                 <TechCarousel />
             </GridBlue>

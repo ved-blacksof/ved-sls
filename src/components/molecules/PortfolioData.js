@@ -7,6 +7,16 @@ import eight1 from '../assets/certificates/ISO9001-2008 CERT_2015_2008_1.pdf'
 import eight2 from '../assets/certificates/ISO9001-2008 CERT_2012_2008_2.pdf'
 import eight3 from '../assets/certificates/ISO9001-2008 CERT_2008_3.pdf'
 
+
+//CASE STUDIES realtime
+import case1 from '../assets/blog_n_case/Data acquisition and remote monitoring for Railways.pdf'
+import case2 from '../assets/blog_n_case/_ESP32 based controller for remote reading of power status  (3).pdf'
+import case3 from '../assets/blog_n_case/ESP32 based advanced data acquisition system.pdf'
+import case4 from '../assets/blog_n_case/ESP32 based wireless temperature probe for Industrial use case .pdf'
+import case5 from '../assets/blog_n_case/Remote-monitoring-system_case-study.pdf'
+
+
+
 export const research = [
     {
         images: "./images/research-03.png",
@@ -159,33 +169,76 @@ export const port = [
 
 export const realtime = [
     {
-        // images: './images/homepage-icons/11._Traffic_Solutions.png',
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/homepage-icons/blogs/Second.png',
         case: 'BLOGS',
         head: 'Memory Protection Unit',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
     },
+
+
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/homepage-icons/blogs/case_NLG6700.png',
+        case: 'CASE STUDIES',
+        head: 'Robust & scalable system for data acquisition & remote monitoring for railways.',
+        read: `${case1}`
+    },
+
+
+    {
+        images: './images/homepage-icons/blogs/third.png',
         case: 'BLOGS',
         head: 'Does throughput matter in USB?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/279-does-throughput-matters-in-usb.html'
     },
+
+
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/homepage-icons/blogs/case_NWK2RLY.png',
+        case: 'CASE STUDIES',
+        head: 'Remote Monitoring System for automatic control of pumps in effluent treatment plants.',
+        read: `${case5}`
+    },
+
+
+
+    {
+        images: './images/homepage-icons/blogs/fourth.jpg',
         case: 'BLOGS',
         head: 'What differentiates FPGA from ASIC?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/277-what-differentiates-fpga-from-asic.html'
     },
+
+
     {
-        images: './images/thisisengineering-raeng-sbVu5zitZt0-unsplash.png',
+        images: './images/homepage-icons/blogs/case_NLC1200.png',
+        case: 'CASE STUDIES',
+        head: 'Product for reading & monitoring ON/OFF status of devices operating at different voltages.',
+        read: `${case2}`
+    },
+
+
+    {
+        images: './images/homepage-icons/blogs/fifth.png',
         case: 'BLOGS',
         head: 'What is FPGA and why is it required?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/276-what-is-fpga-and-why-is-it-required.html'
+    },
+
+
+    {
+        images: './images/homepage-icons/blogs/case_NLC1242.png',
+        case: 'CASE STUDIES',
+        head: 'ESP32 based advanced data acquisition system.',
+        read: `${case3}`
+    },
+    {
+        images: './images/homepage-icons/blogs/case_NLC1110.png',
+        case: 'CASE STUDIES',
+        head: 'Device for sensing accurate temperature values from 0℃ to 1000℃.',
+        read: `${case4}`
     },
 
 ]
@@ -197,38 +250,31 @@ export const certification = [
         logo: './images/about/certificatesLogo/Logo2.png',
         case: 'ISO 9001',
         head: 'UKAS Intertek',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+
         href: `${fifteen1}`
     },
     {
         logo: './images/about/certificatesLogo/Logo3.png',
-        case: 'ISO 9001',
-        head: 'Ukas',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        case: '',
+        head: 'UKAS Management Systems 014 ',
+        // para: "(ISO 9001:2015)",
+
         href: `${fifteen2}`
 
     },
     {
         logo: './images/about/certificatesLogo/Logo1.png',
         case: 'ISO 9001',
-        head: 'QEC',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        href: `${fifteen3}`
-
-    },
-    {
-        logo: './images/about/certificatesLogo/Logo1.png',
-        case: 'ISO 9001',
-        head: 'QEC1',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        head: 'QEC Environmental Management System ',
+        // para: "(ISO 14001:2015)",
         href: `${fifteen3}`
 
     },
     {
         logo: './images/about/certificatesLogo/Logo6.png',
-        case: 'ISO 9001',
-        head: 'ukas dark',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        case: 'ISO 9001:2008',
+        head: 'UKAS Management Systems 014',
+        // para: " (ISO 9001:2008)",
         href: `${eight1}`
 
     },
@@ -236,7 +282,7 @@ export const certification = [
         logo: './images/about/certificatesLogo/Logo5.png',
         case: 'ISO 9001',
         head: 'Heading5',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+
         href: `${eight2}`
 
     },
@@ -244,10 +290,18 @@ export const certification = [
         logo: './images/about/certificatesLogo/Logo4.png',
         case: 'ISO 9001',
         head: 'Heading6',
-        // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+
         href: `${eight3}`
 
     }
+    // {
+    //     logo: './images/about/certificatesLogo/Logo1.png',
+    //     case: 'ISO 9001',
+    //     head: 'QEC1',
+    //   
+    //     href: `${fifteen3}`
+
+    // },
 
 ]
 
@@ -271,6 +325,39 @@ export const csrcarousel = [
     {
         images: './images/about/csr/csr4.jpeg',
         para: "The entire SLS team organizes and participates in tree plantation drives across the year. Under this initiative, we have planted and are maintaining more than 500 trees throughout our campus in Anand.",
+    },
+
+]
+export const expandingData = [
+    {
+        images: './images/homepage-icons/expanding/FPGA1.png',
+        head: "IP CORE/FPGA/SoC Design Services",
+        para: "Ready-to-deploy FPGA solutions designed to meet dynamic market needs & keep up with the changing status quo.",
+    },
+    {
+        images: './images/homepage-icons/expanding/PCB.png',
+        head: "High Speed PCB Design Services",
+        para: ' Use case-specific high-speed, multi-layered, multi-CPU PCB Board Designs to help companies cut down the deployment time.',
+    },
+    {
+        images: './images/homepage-icons/expanding/Software-Development.png',
+        head: "Software Development",
+        para: ' Industry leaders in turnkey software solutions. Expertise in Embedded, Android, iOS, Web Applications, and windows-based software development.',
+    },
+    {
+        images: './images/homepage-icons/expanding/Electronics-manufacturing.png',
+        head: "Electronics Manufacturing Services (EMS)",
+        para: " Turnkey EMS provider helping businesses with PCB Assembly, Prototyping, Small & Medium Volume Production.",
+    },
+    {
+        images: './images/homepage-icons/expanding/Testing-calibration.png',
+        head: "Testing and Calibration",
+        para: " Easing quality checks, compliances, and certifications, we help companies build and deploy quality-tested products.",
+    },
+    {
+        images: './images/homepage-icons/expanding/ML-AI.png',
+        head: "Machine Learning & Artificial Intelligence",
+        para: " Catering to the healthcare sector through new-age intelligence, offering innovative solutions to ease diagnosis.",
     },
 
 ]
@@ -369,22 +456,22 @@ export const middleware = [
     {
         images: './images/Nebulae_Website Images-05.png',
         subtitle: 'IoT Middleware',
-        link:'https://www.nebulae.io/Home/Middleware'
+        link: 'https://www.nebulae.io/Home/Middleware'
     },
     {
         images: './images/Nebulae_Website Images-06.png',
         subtitle: 'LoRaWAN Server',
-        link:'https://www.nebulae.io/Home/LoRaWAN'
+        link: 'https://www.nebulae.io/Home/LoRaWAN'
     },
     {
         images: './images/Nebulae_Website Images-07.png',
         subtitle: 'FOTA Services',
-        link:'https://www.nebulae.io/Home/FOTA'
+        link: 'https://www.nebulae.io/Home/FOTA'
     },
     {
         images: './images/Nebulae_Website Images-08.png',
         subtitle: 'Analytics',
-        link:'https://www.nebulae.io/Home/Analytics'
+        link: 'https://www.nebulae.io/Home/Analytics'
     },
 ]
 
@@ -672,27 +759,27 @@ export const solarhardware1 = [
         images: './images/Micro Inverter 2 (1).png',
         subtitle: 'MSI1500',
         // para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
-        // read: 'read more'
+        link: 'https://www.getsunsights.com/micro-inverters/'
     },
     {
         images: './images/DKS_9053e.png',
         subtitle: 'MS1700',
         // para: 'The MS1700 is MNRE-certified smart micro inverter solutions that comes with 2 MPPTs. The solution provides various smart features including module-wise remote monitoring and controlling. This helps owners leverage the best output out of their solar inverters right and benefit from high energy generation as compared to regular solar panel systems.',
-        // read: 'read more'
+        link: 'https://www.getsunsights.com/micro-inverters/'
 
     },
     {
         images: './images/1.0-solar.png',
         subtitle: 'Universal Stick Logger',
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
-        // read: 'read more'
+        link: 'https://www.getsunsights.com/universal-inverter-stick-logger/'
     },
     {
         // images: './images/1.0-solar.png',
         images: './images/solar/hproducts/SunsightDataLogger.png',
         subtitle: 'Data Logger',
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
-        // read: 'read more'
+        link: 'https://www.getsunsights.com/data-logger/'
     },
 ]
 
@@ -1072,39 +1159,48 @@ export const industries = [
 export const homeproducts = [
     {
         images: './images/bulb2.png',
-        subtitle: 'Smart Bulb'
+        subtitle: 'Smart Bulb',
+        link: 'https://www.konnsys.com/Home/SmartBulb'
     },
     {
         images: './images/kitpro_smartsolution.png',
-        subtitle: 'Hub'
+        subtitle: 'Hub',
+        link: 'https://www.konnsys.com/Home/TheHub'
     },
     {
         images: './images/gas.png',
-        subtitle: 'Motion Sensor'
+        subtitle: 'Motion Sensor',
+        link: 'https://www.konnsys.com/Home/TheHub#motion_sensor'
     },
     {
         images: './images/motion_sensor.png',
-        subtitle: 'Humidity Sensor'
+        subtitle: 'Humidity Sensor',
+        link: 'https://www.konnsys.com/Home/TheHub#temp_humidity_sensor'
     },
     {
         images: './images/temp-humidity.png',
-        subtitle: 'Gas Detector'
+        subtitle: 'Gas Detector',
+        link: 'https://www.konnsys.com/Home/GasDetector'
     },
     {
         images: './images/Multi-function.png',
-        subtitle: 'Multi-function Button'
+        subtitle: 'Multi-function Button',
+        link: 'https://www.konnsys.com/Home/TheHub#multi_function_button'
     },
     {
         images: './images/smart-cabinate-lock.png',
-        subtitle: 'Smart Cabinet Lock'
+        subtitle: 'Smart Cabinet Lock',
+        link: 'https://www.konnsys.com/Home/CabinetLock'
     },
     {
         images: './images/smoke.png',
-        subtitle: 'Smoke Detector'
+        subtitle: 'Smoke Detector',
+        link: 'https://www.konnsys.com/Home/SmokeDetector'
     },
     {
         images: './images/three_gang.png',
-        subtitle: 'Gang Switch'
+        subtitle: 'Gang Switch',
+        link: 'https://www.konnsys.com/Home/GangWallSwitch'
     },
 ]
 

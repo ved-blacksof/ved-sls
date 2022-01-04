@@ -48,3 +48,152 @@ local host-
 site Key : 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
 
 secret key : 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
+
+
+
+
+
+
+
+
+
+
+import React, { useEffect, useState } from 'react'
+import { Box, makeStyles, Grid } from '@material-ui/core'
+//Aos Effect
+import aos from 'aos'
+import 'aos/dist/aos.css'
+//Data
+import { portfolio } from '../../../../Data';
+const useStyles = makeStyles((theme) => ({
+    main: {
+        width: '80%',
+        margin: '10% auto',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+            marginTop: '10%',
+        }
+    },
+    buttonBox: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }
+    },
+    button: {
+        width: '14rem',
+        padding: '1.5% 0%',
+        borderRadius: '6px',
+        border: 'none',
+        color: '#fff',
+        font: 'normal normal bold 1.5rem Montserrat',
+        cursor: 'pointer',
+        marginRight: '2%',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '1rem',
+            marginBottom: '5%',
+            width: '5rem',
+            // padding: '0% 1%',
+        }
+    },
+    grid: {
+        marginTop: '5%',
+        [theme.breakpoints.down('sm')]: {
+            margin: '0% auto',
+        }
+    },
+    allBox: {
+        border: '1px solid black',
+        boxShadow: '0px 3px 6px #00000029',
+        height: '230px',
+        borderRadius: '10px',
+        padding: '5%',
+        [theme.breakpoints.down('sm')]: {
+            height: '100%',
+        }
+    },
+    companyName: {
+        font: ' normal normal normal 1rem Montserrat'
+    },
+    set: {
+        color: '#fff',
+        font: ' normal normal normal 1rem Montserrat',
+        padding: '2px 15px',
+        backgroundColor: '#0CB14B',
+        borderRadius: '5px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '1px 5px',
+            fontSize: '.8rem'
+        }
+    },
+    Sector: {
+        font: 'normal normal 300 1rem Montserrat'
+    },
+    keyBox: {
+        marginTop: '12%'
+    },
+}))
+export const ThreeButton = () => {
+    const classes = useStyles();
+    useEffect(() => {
+        aos.init({
+            easing: 'ease-out-back',
+            duration: 1200,
+        });
+    }, [])
+    const [state, setState] = useState(portfolio)
+    const backgroundColor = {
+        border: '1px solid black',
+        backgroundColor: '#fff',
+        color: '#000'
+    }
+    const backgroundColor1 = {
+        border: 'none',
+        backgroundColor: '#168ACB',
+        color: '#fff'
+    }
+    const filterItem = (result) => {
+        const response = portfolio.filter((item) => {
+            return item.stage === result
+        })
+        setState(response)
+    }
+    return (
+        <Box className={classes.main}>
+            <Box className={classes.buttonBox}>
+                <button style={state.length == 19 ? backgroundColor1 : backgroundColor} className={classes.button} data-aos="fade-up" onClick={() => setState(portfolio)}>All</button>
+                <button style={state.length == 10 ? backgroundColor1 : backgroundColor} className={classes.button} data-aos="fade-up" onClick={() => filterItem('Early')}>Early</button>
+                <button style={state.length == 9 ? backgroundColor1 : backgroundColor} className={classes.button} data-aos="fade-up" onClick={() => filterItem('Growth')}>Growth</button>
+            </Box>
+            <Grid container xs={12} spacing={2} className={classes.grid}>
+                {
+                    state.map((item, index) => {
+                        const { logo, companyName, Sector, stage, KeyInvestors } = item
+                        return (
+                            <Grid item xs={12} sm={6} md={4} data-aos="fade-up" key={index}>
+                                <Box className={classes.allBox}>
+                                    <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <Box>
+                                            <img className={classes.image} src={logo} alt={companyName} />
+                                            <h1 className={classes.companyName}>{companyName}</h1>
+                                            <h1 className={classes.Sector}>{Sector}</h1>
+                                        </Box>
+                                        <Box>
+                                            <h1 className={classes.set}>{stage}</h1>
+                                        </Box>
+                                    </Box>
+                                    <Box className={classes.keyBox}>
+                                        <h1 className={classes.companyName}>Key Investors</h1>
+                                        <h1 className={classes.Sector}>{KeyInvestors}</h1>
+                                    </Box>
+                                </Box>
+                            </Grid>
+                        )
+                    })
+                }
+            </Grid>
+        </Box>
+    )
+}

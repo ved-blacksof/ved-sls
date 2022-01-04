@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
             overflow: 'hidden'
         },
     },
-    
+
     sliderSec: {
         width: '100%',
         display: 'flex',
@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     box3: {
-        // display: "none",
         opacity: '0',
         [theme.breakpoints.down('sm')]: {
             display: 'flex',
             justifyContent: 'flex-end',
             alignItems: 'flex-end',
             flexDirection: 'column',
+            opacity: '1'
         },
     },
     btn: {
@@ -351,10 +351,10 @@ export function Realtime({
             slidesToScroll: 1,
             initialSlide: 0,
             autoplay: true,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 3000,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 960,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
@@ -385,7 +385,7 @@ export function Realtime({
 
                 <MainContainer>
 
-                   
+
 
                     {/* only slider */}
                     <Container fixed className={classes.realText}>
@@ -521,7 +521,6 @@ export function Realtime({
                                             < >
                                                 {
                                                     item.link ?
-
                                                         <Box>
                                                             <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
                                                                 <Box className={classes.boxes}>

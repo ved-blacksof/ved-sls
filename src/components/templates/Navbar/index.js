@@ -8,6 +8,7 @@ import Fade from 'react-reveal/Fade';
 import { keyframes } from 'styled-components';
 import { animation } from 'react-reveal/globals';
 import { useStyles } from './Styles'
+import { MobileMenu } from './MobileMenu';
 
 
 
@@ -163,11 +164,15 @@ export function Navbar({
 
                     </Box>
 
-
+                    <Fade>
+                        <MenuOutlined
+                            className={clsx(classes.menuIcon, classes[navlinkref.current])}
+                            onClick={() => mobileMenu === false ? setMobileMenu(true) : setMobileMenu(false)} />
+                    </Fade>
 
                     {/* <Fade bottom> */}
                     <ul className={classes.navUL}>
-                        <li className={classes.navLI} onClick={()=> history.push("/home")}>
+                        <li className={classes.navLI} onClick={() => history.push("/home")}>
                             <h4 >
                                 <NavLink
                                     className={clsx(classes[navlinkref.current])}
@@ -177,7 +182,7 @@ export function Navbar({
                         </li>
 
 
-                        <li className={classes.navLI} onClick={()=> history.push("/about")}>
+                        <li className={classes.navLI} onClick={() => history.push("/about")}>
                             <h4 >
                                 <NavLink
                                     className={clsx(classes[navlinkref.current])}
@@ -347,7 +352,7 @@ export function Navbar({
                     </ul>
                     {/* </Fade> */}
                 </Toolbar >
-                {/* <div data-aos="fade-down">
+                <div data-aos="fade-down">
                     {
                         mobileMenu ?
                             <Box className={classes.menu} >
@@ -355,7 +360,7 @@ export function Navbar({
                             </Box>
                             : ''
                     }
-                </div> */}
+                </div>
             </AppBar >
         </Box >
     )
