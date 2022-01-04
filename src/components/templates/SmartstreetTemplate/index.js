@@ -27,7 +27,7 @@ export function SmartstreetTemplate() {
                     // icons="icons"
                     mapIconPosition="mapIconPosition"
                     data={smartstreet}
-                    style={{ height: 'fit-content', marginBottom:'20%' }}
+                    style={{ height: 'fit-content', marginBottom: '20%' }}
                 />
             </GridBlue>
 
@@ -35,9 +35,7 @@ export function SmartstreetTemplate() {
                 mainheading="Hardware Offering"
                 imageBG="./images/smartstreet/Individual-street-light-controller.png"
                 heading="Individual Street Light Controller"
-                subtitle="Our Individual Street Light Controller helps transform regular street lights
-                 into smart lamps and offers real-time monitoring and control of individual 
-                street lights in your area.The offering is available in both Retrofit and NEMA standard."
+                subtitle="Our Individual Street Light Controller helps transform regular street lights into smart lamps and offers real-time monitoring and control of individual street lights in your area."
                 redline="redline"
             />
 
@@ -60,12 +58,11 @@ export function SmartstreetTemplate() {
                 redline="redline"
 
             /> */}
-             <SoftOfferingsBlue
-                 maintitle="Software Offering"
-                 title="Lighting Management Software (LMS)"
-                 subtitle="LMS is our cloud-based dashboard that offers total control over your lighting infrastructure. It provides remote access to the real-time status of lamps, generates energy consumption reports, binds devices with sensors, and helps with Astro-clock and mixed-mode scheduling."
-                
-                 images='./images/dashboards/Via-lights.png'
+            <SoftOfferingsBlue
+                maintitle="Software Offering"
+                title="Lighting Management Software (LMS)"
+                subtitle="LMS is our cloud-based dashboard that offers total control over your lighting infrastructure. It provides remote access to the real-time status of lamps, generates energy consumption reports, binds devices with sensors, and helps with Astro-clock and mixed-mode scheduling."
+                images='./images/dashboards/Via-lights.png'
             />
 
             <MainContainer>

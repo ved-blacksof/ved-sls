@@ -69,7 +69,7 @@ export function AboutusTemplate() {
             <Realtime
                 data={certification}
                 title="Certifications and Policies"
-                download="download"
+                // download="download"
             // grpicons={"./images/Screen Shot 2021-05-29 at 2.50.04 AM.jpg"}
             // subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
             // cases="cases"

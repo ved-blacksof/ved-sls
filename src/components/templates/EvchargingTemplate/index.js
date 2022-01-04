@@ -53,6 +53,7 @@ export function EvchargingTemplate() {
 
             <MainContainer>
                 <Container fixed className={classes.realText1}>
+                    <h2 style={{color:'black'}}> VerdeMobility EV Charging Ecosystem </h2>
                     <Box className={classes.eco}>
                         <img src="./images/evcharger/ecosystem.png" />
                     </Box>

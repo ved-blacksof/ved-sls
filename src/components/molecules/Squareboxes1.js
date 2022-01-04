@@ -55,14 +55,14 @@ const useStyles = makeStyles((theme) => ({
         transform: 'width .6s ease-in-out',  //for red line
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
-            minWidth: '30vw',
-            height: '30vw',
+            width: '28vw',
+            height: '28vw',
             marginBottom: '8%',
 
         },
         [theme.breakpoints.down('xs')]: {
-            width: '37vw',
-            height: '37vw',
+            width: '80vw',
+            height:'80vw'
         },
         "&::before": {
             content: "''",

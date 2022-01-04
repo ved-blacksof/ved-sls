@@ -49,15 +49,34 @@ const useStyles = makeStyles((theme) => ({
         position: 'sticky',
         top: '80px',
         zIndex: '2',
-        background: 'white',
-        transition: 'all 0.5s ease-in-out',
+        background: 'white',       
+        [theme.breakpoints.down('sm')]: {
+            top: '6%',
+            // height:'50px'
+        }
+    },
+    "@keyframes translates": {
+        "0%": {
+            transform: "translateY(-50px)"
+        },
+        "100%": {
+            transform: "translateY(6%)"
+        }
     },
     tabs: {
         paddingTop: '10px',
+        transition: 'all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)',
+        animation: `$translates 800ms linear`,
+        animationIterationCount: 1,
+        animationDuration: '800ms',
         "& > span": {
             maxWidth: 40,
             width: "100%",
             backgroundColor: "white"
+        },
+        [theme.breakpoints.down('sm')]: {
+            // top: '6%',
+            // height:'50px'
         }
     },
     tab: {
@@ -118,7 +137,7 @@ export function MeterTabs() {
                             imageBG="./images/smartmeter/RF-Tower.png"
                             // imageBG="./images/smartmeter/Smart_Metering_Profile.png"
                             heading="RF Canopy"
-                            subtitle="Our Smart Metering Infrastructure is powered through RF Technology that uses lower bandwidth radio frequencies and Network Interface Card to offer robust network capacity to all the connected devices."
+                            subtitle="Our Smart Metering Infrastructure is powered through RF Technology and Network Interface Card that offers robust network capacity to all the connected devices. Our products use lower bandwidth radio frequencies that are less congested and offer reliable connectivity across the Smart Metering Infrastructure."
                             list="list"
                             firstli="Wi-Sun Protocol"
                             secli="LoRaWAN Network"

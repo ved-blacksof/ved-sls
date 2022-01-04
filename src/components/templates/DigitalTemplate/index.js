@@ -35,17 +35,14 @@ export function DigitalTemplate() {
                 mainheading="Our Offerings"
                 imageBG="./images/media_player_top.png"
                 heading="DigitalSyne Media Player"
-                subtitle="We cater both Semi-Automated and Fully-Automated assembly of surface mount
-                 components on bare circuit boards. To uplift customer experience, we support both framed 
-                 frameless stencil options for the application of solder paste on PCB boards."
+                subtitle="Smartify your non-androids screens and convert them into full-featured and interactive smart advertisement displays."
                 redline="redline"
             />
 
             <QualityReverse
                 imageBG="./images/Group 82859.jpg"
                 heading="DigitalSyne Android Player"
-                subtitle="Ace your advertisement game by converting your Android Screens
-                 into intelligent displays and stream data like never before."
+                subtitle="Ace your advertisement game by converting your Android Screens into intelligent displays and stream data like never before."
                 redline="redline"
 
             />
@@ -53,9 +50,7 @@ export function DigitalTemplate() {
             <SoftOfferingsBlue
                 maintitle="Software Offering"
                 title="Content Management Director (CMD)"
-                subtitle="Manage all your digital ad displays through this multi-featured and easy-to-use CMD. 
-                The CMD helps you script, monitor, diagnose, and control each andevery intricacy of all your displays."
-                
+                subtitle="Manage all your digital ads display through this multi-featured and easy-to-use CMD. The CMD helps you script, monitor, diagnose, and control each and every intricacy of all your displays."
                 images='./images/dashboards/Dynamic-Signage.png'
             />
 

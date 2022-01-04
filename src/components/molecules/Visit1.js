@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         [theme.breakpoints.down('sm')]: {
             width: '90%',
-            // margin: "10% auto",
-            padding:'16% 0%',
+            margin: "0% auto",
+            paddingTop:'8%',
+            paddingBottom:'14%'
         }
     },
     textLinkBox: {
@@ -53,7 +54,10 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%',
         },
         [theme.breakpoints.down('sm')]: {
-            width: '6rem'
+            width: '7rem'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '7rem'
         },
     },
     btns: {

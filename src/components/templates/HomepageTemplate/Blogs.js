@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
             height: 'fit-content',
         },
         [theme.breakpoints.down('xs')]: {
-            height: '40vw',
+            height: '50vw',
         },
     },
     images: {
@@ -100,7 +100,9 @@ const useStyles = makeStyles((theme) => ({
             background: 'blue'
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '.6rem'
+            fontSize: '.6rem',
+            padding: '5px 15px',
+
         }
     },
     cardHead: {
@@ -108,9 +110,11 @@ const useStyles = makeStyles((theme) => ({
         color: 'black',
         marginTop: '3%',
         fontWeight: 'bold',
-        height: '7rem',
+        height: '6rem',
         lineHeight: '1.2',
-
+        [theme.breakpoints.down('sm')]: {
+            height: '4rem',
+        }
     },
     cardSubHead: {
         color: 'black',

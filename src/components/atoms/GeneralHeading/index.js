@@ -12,9 +12,9 @@ const useStyles = makeStyles((theme) => ({
     mainHead: {
         color: 'black',
         margin: '8% 0%',
-        fontSize: '4rem',
+        // fontSize: '4rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '2rem',
+            // fontSize: '2rem',
         }
     },
     head: {

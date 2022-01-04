@@ -24,8 +24,11 @@ export function HighspeedTemplate() {
 
             <Quality
                 mainheading="Offerings"
-                heading="eUSB 3.1 FMC"
-                subtitle="eUSB 3.1 FMC board is one-stop solution for all USB requirements ranging from USB 3.1 to USB 2.0"
+                // heading="<span style='font-family: 'Access !important'; color:'red'>e</span> USB 3.1 FMC"
+                
+                e="e"
+                heading="USB 3.1 FMC"
+                subtitle="eUSB 3.1 Gen 2 is designed using the Intel FPGA built-in 10 Gbps transceiver. It is a one-stop solution for all USB requirements ranging from USB 3.1 to USB 2.0"
                 imageBG="./images/fmceusb316.png"
                 redline
             />
@@ -47,7 +50,8 @@ export function HighspeedTemplate() {
 
             <QualityReverse
                 heading="Customized Boards"
-                subtitle="We offer a range of customized solutions to our clients to meet their ever-changing innovation needs. Our team of experts understand your product requirement and vision to cater custom solutions that meet functionality goals and project cost."
+                // subtitle="We offer a range of customized solutions to our clients to meet their ever-changing innovation needs. Our team of experts understand your product requirement and vision to cater custom solutions that meet functionality goals and project cost."
+                subtitle="Linux Yocto OSGi-based Industrial IoT board with built-in web interface and edge computing capability having a multi-network connection - Dual ethernet/Wi-Fi/GSM, Rs. 485 (Modbus) AIO & DIO features."
                 imageBG="./images/highspeed/Customized Boards-01.png"
                 redline
             />
@@ -61,7 +65,7 @@ export function HighspeedTemplate() {
 
             <QualityReverse
                 heading="HSMC Boards"
-                subtitle="High-Speed Mezzanine Cards up to USB 3.1 Gen1 (5Gbps) Communication Channel"
+                subtitle="High-Speed Mezzanine Cards up USB3.2 Gen2 10Gbps Communication Channel as well as 400MSPS ADC-DAC boards"
                 imageBG="./images/eUSB_3.0_HSMC_52ea36a619a99.png"
                 redline
 

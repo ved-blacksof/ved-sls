@@ -11,12 +11,12 @@ const useStyles = makeStyles((theme) => ({
         padding: '24% 0%',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
-            padding: '5% 0%',
+            paddingTop: '5%',
         }
     },
     mainBox: {
         width: '100%',
-        margin:'0 auto',
+        margin:'0% auto',
         display: 'flex',
         justifyContent: 'left',
         flexWrap: 'wrap',
@@ -26,8 +26,6 @@ const useStyles = makeStyles((theme) => ({
             position: 'static',
             flexWrap: 'wrap',
             justifyContent: 'space-around',
-
-
         }
     },
     boxes: {
@@ -37,8 +35,12 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             width: '45%',
             marginRight: '2%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            marginRight: '2%',
+        },
 
-        }
     },
     imgBox: {
         // height: '230px',

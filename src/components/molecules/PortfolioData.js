@@ -249,49 +249,48 @@ export const certification = [
     {
         logo: './images/about/certificatesLogo/Logo2.png',
         case: 'ISO 9001',
-        head: 'UKAS Intertek',
-
-        href: `${fifteen1}`
+        head: 'UKAS Intertek',  
+        href: `${fifteen1}`,
+        read: `${fifteen1}`, //done
     },
     {
         logo: './images/about/certificatesLogo/Logo3.png',
-        case: '',
-        head: 'UKAS Management Systems 014 ',
-        // para: "(ISO 9001:2015)",
-
-        href: `${fifteen2}`
+        case: 'ISO 9001:2015', //done
+        head: 'UKAS Management Systems 014 ', //done
+        href: `${fifteen2}`,
+        read: `${fifteen2}`,   //done
 
     },
     {
         logo: './images/about/certificatesLogo/Logo1.png',
-        case: 'ISO 9001',
-        head: 'QEC Environmental Management System ',
-        // para: "(ISO 14001:2015)",
-        href: `${fifteen3}`
+        case: 'ISO 14001:2015',  //done
+        head: 'QEC Environmental Management System ',   //done
+        href: `${fifteen3}`,
+        read: `${fifteen3}`,  //done
 
     },
     {
         logo: './images/about/certificatesLogo/Logo6.png',
-        case: 'ISO 9001:2008',
-        head: 'UKAS Management Systems 014',
-        // para: " (ISO 9001:2008)",
-        href: `${eight1}`
+        case: 'ISO 9001:2008', //done
+        head: 'UKAS Management Systems 014',   //done
+        href: `${eight1}`,
+        read: `${eight1}`,   //done
 
     },
     {
         logo: './images/about/certificatesLogo/Logo5.png',
-        case: 'ISO 9001',
+        case: 'ISO 9001',  
         head: 'Heading5',
-
-        href: `${eight2}`
+        href: `${eight2}`,
+        read: `${eight2}`,   //done
 
     },
     {
         logo: './images/about/certificatesLogo/Logo4.png',
         case: 'ISO 9001',
         head: 'Heading6',
-
-        href: `${eight3}`
+        href: `${eight3}`,
+        read: `${eight3}`,   //done
 
     }
     // {
@@ -299,7 +298,8 @@ export const certification = [
     //     case: 'ISO 9001',
     //     head: 'QEC1',
     //   
-    //     href: `${fifteen3}`
+    //     href: `${fifteen3}`,
+    //     read: `${fifteen3}`,
 
     // },
 
@@ -408,7 +408,7 @@ export const evchargers = [
     },
     {
         images: './images/evcharger/evchargers/C7.png',
-        subtitle: 'Typev ll AC Single Gun Charger',
+        subtitle: 'Type ll AC Single Gun Charger',
     },
 ]
 
@@ -1043,7 +1043,7 @@ export const ipcoreproducts = [
     {
         images: './images/ipcore/Products/60._Communication Cores.svg',
         uli: 'Communication Cores',
-        firstli: 'Embedded USB3.1 Gen2 Device Controller',
+        firstli: 'Embedded USB3.1 Gen 2 Device (10Gbps) Controller',
         secli: 'Embedded USB3.1 Gen 1 Device Controller',
         thirdli: 'USB 2.0 Device/HUB/Host/OTG Controller',
         fourthli: 'USB 1.1 Device/Host Controller',
@@ -1250,7 +1250,7 @@ export const softdevservices = [
 export const homeapp = [
     {
         images: './images/homeautomation/living-room.png',
-        text: 'Home'
+        text: 'Homes'
     },
     {
         images: './images/homeautomation/Industria.png',
@@ -1262,7 +1262,7 @@ export const homeapp = [
     },
     {
         images: './images/homeautomation/Warehouse.png',
-        text: 'Warehouse'
+        text: 'Warehouses'
     }
 ]
 

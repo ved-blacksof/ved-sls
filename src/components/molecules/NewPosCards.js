@@ -10,16 +10,24 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '15%',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
-            marginTop: '40%',
-
+            marginTop: '0%',
         }
     },
     mainBox: {
         width: '100%',
-        marginTop: '20%',
+        marginTop: '15%',
         marginBottom: '10%',
         display: 'flex',
         justifyContent: 'space-between',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            marginTop: '5%',
+            marginBottom: '5%',
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginTop: '0%',
+            marginBottom: '5%'
+        }
     },
     inBox: {
         background: 'white',
@@ -29,6 +37,19 @@ const useStyles = makeStyles((theme) => ({
         padding: '3%',
         boxShadow: '0px 0px 20px #00000029',
         borderRadius: '5px',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            paddingTop: '55%',
+            marginTop: '15%',
+            padding: '7%',
+
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            paddingTop: '55%',
+            marginTop: '25%',
+
+        }
     },
     imageBox: {
         width: '86%',
@@ -71,7 +92,7 @@ export function NewPosCards({
             <MainContainer>
                 <Container fixed>
 
-                   <Fade top> <h2 className={classes.mainhead}>Offerings</h2></Fade>
+                    <Fade top> <h2 className={classes.mainhead}>Offerings</h2></Fade>
                     <Box className={classes.mainBox}>
                         {
                             data.map((item, index) => {

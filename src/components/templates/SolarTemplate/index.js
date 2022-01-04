@@ -24,7 +24,7 @@ export function SolarTemplate() {
                     we have capacitated these solutions with intelligent features that increase usability and make the switch to renewable energy easier."
                     mapIconPosition="mapIconPosition"
                     data={solar}
-                    style={{ height: 'fit-content', marginBottom: '20%' }}
+                    style={{ height: 'fit-content', marginBottom: '12%' }}
                 />
             </GridBlue>
 

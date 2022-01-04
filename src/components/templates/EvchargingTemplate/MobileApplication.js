@@ -68,7 +68,7 @@ export function MobileApplication() {
             <Container fixed className={classes.mainContainer}>
                 <Box className={classes.leftBox}>
                     <Box className={classes.mobileBox}>
-                        <Fade right><img className={classes.mobileImages} src={'./images/Group 82858.png'} /></Fade>
+                        <Fade bottom><img className={classes.mobileImages} src={'./images/Group 82858.png'} /></Fade>
                     </Box>
                 </Box>
                 <Box className={classes.rgtBox}>

@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     },
     paths: {
         marginBottom: '5%',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: '10%',
+        },
     },
     redLine: {
         margin: '1% 0%',

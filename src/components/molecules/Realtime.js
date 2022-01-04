@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     card: {
         boxShadow: '0px 0px 20px #0000001F',
         margin: "1% 1rem",
-        borderBottom: '3px solid #354B9C',
+        borderBottom: '3px solid #182AC3',
         background: 'white',
         [theme.breakpoints.down('sm')]: {
             width: '80%'
@@ -130,7 +130,11 @@ const useStyles = makeStyles((theme) => ({
         // font: 'normal normal normal 1.1rem Access',
         color: 'black',
         marginTop: '3%',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        height:'3.5rem',
+        [theme.breakpoints.down('sm')]: {
+            height:'2rem',
+        }
 
     },
     cardSubHead: {
@@ -138,12 +142,11 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3%'
     },
     readMore: {
-        // font: 'normal normal normal 1.2rem BebasNeue',
+        // font: 'normal normal normal 1.8rem BebasNeue',
         marginTop: '3%',
         "& a": {
-            fontFamily: 'BebasNeue',
             color: '#182AC3',
-
+            // textDecoration:'none'
         }
     },
     filters: {
@@ -185,7 +188,8 @@ const useStyles = makeStyles((theme) => ({
             height: '12rem'
         },
         '& h4': {
-            color: 'black'
+            color: 'black',
+            lineHeight:'1.2'
         },
         '& h6': {
             color: 'black'
@@ -487,13 +491,13 @@ export function Realtime({
                                                     <Box className={classes.cardTxt}>
                                                         <Fade bottom>
                                                             {
-                                                                cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
+                                                                item.case ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
                                                             }
                                                             <h4 className={classes.cardHead}>{item.head}</h4>
                                                             <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                            <h4 className={classes.readMore}>
-                                                                <a href="/" >{item.read}</a>
-                                                            </h4>
+                                                            <p className={classes.readMore}>
+                                                                <a href={`${item.read}`}  target="_blank">DOWNLOAD</a>
+                                                            </p>
                                                             {
                                                                 download ?
                                                                     <Button
