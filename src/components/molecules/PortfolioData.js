@@ -231,15 +231,23 @@ export const realtime = [
     {
         images: './images/homepage-icons/blogs/case_NLC1242.png',
         case: 'CASE STUDIES',
-        head: 'ESP32 based advanced data acquisition system.',
+        head: 'An industry standard data acquisition system for wireless automation.',
         read: `${case3}`
     },
+
+    // {
+    //     images: './images/homepage-icons/blogs/Second.png',
+    //     case: 'BLOGS',
+    //     head: 'Memory Protection Unit',
+    //     read: 'https://www.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
+    // },
     {
         images: './images/homepage-icons/blogs/case_NLC1110.png',
         case: 'CASE STUDIES',
         head: 'Device for sensing accurate temperature values from 0℃ to 1000℃.',
         read: `${case4}`
     },
+
 
 ]
 
@@ -536,7 +544,7 @@ export const loc = [
     },
     {
         images: './images/cloud/loc/20._APIs for third party Integrations.svg',
-        text: 'API’s for third party Integrations'
+        text: 'APIs for third party Integration'
     },
 ]
 

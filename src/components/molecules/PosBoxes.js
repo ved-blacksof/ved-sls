@@ -8,10 +8,10 @@ import Fade from 'react-reveal'
 const useStyles = makeStyles((theme) => ({
     containers: {
         position: 'relative',
-        padding: '24% 0%',
+        padding: '21% 0%',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
-            paddingTop: '5%',
+            paddingTop: '8%',
         }
     },
     mainBox: {

@@ -1,4 +1,5 @@
 import { makeStyles, Box } from '@material-ui/core'
+import clsx from 'clsx';
 import React from 'react'
 import Bounce from 'react-reveal/Bounce';
 
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '30px 0px',
         border: '1px solid #DCDCDC',
         // border:'1px solid red',
-        position:'relative',
+        position: 'relative',
         cursor: 'pointer',
         boxShadow: '0px 3px 10px #00000017',
         transition: 'all 300ms ease-in-out',
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('xs')]: {
             width: '14rem',
-            height: '14rem',
+            height: 'fit-content',
             marginTop: '15px'
         },
         '& h4': {
@@ -71,11 +72,19 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     uls: {
-
+        "& h6": {
+            color: 'black'
+        },
     },
     lios: {
-        listStyleType: 'none',
-        margin: '2px 2px'
+        width: '100%',
+        marginLeft:'15px',
+        position:'relative',
+        "&::before":{
+            content:"'-'",
+            position:'absolute',
+            left:'-5%',
+        }
     }
 }))
 
@@ -95,15 +104,16 @@ export function ServiceBox({
                 <Box className={classes.imgBox}>
                     <Bounce bottom><img src={imgs} /></Bounce>
                 </Box>
-                <ul className={classes.uls}> <Bounce bottom><h4 style={{ color: '#182AC3', display: 'inline' }}>{title}</h4></Bounce></ul>
-                <li className={classes.lios}>- <Bounce bottom><h6 style={{ color: 'black', display: 'inline' }}> {li1}</h6></Bounce></li>
-                <li className={classes.lios}>-  <Bounce bottom><h6 style={{ color: 'black', display: 'inline' }}> {li2}</h6></Bounce></li>
-                {
-                    li3 ?
-                        <li className={classes.lios}>-
-                            <Bounce bottom><h6 style={{ color: 'black', display: 'inline' }}> {li3}</h6></Bounce>
-                        </li> : ''
-                }
+                <ul className={classes.uls}> <h4 style={{ color: '#182AC3', display: 'inline' }}>{title}</h4>
+                    <h6 className={clsx(classes.lios,)} style={{ color: 'black', }}> {li1}</h6>
+                    <h6 className={clsx(classes.lios,)} style={{ color: 'black', }}> {li2}</h6>
+                    {
+                        li3 ?
+
+                            <h6 className={clsx(classes.lios,)} style={{ color: 'black', }}> {li3}</h6>
+                            : ''
+                    }
+                </ul>
             </Box>
         </Box>
     )

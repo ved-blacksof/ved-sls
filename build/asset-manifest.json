@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3a3beaa.css",
-    "main.js": "/static/js/main.4d74c559.js",
+    "main.css": "/static/css/main.42ed0d24.css",
+    "main.js": "/static/js/main.64c06106.js",
     "static/media/ESP32 based wireless temperature probe for Industrial use case .pdf": "/static/media/ESP32 based wireless temperature probe for Industrial use case .3afbe62d47e1135e4a16.pdf",
-    "static/media/Homepage2.png": "/static/media/Homepage2.a61772586c5ae01e1580.png",
     "static/media/Homepage.png": "/static/media/Homepage.2a94e5f06ba2583e3160.png",
     "static/media/ESP32 based advanced data acquisition system.pdf": "/static/media/ESP32 based advanced data acquisition system.8887c27ed61e75b5732b.pdf",
     "static/media/ISO9001-2021_CERT_2015_1.pdf": "/static/media/ISO9001-2021_CERT_2015_1.225676731b3caae3952c.pdf",
@@ -11,6 +10,7 @@
     "static/media/Data acquisition and remote monitoring for Railways.pdf": "/static/media/Data acquisition and remote monitoring for Railways.51265e4b81ea2cb0b10f.pdf",
     "static/media/EMS_Policy.pdf": "/static/media/EMS_Policy.a1c529660889ea235982.pdf",
     "static/media/Homepage1.png": "/static/media/Homepage1.b97218816a41f69a811a.png",
+    "static/media/Homepage2.png": "/static/media/Homepage2.6aa816023e005bef91b3.png",
     "static/media/Remote-monitoring-system_case-study.pdf": "/static/media/Remote-monitoring-system_case-study.b6b1f5c4266663663020.pdf",
     "static/media/ISO9001 - 2015 CERT_2015_2.pdf": "/static/media/ISO9001 - 2015 CERT_2015_2.3d8a4be523f7710c6597.pdf",
     "static/media/Quality_Policy.pdf": "/static/media/Quality_Policy.33c001e0b4e36ea96d66.pdf",
@@ -30,11 +30,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.b3a3beaa.css.map": "/static/css/main.b3a3beaa.css.map",
-    "main.4d74c559.js.map": "/static/js/main.4d74c559.js.map"
+    "main.42ed0d24.css.map": "/static/css/main.42ed0d24.css.map",
+    "main.64c06106.js.map": "/static/js/main.64c06106.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3a3beaa.css",
-    "static/js/main.4d74c559.js"
+    "static/css/main.42ed0d24.css",
+    "static/js/main.64c06106.js"
   ]
 }

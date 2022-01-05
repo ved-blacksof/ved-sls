@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     headBox: {
         width: '15%',
         height: '10rem',
-        padding: '3% 0%',   
+        padding: '3% 0%',
         lineHeight: '1',
         [theme.breakpoints.down('sm')]: {
             width: '50%',
@@ -36,21 +36,21 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '4rem',
         [theme.breakpoints.down('sm')]: {
             fontSize: '3rem',
-            textAlign:'center'
+            textAlign: 'center'
         },
         [theme.breakpoints.down('xs')]: {
             fontSize: '2.5rem',
-            textAlign:'center'
+            textAlign: 'center'
         }
     },
     subHead: {
         color: 'black',
         lineHeight: '1',
         [theme.breakpoints.down('sm')]: {
-            textAlign:'center'
+            textAlign: 'center'
         },
         [theme.breakpoints.down('xs')]: {
-            textAlign:'center'
+            textAlign: 'center'
         }
     },
     container1: {
@@ -94,43 +94,47 @@ export function Dnumbers() {
     return (
         <MainContainer>
             <Container fixed className={classes.mainContainer}>
-                <Box className={classes.container}>
-                    <Box className={classes.headBox}>
-                        <Fade bottom><h2 className={classes.head}>300+</h2> </Fade>
-                        <Fade bottom><h6 className={classes.subHead}>In-house Engineers</h6></Fade>
+                <Fade bottom>
+                    <Box className={classes.container}>
+                        <Box className={classes.headBox}>
+                            <Fade bottom><h2 className={classes.head}>300+</h2> </Fade>
+                            <Fade bottom><h6 className={classes.subHead}>In-house Engineers</h6></Fade>
+                        </Box>
+                        <Box className={classes.headBox}>
+                            <Fade bottom><h2 className={classes.head}>100+</h2> </Fade>
+                            <Fade bottom><h6 className={classes.subHead}>active projects across the globe</h6></Fade>
+                        </Box>
+                        <Box className={classes.headBox}>
+                            <Fade bottom><h2 className={classes.head}>20+</h2> </Fade>
+                            <Fade bottom><h6 className={classes.subHead}>years and counting</h6></Fade>
+                        </Box>
+                        <Box className={classes.headBox}>
+                            <Fade bottom><h2 className={classes.head}>6+</h2></Fade>
+                            <Fade bottom><h6 className={classes.subHead}>Business Verticals</h6></Fade>
+                        </Box>
+                        <Box className={classes.headBox}>
+                            <Fade bottom><h2 className={classes.head}>1</h2></Fade>
+                            <Fade bottom><h6 className={classes.subHead}>Manufacturing Plant</h6></Fade>
+                        </Box>
                     </Box>
-                    <Box className={classes.headBox}>
-                        <Fade bottom><h2 className={classes.head}>100+</h2> </Fade>
-                        <Fade bottom><h6 className={classes.subHead}>active projects across the globe</h6></Fade>
-                    </Box>
-                    <Box className={classes.headBox}>
-                        <Fade bottom><h2 className={classes.head}>20+</h2> </Fade>
-                        <Fade bottom><h6 className={classes.subHead}>years and counting</h6></Fade>
-                    </Box>
-                    <Box className={classes.headBox}>
-                        <Fade bottom><h2 className={classes.head}>6+</h2></Fade>
-                        <Fade bottom><h6 className={classes.subHead}>Business Verticals</h6></Fade>
-                    </Box>
-                    <Box className={classes.headBox}>
-                        <Fade bottom><h2 className={classes.head}>1</h2></Fade>
-                        <Fade bottom><h6 className={classes.subHead}>Manufacturing Plant</h6></Fade>
-                    </Box>
-                </Box>
+                </Fade>
 
-                <Box className={classes.container1}>
-                    <Box className={classes.boxes}>
-                        <Fade bottom><img src={'./images/mission.svg'} alt="Mission Icon" /></Fade>
-                        <Fade bottom><h4>Operating Bases <br /> India, UK, USA</h4></Fade>
+                <Fade bottom>
+                    <Box className={classes.container1}>
+                        <Box className={classes.boxes}>
+                            <Fade bottom><img src={'./images/mission.svg'} alt="Mission Icon" /></Fade>
+                            <Fade bottom><h4>Operating Bases: <br /> India, UK, USA</h4></Fade>
+                        </Box>
+                        <Box className={classes.boxes} style={{ background: '#D9393E' }}>
+                            <Fade bottom><img src={'./images/Layer 2.svg'} alt="Help Icon" /></Fade>
+                            <Fade bottom><h4>In-house Design & <br /> Manufacturing <br /> Capability</h4></Fade>
+                        </Box>
+                        <Box className={classes.boxes}>
+                            <Fade bottom><img src={'./images/Path 1.svg'} alt="Help Icon" /></Fade>
+                            <Fade bottom><h4>Part of the<br />Make-in-India<br />Initiative</h4></Fade>
+                        </Box>
                     </Box>
-                    <Box className={classes.boxes} style={{ background: '#D9393E' }}>
-                        <Fade bottom><img src={'./images/Layer 2.svg'} alt="Help Icon" /></Fade>
-                        <Fade bottom><h4>In-house Design & <br /> Manufacturing <br /> Capability</h4></Fade>
-                    </Box>
-                    <Box className={classes.boxes}>
-                        <Fade bottom><img src={'./images/Path 1.svg'} alt="Help Icon" /></Fade>
-                        <Fade bottom><h4>Part of <br />Make-in-India<br />Initiative</h4></Fade>
-                    </Box>
-                </Box>
+                </Fade>
 
             </Container>
         </MainContainer>

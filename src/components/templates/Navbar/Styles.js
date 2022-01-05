@@ -193,8 +193,8 @@ export const useStyles = makeStyles((theme) => ({
         background: 'white',
         zIndex: '100',
         padding: '1.4rem 1rem',
-        boxShadow: '0px 0px 1px #777',
-        borderBottom:'2px solid #182AC3'
+        boxShadow: 'inset 0px 0px 1px #777',
+        borderBottom:'3px solid #182AC3'
     },
     uls: {
         display: 'flex',

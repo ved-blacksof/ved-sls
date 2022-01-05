@@ -36,11 +36,34 @@ const useStyles = makeStyles((theme) => ({
     input: {
         margin: '4% 0%',
         width: '100%',
-        borderBottom: '2px solid white',
-        color: 'white'
+        color: 'white',
+        "& .Mui-focused":{
+            color:'white',
+            opacity:'.6'
+        },
+        "& .Mui-FormLabel-root":{
+            color:'white'    
+        },
+        "& .MuiInputBase-root":{
+            color:'white'    
+        },
+        "& .MuiInput-underline::before":{
+            opacity:'1',
+            borderBottom:'1px solid white',
+        },
+        "& .MuiInput-underline::after":{
+            opacity:'1',
+            border:'1px solid white',
+
+        },
+        "& .MuiInput-underline:hover:before":{
+            opacity:'1',
+            borderBottom:'1px solid white',
+        },
+        
     },
     cssLabel: {
-        color: 'white'
+        color: 'white',
     },
     cssFocused: {
         color: 'white'
@@ -143,7 +166,6 @@ export function Letstalk() {
                             placeholder="John Doe"
                             className={classes.input}
                             variant="standard"
-                            color="black"
                             InputLabelProps={{
                                 classes: {
                                     root: classes.cssLabel,

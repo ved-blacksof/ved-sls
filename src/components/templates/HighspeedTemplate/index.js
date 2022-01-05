@@ -50,8 +50,8 @@ export function HighspeedTemplate() {
 
             <QualityReverse
                 heading="Customized Boards"
-                // subtitle="We offer a range of customized solutions to our clients to meet their ever-changing innovation needs. Our team of experts understand your product requirement and vision to cater custom solutions that meet functionality goals and project cost."
-                subtitle="Linux Yocto OSGi-based Industrial IoT board with built-in web interface and edge computing capability having a multi-network connection - Dual ethernet/Wi-Fi/GSM, Rs. 485 (Modbus) AIO & DIO features."
+                subtitle="We offer a range of customized solutions to our clients to meet their ever-changing innovation needs. Our team of experts understand your product requirement and vision to cater custom solutions that meet functionality goals and project cost."
+                // subtitle="Linux Yocto OSGi-based Industrial IoT board Zwith built-in web interface and edge computing capability having a multi-network connection - Dual ethernet/Wi-Fi/GSM, Rs. 485 (Modbus) AIO & DIO features."
                 imageBG="./images/highspeed/Customized Boards-01.png"
                 redline
             />
@@ -78,10 +78,8 @@ export function HighspeedTemplate() {
                 goto="Explore all about our products and services!"
                 title="Visit website"
                 href={"https://www.slscorp.com/services/high-speed-pcb-design-services.html"}
-
             />
-
-
+            
             <Footer />
         </div>
     )

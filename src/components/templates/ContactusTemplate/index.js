@@ -21,7 +21,7 @@ export function ContactusTemplate() {
                 <Letstalk />
             </GridBlue>
 
-            <JoinUs/>
+            {/* <JoinUs/> */}
 
 
             <Footer />
