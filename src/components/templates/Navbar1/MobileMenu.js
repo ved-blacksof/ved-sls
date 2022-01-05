@@ -332,7 +332,6 @@ export function MobileMenu() {
         }
     }, [])
     return (
-        <Fade>
             <div className={classes.mainBox} data-aos="fade-down">
                 <ul className={classes.navUL}>
                     <li
@@ -627,6 +626,5 @@ export function MobileMenu() {
                 </ul>
 
             </div>
-        </Fade>
     )
 }

@@ -195,7 +195,7 @@ export function GamingHardware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                    Smart Targets are Iot Targeting App controlled reactive targets powered with
+                                    Smart Targets are IoT Targeting App controlled reactive targets powered with
                                     advanced wireless technology for a real-time practice and gaming experience.
                                     {
                                         show ?

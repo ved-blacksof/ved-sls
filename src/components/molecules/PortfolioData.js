@@ -606,6 +606,24 @@ export const smartstreet = [
         text: 'Detailed reports shown in real-time'
     },
 ]
+export const railwayOverview = [
+    {
+        images: './images/railways/Fault Monitoring.svg',
+        text: 'Fault Monitoring'
+    },
+    {
+        images: './images/railways/Remote Monitoring.svg',
+        text: 'Remote Monitoring'
+    },
+    {
+        images: './images/railways/Reporting Live & Historical Data.svg',
+        text: 'Reporting Live & Historical Data'
+    },
+    {
+        images: './images/railways/Train Backbone Communication.svg',
+        text: 'Train Backbone Communication'
+    },
+]
 //White icons only 4 for SmarttrafficTemplate
 export const smarttraffic = [
     {
@@ -812,7 +830,7 @@ export const gaminghardware = [
     {
         images: './images/iot_bg_cloud4.png',
         productname: 'Smart Targets',
-        para: 'Smart Targets are Iot Targeting App controlled reactive targets powered with advanced wireless technology for a real-time practice and gaming experience.',
+        para: 'Smart Targets are IoT Targeting App controlled reactive targets powered with advanced wireless technology for a real-time practice and gaming experience.',
         para1: ' Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience. The system is designed to help enhance skills and provide a premise for advancement in chosen sports.',
         read: 'read'
     },
@@ -831,7 +849,7 @@ export const gamingsoftware = [
     {
         images: './images/gaming/Gaming-Iot-targeting-App.png',
         productname: 'IoT Targeting Mobile App',
-        para: 'The Iot Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.',
+        para: 'The IoT Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. The application facilitates both, online and offline connection of wireless targets and provides a global platform for competitive and group gaming using cloud. The app also provides user-friendly features such as adjusting target settings, choosing gaming modes, and automatically deriving scores.',
         read: 'read'
     },
 ]
@@ -1051,10 +1069,10 @@ export const ipcoreproducts = [
     {
         images: './images/ipcore/Products/60._Communication Cores.svg',
         uli: 'Communication Cores',
-        firstli: 'Embedded USB3.1 Gen 2 Device (10Gbps) Controller',
-        secli: 'Embedded USB3.1 Gen 1 Device Controller',
-        thirdli: 'USB 2.0 Device/HUB/Host/OTG Controller',
-        fourthli: 'USB 1.1 Device/Host Controller',
+        firstli: 'Embedded USB3.1 Gen 2 (10Gbps) Device',
+        secli: 'Embedded USB3.1 Gen 1 Device',
+        thirdli: 'USB 2.0 Device/HUB/Host/OTG',
+        fourthli: 'USB 1.1 Device/Host',
     },
     {
         images: './images/ipcore/Products/61._Interface Cores.svg',
@@ -1176,17 +1194,17 @@ export const homeproducts = [
         link: 'https://www.konnsys.com/Home/TheHub'
     },
     {
-        images: './images/gas.png',
+        images: './images/motion_sensor.png',
         subtitle: 'Motion Sensor',
         link: 'https://www.konnsys.com/Home/TheHub#motion_sensor'
     },
     {
-        images: './images/motion_sensor.png',
-        subtitle: 'Humidity Sensor',
+        images: './images/temp-humidity.png',
+        subtitle: 'Temp-Humidity Sensor',
         link: 'https://www.konnsys.com/Home/TheHub#temp_humidity_sensor'
     },
     {
-        images: './images/temp-humidity.png',
+        images: './images/gas.png',
         subtitle: 'Gas Detector',
         link: 'https://www.konnsys.com/Home/GasDetector'
     },

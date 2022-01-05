@@ -9,6 +9,7 @@ import { keyframes } from 'styled-components';
 import { animation } from 'react-reveal/globals';
 import { useStyles } from './Styles'
 import { MobileMenu } from './MobileMenu';
+import { MobileMenuWorking } from './MobileMenuWorking';
 
 
 
@@ -352,11 +353,12 @@ export function Navbar({
                     </ul>
                     {/* </Fade> */}
                 </Toolbar >
-                <div data-aos="fade-down">
+                <div data-aos="slide-down">
                     {
                         mobileMenu ?
                             <Box className={classes.menu} >
                                 <MobileMenu />
+                                {/* <MobileMenuWorking /> */}
                             </Box>
                             : ''
                     }

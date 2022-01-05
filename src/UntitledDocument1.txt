@@ -197,3 +197,218 @@ export const ThreeButton = () => {
         </Box>
     )
 }
+
+
+
+//navabr mobilemenu
+
+mainBox: {
+        display: 'flex',
+        justifyContent: 'left',
+        // alignItems: 'center',
+        boxShadow: 'none',
+    },
+    navRelative: {
+        position: 'relative',
+        boxShadow: 'none',
+        minHeight: '100px',
+
+    },
+    navFixed: {
+        position: 'fixed',
+        minHeight: '100px',
+        top: '0px',
+        boxShadow: '0px 0px 5px #777',
+        background: 'transparent',
+        zIndex: '4',
+        scrollBehaviour: 'smooth',
+        transition: 'all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)',
+        animation: `$translates 800ms linear`,
+        animationIterationCount: 1,
+        animationDuration: '800ms',
+        "&:hover": {
+            color: '#DE141A'
+        }
+    },
+    "@keyframes translates": {
+        "0%": {
+            transform: "translateY(-50px)"
+        },
+        "100%": {
+            transform: "translateY(0px)"
+        }
+    },
+    navbar: {
+        width: '90%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        }
+    },
+    logoBox: {
+        width: '8rem',
+        cursor: 'pointer',
+        "& img": {
+            width: '100%',
+            maxHeight: '100%'
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '6rem'
+        }
+    },
+    logo: {
+        maxWidth: '100%',
+        maxHeight: '100%'
+    },
+    logofixed: {
+        display: 'block'
+    },
+    logoFixedNone: {
+        display: 'none',
+    },
+    navUL: {
+        display: 'flex',
+        listStyle: 'none',
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+            width: '100%',
+
+        }
+    },
+    navLI: {
+        position: 'relative',
+        minHeight: '40px',
+        display: 'flex',
+        alignItems: 'center',
+        background: 'transparent',
+        transition: 'all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)',
+        boxShadow: 'none',
+        color: 'white',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            border: '1px solid red',
+            width: '100%',
+
+        }
+    },
+
+
+    clsbeforePos: {
+        textDecoration: 'none',
+        color: 'white',
+        cursor: 'pointer',
+        display: 'flex',
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: 'flex-start',
+
+        },
+    },
+    clsAfterPos: {
+        textDecoration: 'none',
+        color: 'black',
+        cursor: 'pointer',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        "&:hover": {
+            // color: '#182AC3'
+        },
+        "& $arrow": {
+            color: 'black',
+        }
+    },
+    linkActive: {
+        fontWeight: 'bold',
+        opacity: '1',
+    },
+    linkActiveAfterPos: {
+        color: '#182AC3',
+        fontWeight: 'bold',
+        "&:hover": {
+            "& h4": {
+                // color: '#182AC3',
+            },
+        }
+    },
+    arrow: {
+        color: 'white',
+        fontSize: '1.8rem'
+    },
+    // mega menu
+
+    megaMenu: {
+        height: 'fit-content',
+        display: 'flex',
+        borderRadius: '0px',
+        background: 'white',
+        zIndex: '100',
+        padding: '0 1rem',
+        boxShadow: '0px 1px 1px #777',
+        zIndex: '1'
+    },
+    menuItem: {
+        padding: '5px',
+        boxSizing: 'border-box',
+        mozBoxSizing: 'border-box',
+        webkitBoxSizing: 'border-box',
+        background: 'transparent',
+        position: 'relative',
+        "&:hover": {
+            background: 'transparent !important',
+
+        }
+    },
+    lios: {
+        width: '100%',
+        textDecoration: 'none',
+        color: '#000',
+        pointer: 'cursor',
+        transform: 'width .4s ease-in-out',
+        paddingLeft: '5px',
+    },
+
+    act: {
+        margin: '2px',
+        padding: '5px 1px',
+        borderBottom: '1px solid white'
+    },
+    menuIcon: {
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+            fontSize: '2.2rem',
+            color: 'white'
+        }
+    },
+    menuIconPos: {
+        display: 'block',
+        fontSize: '2.2rem',
+        color: 'black'
+    },
+    menu: {
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            paddingBottom: '1%',
+            transition: 'all 4s ease-in-out',
+            transform: 'translate 100%'
+        }
+    },
+
+    hrs: {
+        borderRadius: '3px',
+        opacity: '.2'
+    },
+    popper: {
+        zIndex: '10',
+    },
+    '@keyframes menuani': {
+        '0%': {
+            transform: 'translateY(50%)'
+        },
+        '100%': {
+            transform: 'translateY(0%)'
+        },
+    }

@@ -34,18 +34,24 @@ export function SmartstreetTemplate() {
             <Quality
                 mainheading="Hardware Offering"
                 imageBG="./images/smartstreet/Individual-street-light-controller.png"
-                heading="Individual Street Light Controller"
+                heading="NEMA-mounted Individual Street Light Controller"
                 subtitle="Our Individual Street Light Controller helps transform regular street lights into smart lamps and offers real-time monitoring and control of individual street lights in your area."
                 redline="redline"
             />
 
             <QualityReverse
+                imageBG="./images/smartstreet/retrofit.png"
+                heading="Individual Street Light Controller - Retrofit Version"
+                subtitle="Promising long range & deep coverage, our retrofit version of Individual Street Light Controller ensures prompt monitoring & control of lamps through different modes based on events, schedule, and time."
+                redline="redline"
+            />
+
+            <Quality
                 imageBG="./images/ccms-3-phase.png"
                 heading="Centralised Control and Monitoring System (CCMS)"
                 subtitle="CCMS offers real-time control and monitoring of a group of street lights easing 
-                            how you manage every aspect of your smart street lights."
+                        how you manage every aspect of your smart street lights."
                 redline="redline"
-
             />
 
             {/* <Quality

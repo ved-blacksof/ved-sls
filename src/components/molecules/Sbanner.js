@@ -88,22 +88,24 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     mouseScroll: {
+        transition: 'all 100ms ease-in',
+        "&:hover": {
+            transform: 'scale(1.1)',
+            cursor: 'pointer',
+
+        },
 
         "& img": {
             maxWidth: '100%',
-            transition: 'all .2s ease-in-out',
-            "&:hover": {
-                transform: 'scale(1.1)',
-                cursor: 'pointer'
-            }
         }
     },
     mouseScrollTxt: {
         color: 'white',
-        // font: 'normal normal normal 1rem Access',
+        transition: 'all 100ms ease-in',
         marginTop: '3%',
         "&:hover": {
-            cursor: 'pointer'
+            transform: 'scale(1.15)',
+            cursor: 'pointer',
         }
     }
 
@@ -152,7 +154,7 @@ export function Sbanner({
                 <div id="slider">
                     <div className="photos photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30)), url(${Background1})` }}></div>
                     <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30)), url(${Background2})` }}></div>
-                    {/* <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background3})` }}></div> */}
+                    <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background3})` }}></div>
                     {/* <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}></div> */}
                     {/* <div className="photos photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background1})` }}></div> */}
                     {/* <div className="photo" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}></div>
@@ -169,7 +171,7 @@ export function Sbanner({
 
                     <h6 className={classes.subText}>
                         <Fade bottom>
-                            Industry leaders in providing solutions catering to the domains of intellectual property, hardware design & prototyping, 
+                            Industry leaders in providing solutions catering to the domains of intellectual property, hardware design & prototyping,
                             software design, and manufacturing.
                         </Fade>
                     </h6>
@@ -177,11 +179,11 @@ export function Sbanner({
 
 
                 <div className={classes.scrollBox}>
-
-                    <Box className={classes.mouseScroll} >
-                        <Fade top><img src={mouse} alt="Scroll image" onClick={scroll} /></Fade>
-                    </Box>
-
+                    <Fade top>
+                        <Box className={classes.mouseScroll} >
+                            <img src={mouse} alt="Scroll image" onClick={scroll} />
+                        </Box>
+                    </Fade>
                     <Fade top> <h6 className={classes.mouseScrollTxt} >Scroll</h6></Fade>
 
                 </div>

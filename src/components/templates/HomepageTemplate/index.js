@@ -12,8 +12,8 @@ import { port, realtime, research } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
 import Homepage from '../../assets/Homepage.png'
 import Homepage1 from '../../assets/Homepage1.png'
-import Homepage2 from '../../assets/Homepage2.png'
-import Homepage3 from '../../assets/Homepage03.jpg'
+import Homepage2 from '../../assets/Homepage03.jpg'
+import Homepage3 from '../../assets/Homepage2.png'
 import { Blogs } from './Blogs'
 
 export function HomepageTemplate() {
@@ -51,6 +51,7 @@ export function HomepageTemplate() {
 
             <Expanding />
 
+
             {/* <Realtime
                 data={realtime}
                 title="GET ACQUAINTED WITH"
@@ -61,6 +62,8 @@ export function HomepageTemplate() {
                 redline="redline"
                 br="br"
             /> */}
+
+
             <Blogs
                 title="GET ACQUAINTED WITH"
                 title1="INDUSTRY TRENDS IN REAL-TIME"

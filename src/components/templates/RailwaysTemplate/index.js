@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Footer } from '..'
 import { GridBlue } from '../../atoms'
 import { Ubanner, Overview, Quality, QualityReverse, Visit, Visit1 } from '../../molecules'
-// import { smartstreet } from '../../molecules/PortfolioData'
+import { railwayOverview } from '../../molecules/PortfolioData'
 
 export function RailwaysTemplate() {
     return (
@@ -21,6 +21,10 @@ export function RailwaysTemplate() {
                     sub1="SLS has been instrumental in upgrading and uplifting the existing rolling stock or the railway network in India. 
                             Acting as their integration specialist, we provide innovative onboard electronic solutions
                             especially in remote monitoring and train backbone communications ensuring the rolling stocks never stop rolling."
+
+                    mapIconPosition="mapIconPosition"
+                    data={railwayOverview}
+                    style={{ height: 'fit-content', marginBottom: '20%' }}
                 />
             </GridBlue>
 
@@ -30,7 +34,7 @@ export function RailwaysTemplate() {
                 heading="Remote monitoring system"
                 imageBG="./images/remote-monitoring-system.png"
                 subtitle="The RMS is our GSM and GPS-powered intelligent system which connects on-field rolling stocks to a centralized train network and management system."
-                list
+                // list
                 firstli="Live Tracking"
                 secli="Fuel Status"
                 thirdli="Real-time engine fault monitoring"
