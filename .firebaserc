@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "sls-showcase"
-  }
+    "default": "sls-showcase-37755",
+  },
+  "targets": {}
 }
