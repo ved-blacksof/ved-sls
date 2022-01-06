@@ -96,6 +96,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
+        },
+        [theme.breakpoints.down('xs')]: {
             height: '50vw',
         }
     },
@@ -127,13 +130,11 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cardHead: {
-        // font: 'normal normal normal 1.1rem Access',
         color: 'black',
-        marginTop: '3%',
+        marginTop: '1%',
         fontWeight: 'bold',
-        height:'3.5rem',
         [theme.breakpoints.down('sm')]: {
-            height:'2rem',
+            // height:'2rem',
         }
 
     },
@@ -354,7 +355,7 @@ export function Realtime({
             slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 0,
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 3000,
             responsive: [
                 {

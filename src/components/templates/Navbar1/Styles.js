@@ -111,6 +111,7 @@ export const useStyles = makeStyles((theme) => ({
             minHeight: '40px',
             marginLeft: '0px',
             paddingLeft: '5%',
+            // width
         },
         "&::before": {
             content: "''",
@@ -137,7 +138,7 @@ export const useStyles = makeStyles((theme) => ({
                 width: '100%',
                 opacity: '1',
                 [theme.breakpoints.down('sm')]: {
-                    height: '5px'
+                    display:'none'
                 }
             },
             "&::after": {
@@ -158,7 +159,8 @@ export const useStyles = makeStyles((theme) => ({
         animationDuration: '500ms',
         [theme.breakpoints.down('sm')]: {
             position: 'relative',
-            // display:'block'
+            display:'none',
+            width:'100%'
         }
     },
     '@keyframes menuAnimation': {
@@ -277,11 +279,6 @@ export const useStyles = makeStyles((theme) => ({
             "&::before": {
                 visibility: 'visible',
                 opacity: '1',
-                [theme.breakpoints.down('sm')]: {
-                    display: 'none',
-                    visibility: 'hidden',
-
-                }
             },
 
         },

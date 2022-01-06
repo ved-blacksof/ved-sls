@@ -15,7 +15,7 @@ export function AboutusTemplate() {
     return (
         <div>
             <Ubanner
-                Background={"./images/about/About-us.jpg"}
+                Background={"./images/about/About-us.png"}
                 maintext="About us"
                 subtext="Technology partner in your business growth journey"
             />

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.42ed0d24.css",
-    "main.js": "/static/js/main.64c06106.js",
+    "main.js": "/static/js/main.55c6768d.js",
     "static/media/ESP32 based wireless temperature probe for Industrial use case .pdf": "/static/media/ESP32 based wireless temperature probe for Industrial use case .3afbe62d47e1135e4a16.pdf",
     "static/media/Homepage.png": "/static/media/Homepage.2a94e5f06ba2583e3160.png",
     "static/media/ESP32 based advanced data acquisition system.pdf": "/static/media/ESP32 based advanced data acquisition system.8887c27ed61e75b5732b.pdf",
@@ -13,8 +13,8 @@
     "static/media/Homepage2.png": "/static/media/Homepage2.6aa816023e005bef91b3.png",
     "static/media/Remote-monitoring-system_case-study.pdf": "/static/media/Remote-monitoring-system_case-study.b6b1f5c4266663663020.pdf",
     "static/media/ISO9001 - 2015 CERT_2015_2.pdf": "/static/media/ISO9001 - 2015 CERT_2015_2.3d8a4be523f7710c6597.pdf",
+    "static/media/Homepage03.jpg": "/static/media/Homepage03.8e4675120c01685f6f2d.jpg",
     "static/media/Quality_Policy.pdf": "/static/media/Quality_Policy.33c001e0b4e36ea96d66.pdf",
-    "static/media/Homepage03.jpg": "/static/media/Homepage03.05c6db0476bb8bf56bd9.jpg",
     "static/media/ISO_14001_2015_CERT_SLSCORP_2021_2015_3.pdf": "/static/media/ISO_14001_2015_CERT_SLSCORP_2021_2015_3.3f7d33b296ba587cf9dd.pdf",
     "static/media/ISO9001-2008 CERT_2015_2008_1.pdf": "/static/media/ISO9001-2008 CERT_2015_2008_1.2045d84f337dcb6ff526.pdf",
     "static/media/ISO9001-2008 CERT_2012_2008_2.pdf": "/static/media/ISO9001-2008 CERT_2012_2008_2.90c03236f76bb6d4cc20.pdf",
@@ -31,10 +31,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.42ed0d24.css.map": "/static/css/main.42ed0d24.css.map",
-    "main.64c06106.js.map": "/static/js/main.64c06106.js.map"
+    "main.55c6768d.js.map": "/static/js/main.55c6768d.js.map"
   },
   "entrypoints": [
     "static/css/main.42ed0d24.css",
-    "static/js/main.64c06106.js"
+    "static/js/main.55c6768d.js"
   ]
 }

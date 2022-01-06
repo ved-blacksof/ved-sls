@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'sticky',
         top: '80px',
         zIndex: '2',
-        background: 'white',       
+        background: 'white',
         [theme.breakpoints.down('sm')]: {
             top: '6%',
             // height:'50px'
@@ -173,6 +173,7 @@ export function MeterTabs() {
 
 
                         <Visit1
+                            goto="Switch to a smarter way of Metering"
                             title="Contact us"
                             href={"/contact"}
                         />

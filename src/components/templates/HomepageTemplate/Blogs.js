@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     card: {
         boxShadow: '0px 0px 20px #0000001F',
         margin: "1% 1rem",
-        borderBottom: '3px solid #354B9C',
+        borderBottom: '3px solid #182AC3',
         background: 'white',
         [theme.breakpoints.down('sm')]: {
             width: '80%'

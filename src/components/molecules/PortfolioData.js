@@ -73,13 +73,13 @@ export const reshape = [
     {
         images: "./images/man-worker-firld-by-solar-panels.png",
         text1: "SETTING UP BENCHMARKS IN CLEAN ENERGY TRANSITION",
-        text2: "Leveraged our inhouse capability to develop and ship around ____ Solar Micro Inverters helping generate more than ___GW across commercial and residential segments. ",
+        text2: "Developed a range of BIS-approved end-to-end smart solar and wind solutions helping expedite clean energy transition across commercial and residential segments.",
         text3: "Market leaders in multiple product domains.",
     },
     {
         images: "./images/reshape-SLS1.png",
         text1: "TURNKEY SOLUTIONS PROVIDER FOR EV CHARGING INDUSTRY",
-        text2: "An enabler in setting up India’s EV Charging Infrastructure, we have designed, developed, and delivered _______ Chargers across ___ cities to date.",
+        text2: "Easy-to-integrate EV Charging Solutions helping create the most innovative range of products, maximizing ROI and operational efficiencies.",
         text3: "Helping switch to smarter means of mobility",
     },
     {
@@ -91,7 +91,7 @@ export const reshape = [
     {
         images: "./images/reshape-SLS3.png",
         text1: "SPEARHEADING INNOVATION IN THE CLOUD ECOSYSTEM",
-        // text2: "Business-agnostic cloud solutions already catered to more than ___ businesses from ____ industries.",
+        // text2: "Business-agnostic cloud solut     ions already catered to more than ___ businesses from ____ industries.",
         text2: "Business-agnostic cloud solutions for the agile businesses of tomorrow.",
         text3: "Reinventing how businesses expand the reach of their influence.",
         // br: 'br',
@@ -255,52 +255,46 @@ export const realtime = [
 
 export const certification = [
     {
+        logo: './images/about/certificatesLogo/Logo4.png',
+        head: '1',
+        href: `${eight3}`,
+        read: `${eight3}`,   //done
+        
+    },
+    {
+        logo: './images/about/certificatesLogo/Logo6.png',
+        head: '2',   //done
+        href: `${eight1}`,
+        read: `${eight1}`,   //done
+        
+    },
+    {
         logo: './images/about/certificatesLogo/Logo2.png',
-        case: 'ISO 9001',
-        head: 'UKAS Intertek',  
+        head: '3',  
         href: `${fifteen1}`,
         read: `${fifteen1}`, //done
     },
     {
-        logo: './images/about/certificatesLogo/Logo3.png',
-        case: 'ISO 9001:2015', //done
-        head: 'UKAS Management Systems 014 ', //done
-        href: `${fifteen2}`,
-        read: `${fifteen2}`,   //done
-
-    },
-    {
         logo: './images/about/certificatesLogo/Logo1.png',
-        case: 'ISO 14001:2015',  //done
-        head: 'QEC Environmental Management System ',   //done
+        head: 'ISO 14001:2015 ',   //done
         href: `${fifteen3}`,
         read: `${fifteen3}`,  //done
-
+        
     },
     {
-        logo: './images/about/certificatesLogo/Logo6.png',
-        case: 'ISO 9001:2008', //done
-        head: 'UKAS Management Systems 014',   //done
-        href: `${eight1}`,
-        read: `${eight1}`,   //done
-
+        logo: './images/about/certificatesLogo/Logo3.png',
+        head: 'ISO 9001:2015 ', //done
+        href: `${fifteen2}`,
+        read: `${fifteen2}`,   //done
+        
     },
     {
         logo: './images/about/certificatesLogo/Logo5.png',
-        case: 'ISO 9001',  
-        head: 'Heading5',
+        head: 'ISO 9001:2008 ',
         href: `${eight2}`,
         read: `${eight2}`,   //done
 
     },
-    {
-        logo: './images/about/certificatesLogo/Logo4.png',
-        case: 'ISO 9001',
-        head: 'Heading6',
-        href: `${eight3}`,
-        read: `${eight3}`,   //done
-
-    }
     // {
     //     logo: './images/about/certificatesLogo/Logo1.png',
     //     case: 'ISO 9001',
