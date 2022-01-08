@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.42ed0d24.css",
-    "main.js": "/static/js/main.55c6768d.js",
+    "main.js": "/static/js/main.cfd9e2f3.js",
     "static/media/ESP32 based wireless temperature probe for Industrial use case .pdf": "/static/media/ESP32 based wireless temperature probe for Industrial use case .3afbe62d47e1135e4a16.pdf",
     "static/media/Homepage.png": "/static/media/Homepage.2a94e5f06ba2583e3160.png",
     "static/media/ESP32 based advanced data acquisition system.pdf": "/static/media/ESP32 based advanced data acquisition system.8887c27ed61e75b5732b.pdf",
@@ -31,10 +31,10 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.42ed0d24.css.map": "/static/css/main.42ed0d24.css.map",
-    "main.55c6768d.js.map": "/static/js/main.55c6768d.js.map"
+    "main.cfd9e2f3.js.map": "/static/js/main.cfd9e2f3.js.map"
   },
   "entrypoints": [
     "static/css/main.42ed0d24.css",
-    "static/js/main.55c6768d.js"
+    "static/js/main.cfd9e2f3.js"
   ]
 }

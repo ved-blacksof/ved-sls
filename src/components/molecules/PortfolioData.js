@@ -256,43 +256,49 @@ export const realtime = [
 export const certification = [
     {
         logo: './images/about/certificatesLogo/Logo4.png',
-        head: '1',
+        head: '  ISO 9001:2008',
+        para:'(May 2009 to May 2012)',
         href: `${eight3}`,
-        read: `${eight3}`,   //done
-        
+        read: `${eight3}`,  
+
     },
     {
         logo: './images/about/certificatesLogo/Logo6.png',
-        head: '2',   //done
+        head: 'ISO 9001:2008',  
+        para: '(May 2015 to May 2018)',
         href: `${eight1}`,
-        read: `${eight1}`,   //done
-        
+        read: `${eight1}`,  
+
     },
     {
         logo: './images/about/certificatesLogo/Logo2.png',
-        head: '3',  
+        head: 'ISO 9001:2015',
+        para: '(May 2021 to May 2024)',
         href: `${fifteen1}`,
-        read: `${fifteen1}`, //done
+        read: `${fifteen1}`, 
     },
     {
         logo: './images/about/certificatesLogo/Logo1.png',
-        head: 'ISO 14001:2015 ',   //done
+        head: 'ISO 14001:2015',  
+        para: '(August 2021 to August 2022)',
         href: `${fifteen3}`,
-        read: `${fifteen3}`,  //done
-        
+        read: `${fifteen3}`,  
+
     },
     {
         logo: './images/about/certificatesLogo/Logo3.png',
-        head: 'ISO 9001:2015 ', //done
+        head: 'ISO 9001:2015', 
+        para: '(May 2018 to May 2021)',
         href: `${fifteen2}`,
-        read: `${fifteen2}`,   //done
-        
+        read: `${fifteen2}`,   
+
     },
     {
         logo: './images/about/certificatesLogo/Logo5.png',
-        head: 'ISO 9001:2008 ',
+        head: '  ISO 9001:2008 ',
+        para: ' (May 2012 to May 2015)',
         href: `${eight2}`,
-        read: `${eight2}`,   //done
+        read: `${eight2}`,   
 
     },
     // {
