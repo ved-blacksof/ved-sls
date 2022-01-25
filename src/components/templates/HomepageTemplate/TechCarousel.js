@@ -13,12 +13,13 @@ import "@egjs/flicking-plugins/dist/pagination.css";
 
 import { ParagraphsBlue, MainContainer } from '../../atoms'
 import Fade from 'react-reveal/Fade';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     newBox: {
         height: '90vh',
         display: 'flex',
-        paddingBottom:'8%',
+        paddingBottom: '8%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center ',
@@ -48,9 +49,13 @@ const useStyles = makeStyles((theme) => ({
         "& .flicking-pagination": {
             bottom: '0%',
             left: '0px',
+            [theme.breakpoints.down('sm')]: {
+                // bottom:'-2%'
+                // marginTop:'2%'
+            },
         },
         "& .flicking-pagination-bullet": {
-            width: '2.5rem !important',
+            width: '2.2rem !important',
             height: '.33rem !important',
             margin: '0 .2rem !important',
             borderRadius: '1rem !important',
@@ -84,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     },
     boxBig: {
         background: 'white',
-        padding:'1%',
+        padding: '1%',
         color: 'red',
         width: '16vw',
         height: '16vw',
@@ -92,16 +97,16 @@ const useStyles = makeStyles((theme) => ({
             color: '#D9393E',
             fontSize: '5vw',
             textAlign: 'center',
-            [theme.breakpoints.down('sm')]:{
-                fontSize:'1.8rem'
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1.8rem'
             }
         },
         '& h2': {
             color: '#182AC3',
             fontSize: '2vw',
             textAlign: 'center',
-            [theme.breakpoints.down('sm')]:{
-                fontSize:'1.2rem'
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1.2rem'
             }
         },
         [theme.breakpoints.down('sm')]: {
@@ -117,7 +122,7 @@ const useStyles = makeStyles((theme) => ({
     boxSmall: {
         height: '11vw',
         width: '10vw',
-        padding:'1%',
+        padding: '1%',
         background: 'white',
         display: 'flex',
         flexDirection: 'column',
@@ -133,19 +138,22 @@ const useStyles = makeStyles((theme) => ({
         "& h3": {
             color: '#D9393E',
             fontSize: '3vw',
-            [theme.breakpoints.down('sm')]:{
-                fontSize:'1rem'
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1rem'
             }
         },
         "& h4": {
             font: 'normal normal normal 1.4vw BebasNeue',
             color: '#182AC3',
             textAlign: 'center',
-            [theme.breakpoints.down('sm')]:{
-                fontSize:'1rem'
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1rem'
             }
         }
     },
+    pagination:{
+
+    }
 
 }))
 
@@ -207,7 +215,7 @@ export function TechCarousel() {
                                     <Fade bottom><h3>100+</h3></Fade>
                                     <Fade bottom><h4 >ACTIVE PROJECTS AROUND THE WORLD</h4></Fade>
                                 </div>
-                                <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                <div className={classes.boxSmall} style={{ background: '#182AC3', }}>
                                     <Fade bottom><img src={'./images/mission.svg'} /></Fade>
                                 </div>
                                 <div className={classes.boxSmall} style={{ background: 'white' }} >
@@ -232,15 +240,15 @@ export function TechCarousel() {
                                     </div>
 
                                     <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h4 style={{  textAlign:'center', color:'#D9393E', fontSize:'2vw' }}>Operating Bases</h4>
+                                        <h4 style={{ textAlign: 'center', color: '#D9393E', fontSize: '2vw' }}>Operating Bases</h4>
                                         <h4 >India, UK, USA</h4>
                                     </div>
-                                    <div className={classes.boxSmall} style={{ background: 'transparent', borderBottom: '2px solid white' }}>
+                                    <div className={classes.boxSmall} style={{ background: '#182AC3', }}>
                                         <img src={'./images/mission.svg'} />
 
                                     </div>
                                     <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                        <h3 style={{ textAlign:'center', color:'#D9393E', fontSize:'2vw'}}>Clients</h3>
+                                        <h3 style={{ textAlign: 'center', color: '#D9393E', fontSize: '2vw' }}>Clients</h3>
                                         <h4 >in 18+ Countries</h4>
                                     </div>
                                 </Fade>
@@ -248,7 +256,7 @@ export function TechCarousel() {
 
 
                             <ViewportSlot >
-                                <span className="flicking-pagination "></span>
+                                <span className={clsx(classes.pagination, "flicking-pagination ")}></span>
                             </ViewportSlot>
 
                         </Flicking>
