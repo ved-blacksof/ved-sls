@@ -8,6 +8,7 @@ import {
 import { MainContainer } from '../../atoms';
 import Fade from 'react-reveal/Fade';
 import clsx from 'clsx';
+import { Slide } from 'react-reveal';
 
 
 
@@ -194,14 +195,19 @@ export function GamingHardware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                    Smart Targets are Iot Targeting App controlled reactive targets powered with
+                                    Smart Targets are IoT Targeting App controlled reactive targets powered with
                                     advanced wireless technology for a real-time practice and gaming experience.
                                     {
                                         show ?
-                                            <h6 style={{ color: 'black', textAlign: 'left', display: 'inline' }}>
-                                                Smart targets are portable and connect with up to 20 targets. The system provides the platform for cloud and events for multi-sports experience.
-                                                The system is designed to help enhance skills and provide a premise for advancement in chosen sports.
-                                            </h6> : ''
+                                            <>
+                                                <h6 style={{ color: 'black', textAlign: 'left', display: 'inline' }}>
+                                                    Smart targets are portable and connect with up to 20 targets.
+                                                    The system provides the platform for cloud and events for multi-sports experience.
+                                                    The system is designed to help enhance skills and provide a premise for advancement in chosen sports.
+                                                </h6>
+                                            </>
+
+                                            : ''
                                     }
                                 </h6>
                             </Fade>

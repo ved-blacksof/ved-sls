@@ -33,7 +33,7 @@ export function EvchargingTemplate() {
             <Ubanner
                 Background="/images/luo-lei-Xa4pTwafe5U-unsplash.png"
                 maintext="EV Charging Solutions"
-                subtext="Helping in making the world ev-first!"
+                subtext="Helping in making the world EV-first!"
             />
 
 
@@ -53,6 +53,7 @@ export function EvchargingTemplate() {
 
             <MainContainer>
                 <Container fixed className={classes.realText1}>
+                    <h2 style={{color:'black'}}> VerdeMobility EV Charging Ecosystem </h2>
                     <Box className={classes.eco}>
                         <img src="./images/evcharger/ecosystem.png" />
                     </Box>
@@ -87,7 +88,7 @@ export function EvchargingTemplate() {
             <SoftOfferingsBlue
                 maintitle="Software OFFERING"
                 title="Charging Management Software"
-                subtitle="We offer OCPP Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
+                subtitle="We offer OCPP-Compliant Charging Management Software which is built using new-edge technology for easy management of your EV Charging Infra. The CMS is built to support all major brands of chargers available globally."
                 list
                 firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
                 secli="Dynamic load management capabilities"

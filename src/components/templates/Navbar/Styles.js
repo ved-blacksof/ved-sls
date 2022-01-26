@@ -84,7 +84,6 @@ export const useStyles = makeStyles((theme) => ({
         marginLeft: '25px',
         cursor: 'pointer',
         background: 'transparent',
-        // border:'1px solid red',
         transition: 'all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)',
         boxShadow: 'none',
         color: 'white',
@@ -194,8 +193,8 @@ export const useStyles = makeStyles((theme) => ({
         background: 'white',
         zIndex: '100',
         padding: '1.4rem 1rem',
-        boxShadow: '0px 0px 1px #777',
-        borderBottom:'2px solid #182AC3'
+        boxShadow: 'inset 0px 0px 1px #777',
+        borderBottom:'3px solid #182AC3'
     },
     uls: {
         display: 'flex',
@@ -226,7 +225,7 @@ export const useStyles = makeStyles((theme) => ({
             background: '#182AC3',
             borderRadius: '2rem',
             position: 'absolute',
-            top:'28%',
+            top:'24%',
             left: '0%',
             transform: 'translateY(0, -20px)',
             transition: 'all .3s ease-in-out',

@@ -68,7 +68,7 @@ export function Ubanner({
         <>
 
             <div className={classes.mainBox}
-                style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70)), url(${Background})` }}
+                style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.60)), url(${Background})` }}
             >
                 <Fade bottom>
                     <h1 className={classes.mainText}>{maintext}</h1>

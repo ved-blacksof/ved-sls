@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '6%',
         [theme.breakpoints.down('sm')]: {
             height: 'fit-content',
-            padding: '10% 0%',
+            paddingBottom: '10%',
         },
     },
     overInBox: {
@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     },
     paths: {
         marginBottom: '5%',
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: '10%',
+        },
     },
     redLine: {
         margin: '1% 0%',

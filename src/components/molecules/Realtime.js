@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
             overflow: 'hidden'
         },
     },
-    
+
     sliderSec: {
         width: '100%',
         display: 'flex',
@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     box3: {
-        // display: "none",
         opacity: '0',
         [theme.breakpoints.down('sm')]: {
             display: 'flex',
             justifyContent: 'flex-end',
             alignItems: 'flex-end',
             flexDirection: 'column',
+            opacity: '1'
         },
     },
     btn: {
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     card: {
         boxShadow: '0px 0px 20px #0000001F',
         margin: "1% 1rem",
-        borderBottom: '3px solid #354B9C',
+        borderBottom: '3px solid #182AC3',
         background: 'white',
         [theme.breakpoints.down('sm')]: {
             width: '80%'
@@ -96,6 +96,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
+        },
+        [theme.breakpoints.down('xs')]: {
             height: '50vw',
         }
     },
@@ -127,10 +130,12 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cardHead: {
-        // font: 'normal normal normal 1.1rem Access',
         color: 'black',
-        marginTop: '3%',
-        fontWeight: 'bold'
+        marginTop: '1%',
+        fontWeight: 'bold',
+        [theme.breakpoints.down('sm')]: {
+            // height:'2rem',
+        }
 
     },
     cardSubHead: {
@@ -138,12 +143,11 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3%'
     },
     readMore: {
-        // font: 'normal normal normal 1.2rem BebasNeue',
+        // font: 'normal normal normal 1.8rem BebasNeue',
         marginTop: '3%',
         "& a": {
-            fontFamily: 'BebasNeue',
             color: '#182AC3',
-
+            // textDecoration:'none'
         }
     },
     filters: {
@@ -185,7 +189,8 @@ const useStyles = makeStyles((theme) => ({
             height: '12rem'
         },
         '& h4': {
-            color: 'black'
+            color: 'black',
+            lineHeight:'1.2'
         },
         '& h6': {
             color: 'black'
@@ -350,11 +355,11 @@ export function Realtime({
             slidesToShow: 3,
             slidesToScroll: 1,
             initialSlide: 0,
-            autoplay: true,
-            autoplaySpeed: 2000,
+            // autoplay: true,
+            autoplaySpeed: 3000,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 960,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
@@ -385,7 +390,7 @@ export function Realtime({
 
                 <MainContainer>
 
-                   
+
 
                     {/* only slider */}
                     <Container fixed className={classes.realText}>
@@ -487,13 +492,13 @@ export function Realtime({
                                                     <Box className={classes.cardTxt}>
                                                         <Fade bottom>
                                                             {
-                                                                cases ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
+                                                                item.case ? <Button className={classes.smallBtn} >{item.case}</Button> : ''
                                                             }
                                                             <h4 className={classes.cardHead}>{item.head}</h4>
                                                             <h6 className={classes.cardSubHead}>{item.para}</h6>
-                                                            <h4 className={classes.readMore}>
-                                                                <a href="/" >{item.read}</a>
-                                                            </h4>
+                                                            <p className={classes.readMore}>
+                                                                <a href={`${item.read}`}  target="_blank">DOWNLOAD</a>
+                                                            </p>
                                                             {
                                                                 download ?
                                                                     <Button
@@ -521,7 +526,6 @@ export function Realtime({
                                             < >
                                                 {
                                                     item.link ?
-
                                                         <Box>
                                                             <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
                                                                 <Box className={classes.boxes}>

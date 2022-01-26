@@ -39,43 +39,6 @@
     src: url(./components/assets/fonts/Acces/ACCESS-BOLD.OTF);
   }
   
-  h1{
-    font-family: BebasNeue;
-    font-size: 10rem;
-    font-weight: normal;
-    color: white;
-  }
-  
-  h2{
-    font-family: BebasNeue;
-    font-size: 3rem;
-    font-weight: normal;
-    color:white;
-  }
-  
-  h3{
-    font-family: BebasNeue;
-    font-size: 2.3rem;
-    font-weight: normal;
-    color: white;
-    text-transform: lowercase;
-    /* cursor: pointer; */
-  
-  }
-  
-  h4{
-    font-family: Access;
-    font-size: 1.1rem;
-    font-weight: normal;
-    color: white;
-  }
-  
-  h6{
-    font-family: Access;
-    font-size: .9rem;
-    font-weight: normal;
-    color: white;
-  }
   
   
   /* Grid background style on whole page */
@@ -105,6 +68,9 @@
       display: none;
     }
   
+
+
+
     /* //font-size */
   
     h1{
@@ -145,9 +111,14 @@
     
     h6{
       font-family: Access;
-      font-size: .7rem;
+      font-size: .9rem;
       font-weight: normal;
       color: white;
+    }
+    p{
+      font-family: BebasNeue;
+      font-size: 1rem;
+      font-weight: normal;
     }
     br{
       display: block;
@@ -189,7 +160,7 @@
         
         h4{
           font-family: Access;
-          font-size: .9rem;
+          font-size: 1rem;
           font-weight: normal;
           color: white;
         }
@@ -202,9 +173,14 @@
         
         h6{
           font-family: Access;
-          font-size: .8rem;
+          font-size: .9rem;
           font-weight: normal;
           color: white;
+        }
+        p{
+          font-family: BebasNeue;
+          font-size: 1.2rem;
+          font-weight: normal;
         }
   
         br{
@@ -254,6 +230,11 @@
           font-size: 1rem;
           font-weight: normal;
           color: white;
+        }
+        p{
+          font-family: BebasNeue;
+          font-size: 1.3rem;
+          font-weight: normal;
         }
         br{
           display: block;
@@ -308,6 +289,11 @@
           font-weight: normal;
           color: white;
         }
+        p{
+          font-family: BebasNeue;
+          font-size: 1.5rem;
+          font-weight: normal;
+        }
         br{
           display: block;
         }
@@ -328,7 +314,7 @@
         
         h2{
           font-family: BebasNeue;
-          font-size: 5rem;
+          font-size: 4.5rem;
           font-weight: normal;
           color:white;
         }
@@ -343,7 +329,7 @@
         
         h4{
           font-family: Access;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           font-weight: normal;
           color: white;
         }
@@ -361,6 +347,13 @@
           font-weight: normal;
           color: white;
         }
+        p{
+          font-family: BebasNeue;
+          font-size: 1.7rem;
+          font-weight: normal;
+        }
+
+
   
         br{
           display: block;

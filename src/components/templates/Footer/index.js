@@ -270,7 +270,7 @@ export function Footer() {
 
                 <Fade top>
                     <div className={classes.copyBox}>
-                        <h6 className={classes.socialText}>System Level Solutions Inc. Copyright &copy; 2021</h6>
+                        <h6 className={classes.socialText}>System Level Solutions Inc. Copyright &copy; 2022</h6>
 
                         <div className={classes.socialBox}>
                             <a target="_blank" href="https://www.facebook.com/system.level.solutions.corp" className={classes.anchor}><Facebook className={classes.socialIcons} />

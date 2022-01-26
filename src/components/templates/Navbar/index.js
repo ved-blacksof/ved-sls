@@ -8,6 +8,8 @@ import Fade from 'react-reveal/Fade';
 import { keyframes } from 'styled-components';
 import { animation } from 'react-reveal/globals';
 import { useStyles } from './Styles'
+import { MobileMenu } from './MobileMenu';
+import { MobileMenuWorking } from './MobileMenuWorking';
 
 
 
@@ -163,11 +165,15 @@ export function Navbar({
 
                     </Box>
 
-
+                    <Fade>
+                        <MenuOutlined
+                            className={clsx(classes.menuIcon, classes[navlinkref.current])}
+                            onClick={() => mobileMenu === false ? setMobileMenu(true) : setMobileMenu(false)} />
+                    </Fade>
 
                     {/* <Fade bottom> */}
                     <ul className={classes.navUL}>
-                        <li className={classes.navLI} onClick={()=> history.push("/home")}>
+                        <li className={classes.navLI} onClick={() => history.push("/home")}>
                             <h4 >
                                 <NavLink
                                     className={clsx(classes[navlinkref.current])}
@@ -177,7 +183,7 @@ export function Navbar({
                         </li>
 
 
-                        <li className={classes.navLI} onClick={()=> history.push("/about")}>
+                        <li className={classes.navLI} onClick={() => history.push("/about")}>
                             <h4 >
                                 <NavLink
                                     className={clsx(classes[navlinkref.current])}
@@ -327,7 +333,9 @@ export function Navbar({
                                         </MenuItem>
                                         <MenuItem className={classes.menuItem}>
                                             <h6 className={classes.lios}>
-                                                <Button href="https://www.slscorp.com/about-slscorp/careers.html" style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
+                                                <Button href="https://www.slscorp.com/about-slscorp/careers.html"
+                                                        target="_blank"
+                                                    style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
                                                     <h6
                                                         style={{
                                                             color: 'black',
@@ -347,15 +355,16 @@ export function Navbar({
                     </ul>
                     {/* </Fade> */}
                 </Toolbar >
-                {/* <div data-aos="fade-down">
+                <div data-aos="slide-down">
                     {
                         mobileMenu ?
                             <Box className={classes.menu} >
                                 <MobileMenu />
+                                {/* <MobileMenuWorking /> */}
                             </Box>
                             : ''
                     }
-                </div> */}
+                </div>
             </AppBar >
         </Box >
     )

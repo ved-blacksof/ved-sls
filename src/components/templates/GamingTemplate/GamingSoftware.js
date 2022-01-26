@@ -45,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         margin: '5% 1.5%',
         [theme.breakpoints.down('sm')]: {
-            width: '70%'
+            width: '100%',
+
         },
         '& h4': {
             color: 'black'
@@ -56,21 +57,24 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     imgBox: {
+        display: 'flex',
+        justifyContent: 'center',
         width: '100%',
         maxHeight: '14vw',
         background: 'white',
         overflow:'hidden',
-        [theme.breakpoints.down('sm')]: {
-            height: 'fit-content',
-        },
         "& img": {
             width: '100%',
-            maxHeight: '100%',
-            objectFit:'contain',
+            maxHeight: '100%'
+        },
+        [theme.breakpoints.down('sm')]: {
+            // height: 'fit-content',
+            maxHeight: '50vw',
         },
     },
     head: {
         color: 'black'
+
     },
     portSubHead: {
         color: 'black',
@@ -86,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
         height: 'fit-content',
         padding: '1rem',
         [theme.breakpoints.down('sm')]: {
-            padding: '1rem'
+            padding: '1rem',
         }
     },
     productName: {
@@ -103,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '.5rem',
         textAlign: 'left',
         [theme.breakpoints.down('sm')]: {
-            height: '4.8rem',
+            height: '10rem',
         },
     },
     productDetailHeight: {
@@ -123,6 +127,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'BebasNeue',
         color: '#182AC3 !important',
         "& a": {
+
         }
     }
 }))
@@ -180,7 +185,7 @@ export function GamingSoftware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                The IoT Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level. 
+                                    The IoT Targeting Mobile App is an exclusively designed Android and iOS app that takes the IoT Targeting gaming experience to the next level.
                                     {
                                         show ?
                                             <h6 style={{ color: 'black', textAlign: 'left', display: 'inline' }}>
@@ -214,7 +219,7 @@ export function GamingSoftware({
 
                             <Fade bottom>
                                 <h6 className={clsx(classes[navref.current])} style={{ color: 'black', textAlign: 'left', }}>
-                                    Smart Targets are Iot Targeting App controlled reactive targets powered with
+                                    Smart Targets are IoT Targeting App controlled reactive targets powered with
                                     advanced wireless technology for a real-time practice and gaming experience.
                                     {
                                         show1 ?
