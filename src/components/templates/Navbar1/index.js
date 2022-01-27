@@ -1,245 +1,121 @@
-import React, { useState } from 'react'
-import { makeStyles, IconButton, Toolbar, AppBar, Box, Button, Menu, MenuItem, ListItemText } from '@material-ui/core'
+import React, { useRef, useState } from 'react'
+import { makeStyles, IconButton, Toolbar, AppBar, Box, Button, Menu, MenuItem, ListItemText, Popper, Grow, Paper, ClickAwayListener, MenuList } from '@material-ui/core'
 import { useHistory, NavLink, Link } from 'react-router-dom';
-import { MenuOpen } from '@material-ui/icons'
+import { ArrowDownward, ArrowDropDown, KeyboardArrowDown, KeyboardArrowLeft, MenuOpen, MenuOutlined } from '@material-ui/icons'
 import clsx from 'clsx'
+// import { MobileMenu } from './MobileMenu';
 import Fade from 'react-reveal/Fade';
+import { keyframes } from 'styled-components';
+import { animation } from 'react-reveal/globals';
+import { useStyles } from './Styles'
+import { MobileMenu } from './MobileMenu';
+import { MobileMenuWorking } from './MobileMenuWorking';
+import $ from 'jquery'
 
-const useStyles = makeStyles((theme) => ({
-    mainBox: {
-        // background: '#182AC3',
-        // opacity:'0.75',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingTop: '3%',
-        boxShadow: 'none',
-        // boxShadow:'2px 2px 2px black'
-    },
-    navRelative: {
-        position: 'relative',
-        boxShadow: 'none',
-    },
-    navFixed: {
-        position: 'fixed',
-        top: '0%',
-        boxShadow: '2px 2px 5px grey',
-        background: 'white',
-        padding: '.8rem 0rem',
-        transition: 'all ease-in-out .3s',
-        "& ": {
-            color: 'black'
-        }
-    },
-    navbar: {
-        width: '90%',
-        display: 'flex',
-        justifyContent: 'space-between',
-        [theme.breakpoints.down('sm')]: {
-            width: '100%'
-        }
-    },
-    logoBox: {
-        width: '8rem',
-        "& img": {
-            width: '100%',
-            maxHeight: '100%'
-        },
-        [theme.breakpoints.down('sm')]: {
-            width: '6rem'
-        }
-    },
-    logo: {
-        maxWidth: '100%',
-        maxHeight: '100%'
-    },
-    logofixed: {
-        display: 'block'
-    },
-    logoFixedNone: {
-        display: 'none',
-    },
-    navUL: {
-        display: 'flex',
-        alignItems: 'center',
-        listStyle: 'none',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none'
-        }
-    },
-    navLI: {
-        textDecoration: 'none',
-        color: 'white',
-        margin: ' 0px 10px',
-        background: 'transparent',
-        boxShadow: 'none',
-        cursor: 'pointer',
-        textTranform: 'none',
-    },
-    navLink: {
-        color: 'black',
-    },
-    megaMenu: {
-        width: '50vw',
-        display: 'flex',
-        borderRadius: '0px'
-    },
-    uls: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        margin: '2% 2%',
-        "& h6": {
-            padding: '1rem',
-        }
-    },
-    lios: {
-        textDecoration: 'none',
-        color: '#182AC3',
-        pointer: 'cursor',
-    },
-    activeLios: {
-        color: '#'
-    },
-    act: {
-        margin: '2px',
-        padding: '5px 1px',
-        borderBottom: '1px solid white'
-    },
-    menuIcon: {
-        display: 'none',
-        [theme.breakpoints.down('sm')]: {
-            display: 'block',
-            fontSize: '2.2rem',
-            color: 'white'
-        }
-    }
-}))
 
-export function Navbar1() {
+export function Navbar1({
+    style
+}) {
     const classes = useStyles()
 
     const history = useHistory();
 
-    const [navPos, setNavPos] = React.useState('navRelative')
+    const [navPos, setNavPos] = useState('navRelative')
 
-    const [navLink, setNavLink] = React.useState('navLI')
+    const [navAfterPos, setnavAfterPos] = useState('clsAfterPos')
+
+    const [linkActivePos, setlinkActivePos] = useState('linkActive')
 
     // materail ui navbar drops
-    const [mobilemenu, setMobilemenu] = useState(null)
-    const [services, setServices] = useState(null)
+    const [open, setOpen] = useState(false);
+    const [open1, setOpen1] = useState(false);
+    const [open2, setOpen2] = useState(false);
 
-    const isMobileMenuOpen = Boolean(mobilemenu);
-    const isServicesOpen = Boolean(services);
+    const [mobileMenu, setMobileMenu] = useState(false);
 
-    const openMobileMenu = (event) => {
-        setMobilemenu(event.currentTarget);
+    const anchorRef = useRef(null);
+
+    const handleToggle = () => {
+        // e.preventDefault()
+        setOpen((prevOpen) => !prevOpen);
+        setOpen1(false)
+        setOpen2(false)
+    };
+    const handleToggle1 = () => {
+        setOpen(false)
+        setOpen1((prevOpen) => !prevOpen);
+        setOpen2(false)
+    };
+    const handleToggle2 = () => {
+        setOpen(false)
+        setOpen1(false)
+        setOpen2((prevOpen) => !prevOpen);
     };
 
-    const closeMobileMenu = () => {
-        setMobilemenu(null);
-    };
+    const showMobileMenu = () => {
+        var x = document.getElementById("menuBox");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+        // $('.navUL').on('click',function() {
+        //     $(".navULHeight").toggleClass(`.navULHeightZero`);
+        //   });
+    }
+    const showMegamenu = (index) => {
+        var x = document.getElementById(`${'menu'+index}`);
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }       
+    }
 
-    const openServices = (event) => {
-        setServices(event.currentTarget);
-    };
+   
 
-    const closeServices = () => {
-        setServices(null);
-    };
+    // return focus to the button when we transitioned from !open -> open
+    const prevOpen = React.useRef(open);
+    React.useEffect(() => {
+        if (prevOpen.current === true && open === false) {
+            anchorRef.current.focus();
+        }
 
-    const mobileMenu = (
-        <Menu
-            style={{
-                marginTop: '6%',
-                borderRadius: '0px'
-            }}
-            anchorEl={mobilemenu}
-            id="Industries"
-            anchorOrigin={{ vertical: "bottom", horizontal: "bottom" }}
-            transformOrigin={{ vertical: "bottom", horizontal: "bottom" }}
-            keepMounted
-            open={isMobileMenuOpen}
-            onClose={closeMobileMenu}
-        >
-            <Box className={classes.megaMenu}>
-                <Box className={classes.uls}>
-                    <h6><NavLink to="/iot" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >IoT Platform</NavLink ></h6>
-                    <h6><NavLink to="/cloud" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Cloud Solutions</NavLink ></h6>
-                    <h6><NavLink to="/evcharger" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Ev Charging Solutions</NavLink ></h6>
-                </Box>
-                <hr />
-                <Box className={classes.uls}>
-                    <h6><NavLink to="/solar" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Solar & Wind</NavLink ></h6>
-                    <h6><NavLink to="/smartmeter" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Smart Metering</NavLink ></h6>
-                    <h6><NavLink to="/homeauto" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Home Automation</NavLink ></h6>
-                </Box>
-                <hr />
-                <Box className={classes.uls}>
-                    <h6><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Smart Street Lights</NavLink ></h6>
-                    <h6><NavLink to="/railways" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Railways</NavLink ></h6>
-                    <h6><NavLink to="/gaming" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Gaming</NavLink ></h6>
-                </Box>
-                <hr />
-                <Box className={classes.uls}>
-                    <h6><NavLink to="/smarttraffic" className={classes.lios} activeClassName={classes.activeLios} onClick={closeMobileMenu} >Traffic Solutions</NavLink ></h6>
-                </Box>
+        prevOpen.current = open;
+    }, [open]);
 
-
-            </Box>
-        </Menu>
-    )
-
-    const Services = (
-        <Menu
-            style={{
-                marginTop: '6%',
-                borderRadius: '0px'
-            }}
-            anchorEl={services}
-            id="services"
-            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-            transformOrigin={{ vertical: "bottom", horizontal: "bottom" }}
-            keepMounted
-            open={isServicesOpen}
-            onClose={closeServices}
-        >
-            <Box className={classes.megaMenu}>
-                <Box className={classes.uls}>
-                    <h6><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={closeServices} >IP CORE/FPGA/SOC DESIGN SERVICES</NavLink ></h6>
-                    <h6><NavLink to="/highspeed" className={classes.lios} activeClassName={classes.activeLios} onClick={closeServices} > HIGH SPEED PCB DESIGN SERVICES</NavLink ></h6>
-                    <h6><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={closeServices} >SOFTWARE DEVELOPMENT</NavLink ></h6>
-                </Box>
-                <Box className={classes.uls}>
-                    <h6><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={closeServices} >ELECTRONICS MANUFACTURING</NavLink ></h6>
-                    <h6><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={closeServices} >TESTING AND CALIBRATION</NavLink ></h6>
-                    <h6><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={closeServices} >ML & AI</NavLink ></h6>
-                </Box>
-            </Box>
-        </Menu>
-    )
 
     const navref = React.useRef()
+    const navlinkref = React.useRef()
+    const linkactiveref = React.useRef()
 
     navref.current = navPos
+    navlinkref.current = navAfterPos
+    linkactiveref.current = linkActivePos
 
-    const showMenu = () => {
-        <div>
-            sdfhfjh
-        </div>
+    const handleScroll = () => {
+        const pageHeight = window.innerHeight + 100
+        const show = window.scrollY >= pageHeight
+        setOpen(false)
+        setOpen1(false)
+        setOpen2(false)
+        // setMobileMenu(false)
+
+        if (show) {
+            setNavPos('navFixed')
+            setnavAfterPos('clsAfterPos')
+            setlinkActivePos('linkActiveAfterPos')
+        } else {
+            setNavPos('navRelative')
+            setnavAfterPos('clsbeforePos')
+            setlinkActivePos('linkActive')
+        }
     }
 
     React.useEffect(() => {
 
-        const handleScroll = () => {
-            const show = window.scrollY >= 1000
+        handleScroll()
 
-            if (show) {
-                setNavPos('navFixed')
-            } else {
-                setNavPos('navRelative')
-            }
-        }
         document.addEventListener('scroll', handleScroll)
 
         return () => {
@@ -247,23 +123,21 @@ export function Navbar1() {
         }
     }, [])
     return (
-        <>
+        <Box style={{ paddingTop: '2%' }}>
             <AppBar
                 position='static'
                 color='transparent'
-                className={clsx(classes.mainBox,
-                    // classes[navref.current]
-                )}
-            // className={classes[navref.current]}
-            //   className={classes.mainBox}
+                className={clsx(classes.mainBox, classes[navref.current])}
+                style={style}
             >
                 <Toolbar className={classes.navbar}>
                     <Box className={classes.logoBox} disableRipple disableFocusRipple disableTouchRipple edge="start" color="inherit" aria-label="menu">
 
                         {
-                            navPos ?
+                            navPos === "navRelative" ?
                                 <Fade bottom>
-                                    <img disableRipple
+                                    <img
+                                        disableRipple
                                         className={classes.logo}
                                         src={'/images/Layer_x0020_1.svg'}
                                         onClick={() => { history.push('/') }} />
@@ -278,64 +152,224 @@ export function Navbar1() {
                                 </Fade>
                         }
 
-
-
                     </Box>
 
-                    <MenuOpen className={classes.menuIcon} onClick={showMenu} />
-
-                    {showMenu}
-
-                    <Fade bottom>
-                        <ul className={classes.navUL}>
-                            <li className={classes.navLI} >
-                                <h4>
-                                    <a className={classes.navLI}
-                                        // to="/" 
-                                        href="/"
-                                        activeClassName={classes.navLinks}>Home</a>
-                                </h4>
-                            </li>
-                            <li className={classes.navLI} >
-                                <h4>
-                                    <a className={classes.navLI}
-                                        // to="/about" 
-                                        href="/about"
-                                        activeClassName={classes.navLinks}>About Us</a>
-                                </h4>
-                            </li>
-                            <li className={classes.navLI} >
-                                <Button
-                                    className={classes.navLI}
-                                    style={{ textTransform: 'none' }}
-                                    // activeClassName={classes.navLinks}
-                                    onMouseOver={openMobileMenu}>
-                                    <h4 style={{ cursor: 'pointer' }}>Industries</h4>
-                                </Button>
-
-                                {mobileMenu}
-                            </li>
-                            <li className={classes.navLI} >
-                                <Button
-                                    className={classes.navLI}
-                                    style={{ textTransform: 'none' }}
-                                    onMouseOver={openServices}>
-                                    <h4 style={{ cursor: 'pointer' }}>Services</h4>
-                                </Button>
-                                {Services}
-                            </li>
-                            <li className={classes.navLI} >
-                                <h4>
-                                    <a className={classes.navLI}
-                                        // to="/contact" 
-                                        href="/contact"
-                                        activeClassName={classes.navLinks}>Contact Us</a>
-                                </h4>
-                            </li>
-                        </ul>
+                    <Fade>
+                        <MenuOutlined
+                            className={clsx(classes.menuIcon, classes[navlinkref.current])}
+                            // onClick={() => mobileMenu === false ? setMobileMenu(true) : setMobileMenu(false)} 
+                            onClick={() => showMobileMenu()}
+                        />
                     </Fade>
-                </Toolbar>
-            </AppBar>
-        </>
+
+                    {/* <Fade bottom> */}
+                    <ul className={classes.navUL} id="menuBox">
+                        <li className={classes.navLI} onClick={() => history.push("/home")}>
+                            <h4 >
+                                <NavLink
+                                    className={clsx(classes[navlinkref.current])}
+                                    activeClassName={clsx(classes[linkactiveref.current])}
+                                    to="/home" >Home</NavLink>
+                            </h4>
+                        </li>
+
+
+                        <li className={classes.navLI} onClick={() => history.push("/about")}>
+                            <h4 >
+                                <NavLink
+                                    className={clsx(classes[navlinkref.current])}
+                                    activeClassName={clsx(classes[linkactiveref.current])}
+                                    to="/about" >About Us</NavLink>
+                            </h4>
+                        </li>
+
+
+                        {/* class onhover Mega menu */}
+                        <li className={clsx(classes[navlinkref.current], classes.navLI)}
+                            onClick={()=> showMegamenu(1)}
+                        
+                        >
+                            <h4 className={clsx(classes[navlinkref.current])}
+                                activeClassName={clsx(classes[linkactiveref.current])}
+                                style={{ padding: '0px' }}
+                                >
+                                Industries
+                                <KeyboardArrowDown className={classes.arrow} />
+                            </h4>
+
+                            <div className={classes.indMenu}
+                                id="menu1"
+                            >
+                                <MenuList
+                                    className={classes.megaMenu}
+                                >
+                                    {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                                    <MenuList>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/iot')}>IoT Platform</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/cloud')} >Cloud Solutions</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/evcharger')} >EV Charging Solutions</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/solar')}>Solar & Wind</h6>
+                                        </MenuItem>
+                                    </MenuList>
+                                    {/* <hr className={classes.hrs} /> */}
+                                    <MenuList>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/smartmeter')}>Smart Metering</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/homeauto')}>Home Automation</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/smartstreet')}>Smart Street Lights</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/railways')}>Railways</h6>
+                                        </MenuItem>
+                                    </MenuList>
+                                    {/* <hr className={classes.hrs} /> */}
+                                    <MenuList>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/gaming')}>Smart Gaming</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/smarttraffic')}>Smart Traffic Solutions</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/digital')}>Digital Signage</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push('/transformers')}>Intelligent Transformer Monitoring</h6>
+                                        </MenuItem>
+                                    </MenuList>
+                                </MenuList>
+
+                            </div>
+
+
+                        </li>
+
+
+                        {/* ############# Services ############  */}
+
+
+                        <li
+                            className={clsx(classes[navlinkref.current], classes.navLI)}
+                            activeClassName={clsx(classes[linkactiveref.current])}
+                            onClick={()=> showMegamenu(2)}
+
+                        >
+
+                            <h4 className={clsx(classes[navlinkref.current])}>
+                                Services
+                                <KeyboardArrowDown className={classes.arrow} />
+                            </h4>
+
+                            <div className={classes.indMenu}
+                                id="menu2"
+
+                            >
+
+                                <MenuList
+                                    className={classes.megaMenu}
+                                >
+                                    {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                                    <MenuList>
+                                        <MenuItem className={classes.menuItem}>
+                                            <h6 className={classes.lios} onClick={() => history.push("/ipcore")} >IP CORE/FPGA/SOC Design Services</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push("/highspeed")} > High Speed PCB Design Services</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem} >
+                                            <h6 className={classes.lios} onClick={() => history.push("/softdev")} >Software Development</h6>
+                                        </MenuItem>
+                                    </MenuList>
+                                    {/* <hr className={classes.hrs} /> */}
+                                    <MenuList>
+                                        <MenuItem className={classes.menuItem}>
+                                            <h6 className={classes.lios} onClick={() => history.push("/electronics")} >Electronics Manufacturing Solutions</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem}>
+                                            <h6 className={classes.lios} onClick={() => history.push("/testing")} >Testing & Calibration</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem}>
+                                            <h6 className={classes.lios} onClick={() => history.push("/ml")} >Machine Learning & Artificial Intelligence</h6>
+                                        </MenuItem>
+                                    </MenuList>
+                                </MenuList>
+                            </div>
+
+                        </li>
+
+
+
+                        <li
+                            className={clsx(classes[navlinkref.current], classes.navLI)}
+                            onClick={()=> showMegamenu(3)}
+
+                        >
+                            <NavLink
+                                to="#"
+                                activeClassName={clsx(classes[linkactiveref.current])}
+                                className={clsx(classes[navlinkref.current])}
+                            >
+                                <h4 className={clsx(classes[navlinkref.current])}
+                                >
+                                    Let's Connect
+                                    <KeyboardArrowDown className={classes.arrow} />
+                                </h4>
+                            </NavLink>
+
+
+                            <div className={classes.indMenu} 
+                                id="menu3"
+
+                            >
+                                <MenuList className={classes.megaMenu}>
+                                    <MenuList>
+                                        <MenuItem className={classes.menuItem}>
+                                            <h6 className={classes.lios} onClick={() => history.push("/contact")}>Contact us</h6>
+                                        </MenuItem>
+                                        <MenuItem className={classes.menuItem}>
+                                            <h6 className={classes.lios}>
+                                                <Button href="https://www.slscorp.com/about-slscorp/careers.html" style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
+                                                    <h6
+                                                        style={{
+                                                            color: 'black',
+                                                            "&:hover": {
+                                                                color: 'blue'
+                                                            }
+                                                        }}>Join us</h6>
+                                                </Button >
+                                            </h6>
+                                        </MenuItem>
+
+                                    </MenuList>
+                                </MenuList>
+                            </div>
+
+                        </li>
+                    </ul>
+                    {/* </Fade> */}
+                </Toolbar >
+                <div data-aos="slide-down">
+                    {/* {
+                        mobileMenu ?
+                            <Box className={classes.menu} >
+                                <MobileMenu />
+                                <MobileMenuWorking />
+                            </Box>
+                            : ''
+                    } */}
+                </div>
+            </AppBar >
+        </Box >
     )
 }

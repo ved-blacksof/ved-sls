@@ -1,10 +1,13 @@
 import Grid from '@egjs/grid'
 import { Box, Button, Container, Input, makeStyles, TextField } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ReCaptchaV2 from "react-google-recaptcha";
+import emailjs from 'emailjs-com'
+import swal from 'sweetalert';
 
 
 import { Buttons, GeneralHeading, MainContainer, ParagraphsBlue } from '../../atoms'
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -36,11 +39,34 @@ const useStyles = makeStyles((theme) => ({
     input: {
         margin: '4% 0%',
         width: '100%',
-        borderBottom: '2px solid white',
-        color: 'white'
+        color: 'white',
+        "& .Mui-focused": {
+            color: 'white',
+            opacity: '.6'
+        },
+        "& .Mui-FormLabel-root": {
+            color: 'white'
+        },
+        "& .MuiInputBase-root": {
+            color: 'white'
+        },
+        "& .MuiInput-underline::before": {
+            opacity: '1',
+            borderBottom: '1px solid white',
+        },
+        "& .MuiInput-underline::after": {
+            opacity: '1',
+            border: '1px solid white',
+
+        },
+        "& .MuiInput-underline:hover:before": {
+            opacity: '1',
+            borderBottom: '1px solid white',
+        },
+
     },
     cssLabel: {
-        color: 'white'
+        color: 'white',
     },
     cssFocused: {
         color: 'white'
@@ -66,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             fontSize: '.9rem',
             padding: '.3rem 1rem',
-            
+
 
         },
         "&:hover": {
@@ -100,18 +126,94 @@ const useStyles = makeStyles((theme) => ({
             transformOrigin: '0 0',
             webkitTransformOrigin: '0 0',
         },
-    }
+    },
+    // swalTitle: {
+    //     margin: '0px',
+    //     fontSize: '20px',
+    //     boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.21)',
+    //     marginBottom: '28px',
+    //   }
 }))
 
 export function Letstalk() {
     const classes = useStyles()
+    const history = useHistory()
     const [isVerified, setIsVerified] = useState(false)
+
     const [form, setForm] = useState(false)
 
-    // function onChange(value) {
-    //     console.log("Captcha value:", value);
-    //     setIsVerified(true)
-    // }
+    const [errors, setErrors] = useState({});
+    const [open, setOpen] = useState(false);
+
+    const initialFormState = {
+        name: '',
+        email: '',
+        message: '',
+    }
+
+    const [contactus, setContactus] = useState(initialFormState)
+
+
+
+    let name, value
+    const onChangeGet = (e) => {
+        // name = e.target.name
+        // value = e.target.value
+        // setContactus({ ...contactus, [name]: value })
+        // console.log(value)
+        setContactus({
+            ...contactus,
+            [e.target.name]: e.target.value,
+        });
+        let temp = { ...errors };
+        if ('name' in contactus)
+            temp.name = /^[a-zA-Z ]{2,30}$/.test(contactus.name) ? '' : 'Please enter a valid name';
+
+        if ('email' in contactus)
+            temp.email = /$^|.+@.+..+/.test(contactus.email)
+                ? ''
+                : 'Email is not valid.';
+        if ('message' in contactus) {
+            const msgLen = contactus.message.length;
+            temp.message = msgLen != 0 ? '' : 'Please leave a message for us.';
+        }
+        setErrors({
+            ...temp,
+        });
+    }
+
+
+
+    //emailjs
+    const forms = useRef();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        emailjs.sendForm('gmail-sls', 'template_0zzst6l', event.target, 'user_YW47ZYWhszMIdjdqUtsPJ')
+            .then((result) => {
+                console.log(result.text);
+                swal({
+                    title: "Success!",
+                    text: "Thankyou for Connecting with us",
+                    icon: "success",
+                    button: "Good",
+                }).then(()=>{
+                    history.push('/')
+                });
+            }, (error) => {
+                console.log(error.text);
+                swal({
+                    title: "Something went wrong!",
+                    text: "Thankyou for Connecting with us",
+                    icon: "",
+                });
+            });
+
+        event.target.reset()
+        setContactus('')
+        
+    };
+
 
     const handleToken = (token) => {
         setForm((currentForm) => {
@@ -137,88 +239,137 @@ export function Letstalk() {
                             subtitle1="We'll be glad to help you with your queries. Kindly fill-in this enquiry form and we will get back to you within 24 hours."
                             redline
                         />
+                        <form
+                            ref={forms}
+                            onSubmit={(event) => handleSubmit(event)}
+                        >
 
-                        <TextField
-                            label="Name"
-                            placeholder="John Doe"
-                            className={classes.input}
-                            variant="standard"
-                            color="black"
-                            InputLabelProps={{
-                                classes: {
-                                    root: classes.cssLabel,
-                                    focused: classes.cssFocused
-                                }
-                            }}
-                            InputProps={{
-                                classes: {
-                                    root: classes.cssOutlinedInput,
-                                    focused: classes.cssFocused,
-                                    notchedOutline: classes.notchedOutline
-                                }
-                            }}
-                        />
-                        <TextField
-                            label="Email"
-                            placeholder="example@email.com"
-                            className={classes.input}
-                            variant="standard"
-                            color="black"
-                            InputLabelProps={{
-                                classes: {
-                                    root: classes.cssLabel,
-                                    focused: classes.cssFocused
-                                }
-                            }}
-                            InputProps={{
-                                classes: {
-                                    root: classes.cssOutlinedInput,
-                                    focused: classes.cssFocused,
-                                    notchedOutline: classes.notchedOutline
-                                }
-                            }}
+                            <TextField
+                                onChange={onChangeGet}
+                                value={contactus.name}
+                                helperText={errors.name}
+                                autoComplete="off"
+                                name="name"
+                                type="text"
+                                label="Name"
+                                required
+                                placeholder="John Doe"
+                                className={classes.input}
+                                variant="standard"
+                                InputLabelProps={{
+                                    classes: {
+                                        root: classes.cssLabel,
+                                        focused: classes.cssFocused
+                                    }
+                                }}
+                                InputProps={{
+                                    classes: {
+                                        root: classes.cssOutlinedInput,
+                                        focused: classes.cssFocused,
+                                        notchedOutline: classes.notchedOutline
+                                    }
+                                }}
+                                FormHelperTextProps={{
+                                    classes:{
+                                        root: classes.cssLabel,
+                                        focused:classes.cssFocused
+                                    }
+                                }}
 
-                        />
-                        <TextField
-                            label="Message"
-                            placeholder="message"
-                            className={classes.input}
-                            variant="standard"
-                            color="black"
-                            InputLabelProps={{
-                                classes: {
-                                    root: classes.cssLabel,
-                                    focused: classes.cssFocused
-                                }
-                            }}
-                            InputProps={{
-                                classes: {
-                                    root: classes.cssOutlinedInput,
-                                    focused: classes.cssFocused,
-                                    notchedOutline: classes.notchedOutline
-                                }
-                            }}
-
-                        />
-
-                        {/* Captcha Here */}
-                        <Box className={classes.captcha}>
-                            <ReCaptchaV2
-                                // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"  //localhost
-                                // sitekey="6Lca388dAAAAANXSKi97Kd7YwQSi30N3dPeWdVyh"  //website sls-blacksof.web.app
-                                sitekey="6LfqR9AdAAAAAP7Yzt4o0LW310Dw-MiVG1rwL1Qv"  //website sls-blacksof.web.app sls-v2
-                                onChange={handleToken}
-                                onExpire={handleExpire}
                             />
-                        </Box>
+                            <TextField
+                                onChange={onChangeGet}
+                                value={contactus.email}
+                                helperText={errors.email}
+                                autoComplete="off"
+
+                                label="Email"
+                                name='email'
+                                required
+                                placeholder="example@email.com"
+                                className={classes.input}
+                                variant="standard"
+                                color="black"
+                                InputLabelProps={{
+                                    classes: {
+                                        root: classes.cssLabel,
+                                        focused: classes.cssFocused
+                                    }
+                                }}
+                                InputProps={{
+                                    classes: {
+                                        root: classes.cssOutlinedInput,
+                                        focused: classes.cssFocused,
+                                        notchedOutline: classes.notchedOutline
+                                    }
+                                }}
+                                FormHelperTextProps={{
+                                    classes:{
+                                        root: classes.cssLabel,
+                                        focused:classes.cssFocused
+                                    }
+                                }}
+
+                            />
+                            <TextField
+                                onChange={onChangeGet}
+                                value={contactus.message}
+                                helperText={errors.message}
+                                autoComplete="off"
+
+                                multiline
+                                maxRows={4}
+                                label="Message"
+                                name='message'
+                                placeholder="message"
+                                required
+                                className={classes.input}
+                                variant="standard"
+                                color="black"
+                                InputLabelProps={{
+                                    classes: {
+                                        root: classes.cssLabel,
+                                        focused: classes.cssFocused
+                                    }
+                                }}
+                                InputProps={{
+                                    classes: {
+                                        root: classes.cssOutlinedInput,
+                                        focused: classes.cssFocused,
+                                        notchedOutline: classes.notchedOutline
+                                    }
+                                }}
+                                FormHelperTextProps={{
+                                    classes:{
+                                        root: classes.cssLabel,
+                                        focused:classes.cssFocused
+                                    }
+                                }}
+
+
+                            />
+
+                            {/* Captcha Here */}
+                            <Box className={classes.captcha}>
+                                <ReCaptchaV2
+                                    sitekey='6LdFUwIeAAAAACInNHHQPr-qJg9mVhgecmTJPyEr' //https://sls-showcase-37755.web.app
+                                    onChange={handleToken}
+                                    onExpire={handleExpire}
+                                />
+                            </Box>
 
 
 
-                        <Box className={classes.btnBox}>
-                            <Button className={classes.btn} disabled={!isVerified}>
-                                Send Message
-                            </Button>
-                        </Box>
+                            <Box className={classes.btnBox}>
+                                <Button
+                                    type='submit'
+                                    className={classes.btn}
+                                    disabled={!isVerified}
+                                >
+                                    Send Message
+                                </Button>
+                            </Box>
+                        </form>
 
                     </Box>
 

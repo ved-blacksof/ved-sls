@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&::before": {
             content: "''",
-            height: '6px',
+            height: '5px',
             width: '0',
             background: '#DE141A',
             position: 'absolute',
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
             left: '5%',
             transition: 'all 800ms ease-in-out',
             [theme.breakpoints.down('sm')]: {
-                height: '5px'
+                height: '5px',
             }
         },
         "&:hover": {
@@ -71,11 +71,11 @@ const useStyles = makeStyles((theme) => ({
                 transform: 'scale(1.1)'
             },
             "&::before": {
-                height: '6px',
+                height: '5px',
                 width: '90%',
                 opacity: '1',
                 [theme.breakpoints.down('sm')]: {
-                    height: '5px'
+                    height: '4px'
                 }
             },
             "&::after": {
@@ -112,8 +112,9 @@ const useStyles = makeStyles((theme) => ({
     },
     lis: {
         color: 'black',
-        marginTop: '4%',
-        marginLeft: '5%',
+        lineHeight:'1.2',
+        marginTop: '2%',
+        marginLeft: '8%',
         "& h6": {
             color: 'black',
             display: 'inline'

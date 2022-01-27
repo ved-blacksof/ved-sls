@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
             width: '100%'
         }
     },
+    eSM: {
+        // textTransform: 'lowercase',
+        // fontWeight:'bold'
+        fontFamily: 'Access',
+    },
     head: {
         color: 'black'
     },
@@ -91,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function Paragraphs({
     title,
+    e,
     style,
     redline,
     subhead,
@@ -118,7 +124,12 @@ export function Paragraphs({
     return (
         <>
             <Box className={classes.paraBox} style={style}>
-                <h3 className={classes.head}>{title}</h3>
+                <h3 className={classes.head}
+                // dangerouslySetInnerHTML={{ __html: title }}
+                >
+                    <span className={classes.eSM}>{e}</span> 
+                    {title}
+                </h3>
                 {
                     redline ? <img className={classes.redLine} src={'/images/Component 4 – 1.svg'} /> : ''
                 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router'
 
 import {
     Box,
@@ -10,6 +11,7 @@ import { GeneralHeading, MainContainer } from '../atoms'
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     container1: {
@@ -18,18 +20,28 @@ const useStyles = makeStyles((theme) => ({
     mainTitle: {
         color: 'black',
         textAlign: 'center',
+        width: '100%',
     },
     mainBox: {
         width: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
+        overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
-            // alignItems: 'center',
-            margin: '0% auto',
+            margin: '5% auto',
         },
     },
-
+    boxWrap: {
+        marginBottom: '5%',
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: '8%',
+        },
+    },
     boxes: {
-        width: '20vw',
-        height: '19vw',
+        width: '19vw',
+        height: '18vw',
+        marginBottom: '5%',
         border: '1px solid #DCDCDC',
         boxShadow: '0px 0px 10px #00000017',
         background: 'white',
@@ -38,19 +50,19 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        // padding: "1rem",
-        // margin: '2%',
         cursor: 'pointer',
         transition: 'all 300ms ease-in-out',
         transform: 'width .6s ease-in-out',  //for red line
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
-            width: '19vw',
-            height: '19vw',
+            width: '28vw',
+            height: '28vw',
+            marginBottom: '8%',
+
         },
         [theme.breakpoints.down('xs')]: {
-            width: '35vw',
-            height: '35vw',
+            width: '80vw',
+            height:'80vw'
         },
         "&::before": {
             content: "''",
@@ -62,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
             left: '5%',
             transition: 'all 800ms ease-in-out',
             [theme.breakpoints.down('sm')]: {
-                height: '5px'
+                height: '3px'
             }
         },
         "&:hover": {
@@ -77,11 +89,13 @@ const useStyles = makeStyles((theme) => ({
                 width: '90%',
                 opacity: '1',
                 [theme.breakpoints.down('sm')]: {
-                    height: '5px'
+                    height: '3px'
                 }
             },
         },
-
+    },
+    linked: {
+        textDecoration: 'none'
     },
     imgBox: {
         width: '50%',
@@ -115,33 +129,55 @@ export function Squareboxes1({
 
     const [exit, setExit] = useState(false)
 
+    const history = useHistory()
 
     return (
         <MainContainer>
             <Container fixed className={classes.container1}>
                 <h2 className={classes.mainTitle}> {maintitle} </h2>
+
                 <br />
                 <br />
-                <Grid container spacing={2} item className={classes.mainBox}>
+
+                <Box container item className={classes.mainBox}>
 
                     {
                         data.map((item, index) => {
                             return (
-                                <Grid sm={4} xs={6} item >
-                                    <Box className={clsx(classes.boxes)}>
-                                        <Box className={classes.imgBox}>
-                                            <Bounce bottom>
-                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
-                                            </Bounce>
-                                        </Box>
-                                        <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
-                                    </Box>
-                                </Grid>
+                                <>
+                                    {
+                                        item.link ?
+                                            <Box className={clsx(classes.boxWrap)}>
+                                                <a href={item.link}
+                                                    className={classes.linked}
+                                                    target="_blank"
+                                                >
+                                                    <Box className={clsx(classes.boxes)} >
+                                                        <Box className={classes.imgBox}>
+                                                            <Bounce bottom>
+                                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
+                                                            </Bounce>
+                                                        </Box>
+                                                        <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
+                                                    </Box>
+                                                </a>
+                                            </Box>
+                                            :
+                                            <Box className={clsx(classes.boxes)} >
+                                                <Box className={classes.imgBox}>
+                                                    <Bounce bottom>
+                                                        <img className={classes.image} src={item.images} alt="Mission Icon" />
+                                                    </Bounce>
+                                                </Box>
+                                                <Fade bottom> <h4 className={classes.subTitle}>{item.subtitle} </h4></Fade>
+                                            </Box>
+                                    }
+                                </>
                             )
                         })
                     }
 
-                </Grid>
+                </Box>
             </Container>
         </MainContainer>
     )

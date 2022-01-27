@@ -75,6 +75,7 @@ export function Quality({
     mainheading,
     mainsubheading,
     imageBG,
+    e,
     heading,
     subhead,
     subtitle,
@@ -120,6 +121,7 @@ export function Quality({
                         <Box className={classes.BoxRight} style1={style1}>
                             <Bounce right>
                                 <Paragraphs
+                                    e={e}
                                     title={heading}
                                     subhead={subhead}
                                     subhead1={subhead1}

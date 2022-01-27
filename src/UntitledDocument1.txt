@@ -48,3 +48,32 @@ local host-
 site Key : 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
 
 secret key : 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
+
+sls-showcase-new
+
+siteKey : 6LfW9TceAAAAAMNILPN9rFqcAlCZNX8Jtk_iO0Ul
+secretKey : 6LfW9TceAAAAACyKsaTY_mF388DnlFLDfpvV_frk
+
+
+
+
+sls-new-capatcha-v2 - "Google Catcha" 
+
+site Key :6LdFUwIeAAAAACInNHHQPr-qJg9mVhgecmTJPyEr
+
+secret key : 6LdFUwIeAAAAAJ6OztRo25CdNHNiPdDGIuwuHl32
+
+
+
+
+
+Tabbed Carousel
+
+https://www.codeply.com/go/bp/116312
+
+
+
+
+
+

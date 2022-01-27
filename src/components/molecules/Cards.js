@@ -45,7 +45,9 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         margin: '5% 1.5%',
         [theme.breakpoints.down('sm')]: {
-            width: '70%'
+            width: '100%',
+            maxHeight: '100%',
+
         },
         '& h4': {
             color: 'black'
@@ -66,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
             maxHeight: '100%'
         },
         [theme.breakpoints.down('sm')]: {
-            height: 'fit-content',
+            maxHeight: '50vw',
         },
     },
     head: {

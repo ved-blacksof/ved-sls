@@ -24,7 +24,7 @@ export function SmarttrafficTemplate() {
                          The interoperable cloud solution is powered with IoT to set a connected and intelligent traffic ecosystem that is safe, interactive, and highly efficient."
                     // icons="icons"
                     data={smarttraffic}
-                    style={{ paddingBottom: '15%', height: 'fit-content' }}
+                    style={{ paddingBottom: '8%', height: 'fit-content' }}
                 />
             </GridBlue>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 // import "./molecule.css";
 import PropTypes from 'prop-types';
-
+import { ExpandinSM } from './ExpandinSM'
 import {
     Box,
     Container,
@@ -57,7 +57,10 @@ const useStyles = makeStyles((theme) => ({
     whiteBox: {
         marginTop: '20%',
         paddingBottom: '8%',
+        [theme.breakpoints.down('sm')]: {
+            paddingBottom: '0%',
 
+        },
     },
     expand: {
         color: 'black',
@@ -65,11 +68,13 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-
         },
     },
     blueBox: {
         background: '#182AC3',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        },
     },
     blueBoxContainer: {
 
@@ -81,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         paddingBottom: '15%',
         [theme.breakpoints.down('sm')]: {
-            display: 'none'
+            // display: 'none'
         }
     },
     leftBox: {
@@ -136,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
             height: '100%'
         },
         '&::before': {
-            // content: "''",
+            content: "''",
             height: '40%',
             width: '30%',
             background: '#D9393E',
@@ -258,10 +263,10 @@ export function Expanding() {
                                         className={classes.tabs}
                                         TabIndicatorProps={{
                                             style: {
-                                                left: '0',
-                                                width: '4px',
+                                                left: '0%',
+                                                width: '5px',
                                                 height: '22px',
-                                                marginTop: '11px',
+                                                marginTop: '12px',
                                                 borderRadius: '2px'
                                             }
                                         }}
@@ -277,10 +282,13 @@ export function Expanding() {
                                 </Box>
                             </Container>
                         </Fade>
-                        <VerticalTab />
+                        {/* <VerticalTab /> */}
+
                     </MainContainer>
 
                 </Box>
+                <ExpandinSM />
+
             </Box>
         </>
     )
