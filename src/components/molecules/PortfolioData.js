@@ -36,7 +36,7 @@ export const research = [
     // },
     {
         // images: "./images/homepage-icons/Research/research-04.jpg",
-        images: "./images/homepage-icons/Research/Manufacturing.png",
+        images: "./images/homepage-icons/Research/Manufaturing.jpg",
         text: "manufacturing"
     },
 ]
@@ -453,10 +453,10 @@ export const evchargercontrollers = [
         images: './images/evcharger/verycon_pro.jpeg',
         subtitle: 'Verycon Pro',
     },
-    {
-        images: './images/ocpp-controller_350x350.png',
-        subtitle: 'OCPP Controller',
-    },
+    // {
+    //     images: './images/ocpp-controller_350x350.png',
+    //     subtitle: 'OCPP Controller',
+    // },
 ]
 
 export const middleware = [

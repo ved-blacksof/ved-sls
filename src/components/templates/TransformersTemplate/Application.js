@@ -81,7 +81,7 @@ export function Application() {
 
             <Box style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
                 <Box className={classes.imageBox1}>
-                    <img className={classes.appImage} src={"./images/He0000e5e4bbe41f9ba7324ba2780c8a1n.png"} />
+                    <img className={classes.appImage} src={"./images/transformers/Distribution-Transformer.png"} />
 
                     <div className={classes.blueBox2}>
                         <h2 className={classes.power}>Distribution <br /> transformer</h2>

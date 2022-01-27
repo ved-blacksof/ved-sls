@@ -2,12 +2,11 @@ import Grid from '@egjs/grid'
 import { Box, Button, Container, Input, makeStyles, TextField } from '@material-ui/core'
 import React, { useRef, useState } from 'react'
 import ReCaptchaV2 from "react-google-recaptcha";
-import emailjs from 'emailjs-com'
-import swal from 'sweetalert';
-
-
 import { Buttons, GeneralHeading, MainContainer, ParagraphsBlue } from '../../atoms'
 import { useHistory } from 'react-router-dom';
+import swal from 'sweetalert';
+import emailjs from 'emailjs-com'
+
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
@@ -186,10 +185,12 @@ export function Letstalk() {
 
     //emailjs
     const forms = useRef();
+    emailjs.init('user_YW47ZYWhszMIdjdqUtsPJ')
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        emailjs.sendForm('gmail-sls', 'template_0zzst6l', event.target, 'user_YW47ZYWhszMIdjdqUtsPJ')
+        // emailjs.sendForm('service_tk297lf', 'template_iz1gops', forms.current, 'user_YW47ZYWhszMIdjdqUtsPJ')
+        emailjs.sendForm('gmail-sls', 'template_0zzst6l', forms.current, 'user_YW47ZYWhszMIdjdqUtsPJ')
             .then((result) => {
                 console.log(result.text);
                 swal({
@@ -197,8 +198,8 @@ export function Letstalk() {
                     text: "Thankyou for Connecting with us",
                     icon: "success",
                     button: "Good",
-                }).then(()=>{
-                    history.push('/')
+                }).then(() => {
+                    window.location.reload(false)
                 });
             }, (error) => {
                 console.log(error.text);
@@ -206,12 +207,14 @@ export function Letstalk() {
                     title: "Something went wrong!",
                     text: "Thankyou for Connecting with us",
                     icon: "",
+                }).then(() => {
+                    window.location.reload(false)
                 });
             });
 
         event.target.reset()
         setContactus('')
-        
+
     };
 
 
@@ -270,9 +273,9 @@ export function Letstalk() {
                                     }
                                 }}
                                 FormHelperTextProps={{
-                                    classes:{
+                                    classes: {
                                         root: classes.cssLabel,
-                                        focused:classes.cssFocused
+                                        focused: classes.cssFocused
                                     }
                                 }}
 
@@ -304,9 +307,9 @@ export function Letstalk() {
                                     }
                                 }}
                                 FormHelperTextProps={{
-                                    classes:{
+                                    classes: {
                                         root: classes.cssLabel,
-                                        focused:classes.cssFocused
+                                        focused: classes.cssFocused
                                     }
                                 }}
 
@@ -340,9 +343,9 @@ export function Letstalk() {
                                     }
                                 }}
                                 FormHelperTextProps={{
-                                    classes:{
+                                    classes: {
                                         root: classes.cssLabel,
-                                        focused:classes.cssFocused
+                                        focused: classes.cssFocused
                                     }
                                 }}
 

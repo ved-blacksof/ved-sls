@@ -32,7 +32,7 @@ export function RailwaysTemplate() {
                 mainheading="Offerings"
                 redline
                 heading="Remote monitoring system"
-                imageBG="./images/remote-monitoring-system.png"
+                imageBG="./images/railways/remote-monitoring-system.png"
                 subtitle="The RMS is our GSM and GPS-powered intelligent system which connects on-field rolling stocks to a centralized train network and management system."
                 // list
                 firstli="Live Tracking"

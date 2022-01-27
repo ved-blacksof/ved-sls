@@ -114,13 +114,13 @@ export function Research({
 
     const paginationsPlugins = new Pagination({ type: 'bullet' })
 
-    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: false });
+    const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true });
 
     const plugins = [paginationsPlugins, autoPlugins];
 
     return (
 
-        <Box style={{ position: 'relative', padding: '10% 0%', }}>
+        <Box style={{ position: 'relative', padding: '10% 0%', cursor:'pointer' }}>
             <MainContainer>
                 <Container fixed className={classes.reaserchMain} >
                     {
