@@ -83,7 +83,8 @@ export const reshape = [
         text3: "Helping switch to smarter means of mobility",
     },
     {
-        images: "./images/reshape-thirdbnner.png",
+        // images: "./images/reshape-thirdbnner.png",
+        images: "./images/homepage-icons/iot.png",
         text1: "REDEFINING INTEROPERABILITY WITH END-TO-END IOT PLATFORM",
         text2: "A heterogeneous IoT platform providing multi-protocol support for services including G3-PLC, WiFi, BLE, Sigfox, LoRa, GSM, etc.",
         text3: "Stack of feature-rich SDKs for supporting IoT deployments",

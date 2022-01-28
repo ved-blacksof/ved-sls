@@ -11,7 +11,8 @@ export function SoftDevTemplate() {
     return (
         <div>
             <Ubanner
-                Background="./images/luo-lei-Xa4pTwafe5U-unsplash1.png"
+                // Background="./images/luo-lei-Xa4pTwafe5U-unsplash1.png"
+                Background="./images/softdev/Software_Development.png"
                 maintext="software development"
                 subtext="Churning business ideas into reality"
             />
