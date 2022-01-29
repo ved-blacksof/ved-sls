@@ -92,7 +92,7 @@ export function Yalgaar({
 
                 <Box className={classes.rightBox}>
                     <Box className={classes.yImage}>
-                        <Fade bottom>  <img src={'./images/Group 49262.png'} /></Fade >
+                        <Fade bottom>  <img src={'./images/cloud/Cloud-Solutions(Yalgaar).png'} /></Fade >
                     </Box>
                 </Box>
 

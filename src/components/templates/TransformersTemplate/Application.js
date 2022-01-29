@@ -65,12 +65,12 @@ export function Application() {
         <Box className={classes.appBox}>
 
             <Box className={classes.head}>
-                <h2 style={{ color: 'black', textAlign: 'center',  }}>APPLICATIONS</h2>
+                <h2 style={{ color: 'black', textAlign: 'center', }}>APPLICATIONS</h2>
             </Box>
 
 
             <Box className={classes.imageBox1}>
-                <img className={classes.appImage} src={"./images/AdobeStock_254644877_Preview.png"} />
+                <img className={classes.appImage} src={"./images/transformers/power-transformer.png"} />
 
                 <div className={classes.blueBox1}>
                     <h2 className={classes.power}>Power <br /> Transformer</h2>

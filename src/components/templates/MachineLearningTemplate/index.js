@@ -33,7 +33,7 @@ export function MachineLearningTemplate() {
             <QualityReverse
                 heading="AI and ML based product development"
                 subtitle="Our team of AI and ML experts also help businesses develop robust and scalable AI and ML based products and services and help them bring innovative products to the market. Our teams are equipped with state-of-the-art infrastructure to help develop and launch a wide array of end-to-end solutions with faster time-to-market and post deployment support."
-                imageBG="./images/AdobeStock_387073423_Preview.png"
+                imageBG="./images/ml/products/AI-and-ML-based-product.png"
                 redline
             />
 

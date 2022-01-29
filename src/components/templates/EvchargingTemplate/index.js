@@ -32,7 +32,7 @@ export function EvchargingTemplate() {
     return (
         <>
             <Ubanner
-                Background="/images/luo-lei-Xa4pTwafe5U-unsplash.png"
+                Background="/images/evcharger/ev-banner.png"
                 maintext="EV Charging Solutions"
                 subtext="Helping in making the world EV-first!"
             />

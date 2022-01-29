@@ -37,7 +37,7 @@ export function IOTplatformTemplate({
     return (
         <div>
             <Ubanner
-                Background="./images/luo-lei-Xa4pTwafe5U-unsplash-IOT.png"
+                Background="./images/iot/iot-banner.png"
                 maintext="IOT Platform"
                 subtext="Redefining interperability with our end-to-end IoT deployment platform"
             />

@@ -9,7 +9,7 @@ export function HighspeedTemplate() {
     return (
         <div>
             <Ubanner
-                Background="./images/luo-lei-Xa4pTwafe5U-unsplash-highspeed.png"
+                Background="./images/highspeed/high-speed-banner.png"
                 maintext="High speed pcb design services"
                 subtext="End-to-end PCB design solutions"
             />

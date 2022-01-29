@@ -9,7 +9,7 @@ export function TestingTemplate() {
     return (
         <>
             <Ubanner
-                Background="./images/luo-lei-Xa4pTwafe5U-unsplash-testing.png"
+                Background="./images/testing/testing-banner.png"
                 maintext="testing and calibration"
                 // subtext="Helping companies test their product."
                 subtext="Helping build next-gen products through world-class testing and calibration infrastructure"

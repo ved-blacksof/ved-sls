@@ -11,7 +11,7 @@ export function CloudsolutionTemplate() {
     return (
         <>
             <Ubanner
-                Background="/images/luo-lei-Xa4pTwafe5U-unsplash-cloud.png"
+                Background="/images/cloud/cloud-banner.png"
                 maintext="Cloud Solutions"
                 subtext="Accelerate your business growth with our SaaS-based cloud solutions"
             />
