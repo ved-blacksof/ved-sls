@@ -386,7 +386,7 @@ export function Letstalk() {
                                 <h6> 32, D4, Phase 1, GIDC Estate </h6>
                                 <h6> V.U. Nagar : 388 121 </h6>
                                 <h6> Gujarat, India. </h6>
-                                <h6> Tel.: +91-2692-232 501/502 (Ext. 53) </h6>
+                                <h6> Tel.: +91-2692-232 501/502 (Ext. 47) </h6>
                             </Box>
                         </Box>
                         <Box style={{ marginTop: '10%' }}>
@@ -407,7 +407,7 @@ export function Letstalk() {
                             </Box>
                             <Box className={classes.address}>
                                 <h6> SLS Overseas </h6>
-                                <h6> C/O Davanti Business Solutions Ltd, </h6>
+                                {/* <h6> C/O Davanti Business Solutions Ltd, </h6> */}
                                 <h6> 20 Mortlake, 20 Mortlake High Street,</h6>
                                 <h6> London, SW14 8JN</h6>
                             </Box>

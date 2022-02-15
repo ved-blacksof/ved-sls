@@ -181,7 +181,7 @@ export function Footer() {
                     <Fade bottom>
                         <h6 className={classes.head}>
                             Over the years, we have added numerous products to our portfolio
-                            and have served as important technology partners for various verticals.
+                            and have served as leading technology partners to clients across the globe.
                         </h6>
                     </Fade>
                 </Box>

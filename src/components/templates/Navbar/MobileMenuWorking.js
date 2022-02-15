@@ -4,15 +4,16 @@ import { useHistory, NavLink, Link } from 'react-router-dom';
 import { ArrowDownward, ArrowDropDown, KeyboardArrowDown, MenuOpen } from '@material-ui/icons'
 import clsx from 'clsx'
 import Fade from 'react-reveal/Fade';
+import gsap from 'gsap/all';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-
+        
     },
     navRelative: {
         position: 'relative',
-
-
+        width:'100%',
+        
     },
     navFixed: {
         position: 'fixed',
@@ -95,7 +96,8 @@ const useStyles = makeStyles((theme) => ({
             justifyContent: 'flex-start',
             alignItems: 'center',
             // overflow:'hidden',
-            width: '85vw',
+            padding:'0 10px',
+            width: '90vw',
         },
         "&:hover": {
             "& div": {
@@ -131,8 +133,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 
-    navLiH4:{
-        border: '1px solid red', width: '100%', display: 'flex',flexWrap:'wrap', justifyContent: 'space-between'
+    navLiH4: {
+        width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'
     },
 
     arrow: {
@@ -145,8 +147,8 @@ const useStyles = makeStyles((theme) => ({
     // mega menu
     indMenu: {
         [theme.breakpoints.down('sm')]: {
-            display: 'none',
-            // left: '0%',
+            height: '0',
+            overflow: 'hidden',
             transition: 'all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)',
             animation: `$menuAnimation 800ms ease-in-out`,
             animationIterationCount: 1,
@@ -163,8 +165,8 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '0px 1px 1px #777',
         zIndex: '1',
         [theme.breakpoints.down('sm')]: {
-            width: '85vw',
-            padding: '0 .5rem',
+            width: '100vw',
+            padding: '0 0rem',
         },
     },
     menuItem: {
@@ -245,60 +247,10 @@ export function MobileMenuWorking() {
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
-
-    const [mobileMenu, setMobileMenu] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const anchorRef = useRef(null);
 
-    const handleToggle = () => {
-        // e.preventDefault()
-        setOpen((prevOpen) => !prevOpen);
-        setOpen1(false)
-        setOpen2(false)
-    };
-    const handleToggle1 = () => {
-        setOpen(false)
-        setOpen1((prevOpen) => !prevOpen);
-        setOpen2(false)
-    };
-    const handleToggle2 = () => {
-        setOpen(false)
-        setOpen1(false)
-        setOpen2((prevOpen) => !prevOpen);
-    };
-
-    //CLOSE MENU
-
-    const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-        setOpen(false)
-
-    };
-    const handleClose1 = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-        setOpen1(false)
-
-    };
-
-    const handleClose2 = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-        setOpen2(false);
-    };
-
-    function handleListKeyDown(event) {
-        if (event.key === 'Tab') {
-            event.preventDefault();
-            setOpen(false);
-        } else if (event.key === 'Escape') {
-            setOpen(false);
-        }
-    }
 
     // return focus to the button when we transitioned from !open -> open
     const prevOpen = React.useRef(open);
@@ -339,6 +291,18 @@ export function MobileMenuWorking() {
         }
     }
 
+    let indMenuRef = useRef()
+
+    const handleMenu = () => {
+        if (!isOpen) {
+            gsap.to(indMenuRef, { height: '300px', duration: .2 })
+            setIsOpen(true)
+        } else {
+            gsap.to(indMenuRef, { height: '0', duration: .2 })
+            setIsOpen(false)
+        }
+    }
+
     React.useEffect(() => {
 
         handleScroll()
@@ -374,15 +338,16 @@ export function MobileMenuWorking() {
 
 
                 {/* class onhover Mega menu */}
-                <li className={clsx(classes[navlinkref.current], classes.navLI)}>
-                    <h4 className={classes.navLiH4}
-                        activeClassName={clsx(classes[linkactiveref.current])}>
+                <li className={classes.navLI}>
+                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}
+                        activeClassName={clsx(classes[linkactiveref.current])}
+                        onClick={handleMenu}>
                         Industries
                         <KeyboardArrowDown className={classes.arrow} />
 
 
 
-                        <div className={classes.indMenu} >
+                        <div className={classes.indMenu} ref={e => indMenuRef = e}>
                             <MenuList
                                 className={classes.megaMenu}
                             >
@@ -426,7 +391,7 @@ export function MobileMenuWorking() {
                                         <h6 className={classes.lios} onClick={() => history.push('/digital')}>Digital Signage</h6>
                                     </MenuItem>
                                     <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/transformers')}>Intelligent Transformer Monitoring</h6>
+                                        <h6 className={classes.lios} onClick={() => history.push('/transformers')}>Transformer Monitoring</h6>
                                     </MenuItem>
                                 </MenuList>
                             </MenuList>

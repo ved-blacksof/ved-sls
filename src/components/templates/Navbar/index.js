@@ -10,6 +10,7 @@ import { animation } from 'react-reveal/globals';
 import { useStyles } from './Styles'
 import { MobileMenu } from './MobileMenu';
 import { MobileMenuWorking } from './MobileMenuWorking';
+import gsap from 'gsap/all';
 
 
 
@@ -123,6 +124,19 @@ export function Navbar({
         }
     }
 
+    let mobileMenuRef = useRef()
+
+    const handleMobileMenu = () => {
+        if (!mobileMenu) {
+            gsap.to(mobileMenuRef, { height: 'fit-content', duration: .2 })
+            setMobileMenu(true)
+        } else {
+            gsap.to(mobileMenuRef, { height: '0', duration: .2 })
+            setMobileMenu(false)
+        }
+    }
+
+
     React.useEffect(() => {
 
         handleScroll()
@@ -168,7 +182,7 @@ export function Navbar({
                     <Fade>
                         <MenuOutlined
                             className={clsx(classes.menuIcon, classes[navlinkref.current])}
-                            onClick={() => mobileMenu === false ? setMobileMenu(true) : setMobileMenu(false)} />
+                            onClick={handleMobileMenu} />
                     </Fade>
 
                     {/* <Fade bottom> */}
@@ -334,7 +348,7 @@ export function Navbar({
                                         <MenuItem className={classes.menuItem}>
                                             <h6 className={classes.lios}>
                                                 <Button href="https://www.slscorp.com/about-slscorp/careers.html"
-                                                        target="_blank"
+                                                    target="_blank"
                                                     style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
                                                     <h6
                                                         style={{
@@ -356,14 +370,10 @@ export function Navbar({
                     {/* </Fade> */}
                 </Toolbar >
                 <div data-aos="slide-down">
-                    {
-                        mobileMenu ?
-                            <Box className={classes.menu} >
-                                <MobileMenu />
-                                {/* <MobileMenuWorking /> */}
-                            </Box>
-                            : ''
-                    }
+                    <Box className={classes.menu} ref={(e) => mobileMenuRef = e}>
+                        <MobileMenu />
+                        {/* <MobileMenuWorking /> */}
+                    </Box>
                 </div>
             </AppBar >
         </Box >

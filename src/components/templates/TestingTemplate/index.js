@@ -108,13 +108,13 @@ export function TestingTemplate() {
             />
             <QualityReverseNew
                 subhead3="Spectrum Analyzer"
-                subtitle3="SLS offer 2 types of spectrum analyzers. The first, R&S FSP7 offers a 9KHz to 7 GHz frequency range, 1 Hz to 10 MHz resolution bandwidth and displays an average noise level of -155 dBm (1 Hz). The other, USB-SA44B offers 1 Hz to 4.4 GHz frequency range, 0.1 Hz to 250 KHz and 5 MHz resolution bandwidth with a wide dynamic range of -151 dBm to +10 dBm."
+                subtitle3="SLS offer 2 types of spectrum analyzers. The first, R&S FSP7 offers a 9KHz to 7 GHz frequency range, 1 Hz to 10MHz resolution bandwidth and displays an average noise level of -155 dBm (1 Hz). The other, USB-SA44B offers 1 Hz to 4.4 GHz frequency range, 0.1 Hz to 250 KHz and 5 MHz resolution bandwidth with a wide dynamic range of -151 dBm to +10 dBm."
                 imageBG="./images/testing/SpectrumAnalysers.jpg"
                 removeBGicons="removeBGicons"
 
             />
             <QualityReverseNew
-                subhead4="In-house anechoic chamber"
+                subhead4="In-house Anechoic Chamber"
                 subtitle4="SLS has an in-house Anechoic Chamber that is equipped with a gamut of RF capabilities offering a range of RF and pre-compliance testing. We help businesses ready their products for market deployments with strict standard and quality checks."
                 imageBG="./images/processed_2.png"
                 removeBGicons="removeBGicons"

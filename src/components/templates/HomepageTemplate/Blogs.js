@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
         // font: 'normal normal normal 1.1rem Access',
         color: 'black',
         marginTop: '3%',
-        fontWeight: 'bold',
+        // fontWeight: 'bold',
         height: '6rem',
         lineHeight: '1.2',
         [theme.breakpoints.down('sm')]: {
@@ -392,8 +392,8 @@ export function Blogs({
                                 <h6 className={classes.filterBtn} style={state.length == 9 ? active : notActive} onClick={() => { setState(realtime) }}>All</h6>
                                 {/* <h6>NEWS & EVENTS</h6>
                                 <h6 className={classes.filterBtn}>CSR</h6> */}
-                                <h6 className={classes.filterBtn} style={state.length == 4 ? active : notActive} onClick={() => filterItem('BLOGS')}>BLOGS</h6>
-                                <h6 className={classes.filterBtn} style={state.length == 5 ? active : notActive} onClick={() => filterItem('CASE STUDIES')}>CASE STUDIES</h6>
+                                <h6 className={classes.filterBtn} style={state.length == 4 ? active : notActive} onClick={() => filterItem('BLOG')}>BLOGS</h6>
+                                <h6 className={classes.filterBtn} style={state.length == 5 ? active : notActive} onClick={() => filterItem('CASE STUDY')}>CASE STUDIES</h6>
                             </Box>
                                 :
                                 ''
@@ -427,7 +427,7 @@ export function Blogs({
                                                     <Box className={classes.cardTxt}>
                                                         <Fade bottom>
                                                             {
-                                                                item.case === "BLOGS" ?
+                                                                item.case === "BLOG" ?
                                                                     <Fade><Button className={classes.smallBtn} >{item.case}</Button> </Fade>
                                                                     :
                                                                     <Fade><Button className={classes.smallBtn} style={{ background: '#DE141A', }}>{item.case}</Button> </Fade>

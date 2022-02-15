@@ -225,7 +225,7 @@ export function VerticalTab() {
                             </Fade>
                             <Fade bottom>
                                 <h6 style={{ lineHeight: '1.5' }}>
-                                    Catering to the healthcare sector through new-age intelligence, offering innovative solutions to ease diagnosis.
+                                    {/* Catering to the healthcare sector through new-age intelligence, offering innovative solutions to ease diagnosis. */}
                                 </h6>
                             </Fade>
                         </TabPanel>

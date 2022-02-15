@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
     subHead: {
         color: 'black',
-        lineHeight: '1',
+        lineHeight: '1.2',
         [theme.breakpoints.down('sm')]: {
             textAlign: 'center'
         },
@@ -98,15 +98,15 @@ export function Dnumbers() {
                     <Box className={classes.container}>
                         <Box className={classes.headBox}>
                             <Fade bottom><h2 className={classes.head}>300+</h2> </Fade>
-                            <Fade bottom><h6 className={classes.subHead}>In-house Engineers</h6></Fade>
+                            <Fade bottom><h6 className={classes.subHead}>In-House Engineers</h6></Fade>
                         </Box>
                         <Box className={classes.headBox}>
                             <Fade bottom><h2 className={classes.head}>100+</h2> </Fade>
-                            <Fade bottom><h6 className={classes.subHead}>active projects across the globe</h6></Fade>
+                            <Fade bottom><h6 className={classes.subHead}>Active Projects Across The Globe</h6></Fade>
                         </Box>
                         <Box className={classes.headBox}>
                             <Fade bottom><h2 className={classes.head}>20+</h2> </Fade>
-                            <Fade bottom><h6 className={classes.subHead}>years and counting</h6></Fade>
+                            <Fade bottom><h6 className={classes.subHead}>Years And Counting</h6></Fade>
                         </Box>
                         <Box className={classes.headBox}>
                             <Fade bottom><h2 className={classes.head}>6+</h2></Fade>

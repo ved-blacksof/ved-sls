@@ -20,22 +20,21 @@ import { reshape } from '../../molecules';
 const useStyles = makeStyles((theme) => ({
     reaserchMain: {
         position: 'relative',
-        cursor: 'pointer'
     },
     flicks: {
         width: '100%',
         "& .flicking-pagination": {
+            cursor: 'pointer',
             bottom: '4%',
         },
         "& .flicking-pagination-bullet": {
             width: '2.5rem !important',
-            height: '.20rem !important',
+            height: '.30rem !important',
             margin: '0 .2rem !important',
             borderRadius: '1rem !important',
             backgroundColor: 'rgb(255, 255, 255) !important',
             [theme.breakpoints.down('sm')]: {
-                width: '1.5rem !important',
-
+                width: '1.5rem !important'
             }
         },
         "& .flicking-pagination-bullet-active": {
@@ -48,10 +47,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        [theme.breakpoints.down('sm')]: {
+        // marginLeft:'5px',
 
-
-        }
     },
     BoxImages: {
         width: '100%',
@@ -116,7 +113,7 @@ export function Reshape() {
 
     const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true });
 
-    const plugins = [autoPlugins, paginationsPlugins];
+    const plugins = [ paginationsPlugins];
 
 
     return (
@@ -152,7 +149,7 @@ export function Reshape() {
                         }
                         <ViewportSlot >
                             {/* <span className="flicking-pagination"></span> */}
-                            <span className={clsx(classes.pagination, 'flicking-pagination')}></span>
+                            <span className={'flicking-pagination'}></span>
                         </ViewportSlot>
 
 

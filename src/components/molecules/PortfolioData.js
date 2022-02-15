@@ -74,7 +74,7 @@ export const reshape = [
         images: "./images/man-worker-firld-by-solar-panels.png",
         text1: "SETTING UP BENCHMARKS IN CLEAN ENERGY TRANSITION",
         text2: "Developed a range of BIS-approved end-to-end smart solar and wind solutions helping expedite clean energy transition across commercial and residential segments.",
-        text3: "Market leaders in multiple product domains.",
+        text3: "Market leaders in multiple product domains",
     },
     {
         images: "./images/reshape-SLS1.png",
@@ -94,7 +94,7 @@ export const reshape = [
         text1: "SPEARHEADING INNOVATION IN THE CLOUD ECOSYSTEM",
         // text2: "Business-agnostic cloud solut     ions already catered to more than ___ businesses from ____ industries.",
         text2: "Business-agnostic cloud solutions for the agile businesses of tomorrow.",
-        text3: "Reinventing how businesses expand the reach of their influence.",
+        text3: "Reinventing how businesses expand the reach of their influence",
         // br: 'br',
         // br1:'br1'
     },
@@ -171,7 +171,7 @@ export const port = [
 export const realtime = [
     {
         images: './images/homepage-icons/blogs/Second.png',
-        case: 'BLOGS',
+        case: 'BLOG',
         head: 'Memory Protection Unit',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
     },
@@ -179,7 +179,7 @@ export const realtime = [
 
     {
         images: './images/homepage-icons/blogs/case_NLG6700.png',
-        case: 'CASE STUDIES',
+        case: 'CASE STUDY',
         head: 'Robust & scalable system for data acquisition & remote monitoring for railways.',
         read: `${case1}`
     },
@@ -187,7 +187,7 @@ export const realtime = [
 
     {
         images: './images/homepage-icons/blogs/third.png',
-        case: 'BLOGS',
+        case: 'BLOG',
         head: 'Does throughput matter in USB?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/279-does-throughput-matters-in-usb.html'
@@ -196,7 +196,7 @@ export const realtime = [
 
     {
         images: './images/homepage-icons/blogs/case_NWK2RLY.png',
-        case: 'CASE STUDIES',
+        case: 'CASE STUDY',
         head: 'Remote Monitoring System for automatic control of pumps in effluent treatment plants.',
         read: `${case5}`
     },
@@ -205,7 +205,7 @@ export const realtime = [
 
     {
         images: './images/homepage-icons/blogs/fourth.jpg',
-        case: 'BLOGS',
+        case: 'BLOG',
         head: 'What differentiates FPGA from ASIC?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/277-what-differentiates-fpga-from-asic.html'
@@ -214,7 +214,7 @@ export const realtime = [
 
     {
         images: './images/homepage-icons/blogs/case_NLC1200.png',
-        case: 'CASE STUDIES',
+        case: 'CASE STUDY',
         head: 'Product for reading & monitoring ON/OFF status of devices operating at different voltages.',
         read: `${case2}`
     },
@@ -222,7 +222,7 @@ export const realtime = [
 
     {
         images: './images/homepage-icons/blogs/fifth.png',
-        case: 'BLOGS',
+        case: 'BLOG',
         head: 'What is FPGA and why is it required?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         read: 'https://www.slscorp.com/resources/blogs/160-fpga/276-what-is-fpga-and-why-is-it-required.html'
@@ -231,20 +231,20 @@ export const realtime = [
 
     {
         images: './images/homepage-icons/blogs/case_NLC1242.png',
-        case: 'CASE STUDIES',
+        case: 'CASE STUDY',
         head: 'An industry standard data acquisition system for wireless automation.',
         read: `${case3}`
     },
 
     // {
     //     images: './images/homepage-icons/blogs/Second.png',
-    //     case: 'BLOGS',
+    //     case: 'BLOG',
     //     head: 'Memory Protection Unit',
     //     read: 'https://www.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
     // },
     {
         images: './images/homepage-icons/blogs/case_NLC1110.png',
-        case: 'CASE STUDIES',
+        case: 'CASE STUDY',
         head: 'Device for sensing accurate temperature values from 0℃ to 1000℃.',
         read: `${case4}`
     },
@@ -423,7 +423,7 @@ export const evchargers = [
 export const iotOverview = [
     {
         images: './images/iot/iotOverview/57._Ready to use device-SDKs for faster time-to-market.svg',
-        text: 'Ready-to-use SDKs'
+        text: 'Ready-To-Use SDKs'
     },
     {
         images: './images/iot/iotOverview/58._Secured cloud platforms for Data Analytics & Real-time Monitoring.svg',
@@ -451,7 +451,7 @@ export const evchargercontrollers = [
         subtitle: 'Verycon 2.0',
     },
     {
-        images: './images/evcharger/verycon_pro.jpeg',
+        images: './images/evcharger/verycon_new_pro.png',
         subtitle: 'Verycon Pro',
     },
     // {
@@ -544,7 +544,7 @@ export const loc = [
     },
     {
         images: './images/cloud/loc/20._APIs for third party Integrations.svg',
-        text: 'APIs for third party Integration'
+        text: 'APIs For Third Party Integration'
     },
 ]
 
@@ -552,7 +552,7 @@ export const loc = [
 export const digital = [
     {
         images: './images/digital-signage/28._Manage your Content.svg',
-        text: 'Manage your Content'
+        text: 'Manage Your Content'
     },
     {
         images: './images/digital-signage/29._Diagnose Remotely.svg',
@@ -560,7 +560,7 @@ export const digital = [
     },
     {
         images: './images/digital-signage/30._Monitor Proof of Play.svg',
-        text: 'Monitor Proof of Play'
+        text: 'Monitor Proof Of Play'
     },
     {
         images: './images/digital-signage/31._Easy Authentication.svg',
@@ -571,11 +571,11 @@ export const digital = [
 export const cloudOverview = [
     {
         images: './images/cloud/cloudOverview/73._APIs for real-time tracking.svg',
-        text: 'APIs for real-time tracking'
+        text: 'APIs For Real-time Tracking'
     },
     {
         images: './images/cloud/cloudOverview/74._Easy to integrate.svg',
-        text: 'Easy to integrate'
+        text: 'Easy To Integrate'
     },
     {
         images: './images/cloud/cloudOverview/75._Scalable Solutions.svg',
@@ -583,7 +583,7 @@ export const cloudOverview = [
     },
     {
         images: './images/cloud/cloudOverview/76._Developer-friendly features.svg',
-        text: 'Developer-friendly features'
+        text: 'Developer-Friendly Features'
     },
 ]
 
@@ -591,19 +591,19 @@ export const cloudOverview = [
 export const smartstreet = [
     {
         images: './images/smartstreet/14._Retrofit for existing infrastructure-(RF and LoRa variants).svg',
-        text: 'Retrofit for existing infrastructure'
+        text: 'Retrofit For Existing Infrastructure'
     },
     {
         images: './images/smartstreet/13._Energy efficient with motion-& ambient light sensors.svg',
-        text: 'Energy efficient with different sensors'
+        text: 'Energy Efficient With Different Sensors'
     },
     {
         images: './images/smartstreet/15._Real-time alerts-on malfunctions.svg',
-        text: 'Real-time alerts on malfunctions'
+        text: 'Real-time Alerts On Malfunctions'
     },
     {
         images: './images/smartstreet/16._Real-time reports for lighting status,-performance, energy consumption, etc.svg',
-        text: 'Detailed reports shown in real-time'
+        text: 'Detailed Reports Shown In Real-time'
     },
 ]
 export const railwayOverview = [
@@ -644,7 +644,7 @@ export const smarttraffic = [
     {
         // images: './images/Layer_37-smarttraffic05.svg',
         images: './images/smarttraffic/Dynamic-curve-warning.jpg',
-        text: 'Dynamic Curve warning'
+        text: 'Dynamic Curve Warning'
     },
     {
         // images: './images/Layer_38-smarttraffic06.svg',
@@ -705,19 +705,19 @@ export const smarttrafficCards = [
 export const solar = [
     {
         images: './images/solar/icons/36._End-to-end Solar and Wind Solutions.svg',
-        text: 'End-to-end Solar & Wind Solutions'
+        text: 'End-To-End Solar & Wind Solutions'
     },
     {
         images: './images/solar/icons/37._Powered through IoT.svg',
-        text: 'Powered through IoT'
+        text: 'Powered Through IoT'
     },
     {
         images: './images/solar/icons/38._Real-time alerts on-abnormality detection.svg',
-        text: 'Abnormality detection in real-time'
+        text: 'Abnormality Detection In Real-time'
     },
     {
         images: './images/solar/icons/39._Real-time reports of panel-wise energy generation.svg',
-        text: 'Panel-wise energy reports in real-time'
+        text: 'Panel-Wise Energy Reports In Real-time'
     },
     // {
     //     images: './images/solar/icons/40._Predictive energy optimization.svg',
@@ -790,7 +790,7 @@ export const solarhardware1 = [
     },
     {
         images: './images/DKS_9053e.png',
-        subtitle: 'MS1700',
+        subtitle: 'MSI700',
         // para: 'The MS1700 is MNRE-certified smart micro inverter solutions that comes with 2 MPPTs. The solution provides various smart features including module-wise remote monitoring and controlling. This helps owners leverage the best output out of their solar inverters right and benefit from high energy generation as compared to regular solar panel systems.',
         link: 'https://www.getsunsights.com/micro-inverters/'
 
@@ -879,7 +879,7 @@ export const gamingapplications = [
 export const gamingOverview = [
     {
         images: './images/gaming/33._Android and iOS App control.svg',
-        text: 'Android & iOS App control'
+        text: 'Android & iOS App Control'
     },
     {
         images: './images/gaming/34._Wi-Fi Connectivity.svg',
@@ -887,7 +887,7 @@ export const gamingOverview = [
     },
     {
         images: './images/gaming/35._Cloud for online and-offline mode operations.svg',
-        text: 'Cloud for online & offline mode'
+        text: 'Cloud For Online & Offline Mode'
     }
 ]
 
@@ -993,7 +993,7 @@ export const technologystack = [
         images: './images/BlueIcons -20-04.svg',
         number: '04',
         title: 'Databases',
-        subtitle: 'PostGreSQL, MySQL, MSSQL, MongoDB, Cassandra, sqlite'
+        subtitle: 'PostGreSQL, MySQL, MSSQL, MongoDB, Cassandra, SQLite'
     },
     {
         images: './images/BlueIcons -20-06.svg',

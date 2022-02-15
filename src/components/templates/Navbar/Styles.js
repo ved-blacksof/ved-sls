@@ -72,7 +72,7 @@ export const useStyles = makeStyles((theme) => ({
     navUL: {
         display: 'flex',
         listStyle: 'none',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             display: 'none'
         }
     },
@@ -249,7 +249,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     menuIcon: {
         display: 'none',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             display: 'block',
             fontSize: '2.2rem',
         }
@@ -260,8 +260,9 @@ export const useStyles = makeStyles((theme) => ({
         color: 'black'
     },
     menu: {
-
         [theme.breakpoints.down('sm')]: {
+            height:'0',
+            overflow:'hidden',
             width: '100%',
             paddingBottom: '1%',
             transition: 'all 4s ease-in-out',

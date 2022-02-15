@@ -239,7 +239,7 @@ export function Expanding() {
                                 </Fade>
                                 <Fade bottom>
                                     <h6 style={{ lineHeight: '1.5' }}>
-                                        Catering to the healthcare sector through new-age intelligence, offering innovative solutions to ease diagnosis.
+                                        Our AI and ML capabilities enables us to deliver custom and end-to-end solutions pertaining to a wide array of industries.
                                     </h6>
                                 </Fade>
                             </TabPanel>
