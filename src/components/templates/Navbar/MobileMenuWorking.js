@@ -8,12 +8,12 @@ import gsap from 'gsap/all';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-        
+
     },
     navRelative: {
         position: 'relative',
-        width:'100%',
-        
+        width: '100%',
+
     },
     navFixed: {
         position: 'fixed',
@@ -96,7 +96,7 @@ const useStyles = makeStyles((theme) => ({
             justifyContent: 'flex-start',
             alignItems: 'center',
             // overflow:'hidden',
-            padding:'0 10px',
+            padding: '0 10px',
             width: '90vw',
         },
         "&:hover": {
@@ -291,14 +291,14 @@ export function MobileMenuWorking() {
         }
     }
 
-    let indMenuRef = useRef()
+    let indMenuRef = useRef([])
 
     const handleMenu = () => {
         if (!isOpen) {
-            gsap.to(indMenuRef, { height: '300px', duration: .2 })
+            gsap.to(indMenuRef.current, { height: '300px', duration: .2 })
             setIsOpen(true)
         } else {
-            gsap.to(indMenuRef, { height: '0', duration: .2 })
+            gsap.to(indMenuRef.current, { height: '0', duration: .2 })
             setIsOpen(false)
         }
     }
@@ -347,7 +347,7 @@ export function MobileMenuWorking() {
 
 
 
-                        <div className={classes.indMenu} ref={e => indMenuRef = e}>
+                        <div className={classes.indMenu} ref={e => indMenuRef.current[1] = e}>
                             <MenuList
                                 className={classes.megaMenu}
                             >
@@ -405,13 +405,47 @@ export function MobileMenuWorking() {
 
 
                 <li
-                    className={clsx(classes[navlinkref.current], classes.navLI)}
+                    className={classes.navLI}
                     activeClassName={clsx(classes[linkactiveref.current])}
                 >
-                    <h4 className={clsx(classes[navlinkref.current])}>
+                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}>
                         Services
                         <KeyboardArrowDown className={classes.arrow} />
                     </h4>
+
+                    {/* SERVICES MENU */}
+
+                    <div className={classes.indMenu} ref={e => indMenuRef.current[2] = e}>
+
+                        <MenuList
+                            className={classes.megaMenu}
+                        >
+                            {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                            <MenuList>
+                                <MenuItem className={classes.menuItem}>
+                                    <h6 className={classes.lios} onClick={() => history.push("/ipcore")} >IP CORE/FPGA/SOC Design Services</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push("/highspeed")} > High Speed PCB Design Services</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push("/softdev")} >Software Development</h6>
+                                </MenuItem>
+                            </MenuList>
+                            {/* <hr className={classes.hrs} /> */}
+                            <MenuList>
+                                <MenuItem className={classes.menuItem}>
+                                    <h6 className={classes.lios} onClick={() => history.push("/electronics")} >Electronics Manufacturing Solutions</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem}>
+                                    <h6 className={classes.lios} onClick={() => history.push("/testing")} >Testing & Calibration</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem}>
+                                    <h6 className={classes.lios} onClick={() => history.push("/ml")} >Machine Learning & Artificial Intelligence</h6>
+                                </MenuItem>
+                            </MenuList>
+                        </MenuList>
+                    </div>
                 </li>
 
 
@@ -419,11 +453,36 @@ export function MobileMenuWorking() {
                 <li
                     className={clsx(classes[navlinkref.current], classes.navLI)}
                 >
-                    <h4 className={clsx(classes[navlinkref.current])}
-                    >
+                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}>
                         Let's Connect
                         <KeyboardArrowDown className={classes.arrow} />
                     </h4>
+
+                    <div className={classes.indMenu} ref={e => indMenuRef.current[3] = e}>
+                        <MenuList className={classes.megaMenu}>
+                            <MenuList>
+                                <MenuItem className={classes.menuItem}>
+                                    <h6 className={classes.lios} onClick={() => history.push("/contact")}>Contact us</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem}>
+                                    <h6 className={classes.lios}>
+                                        <Button href="https://www.slscorp.com/about-slscorp/careers.html"
+                                            target="_blank"
+                                            style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
+                                            <h6
+                                                style={{
+                                                    color: 'black',
+                                                    "&:hover": {
+                                                        color: 'blue'
+                                                    }
+                                                }}>Join us</h6>
+                                        </Button >
+                                    </h6>
+                                </MenuItem>
+
+                            </MenuList>
+                        </MenuList>
+                    </div>
 
                 </li>
             </ul>
