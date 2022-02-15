@@ -168,8 +168,8 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     boxes: {
-        width: '17vw',
-        height: '17vw',
+        width: '18vw',
+        height: '19vw',
         border: '1px solid #dcdcdc70',
         boxShadow: '0px 0px 10px #00000017',
         background: 'white',
@@ -184,13 +184,17 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         transition: 'all 300ms ease-in-out',
         transform: 'width .6s ease-in-out',  //for red line
+        [theme.breakpoints.down('md')]: {
+            width: '20vw',
+            height: '21vw',
+        },
         [theme.breakpoints.down('sm')]: {
             width: '12rem',
             height: '12rem'
         },
         '& h4': {
             color: 'black',
-            lineHeight:'1.2'
+            lineHeight: '1.2'
         },
         '& h6': {
             color: 'black'
@@ -213,7 +217,7 @@ const useStyles = makeStyles((theme) => ({
             boxShadow: '0px 0px 10px #00000017',
             border: '1px solid white',
             "& $imgBox": {
-                transform: 'scale(1.1)'
+                transform: 'scale(1.15)'
             },
             "&::before": {
                 height: '5px',
@@ -226,9 +230,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     imgBox: {
-        width: '60%',
+        width: '80%',
         transition: 'all 500ms ease-in-out',
-        marginBottom: '2%'
+        marginBottom: '6%',
     },
     image: {
         width: '100%',
@@ -455,7 +459,7 @@ export function Realtime({
                                                                         <a href="/" >{item.read}</a>
                                                                     </h4>
                                                                     {
-                                                                        download ? <Button className={classes.smallBtn} >Download </Button> : ''
+                                                                        download ? <Button className={classes.smallBtn} > Download </Button> : ''
                                                                     }
                                                                 </Fade>
                                                             </Box>
@@ -497,7 +501,7 @@ export function Realtime({
                                                             <h4 className={classes.cardHead}>{item.head}</h4>
                                                             <h6 className={classes.cardSubHead}>{item.para}</h6>
                                                             <p className={classes.readMore}>
-                                                                <a href={`${item.read}`}  target="_blank">DOWNLOAD</a>
+                                                                <a href={`${item.read}`} target="_blank">DOWNLOAD</a>
                                                             </p>
                                                             {
                                                                 download ?

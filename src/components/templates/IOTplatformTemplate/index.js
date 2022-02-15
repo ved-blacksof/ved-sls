@@ -73,12 +73,11 @@ export function IOTplatformTemplate({
                 title="HARDWARE OFFERINGs"
                 squarecarddata={iotnebulink}
                 carouselIndicatorSM="carouselIndicatorSM"
-                // style={{ opacity: '0' }}
             />
 
             <Realtime
-                squarecarddata={middleware}
                 title="Software Offerings"
+                squarecarddata={middleware}
             />
 
             <Visit1

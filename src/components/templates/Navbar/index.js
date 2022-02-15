@@ -371,8 +371,8 @@ export function Navbar({
                 </Toolbar >
                 <div data-aos="slide-down">
                     <Box className={classes.menu} ref={(e) => mobileMenuRef = e}>
-                        <MobileMenu />
-                        {/* <MobileMenuWorking /> */}
+                        {/* <MobileMenu /> */}
+                        <MobileMenuWorking />
                     </Box>
                 </div>
             </AppBar >
