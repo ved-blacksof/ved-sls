@@ -55,8 +55,8 @@ export function DigitalTemplate() {
             />
 
             <Visit1
-                goto="Reinvent how your brand advertises and connects."
-                title="Visit website"
+                goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
+                title="Visit Website"
                 rightlogo="./images/digital-signage/digital_signage_logo.png"
                 href={"http://www.digitalsyne.com/"}
             />

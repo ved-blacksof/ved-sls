@@ -82,7 +82,7 @@ export function IOTplatformTemplate({
 
             <Visit1
                 goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
-                title="Visit website"
+                title="Visit Website"
                 href="https://www.nebulae.io/"
                 rightlogo="./images/iot/Nebulae.png"
             />

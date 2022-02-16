@@ -195,7 +195,7 @@ export function Letstalk() {
                 console.log(result.text);
                 swal({
                     title: "Success!",
-                    text: "Thankyou for Connecting with us",
+                    text: "Thankyou for connecting with us.",
                     icon: "success",
                     button: "Good",
                 }).then(() => {
@@ -205,7 +205,7 @@ export function Letstalk() {
                 console.log(error.text);
                 swal({
                     title: "Something went wrong!",
-                    text: "Thankyou for Connecting with us",
+                    text: "Thankyou for connecting with us",
                     icon: "",
                 }).then(() => {
                     window.location.reload(false)

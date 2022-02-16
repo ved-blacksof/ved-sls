@@ -59,7 +59,7 @@ export function SmarttrafficTemplate() {
 
             <Visit1
                 goto="Switch to Smart Traffic Management now!"
-                title="Visit website"
+                title="Visit Website"
                 href="https://www.iotraffic.io/"
             />
 

@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '100%',
     },
     subText: {
-        fontWeight:'bold',
+        // fontWeight:'bold',
         color: 'black',
         textDecoration: 'none',
         cursor: 'pointer',

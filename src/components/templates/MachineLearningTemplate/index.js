@@ -42,7 +42,7 @@ export function MachineLearningTemplate() {
 
             <Visit1
                 goto="Find out how we can help your business with AI and ML solutions"
-                title="Contact us"
+                title="Contact Us"
                 href={"/contact"}
 
             />

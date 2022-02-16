@@ -123,7 +123,7 @@ export function TestingTemplate() {
 
             <Visit1
                 goto="Click here to know more about our testing and calibration services!"
-                title="Contact us"
+                title="Contact Us"
                 href={"/contact"}
             />
 

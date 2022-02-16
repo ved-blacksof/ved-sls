@@ -13,7 +13,7 @@ export function ContactusTemplate() {
         <>
             <Ubanner
                 Background="/images/luo-lei-Xa4pTwafe5U-unsplash-contactus.png"
-                maintext="Contact us"
+                maintext="Contact Us"
                 subtext="We would love to connect with you to discuss your ideas. Reach out to us anytime."
             />
 

@@ -429,7 +429,7 @@ export function MobileMenu() {
                                                 {/* <hr className={classes.hrs} /> */}
                                                 <MenuList>
                                                     <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/smartstreet')}><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Street Lights</NavLink ></h6>
+                                                        <h6 onClick={() => history.push('/smartstreet')}><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Street Lighting</NavLink ></h6>
                                                     </MenuItem>
                                                     <MenuItem className={classes.menuItem} >
                                                         <h6 onClick={() => history.push('/railways')}><NavLink to="/railways" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Railways</NavLink ></h6>
@@ -526,7 +526,7 @@ export function MobileMenu() {
                                                     </MenuItem>
 
                                                     <MenuItem className={classes.menuItem}>
-                                                        <h6 ><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Solutions</NavLink ></h6>
+                                                        <h6 ><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Services</NavLink ></h6>
                                                     </MenuItem>
                                                     <MenuItem className={classes.menuItem}>
                                                         <h6 ><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Testing & Calibration</NavLink ></h6>
@@ -598,7 +598,7 @@ export function MobileMenu() {
                                             <MenuList>
                                                 <MenuItem className={classes.menuItem}>
                                                     <h6 >
-                                                        <NavLink to="/contact" className={classes.lios} onClick={handleClose2} >Contact us</NavLink >
+                                                        <NavLink to="/contact" className={classes.lios} onClick={handleClose2} >Contact Us</NavLink >
                                                     </h6>
                                                 </MenuItem>
 

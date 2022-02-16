@@ -34,7 +34,7 @@ export function EvchargingTemplate() {
             <Ubanner
                 Background="/images/evcharger/ev-banner.png"
                 maintext="EV Charging Solutions"
-                subtext="Helping in making the world EV-first!"
+                subtext="Helping in making the world EV-first"
             />
 
 
@@ -46,8 +46,7 @@ export function EvchargingTemplate() {
                     path="Industries / EV Charging Infrastructure"
                     sub1="Paving a way for an EV-First universe, SLS has been an enabler in setting the 
                     critical EV Charging Infrastructure in India and across the world. We offer indigenously 
-                    manufactured OCPP-Compliant EV Chargers with state-of-the-art hardware and software powered with IoT. 
-                    Our chargers range from Type 2 AC 3.3kW-22kW to Bharat AC 001 from 3.3kW- 7.4kW."
+                    manufactured OCPP-Compliant EV Chargers with state-of-the-art hardware and software powered with IoT."
                 />
             </GridBlue>
 
@@ -93,8 +92,8 @@ export function EvchargingTemplate() {
                 list
                 firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
                 secli="Dynamic load management capabilities"
-                thirdli="ROI Analytics"
-                fourthli="Partner/Fleet management"
+                thirdli="ROI analytics"
+                fourthli="Partner/fleet management"
                 images='./images/dashboards/verde-DB.png'
             />
 
@@ -103,7 +102,7 @@ export function EvchargingTemplate() {
             <MainContainer>
                 <Visit1
                     goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
-                    title="Visit website"
+                    title="Visit Website"
                     href="https://www.verdemobility.com/"
                     rightlogo="./images/evcharger/1.png"
                 />

@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Squareboxes1, Visit, Visit1 } from '../../molecules'
+import { Ubanner, Overview, Squareboxes1, Visit, Visit1, Realtime } from '../../molecules'
 import { homeproducts, homeAutoOverview } from '../../molecules/PortfolioData'
 import { MainContainer } from '../../atoms'
 
@@ -63,21 +63,30 @@ export function HomeautomationTemplate({
             </GridBlue>
 
 
-            <Squareboxes1
+            {/* <Squareboxes1
                 maintitle="Products"
                 data={homeproducts}
+            /> */}
+
+            <Realtime
+                maintitle="Products"
+                squarecarddata={homeproducts}
             />
+            {/* <Squareboxes1
+                maintitle="Products"
+                data={homeproducts}
+            /> */}
 
-            <Homeapplication />
+            {/* <Homeapplication /> */}
 
+            {/* <br />
             <br />
-            <br />
-            <br />
+            <br /> */}
 
             <MainContainer>
                 <Visit1
                     goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
-                    title="Visit website"
+                    title="Visit Website"
                     href="https://www.konnsys.com/"
                     rightlogo="./images/homeautomation/Konnsys.png"
                 />

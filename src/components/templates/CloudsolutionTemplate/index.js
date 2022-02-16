@@ -24,7 +24,7 @@ export function CloudsolutionTemplate() {
                     path="Industries / Cloud Solutions"
                     sub1="Spearheading innovation in the cloud ecosystem, SLS provides a range of business-agnostic 
                     cloud-based products and services for agile and smart businesses of tomorrow. 
-                    Reinvent how you expand your business reach with our electrifying cloud products and services."
+                    Reinvent how you expand your business reach with our cloud products and services."
 
                     mapIconPosition="mapIconPosition"
                     data={cloudOverview}

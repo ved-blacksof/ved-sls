@@ -1,16 +1,18 @@
 import React, { useRef, useState } from 'react'
+import clsx from 'clsx';
+//data & components
+import { GeneralHeading, MainContainer } from '../../atoms'
+import { realtime } from '../../molecules/PortfolioData';
+//material ui
+import { makeStyles, Container, Box, Button } from '@material-ui/core'
+import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
+//React Slick Carousle
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import './styled.css'
-import { makeStyles, Container, Box, Button } from '@material-ui/core'
-import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons'
-import { GeneralHeading, MainContainer } from '../../atoms'
+//animation
 import Fade from 'react-reveal/Fade';
-import clsx from 'clsx';
-import { realtime } from '../../molecules/PortfolioData';
 import Aos from 'aos'
-
 
 const useStyles = makeStyles((theme) => ({
     realText: {
@@ -106,14 +108,12 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     cardHead: {
-        // font: 'normal normal normal 1.1rem Access',
         color: 'black',
         marginTop: '3%',
-        // fontWeight: 'bold',
-        height: '6rem',
+        height: '4.5rem',
         lineHeight: '1.2',
         [theme.breakpoints.down('sm')]: {
-            height: '4rem',
+            height: '3.5rem',
         }
     },
     cardSubHead: {
@@ -121,7 +121,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3%'
     },
     readMore: {
-        // font: 'normal normal normal 1.2rem BebasNeue',
         marginTop: '3%',
         "& a": {
             fontFamily: 'BebasNeue',
@@ -139,7 +138,6 @@ const useStyles = makeStyles((theme) => ({
     filterBtn: {
         background: 'transparent',
         border: 'none',
-        // color: '#182AC3',
         fontWeight: 'bold',
         marginRight: '3%',
         cursor: 'pointer',
@@ -434,7 +432,7 @@ export function Blogs({
 
                                                             }
 
-                                                            <h4 className={classes.cardHead}>{item.head}</h4>
+                                                            <h6 className={classes.cardHead}>{item.head}</h6>
 
                                                             <h6 className={classes.cardSubHead}>{item.para}</h6>
 

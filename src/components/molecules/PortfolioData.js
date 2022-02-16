@@ -79,7 +79,7 @@ export const reshape = [
     {
         images: "./images/reshape-SLS1.png",
         text1: "TURNKEY SOLUTIONS PROVIDER FOR EV CHARGING INDUSTRY",
-        text2: "Easy-to-integrate EV Charging Solutions helping create the most innovative range of products, maximizing ROI and operational efficiencies.",
+        text2: "Offering the most innovative range of EV Charging solutions to help businesses scale, boost operational efficiency, and maximize ROI.",
         text3: "Helping switch to smarter means of mobility",
     },
     {
@@ -140,7 +140,7 @@ export const port = [
     },
     {
         images: './images/homepage-icons/8._Smart_Street_Light.svg',
-        text: 'Smart Street Lights',
+        text: 'Smart Street Lighting',
         link: 'smartstreet'
     },
     {
@@ -512,19 +512,19 @@ export const yalgar = [
 export const transSmartFirm = [
     {
         images: './images/transformers/iconsOverview/47._Handles arithmetic and logical operations.svg',
-        text: 'Handles arithmetic and logical operations'
+        text: 'Handles Arithmetic And Logical Operations'
     },
     {
         images: './images/transformers/iconsOverview/48._Data collection at unit levels.svg',
-        text: 'Data collection at unit levels'
+        text: 'Data Collection At Unit Levels'
     },
     {
         images: './images/transformers/iconsOverview/49._Monitors communication with the cloud.svg',
-        text: 'Monitors communication with the cloud'
+        text: 'Monitors Communication With The Cloud'
     },
     {
         images: './images/transformers/iconsOverview/50._Communication with DTMS mobile app.svg',
-        text: 'Communication with DTMS mobile app'
+        text: 'Communication With DTMS Mobile App'
     },
 ]
 
@@ -556,7 +556,7 @@ export const digital = [
     },
     {
         images: './images/digital-signage/29._Diagnose Remotely.svg',
-        text: 'Diagnose Remotely'
+        text: 'Remote Diagnose'
     },
     {
         images: './images/digital-signage/30._Monitor Proof of Play.svg',
@@ -713,11 +713,11 @@ export const solar = [
     },
     {
         images: './images/solar/icons/38._Real-time alerts on-abnormality detection.svg',
-        text: 'Abnormality Detection In Real-time'
+        text: 'Real-time Abnormality Detection'
     },
     {
         images: './images/solar/icons/39._Real-time reports of panel-wise energy generation.svg',
-        text: 'Panel-Wise Energy Reports In Real-time'
+        text: 'Real-time Panel-Wise Energy Reports'
     },
     // {
     //     images: './images/solar/icons/40._Predictive energy optimization.svg',
@@ -783,20 +783,20 @@ export const solarhardware = [
 
 export const solarhardware1 = [
     {
-        images: './images/Micro Inverter 2 (1).png',
+        images: './images/solar/hproducts/Micro Inverter 2 (1).png',
         subtitle: 'MSI1500',
         // para: 'The MSI1500 is MNRE-certified smart micro inverter solutions with IEC Compliance and IP67 Rated (NEMA6) enclosure environmental rating. Our user-friendly GPRS monitoring system helps to operate and remotely change electrical parameters of the inverter hassle-free. It has portable microinverter products inclusive of 4 MPPTs .The smart-grid ready system provides an easy installation and supports ground fault detection.',
         link: 'https://www.getsunsights.com/micro-inverters/'
     },
     {
-        images: './images/DKS_9053e.png',
+        images: './images/solar/hproducts/DKS_9053e.png',
         subtitle: 'MSI700',
         // para: 'The MS1700 is MNRE-certified smart micro inverter solutions that comes with 2 MPPTs. The solution provides various smart features including module-wise remote monitoring and controlling. This helps owners leverage the best output out of their solar inverters right and benefit from high energy generation as compared to regular solar panel systems.',
         link: 'https://www.getsunsights.com/micro-inverters/'
 
     },
     {
-        images: './images/1.0-solar.png',
+        images: './images/solar/hproducts/1.0-solar.png',
         subtitle: 'Universal Stick Logger',
         // para: 'The Universal Stick Logger is an all-inverter compatible device that when attached enables the user to monitor and control the parameters of that inverter. It’s a solution that caters retrofit features and enables users to smartify their existing solar infrastructure.',
         link: 'https://www.getsunsights.com/universal-inverter-stick-logger/'
@@ -1211,7 +1211,7 @@ export const homeproducts = [
     },
     {
         images: './images/Multi-function.png',
-        subtitle: 'Multi-function Button',
+        subtitle: 'Multi-Function Button',
         link: 'https://www.konnsys.com/Home/TheHub#multi_function_button'
     },
     {
@@ -1225,7 +1225,7 @@ export const homeproducts = [
         link: 'https://www.konnsys.com/Home/SmokeDetector'
     },
     {
-        images: './images/three_gang.png',
+        images: './images/three_gang_switch.png',
         subtitle: 'Gang Switch',
         link: 'https://www.konnsys.com/Home/GangWallSwitch'
     },

@@ -64,8 +64,8 @@ export function ChargingMangement() {
                                                 list
                                                 firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
                                                 secli="Dynamic load management capabilities"
-                                                thirdli="ROI Analytics"
-                                                fourthli="Partner/Fleet management"
+                                                thirdli="ROI analytics"
+                                                fourthli="Partner/fleet management"
                                             />
                                         </Fade>
                                     </Box>

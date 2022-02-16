@@ -158,8 +158,8 @@ export function MeterTabs() {
                             // list
                             firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
                             secli="Dynamic load management capabilities"
-                            thirdli="ROI Analytics"
-                            fourthli="Partner/Fleet management"
+                            thirdli="ROI analytics"
+                            fourthli="Partner/fleet management"
                             images='./images/dashboards/SmartMeteringDashboard.png'
                         />
 
@@ -173,8 +173,8 @@ export function MeterTabs() {
 
 
                         <Visit1
-                            goto="Switch to a smarter way of Metering"
-                            title="Contact us"
+                            goto="Switch to a smarter way of Metering!"
+                            title="Contact Us"
                             href={"/contact"}
                         />
                     </Box>
@@ -215,8 +215,8 @@ export function MeterTabs() {
                         />
 
                         <Visit1
-                            goto="Switch to a smarter way of Metering"
-                            title="Visit website"
+                            goto="Switch to a smarter way of Metering!"
+                            title="Visit Website"
                             href={"http://www.smets2design.com/"}
                         />
                     </Box>

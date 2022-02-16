@@ -78,11 +78,11 @@ export function MobileApplication() {
                             subtitle="We offer a white-label end-user mobile application that lets your customer 
                                     utilize your EV Charging services worldwide."
                             list="list"
-                            firstli="Android and iOS Support"
-                            secli="Shows Real-time Charge Status"
-                            thirdli="UPI, Credit, and Online Payment Options"
-                            fourthli="Slot Reservation"
-                            fifthli="Option for an Offline Wallet"
+                            firstli="Android and iOS support"
+                            secli="Shows Real-time charge status"
+                            thirdli="UPI, credit, and online payment options"
+                            fourthli="Slot reservation"
+                            fifthli="Option for an offline wallet"
                             redline="redline"
                         />
                     </Fade>

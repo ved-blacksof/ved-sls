@@ -25,7 +25,6 @@ export function SmartmeteringTemplate() {
                     sub1="SLS has been a pioneer in developing world-class and technology-first smart metering infrastructure across the globe. 
                     With a versatile product and technology portfolio, we have successfully completed a quantum of projects for national and international 
                     entities, setting an unprecedented benchmark in the smart metering landscape."
-
                 />
             </GridBlue>
 

@@ -46,15 +46,15 @@ export function TransformersTemplate() {
 
             <SoftOfferingsBlue
                 maintitle="Software offering"
-                title="Smart Portal"
+                title="DTMS Portal"
                 subtitle="DTMS Portal represents all the monitored and historical data related to energy and other important parameters exactly in one place."
                 list
-                firstli="User Management"
-                secli="Data Collection & Analysis"
+                firstli="User management"
+                secli="Data collection & analysis"
                 thirdli="Graphical representation of real-time and historical data"
-                fourthli="Alarm Management"
-                fifthli="Fault Management"
-                sixthli="Transformer Management"
+                fourthli="Alarm management"
+                fifthli="Fault management"
+                sixthli="Transformer management"
                 images='./images/dashboards/transformer-DB.png'
             />
 
@@ -62,7 +62,7 @@ export function TransformersTemplate() {
 
             <Visit1
                 goto="Want to know more about this offering?"
-                title="Contact us"
+                title="Contact Us"
                 href={"/contact"}
             />
 

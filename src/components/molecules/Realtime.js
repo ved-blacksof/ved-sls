@@ -167,9 +167,14 @@ const useStyles = makeStyles((theme) => ({
 
         }
     },
+    boxesWrapper: {
+        // margin: '1rem',
+        // width:'100%',
+        // border:'1px solid red'
+    },
     boxes: {
-        width: '18vw',
-        height: '19vw',
+        width: '90%',
+        height: '24vw',
         border: '1px solid #dcdcdc70',
         boxShadow: '0px 0px 10px #00000017',
         background: 'white',
@@ -179,18 +184,20 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
         padding: "1rem",
-        margin: '0% 4%',
+        margin: '0% auto',
         cursor: 'pointer',
         position: 'relative',
         transition: 'all 300ms ease-in-out',
         transform: 'width .6s ease-in-out',  //for red line
-        [theme.breakpoints.down('md')]: {
-            width: '20vw',
-            height: '21vw',
-        },
         [theme.breakpoints.down('sm')]: {
-            width: '12rem',
-            height: '12rem'
+            width: '80%',
+            height: '35vw',
+            marginLeft: '.5rem',
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '80%',
+            height: '70vw',
+            marginLeft: '.5rem',
         },
         '& h4': {
             color: 'black',
@@ -209,7 +216,8 @@ const useStyles = makeStyles((theme) => ({
             left: '5%',
             transition: 'all 800ms ease-in-out',
             [theme.breakpoints.down('sm')]: {
-                height: '5px'
+                height: '5px',
+                display:'none'
             }
         },
         "&:hover": {
@@ -229,28 +237,27 @@ const useStyles = makeStyles((theme) => ({
             },
         },
     },
+    colorTxt: {
+        color: 'black',
+        textAlign: 'center',
+    },
     imgBox: {
         width: '80%',
-        transition: 'all 500ms ease-in-out',
+        height: '15vw',
+        transition: 'all 300ms ease-in-out',
         marginBottom: '6%',
+        display: 'flex',
+        alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+            height: 'fit-content',
+        },
     },
     image: {
         width: '100%',
-        maxHeight: '100%'
+        maxHeight: '100%',
+        objectFit: 'center',
     },
-    // imgBox: {
-    //     height: "100%",
-    //     transition: 'all .3s ease-in-out',
-    //     "& img": {
-    //         transition: 'all 500ms ease-in-out',
-    //         width: '100%',
-    //         maxHeight: '100%',
-    //     },
-    // },
-    // image: {
-    //     width: '100%',
-    //     maxHeight: '100%'
-    // },
     iconBox: {
         margin: '15% 0%',
         width: '100%',
@@ -531,22 +538,30 @@ export function Realtime({
                                                 {
                                                     item.link ?
                                                         <Box>
-                                                            <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
+                                                            <a href={item.link} className={classes.boxesWrapper} style={{ textDecoration: 'none' }} target="_blank">
                                                                 <Box className={classes.boxes}>
                                                                     <Box className={classes.imgBox}>
                                                                         <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                                     </Box>
-                                                                    <h4>{item.subtitle} </h4>
+                                                                    {/* <h4>{item.subtitle} </h4> */}
+                                                                    <Box>
+                                                                        <h4 className={classes.colorTxt}>{item.subtitle} </h4>
+                                                                    </Box>
                                                                 </Box>
                                                             </a>
                                                         </Box>
                                                         :
-
-                                                        <Box className={classes.boxes}>
-                                                            <Box className={classes.imgBox}>
-                                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
-                                                            </Box>
-                                                            <h4>{item.subtitle} </h4>
+                                                        <Box>
+                                                            <a className={classes.boxesWrapper}>
+                                                                <Box className={classes.boxes}>
+                                                                    <Box className={classes.imgBox}>
+                                                                        <img className={classes.image} src={item.images} alt="Mission Icon" />
+                                                                    </Box>
+                                                                    <Box>
+                                                                        <h4 className={classes.colorTxt}>{item.subtitle} </h4>
+                                                                    </Box>
+                                                                </Box>
+                                                            </a>
                                                         </Box>
                                                 }
                                             </>

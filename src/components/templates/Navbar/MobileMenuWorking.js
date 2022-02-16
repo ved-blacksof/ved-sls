@@ -375,7 +375,7 @@ export function MobileMenuWorking() {
                                 {/* <hr className={classes.hrs} /> */}
                                 <MenuList>
                                     <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/smartstreet')}>Smart Street Lights</h6>
+                                        <h6 className={classes.lios} onClick={() => history.push('/smartstreet')}>Smart Street Lighting</h6>
                                     </MenuItem>
                                     <MenuItem className={classes.menuItem} >
                                         <h6 className={classes.lios} onClick={() => history.push('/railways')}>Railways</h6>
@@ -435,7 +435,7 @@ export function MobileMenuWorking() {
                             {/* <hr className={classes.hrs} /> */}
                             <MenuList>
                                 <MenuItem className={classes.menuItem}>
-                                    <h6 className={classes.lios} onClick={() => history.push("/electronics")} >Electronics Manufacturing Solutions</h6>
+                                    <h6 className={classes.lios} onClick={() => history.push("/electronics")} >Electronics Manufacturing Services</h6>
                                 </MenuItem>
                                 <MenuItem className={classes.menuItem}>
                                     <h6 className={classes.lios} onClick={() => history.push("/testing")} >Testing & Calibration</h6>
@@ -462,7 +462,7 @@ export function MobileMenuWorking() {
                         <MenuList className={classes.megaMenu}>
                             <MenuList>
                                 <MenuItem className={classes.menuItem}>
-                                    <h6 className={classes.lios} onClick={() => history.push("/contact")}>Contact us</h6>
+                                    <h6 className={classes.lios} onClick={() => history.push("/contact")}>Contact Us</h6>
                                 </MenuItem>
                                 <MenuItem className={classes.menuItem}>
                                     <h6 className={classes.lios}>

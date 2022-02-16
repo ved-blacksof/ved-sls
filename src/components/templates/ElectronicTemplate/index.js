@@ -15,7 +15,7 @@ export function ElectronicTemplate() {
                 <Navbar />
 
                 <Overview
-                    path="Services / Electronics Manufacturing"
+                    path="Services / Electronics Manufacturing Services"
                     sub1="SLS is a turnkey Electronics Manufacturing Service provider helping businesses with PCB Assembly, Prototyping, and Small and Medium Volume Production. We are equipped with Semi-Automated and Fully-Automated SMT lines, services for Automated QC, and turnkey project handling. Our wide umbrella of products, services, and fabrication facilities allow us in outsourcing our manufacturing service and expertise to second parties."
                 />
             </GridBlue>
@@ -43,7 +43,7 @@ export function ElectronicTemplate() {
 
             <Visit1
                 goto="Know more about our Electronics Manufacturing Capabilities"
-                title="Contact us"
+                title="Contact Us"
                 href={"/contact"}
             />
 

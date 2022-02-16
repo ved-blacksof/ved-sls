@@ -74,7 +74,7 @@ export function SmartstreetTemplate() {
             <MainContainer>
                 <Visit1
                     goto="A DIVISION OF SYSTEM LEVEL SOLUTIONS"
-                    title="Visit website"
+                    title="Visit Website"
                     href="https://www.vialights.com/"
                     rightlogo="./images/smartstreet/logo.png"
                 />
