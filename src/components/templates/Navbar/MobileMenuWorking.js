@@ -86,8 +86,8 @@ const useStyles = makeStyles((theme) => ({
     navLI: {
         position: 'relative',
         minHeight: '40px',
-        display: 'flex',
-        alignItems: 'center',
+        // display: 'flex',
+        // alignItems: 'center',
         background: 'transparent',
         transition: 'all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1)',
         boxShadow: 'none',
@@ -97,7 +97,8 @@ const useStyles = makeStyles((theme) => ({
             alignItems: 'center',
             // overflow:'hidden',
             padding: '0 10px',
-            width: '90vw',
+            width: '100%',
+            margin: '0 auto'
         },
         "&:hover": {
             "& div": {
@@ -134,20 +135,26 @@ const useStyles = makeStyles((theme) => ({
     },
 
     navLiH4: {
-        width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'
+        overflow: 'hidden',
+        padding: '0 5%',
+        width: '100%',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
     },
 
     arrow: {
         color: 'white',
         fontSize: '1.8rem',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '1.2rem',
+            fontSize: '1.5rem',
         },
     },
     // mega menu
     indMenu: {
         [theme.breakpoints.down('sm')]: {
             height: '0',
+            width: '100%',
             overflow: 'hidden',
             transition: 'all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)',
             animation: `$menuAnimation 800ms ease-in-out`,
@@ -166,17 +173,19 @@ const useStyles = makeStyles((theme) => ({
         zIndex: '1',
         [theme.breakpoints.down('sm')]: {
             width: '100vw',
-            padding: '0 0rem',
+            padding: '0% 5%',
         },
+        "& .MuiMenuItem-root": {
+            minHeight: '30px'
+        }
     },
     menuItem: {
-        padding: '5px',
+        padding: '2px',
         background: 'transparent',
         position: 'relative',
         "&:hover": {
             background: 'transparent !important',
-
-        }
+        },
     },
     lios: {
         width: '100%',
@@ -185,6 +194,9 @@ const useStyles = makeStyles((theme) => ({
         pointer: 'cursor',
         transform: 'width .4s ease-in-out',
         paddingLeft: '5px',
+        "& .MuiButton-root":{
+            minWidth:'0px'
+        }
     },
 
     act: {
@@ -291,14 +303,18 @@ export function MobileMenuWorking() {
         }
     }
 
-    let indMenuRef = useRef([])
+    let indMenuRef = useRef()
+    let serviceRef = useRef()
+    let connectRef = useRef()
 
-    const handleMenu = () => {
+    const handleMenu = (refs) => {
+        console.log(refs)
+        setIsOpen(false)
         if (!isOpen) {
-            gsap.to(indMenuRef.current, { height: '300px', duration: .2 })
+            gsap.to(refs.current, { height: 'fit-content', duration: .2 })
             setIsOpen(true)
         } else {
-            gsap.to(indMenuRef.current, { height: '0', duration: .2 })
+            gsap.to(refs.current, { height: '0', duration: .2 })
             setIsOpen(false)
         }
     }
@@ -320,7 +336,7 @@ export function MobileMenuWorking() {
                 <li className={classes.navLI} onClick={() => history.push("/home")}>
                     <h4 >
                         <NavLink
-                            className={clsx(classes[navlinkref.current])}
+                            className={clsx(classes[navlinkref.current], classes.navLiH4)}
                             activeClassName={clsx(classes[linkactiveref.current])}
                             to="/home" >Home</NavLink>
                     </h4>
@@ -330,7 +346,7 @@ export function MobileMenuWorking() {
                 <li className={classes.navLI} onClick={() => history.push("/about")}>
                     <h4 >
                         <NavLink
-                            className={clsx(classes[navlinkref.current])}
+                            className={clsx(classes[navlinkref.current], classes.navLiH4)}
                             activeClassName={clsx(classes[linkactiveref.current])}
                             to="/about" >About Us</NavLink>
                     </h4>
@@ -339,88 +355,83 @@ export function MobileMenuWorking() {
 
                 {/* class onhover Mega menu */}
                 <li className={classes.navLI}>
-                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}
+                    <h4
+                        className={clsx(classes[navlinkref.current], classes.navLiH4)}
                         activeClassName={clsx(classes[linkactiveref.current])}
-                        onClick={handleMenu}>
+                        onClick={() => handleMenu(indMenuRef)}>
                         Industries
                         <KeyboardArrowDown className={classes.arrow} />
-
-
-
-                        <div className={classes.indMenu} ref={e => indMenuRef.current[1] = e}>
-                            <MenuList
-                                className={classes.megaMenu}
-                            >
-                                {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                <MenuList>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/iot')}>IoT Platform</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/cloud')} >Cloud Solutions</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/evcharger')} >EV Charging Solutions</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/solar')}>Solar & Wind</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/smartmeter')}>Smart Metering</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/homeauto')}>Home Automation</h6>
-                                    </MenuItem>
-                                </MenuList>
-                                {/* <hr className={classes.hrs} /> */}
-                                <MenuList>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/smartstreet')}>Smart Street Lighting</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/railways')}>Railways</h6>
-                                    </MenuItem>
-
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/gaming')}>Smart Gaming</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/smarttraffic')}>Smart Traffic Solutions</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/digital')}>Digital Signage</h6>
-                                    </MenuItem>
-                                    <MenuItem className={classes.menuItem} >
-                                        <h6 className={classes.lios} onClick={() => history.push('/transformers')}>Transformer Monitoring</h6>
-                                    </MenuItem>
-                                </MenuList>
-                            </MenuList>
-
-                        </div>
                     </h4>
+
+
+
+                    <div className={classes.indMenu} ref={e => indMenuRef.current = e}>
+                        <MenuList
+                            className={classes.megaMenu}
+                        >
+                            {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                            <MenuList>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/iot')}>IoT Platform</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/cloud')} >Cloud Solutions</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/evcharger')} >EV Charging Solutions</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/solar')}>Solar & Wind</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/smartmeter')}>Smart Metering</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/homeauto')}>Home Automation</h6>
+                                </MenuItem>
+                            </MenuList>
+                            <MenuList>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/smartstreet')}>Smart Street Lighting</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/railways')}>Railways</h6>
+                                </MenuItem>
+
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/gaming')}>Smart Gaming</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/smarttraffic')}>Smart Traffic Solutions</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/digital')}>Digital Signage</h6>
+                                </MenuItem>
+                                <MenuItem className={classes.menuItem} >
+                                    <h6 className={classes.lios} onClick={() => history.push('/transformers')}>Transformer Monitoring</h6>
+                                </MenuItem>
+                            </MenuList>
+                        </MenuList>
+
+                    </div>
                 </li>
 
 
                 {/* ############# Services ############  */}
 
 
-                <li
-                    className={classes.navLI}
-                    activeClassName={clsx(classes[linkactiveref.current])}
-                >
-                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}>
+                <li className={classes.navLI}>
+                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}
+                        onClick={() => handleMenu(serviceRef)}>
                         Services
                         <KeyboardArrowDown className={classes.arrow} />
                     </h4>
 
                     {/* SERVICES MENU */}
 
-                    <div className={classes.indMenu} ref={e => indMenuRef.current[2] = e}>
+                    <div className={classes.indMenu} ref={e => serviceRef.current = e}>
 
-                        <MenuList
-                            className={classes.megaMenu}
-                        >
-                            {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                        <MenuList className={classes.megaMenu}>
                             <MenuList>
                                 <MenuItem className={classes.menuItem}>
                                     <h6 className={classes.lios} onClick={() => history.push("/ipcore")} >IP CORE/FPGA/SOC Design Services</h6>
@@ -431,9 +442,8 @@ export function MobileMenuWorking() {
                                 <MenuItem className={classes.menuItem} >
                                     <h6 className={classes.lios} onClick={() => history.push("/softdev")} >Software Development</h6>
                                 </MenuItem>
-                            </MenuList>
-                            {/* <hr className={classes.hrs} /> */}
-                            <MenuList>
+                                {/* </MenuList>
+                            <MenuList> */}
                                 <MenuItem className={classes.menuItem}>
                                     <h6 className={classes.lios} onClick={() => history.push("/electronics")} >Electronics Manufacturing Services</h6>
                                 </MenuItem>
@@ -451,14 +461,16 @@ export function MobileMenuWorking() {
 
 
                 <li
-                    className={clsx(classes[navlinkref.current], classes.navLI)}
+                    className={clsx(classes.navLI)}
                 >
-                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}>
+                    <h4 className={clsx(classes[navlinkref.current], classes.navLiH4)}
+                        onClick={() => handleMenu(connectRef)}
+                    >
                         Let's Connect
                         <KeyboardArrowDown className={classes.arrow} />
                     </h4>
 
-                    <div className={classes.indMenu} ref={e => indMenuRef.current[3] = e}>
+                    <div className={classes.indMenu} ref={e => connectRef.current = e}>
                         <MenuList className={classes.megaMenu}>
                             <MenuList>
                                 <MenuItem className={classes.menuItem}>

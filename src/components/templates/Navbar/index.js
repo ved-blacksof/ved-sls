@@ -128,10 +128,10 @@ export function Navbar({
 
     const handleMobileMenu = () => {
         if (!mobileMenu) {
-            gsap.to(mobileMenuRef, { height: 'fit-content', duration: .2 })
+            gsap.to(mobileMenuRef, { height: 'fit-content',  display: 'block', duration: .2 })
             setMobileMenu(true)
         } else {
-            gsap.to(mobileMenuRef, { height: '0', duration: .2 })
+            gsap.to(mobileMenuRef, { height: '0px',  display: 'none', duration: .2 })
             setMobileMenu(false)
         }
     }
@@ -371,8 +371,8 @@ export function Navbar({
                 </Toolbar >
                 <div data-aos="slide-down">
                     <Box className={classes.menu} ref={(e) => mobileMenuRef = e}>
-                        <MobileMenu />
-                        {/* <MobileMenuWorking /> */}
+                        {/* <MobileMenu /> */}
+                        <MobileMenuWorking />
                     </Box>
                 </div>
             </AppBar >
