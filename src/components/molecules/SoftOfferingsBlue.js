@@ -8,18 +8,17 @@ const useStyles = makeStyles((theme) => ({
     mainBox: {
         position: 'relative',
         marginTop: '10%',
-        marginBottom:'10%',
+        paddingBottom:'10%',
+        overflow:'hidden',
         [theme.breakpoints.down('sm')]: {
             marginTop: '0%',
-            marginBottom:'0%',
+            marginBottom: '0%',
         }
     },
-    curve:{
-        borderRadius: '0rem 5rem 0rem 5rem', 
-        overflow: 'hidden',
+    curve: {
         [theme.breakpoints.down('sm')]: {
-            borderRadius: '0rem', 
-
+            borderRadius: '0rem',
+            
         }
     },
     container: {
@@ -31,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: 'column'
         }
     },
-    pad:{
+    pad: {
         padding: '10% 0%',
         [theme.breakpoints.down('sm')]: {
             padding: '8% 0%',
@@ -44,16 +43,17 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     rightBox: {
+        overflowY: 'hidden',
         position: 'absolute',
         width: '50%',
         maxHeight: '100%',
-        right: '-5%',
-        bottom: '-10%',
+        right: '-10%',
+        bottom: '4%',
         [theme.breakpoints.down('sm')]: {
             position: 'static',
             width: '60%',
             margin: '0% auto',
-            paddingBottom:'5%',
+            paddingBottom: '4%',
         }
     },
     lap: {
@@ -64,8 +64,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export function SoftOfferingsBlue({
-    maintitle,title,subtitle,images,
-    list,firstli ,secli, thirdli, fourthli, fifthli, sixthli
+    maintitle, title, subtitle, images,
+    list, firstli, secli, thirdli, fourthli, fifthli, sixthli
 }) {
 
     const classes = useStyles()
@@ -74,9 +74,8 @@ export function SoftOfferingsBlue({
         <Box style={{ height: 'fit-content' }}>
             <Box className={classes.mainBox}>
                 <Box className={classes.curve}>
-                    <GridBlue >
-
-                        <Box  className={classes.pad}>    
+                    <GridBlue twocurve="twocurve">
+                        <Box className={classes.pad}>
                             <MainContainer>
                                 <Container fixed className={classes.container}>
 

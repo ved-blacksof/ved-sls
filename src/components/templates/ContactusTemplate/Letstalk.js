@@ -384,7 +384,7 @@ export function Letstalk() {
                             <Box className={classes.address}>
                                 <h6> Systems Level Solutions (India) Pvt. Ltd.</h6>
                                 <h6> 32, D4, Phase 1, GIDC Estate </h6>
-                                <h6> V.U. Nagar : 388 121 </h6>
+                                <h6> V.U. Nagar - 388 121 </h6>
                                 <h6> Gujarat, India. </h6>
                                 <h6> Tel.: +91-2692-232 501/502 (Ext. 47) </h6>
                             </Box>
@@ -396,7 +396,7 @@ export function Letstalk() {
                             <Box className={classes.address}>
                                 <h6> System Level Solutions, Inc. </h6>
                                 <h6> 511 N. Washington Avenue,  </h6>
-                                <h6>  Marshall, Texas 75670 </h6>
+                                <h6>  Marshall, Texas - 75670 </h6>
                                 <h6> Ph: 001-408-852-0067  </h6>
                                 <h6> Ph: 001-408-705-2339 (Rings in India)</h6>
                             </Box>

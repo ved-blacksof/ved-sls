@@ -399,23 +399,23 @@ export const evchargers = [
         subtitle: 'Bharat AC 001 Charger',
     },
     {
-        images: './images/evcharger/evchargers/C4.png',
+        images: './images/evcharger/evchargers/C4.jpg',
         subtitle: 'Type ll AC Dual Gun Vertical Charger',
     },
     {
-        images: './images/evcharger/evchargers/C6.png',
+        images: './images/evcharger/evchargers/C6.jpg',
         subtitle: 'Type ll AC Dual Gun Wall-Mounted Charger',
     },
     {
-        images: './images/evcharger/evchargers/C1.png',
+        images: './images/evcharger/evchargers/C1.jpg',
         subtitle: 'Hybrid AC Charger with 3P Socket',
     },
     {
-        images: './images/evcharger/evchargers/C5.png',
+        images: './images/evcharger/evchargers/C5.jpg',
         subtitle: 'Hybrid AC Charger with IEC Socket',
     },
     {
-        images: './images/evcharger/evchargers/C7.png',
+        images: './images/evcharger/evchargers/C7.jpg',
         subtitle: 'Type ll AC Single Gun Charger',
     },
 ]
@@ -896,7 +896,7 @@ export const expertise = [
     {
         icon: './images/Group 82620.svg',
         h4: 'Deep Learning',
-        h6: 'Boost the performance of your forecasting, decision-making, and other operations with Deep Learning technology. Our deep learning based solutions are customized to help you attain business excellence and create class-apart product and service offerings.'
+        h6: 'Boost the performance of your forecasting, decision-making, and other operations with deep learning technology. Our deep learning based solutions are customized to help you attain business excellence and create class-apart product and service offerings.'
     },
     {
         icon: './images/AI.svg',
@@ -916,7 +916,7 @@ export const expertise = [
     {
         icon: './images/Group 82617.svg',
         h4: 'Machine Learning',
-        h6: 'We leverage ML with a business-first outlook to build powerful and customized solutions of automation. Our offerings help you reduce human intervention thereby optimizing costs, throughput, and organizational efficiency at large.'
+        h6: 'We leverage ML with a business-first outlook to build powerful and customized solutions for automation. Our offerings help you reduce human intervention thereby optimizing costs, throughput, and organizational efficiency at large.'
     },
 
 ]
@@ -926,7 +926,7 @@ export const highspeed = [
     {
         count: '01',
         uli: 'Requirements Analysis',
-        firstli: 'Design and Architecture specification',
+        firstli: 'Design and architecture specification',
         secli: '',
         thirdli: '',
         fourthli: '',
@@ -935,15 +935,15 @@ export const highspeed = [
         count: '02',
         uli: 'Design',
         firstli: 'Electronic component engineering',
-        secli: 'Power and Clock design',
-        thirdli: 'Enclosure Modeling, CAD Design',
+        secli: 'Power and clock design',
+        thirdli: 'Enclosure modeling, CAD design',
     },
     {
         count: '03',
         uli: 'Implementation',
         firstli: 'Schematic',
-        secli: 'Placement and Routing',
-        thirdli: 'Signal Integrity'
+        secli: 'Placement and routing',
+        thirdli: 'Signal integrity'
     },
     {
         count: '04',
@@ -953,9 +953,9 @@ export const highspeed = [
         count: '05',
         uli: 'Translation services',
         firstli: 'Fabrication',
-        secli: 'Assembly - In house',
+        secli: 'Assembly - in house',
         thirdli: 'Packaging',
-        fourthli: 'Rapid Prototyping for Enclosures',
+        fourthli: 'Rapid prototyping for enclosures',
     },
     {
         count: '06',
@@ -981,7 +981,7 @@ export const technologystack = [
         images: './images/BlueIcons -20-02.svg',
         number: '02',
         title: 'UI development',
-        subtitle: 'Bootstrap, jquery, Javascript, HTML5, CSS3, Angular'
+        subtitle: 'Bootstrap, jQuery, Javascript, HTML5, CSS3, Angular'
     },
     {
         images: './images/BlueIcons -20-03.svg',

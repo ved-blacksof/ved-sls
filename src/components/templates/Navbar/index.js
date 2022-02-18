@@ -128,10 +128,10 @@ export function Navbar({
 
     const handleMobileMenu = () => {
         if (!mobileMenu) {
-            gsap.to(mobileMenuRef, { height: 'fit-content',  display: 'block', duration: .2 })
+            gsap.to(mobileMenuRef, { height: 'fit-content', display: 'block', duration: .2 })
             setMobileMenu(true)
         } else {
-            gsap.to(mobileMenuRef, { height: '0px',  display: 'none', duration: .2 })
+            gsap.to(mobileMenuRef, { height: '0px', display: 'none', duration: .2 })
             setMobileMenu(false)
         }
     }
@@ -295,7 +295,7 @@ export function Navbar({
                                     {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
                                     <MenuList>
                                         <MenuItem className={classes.menuItem}>
-                                            <h6 className={classes.lios} onClick={() => history.push("/ipcore")} >IP CORE/FPGA/SOC Design Services</h6>
+                                            <h6 className={classes.lios} onClick={() => history.push("/ipcore")} >IP CORE/FPGA/SoC Design Services</h6>
                                         </MenuItem>
                                         <MenuItem className={classes.menuItem} >
                                             <h6 className={classes.lios} onClick={() => history.push("/highspeed")} > High Speed PCB Design Services</h6>

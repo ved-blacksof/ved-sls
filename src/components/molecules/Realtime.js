@@ -206,18 +206,20 @@ const useStyles = makeStyles((theme) => ({
         '& h6': {
             color: 'black'
         },
-        "&::before": {
+        "&::after": {
             content: "''",
             height: '5px',
-            width: '0',
+            width: '90%',
             background: '#DE141A',
             position: 'absolute',
             bottom: '5%',
-            left: '5%',
-            transition: 'all 800ms ease-in-out',
+            // transition: 'all 800ms ease-in-out',
+            transform: 'scale(0, 1)',
+            transformOrigin: 'right',
+            transition: 'transform 0.8s ease',
             [theme.breakpoints.down('sm')]: {
                 height: '5px',
-                display:'none'
+                display: 'none'
             }
         },
         "&:hover": {
@@ -227,10 +229,9 @@ const useStyles = makeStyles((theme) => ({
             "& $imgBox": {
                 transform: 'scale(1.15)'
             },
-            "&::before": {
-                height: '5px',
-                width: '90%',
-                opacity: '1',
+            "&::after": {
+                transform: 'scale(1)',
+                transformOrigin: 'left',
                 [theme.breakpoints.down('sm')]: {
                     height: '5px'
                 }
@@ -244,7 +245,7 @@ const useStyles = makeStyles((theme) => ({
     imgBox: {
         width: '80%',
         height: '15vw',
-        transition: 'all 300ms ease-in-out',
+        transition: 'all 400ms ease-in-out',
         marginBottom: '6%',
         display: 'flex',
         alignItems: 'center',

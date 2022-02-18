@@ -16,7 +16,7 @@ export function MachineLearningTemplate() {
                 <Navbar />
 
                 <Overview
-                    path="Services / ML and AI"
+                    path="Services / Machine Learning and Artificial Intelligence"
                     sub1="SLS has been continuously engaged in developing solutions that aid mankind. We are actively indulged in leveraging technologies like AI and ML to offer innovative solutions for the healthcare sector to ease diagnosis and help save lives with intelligence."
                     sub2="Our team of Industry 4.0 experts also help transform cutting-edge product and solution ideas into reality. With experience in a vast domain of sectors and applications, this team helps lay the growth ladder for business success and scalability."
                 />
@@ -25,7 +25,9 @@ export function MachineLearningTemplate() {
             <Quality
                 mainheading="Offerings"
                 heading="Breast and Lung Cancer Detection Software Tools"
-                subtitle="SLS has developed a lung and breast abnormality detection system that assists Radiologists across the world perform quicker and timely diagnosis of lung and breast abnormalities. The solution aims at providing intelligent real-time insights to medical professionals for crucial decision-making and treatment."
+                subtitle="SLS has developed a lung and breast abnormality detection system that assists Radiologists across the world perform quicker and 
+                timely diagnosis of lung and breast abnormalities. The solution aims at providing intelligent real-time insights to medical professionals 
+                for crucial decision-making and treatment."
                 imageBG="./images/AI_ML_Deck-26.png"
                 redline
             />

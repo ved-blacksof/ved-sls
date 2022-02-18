@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 
 import { Navbar, Footer } from '..'
-import { Ubanner, Overview, Squareboxes1, Visit, Visit1, Realtime } from '../../molecules'
+import { Ubanner, Overview, Squareboxes1, Visit, Visit1, Realtime, SoftOfferingsBlue } from '../../molecules'
 import { homeproducts, homeAutoOverview } from '../../molecules/PortfolioData'
 import { MainContainer } from '../../atoms'
 
@@ -53,9 +53,11 @@ export function HomeautomationTemplate({
 
                 <Overview
                     path="Industries / Home Automation"
-                    sub1="SLS has always been at the forefront in leveraging new technologies to design innovative products. Utilizing AI and IoT in Space Automation is 
-                    our new focus area. We offer a range of smart, interactive, and easy-to-use space automation products that are redefining how users interact with their surroundings."
-
+                    // sub1="SLS has always been at the forefront in leveraging new technologies to design innovative products. Utilizing AI and IoT in Space Automation is 
+                    // our new focus area. We offer a range of smart, interactive, and easy-to-use space automation products that are redefining how users interact with their surroundings."
+                    sub1="SLS has always been at the forefront in leveraging new technologies to design innovative products.
+                    Our recent focus has been on utilizing AI and IoT for automating residential spaces, offices, warehouses, and industrial spaces. 
+                    We offer a range of smart, interactive, and easy-to-use space automation products that are redefining how users interact with their surroundings."
                     mapIconPosition="mapIconPosition"
                     data={homeAutoOverview}
                     style={{ height: 'fit-content', marginBottom: '20%' }}
@@ -71,6 +73,19 @@ export function HomeautomationTemplate({
             <Realtime
                 maintitle="Products"
                 squarecarddata={homeproducts}
+            />
+
+            <SoftOfferingsBlue
+                maintitle="Software OFFERING"
+                title="Konnsys Dashboard & Mobile App"
+                subtitle="We offer a dashboard & an end user mobile application that help control & monitor smart devices in homes, offices, shops, buildings, and factories. Both the offerings come with user-friendly attributes vital for easy controlling of smart accessories."
+                list
+                firstli="Real-time monitoring & control of devices"
+                secli="Remote access to devices"
+                thirdli="New devices can be added easily"
+                fourthli="Works with Alexa & Google Assistant"
+                fifthli="Works on android, iPhone, iPad, & tablets"
+                images='./images/dashboards/Konnsys-Dashboard.png'
             />
             {/* <Squareboxes1
                 maintitle="Products"

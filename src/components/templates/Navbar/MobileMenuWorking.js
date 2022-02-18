@@ -434,7 +434,7 @@ export function MobileMenuWorking() {
                         <MenuList className={classes.megaMenu}>
                             <MenuList>
                                 <MenuItem className={classes.menuItem}>
-                                    <h6 className={classes.lios} onClick={() => history.push("/ipcore")} >IP CORE/FPGA/SOC Design Services</h6>
+                                    <h6 className={classes.lios} onClick={() => history.push("/ipcore")} >IP CORE/FPGA/SoC Design Services</h6>
                                 </MenuItem>
                                 <MenuItem className={classes.menuItem} >
                                     <h6 className={classes.lios} onClick={() => history.push("/highspeed")} > High Speed PCB Design Services</h6>

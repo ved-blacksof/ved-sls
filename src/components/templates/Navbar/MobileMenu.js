@@ -516,7 +516,7 @@ export function MobileMenu() {
                                                 {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
                                                 <MenuList>
                                                     <MenuItem className={classes.menuItem}>
-                                                        <h6 ><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >IP CORE/FPGA/SOC Design Services</NavLink ></h6>
+                                                        <h6 ><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >IP CORE/FPGA/SoC Design Services</NavLink ></h6>
                                                     </MenuItem>
                                                     <MenuItem className={classes.menuItem} >
                                                         <h6 ><NavLink to="/highspeed" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} > High Speed PCB Design Services</NavLink ></h6>

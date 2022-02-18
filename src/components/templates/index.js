@@ -1,6 +1,5 @@
 export * from './HomepageTemplate'
 export * from './AboutusTemplate'
-export * from './Navbar1'
 export * from './Navbar'
 export * from './Footer'
 export * from './EvchargingTemplate'

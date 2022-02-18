@@ -4,6 +4,7 @@ import {
     Container,
     makeStyles,
 } from '@material-ui/core';
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,13 +14,15 @@ const useStyles = makeStyles((theme) => ({
         boxSizing: 'border-box',
         backgroundImage: `url("./images/Repeat Grid 11.png")`,
         backgroundPosition: 'fixed',
-        // overflow: 'hidden',
-        // backgroundImage: 'radial-gradient(#FFFFFF 0px, transparent 20%)',
-        // backgroundPosition: '0 0, 50px 50px',
-        // backgroundSize: '30px 30px',
-        [theme.breakpoints.down('sm')]: {
-
-        }
+    },
+    twocurves: {
+        borderRadius: '0rem 5rem 0rem 5rem',
+        backgroundColor: '#182AC3',
+        margin: '0px',
+        padding: '0px',
+        boxSizing: 'border-box',
+        backgroundImage: `url("./images/Repeat Grid 11.png")`,
+        backgroundPosition: 'fixed',
     }
 
 
@@ -30,7 +33,7 @@ export function GridBlue(props) {
     const classes = useStyles()
 
     return (
-        <Box className={classes.root} >
+        <Box className={clsx(props.twocurve ? (classes.twocurves) : (classes.root))} >
             {props.children}
         </Box>
     )

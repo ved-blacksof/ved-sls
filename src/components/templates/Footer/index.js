@@ -229,7 +229,7 @@ export function Footer() {
 
                         <ul className={classes.linkUL}>
                             <li>  SERVICES </li>
-                            <li> <a className={classes.links} href="/ipcore"> IP CORE/FPGA/SOC DESIGN SERVICES </a> </li>
+                            <li> <a className={classes.links} href="/ipcore"> IP CORE/FPGA/SoC DESIGN SERVICES </a> </li>
                             <li> <a className={classes.links} href="/highspeed"> HIGH SPEED PCB DESIGN SERVICES </a> </li>
                             <li> <a className={classes.links} href="/softdev"> SOFTWARE DEVELOPMENT  </a> </li>
                             {
