@@ -97,7 +97,7 @@ export function NewPosCards({
                         {
                             data.map((item, index) => {
                                 return (
-                                    <Box className={classes.inBox}>
+                                    <Box className={classes.inBox} key={index}>
                                         <Box className={classes.imageBox}>
                                             <Fade bottom>
                                                 <img src={item.images} />

@@ -189,7 +189,7 @@ export function ExpandinSM({
                                     expandingData.map((item, index) => {
                                         return (
 
-                                            <Box className={classes.BoxWidth} data-aos="fade-up">
+                                            <Box className={classes.BoxWidth} key={index} data-aos="fade-up">
                                                 <Box className={classes.imageBox}>
                                                     <img className={classes.image}
                                                         src={item.images}

@@ -146,7 +146,7 @@ export function Products({
                             ipcoreproducts.map((item, index) => {
                                 return (
                                     <>
-                                        <Box className={classes.borderBox}>
+                                        <Box className={classes.borderBox} key={index}>
                                             <Box className={classes.iconBox} >
                                                 <Fade bottom><img src={item.images} /></Fade>
                                             </Box>

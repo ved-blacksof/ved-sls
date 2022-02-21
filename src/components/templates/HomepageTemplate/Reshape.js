@@ -131,7 +131,7 @@ export function Reshape() {
                         {
                             reshape.map((item, index) => {
                                 return (
-                                    <Box className={classes.BoxWidth}>
+                                    <Box className={classes.BoxWidth} key={index}>
 
                                         <Box className={classes.BoxImages}
                                             style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(${item.images})`, }}

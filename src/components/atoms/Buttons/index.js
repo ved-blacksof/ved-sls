@@ -69,7 +69,7 @@ export function Buttons({
                     className={classes.btn}
                     style={style}
                     href={href}
-                    onclick={() => window.open(`${href}`, '_blank', '')}
+                    onClick={() => window.open(`${href}`, '_blank', '')}
                     target="_blank"
                 >
                     <h6 style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', verticalAlign: 'middle' }}>

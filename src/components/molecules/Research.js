@@ -157,7 +157,7 @@ export function Research({
                             {
                                 data.map((item, index) => {
                                     return (
-                                        <Box className={classes.BoxWidth}>
+                                        <Box className={classes.BoxWidth} key={index}>
                                             <Box style={{ position: 'relative' }}>
 
                                                 <Box className={classes.BoxImages}>

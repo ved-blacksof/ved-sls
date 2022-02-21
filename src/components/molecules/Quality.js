@@ -91,6 +91,7 @@ export function Quality({
     secli,
     thirdli,
     fourthli,
+    tab_title,
     style,
     style1,
 }) {
@@ -136,6 +137,7 @@ export function Quality({
                                     fourthli={fourthli}
                                     download={download}
                                     download1={download1}
+                                    tab_title={tab_title}
                                     href={href}
 
                                 />

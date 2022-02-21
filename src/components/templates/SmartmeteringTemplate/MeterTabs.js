@@ -154,7 +154,7 @@ export function MeterTabs() {
                         <SoftOfferingsBlue
                             maintitle="Software offering"
                             title="Head End System (HES)"
-                            subtitle="The HES is our scalable head-end data acquisition solution for the AMI. The HES is an IoT-powered solution that monitors and controls all Smart Meters and operates as a communication driver between MDM Systems and measurement devices."
+                            subtitle="The HES is our scalable head-end data acquisition solution for the AMI. The HES is an IoT-powered solution that monitors and controls all Smart Meters and operates as a communication driver between MDM systems and measurement devices."
                             // list
                             firstli="Real-time monitoring, maintenance, and troubleshooting of chargers"
                             secli="Dynamic load management capabilities"

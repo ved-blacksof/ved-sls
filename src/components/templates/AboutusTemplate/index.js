@@ -47,9 +47,9 @@ export function AboutusTemplate() {
                 imageBG="./images/about/Quality-policy.png"
                 subtitle="To maintain the quality of our products and services, we have set in place a Quality Policy that helps our teams 
                 ensure top-notch quality and service delivery to our clients."
-
                 redline="redline"
                 download="download policy"
+                tab_title={"Quality_Policy"}
                 href={quality}
             />
 

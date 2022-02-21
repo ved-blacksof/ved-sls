@@ -43,7 +43,7 @@ export function EvchargingTemplate() {
 
                 <Overview
                     title="OVERVIEW"
-                    path="Industries / EV Charging Infrastructure"
+                    path="Industries / EV Charging Solutions"
                     sub1="Paving a way for an EV-First universe, SLS has been an enabler in setting the 
                     critical EV Charging Infrastructure in India and across the world. We offer indigenously 
                     manufactured OCPP-Compliant EV Chargers with state-of-the-art hardware and software powered with IoT."

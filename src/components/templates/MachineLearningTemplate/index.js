@@ -17,8 +17,8 @@ export function MachineLearningTemplate() {
 
                 <Overview
                     path="Services / Machine Learning and Artificial Intelligence"
-                    sub1="SLS has been continuously engaged in developing solutions that aid mankind. We are actively indulged in leveraging technologies like AI and ML to offer innovative solutions for the healthcare sector to ease diagnosis and help save lives with intelligence."
-                    sub2="Our team of Industry 4.0 experts also help transform cutting-edge product and solution ideas into reality. With experience in a vast domain of sectors and applications, this team helps lay the growth ladder for business success and scalability."
+                    sub1="SLS has always been indulged in leveraging new technologies to develop innovative products and services for its global clientele. Our team of experts understand business objectives and product needs to deliver custom solutions built-up using AI and ML."
+                    sub2="We are also actively indulged in leveraging these technologies to offer innovative solutions for the healthcare sector to ease diagnosis and help save lives with intelligence."
                 />
             </GridBlue>
 
@@ -43,7 +43,7 @@ export function MachineLearningTemplate() {
             <Ourexpertise />
 
             <Visit1
-                goto="Find out how we can help your business with AI and ML solutions"
+                goto="Find out how we can help your business with AI and ML solutions!"
                 title="Contact Us"
                 href={"/contact"}
 

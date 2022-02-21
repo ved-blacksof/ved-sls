@@ -315,22 +315,26 @@ export const certification = [
 
 export const csrcarousel = [
     {
+        icon:'./images/about/csr-icons/95._Traffic_Infrastructure .svg',
         images: './images/about/csr/csr1.png',
         para: "As part of our mission to develop Anand from the core, we have installed free-of-cost traffic signages across the city to uplift the traffic infrastructure and contribute to Gujarat's Smart City initiative.",
     },
     {
+        icon:'./images/about/csr-icons/96._NGOs.svg',
         images: './images/about/csr/csr5.jpeg',
         para: 'SLS has partnered with various NGOs to help uplift India from within India. Every year, the entire team donates necessities to orphans, handicapped, and old age people to help them lead a normal life.',
     },
 
 
     {
+        icon:'./images/about/csr-icons/97._Blood_Donation_Camps.svg',
         images: './images/about/csr/csr2.png',
         para: 'SLS continually organizes and participates in Blood Donation Camps where the entire SLS family donates blood for free to help the economically weaker sections of the society.',
     },
 
 
     {
+        icon:'./images/about/csr-icons/98._Tree_Plantation_Drives.svg',
         images: './images/about/csr/csr4.jpeg',
         para: "The entire SLS team organizes and participates in tree plantation drives across the year. Under this initiative, we have planted and are maintaining more than 500 trees throughout our campus in Anand.",
     },
@@ -396,15 +400,15 @@ export const evchargers = [
     },
     {
         images: './images/evcharger/evchargers/C3.png',
-        subtitle: 'Bharat AC 001 Charger',
+        subtitle: 'Bharat AC-001 Charger',
     },
     {
         images: './images/evcharger/evchargers/C4.jpg',
-        subtitle: 'Type ll AC Dual Gun Vertical Charger',
+        subtitle: 'Type 2 AC Dual Gun Vertical Charger',
     },
     {
         images: './images/evcharger/evchargers/C6.jpg',
-        subtitle: 'Type ll AC Dual Gun Wall-Mounted Charger',
+        subtitle: 'Type 2 AC Dual Gun Wall-Mounted Charger',
     },
     {
         images: './images/evcharger/evchargers/C1.jpg',
@@ -416,7 +420,7 @@ export const evchargers = [
     },
     {
         images: './images/evcharger/evchargers/C7.jpg',
-        subtitle: 'Type ll AC Single Gun Charger',
+        subtitle: 'Type 2 AC Single Gun Charger',
     },
 ]
 
@@ -494,7 +498,7 @@ export const yalgar = [
     },
     {
         images: './images/cloud/yalgaar/23._Real-time Tracking.svg',
-        text: 'Real-time Tracking'
+        text: 'Real-Time Tracking'
     },
     {
         images: './images/cloud/yalgaar/24._AR-VR Multiplayer Games.svg',
@@ -502,7 +506,7 @@ export const yalgar = [
     },
     {
         images: './images/cloud/yalgaar/25._Real-time Dashboards.svg',
-        text: 'Real-time Dashboards'
+        text: 'Real-Time Dashboards'
     },
     {
         images: './images/cloud/yalgaar/26._Financial Data Streaming.svg',
@@ -567,15 +571,21 @@ export const digital = [
         text: 'Easy Authentication'
     },
 ]
+
+
 //White icons only 4 for DigitalTemplate
 export const cloudOverview = [
+    // {
+    //     images: './images/cloud/cloudOverview/73._APIs for real-time tracking.svg',
+    //     text: 'APIs For Real-time Tracking'
+    // },
     {
-        images: './images/cloud/cloudOverview/73._APIs for real-time tracking.svg',
-        text: 'APIs For Real-time Tracking'
+        images: './images/cloud/cloudOverview/73._APIs-SDK for real-time tracking.svg',
+        text: 'APIs-SDK For Real-Time Tracking'
     },
     {
         images: './images/cloud/cloudOverview/74._Easy to integrate.svg',
-        text: 'Easy To Integrate'
+        text: 'Easy-To-Integrate'
     },
     {
         images: './images/cloud/cloudOverview/75._Scalable Solutions.svg',
@@ -599,11 +609,11 @@ export const smartstreet = [
     },
     {
         images: './images/smartstreet/15._Real-time alerts-on malfunctions.svg',
-        text: 'Real-time Alerts On Malfunctions'
+        text: 'Real-Time Alerts On Malfunctions'
     },
     {
         images: './images/smartstreet/16._Real-time reports for lighting status,-performance, energy consumption, etc.svg',
-        text: 'Detailed Reports Shown In Real-time'
+        text: 'Detailed Reports Shown In Real-Time'
     },
 ]
 export const railwayOverview = [
@@ -713,11 +723,11 @@ export const solar = [
     },
     {
         images: './images/solar/icons/38._Real-time alerts on-abnormality detection.svg',
-        text: 'Real-time Abnormality Detection'
+        text: 'Real-Time Abnormality Detection'
     },
     {
         images: './images/solar/icons/39._Real-time reports of panel-wise energy generation.svg',
-        text: 'Real-time Panel-Wise Energy Reports'
+        text: 'Real-Time Panel-Wise Energy Reports'
     },
     // {
     //     images: './images/solar/icons/40._Predictive energy optimization.svg',
@@ -726,21 +736,37 @@ export const solar = [
 ]
 
 export const homeAutoOverview = [
+    // {
+    //     images: './images/homeautomation/overview/87._Temperature Sensor.svg',
+    //     text: 'Temperature Sensor'
+    // },
+    // {
+    //     images: './images/homeautomation/overview/88._Humidity Sensor.svg',
+    //     text: 'Humidity Sensor'
+    // },
+    // {
+    //     images: './images/homeautomation/overview/89._Motion Sensor.svg',
+    //     text: 'Motion Sensor'
+    // },
+    // {
+    //     images: './images/homeautomation/overview/90._Smoke Sensor.svg',
+    //     text: 'Smoke Sensor'
+    // },
     {
-        images: './images/homeautomation/overview/87._Temperature Sensor.svg',
-        text: 'Temperature Sensor'
+        images: './images/homeautomation/overview/91._Konnsys_App_Support.svg ',
+        text: 'Konnsys App Support'
     },
     {
-        images: './images/homeautomation/overview/88._Humidity Sensor.svg',
-        text: 'Humidity Sensor'
+        images: './images/homeautomation/overview/92._Retrofit_Solutions.svg ',
+        text: 'Retrofit Solutions'
     },
     {
-        images: './images/homeautomation/overview/89._Motion Sensor.svg',
-        text: 'Motion Sensor'
+        images: './images/homeautomation/overview/93._Scene_Control.svg ',
+        text: 'Scene Control'
     },
     {
-        images: './images/homeautomation/overview/90._Smoke Sensor.svg',
-        text: 'Smoke Sensor'
+        images: './images/homeautomation/overview/94._Multiple_Sensor_Integration.svg',
+        text: ' Multiple Sensor Integration'
     },
     // {
     //     images: './images/homeautomation/overview/87._Temperature Sensor.svg',
@@ -1084,7 +1110,7 @@ export const ipcoreproducts = [
     },
     {
         images: './images/ipcore/Products/62._Memory Controller Core.svg',
-        uli: 'Memory Controller Core',
+        uli: 'Memory Controller Cores',
         firstli: 'SD/eMMC Host Controller',
     },
     {

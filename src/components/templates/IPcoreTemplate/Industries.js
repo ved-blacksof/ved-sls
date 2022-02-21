@@ -96,7 +96,7 @@ export function Industries({
                             industries.map((item, index) => {
                                 return (
                                     <>
-                                        <Box className={classes.borderBox}>
+                                        <Box className={classes.borderBox} key={index}>
                                             <Box className={classes.iconBox} >
                                                 <Fade bottom><img className={classes.image} src={item.images} /></Fade>
                                             </Box>

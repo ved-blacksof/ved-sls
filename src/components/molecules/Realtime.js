@@ -449,7 +449,7 @@ export function Realtime({
                                         {
                                             data1.map((item, index) => {
                                                 return (
-                                                    <Box>
+                                                    <Box key={index}>
                                                         <Box className={classes.card} >
                                                             <Fade bottom>
                                                                 <Box className={classes.cardImage}>
@@ -487,7 +487,7 @@ export function Realtime({
                                 {
                                     data ? data.map((item, index) => {
                                         return (
-                                            <Box>
+                                            <Box key={index}>
                                                 <Box className={classes.card} >
                                                     <Fade bottom>
                                                         {
@@ -516,7 +516,7 @@ export function Realtime({
                                                                     <Button
                                                                         className={classes.smallBtn}
                                                                         href={item.href}
-                                                                        onclick={() => window.open(`${item.href}`, '_blank')}
+                                                                        onClick={() => window.open(`${item.href}`, '_blank')}
                                                                         target="_blank"
                                                                     >
                                                                         {download}
@@ -538,7 +538,7 @@ export function Realtime({
                                             < >
                                                 {
                                                     item.link ?
-                                                        <Box>
+                                                        <Box key={index}>
                                                             <a href={item.link} className={classes.boxesWrapper} style={{ textDecoration: 'none' }} target="_blank">
                                                                 <Box className={classes.boxes}>
                                                                     <Box className={classes.imgBox}>
@@ -552,7 +552,7 @@ export function Realtime({
                                                             </a>
                                                         </Box>
                                                         :
-                                                        <Box>
+                                                        <Box key={index}>
                                                             <a className={classes.boxesWrapper}>
                                                                 <Box className={classes.boxes}>
                                                                     <Box className={classes.imgBox}>

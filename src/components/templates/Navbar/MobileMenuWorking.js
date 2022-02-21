@@ -357,7 +357,7 @@ export function MobileMenuWorking() {
                 <li className={classes.navLI}>
                     <h4
                         className={clsx(classes[navlinkref.current], classes.navLiH4)}
-                        activeClassName={clsx(classes[linkactiveref.current])}
+                        // activeClassName={clsx(classes[linkactiveref.current])}
                         onClick={() => handleMenu(indMenuRef)}>
                         Industries
                         <KeyboardArrowDown className={classes.arrow} />

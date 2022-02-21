@@ -86,7 +86,7 @@ export function TestingTemplate() {
             />
             <QualityReverseNew
                 subhead3="Spectrum Analyzer"
-                subtitle3="SLS offer 2 types of Spectrum Analyzers. The first, R&S FSP7 offers a 9KHz to 7 GHz frequency range, 1 Hz to 10MHz resolution 
+                subtitle3="SLS offers 2 types of Spectrum Analyzers. The first, R&S FSP7 offers a 9KHz to 7 GHz frequency range, 1 Hz to 10MHz resolution 
                 bandwidth and displays an average noise level of -155 dBm (1 Hz). The other, USB-SA44B offers 1 Hz to 4.4 GHz frequency range,
                  0.1 Hz to 250 KHz and 5 MHz resolution bandwidth with a wide dynamic range of -151 dBm to +10 dBm."
                 imageBG="./images/testing/SpectrumAnalysers.jpg"

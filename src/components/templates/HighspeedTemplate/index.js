@@ -19,7 +19,7 @@ export function HighspeedTemplate() {
                 <Overview
                     path="Services / High-Speed PCB Design Services"
                     sub1="SLS is a turnkey provider of a range of innovative PCB Designs starting right from 
-                    High-Speed Board Designs, to Multi-Layered and Multi-CPU Board Design, 
+                    High-Speed Board Designs, to Multi-Layered and Multi CPU Board Design, 
                     and High-Performance Board Designs. Be it board design or system design, 
                     we ensure to provide the best-fit business-specific solutions along with reducing 
                     the time of deployment, canceling out the two major challenges that most of our clients face."

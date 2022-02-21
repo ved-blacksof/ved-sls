@@ -81,7 +81,7 @@ export function PosBoxes({
                     {
                         data.map((item, index) => {
                             return (
-                                <Box className={classes.boxes}>
+                                <Box className={classes.boxes} key={index}>
                                     <Box className={classes.imgBox}>
                                         <Fade bottom><img className={classes.images} style={style} src={item.images} /></Fade>
                                     </Box>

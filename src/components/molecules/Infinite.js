@@ -203,7 +203,7 @@ export function Infinite({
                                     squarecarddata ? squarecarddata.map((item, index) => {
                                         return (
                                             < >
-                                                <Box>
+                                                <Box key={index}>
                                                     <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
                                                         <Box className={classes.boxes}>
                                                             <Box className={classes.imgBox}>

@@ -117,6 +117,7 @@ export function Paragraphs({
     fourthli,
     download,
     download1,
+    tab_title,
     fifthli,
     href,
 }) {
@@ -201,8 +202,9 @@ export function Paragraphs({
                             <Button
                                 className={classes.smallBtn}
                                 href={href}
-                                onclick={() => window.open(`${href}`, '_blank')}
+                                onClick={() => window.open(`${href}`, '_blank')}
                                 target="_blank"
+                                data-title={tab_title}
                             >
                                 {download}
                             </Button>
@@ -217,6 +219,7 @@ export function Paragraphs({
                                 href={href}
                                 // download="pdf"
                                 target="_blank"
+                                data-title={tab_title}
                             >
                                 {download1}
                             </a>

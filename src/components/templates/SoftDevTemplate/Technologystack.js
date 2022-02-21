@@ -54,7 +54,7 @@ export function Technologystack() {
                     {
                         technologystack.map((item, index) => {
                             return (
-                                <Box className={classes.boxes}>
+                                <Box className={classes.boxes} key={index}>
                                     <Fade bottom> <h4 style={{ color: '#182AC3' }}>{item.number} <img src={'/images/Component 4 – 1.svg'} /></h4></Fade>
                                     <Fade bottom><h4 style={{ color: 'black' }}>{item.title}</h4></Fade>
                                     <Fade bottom><h6 style={{ color: 'black' }}>{item.subtitle}</h6></Fade>

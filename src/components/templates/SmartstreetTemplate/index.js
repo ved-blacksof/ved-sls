@@ -21,7 +21,7 @@ export function SmartstreetTemplate() {
                     title="Smart Street Light"
                     path="Industries / Smart Street Lighting"
                     sub1="SLS has been long-devoted in bringing in new innovations in the smart street lighting sphere.
-                        We offer a new-edge comprehensive platform that provides single-point monitoring and control of 
+                        We offer a new-age comprehensive platform that provides single-point monitoring and control of 
                         retrofit and new street lighting infrastructure. We aim to bring this entire infrastructure under one 
                         common roof for definite control, optimized energy-saving, and data-driven decisions."
                     // icons="icons"

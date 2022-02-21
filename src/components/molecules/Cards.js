@@ -176,7 +176,7 @@ export function Cards({
                     {
                         data.map((item, index) => {
                             return (
-                                <Box className={classes.boxes}>
+                                <Box className={classes.boxes} key={index}>
                                     <Box className={classes.imgBox}>
                                         <Fade bottom> <img src={item.images} alt="Product images" />  </Fade>
                                     </Box>

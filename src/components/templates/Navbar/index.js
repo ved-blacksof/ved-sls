@@ -1,12 +1,9 @@
 import React, { useRef, useState } from 'react'
-import { makeStyles, IconButton, Toolbar, AppBar, Box, Button, Menu, MenuItem, ListItemText, Popper, Grow, Paper, ClickAwayListener, MenuList } from '@material-ui/core'
-import { useHistory, NavLink, Link } from 'react-router-dom';
-import { ArrowDownward, ArrowDropDown, KeyboardArrowDown, KeyboardArrowLeft, MenuOpen, MenuOutlined } from '@material-ui/icons'
+import {  Toolbar, AppBar, Box, Button,  MenuItem, MenuList } from '@material-ui/core'
+import { useHistory, NavLink } from 'react-router-dom';
+import { KeyboardArrowDown, MenuOutlined } from '@material-ui/icons'
 import clsx from 'clsx'
-// import { MobileMenu } from './MobileMenu';
 import Fade from 'react-reveal/Fade';
-import { keyframes } from 'styled-components';
-import { animation } from 'react-reveal/globals';
 import { useStyles } from './Styles'
 import { MobileMenu } from './MobileMenu';
 import { MobileMenuWorking } from './MobileMenuWorking';
@@ -155,14 +152,13 @@ export function Navbar({
                 className={clsx(classes.mainBox, classes[navref.current])}
                 style={style}
             >
-                <Toolbar className={classes.navbar}>
-                    <Box className={classes.logoBox} disableRipple disableFocusRipple disableTouchRipple edge="start" color="inherit" aria-label="menu">
+                <Toolbar className={classes.navbar} disableRipple disableFocusRipple disableTouchRipple>
+                    <Box className={classes.logoBox} edge="start" color="inherit" aria-label="menu">
 
                         {
                             navPos === "navRelative" ?
                                 <Fade bottom>
                                     <img
-                                        disableRipple
                                         className={classes.logo}
                                         src={'/images/Layer_x0020_1.svg'}
                                         onClick={() => { history.push('/') }} />
@@ -170,7 +166,6 @@ export function Navbar({
                                 :
                                 <Fade bottom>
                                     <img
-                                        disableRipple
                                         className={classes.logo}
                                         src={'/images/Layer_x0020_1-1.svg'}
                                         onClick={() => { history.push('/') }} />

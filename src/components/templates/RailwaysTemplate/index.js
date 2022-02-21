@@ -51,7 +51,7 @@ export function RailwaysTemplate() {
             />
 
             <Visit1
-                goto="Know more about our solution for Railways."
+                goto="Know more about our solutions for Railways."
                 title="Contact Us"
                 href="/contact"
             />

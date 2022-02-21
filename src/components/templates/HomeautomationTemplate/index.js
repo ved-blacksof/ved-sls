@@ -60,6 +60,7 @@ export function HomeautomationTemplate({
                     We offer a range of smart, interactive, and easy-to-use space automation products that are redefining how users interact with their surroundings."
                     mapIconPosition="mapIconPosition"
                     data={homeAutoOverview}
+                    // paddings="13% 0%"
                     style={{ height: 'fit-content', marginBottom: '20%' }}
                 />
             </GridBlue>

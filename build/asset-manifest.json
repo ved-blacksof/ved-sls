@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4180bbec.css",
-    "main.js": "/static/js/main.2f46a0e4.js",
+    "main.css": "/static/css/main.d6ca856a.css",
+    "main.js": "/static/js/main.538c7bcb.js",
     "static/media/ESP32 based wireless temperature probe for Industrial use case .pdf": "/static/media/ESP32 based wireless temperature probe for Industrial use case .3afbe62d47e1135e4a16.pdf",
     "static/media/Homepage.png": "/static/media/Homepage.2a94e5f06ba2583e3160.png",
     "static/media/ESP32 based advanced data acquisition system.pdf": "/static/media/ESP32 based advanced data acquisition system.8887c27ed61e75b5732b.pdf",
@@ -23,19 +23,16 @@
     "static/media/ACCESS-REGULAR.OTF": "/static/media/ACCESS-REGULAR.382dd57647d9ccf4b085.OTF",
     "static/media/ACCESS-BOLD.OTF": "/static/media/ACCESS-BOLD.41d290dcf8ceaefb710b.OTF",
     "static/media/BebasNeue-Regular.ttf": "/static/media/BebasNeue-Regular.9aa03f9d52866893add5.ttf",
-    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.4180bbec.css.map": "/static/css/main.4180bbec.css.map",
-    "main.2f46a0e4.js.map": "/static/js/main.2f46a0e4.js.map"
+    "main.d6ca856a.css.map": "/static/css/main.d6ca856a.css.map",
+    "main.538c7bcb.js.map": "/static/js/main.538c7bcb.js.map"
   },
   "entrypoints": [
-    "static/css/main.4180bbec.css",
-    "static/js/main.2f46a0e4.js"
+    "static/css/main.d6ca856a.css",
+    "static/js/main.538c7bcb.js"
   ]
 }

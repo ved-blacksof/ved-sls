@@ -194,10 +194,10 @@ export function Letstalk() {
             .then((result) => {
                 console.log(result.text);
                 swal({
-                    title: "Success!",
-                    text: "Thankyou for connecting with us.",
+                    title: "Message successfully sent!",
+                    text: "Our team will get back to you shortly!",
                     icon: "success",
-                    button: "Good",
+                    button: "Okay",
                 }).then(() => {
                     window.location.reload(false)
                 });
@@ -418,7 +418,7 @@ export function Letstalk() {
                 </Box>
 
                 <Box className={classes.textBtm}>
-                    <h4>For more information about products and services, please contact us at: info@slscorp.com</h4>
+                    <h4>For more information about products and services, please contact us at info@slscorp.com</h4>
                 </Box>
             </MainContainer>
         </>

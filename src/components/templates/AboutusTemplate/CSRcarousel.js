@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
         width: '23vw',
         height: '20vw',
         background: '#182AC3',
-        padding: '4%',
+        padding: '4.5%',
         top: '30%',
         left: '14%',
         [theme.breakpoints.down('sm')]: {
@@ -106,8 +106,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     iconBox: {
-        width: '8vw',
-        height: '7vw',
+        width: '7.5vw',
+        height: '6vw',
         background: '#DE141A',
         display: 'flex',
         justifyContent: 'center',
@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     icon: {
-        width: '55%'
+        width: '70%'
     },
     blueBoxPara: {
         width: '100%',
@@ -202,7 +202,7 @@ export function CSRcarousel({
                                     data.map((item, index) => {
                                         return (
 
-                                            <Box className={classes.BoxWidth} data-aos="fade-up">
+                                            <Box className={classes.BoxWidth} data-aos="fade-up" key={index}>
                                                 <Box className={classes.imageBox}>
                                                     <img className={classes.image}
                                                         src={item.images}
@@ -213,7 +213,7 @@ export function CSRcarousel({
                                                 <Box className={classes.blueBox}>
                                                     <Box className={classes.posRelative}>
                                                         <Box className={classes.iconBox}>
-                                                            <img className={classes.icon} src={'./images/Layer 2.svg'} />
+                                                            <img className={classes.icon} src={item.icon} />
                                                         </Box>
                                                         {/* <Button variant='outlined' className={classes.btn}>Read More</Button> */}
                                                     </Box>

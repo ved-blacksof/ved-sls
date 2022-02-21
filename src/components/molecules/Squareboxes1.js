@@ -147,7 +147,7 @@ export function Squareboxes1({
                                 <>
                                     {
                                         item.link ?
-                                            <Box className={clsx(classes.boxWrap)}>
+                                            <Box className={clsx(classes.boxWrap)} key={index}>
                                                 <a href={item.link}
                                                     className={classes.linked}
                                                     target="_blank"
@@ -163,7 +163,7 @@ export function Squareboxes1({
                                                 </a>
                                             </Box>
                                             :
-                                            <Box className={clsx(classes.boxes)} >
+                                            <Box className={clsx(classes.boxes)} key={index}>
                                                 <Box className={classes.imgBox}>
                                                     <Bounce bottom>
                                                         <img className={classes.image} src={item.images} alt="Mission Icon" />

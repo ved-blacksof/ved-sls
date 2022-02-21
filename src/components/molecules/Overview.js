@@ -88,7 +88,7 @@ export function Overview({
     icons,
     mapIconPosition,
     data,
-
+    paddings
 }) {
 
     const classes = useStyles()
@@ -155,6 +155,7 @@ export function Overview({
                                     data={data}
                                     fill="white"
                                     color="black"
+                                    paddings={paddings}
                                 />
                             </> : ''
                     }

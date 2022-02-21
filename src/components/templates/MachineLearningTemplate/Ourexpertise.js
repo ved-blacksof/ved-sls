@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     iconBox: {
         width: '6rem',
+        height:'6rem',
         '& img': {
             width: '100%',
             maxHeight: '100%'
@@ -56,7 +57,7 @@ export function Ourexpertise({
                     {
                         expertise.map((item, index) => {
                             return (
-                                <Box className={classes.simpleCard}>
+                                <Box className={classes.simpleCard} key={index}>
                                     <Box className={classes.iconBox}>
                                         <Fade bottom><img className={classes.icons} src={item.icon} /></Fade>
                                     </Box>

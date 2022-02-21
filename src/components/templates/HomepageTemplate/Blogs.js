@@ -417,7 +417,7 @@ export function Blogs({
                                         const { images, head, para, read } = item
 
                                         return (
-                                            <Box>
+                                            <Box key={index}>
                                                 <Box className={classes.card} data-aos="fade-up">
                                                     <Box className={classes.cardImage}>
                                                         <img className={classes.images} src={item.images} alt="carousel Image" />
@@ -445,7 +445,7 @@ export function Blogs({
                                                                     <Button
                                                                         className={classes.smallBtn}
                                                                         href={item.href}
-                                                                        onclick={() => window.open(`${item.href}`, '_blank')}
+                                                                        onClick={() => window.open(`${item.href}`, '_blank')}
                                                                         target="_blank"
                                                                     >
                                                                         {download}
@@ -468,7 +468,7 @@ export function Blogs({
                                                 {
                                                     item.link ?
 
-                                                        <Box>
+                                                        <Box key={index}>
                                                             <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
                                                                 <Box className={classes.boxes}>
                                                                     <Box className={classes.imgBox}>
@@ -480,7 +480,7 @@ export function Blogs({
                                                         </Box>
                                                         :
 
-                                                        <Box className={classes.boxes}>
+                                                        <Box className={classes.boxes} key={index}>
                                                             <Box className={classes.imgBox}>
                                                                 <img className={classes.image} src={item.images} alt="Mission Icon" />
                                                             </Box>

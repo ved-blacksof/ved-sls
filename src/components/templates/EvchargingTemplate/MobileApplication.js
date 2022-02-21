@@ -79,7 +79,7 @@ export function MobileApplication() {
                                     utilize your EV Charging services worldwide."
                             list="list"
                             firstli="Android and iOS support"
-                            secli="Shows Real-time charge status"
+                            secli="Shows real-time charge status"
                             thirdli="UPI, credit, and online payment options"
                             fourthli="Slot reservation"
                             fifthli="Option for an offline wallet"
