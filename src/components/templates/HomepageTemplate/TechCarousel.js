@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             height: 'fit-content',
+            margin:'5% auto',
         }
     },
     box1: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         [theme.breakpoints.down('sm')]: {
-            width: '100%',
+            width: '100%'
         }
     },
 
@@ -45,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
+            marginTop:'10%',
+
         },
         "& .flicking-pagination": {
             bottom: '0%',
@@ -98,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '5vw',
             textAlign: 'center',
             [theme.breakpoints.down('sm')]: {
-                fontSize: '1.8rem'
+                fontSize: '3rem'
             }
         },
         '& h2': {
@@ -120,8 +123,8 @@ const useStyles = makeStyles((theme) => ({
 
     },
     boxSmall: {
-        height: '11vw',
         width: '10vw',
+        height: '10vw',
         padding: '1%',
         background: 'white',
         display: 'flex',
@@ -151,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
             }
         }
     },
-    pagination:{
+    pagination: {
 
     }
 
@@ -212,14 +215,14 @@ export function TechCarousel() {
                                 </div>
 
                                 <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                    <Fade bottom><h3>100+</h3></Fade>
+                                    <Fade bottom><h2 style={{ color: '#D9393E' }}>100+</h2></Fade>
                                     <Fade bottom><h4 >ACTIVE PROJECTS AROUND THE WORLD</h4></Fade>
                                 </div>
                                 <div className={classes.boxSmall} style={{ background: '#182AC3', }}>
                                     <Fade bottom><img src={'./images/mission.svg'} /></Fade>
                                 </div>
                                 <div className={classes.boxSmall} style={{ background: 'white' }} >
-                                    <Fade bottom><h3>06+</h3></Fade>
+                                    <Fade bottom><h2 style={{ color: '#D9393E' }}>06+</h2></Fade>
                                     <Fade bottom><h4 >BUSINESS VERTICALS</h4></Fade>
                                 </div>
 

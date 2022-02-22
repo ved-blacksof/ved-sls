@@ -1,11 +1,12 @@
-import fifteen1 from '../assets/certificates/ISO9001-2021_CERT_2015_1.pdf'
-import fifteen2 from '../assets/certificates/ISO9001 - 2015 CERT_2015_2.pdf'
-import fifteen3 from '../assets/certificates/ISO_14001_2015_CERT_SLSCORP_2021_2015_3.pdf'
-import fifteen4 from '../assets/certificates/ISO_14001_2015_CERT_SLSCORP_2022(1).pdf'
+import fifteen1 from '../assets/certificates/ISO_9001:2015_(May 2021 to May 2024).pdf'
+import fifteen2 from '../assets/certificates/ISO_9001:2015_(May 2018 to May 2021).pdf'
+import fifteen3 from '../assets/certificates/ISO_14001:2015_(August 2020 to August 2021).pdf'
+import fifteen4 from '../assets/certificates/ISO_14001:2015_(August 2021 to August 2022).pdf'
 
-import eight1 from '../assets/certificates/ISO9001-2008 CERT_2015_2008_1.pdf'
-import eight2 from '../assets/certificates/ISO9001-2008 CERT_2012_2008_2.pdf'
-import eight3 from '../assets/certificates/ISO9001-2008 CERT_2008_3.pdf'
+import eight1 from '../assets/certificates/ISO_9001:2008_(May 2015 to May 2018).pdf'
+import eight2 from '../assets/certificates/ISO_9001:2008_(May 2012 to May 2015).pdf'  
+import eight3 from '../assets/certificates/ISO_9001:2008_(May 2009 to May 2012).pdf' 
+// import eight3 from '../assets/certificates/ISO_9001:2008.pdf' 
 
 
 //CASE STUDIES realtime
@@ -257,7 +258,7 @@ export const realtime = [
 export const certification = [
     {
         logo: './images/about/certificatesLogo/Logo4.png',
-        head: '  ISO 9001:2008',
+        head: 'ISO 9001:2008',
         para: '(May 2009 to May 2012)',
         href: `${eight3}`,
         read: `${eight3}`,

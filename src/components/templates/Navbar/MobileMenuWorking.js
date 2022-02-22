@@ -8,12 +8,11 @@ import gsap from 'gsap/all';
 
 const useStyles = makeStyles((theme) => ({
     mainBox: {
-
+        marginTop:'2%'
     },
     navRelative: {
         position: 'relative',
         width: '100%',
-
     },
     navFixed: {
         position: 'fixed',

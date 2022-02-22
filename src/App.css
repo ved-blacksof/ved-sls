@@ -33,6 +33,10 @@
     font-family: Access;
     src: url(./components/assets/fonts/Acces/ACCESS-REGULAR.OTF);
   }
+  @font-face {
+    font-family: Access-Light;
+    src: url(./components/assets/fonts/Acces/ACCESS-LIGHT.OTF);
+  }
   
   @font-face {
     font-family: Access-bold;
@@ -57,7 +61,6 @@
     background-image: radial-gradient(#c5c5c542 3%, transparent 20%);
     background-position: 0 0, 50px 50px;
     background-size: 30px 30px;
-    scroll-behavior: smooth;
   }
   
   
@@ -120,7 +123,7 @@
     }
     
     h6{
-      font-family: Access;
+      font-family: Access-light;
       font-size: .9rem;
       font-weight: normal;
       color: white;
@@ -182,7 +185,7 @@
         }
         
         h6{
-          font-family: Access;
+          font-family: Access-light;
           font-size: .9rem;
           font-weight: normal;
           color: white;
@@ -236,7 +239,7 @@
         }
         
         h6{
-          font-family: Access;
+          font-family: Access-light;
           font-size: 1rem;
           font-weight: normal;
           color: white;
@@ -294,7 +297,7 @@
         }
         
         h6{
-          font-family: Access;
+          font-family: Access-light;
           font-size: 1.1rem;
           font-weight: normal;
           color: white;
@@ -352,7 +355,7 @@
         }
   
         h6{
-          font-family: Access;
+          font-family: Access-light;
           font-size: 1.2rem;
           font-weight: normal;
           color: white;
@@ -375,7 +378,7 @@
         }
       }
   
-  
+   
   
   
   
@@ -398,3 +401,45 @@
         background: #182AC3;
         border-radius: 10px;
       }
+
+
+
+      /* button  */
+
+      .appButton::before{
+          content: "";
+          position: absolute;
+          left: 0%;
+          bottom: 0%;
+          width: 100%;
+          height: 0%;
+          transition: all .5s ease-in-out;
+          background-color: #182AC3;
+          z-index: -1;
+      }
+
+      .appButton:hover::before{
+        width: 100%;
+        height: 100%;
+      }
+
+
+      /* "&::before": {
+        content: "''",
+        position: 'absolute',
+        left: '0%',
+        bottom: '0%',
+        width: '100%',
+        height: '0%',
+        transition: 'all .5s ease-in-out',
+        background: '#182AC3',
+        zIndex:'-1'
+    },
+    '&:hover': {
+        color: 'white',
+        "&::before": {
+            content: "''",
+            width: '100%',
+            height: '100%',
+        },
+    }, */

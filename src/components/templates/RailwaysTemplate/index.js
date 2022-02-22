@@ -44,7 +44,8 @@ export function RailwaysTemplate() {
             <QualityReverse
                 heading="TCN Gateway"
                 redline
-                imageBG="./images/aaa082d2257ab65aecf61c2340e9c5b9_2_XL.png"
+                // imageBG="./images/aaa082d2257ab65aecf61c2340e9c5b9_2_XL.png"
+                imageBG="./images/railways/product.png"
                 subtitle="The TCN gateway is like WTB-MVB, WTB-CAN, WTB-ETH, connecting various field signals & 
                     sensor inputs to the train communication network & vice-versa. It comes with an in-built WTB-MVB controller,
                     realized on FPGA with in-house developed IP. It is IEC 61375 and UIC Leaflet 556 compliant."

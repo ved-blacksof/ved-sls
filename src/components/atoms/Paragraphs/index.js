@@ -1,4 +1,5 @@
 import { Box, Button, Container, makeStyles } from '@material-ui/core'
+import clsx from 'clsx'
 import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
@@ -52,15 +53,16 @@ const useStyles = makeStyles((theme) => ({
     },
     smallBtn: {
         font: 'normal normal normal 1rem Access',
-        background: '#182AC3',
         textDecoration: 'none',
         textTransform: 'uppercase',
-        border: 'none',
-        color: 'white',
+        border: '2px solid #182AC3',
+        color: '#182AC3',
         padding: '2% 3%',
         margin: '0% auto',
+        transition: 'all .4s ease-in-out',
+        position: 'relative',
         '&:hover': {
-            background: 'blue'
+            color: 'white'
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '.7rem'
@@ -122,13 +124,22 @@ export function Paragraphs({
     href,
 }) {
     const classes = useStyles()
+
+    const handleDownload = () => {
+        const newTab = window.open(`${href}`, '_blank');
+
+        newTab.addEventListener("load", function () {
+            newTab.document.title = 'asad';
+        });
+        console.log(newTab.document.title, "djfh")
+    }
     return (
         <>
             <Box className={classes.paraBox} style={style}>
                 <h3 className={classes.head}
                 // dangerouslySetInnerHTML={{ __html: title }}
                 >
-                    <span className={classes.eSM}>{e}</span> 
+                    <span className={classes.eSM}>{e}</span>
                     {title}
                 </h3>
                 {
@@ -200,9 +211,9 @@ export function Paragraphs({
                     download ?
                         <Box className={classes.btnBox}>
                             <Button
-                                className={classes.smallBtn}
+                                className={clsx(classes.smallBtn, 'appButton')}
                                 href={href}
-                                onClick={() => window.open(`${href}`, '_blank')}
+                                onClick={handleDownload}
                                 target="_blank"
                                 data-title={tab_title}
                             >

@@ -323,7 +323,7 @@ export function Navbar({
                         >
                             <NavLink
                                 to="#"
-                                activeClassName={clsx(classes[linkactiveref.current])}
+                                // activeClassName={clsx(classes[linkactiveref.current])}
                                 className={clsx(classes[navlinkref.current])}
                             >
                                 <h4 className={clsx(classes[navlinkref.current])}

@@ -145,7 +145,7 @@ export function MeterTabs() {
                         />
 
                         <QualityReverse
-                            imageBG="./images/DCU.png"
+                            imageBG="./images/smartmeter/DCU1.png"
                             heading="Data Concentration Unit (DCU)"
                             subtitle="The Data Concentration Unit is the secured hub in our smart metering infrastructure that facilitates the exchange of all data between the smart meters/IHD and HES."
                             redline

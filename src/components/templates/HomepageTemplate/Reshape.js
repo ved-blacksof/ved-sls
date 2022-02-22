@@ -113,7 +113,7 @@ export function Reshape() {
 
     const autoPlugins = new AutoPlay({ duration: 2000, direction: "NEXT", stopOnHover: true });
 
-    const plugins = [ paginationsPlugins];
+    const plugins = [ paginationsPlugins,autoPlugins];
 
 
     return (
@@ -125,7 +125,7 @@ export function Reshape() {
                         plugins={plugins}
                         defaultIndex='0'
                         circular={true}
-                        duration="1500"
+                        duration="1200"
 
                     >
                         {

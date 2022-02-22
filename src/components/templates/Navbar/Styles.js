@@ -6,8 +6,7 @@ export const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        boxShadow: 'none',
-
+        boxShadow: 'none'
     },
     navRelative: {
         position: 'relative',
@@ -15,7 +14,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     navFixed: {
         position: 'fixed',
-        // minHeight: '100px',
         top: '0px',
         boxShadow: '0px 0px 5px #777',
         background: 'white',
@@ -169,13 +167,42 @@ export const useStyles = makeStyles((theme) => ({
     linkActive: {
         fontWeight: 'bold',
         opacity: '1',
+        height:'90px',
+        position:'relative',
+        "&::before": {
+            content: "''",
+            height: '3px',
+            width: '100%',
+            background: '#DE141A',
+            position: 'absolute',
+            bottom: '0px',
+            left: '0%',
+            transition: 'all 500ms ease-in-out',
+            [theme.breakpoints.down('sm')]: {
+                height: '5px'
+            }
+        },
     },
     linkActiveAfterPos: {
         color: '#182AC3',
         fontWeight: 'bold',
+        height:'90px',
+        "&::before": {
+            content: "''",
+            height: '3px',
+            width: '100%',
+            background: '#DE141A',
+            position: 'absolute',
+            bottom: '0px',
+            left: '0%',
+            transition: 'all 500ms ease-in-out',
+            [theme.breakpoints.down('sm')]: {
+                height: '5px'
+            }
+        },
         "&:hover": {
             "& h4": {
-                // color: '#182AC3',
+
             },
         }
     },

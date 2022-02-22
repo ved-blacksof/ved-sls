@@ -56,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '0% 3% 8% 6%',
         position: 'relative',
         width: '100%',
+        cursor:'pointer',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
         }
@@ -120,7 +121,7 @@ export function Research({
 
     return (
 
-        <Box style={{ position: 'relative', padding: '10% 0%', cursor:'pointer' }}>
+        <Box style={{ position: 'relative', padding: '10% 0%' }}>
             <MainContainer>
                 <Container fixed className={classes.reaserchMain} >
                     {

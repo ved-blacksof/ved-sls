@@ -16,7 +16,9 @@ import Aos from 'aos'
 
 const useStyles = makeStyles((theme) => ({
     realText: {
-        margin: '15% auto',
+        margin: '0% auto',
+        marginTop:'15%',
+        marginBottom:'8%',
         [theme.breakpoints.down('sm')]: {
             margin: "20% auto",
             overflow: 'hidden'

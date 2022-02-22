@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         margin: '8% 0%',
         [theme.breakpoints.down('sm')]: {
+
         }
     },
     centerBtn: {
@@ -72,7 +73,7 @@ export function Portfolio({
 
         <MainContainer>
             <Container fixed className={classes.portContainer}>
-                <Box style={{margin:'0% auto'}}>
+                <Box style={{ margin: '0% auto' }}>
                     <Fade top>
                         <GeneralHeading
                             title="OUR RICH PORTFOLIO "
@@ -84,7 +85,10 @@ export function Portfolio({
                         />
                     </Fade>
 
-                    <MapIcon data={data} />
+                    <MapIcon
+                        data={data}
+                        know_More
+                    />
 
                     <br />
 

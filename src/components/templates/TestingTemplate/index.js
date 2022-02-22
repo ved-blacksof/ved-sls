@@ -27,7 +27,7 @@ export function TestingTemplate() {
 
             <Quality
                 mainheading="Offerings"
-                imageBG="./images/Group82860.png"
+                imageBG="./images/testing/ZIgbee.png"
                 heading="In protocol Validation"
                 redline="redline"
                 subhead="Zigbee Test Manager"

@@ -34,10 +34,6 @@ const useStyles = makeStyles((theme) => ({
         listStyle: 'inside',
         margin: '3% 0%',
         color: 'white',
-        [theme.breakpoints.down('sm')]: {
-
-        }
-
     },
     lis: {
         color: 'white',
