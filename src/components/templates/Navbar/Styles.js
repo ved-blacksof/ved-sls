@@ -286,6 +286,9 @@ export const useStyles = makeStyles((theme) => ({
         fontSize: '2.2rem',
         color: 'black'
     },
+
+    // Mobile Menu
+    
     menu: {
         [theme.breakpoints.down('sm')]: {
             height:'0',

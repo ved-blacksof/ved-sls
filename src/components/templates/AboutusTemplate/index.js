@@ -8,7 +8,7 @@ import { SLSTimeline } from './SLSTimeline'
 import { certification, csrcarousel } from '../../molecules/PortfolioData'
 import { GridBlue } from '../../atoms'
 import quality from '../../assets/policies/Quality_Policy.pdf'
-import ems from '../../assets/policies/EMS_Policy.pdf'
+import ems from '../../assets/policies/Environmental_Policy.pdf'
 
 
 export function AboutusTemplate() {

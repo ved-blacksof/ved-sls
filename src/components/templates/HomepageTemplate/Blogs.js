@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
         marginTop:'15%',
         marginBottom:'8%',
         [theme.breakpoints.down('sm')]: {
-            margin: "20% auto",
+            marginTop:'20%',
+            marginBottom:'8%',
             overflow: 'hidden'
         },
     },
@@ -36,7 +37,16 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
-
+            display:'none'
+        },
+    },
+    boxSM: {
+        display:'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            marginTop:'5%',
         },
     },
     btn: {
@@ -72,7 +82,8 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: '3px solid #182AC3',
         background: 'white',
         [theme.breakpoints.down('sm')]: {
-            width: '80%'
+            // width: '90%',
+            margin:'0% 20px'
         }
     },
     cardImage: {
@@ -83,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
             height: 'fit-content',
         },
         [theme.breakpoints.down('xs')]: {
-            height: '50vw',
+            height: '55vw',
         },
     },
     images: {
@@ -463,41 +474,12 @@ export function Blogs({
                                 }
 
 
-                                {
-                                    squarecarddata ? squarecarddata.map((item, index) => {
-                                        return (
-                                            < >
-                                                {
-                                                    item.link ?
-
-                                                        <Box key={index}>
-                                                            <a href={item.link} style={{ textDecoration: 'none' }} target="_blank">
-                                                                <Box className={classes.boxes}>
-                                                                    <Box className={classes.imgBox}>
-                                                                        <img className={classes.image} src={item.images} alt="Mission Icon" />
-                                                                    </Box>
-                                                                    <h6>{item.subtitle} </h6>
-                                                                </Box>
-                                                            </a>
-                                                        </Box>
-                                                        :
-
-                                                        <Box className={classes.boxes} key={index}>
-                                                            <Box className={classes.imgBox}>
-                                                                <img className={classes.image} src={item.images} alt="Mission Icon" />
-                                                            </Box>
-                                                            <h6>{item.subtitle} </h6>
-                                                        </Box>
-                                                }
-                                            </>
-                                        )
-                                    }) : ''
-                                }
-
-
-
                             </Slider>
                         </Box>
+                        <Box className={clsx(classes.boxSM)} style={style} >
+                                <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                                <Box style={{marginLeft:'4%'}}><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
+                            </Box>
                         {
                             grpicons ? <Box className={classes.iconBox}>
                                 <Fade bottom><img src={grpicons} /></Fade>

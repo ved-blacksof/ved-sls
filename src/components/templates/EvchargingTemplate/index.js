@@ -60,8 +60,6 @@ export function EvchargingTemplate() {
                 </Container>
             </MainContainer>
 
-
-
             <Realtime
                 maintitle="HARDWARE OFFERINGS"
                 squarecarddata={evchargers}

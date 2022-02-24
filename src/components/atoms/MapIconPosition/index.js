@@ -30,10 +30,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     boxes: {
+        overflow:"hidden",
         height: '14vw',
         width: '22%',
-        display: 'flex',
-        alignItems: 'center',
         borderRadius: '.8rem',
         marginRight: '3%',
         marginBottom: '3%',
@@ -52,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
             justifyContent: 'center'
         },
         [theme.breakpoints.down('xs')]: {
-            width: '35vw',
-            height: '35vw',
+            width: '100%',
+            height: '70vw',
             padding: '3% 2%',
             borderRadius: '.5rem',
             margin: '5% 2%',
@@ -61,17 +60,19 @@ const useStyles = makeStyles((theme) => ({
 
     },
     iconsBox: {
+        marginTop:"6%",
         width: '45%',
         textAlign: 'center',
         cursor: 'pointer',
+        [theme.breakpoints.down('md')]: {
+            marginTop: '0%'
+        },
         [theme.breakpoints.down('sm')]: {
-            marginTop: '0',
             height: '4rem'
         },
         [theme.breakpoints.down('xs')]: {
-            marginTop: '0',
             width: '45%',
-
+            height: 'fit-content'
         },
 
     },

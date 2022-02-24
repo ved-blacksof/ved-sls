@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6100fcfe.css",
-    "main.js": "/static/js/main.1fe8fffa.js",
+    "main.css": "/static/css/main.9a8ea74c.css",
+    "main.js": "/static/js/main.c42afe9d.js",
     "static/media/ESP32 based wireless temperature probe for Industrial use case .pdf": "/static/media/ESP32 based wireless temperature probe for Industrial use case .3afbe62d47e1135e4a16.pdf",
     "static/media/Homepage.png": "/static/media/Homepage.2a94e5f06ba2583e3160.png",
     "static/media/ESP32 based advanced data acquisition system.pdf": "/static/media/ESP32 based advanced data acquisition system.8887c27ed61e75b5732b.pdf",
@@ -19,7 +19,7 @@
     "static/media/ISO_9001:2015_(May 2021 to May 2024).pdf": "/static/media/ISO_9001:2015_(May 2021 to May 2024).914dad407b15c60c5a5d.pdf",
     "static/media/ISO_9001:2015_(May 2018 to May 2021).pdf": "/static/media/ISO_9001:2015_(May 2018 to May 2021).5f9a05e6d634072964bb.pdf",
     "static/media/Quality_Policy.pdf": "/static/media/Quality_Policy.8cde4760e721049e848d.pdf",
-    "static/media/EMS_Policy.pdf": "/static/media/EMS_Policy.9e421d67446006b5a5c7.pdf",
+    "static/media/Environmental_Policy.pdf": "/static/media/Environmental_Policy.9e421d67446006b5a5c7.pdf",
     "static/media/ACCESS-LIGHT.OTF": "/static/media/ACCESS-LIGHT.e0b903bc3cf7698ffb04.OTF",
     "static/media/ACCESS-REGULAR.OTF": "/static/media/ACCESS-REGULAR.382dd57647d9ccf4b085.OTF",
     "static/media/ACCESS-BOLD.OTF": "/static/media/ACCESS-BOLD.41d290dcf8ceaefb710b.OTF",
@@ -29,11 +29,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.6100fcfe.css.map": "/static/css/main.6100fcfe.css.map",
-    "main.1fe8fffa.js.map": "/static/js/main.1fe8fffa.js.map"
+    "main.9a8ea74c.css.map": "/static/css/main.9a8ea74c.css.map",
+    "main.c42afe9d.js.map": "/static/js/main.c42afe9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.6100fcfe.css",
-    "static/js/main.1fe8fffa.js"
+    "static/css/main.9a8ea74c.css",
+    "static/js/main.c42afe9d.js"
   ]
 }

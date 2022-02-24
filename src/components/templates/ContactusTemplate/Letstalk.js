@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
         width: '40%',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
+            marginTop:'8%'
         }
     },
     input: {
@@ -77,17 +78,17 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '10%',
         [theme.breakpoints.down('sm')]: {
             justifyContent: 'center',
-            marginTop: '5%',
-
+            marginTop: '0%',
         }
     },
     btn: {
         background: 'white',
         color: '#182AC3',
-        font: 'normal normal normal 1.2rem Access',
+        font: 'normal normal normal 1.5rem Access',
         textTransform: 'none',
         padding: '.6rem 2rem',
-        borderRadius: '3px',
+        borderRadius: '4px',
+        border:'2px solid #182AC3',
         [theme.breakpoints.down('sm')]: {
             fontSize: '.9rem',
             padding: '.3rem 1rem',

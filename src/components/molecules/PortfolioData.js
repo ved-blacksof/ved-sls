@@ -396,6 +396,38 @@ export const iotnebulink = [
 
 export const evchargers = [
     {
+        images: './images/evcharger/evchargers/Home-Charger.png',
+        subtitle: 'Home Charger',
+    },
+    {
+        images: './images/evcharger/evchargers/Bharat-AC-001-Charger.png',
+        subtitle: 'Bharat AC-001 Charger',
+    },
+    {
+        images: './images/evcharger/evchargers/Type-2-AC-Dual-gun-vertical-charger.png',
+        subtitle: 'Type 2 AC Dual Gun Vertical Charger',
+    },
+    {
+        images: './images/evcharger/evchargers/Type-2-AC-Dual-gun-wall-mounted-charger.png',
+        subtitle: 'Type 2 AC Dual Gun Wall-Mounted Charger',
+    },
+    {
+        images: './images/evcharger/evchargers/Hybrid-AC-charger-with-3P-socket.png',
+        subtitle: 'Hybrid AC Charger with 3P Socket',
+    },
+    {
+        images: './images/evcharger/evchargers/Hybrid-AC-charger-with-IEC-Socket.png',
+        subtitle: 'Hybrid AC Charger with IEC Socket',
+    },
+    {
+        images: './images/evcharger/evchargers/Type-2-AC-Single-Gun-Charger.png',
+        subtitle: 'Type 2 AC Single Gun Charger',
+    },
+]
+
+//just code in case !!!
+export const evchargersOld = [
+    {
         images: './images/evcharger/evchargers/C2.png',
         subtitle: 'Home Charger',
     },
@@ -1212,47 +1244,47 @@ export const industries = [
 
 export const homeproducts = [
     {
-        images: './images/bulb2.png',
+        images: './images/homeautomation/products/Smart-Bulb.png',
         subtitle: 'Smart Bulb',
         link: 'https://www.konnsys.com/Home/SmartBulb'
     },
     {
-        images: './images/kitpro_smartsolution.png',
+        images: './images/homeautomation/products/Hub.png',
         subtitle: 'Hub',
         link: 'https://www.konnsys.com/Home/TheHub'
     },
     {
-        images: './images/motion_sensor.png',
+        images: './images/homeautomation/products/Motion-Sensor.png',
         subtitle: 'Motion Sensor',
         link: 'https://www.konnsys.com/Home/TheHub#motion_sensor'
     },
     {
-        images: './images/temp-humidity.png',
+        images: './images/homeautomation/products/Temp-Humidity-Sensor.png',
         subtitle: 'Temp-Humidity Sensor',
         link: 'https://www.konnsys.com/Home/TheHub#temp_humidity_sensor'
     },
     {
-        images: './images/gas.png',
+        images: './images/homeautomation/products/Gas-Detector.png',
         subtitle: 'Gas Detector',
         link: 'https://www.konnsys.com/Home/GasDetector'
     },
     {
-        images: './images/Multi-function.png',
+        images: './images/homeautomation/products/Multi-Function-Button.png',
         subtitle: 'Multi-Function Button',
         link: 'https://www.konnsys.com/Home/TheHub#multi_function_button'
     },
     {
-        images: './images/smart-cabinate-lock.png',
+        images: './images/homeautomation/products/Smart-Cabinet-Lock.png',
         subtitle: 'Smart Cabinet Lock',
         link: 'https://www.konnsys.com/Home/CabinetLock'
     },
     {
-        images: './images/smoke.png',
+        images: './images/homeautomation/products/Smoke-Detector.png',
         subtitle: 'Smoke Detector',
         link: 'https://www.konnsys.com/Home/SmokeDetector'
     },
     {
-        images: './images/three_gang_switch.png',
+        images: './images/homeautomation/products/Gang-Switch.png',
         subtitle: 'Gang Switch',
         link: 'https://www.konnsys.com/Home/GangWallSwitch'
     },

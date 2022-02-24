@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         height: '100%',
         display: 'flex',
-        // justifyContent: 'center',
         alignItems: 'flex-start',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
@@ -16,8 +15,6 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     eSM: {
-        // textTransform: 'lowercase',
-        // fontWeight:'bold'
         fontFamily: 'Access',
     },
     head: {
@@ -26,23 +23,10 @@ const useStyles = makeStyles((theme) => ({
     portSubHead: {
         color: 'black',
         width: '100%',
-        // display: 'list-item'         /* This has to be "list-item"                                               */,
-        // listStyleType: 'disc',       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
-        // listStylePosition: 'inside',
-        [theme.breakpoints.down('sm')]: {
-            // width: '70%',
-        },
-        "&::before": {
-            content: "''",
-
-        }
     },
     portSubtitle: {
         color: 'black',
         width: '100%',
-        [theme.breakpoints.down('sm')]: {
-            // width: '70%',
-        },
     },
     redLine: {
         margin: '2% 0%'
@@ -55,17 +39,91 @@ const useStyles = makeStyles((theme) => ({
         font: 'normal normal normal 1rem Access',
         textDecoration: 'none',
         textTransform: 'uppercase',
-        border: '2px solid #182AC3',
-        color: '#182AC3',
+        border: 'none',
+        background:'#182AC3',
+        color: '#fff',
         padding: '2% 3%',
         margin: '0% auto',
-        transition: 'all .4s ease-in-out',
+        transition: 'all .3s ease-in-out',
         position: 'relative',
+        overflow:'hidden',
+        zIndex:'1',
         '&:hover': {
             color: 'white'
         },
         [theme.breakpoints.down('sm')]: {
             fontSize: '.7rem'
+        },
+        "&::before": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            right: '0%',
+            top: '0%',
+            width: '0',
+            height: '2px',
+            transition: 'all .5s ease-in-out',
+            background: '#182AC3',
+            zIndex: '-999'
+        },
+        "&::after": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            right: '0%',
+            top: '0%',
+            width: '2px',
+            height: '0%',
+            transition: 'all .5s ease-in-out',
+            background: '#182AC3',
+            zIndex: '-999'
+        },
+        '&:hover': {
+            background: '#fff',
+            color:'#182AC3',
+            "& $btnTitle":{
+                color:'#182AC3',
+            },
+            "&::before": {
+                width: '100%',
+            },
+            "&::after": {
+                height: '100%',
+            },
+            "& $mySpan":{
+                "&::before": {
+                    width: '100%',
+                },
+                "&::after": {
+                    height: '100%',
+                },
+            },
+        },
+    },
+    mySpan:{
+        "&::before": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            left: '0%',
+            bottom: '0%',
+            width: '0',
+            height: '2px',
+            transition: 'all .5s ease-in-out',
+            background: '#182AC3',
+            zIndex: '-999'
+        },
+        "&::after": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            left: '0%',
+            bottom: '0%',
+            width: '2px',
+            height: '0%',
+            transition: 'all .5s ease-in-out',
+            background: '#182AC3',
+            zIndex: '-999'
         }
     },
     uls: {
@@ -211,13 +269,15 @@ export function Paragraphs({
                     download ?
                         <Box className={classes.btnBox}>
                             <Button
-                                className={clsx(classes.smallBtn, 'appButton')}
+                                className={clsx(classes.smallBtn)}
                                 href={href}
                                 onClick={handleDownload}
                                 target="_blank"
                                 data-title={tab_title}
                             >
-                                {download}
+                                <span className={classes.mySpan}>
+                                    {download}
+                                </span>
                             </Button>
                         </Box>
                         : ''

@@ -85,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
         font: 'normal normal 800 1.2rem Access',
         [theme.breakpoints.down('sm')]: {
             fontSize: '14px',
+        },
+        "&.Mui-selected":{
+            color:'#182AC3'
         }
     },
     smartBox: {
@@ -116,7 +119,8 @@ export function MeterTabs() {
                         className={classes.tabs}
                         TabIndicatorProps={{
                             style: {
-                                background: 'black',
+                                background: '#182AC3',
+                                color:'#182AC3'
                             },
                             children: <span />
                         }}

@@ -119,6 +119,7 @@ const useStyles = makeStyles((theme) => ({
         verticalAlign: 'middle',
         paddingRight: '3px',
         [theme.breakpoints.down('sm')]: {
+            fontSize:'2rem',
             padding: '0px',
         }
     },

@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
             padding: '1rem 1.5rem',
         },
         [theme.breakpoints.down('xs')]: {
-            height: '8rem',
+            height: '10rem',
             padding: '1rem 1.5rem',
 
         },

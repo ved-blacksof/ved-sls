@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
                 animationIterationCount: 'Infinity',
                 // animationDuration: '500ms',
             }
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
         }
     },
     iconsBox: {
