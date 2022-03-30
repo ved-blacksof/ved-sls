@@ -393,9 +393,9 @@ export function MobileMenuWorking() {
                                 <MenuItem className={classes.menuItem} >
                                     <h6 className={classes.lios} onClick={() => history.push('/smartstreet')}>Smart Street Lighting</h6>
                                 </MenuItem>
-                                <MenuItem className={classes.menuItem} >
+                                {/* <MenuItem className={classes.menuItem} >
                                     <h6 className={classes.lios} onClick={() => history.push('/railways')}>Railways</h6>
-                                </MenuItem>
+                                </MenuItem> */}
 
                                 <MenuItem className={classes.menuItem} >
                                     <h6 className={classes.lios} onClick={() => history.push('/gaming')}>Smart Gaming</h6>
@@ -406,9 +406,9 @@ export function MobileMenuWorking() {
                                 <MenuItem className={classes.menuItem} >
                                     <h6 className={classes.lios} onClick={() => history.push('/digital')}>Digital Signage</h6>
                                 </MenuItem>
-                                <MenuItem className={classes.menuItem} >
+                                {/* <MenuItem className={classes.menuItem} >
                                     <h6 className={classes.lios} onClick={() => history.push('/transformers')}>Transformer Monitoring</h6>
-                                </MenuItem>
+                                </MenuItem> */}
                             </MenuList>
                         </MenuList>
 

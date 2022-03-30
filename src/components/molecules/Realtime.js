@@ -32,7 +32,16 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
-
+            display: 'none',
+        },
+    },
+    boxSM: {
+        display: 'none',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            marginTop: '5%',
         },
     },
     box3: {
@@ -195,7 +204,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: '.5rem',
         },
         [theme.breakpoints.down('xs')]: {
-            width: '80%',
+            width: '95%',
             height: '70vw',
             marginLeft: '.5rem',
         },
@@ -250,7 +259,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
-            width: '90%',
+            width: '70%',
             height: 'fit-content',
         },
     },
@@ -571,15 +580,19 @@ export function Realtime({
                                 }
 
 
-
                             </Slider>
+                        </Box>
+
+                        <Box className={clsx(classes.boxSM)} style={style} >
+                            <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                            <Box style={{ marginLeft: '4%' }}><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
                         </Box>
                         {
                             grpicons ? <Box className={classes.iconBox}>
                                 <Fade bottom><img src={grpicons} /></Fade>
                             </Box> : ''
                         }
-
+                            
 
                     </Container>
 

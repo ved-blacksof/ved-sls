@@ -6,6 +6,7 @@ import { Buttons, GeneralHeading, MainContainer, ParagraphsBlue } from '../../at
 import { useHistory } from 'react-router-dom';
 import swal from 'sweetalert';
 import emailjs from 'emailjs-com'
+import { ArrowForwardSharp } from '@material-ui/icons';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         width: '40%',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
-            marginTop:'8%'
+            marginTop: '8%'
         }
     },
     input: {
@@ -57,13 +58,13 @@ const useStyles = makeStyles((theme) => ({
         "& .MuiInput-underline::after": {
             opacity: '1',
             border: '1px solid white',
-
+            
         },
         "& .MuiInput-underline:hover:before": {
             opacity: '1',
             borderBottom: '1px solid white',
         },
-
+        
     },
     cssLabel: {
         color: 'white',
@@ -79,26 +80,129 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             justifyContent: 'center',
             marginTop: '0%',
-        }
+        },
+        
     },
     btn: {
-        background: 'white',
-        color: '#182AC3',
-        font: 'normal normal normal 1.5rem Access',
+        height: '100%',
+        // width: '40%',
+        background: '#182AC3',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         textTransform: 'none',
-        padding: '.6rem 2rem',
-        borderRadius: '4px',
-        border:'2px solid #182AC3',
+        zIndex:'9',
+        transition: 'all .3s ease-in-out',
+        transition: 'background .5s ease-in-out',
+        borderRadius:'4px',
+        overflow:'hidden',
+        padding:"1% 3%",
         [theme.breakpoints.down('sm')]: {
-            fontSize: '.9rem',
-            padding: '.3rem 1rem',
-
-
+            width: '100%',
         },
-        "&:hover": {
-            background: '#182AC3',
-            boxShadow: '0px 0px 3px white',
-            color: 'white'
+        "&:disabled": {
+            opacity:".5"
+        },
+        "&::before": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            right: '0%',
+            top: '0%',
+            width: '100%',
+            height: '2px',
+            transition: 'all .5s ease-in-out',
+            background: '#fff',
+            zIndex: '-999'
+        },
+        "&::after": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            right: '0%',
+            top: '0%',
+            width: '2px',
+            height: '100%',
+            transition: 'all .5s ease-in-out',
+            background: '#fff',
+            zIndex: '-999'
+        },
+        '&:hover': {
+            background: '#fff',
+            "& $btnTitle":{
+                color:'#182AC3',
+            },
+            "&::before": {
+                width: '0%',
+            },
+            "&::after": {
+                height: '0%',
+            },
+            "& $mySpan":{
+                "&::before": {
+                    width: '0%',
+                },
+                "&::after": {
+                    height: '0%',
+                },
+            },
+        },
+    },
+    btnTitle:{
+        color: '#fff',                
+        fontFamily:'Access',
+        display: 'flex', 
+        justifyContent: 'space-around', 
+        alignItems: 'center', 
+        verticalAlign: 'middle',
+        transition: 'transform .5s ease-in-out',
+    },
+    arrow: {
+        width: '1.2rem',
+        marginLeft: '4%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        "& img": {
+            maxWidth: '100%',
+            height: '100%',
+            alignSelf: 'center',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '1rem'
+        }
+    },
+    arrow1: {
+        marginLeft: '5px',
+        [theme.breakpoints.down('sm')]: {
+            marginLeft: '5px',
+            fontSize: '1.2rem'
+        }
+    },
+    mySpan:{
+        "&::before": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            left: '0%',
+            bottom: '0%',
+            width: '100%',
+            height: '2px',
+            transition: 'all .5s ease-in-out',
+            background: '#fff',
+            zIndex: '-999'
+        },
+        "&::after": {
+            content: "''",
+            position: 'absolute',
+            borderRadius:'4px',
+            left: '0%',
+            bottom: '0%',
+            width: '2px',
+            height: '100%',
+            transition: 'all .5s ease-in-out',
+            background: '#fff',
+            zIndex: '-999'
         }
     },
     iconBox: {
@@ -365,13 +469,20 @@ export function Letstalk() {
 
 
                             <Box className={classes.btnBox}>
+
                                 <Button
                                     type='submit'
                                     className={classes.btn}
                                     disabled={!isVerified}
                                 >
-                                    Send Message
+                                    <span className={classes.mySpan}>
+                                        <h6 className={classes.btnTitle}>
+                                            Send Message
+                                            <ArrowForwardSharp className={classes.arrow1} />
+                                        </h6>
+                                    </span>
                                 </Button>
+
                             </Box>
                         </form>
 

@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: 'none',
         zIndex:'9',
         transition: 'all .3s ease-in-out',
+        transition: 'background .5s ease-in-out',
         borderRadius:'4px',
         overflow:'hidden',
         [theme.breakpoints.down('sm')]: {

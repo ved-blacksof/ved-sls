@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) => ({
     pos: {
         position: 'relative',
-        marginTop:'5%',
+        marginTop: '5%',
         [theme.breakpoints.down('sm')]: {
             padding: '0%',
         }
@@ -30,18 +30,21 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     boxes: {
-        overflow:"hidden",
+        overflow: "hidden",
         height: '14vw',
         width: '22%',
         borderRadius: '.8rem',
         marginRight: '3%',
         marginBottom: '3%',
         boxShadow: '0px 0px 20px #00000029',
-        padding: '2% 1%',
+        padding: '2% .5%',
         background: 'white',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
+        [theme.breakpoints.down('md')]: {
+            padding: '1% .5%'
+        },
         [theme.breakpoints.down('sm')]: {
             width: '20vw',
             height: '20vw',
@@ -60,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     iconsBox: {
-        marginTop:"6%",
+        marginTop: "6%",
         width: '45%',
         textAlign: 'center',
         cursor: 'pointer',

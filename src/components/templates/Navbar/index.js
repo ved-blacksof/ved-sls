@@ -242,9 +242,9 @@ export function Navbar({
                                         <MenuItem className={classes.menuItem} >
                                             <h6 className={classes.lios} onClick={() => history.push('/smartstreet')}>Smart Street Lighting</h6>
                                         </MenuItem>
-                                        <MenuItem className={classes.menuItem} >
+                                        {/* <MenuItem className={classes.menuItem} >
                                             <h6 className={classes.lios} onClick={() => history.push('/railways')}>Railways</h6>
-                                        </MenuItem>
+                                        </MenuItem> */}
                                     </MenuList>
                                     {/* <hr className={classes.hrs} /> */}
                                     <MenuList>
@@ -257,9 +257,9 @@ export function Navbar({
                                         <MenuItem className={classes.menuItem} >
                                             <h6 className={classes.lios} onClick={() => history.push('/digital')}>Digital Signage</h6>
                                         </MenuItem>
-                                        <MenuItem className={classes.menuItem} >
+                                        {/* <MenuItem className={classes.menuItem} >
                                             <h6 className={classes.lios} onClick={() => history.push('/transformers')}>Intelligent Transformer Monitoring</h6>
-                                        </MenuItem>
+                                        </MenuItem> */}
                                     </MenuList>
                                 </MenuList>
 

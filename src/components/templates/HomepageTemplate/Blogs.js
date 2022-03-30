@@ -17,11 +17,11 @@ import Aos from 'aos'
 const useStyles = makeStyles((theme) => ({
     realText: {
         margin: '0% auto',
-        marginTop:'15%',
-        marginBottom:'8%',
+        marginTop: '15%',
+        marginBottom: '8%',
         [theme.breakpoints.down('sm')]: {
-            marginTop:'20%',
-            marginBottom:'8%',
+            marginTop: '20%',
+            marginBottom: '8%',
             overflow: 'hidden'
         },
     },
@@ -37,16 +37,16 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end',
         flexDirection: 'column',
         [theme.breakpoints.down('sm')]: {
-            display:'none'
+            display: 'none'
         },
     },
     boxSM: {
-        display:'none',
+        display: 'none',
         [theme.breakpoints.down('sm')]: {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'flex-end',
-            marginTop:'5%',
+            marginTop: '5%',
         },
     },
     btn: {
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
         background: 'white',
         [theme.breakpoints.down('sm')]: {
             // width: '90%',
-            margin:'0% 20px'
+            margin: '0% 20px'
         }
     },
     cardImage: {
@@ -477,9 +477,9 @@ export function Blogs({
                             </Slider>
                         </Box>
                         <Box className={clsx(classes.boxSM)} style={style} >
-                                <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
-                                <Box style={{marginLeft:'4%'}}><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
-                            </Box>
+                            <Box><Fade left><KeyboardArrowLeft className={classes.btn} onClick={previous} /></Fade></Box>
+                            <Box style={{ marginLeft: '4%' }}><Fade right><KeyboardArrowRight className={classes.btn} onClick={next} /></Fade></Box>
+                        </Box>
                         {
                             grpicons ? <Box className={classes.iconBox}>
                                 <Fade bottom><img src={grpicons} /></Fade>

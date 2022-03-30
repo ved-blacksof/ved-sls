@@ -257,8 +257,7 @@
           margin-left: 22px;
         }
         
-      }
-  
+      }  
       @media screen and (min-width: 1300px) {
         h1{
           font-family: BebasNeue;
@@ -284,7 +283,7 @@
         
         h4{
           font-family: Access;
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           font-weight: normal;
           color: white;
         }
