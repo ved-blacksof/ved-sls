@@ -199,8 +199,7 @@
         br{
           display:none;
         }
-      }
-  
+      }  
       @media screen and (min-width: 960px) {
         h1{
           font-family: BebasNeue;
@@ -226,7 +225,7 @@
         
         h4{
           font-family: Access;
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-weight: normal;
           color: white;
         }
@@ -278,7 +277,6 @@
           font-size: 2.5rem;
           font-weight: normal;
           color: white;
-        
         }
         
         h4{
@@ -377,11 +375,7 @@
         }
       }
   
-   
-  
-  
-  
-   
+      
       ::-webkit-scrollbar {
         width: 10px;
         /* border-radius: 20px; */
