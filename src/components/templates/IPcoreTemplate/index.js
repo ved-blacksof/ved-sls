@@ -25,11 +25,11 @@ export function IPcoreTemplate() {
                 />
             </GridBlue>
 
-            
-            <Offerings />
-        
 
-                {/* <Quality
+            <Offerings />
+
+
+            {/* <Quality
                     mainheading="Offerings"
                     heading="IP Core Development and Customization"
                     imageBG="./images/FPGA_Website_Image (5).png"
@@ -66,7 +66,7 @@ export function IPcoreTemplate() {
                 title="Visit website"
                 href={"https://www.slscorp.com/services/fpgasoc-design-services.html"}
             />
-            
+
             <Footer />
         </div>
     )

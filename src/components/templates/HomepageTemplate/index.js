@@ -28,10 +28,12 @@ export function HomepageTemplate() {
                 mouse={'./images/scroll.svg'} />
 
             <GridBlue>
+            
                 <Navbar />
                 {/* <Navbar1/> */}
 
                 <TechCarousel />
+
             </GridBlue>
 
             <Research
@@ -40,10 +42,8 @@ export function HomepageTemplate() {
                 title1="ACROSS VARIOUS VERTICALS"
                 subtitle="Assisting companies to avoid pitfalls in the product design & development phase, 
                 our experienced team at System Level Solutions provides innovative solutions across stages to 
-                better materialize the creative perspective of a client."
-                // generalheadingblue="generalheadingblue"
+                better materialize the creative perspective of a client."            
                 data={research}
-            // bggrey
             />
 
             <Reshape />
@@ -51,19 +51,6 @@ export function HomepageTemplate() {
             <Portfolio data={port} />
 
             <Expanding />
-
-
-            {/* <Realtime
-                data={realtime}
-                title="GET ACQUAINTED WITH"
-                title1="INDUSTRY TRENDS IN REAL-TIME"
-                filters="filters"
-                subtitle="Our newsroom is designed to keep you updated about every major or minor breakthrough in the related industries."
-                cases="cases"
-                redline="redline"
-                br="br"
-            /> */}
-
 
             <Blogs
                 title="GET ACQUAINTED WITH"

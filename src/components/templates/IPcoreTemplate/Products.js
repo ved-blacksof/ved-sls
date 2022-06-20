@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         background: 'white',
         width: '30%',
         height: '35vw',
-        position:'relative',
+        position: 'relative',
         marginTop: '2%',
         marginRight: '3%',
         padding: '2%',
@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
         },
         "&:hover": {
             color: '#182AC3',
-            cursor:'pointer',
+            cursor: 'pointer',
             boxShadow: '0px 0px 10px #00000033',
             border: '1px solid white',
             "& $imgBox": {
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     },
     lis: {
         color: 'black',
-        lineHeight:'1.2',
+        lineHeight: '1.2',
         marginTop: '2%',
         marginLeft: '8%',
         "& h6": {
@@ -154,7 +154,13 @@ export function Products({
                                             {
                                                 item.uli ?
                                                     <h4>
-                                                        <ul className={classes.uls}><h4 className={classes.uls}>{item.uli}</h4>
+                                                        <ul className={classes.uls}><h4 className={classes.uls} >
+                                                            {
+                                                                item.uli ?
+                                                                    <a target="_blank" href={item.url}>{item.uli}</a>
+                                                                    : <>{item.uli}</>
+                                                            }
+                                                        </h4>
                                                             {
                                                                 item.firstli ? <li className={classes.lis}><h6>{item.firstli}</h6></li> : ''
                                                             }
@@ -184,7 +190,7 @@ export function Products({
                         }
                     </Container>
                 </MainContainer>
-            </Box>
+            </Box >
         </>
     )
 }
