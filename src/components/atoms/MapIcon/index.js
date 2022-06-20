@@ -2,6 +2,7 @@ import { Box, Container, makeStyles, Grid } from '@material-ui/core'
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Fade from 'react-reveal/Fade';
+import { ArrowForward, ArrowForwardIos } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     gridMainBox: {
@@ -22,11 +23,12 @@ const useStyles = makeStyles((theme) => ({
         height: '6rem',
         width: '50%',
         cursor: 'pointer',
+        transition: "all .5s ease",
         [theme.breakpoints.down('sm')]: {
             marginTop: '0',
             height: '4rem',
-
         },
+
 
     },
     icons: {
@@ -46,6 +48,37 @@ const useStyles = makeStyles((theme) => ({
 
         }
     },
+    portfolioIcons: {
+        "&:hover": {
+            "& $iconsBox": {
+                transform: "scale(1.11)",
+            },
+            "& $knowMore": {
+                visibility: "visible",
+                opacity: "1"
+            },
+            "& $arrow": {
+                transform: "translate(10px)"
+            }
+        }
+    },
+    knowMore: {
+        visibility: 'hidden',
+        transition: "all .3s ease",
+        opacity: "0",
+        display: "flex",
+        "& h4": {
+            color: "blue",
+            fontSize:"1.1rem"
+        }
+    },
+    arrow: {
+        color: "blue",
+        width: "1rem",
+        marginTop: "2px",
+        transition:"all .6s ease",
+        transform: "translate(-70px)"
+    },
 }))
 
 export function MapIcon({
@@ -60,12 +93,12 @@ export function MapIcon({
                 {
                     data.map((item, index) => {
                         return (
-                            <Grid item xs={6} spacing={6} sm={3} md={3} key={index}>        
+                            <Grid item xs={6} spacing={6} sm={3} md={3} key={index}>
                                 <Box className={classes.gridBox} >
                                     {
                                         !item.link ?
                                             <>
-                                                <Box className={classes.iconsBox}>
+                                                <Box className={classes.iconsBox} >
                                                     <Fade bottom>
                                                         <img className={classes.icons} src={item.images} alt='Icons' />
                                                     </Fade>
@@ -75,6 +108,7 @@ export function MapIcon({
                                                     <h4 className={classes.subText}
                                                         style={{ color: `${color}` }}>{item.text}</h4>
                                                 </Fade>
+
                                             </> : ''
                                     }
 
@@ -84,23 +118,33 @@ export function MapIcon({
                                     {
                                         item.link ?
                                             <>
-                                                <a target="_blank" href={item.link}
-                                                    style={{ color: `${color}`, textDecoration: 'none' }}>
-                                                    <Box className={classes.iconsBox}
-                                                    // onClick={() => history.push(`/${item.link}`)}
-                                                    >
-                                                        <Fade bottom>
-                                                            <img className={classes.icons} src={item.images} alt='Icons' />
-                                                        </Fade>
-                                                    </Box>
-                                                    <Fade bottom>
-                                                        <h4 className={classes.subText}
-                                                            style={{ color: `${color}` }}
+                                                <div className={classes.portfolioIcons}>
+                                                    <a target="_blank" href={item.link}
+                                                        style={{ color: `${color}`, textDecoration: 'none' }}>
+                                                        <Box className={classes.iconsBox}
                                                         // onClick={() => history.push(`/${item.link}`)}
-                                                        >{item.text}</h4>
-                                                    </Fade>
-                                                </a>
-                                            </> : '' 
+                                                        >
+                                                            <Fade bottom>
+                                                                <img className={classes.icons} src={item.images} alt='Icons' />
+                                                            </Fade>
+                                                        </Box>
+                                                        <Fade bottom>
+                                                            <h4 className={classes.subText}
+                                                                style={{ color: `${color}` }}
+                                                            // onClick={() => history.push(`/${item.link}`)}
+                                                            >{item.text}</h4>
+                                                        </Fade>
+
+                                                        {
+                                                            item.know ?
+                                                                <div className={classes.knowMore}>
+                                                                    <h4 >Know More</h4>
+                                                                    <ArrowForwardIos className={classes.arrow} />
+                                                                </div> : ""
+                                                        }
+                                                    </a>
+                                                </div>
+                                            </> : ''
                                     }
 
                                 </Box>

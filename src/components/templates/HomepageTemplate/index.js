@@ -15,7 +15,6 @@ import Homepage1 from '../../assets/Homepage1.png'
 import Homepage2 from '../../assets/Homepage03.jpg'
 import Homepage3 from '../../assets/Homepage2.png'
 import { Blogs } from './Blogs'
-import { gsap } from 'gsap'
 
 export function HomepageTemplate() {
     return (
@@ -28,7 +27,7 @@ export function HomepageTemplate() {
                 mouse={'./images/scroll.svg'} />
 
             <GridBlue>
-            
+
                 <Navbar />
                 {/* <Navbar1/> */}
 

@@ -106,62 +106,74 @@ export const port = [
     {
         images: './images/homepage-icons/32._IP Core-FPGA.svg',
         text: 'IP Core / FPGA ',
-        link: 'ipcore'
+        link: 'ipcore',
+        know: true
     },
     {
         images: './images/homepage-icons/1._IOT_Platform.svg',
         text: 'IoT Platform',
-        link: 'iot'
+        link: 'iot',
+        know: true
     },
     {
         images: './images/homepage-icons/2._Cloud_Solution.svg',
         text: 'Cloud Solutions',
-        link: 'cloud'
+        link: 'cloud',
+        know: true
     },
     {
         images: './images/homepage-icons/3._E-Mobility.svg',
         text: 'EV Charging Solutions',
-        link: 'evcharger'
+        link: 'evcharger',
+        know: true
     },
     {
         images: './images/homepage-icons/4._Solar_&_Wind.svg',
         text: 'Solar & Wind',
-        link: 'solar'
+        link: 'solar',
+        know: true
     },
     {
         images: './images/homepage-icons/5._Smart_Metering.svg',
         text: 'Smart Metering',
-        link: 'smartmeter'
+        link: 'smartmeter',
+        know: true
     },
     {
         images: './images/homepage-icons/7._Home_Automation.svg',
         text: 'Home Automation',
-        link: 'homeauto'
+        link: 'homeauto',
+        know: true
     },
     {
         images: './images/homepage-icons/8._Smart_Street_Light.svg',
         text: 'Smart Street Lights',
-        link: 'smartstreet'
+        link: 'smartstreet',
+        know: true
     },
     {
         images: './images/homepage-icons/9._Railways.svg',
         text: 'Railways',
-        link: 'railways'
+        link: 'railways',
+        know: true
     },
     {
         images: './images/homepage-icons/12._Digital Signage.svg',
         text: 'Digital Signage',
-        link: 'digital'
+        link: 'digital',
+        know: true
     },
     {
         images: './images/homepage-icons/11._Traffic_Solutions.svg',
         text: 'Smart Traffic Solutions',
-        link: 'smarttraffic'
+        link: 'smarttraffic',
+        know: true
     },
     {
         images: './images/homepage-icons/10._Gaming.svg',
         text: 'Smart Gaming',
         link: 'gaming',
+        know: true
     },
 ]
 
@@ -1069,7 +1081,7 @@ export const transformer = [
 export const ipcoreproducts = [
     {
         images: './images/ipcore/Products/60._Communication Cores.svg',
-        url:"https://www.slscorp.com/ip-cores/communication.html",
+        url: "https://www.slscorp.com/ip-cores/communication.html",
         uli: 'Communication Cores',
         firstli: 'Embedded USB3.1 Gen 2 (10Gbps) Device',
         secli: 'Embedded USB3.1 Gen 1 Device',
@@ -1078,7 +1090,7 @@ export const ipcoreproducts = [
     },
     {
         images: './images/ipcore/Products/61._Interface Cores.svg',
-        url:"https://www.slscorp.com/ip-cores/interface.html",
+        url: "https://www.slscorp.com/ip-cores/interface.html",
         uli: 'Interface Cores',
         firstli: 'I2S Controller',
         secli: 'I2C Master/Slave/Controller',
@@ -1086,19 +1098,19 @@ export const ipcoreproducts = [
     },
     {
         images: './images/ipcore/Products/62._Memory Controller Core.svg',
-        url:"https://www.slscorp.com/ip-cores/memory.html",
+        url: "https://www.slscorp.com/ip-cores/memory.html",
         uli: 'Memory Controller Core',
         firstli: 'SD/eMMC Host Controller',
     },
     {
         images: './images/ipcore/Products/63._OS and HAL Drivers to support IP Cores.svg',
-        url:"https://www.slscorp.com/services/software-development-services.html",
+        url: "https://www.slscorp.com/services/software-development-services.html",
         uli: 'OS and HAL Drivers to support IP cores',
         firstli: 'End-to-end product development of applications to support IP Core',
     },
     {
         images: './images/ipcore/Products/64._Hardware Boards.svg',
-        url:"https://www.slscorp.com/products.html",
+        url: "https://www.slscorp.com/products.html",
         uli: 'Hardware Boards',
         firstli: 'FMC Snap On Boards',
         secli: 'HSMC Snap On Boards',

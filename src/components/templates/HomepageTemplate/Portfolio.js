@@ -86,11 +86,7 @@ export function Portfolio({
 
                     <MapIcon data={data} />
 
-                    <br />
 
-                    {/* <Visit
-                    title="Know More"
-                /> */}
 
                 </Box>
             </Container>
