@@ -1,0 +1,88 @@
+import React from 'react'
+import { makeStyles } from '@material-ui/core'
+import Fade from 'react-reveal/Fade';
+
+
+const useStyles = makeStyles((theme) => ({
+    mainBox: {
+        padding: '15% 0%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+        width: '100%',
+        height: '100%',
+        [theme.breakpoints.down('sm')]: {
+            padding: '20% 0%',
+        },
+    },
+    backImgBox: {
+        position: 'absolute',
+        zIndex: '-1',
+    },
+    backImg: {
+        width: '100%',
+        maxHeight: '80vh',
+    },
+    mainText: {
+        font: 'normal normal normal 5rem BebasNeue',
+        zIndex: '1',
+        textAlign: 'center',
+        color: 'white',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '3rem'
+        },
+    },
+    redLine: {
+        background: '#CA0017',
+        height: '2px',
+        width: '25%'
+    },
+    subText: {
+        width: '30%',
+        // font: 'normal normal normal 1rem Access',
+        color: 'white',
+        textAlign: 'center',
+        paddingTop: '1%',
+        [theme.breakpoints.down('sm')]: {
+            width: '70%',
+            // fontSize: '1rem'
+        }
+    },
+
+}))
+
+export function Ubanner({
+    Background,
+    maintext,
+    subtext,
+    mouse
+}) {
+    const classes = useStyles()
+
+    return (
+        <>
+
+            <div className={classes.mainBox}
+                style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.60)), url(${Background})` }}
+            >
+                <Fade bottom>
+                    <h1 className={classes.mainText}>{maintext}</h1>
+                </Fade>
+
+                <Fade bottom>
+                    <span className={classes.redLine}></span>
+                </Fade>
+
+                <Fade left>
+                    <h6 className={classes.subText}>{subtext}</h6>
+                </Fade>
+
+            </div>
+        </>
+    )
+}

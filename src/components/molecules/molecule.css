@@ -1,0 +1,61 @@
+
+.MuiTab-wrapper {
+  align-items: flex-start !important;
+}
+
+  .MuiTab-root{
+    max-width: 200px;
+  } 
+
+  .PrivateTabIndicator-vertical-158 {
+    left:0px !important;
+    width: 3px !important;
+    height: 20px !important;
+  }
+
+
+
+/* Offering carousel buton CSS */
+
+.flicking-arrow-prev{
+  left:0 !important;
+  top:70% !important
+}
+
+.flicking-arrow-next{
+  left:0 !important;
+  top:90% !important
+}
+
+/* .flicking-arrow-prev, .flicking-arrow-next{
+  border: 2px solid red;
+} */
+    
+
+
+/* CSS for the CardsReadMore molecule */
+.showmore {
+  font-size: 1.1em;
+  margin-top: 1.5em;
+}
+
+.showmore .more, .showmore.show .dots {
+  display: none
+}
+
+.showmore .show .more {
+  display: inline
+}
+
+.showmore a {
+  cursor: pointer;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+
+.sliderBox{
+  
+}
