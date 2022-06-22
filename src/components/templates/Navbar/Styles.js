@@ -156,10 +156,7 @@ export const useStyles = makeStyles((theme) => ({
         color: 'black',
         cursor: 'pointer',
         display: 'flex',
-        alignItems: 'center',
-        "&:hover": {
-            // color: '#182AC3'
-        },
+        alignItems: 'center',       
         "& $arrow": {
             color: 'black',
         }
@@ -199,11 +196,6 @@ export const useStyles = makeStyles((theme) => ({
             [theme.breakpoints.down('sm')]: {
                 height: '5px'
             }
-        },
-        "&:hover": {
-            "& h4": {
-
-            },
         }
     },
     arrow: {

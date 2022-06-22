@@ -1,11 +1,10 @@
 import React, { useRef, useState } from 'react'
-import {  Toolbar, AppBar, Box, Button,  MenuItem, MenuList } from '@material-ui/core'
+import { Toolbar, AppBar, Box, Button, MenuItem, MenuList } from '@material-ui/core'
 import { useHistory, NavLink } from 'react-router-dom';
 import { KeyboardArrowDown, MenuOutlined } from '@material-ui/icons'
 import clsx from 'clsx'
 import Fade from 'react-reveal/Fade';
 import { useStyles } from './Styles'
-import { MobileMenu } from './MobileMenu';
 import { MobileMenuWorking } from './MobileMenuWorking';
 import gsap from 'gsap/all';
 
@@ -33,46 +32,7 @@ export function Navbar({
 
     const anchorRef = useRef(null);
 
-    const handleToggle = () => {
-        // e.preventDefault()
-        setOpen((prevOpen) => !prevOpen);
-        setOpen1(false)
-        setOpen2(false)
-    };
-    const handleToggle1 = () => {
-        setOpen(false)
-        setOpen1((prevOpen) => !prevOpen);
-        setOpen2(false)
-    };
-    const handleToggle2 = () => {
-        setOpen(false)
-        setOpen1(false)
-        setOpen2((prevOpen) => !prevOpen);
-    };
-
     //CLOSE MENU
-
-    const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-        setOpen(false)
-
-    };
-    const handleClose1 = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-        setOpen1(false)
-
-    };
-
-    const handleClose2 = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
-            return;
-        }
-        setOpen2(false);
-    };
 
     function handleListKeyDown(event) {
         if (event.key === 'Tab') {
@@ -108,7 +68,6 @@ export function Navbar({
         setOpen(false)
         setOpen1(false)
         setOpen2(false)
-        // setMobileMenu(false)
 
         if (show) {
             setNavPos('navFixed')
@@ -135,14 +94,9 @@ export function Navbar({
 
 
     React.useEffect(() => {
-
-        handleScroll()
-
+        handleScroll();
         document.addEventListener('scroll', handleScroll)
-
-        return () => {
-            document.removeEventListener('scroll', handleScroll)
-        }
+        return () => { document.removeEventListener('scroll', handleScroll) }
     }, [])
     return (
         <Box style={{ paddingTop: '2%' }}>
@@ -155,22 +109,12 @@ export function Navbar({
                 <Toolbar className={classes.navbar} disableRipple disableFocusRipple disableTouchRipple>
                     <Box className={classes.logoBox} edge="start" color="inherit" aria-label="menu">
 
-                        {
-                            navPos === "navRelative" ?
-                                <Fade bottom>
-                                    <img
-                                        className={classes.logo}
-                                        src={'/images/Layer_x0020_1.svg'}
-                                        onClick={() => { history.push('/') }} />
-                                </Fade>
-                                :
-                                <Fade bottom>
-                                    <img
-                                        className={classes.logo}
-                                        src={'/images/Layer_x0020_1-1.svg'}
-                                        onClick={() => { history.push('/') }} />
-                                </Fade>
-                        }
+                        <Fade bottom>
+                            <img
+                                className={classes.logo}
+                                src={navPos === "navRelative" ? '/images/Layer_x0020_1.svg' : "/images/Layer_x0020_1-1.svg"}
+                                onClick={() => { history.push('/') }} />
+                        </Fade>
 
                     </Box>
 
@@ -186,17 +130,16 @@ export function Navbar({
                             <h4 >
                                 <NavLink
                                     className={clsx(classes[navlinkref.current])}
-                                    activeClassName={clsx(classes[linkactiveref.current])}
+                                    activeClassName={classes[linkactiveref.current]}
                                     to="/home" >Home</NavLink>
                             </h4>
                         </li>
-
 
                         <li className={classes.navLI} onClick={() => history.push("/about")}>
                             <h4 >
                                 <NavLink
                                     className={clsx(classes[navlinkref.current])}
-                                    activeClassName={clsx(classes[linkactiveref.current])}
+                                    activeClassName={classes[linkactiveref.current]}
                                     to="/about" >About Us</NavLink>
                             </h4>
                         </li>

@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
         border: '1px solid #DCDCDC',
         background: 'white',
         width: '30%',
-        height: '35vw',
+        height: '30vw',
+        minHeight:"520px",
         position: 'relative',
         marginTop: '2%',
         marginRight: '3%',
@@ -40,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
             height: '25rem',
             marginTop: '10%',
             padding: '5%',
-
         },
         [theme.breakpoints.down('xs')]: {
             width: '100%',
@@ -64,7 +64,6 @@ const useStyles = makeStyles((theme) => ({
         },
         "&:hover": {
             color: '#182AC3',
-            cursor: 'pointer',
             boxShadow: '0px 0px 10px #00000033',
             border: '1px solid white',
             "& $imgBox": {
@@ -119,6 +118,16 @@ const useStyles = makeStyles((theme) => ({
             color: 'black',
             display: 'inline'
         }
+    },
+    read: {
+        color: "#182AC3",
+        fontFamily: "BebasNeue",
+        marginTop: "1rem",
+        cursor: "pointer",
+        textDecoration: "underline",
+        position:"absolute",
+        bottom:"6%",
+        left:"5%"
     }
 
 }))
@@ -150,14 +159,15 @@ export function Products({
                                             <Box className={classes.iconBox} >
                                                 <Fade bottom><img src={item.images} /></Fade>
                                             </Box>
-                                            
+
                                             {
                                                 item.uli ?
                                                     <h4>
                                                         <ul className={classes.uls}><h4 className={classes.uls}>
-                                                            {
+                                                            {item.uli}
+                                                            {/* {
                                                                 item.uli ? <a target="_blank" href={item.url}>{item.uli}</a> : <>{item.uli}</>
-                                                            }
+                                                            } */}
                                                         </h4>
                                                             {
                                                                 item.firstli ? <li className={classes.lis}><h6>{item.firstli}</h6></li> : ''
@@ -180,6 +190,10 @@ export function Products({
                                                         </ul>
                                                     </h4> : ''
                                             }
+                                            <br />
+                                            <h4>
+                                                <a className={classes.read} target="_blank" href={item.url}>READ MORE</a>
+                                            </h4>
 
                                         </Box>
                                     </>

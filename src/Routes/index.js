@@ -26,7 +26,7 @@ import {
 export const Routes = [
     {
         path: "/",
-        title: "/home",
+        title: "/",
         exact: true,
         component: () => <Homepage />
     },
