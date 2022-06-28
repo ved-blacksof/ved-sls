@@ -38,7 +38,7 @@ export function SoftDevTemplate() {
             <Visit1
                 goto="Explore all about our products and services!"
                 title="Visit Website"
-                href={"https://www.slscorp.com/services/software-development-services.html"}
+                href={"https://core.slscorp.com/services/software-development-services.html"}
             />
 
             <Footer />

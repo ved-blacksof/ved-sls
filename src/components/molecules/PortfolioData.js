@@ -174,7 +174,7 @@ export const realtime = [
         images: './images/homepage-icons/blogs/Second.png',
         case: 'BLOG',
         head: 'Memory Protection Unit',
-        read: 'https://www.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
+        read: 'https://core.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
     },
 
 
@@ -191,7 +191,7 @@ export const realtime = [
         case: 'BLOG',
         head: 'Does throughput matter in USB?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'https://www.slscorp.com/resources/blogs/160-fpga/279-does-throughput-matters-in-usb.html'
+        read: 'https://core.slscorp.com/resources/blogs/160-fpga/279-does-throughput-matters-in-usb.html'
     },
 
 
@@ -209,7 +209,7 @@ export const realtime = [
         case: 'BLOG',
         head: 'What differentiates FPGA from ASIC?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'https://www.slscorp.com/resources/blogs/160-fpga/277-what-differentiates-fpga-from-asic.html'
+        read: 'https://core.slscorp.com/resources/blogs/160-fpga/277-what-differentiates-fpga-from-asic.html'
     },
 
 
@@ -226,7 +226,7 @@ export const realtime = [
         case: 'BLOG',
         head: 'What is FPGA and why is it required?',
         // para: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        read: 'https://www.slscorp.com/resources/blogs/160-fpga/276-what-is-fpga-and-why-is-it-required.html'
+        read: 'https://core.slscorp.com/resources/blogs/160-fpga/276-what-is-fpga-and-why-is-it-required.html'
     },
 
 
@@ -241,7 +241,7 @@ export const realtime = [
     //     images: './images/homepage-icons/blogs/Second.png',
     //     case: 'BLOG',
     //     head: 'Memory Protection Unit',
-    //     read: 'https://www.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
+    //     read: 'https://core.slscorp.com/resources/blogs/160-fpga/281-memory-protection-unit.html'
     // },
     {
         images: './images/homepage-icons/blogs/case_NLC1110.png',
@@ -1129,7 +1129,7 @@ export const transformer = [
 export const ipcoreproducts = [
     {
         images: './images/ipcore/Products/60._Communication Cores.svg',
-        url: "https://www.slscorp.com/ip-cores/communication.html",
+        url: "https://core.slscorp.com/ip-cores/communication.html",
         uli: 'Communication Cores',
         firstli: 'Embedded USB3.1 Gen 2 (10Gbps) Device',
         secli: 'Embedded USB3.1 Gen 1 Device',
@@ -1138,7 +1138,7 @@ export const ipcoreproducts = [
     },
     {
         images: './images/ipcore/Products/61._Interface Cores.svg',
-        url: "https://www.slscorp.com/ip-cores/interface.html",
+        url: "https://core.slscorp.com/ip-cores/interface.html",
         uli: 'Interface Cores',
         firstli: 'I2S Controller',
         secli: 'I2C Master/Slave/Controller',
@@ -1146,19 +1146,19 @@ export const ipcoreproducts = [
     },
     {
         images: './images/ipcore/Products/62._Memory Controller Core.svg',
-        url: "https://www.slscorp.com/ip-cores/memory.html",
+        url: "https://core.slscorp.com/ip-cores/memory.html",
         uli: 'Memory Controller Core',
         firstli: 'SD/eMMC Host Controller',
     },
     {
         images: './images/ipcore/Products/63._OS and HAL Drivers to support IP Cores.svg',
-        url: "https://www.slscorp.com/services/software-development-services.html",
+        url: "https://core.slscorp.com/services/software-development-services.html",
         uli: 'OS and HAL Drivers to support IP cores',
         firstli: 'End-to-end product development of applications to support IP Core',
     },
     {
         images: './images/ipcore/Products/64._Hardware Boards.svg',
-        url: "https://www.slscorp.com/products.html",
+        url: "https://core.slscorp.com/products.html",
         uli: 'Hardware Boards',
         firstli: 'FMC Snap On Boards',
         secli: 'HSMC Snap On Boards',

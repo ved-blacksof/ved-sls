@@ -227,7 +227,6 @@ const useStyles = makeStyles((theme) => ({
             transformOrigin: 'right',
             transition: 'transform 0.8s ease',
             [theme.breakpoints.down('sm')]: {
-                height: '5px',
                 display: 'none'
             }
         },
