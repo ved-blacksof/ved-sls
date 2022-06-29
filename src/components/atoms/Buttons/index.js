@@ -141,7 +141,6 @@ export function Buttons({
                     className={classes.btn}
                     style={style}
                     href={href}
-                    onClick={() => window.open(`${href}`, '_blank', '')}
                     target="_blank"
                 >
                    <span className={classes.mySpan}>
