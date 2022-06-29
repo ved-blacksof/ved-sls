@@ -332,249 +332,167 @@ export function MobileMenu() {
         }
     }, [])
     return (
-            <div className={classes.mainBox} data-aos="fade-down">
-                <ul className={classes.navUL}>
-                    <li
-                        className={clsx(classes[navlinkref.current], classes.navLI)}                     >
-                        <h4 >
-                            <NavLink
-                                className={clsx(classes[navlinkref.current])}
-                                activeClassName={clsx(classes[linkactiveref.current])}
-                                to="/home" >Home</NavLink>
-                        </h4>
-                    </li>
-
-
-                    <li
-                        className={clsx(classes[navlinkref.current], classes.navLI)}                     >
-                        <h4 >
-                            <NavLink
-                                className={clsx(classes[navlinkref.current])}
-                                activeClassName={clsx(classes[linkactiveref.current])}
-                                to="/about" >About Us</NavLink>
-                        </h4>
-                    </li>
-
-
-                    {/* class onhover Mega menu */}
-                    <li className={clsx(classes[navlinkref.current], classes.navLI)}
-                        onClick={handleToggle}
-                    >
+        <div className={classes.mainBox} data-aos="fade-down">
+            <ul className={classes.navUL}>
+                <li
+                    className={clsx(classes[navlinkref.current], classes.navLI)}                     >
+                    <h4 >
                         <NavLink
-                            to="#"
                             className={clsx(classes[navlinkref.current])}
                             activeClassName={clsx(classes[linkactiveref.current])}
-                            // ref={anchorRef}
-                            id="composition-button"
-                            aria-controls={open ? 'composition-menu' : undefined}
-                            aria-expanded={open ? 'true' : undefined}
-                            aria-haspopup="true"
-                            aria-describedby="industries"
-                        >
-                            <h4 className={clsx(classes[navlinkref.current])}
-                                style={{ padding: '0px' }}
-                            >
-                                Industries
-                                <KeyboardArrowDown className={classes.arrow} />
-                            </h4>
+                            to="/home" >Home</NavLink>
+                    </h4>
+                </li>
 
 
-                            <Popper
-                                open={open}
-                                anchorEl={anchorRef.current}
-                                role={undefined}
-                                transition
-                                className={classes.popper}
-                                id="industries"
-                            >
-                                {({ TransitionProps }) => (
-                                    <Grow
-                                        {...TransitionProps}
-                                    // style={{
-                                    //     transformOrigin:
-                                    //         placement === 'bottom' ? 'left top' : 'left bottom',
-                                    // }}
-                                    >
-                                        <ClickAwayListener
-                                            onClickAway={handleClose}
-                                        >
-                                            <MenuList
-                                                autoFocusItem={open}
-                                                id="composition-menu"
-                                                aria-labelledby="composition-button"
-                                                onKeyDown={handleListKeyDown}
-                                                className={classes.megaMenu}
-                                            >
-                                                {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                                <MenuList>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/iot')}><NavLink to="/iot" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >IoT Platform</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/cloud')} ><NavLink to="/cloud" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Cloud Solutions</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/evcharger')} ><NavLink to="/evcharger" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >EV Charging Solutions</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/solar')}><NavLink to="/solar" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Solar & Wind</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/smartmeter')}><NavLink to="/smartmeter" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Metering</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/homeauto')}><NavLink to="/homeauto" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Home Automation</NavLink ></h6>
-                                                    </MenuItem>
-                                                </MenuList>
-                                                {/* <hr className={classes.hrs} /> */}
-                                                <MenuList>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/smartstreet')}><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Street Lighting</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/railways')}><NavLink to="/railways" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Railways</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/gaming')}><NavLink to="/gaming" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Gaming</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/smarttraffic')}><NavLink to="/smarttraffic" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Traffic Solutions</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/digital')}><NavLink to="/digital" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Digital Signage</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 onClick={() => history.push('/transformers')}><NavLink to="/transformers" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Intelligent Transformer Monitoring</NavLink ></h6>
-                                                    </MenuItem>
-                                                </MenuList>
-                                            </MenuList>
-                                        </ClickAwayListener>
-                                    </Grow>
-                                )}
-                            </Popper>
-                        </NavLink>
-
-
-                    </li>
-
-
-                    {/* ############# Services ############  */}
-
-
-                    <li
-                        className={clsx(classes[navlinkref.current], classes.navLI)}
-                        onClick={handleToggle1}
-                    // onMouseEnter={handleToggle1}
-                    // onMouseLeave={handleClose1}
-
-
-                    >
+                <li
+                    className={clsx(classes[navlinkref.current], classes.navLI)}                     >
+                    <h4 >
                         <NavLink
-                            to="#"
                             className={clsx(classes[navlinkref.current])}
                             activeClassName={clsx(classes[linkactiveref.current])}
-                            ref={anchorRef}
-                            id="services-button"
-                            aria-controls={open1 ? 'services-menu' : undefined}
-                            aria-expanded={open1 ? 'true' : undefined}
-                            aria-haspopup="true"
-                            onClick={handleToggle1}
-                        >
+                            to="/about" >About Us</NavLink>
+                    </h4>
+                </li>
 
-                            <h4 className={clsx(classes[navlinkref.current])}
-                                onClick={handleToggle1}
-                            >
-                                Services
-                            </h4>
+
+                {/* class onhover Mega menu */}
+                <li className={clsx(classes[navlinkref.current], classes.navLI)}
+                    onClick={handleToggle}
+                >
+                    <NavLink
+                        to="#"
+                        className={clsx(classes[navlinkref.current])}
+                        activeClassName={clsx(classes[linkactiveref.current])}
+                        // ref={anchorRef}
+                        id="composition-button"
+                        aria-controls={open ? 'composition-menu' : undefined}
+                        aria-expanded={open ? 'true' : undefined}
+                        aria-haspopup="true"
+                        aria-describedby="industries"
+                    >
+                        <h4 className={clsx(classes[navlinkref.current])}
+                            style={{ padding: '0px' }}
+                        >
+                            Industries
                             <KeyboardArrowDown className={classes.arrow} />
+                        </h4>
 
-                            <Popper
-                                open={open1}
-                                anchorEl={anchorRef.current}
-                                role={undefined}
-                                // placement="bottom-end"
-                                transition
-                                className={classes.popper}
-                            >
-                                {({ TransitionProps, placement }) => (
-                                    <Grow
-                                        {...TransitionProps}
-                                        style={{
-                                            transformOrigin:
-                                                placement === 'bottom-start' ? 'left top' : 'left bottom',
-                                        }}
-                                    >
-                                        <ClickAwayListener
-                                            onClickAway={handleClose1}>
-                                            <MenuList
-                                                autoFocusItem={open}
-                                                id="services-menu"
-                                                aria-labelledby="services-button"
-                                                onKeyDown={handleListKeyDown}
-                                                className={classes.megaMenu}
-                                            >
-                                                {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
-                                                <MenuList>
-                                                    <MenuItem className={classes.menuItem}>
-                                                        <h6 ><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >IP CORE/FPGA/SoC Design Services</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 ><NavLink to="/highspeed" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} > High Speed PCB Design Services</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem} >
-                                                        <h6 ><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Software Development</NavLink ></h6>
-                                                    </MenuItem>
-
-                                                    <MenuItem className={classes.menuItem}>
-                                                        <h6 ><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Services</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem}>
-                                                        <h6 ><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Testing & Calibration</NavLink ></h6>
-                                                    </MenuItem>
-                                                    <MenuItem className={classes.menuItem}>
-                                                        <h6 ><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Machine Learning & Artificial Intelligence</NavLink ></h6>
-                                                    </MenuItem>
-                                                </MenuList>
-                                            </MenuList>
-                                        </ClickAwayListener>
-                                    </Grow>
-                                )}
-                            </Popper>
-                        </NavLink>
-
-                    </li>
-
-
-
-                    <li
-                        className={clsx(classes[navlinkref.current], classes.navLI)}
-                        onClick={handleToggle2}
-
-                    >
-                        <NavLink
-                            to="#"
-                            className={clsx(classes[navlinkref.current])}
-                            activeClassName={clsx(classes[linkactiveref.current])}
-                            ref={anchorRef}
-                            id="contact-button"
-                            aria-controls={open2 ? 'contact-menu' : undefined}
-                            aria-expanded={open2 ? 'true' : undefined}
-                            aria-haspopup="true"
-                            onClick={handleToggle2}
-                        >
-                            <h4 className={clsx(classes[navlinkref.current])}
-                                onClick={handleToggle2}
-                            >
-                                Let's Connect
-                            </h4>
-                            <KeyboardArrowDown className={classes.arrow} />
-                        </NavLink>
 
                         <Popper
-                            open={open2}
+                            open={open}
                             anchorEl={anchorRef.current}
                             role={undefined}
-                            placement="bottom-end"
+                            transition
+                            className={classes.popper}
+                            id="industries"
+                        >
+                            {({ TransitionProps }) => (
+                                <Grow
+                                    {...TransitionProps}
+                                // style={{
+                                //     transformOrigin:
+                                //         placement === 'bottom' ? 'left top' : 'left bottom',
+                                // }}
+                                >
+                                    <ClickAwayListener
+                                        onClickAway={handleClose}
+                                    >
+                                        <MenuList
+                                            autoFocusItem={open}
+                                            id="composition-menu"
+                                            aria-labelledby="composition-button"
+                                            onKeyDown={handleListKeyDown}
+                                            className={classes.megaMenu}
+                                        >
+                                            {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                                            <MenuList>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/iot')}><NavLink to="/iot" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >IoT Platform</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/cloud')} ><NavLink to="/cloud" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Cloud Solutions</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/evcharger')} ><NavLink to="/evcharger" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >EV Charging Solutions</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/solar')}><NavLink to="/solar" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Solar & Wind</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/smartmeter')}><NavLink to="/smartmeter" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Metering</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/homeauto')}><NavLink to="/homeauto" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Home Automation</NavLink ></h6>
+                                                </MenuItem>
+                                            </MenuList>
+                                            {/* <hr className={classes.hrs} /> */}
+                                            <MenuList>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/smartstreet')}><NavLink to="/smartstreet" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Street Lighting</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/railways')}><NavLink to="/railways" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Railways</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/gaming')}><NavLink to="/gaming" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Gaming</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/smarttraffic')}><NavLink to="/smarttraffic" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Smart Traffic Solutions</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/digital')}><NavLink to="/digital" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Digital Signage</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 onClick={() => history.push('/transformers')}><NavLink to="/transformers" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose} >Intelligent Transformer Monitoring</NavLink ></h6>
+                                                </MenuItem>
+                                            </MenuList>
+                                        </MenuList>
+                                    </ClickAwayListener>
+                                </Grow>
+                            )}
+                        </Popper>
+                    </NavLink>
+
+
+                </li>
+
+
+                {/* ############# Services ############  */}
+
+
+                <li
+                    className={clsx(classes[navlinkref.current], classes.navLI)}
+                    onClick={handleToggle1}
+                // onMouseEnter={handleToggle1}
+                // onMouseLeave={handleClose1}
+
+
+                >
+                    <NavLink
+                        to="#"
+                        className={clsx(classes[navlinkref.current])}
+                        activeClassName={clsx(classes[linkactiveref.current])}
+                        ref={anchorRef}
+                        id="services-button"
+                        aria-controls={open1 ? 'services-menu' : undefined}
+                        aria-expanded={open1 ? 'true' : undefined}
+                        aria-haspopup="true"
+                        onClick={handleToggle1}
+                    >
+
+                        <h4 className={clsx(classes[navlinkref.current])}
+                            onClick={handleToggle1}
+                        >
+                            Services
+                        </h4>
+                        <KeyboardArrowDown className={classes.arrow} />
+
+                        <Popper
+                            open={open1}
+                            anchorEl={anchorRef.current}
+                            role={undefined}
+                            // placement="bottom-end"
                             transition
                             className={classes.popper}
                         >
@@ -586,45 +504,128 @@ export function MobileMenu() {
                                             placement === 'bottom-start' ? 'left top' : 'left bottom',
                                     }}
                                 >
-                                    <ClickAwayListener onClickAway={handleClose2}>
+                                    <ClickAwayListener
+                                        onClickAway={handleClose1}>
                                         <MenuList
-                                            autoFocusItem={open2}
-                                            id="contact-menu"
-                                            aria-labelledby="contact-button"
+                                            autoFocusItem={open}
+                                            id="services-menu"
+                                            aria-labelledby="services-button"
                                             onKeyDown={handleListKeyDown}
                                             className={classes.megaMenu}
                                         >
                                             {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
                                             <MenuList>
                                                 <MenuItem className={classes.menuItem}>
-                                                    <h6 >
-                                                        <NavLink to="/contact" className={classes.lios} onClick={handleClose2} >Contact Us</NavLink >
-                                                    </h6>
+                                                    <h6 ><NavLink to="/ipcore" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >IP CORE/FPGA/SoC Design Services</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 ><NavLink to="/highspeed" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} > High Speed PCB Design Services</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem} >
+                                                    <h6 ><NavLink to="/softdev" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Software Development</NavLink ></h6>
                                                 </MenuItem>
 
                                                 <MenuItem className={classes.menuItem}>
-                                                    <h6 className={classes.lios}>
-                                                        <Button href="https://core.slscorp.com/about-slscorp/careers.html" style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
-                                                            <h6 style={{
-                                                                color: 'black',
-                                                                "&:hover": {
-                                                                    border: '1px solid red'
-                                                                }
-                                                            }}>Join us</h6>
-                                                        </Button >
-                                                    </h6>
+                                                    <h6 ><NavLink to="/electronics" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Electronics Manufacturing Services</NavLink ></h6>
                                                 </MenuItem>
-
+                                                <MenuItem className={classes.menuItem}>
+                                                    <h6 ><NavLink to="/testing" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Testing & Calibration</NavLink ></h6>
+                                                </MenuItem>
+                                                <MenuItem className={classes.menuItem}>
+                                                    <h6 ><NavLink to="/ml" className={classes.lios} activeClassName={classes.activeLios} onClick={handleClose1} >Machine Learning & Artificial Intelligence</NavLink ></h6>
+                                                </MenuItem>
                                             </MenuList>
                                         </MenuList>
                                     </ClickAwayListener>
                                 </Grow>
                             )}
                         </Popper>
+                    </NavLink>
 
-                    </li>
-                </ul>
+                </li>
 
-            </div>
+
+
+                <li
+                    className={clsx(classes[navlinkref.current], classes.navLI)}
+                    onClick={handleToggle2}
+
+                >
+                    <NavLink
+                        to="#"
+                        className={clsx(classes[navlinkref.current])}
+                        activeClassName={clsx(classes[linkactiveref.current])}
+                        ref={anchorRef}
+                        id="contact-button"
+                        aria-controls={open2 ? 'contact-menu' : undefined}
+                        aria-expanded={open2 ? 'true' : undefined}
+                        aria-haspopup="true"
+                        onClick={handleToggle2}
+                    >
+                        <h4 className={clsx(classes[navlinkref.current])}
+                            onClick={handleToggle2}
+                        >
+                            Let's Connect
+                        </h4>
+                        <KeyboardArrowDown className={classes.arrow} />
+                    </NavLink>
+
+                    <Popper
+                        open={open2}
+                        anchorEl={anchorRef.current}
+                        role={undefined}
+                        placement="bottom-end"
+                        transition
+                        className={classes.popper}
+                    >
+                        {({ TransitionProps, placement }) => (
+                            <Grow
+                                {...TransitionProps}
+                                style={{
+                                    transformOrigin:
+                                        placement === 'bottom-start' ? 'left top' : 'left bottom',
+                                }}
+                            >
+                                <ClickAwayListener onClickAway={handleClose2}>
+                                    <MenuList
+                                        autoFocusItem={open2}
+                                        id="contact-menu"
+                                        aria-labelledby="contact-button"
+                                        onKeyDown={handleListKeyDown}
+                                        className={classes.megaMenu}
+                                    >
+                                        {/* <MenuItem className={classes.menuItem} className={classes.megaMenu}> */}
+                                        <MenuList>
+                                            <MenuItem className={classes.menuItem}>
+                                                <h6 >
+                                                    <NavLink to="/contact" className={classes.lios} onClick={handleClose2} >Contact Us</NavLink >
+                                                </h6>
+                                            </MenuItem>
+
+                                            <MenuItem className={classes.menuItem}>
+                                                <h6 className={classes.lios}>
+                                                    <Button
+                                                        href="https://core.slscorp.com/about-slscorp/careers.html" style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
+                                                        <h6 style={{
+                                                            color: 'black',
+                                                            "&:hover": {
+                                                                border: '1px solid red'
+                                                            }
+                                                        }}>Join us</h6>
+                                                    </Button >
+                                                </h6>
+                                            </MenuItem>
+
+                                        </MenuList>
+                                    </MenuList>
+                                </ClickAwayListener>
+                            </Grow>
+                        )}
+                    </Popper>
+
+                </li>
+            </ul>
+
+        </div>
     )
 }

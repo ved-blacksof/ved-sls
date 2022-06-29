@@ -285,7 +285,8 @@ export function Navbar({
                                         </MenuItem>
                                         <MenuItem className={classes.menuItem}>
                                             <h6 className={classes.lios}>
-                                                <Button href="https://core.slscorp.com/about-slscorp/careers.html"
+                                                <Button
+                                                    href="https://core.slscorp.com/about-slscorp/careers.html"
                                                     target="_blank"
                                                     style={{ textTransform: 'none', background: 'transparent', padding: '0px' }}  >
                                                     <h6

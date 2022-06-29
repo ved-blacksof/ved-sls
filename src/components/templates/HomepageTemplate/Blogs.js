@@ -458,7 +458,6 @@ export function Blogs({
                                                                     <Button
                                                                         className={classes.smallBtn}
                                                                         href={item.href}
-                                                                        onClick={() => window.open(`${item.href}`, '_blank')}
                                                                         target="_blank"
                                                                     >
                                                                         {download}
