@@ -13,18 +13,18 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         textTransform: 'none',
-        zIndex:'9',
+        zIndex: '9',
         transition: 'all .3s ease-in-out',
         transition: 'background .5s ease-in-out',
-        borderRadius:'4px',
-        overflow:'hidden',
+        borderRadius: '4px',
+        overflow: 'hidden',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
         },
         "&::before": {
             content: "''",
             position: 'absolute',
-            borderRadius:'4px',
+            borderRadius: '4px',
             right: '0%',
             top: '0%',
             width: '0',
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         "&::after": {
             content: "''",
             position: 'absolute',
-            borderRadius:'4px',
+            borderRadius: '4px',
             right: '0%',
             top: '0%',
             width: '2px',
@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
         },
         '&:hover': {
             background: '#fff',
-            "& $btnTitle":{
-                color:'#182AC3',
+            "& $btnTitle": {
+                color: '#182AC3',
             },
             "&::before": {
                 width: '100%',
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
             "&::after": {
                 height: '100%',
             },
-            "& $mySpan":{
+            "& $mySpan": {
                 "&::before": {
                     width: '100%',
                 },
@@ -66,12 +66,12 @@ const useStyles = makeStyles((theme) => ({
             },
         },
     },
-    btnTitle:{
-        color: '#fff',                
-        fontFamily:'Access',
-        display: 'flex', 
-        justifyContent: 'space-around', 
-        alignItems: 'center', 
+    btnTitle: {
+        color: '#fff',
+        fontFamily: 'Access',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
         verticalAlign: 'middle',
         transition: 'transform .5s ease-in-out',
     },
@@ -97,11 +97,11 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1.2rem'
         }
     },
-    mySpan:{
+    mySpan: {
         "&::before": {
             content: "''",
             position: 'absolute',
-            borderRadius:'4px',
+            borderRadius: '4px',
             left: '0%',
             bottom: '0%',
             width: '0',
@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
         "&::after": {
             content: "''",
             position: 'absolute',
-            borderRadius:'4px',
+            borderRadius: '4px',
             left: '0%',
             bottom: '0%',
             width: '2px',
@@ -143,12 +143,12 @@ export function Buttons({
                     href={href}
                     target="_blank"
                 >
-                   <span className={classes.mySpan}>
-                   <h6 className={classes.btnTitle}>
-                        {title}
-                        <ArrowForwardSharp className={classes.arrow1} />
-                    </h6>
-                   </span>
+                    <span className={classes.mySpan}>
+                        <h6 className={classes.btnTitle}>
+                            {title}
+                            <ArrowForwardSharp className={classes.arrow1} />
+                        </h6>
+                    </span>
                 </Button>
             </Box>
         </Fade>
